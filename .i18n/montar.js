@@ -123,6 +123,18 @@ function menuUl(idioma, chaveAtual) {
   }).join('\n')}\n        </ul>`;
 }
 
+// Menu "Empresa" do rodapé: os mesmos 6 itens do rodapé da velocbroker.com.br
+const MENU_RODAPE = [['home', 'inicio'], ['confiavel', 'duotide-e-confiavel'], ['login', 'duotide-login'],
+  ['corretora', 'duotide-corretora'], ['seguro', 'duotide-e-seguro'], ['app', 'duotide-app']];
+function menuRodape(idioma, chaveAtual) {
+  const C = chrome(idioma);
+  return `<ul>\n${MENU_RODAPE.map(([k, c]) => {
+    const atual = c === chaveAtual ? ' aria-current="page"' : '';
+    const rotulo = k === 'home' ? C.nav.home : C.rodape.menu[k];
+    return `            <li><a href="${caminho(idioma, c)}"${atual}>${rotulo}</a></li>`;
+  }).join('\n')}\n          </ul>`;
+}
+
 function cabecalho(idioma, chave, chaveMenu) {
   const C = chrome(idioma);
   return `<header class="site-header">
@@ -172,7 +184,7 @@ function rodape(idioma, chaveMenu) {
         </div>
         <div class="footer__nav footer__empresa">
           <h2>${R.empresa}</h2>
-          ${menuUl(idioma, chaveMenu)}
+          ${menuRodape(idioma, chaveMenu)}
         </div>
         <div class="footer__nav footer__contact">
           <h2>${R.contato}</h2>
@@ -290,6 +302,9 @@ function ajustarPt(arquivo, chave) {
   h = h.replace(/(<span><\/span>\s*<\/button>)\s*/, (m, a) => a + (sel ? '\n        ' + sel : '') + '\n      ');
   h = h.replace(/(<button class="nav-toggle"[^>]*aria-label="Abrir menu de navegação")(?![^>]*data-abrir)/,
     `$1\n                data-abrir="Abrir menu de navegação" data-fechar="Fechar menu de navegação"`);
+  const hrefPt = (h.match(/<nav class="site-nav"[\s\S]*?<a href="([^"]+)" aria-current="page"/) || [])[1];
+  h = h.replace(/(<div class="footer__nav footer__empresa">\s*<h2>[^<]*<\/h2>\s*)<ul>[\s\S]*?<\/ul>/,
+    (m, a) => a + menuRodape(PT, hrefPt ? chavePorRotaPt[hrefPt] : null));
   h = h.replace(/\s*<template id="pp-modelo">[\s\S]*?<\/template>/, '');
   h = h.replace(/(\s*<script src="\/assets\/js\/main\.js)/, (m, a) => '\n  ' + popup(PT) + a);
   fs.writeFileSync(arquivo, h);
