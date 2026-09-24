@@ -130,7 +130,7 @@
       cx.setAttribute('data-aberto', '');
       document.body.classList.add('pp-travado');
       requestAnimationFrame(function () { cx.setAttribute('data-visivel', ''); });
-      cx.querySelector('.pp__x').focus();
+      (cx.querySelector('.pp__cx[tabindex]') || cx.querySelector('.pp__x')).focus();
       cx.querySelector('.pp__x').addEventListener('click', fechar);
       cx.querySelector('.pp__btn').addEventListener('click', function () { guardar(); setTimeout(fechar, 0); });
       cx.addEventListener('click', function (e) { if (e.target === cx) fechar(); });

@@ -301,3 +301,23 @@ body.pp-travado{overflow:hidden}
 [dir='rtl'] .pp__btn span{display:inline-block;transform:scaleX(-1)}
 [dir='rtl'] .pp__lista li{padding:6px 8px 6px 12px}
 html:lang(ar) .pp__selo,html:lang(bn) .pp__selo,html:lang(hi) .pp__selo,html:lang(th) .pp__selo,html:lang(zh-CN) .pp__selo{letter-spacing:0}
+/* ---------- Pop-up de bônus: formato do banner da Olymptrade ---------- */
+.pp--bonus .pp__cx{max-width:900px;background:#0b0c0a;border:1px solid rgba(255,255,255,0.1);border-radius:22px}
+@media (min-width:800px){.pp--bonus .pp__cx{grid-template-columns:1.05fr .95fr}}
+.pp--bonus .pp__cont{gap:22px;padding:clamp(28px,4.6vw,52px)}
+.pp--bonus .pp__cont::before{display:none}
+.pp--bonus .pp__cont h2{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;line-height:1;letter-spacing:-0.03em}
+.pp--bonus .pp__cont h2 .pp__l2{background:linear-gradient(90deg,#8ff25c 0%,#5fe36b 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pp--bonus .pp__cont p{max-width:28ch;font-size:1.0625rem;line-height:1.35;font-weight:600;color:#fff}
+.pp--bonus .pp__btn{margin-top:2px;padding:12px 22px;border-radius:10px;background:linear-gradient(90deg,#5fe8b4 0%,#8ef25a 100%);color:#0a0c08;font-size:0.9375rem;font-weight:700;text-transform:none;box-shadow:0 6px 22px rgba(110,235,120,0.35)}
+.pp--bonus .pp__cont .pp__mini{max-width:40ch;font-size:0.6875rem;font-weight:400;color:rgba(255,255,255,0.4)}
+.pp--bonus .pp__fig{display:flex;align-items:flex-end;justify-content:center;height:230px;min-height:0;padding:0;
+ background:radial-gradient(circle at 55% 80%,rgba(150,230,40,0.25),transparent 60%),#0b0c0a}
+@media (min-width:800px){.pp--bonus .pp__fig{height:auto;min-height:380px}}
+.pp--bonus .pp__fig img{width:100%;max-width:470px;height:auto;display:block;margin-bottom:-2px}
+.pp--bonus .pp__x{top:16px;right:16px;width:34px;height:34px;background:transparent;color:rgba(255,255,255,0.55);font-size:1.25rem}
+.pp--bonus .pp__x:hover{background:rgba(255,255,255,0.08);color:#fff}
+[dir='rtl'] .pp--bonus .pp__x{right:auto;left:16px}
+.pp--bonus .pp__cont h2{font-size:clamp(2.4rem,4.7vw,3.9rem)}
+@media (min-width:800px){.pp--bonus .pp__cont h2 .pp__l2{white-space:nowrap}}
+.pp__cx:focus{outline:none}

@@ -98,28 +98,17 @@ function hreflang(chave) {
 function popup(idioma) {
   const P = chrome(idioma).popup;
   return `<template id="pp-modelo">
-    <div class="pp" role="dialog" aria-modal="true" aria-labelledby="ppTit">
-      <div class="pp__cx">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
         <button class="pp__x" type="button" aria-label="${escAttr(P.fechar)}">&#10005;</button>
         <div class="pp__cont">
           <h2 id="ppTit"><span class="pp__l1">${P.linha1}</span> <span class="pp__l2">${P.linha2}</span></h2>
           <p>${P.texto}</p>
-          <ul class="pp__lista">
-            <li>${P.item1}</li>
-            <li>${P.item2}</li>
-            <li>${P.item3}</li>
-            <li>${P.item4}</li>
-          </ul>
-          <a class="pp__btn" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${P.botao} <span aria-hidden="true">&rsaquo;</span></a>
+          <a class="pp__btn" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${P.botao}</a>
           <p class="pp__mini">${P.mini}</p>
         </div>
         <div class="pp__fig" aria-hidden="true">
-          <span class="pp__selo">${P.selo}</span>
-          <span class="pp__base"></span>
-          <div class="pp__palco">
-            <img src="/assets/img/duotide-app-celular.webp" alt="" width="720" height="720" loading="lazy" decoding="async">
-            <span class="pp__fita">DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE</span>
-          </div>
+          <img src="/assets/img/popup-bonus.svg" alt="" width="520" height="480" loading="lazy" decoding="async">
         </div>
       </div>
     </div>

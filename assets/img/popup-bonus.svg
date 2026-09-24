@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 480" role="img" aria-label="Pilha de moedas prateadas sobre um pedestal verde, com uma fita escrita UP TO 100% BONUS">
+  <defs>
+    <linearGradient id="pedestal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8f23a"/>
+      <stop offset="0.55" stop-color="#8fd61c"/>
+      <stop offset="1" stop-color="#5f9d0c"/>
+    </linearGradient>
+    <linearGradient id="pedestalTopo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4ff8a"/>
+      <stop offset="1" stop-color="#b3ee2c"/>
+    </linearGradient>
+    <linearGradient id="prataLado" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6d7277"/>
+      <stop offset="0.18" stop-color="#e9edf0"/>
+      <stop offset="0.35" stop-color="#9aa0a6"/>
+      <stop offset="0.6" stop-color="#f4f6f8"/>
+      <stop offset="0.82" stop-color="#a2a8ae"/>
+      <stop offset="1" stop-color="#5d6166"/>
+    </linearGradient>
+    <radialGradient id="prataFace" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#cdd2d6"/>
+      <stop offset="1" stop-color="#7c8288"/>
+    </radialGradient>
+    <linearGradient id="fita" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b6ef22"/>
+      <stop offset="0.5" stop-color="#dcff57"/>
+      <stop offset="1" stop-color="#b6ef22"/>
+    </linearGradient>
+    <filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="brilho" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <!-- brilho verde atrás do pedestal -->
+  <ellipse cx="260" cy="360" rx="230" ry="110" fill="#9be02a" opacity="0.45" filter="url(#brilho)"/>
+
+  <!-- pedestal -->
+  <rect x="70" y="300" width="380" height="200" rx="38" fill="url(#pedestal)"/>
+  <rect x="70" y="300" width="380" height="58" rx="29" fill="url(#pedestalTopo)"/>
+  <rect x="86" y="306" width="348" height="6" rx="3" fill="#ffffff" opacity="0.45"/>
+
+  <!-- moeda em pé (atrás) -->
+  <g filter="url(#sombra)">
+    <ellipse cx="292" cy="170" rx="84" ry="112" fill="url(#prataLado)" transform="rotate(14 292 170)"/>
+    <ellipse cx="282" cy="168" rx="76" ry="104" fill="url(#prataFace)" transform="rotate(14 282 168)"/>
+    <ellipse cx="282" cy="168" rx="58" ry="82" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3" transform="rotate(14 282 168)"/>
+  </g>
+
+  <!-- pilha de moedas deitadas -->
+  <g filter="url(#sombra)">
+    <g>
+      <path d="M160 300 v-22 a100 26 0 0 0 200 0 v22 a100 26 0 0 1 -200 0z" fill="url(#prataLado)"/>
+      <ellipse cx="260" cy="278" rx="100" ry="26" fill="url(#prataFace)"/>
+    </g>
+    <g>
+      <path d="M158 276 v-22 a100 26 0 0 0 200 0 v22 a100 26 0 0 1 -200 0z" fill="url(#prataLado)"/>
+      <ellipse cx="258" cy="254" rx="100" ry="26" fill="url(#prataFace)"/>
+    </g>
+    <g>
+      <path d="M163 252 v-22 a100 26 0 0 0 200 0 v22 a100 26 0 0 1 -200 0z" fill="url(#prataLado)"/>
+      <ellipse cx="263" cy="230" rx="100" ry="26" fill="url(#prataFace)"/>
+    </g>
+    <g>
+      <path d="M160 228 v-22 a100 26 0 0 0 200 0 v22 a100 26 0 0 1 -200 0z" fill="url(#prataLado)"/>
+      <ellipse cx="260" cy="206" rx="100" ry="26" fill="url(#prataFace)"/>
+      <ellipse cx="260" cy="206" rx="74" ry="18" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- fita atravessada -->
+  <g transform="rotate(-68 262 210)" filter="url(#sombra)">
+    <rect x="42" y="182" width="440" height="58" rx="6" fill="url(#fita)"/>
+    <rect x="42" y="186" width="440" height="3" fill="#ffffff" opacity="0.5"/>
+    <circle cx="80" cy="211" r="19" fill="#0b0d06"/>
+    <path d="M83 198 l-11 16 h8 l-4 12 l12 -17 h-8 z" fill="#c9f31d"/>
+    <text x="286" y="223" text-anchor="middle" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="3" fill="#0b0d06">UP TO 100% BONUS</text>
+  </g>
+
+  <!-- partículas -->
+  <g fill="#c9f31d">
+    <circle cx="70" cy="80" r="2.5" opacity="0.8"/>
+    <circle cx="470" cy="120" r="2" opacity="0.7"/>
+    <circle cx="440" cy="40" r="1.6" opacity="0.6"/>
+    <circle cx="110" cy="220" r="1.8" opacity="0.6"/>
+    <circle cx="488" cy="260" r="2.2" opacity="0.7"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="150" cy="40" r="1.6" opacity="0.7"/>
+    <circle cx="400" cy="200" r="1.4" opacity="0.6"/>
+    <circle cx="40" cy="160" r="1.3" opacity="0.5"/>
+    <circle cx="360" cy="30" r="1.5" opacity="0.6"/>
+  </g>
+</svg>
