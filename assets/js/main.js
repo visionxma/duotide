@@ -9,7 +9,8 @@
   if (toggle && nav) {
     var setOpen = function (open) {
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+      toggle.setAttribute('aria-label', toggle.getAttribute(open ? 'data-fechar' : 'data-abrir') ||
+        (open ? 'Fechar menu de navegação' : 'Abrir menu de navegação'));
       nav.setAttribute('data-open', String(open));
     };
     toggle.addEventListener('click', function (event) {
@@ -55,6 +56,7 @@
      Sem JavaScript ou sem rede, fica o gráfico estático de cada cartão.
      ---------------------------------------------------------------------- */
   var cotacoes = document.querySelectorAll('.cotacao[data-simbolo]');
+  var localeTV = document.documentElement.getAttribute('data-tv') || 'br';
   if (cotacoes.length) {
     var carregar = function (cartao) {
       var alvo = document.createElement('div');
@@ -64,7 +66,7 @@
       script.async = true;
       script.textContent = JSON.stringify({
         symbol: cartao.getAttribute('data-simbolo'),
-        width: '100%', height: '100%', locale: 'br', dateRange: '12M',
+        width: '100%', height: '100%', locale: localeTV, dateRange: '12M',
         colorTheme: 'dark', isTransparent: false, autosize: true, largeChartUrl: ''
       });
       var caixa = document.createElement('div');
@@ -83,6 +85,74 @@
       cotacoes.forEach(function (c) { obs.observe(c); });
     } else {
       cotacoes.forEach(carregar);
+    }
+  }
+
+  /* ----------------------------------------------------------------------
+     Pop-up de boas-vindas (no estilo do safirion.com.br)
+     Abre uma vez por sessão: em 2 s ou aos 35% de rolagem, o que vier primeiro.
+     O conteúdo vem do <template id="pp-modelo"> da página, já no idioma dela.
+     Console: duotidePopup.abrir() / .limpar() / .estado()
+     ---------------------------------------------------------------------- */
+  var modelo = document.getElementById('pp-modelo');
+  if (modelo && 'content' in modelo) {
+    var CHAVE = 'duotide_boasvindas_v1';
+    var guardado = function () { try { return !!sessionStorage.getItem(CHAVE); } catch (e) { return false; } };
+    var guardar = function () { try { sessionStorage.setItem(CHAVE, '1'); } catch (e) {} };
+    var cx = null, anterior = null, aberto = false, espera = null;
+
+    var tecla = function (e) {
+      if (!aberto) return;
+      if (e.key === 'Escape') { fechar(); return; }
+      if (e.key !== 'Tab') return;
+      var f = cx.querySelectorAll('button, a[href]');
+      var pri = f[0], ult = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === pri) { e.preventDefault(); ult.focus(); }
+      else if (!e.shiftKey && document.activeElement === ult) { e.preventDefault(); pri.focus(); }
+    };
+    var fechar = function () {
+      if (!aberto) return;
+      aberto = false;
+      guardar();
+      document.removeEventListener('keydown', tecla);
+      cx.removeAttribute('data-visivel');
+      document.body.classList.remove('pp-travado');
+      var el = cx;
+      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 320);
+      if (anterior && anterior.focus) anterior.focus();
+    };
+    var abrir = function () {
+      if (aberto) return;
+      aberto = true;
+      anterior = document.activeElement;
+      cx = modelo.content.firstElementChild.cloneNode(true);
+      document.body.appendChild(cx);
+      cx.setAttribute('data-aberto', '');
+      document.body.classList.add('pp-travado');
+      requestAnimationFrame(function () { cx.setAttribute('data-visivel', ''); });
+      cx.querySelector('.pp__x').focus();
+      cx.querySelector('.pp__x').addEventListener('click', fechar);
+      cx.querySelector('.pp__btn').addEventListener('click', function () { guardar(); setTimeout(fechar, 0); });
+      cx.addEventListener('click', function (e) { if (e.target === cx) fechar(); });
+      document.addEventListener('keydown', tecla);
+    };
+    var aoRolar = function () {
+      var h = document.documentElement;
+      if (h.scrollTop / ((h.scrollHeight - h.clientHeight) || 1) >= 0.35) disparar();
+    };
+    var disparar = function () {
+      clearTimeout(espera);
+      window.removeEventListener('scroll', aoRolar);
+      abrir();
+    };
+    window.duotidePopup = {
+      abrir: abrir,
+      limpar: function () { try { sessionStorage.removeItem(CHAVE); } catch (e) {} return 'liberado'; },
+      estado: function () { return guardado() ? 'já apareceu nesta sessão' : 'liberado'; }
+    };
+    if (!guardado()) {
+      espera = setTimeout(disparar, 2000);
+      window.addEventListener('scroll', aoRolar, { passive: true });
     }
   }
 })();
