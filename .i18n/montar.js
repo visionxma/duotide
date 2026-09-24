@@ -101,12 +101,8 @@ function popup(idioma) {
     <div class="pp" role="dialog" aria-modal="true" aria-labelledby="ppTit">
       <div class="pp__cx">
         <button class="pp__x" type="button" aria-label="${escAttr(P.fechar)}">&#10005;</button>
-        <div class="pp__fig">
-          <span class="pp__selo">${P.selo}</span>
-          <img src="/assets/img/duotide-app-celular.webp" alt="" width="720" height="720" loading="lazy" decoding="async">
-        </div>
         <div class="pp__cont">
-          <h2 id="ppTit">${P.titulo}</h2>
+          <h2 id="ppTit"><span class="pp__l1">${P.linha1}</span> <span class="pp__l2">${P.linha2}</span></h2>
           <p>${P.texto}</p>
           <ul class="pp__lista">
             <li>${P.item1}</li>
@@ -114,9 +110,16 @@ function popup(idioma) {
             <li>${P.item3}</li>
             <li>${P.item4}</li>
           </ul>
-          <p class="pp__nota">${P.nota}</p>
           <a class="pp__btn" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${P.botao} <span aria-hidden="true">&rsaquo;</span></a>
           <p class="pp__mini">${P.mini}</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <span class="pp__selo">${P.selo}</span>
+          <span class="pp__base"></span>
+          <div class="pp__palco">
+            <img src="/assets/img/duotide-app-celular.webp" alt="" width="720" height="720" loading="lazy" decoding="async">
+            <span class="pp__fita">DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE &#10022; DUOTIDE</span>
+          </div>
         </div>
       </div>
     </div>
