@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr" data-tema="dark" data-tv="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Manajemen Risiko: Stop Loss dan Ukuran Posisi | Duotide</title>
+  <meta name="description" content="Mengapa kebanyakan orang bangkrut karena ukuran posisi, bukan karena analisis yang salah, dan cara menentukan berapa yang dipertaruhkan per transaksi.">
+  <link rel="canonical" href="https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/gestao-de-risco-stop-e-posicao/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/risk-management-stop-loss-and-position-size/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/gestion-de-riesgo-stop-y-posicion/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/risk-management-stop-loss-position-size/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/risk-management-stop-loss-position-size/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/risikomanagement-stop-und-position/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/risk-management-stop-at-posisyon/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/gestion-du-risque-stop-et-position/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/risk-management-stop-loss-position-size/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/gestione-del-rischio-stop-e-posizione/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/risk-management-stop-loss-and-position-size/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/riskhantering-stop-loss-och-positionsstorlek/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/risk-management-stop-position-size/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/risk-yonetimi-stop-ve-pozisyon/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/quan-ly-rui-ro-stop-va-vi-the/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/risk-management-stop-loss-position-size/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/risk-management-stop-loss-and-position-size/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Manajemen Risiko: Stop Loss dan Ukuran Posisi | Duotide">
+  <meta property="og:description" content="Mengapa kebanyakan orang bangkrut karena ukuran posisi, bukan karena analisis yang salah, dan cara menentukan berapa yang dipertaruhkan per transaksi.">
+  <meta property="og:url" content="https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/og.png">
+  <meta property="og:image:alt" content="Duotide — Manajemen risiko: stop loss, ukuran posisi, dan kesalahan all-in">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/og.png">
+  <meta property="og:updated_time" content="2026-08-06T10:00:00+00:00">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manajemen Risiko: Stop Loss dan Ukuran Posisi | Duotide">
+  <meta name="twitter:description" content="Mengapa kebanyakan orang bangkrut karena ukuran posisi, bukan karena analisis yang salah, dan cara menentukan berapa yang dipertaruhkan per transaksi.">
+  <meta name="twitter:label1" content="Ditulis oleh">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Waktu baca">
+  <meta name="twitter:data2" content="5 menit">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260924e">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://duotide.com.br/#organization",
+      "name": "Duotide",
+      "url": "https://duotide.com.br/",
+      "email": "contato@duotide.com.br",
+      "description": "Duotide — trading jangka pendek dengan fokus pada arus pasar.",
+      "publishingPrinciples": "https://duotide.com.br/como-avaliamos/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "editorial",
+        "email": "contato@duotide.com.br",
+        "url": "https://duotide.com.br/contato/",
+        "availableLanguage": [
+          "Portuguese"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://duotide.com.br/#website",
+      "url": "https://duotide.com.br/",
+      "name": "Duotide",
+      "description": "Duotide — platform investasi.",
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "inLanguage": "id"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://duotide.com.br/id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Manajemen risiko: stop loss, ukuran posisi, dan kesalahan all-in",
+          "item": "https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/#webpage",
+      "url": "https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/",
+      "name": "Manajemen Risiko: Stop Loss dan Ukuran Posisi | Duotide",
+      "description": "Mengapa kebanyakan orang bangkrut karena ukuran posisi, bukan karena analisis yang salah, dan cara menentukan berapa yang dipertaruhkan per transaksi.",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/#breadcrumb"
+      },
+      "inLanguage": "id",
+      "datePublished": "2026-08-06T10:00:00+00:00",
+      "dateModified": "2026-08-06T10:00:00+00:00",
+      "headline": "Manajemen risiko: stop loss, ukuran posisi, dan kesalahan all-in",
+      "author": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/#webpage"
+      },
+      "image": "https://duotide.com.br/assets/img/og.png",
+      "about": {
+        "@id": "https://duotide.com.br/#broker"
+      },
+      "mentions": {
+        "@id": "https://duotide.com.br/#broker"
+      }
+    },
+    {
+      "@type": "FinancialService",
+      "@id": "https://duotide.com.br/#broker",
+      "name": "Duotide",
+      "url": "https://duotide.com/",
+      "sameAs": [
+        "https://duotide.com/"
+      ],
+      "description": "Broker digital yang berfokus pada trading jangka pendek dengan penekanan pada arus pasar. Terdaftar di Saint Vincent dan Grenadines (SVG)."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://duotide.com.br/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Berapa yang sebaiknya dipertaruhkan per transaksi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acuan yang paling umum adalah 1% hingga 2% dari modal per transaksi. Ini bukan aturan ajaib: angka ini memungkinkan Anda salah beberapa kali berturut-turut tanpa membuat akun tak tertolong. Dengan 10% per transaksi, lima kesalahan beruntun memangkas separuh modal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah stop loss menjamin kerugian saya tidak melebihi batas itu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sering kali, ya. Namun saat pasar dibuka dengan gap atau ada berita besar, harga bisa melompati level stop dan order tereksekusi di harga yang lebih buruk — yang disebut slippage. Stop loss membatasi risiko, bukan menghilangkannya."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Langsung ke konten</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/id/" aria-label="Duotide — halaman utama">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide</span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buka menu navigasi"
+                data-abrir="Buka menu navigasi" data-fechar="Tutup menu navigasi">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pilih bahasa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span>id</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/gestao-de-risco-stop-e-posicao/" hreflang="pt-BR" lang="pt-BR">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/risk-management-stop-loss-and-position-size/" hreflang="en" lang="en">English <small>en</small></a></li>
+            <li><a href="/es/blog/gestion-de-riesgo-stop-y-posicion/" hreflang="es" lang="es">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/risk-management-stop-loss-position-size/" hreflang="ar" lang="ar">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/risk-management-stop-loss-position-size/" hreflang="bn" lang="bn">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/risikomanagement-stop-und-position/" hreflang="de" lang="de">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/risk-management-stop-at-posisyon/" hreflang="fil" lang="fil">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/gestion-du-risque-stop-et-position/" hreflang="fr" lang="fr">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/risk-management-stop-loss-position-size/" hreflang="hi" lang="hi">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/manajemen-risiko-stop-loss-dan-ukuran-posisi/" hreflang="id" lang="id" aria-current="true">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/gestione-del-rischio-stop-e-posizione/" hreflang="it" lang="it">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/risk-management-stop-loss-and-position-size/" hreflang="ru" lang="ru">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/riskhantering-stop-loss-och-positionsstorlek/" hreflang="sv" lang="sv">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/risk-management-stop-position-size/" hreflang="th" lang="th">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/risk-yonetimi-stop-ve-pozisyon/" hreflang="tr" lang="tr">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/quan-ly-rui-ro-stop-va-vi-the/" hreflang="vi" lang="vi">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/risk-management-stop-loss-position-size/" hreflang="zh-CN" lang="zh-CN">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="/id/">Beranda</a></li>
+          <li><a href="/id/duotide-terpercaya/">Terpercaya?</a></li>
+          <li><a href="/id/duotide-login/">Login</a></li>
+          <li><a href="/id/duotide-broker/">Tentang broker</a></li>
+          <li><a href="/id/duotide-aman/">Aman?</a></li>
+          <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          <li><a href="/id/broker-terbaik/">Broker terbaik</a></li>
+          <li><a href="/id/blog/">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id"
+           target="_blank" rel="noopener sponsored nofollow">Buat akun</a>
+        <a class="btn btn--outline btn--sm" href="/id/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Jejak navigasi">
+    <div class="container">
+      <ol>
+        <li><a href="/id/">Beranda</a></li>
+        <li><span aria-current="page">Manajemen risiko: stop loss, ukuran posisi, dan kesalahan all-in</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo">
+    <section class="section">
+      <div class="container article">
+        <h1>Manajemen risiko: stop loss, ukuran posisi, dan kesalahan all-in</h1>
+        <p>
+          Ada anggapan bahwa trading yang baik berarti menebak arah dengan benar. Tidak begitu. Anda bisa
+          benar lebih dari separuh waktu dan tetap menghabiskan akun, dan
+          bisa salah di sebagian besar transaksi namun tetap berakhir untung. <strong>Yang menentukan adalah
+          ukuran setiap taruhan</strong>.</p>
+        <h2>Matematika yang tidak kenal ampun</h2>
+        <p>
+          Kehilangan 50% modal berarti harus untung 100% untuk kembali ke titik
+          awal. Kehilangan 20% berarti harus untung 25%. Ketimpangan ini membesar dengan cepat, dan
+          itulah sebabnya membatasi kerugian per transaksi lebih penting daripada
+          memaksimalkan keuntungan.</p>
+        <h2>Tiga keputusan sebelum membuka posisi</h2>
+        <ol class="steps">
+          <li><strong>Berapa yang akan saya pertaruhkan.</strong> Persentase tetap dari modal, ditentukan di awal dan tidak ditawar saat emosi sedang panas.</li>
+          <li><strong>Di mana saya keluar jika salah.</strong> Level stop berasal dari pembacaan grafik, bukan dari berapa kerugian yang Anda terima — jika level teknis menuntut risiko lebih besar dari batas Anda, jawabannya adalah memperkecil posisi, bukan menjauhkan stop.</li>
+          <li><strong>Berapa ukuran posisinya.</strong> Ini konsekuensi dari dua keputusan pertama, bukan pilihan yang berdiri sendiri.</li>
+        </ol>
+        <h2>Kesalahan all-in</h2>
+        <p>
+          Menumpuk modal pada satu transaksi yang "tidak mungkin salah" adalah
+          pola paling umum pada akun yang habis. Bukan karena analisisnya
+          buruk, tetapi karena tidak ada analisis yang 100% tepat — dan satu taruhan
+          tunggal tidak akan selamat dari pengecualian pertama.</p>
+        <h2>Konteks Duotide</h2>
+        <p>
+          Di broker tanpa pengawasan CVM (regulator pasar modal Brasil), seperti halnya
+          Duotide, tidak ada batas leverage dari regulator maupun
+          kewajiban tes kesesuaian profil. Kedua rem yang
+          akan ada di pasar teregulasi Brasil menjadi tanggung jawab Anda sendiri.</p>
+        <figure class="diagrama">
+          <svg viewBox="0 0 640 250" role="img" aria-labelledby="dg-quanto-e-preciso-ganhar-para-recuperar-c"
+               xmlns="http://www.w3.org/2000/svg">
+            <title id="dg-quanto-e-preciso-ganhar-para-recuperar-c">Berapa keuntungan yang diperlukan untuk memulihkan setiap kerugian</title>
+            <text x="20" y="62" class="dg-lbl">rugi 10%</text>
+            <rect x="130" y="46" width="60" height="24" rx="5" class="dg-bad"/>
+            <text x="210" y="64" class="dg-val">perlu untung 11%</text>
+            <text x="20" y="112" class="dg-lbl">rugi 25%</text>
+            <rect x="130" y="96" width="120" height="24" rx="5" class="dg-bad"/>
+            <text x="270" y="114" class="dg-val">perlu untung 33%</text>
+            <text x="20" y="162" class="dg-lbl">rugi 50%</text>
+            <rect x="130" y="146" width="240" height="24" rx="5" class="dg-bad"/>
+            <text x="390" y="164" class="dg-val">perlu untung 100%</text>
+            <text x="20" y="212" class="dg-lbl">rugi 75%</text>
+            <rect x="130" y="196" width="360" height="24" rx="5" class="dg-bad"/>
+            <text x="510" y="214" class="dg-val">perlu untung 300%</text>
+            <text x="20" y="238" class="dg-nota">Ketimpangan membesar cepat — karena itu membatasi kerugian per transaksi lebih penting daripada memaksimalkan untung.</text>
+          </svg>
+          <figcaption>Berapa keuntungan yang diperlukan untuk memulihkan setiap kerugian</figcaption>
+        </figure>
+        <h2>Pertanyaan umum</h2>
+        <div class="faq">          <details class="faq__item">
+            <summary>Berapa yang sebaiknya dipertaruhkan per transaksi?</summary>
+            <div class="faq__answer"><p>Acuan yang paling umum adalah 1% hingga 2% dari modal per transaksi. Ini bukan aturan ajaib: angka ini memungkinkan Anda salah beberapa kali berturut-turut tanpa membuat akun tak tertolong. Dengan 10% per transaksi, lima kesalahan beruntun memangkas separuh modal.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary>Apakah stop loss menjamin kerugian saya tidak melebihi batas itu?</summary>
+            <div class="faq__answer"><p>Sering kali, ya. Namun saat pasar dibuka dengan gap atau ada berita besar, harga bisa melompati level stop dan order tereksekusi di harga yang lebih buruk — yang disebut slippage. Stop loss membatasi risiko, bukan menghilangkannya.</p></div>
+          </details></div>
+        <aside class="related">
+          <h2>Baca juga</h2>
+          <ul>
+            <li><a href="/id/blog/kripto-di-broker-atau-exchange/">Kripto di broker atau di exchange: apa bedanya</a></li>
+            <li><a href="/id/blog/kyc-kenapa-broker-minta-dokumen/">KYC: mengapa broker meminta dokumen dan swafoto</a></li>
+            <li><a href="/id/blog/penarikan-dana-belum-masuk-harus-apa/">Penarikan dana belum masuk: apa yang harus dilakukan, dengan urutan yang benar</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Hak cipta © 2026 Duotide.<br>
+            Seluruh hak dilindungi.<br>
+            Situs tidak resmi.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Perusahaan</h2>
+          <ul>
+          <li><a href="/id/">Beranda</a></li>
+          <li><a href="/id/duotide-terpercaya/">Terpercaya?</a></li>
+          <li><a href="/id/duotide-login/">Login</a></li>
+          <li><a href="/id/duotide-broker/">Tentang broker</a></li>
+          <li><a href="/id/duotide-aman/">Aman?</a></li>
+          <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          <li><a href="/id/broker-terbaik/">Broker terbaik</a></li>
+          <li><a href="/id/blog/">Blog</a></li>
+        </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontak</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>Duotide beroperasi dengan registrasi di Saint Vincent dan Grenadines (SVG), tidak memiliki izin dari Comissão de Valores Mobiliários (CVM), regulator pasar modal Brasil, dan mungkin tidak memiliki izin dari regulator keuangan di negara Anda: periksa terlebih dahulu sebelum membuka akun. Informasi apa pun yang disajikan di sini tidak boleh ditafsirkan sebagai penawaran layanan keuangan. Situs ini bersifat informatif, bukan situs resmi Duotide, dan dikelola melalui program afiliasi. Tidak ada jaminan bahwa proyeksi atau strategi akan menghasilkan kinerja tertentu, dan kinerja masa lalu tidak menjamin hasil di masa depan. Volatilitas pasar dapat menyebabkan perubahan imbal hasil yang signifikan. Derivatif dan produk dengan leverage merupakan produk kompleks dengan potensi risiko tinggi: Anda harus menyadari kemungkinan kerugian, termasuk kehilangan seluruh modal yang diinvestasikan. Jangan pernah menginvestasikan dana yang tidak siap Anda relakan hilang.</p>
+        <p class="footer__links">
+          <a href="/id/duotide-pertanyaan-umum/">Pertanyaan umum</a>
+          <a href="/id/tentang/">Tentang situs ini</a>
+          <a href="/id/cara-kami-menilai/">Cara kami menilai</a>
+          <a href="/id/peringatan-risiko/">Peringatan risiko</a>
+          <a href="/id/kontak/">Kontak</a>
+          <a href="/id/privasi/">Privasi</a>
+          <a href="/id/syarat-penggunaan/">Syarat penggunaan</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Kembali ke atas halaman">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx">
+        <button class="pp__x" type="button" aria-label="Tutup">&#10005;</button>
+        <div class="pp__fig">
+          <span class="pp__selo">Selamat datang</span>
+          <img src="/assets/img/duotide-app-celular.webp" alt="" width="720" height="720" loading="lazy" decoding="async">
+        </div>
+        <div class="pp__cont">
+          <h2 id="ppTit">Buka akun Duotide Anda dalam beberapa menit</h2>
+          <p>Pendaftaran 100% online, lewat browser atau ponsel, dengan satu akun untuk berbagai pasar.</p>
+          <ul class="pp__lista">
+            <li>Kripto, forex, indeks, dan komoditas</li>
+            <li>Akses lewat browser dan ponsel</li>
+            <li>Verifikasi identitas (KYC) dan 2FA</li>
+            <li>Pasar kripto buka 24 jam, 7 hari</li>
+          </ul>
+          <p class="pp__nota">Tips: mulailah dengan nominal kecil dan lakukan uji penarikan dana sebelum menambah modal.</p>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun <span aria-hidden="true">&rsaquo;</span></a>
+          <p class="pp__mini">Situs tidak resmi. Trading produk dengan leverage memiliki risiko kerugian yang tinggi, termasuk kehilangan seluruh modal.</p>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260924e" defer></script>
+</body>
+</html>

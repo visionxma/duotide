@@ -277,3 +277,9 @@ body.pp-travado{overflow:hidden}
 [dir='rtl'] .to-top{right:auto;left:18px}
 [dir='rtl'] .cotacoes,[dir='rtl'] .cotacao iframe{direction:ltr}
 @media (max-width:560px){[dir='rtl'] .steps li{padding-right:54px}}
+/* link "pular para o conteúdo": escondido acima da tela, não à esquerda (left:-9999px
+   criava 10 mil px de rolagem lateral nas páginas em árabe, que rolam para a esquerda) */
+.skip-link{left:0;right:auto;transform:translateY(-120%)}
+.skip-link:focus{transform:none}
+[dir='rtl'] .skip-link{left:auto;right:0;border-radius:0 0 0 8px}
+[dir='rtl'] .pp__btn span{display:inline-block;transform:scaleX(-1)}
