@@ -5,7 +5,9 @@ const fs = require('fs');
 const path = require('path');
 const RAIZ = path.join(__dirname, '..');
 // Páginas que ficam só em português: notícias (robô diário, fontes brasileiras) e 404.
-const FORA = new Set(['noticias', '404.html']);
+const FORA = new Set(['noticias', '404.html',
+  // pastas geradas pelo montar.js (uma por idioma)
+  ...JSON.parse(fs.readFileSync(path.join(__dirname, 'idiomas.json'), 'utf8')).map(i => i.pasta).filter(Boolean)]);
 
 function paginas() {
   const out = [];

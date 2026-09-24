@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260924h">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260924i">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -97,7 +97,7 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Ana Sayfa",
+          "name": "Home",
           "item": "https://duotide.com.br/tr/"
         },
         {
@@ -122,7 +122,7 @@
       },
       "inLanguage": "tr",
       "datePublished": "2026-07-30T10:00:00+00:00",
-      "dateModified": "2026-07-30T10:00:00+00:00",
+      "dateModified": "2026-09-24T21:00:00-03:00",
       "headline": "Duotide güvenli mi?",
       "author": {
         "@id": "https://duotide.com.br/#organization"
@@ -157,18 +157,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Duotide'daki param korunuyor mu?",
+          "name": "Param Duotide'da korunuyor mu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Brezilya'ya ait kurumsal bir güvence yoktur. Aracı kurum CVM'den izinli değildir ve uygulanabilir bir güvence fonu bulunmaz. Karşı taraf riski tamamen size aittir."
+            "text": "Brezilya'ya ait kurumsal bir güvence yoktur. Aracı kurum CVM tarafından yetkilendirilmemiştir ve uygulanabilir bir güvence fonu bulunmamaktadır. Karşı taraf riski tamamen size aittir."
           }
         },
         {
           "@type": "Question",
-          "name": "2FA nedir ve neden etkinleştirmeliyim?",
+          "name": "2FA nedir ve neden etkinleştirilmeli?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "İki faktörlü doğrulamadır: şifreye ek olarak geçici bir kod ister. Biri şifrenizi öğrense bile hesabınıza erişmesini engeller. Her zaman etkinleştirin."
+            "text": "İki faktörlü kimlik doğrulamadır: şifreye ek olarak geçici bir kod ister. Biri şifrenizi öğrense bile hesabınıza erişimi engeller. Her zaman etkinleştirin."
           }
         }
       ]
@@ -236,10 +236,10 @@
       </div>
     </div>
   </header>
-  <nav class="breadcrumb" aria-label="Sayfa yolu">
+  <nav class="breadcrumb" aria-label="Trilha de navegação">
     <div class="container">
       <ol>
-        <li><a href="/tr/">Ana Sayfa</a></li>
+        <li><a href="/tr/">Home</a></li>
         <li><span aria-current="page">Güvenli mi?</span></li>
       </ol>
     </div>
@@ -248,74 +248,102 @@
     <section class="section">
       <div class="container article">
         <h1>Duotide güvenli mi?</h1>
-        <p>
-          Bu soru iki farklı konuyu gizliyor ve bunları karıştırmak bir yatırımcının yapabileceği
-          en pahalı hatadır: <strong>teknik güvenlik</strong> (hesabınızın ele geçirilmesi) ve
-          <strong>düzenleyici koruma</strong> (aracı kurum ödeme yapmazsa başvurabileceğiniz
-          bir merci olması). Bunlar ayrı şeylerdir.
-        </p>
-        <h2>Teknik güvenlik</h2>
-        <p>
-          İletim sırasında şifreleme, iki faktörlü doğrulama ve kimlik doğrulama sektörde
-          standarttır ve birinin hesabınıza yetkisiz erişme riskini azaltır.
-          Bunlar gerçek önlemlerdir ve kullanmalısınız — özellikle size bağlı olan 2FA'yı.
-        </p>
-        <p>
-          Ama neyi kapsadıklarına dikkat edin: yetkisiz erişimi. Aracı kurumun bir para
-          çekme talebini yerine getirmesiyle hiçbir ilgileri yoktur.
-        </p>
-        <h2>Düzenleyici koruma</h2>
-        <p>
-          Gerçek riski belirleyen nokta burasıdır. Duotide, Saint Vincent ve Grenadinler'de (SVG)
-          kayıtlı olduğunu beyan ediyor ve <strong>Brezilya'nın sermaye piyasası düzenleyicisi CVM'den izinli değil</strong>. Bir güvence
-          fonu yok, varlıkların ayrı tutulmasına ilişkin sizin doğrulayabileceğiniz bir şart yok
-          ve sorun çıktığında başvurulabilecek bir Brezilya kurumu yok.
-        </p>
-        <p>
-          Yani: şifreleme ne kadar sağlam olursa olsun, karşı taraf riski tamamen
-          sizde kalır.
-        </p>
-        <div class="callout">
-          <p><strong>Devam etmeden önce:</strong> bu sayfa bilgilendirme amaçlıdır ve
-             Duotide'ın resmî sitesi değildir.</p>
-          <p>Duotide, Brezilya'da yerleşik kişilere aracılık hizmeti sunmak için <strong>CVM'den
-             izinli değildir</strong> ve Saint Vincent ve Grenadinler'de (SVG) kayıtlı
-             olarak faaliyet gösterir. Bu, o ülkede yetkili kurumlara uygulanan
-             yatırımcı koruma mekanizmalarından yararlanamayacağınız anlamına gelir.
-             Türkiye'deyseniz SPK kayıtlarını da kontrol edin.</p>
-        </div>
-        <h2>Maruziyetinizi nasıl azaltırsınız?</h2>
-        <ul class="check-list">
-          <li><strong>2FA'yı bir doğrulama uygulamasıyla etkinleştirin</strong>, hem de hesabı oluşturur oluşturmaz;</li>
-          <li><strong>Aracı kurumda yalnızca kullandığınız sermayeyi tutun</strong> — hesabı saklama cüzdanı gibi kullanmayın;</li>
-          <li><strong>Düzenli olarak para çekin</strong>, platformda bakiye biriktirmek yerine;</li>
-          <li><strong>Koşullarını okumadan yatırım bonusu almayın</strong>: genellikle para çekmeyi kilitler;</li>
-          <li><strong>Her şeyi kayıt altına alın</strong>: her işlemin dekontlarını, talep numaralarını ve ekran görüntülerini;</li>
-          <li><strong>Başka bir yere ayrılmış parayla asla işlem yapmayın</strong> — kira, borç veya acil durum fonu.</li>
-        </ul>
-        <h2>Hiçbir önlemin ortadan kaldıramadığı risk</h2>
-        <p>
-          Kaldıraçlı ürünler, platform kusursuz çalışsa bile kısa sürede sermayenin tamamının
-          kaybına yol açabilir. Bu risk aracı kurumdan değil üründen kaynaklanır ve onu
-          ortadan kaldıracak bir güvenlik ayarı yoktur.
-        </p>
-        <div class="btn-row">
+        <figure class="foto">
+          <img src="/assets/img/duotide-seguro-01.webp" width="1024" height="512" decoding="async" fetchpriority="high"
+               alt="Arka planda grafikler olan dizüstü bilgisayarda işlemlerini takip eden bir yatırımcı">
+        </figure>
+        <p>Kripto varlık piyasasında işlem yapmanın modern ve erişilebilir bir yolunu arayanlar için Duotide, yenilikçi bir platform olarak öne çıkıyor.</p>
+        <p>Ama piyasadaki bunca seçenek arasında bir soru öne çıkıyor: <strong>Duotide güvenli mi?</strong></p>
+        <p>Platformun kullanıcıların korunmasına olan bağlılığını, yapısını, benimsediği teknolojileri ve farklılaştırıcı unsurlarını gösteren başlıca noktaları öğrenin.</p>
+        <div class="btn-row btn-row--center">
           <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr"
-             target="_blank" rel="noopener sponsored nofollow">Aracı kurumu görün</a>
+             target="_blank" rel="noopener sponsored nofollow">Aracı kuruma kaydolun</a>
+        </div>
+
+        <h2>Duotide'ın avantajları nelerdir?</h2>
+        <p>Bir yatırım platformu seçerken yatırımcının yalnızca teknik güvenlik yönlerini değil, günlük operasyonel etkinliği ve sunulan avantajları da değerlendirmesi gerekir.</p>
+        <p>Duotide, yatırımcının hayatını kolaylaştırmak için pratik ve modern çözümlere dayanan eksiksiz bir dijital ekosistem sunmasıyla öne çıkar.</p>
+        <h3>Tek hesapta 270'ten fazla varlık</h3>
+        <p>Duotide'ın en büyük farklarından biri çeşitliliktir: kripto paralar, döviz pariteleri, küresel endeksler ve emtialar arasında 270'ten fazla varlık bulunur.</p>
+        <p>Sonuç, piyasanın farklı anlarında işlem yapmak ve birden fazla hesaba gerek kalmadan çeşitlendirme yapmak için daha fazla özgürlüktür.</p>
+        <h3>Hızlı ve etkili işlemler</h3>
+        <p>Platform, optimize edilmiş işlemler ve anında emir gerçekleşmesiyle sezgisel ve hızlı bir ortam sunar.</p>
+        <p>Bu, kullanıcının piyasa fırsatlarından daha iyi yararlanabilmesi ve karar ile işlemin gerçekleşmesi arasındaki bekleme süresinin daha kısa olması anlamına gelir.</p>
+        <h3>Yatırımcı için özerklik</h3>
+        <p>Duotide'da kararları veren yatırımcıdır.</p>
+        <p>Aracı kurum, piyasa takibi, simülasyonlar ve raporlar için araçlar sunar; ama işlemlerin kontrolü her zaman kullanıcının elindedir.</p>
+        <p>Bu özerklik, şeffaflık ve bağımsızlık arayanlar tarafından değer verilen bir etkendir.</p>
+        <h3>Ölçeklenebilir ve modern platform</h3>
+        <p>Duotide, piyasanın büyümesine ayak uydurmaya ve teknolojik yeniliklere adapte olmaya hazır modern bir mimari üzerine inşa edildi.</p>
+        <p>Bu, sistem için daha fazla kararlılık, arıza azalması ve yatırımcı odaklı yeni işlevlerin sürekli olarak eklenmesini sağlar.</p>
+
+        <h2>Duotide güvenli mi?</h2>
+        <figure class="foto">
+          <img src="/assets/img/duotide-seguro-02.webp" width="1024" height="512" loading="lazy" decoding="async"
+               alt="Monitörlerde finansal grafikleri inceleyen bir profesyonel">
+        </figure>
+        <p>Evet. Güvenlik, Duotide'ın temel dayanaklarından biridir.</p>
+        <p>Platform, kullanıcıların verilerinin ve gerçekleştirdikleri işlemlerin korunmasını sağlamak için son teknoloji, sıkı gizlilik politikaları ve piyasada tanınan uygulamalar benimser.</p>
+        <div class="btn-row btn-row--center">
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr"
+             target="_blank" rel="noopener sponsored nofollow">Hemen hesabınızı oluşturun</a>
+        </div>
+
+        <h2>Kullanılan güvenlik ve teknoloji</h2>
+        <h3>Gelişmiş şifrelemeyle veri koruması</h3>
+        <p>Tüm kişisel ve işlemsel bilgiler şifreleme protokolleriyle korunur.</p>
+        <p>Bu, veriler internet üzerinden aktarılsa bile kötü niyetli üçüncü kişiler için erişilemez kalacağı anlamına gelir.</p>
+        <h3>İki faktörlü kimlik doğrulama (2FA)</h3>
+        <p>Platform, hesaba erişimde ekstra bir güvenlik katmanı ekleyen iki faktörlü kimlik doğrulama (2FA) seçeneği sunar.</p>
+        <p>Bu özellikle, biri şifrenizi öğrense bile ikinci doğrulama olmadan hesabınıza erişemez.</p>
+        <h3>İç ve dış denetim</h3>
+        <p>Süreçlerde tam uyum ve etkinlik sağlamak için Duotide düzenli iç denetimler gerçekleştirir ve ayrıca bağımsız dış denetimlere de sahiptir; bu da güvenlik, izlenebilirlik ve işlemlerin şeffaflığına olan bağlılığını pekiştirir.</p>
+        <h3>Dolandırıcılığı önleme sistemleri</h3>
+        <p>Platform, şüpheli faaliyetleri tespit eden ve engelleyen akıllı mekanizmalara sahiptir.</p>
+        <p>Bu, dolandırıcılığı, izinsiz erişim girişimlerini ve kullanıcının varlıklarını risk altına sokabilecek düzensiz hareketleri önlemeye yardımcı olur.</p>
+
+        <h2>Şeffaflık ve normlara uyum</h2>
+        <figure class="foto">
+          <img src="/assets/img/duotide-e-confiavel-02.webp" width="1024" height="512" loading="lazy" decoding="async"
+               alt="Arka planda piyasa grafikleri olan, gülümseyerek el sıkışmak için elini uzatan bir profesyonel">
+        </figure>
+        <p>Güvenlik protokollerinin yanı sıra, Duotide iletişimlerinde, kullanım koşullarında ve gizlilik politikalarında şeffaflıkla hareket eder.</p>
+        <p>Şirket, kara para aklamayı önleme (PLD) ve terörizmin finansmanının önlenmesi (CFT) dahil olmak üzere sektöre uygulanabilir normları izler ve tüm kullanıcılar için etik bir ortamı destekler. Duotide, Saint Vincent ve Grenadinler'de (SVG) kayıt altında faaliyet gösterir ve Brezilya'da CVM tarafından yetkilendirilmemiştir. Türkiye'deyseniz SPK kayıtlarını da kontrol edin.</p>
+        <p>Bu uyum tutumu, sadece kamuoyunun güvenini artırmakla kalmaz, aynı zamanda Duotide'ın küresel dijital yönetişimin en iyi uygulamalarıyla uyumlu olduğunu da gösterir.</p>
+
+        <h2>Platformun işlevleri</h2>
+        <p>Bir platformun güvenliği, kayıtlı kullanıcının deneyimine de yansır.</p>
+        <p>Duotide, verileri korumanın ve güvenilir bir ortam sunmanın yanı sıra, yatırımcının netlik, kontrol ve kararlılıkla işlem yapmasına yardımcı olan bir dizi işlev sunar.</p>
+        <p>Mevcut kaynaklar arasında şunlar bulunuyor:</p>
+        <ul class="check-list">
+          <li>Gerçek zamanlı güncel verilerle sezgisel panel;</li>
+          <li>Kişiselleştirilmiş performans raporları;</li>
+          <li>Piyasa analizi araçları;</li>
+          <li>Erişilebilir teknik destek;</li>
+          <li>Ayrıntılı işlem geçmişi;</li>
+          <li>Android ve iOS için uygulama.</li>
+        </ul>
+        <p>Bu işlevler, yatırımcının hareketleri üzerindeki görünürlüğünü artırır ve daha güvenli kararlar almasına yardımcı olur.</p>
+        <div class="btn-row btn-row--center">
+          <a class="btn btn--primary btn--lg" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr"
+             target="_blank" rel="noopener sponsored nofollow">Duotide'a kaydolun</a>
         </div>
       </div>
     </section>
-    <section class="section section--lilac">
+    <section class="duvidas">
       <div class="container">
-        <div class="section__head"><h2>Sıkça Sorulan Sorular</h2></div>
-        <div class="faq">          <details class="faq__item">
-            <summary>Duotide'daki param korunuyor mu?</summary>
-            <div class="faq__answer"><p>Brezilya'ya ait kurumsal bir güvence yoktur. Aracı kurum CVM'den izinli değildir ve uygulanabilir bir güvence fonu bulunmaz. Karşı taraf riski tamamen size aittir.</p></div>
+        <hr class="duvidas__linha">
+        <h2 class="duvidas__titulo">Sık Sorulan Sorular</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>Param Duotide'da korunuyor mu?</summary>
+            <div class="faq__answer"><p>Brezilya'ya ait kurumsal bir güvence yoktur. Aracı kurum CVM tarafından yetkilendirilmemiştir ve uygulanabilir bir güvence fonu bulunmamaktadır. Karşı taraf riski tamamen size aittir.</p></div>
           </details>
           <details class="faq__item">
-            <summary>2FA nedir ve neden etkinleştirmeliyim?</summary>
-            <div class="faq__answer"><p>İki faktörlü doğrulamadır: şifreye ek olarak geçici bir kod ister. Biri şifrenizi öğrense bile hesabınıza erişmesini engeller. Her zaman etkinleştirin.</p></div>
-          </details></div>
+            <summary>2FA nedir ve neden etkinleştirilmeli?</summary>
+            <div class="faq__answer"><p>İki faktörlü kimlik doğrulamadır: şifreye ek olarak geçici bir kod ister. Biri şifrenizi öğrense bile hesabınıza erişimi engeller. Her zaman etkinleştirin.</p></div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
@@ -385,6 +413,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260924h" defer></script>
+  <script src="/assets/js/main.js?v=20260924i" defer></script>
 </body>
 </html>
