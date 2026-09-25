@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr" data-tema="dark" data-tv="br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>RSI, SMA e MACD: uma estratégia para qualquer mercado | Blog Duotide</title>
+  <meta name="description" content="Veja como combinar média móvel, RSI e MACD para filtrar tendência, momento e ponto de entrada em qualquer ativo, com exemplo numérico completo.">
+  <link rel="canonical" href="https://duotide.com.br/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/">
+  <!--hreflang-->
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <meta name="keywords" content="blog investimentos, guia corretora, educação financeira, trading para iniciantes">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RSI, SMA e MACD: uma estratégia para qualquer mercado">
+  <meta property="og:description" content="Veja como combinar média móvel, RSI e MACD para filtrar tendência, momento e ponto de entrada em qualquer ativo, com exemplo numérico completo.">
+  <meta property="og:url" content="https://duotide.com.br/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RSI, SMA e MACD: uma estratégia para qualquer mercado">
+  <meta name="twitter:description" content="Veja como combinar média móvel, RSI e MACD para filtrar tendência, momento e ponto de entrada em qualquer ativo, com exemplo numérico completo.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tempo de leitura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925n">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/#artigo",
+      "headline": "RSI, SMA e MACD: uma estratégia para qualquer mercado",
+      "description": "Veja como combinar média móvel, RSI e MACD para filtrar tendência, momento e ponto de entrada em qualquer ativo, com exemplo numérico completo.",
+      "url": "https://duotide.com.br/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
+      "articleSection": "Estratégias",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duotide",
+        "url": "https://duotide.com.br/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "RSI, SMA e MACD: uma estratégia para qualquer mercado",
+          "item": "https://duotide.com.br/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/" aria-label="Duotide — página inicial">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide</span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir menu de navegação"
+                data-abrir="Abrir menu de navegação" data-fechar="Fechar menu de navegação">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Escolher idioma"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="22" height="16"><span>pt</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/" hreflang="pt-BR" lang="pt-BR" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/duotide-e-confiavel/">É confiável?</a></li>
+          <li><a href="/duotide-login/">Login</a></li>
+          <li><a href="/duotide-corretora/">A corretora</a></li>
+          <li><a href="/duotide-e-seguro/">É seguro?</a></li>
+          <li><a href="/duotide-app/">Aplicativo</a></li>
+          <li><a href="/melhores-corretoras/">Melhores corretoras</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide"
+           target="_blank" rel="noopener sponsored nofollow">Criar conta</a>
+        <a class="btn btn--outline btn--sm" href="/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Trilha de navegação">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span aria-current="page">RSI, SMA e MACD: uma estratégia para qualquer mercado</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Estratégias</span>
+        <h1>RSI, SMA e MACD: uma estratégia para qualquer mercado</h1>
+        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Um erro comum de quem está começando é procurar um indicador único que dê o sinal perfeito de compra ou venda. Na prática, indicadores isolados erram bastante, porque cada um enxerga só um pedaço do mercado: um mede tendência, outro mede velocidade, outro mede exaustão.</p><p>A saída mais usada por traders experientes é combinar três ferramentas que se complementam: a média móvel simples (SMA), que mostra a direção geral do preço; o RSI, que mede o momento; e o MACD, que confirma a força do movimento. Juntos, eles funcionam como três filtros em sequência, e essa lógica pode ser aplicada em ações, moedas, índices ou criptoativos, desde que o gráfico tenha volume e histórico suficientes.</p><h2>Para que serve cada indicador da combinação</h2><h3>Média móvel simples (SMA)</h3><p>A SMA de 50 ou 100 períodos funciona como uma linha de referência: quando o preço está acima dela e ela está inclinada para cima, a tendência de fundo é de alta; quando está abaixo e inclinada para baixo, a tendência é de baixa. Ela não serve para marcar o momento exato de entrada, mas define de que lado do mercado o trader deveria operar.</p><h3>RSI (Índice de Força Relativa)</h3><p>O RSI varia de 0 a 100 e mede a velocidade das variações de preço. Em vez de usar apenas as zonas clássicas de sobrecompra (acima de 70) e sobrevenda (abaixo de 30), dentro de uma tendência já identificada pela SMA o mais útil é observar a faixa intermediária: em uma tendência de alta, quedas do RSI até a região de 40 a 50 costumam indicar uma pausa saudável, não uma reversão.</p><h3>MACD</h3><p>O MACD nasce da diferença entre duas médias exponenciais e vem acompanhado de uma linha de sinal e um histograma. Quando a linha do MACD cruza para cima da linha de sinal e o histograma passa de negativo para positivo, isso sugere que o momento de curto prazo está virando a favor da tendência maior — é o gatilho que faltava depois que a SMA e o RSI já apontaram a direção.</p><h2>Como montar a estratégia passo a passo</h2><p>A lógica de combinação segue uma ordem fixa, dos filtros mais lentos para os mais rápidos:</p><ol><li>Confirme a tendência: o preço precisa estar do mesmo lado da SMA de 50 períodos, com a média inclinada na direção do movimento.</li><li>Espere a correção: aguarde o RSI recuar até a faixa de 40 a 50 em uma tendência de alta (ou 50 a 60 em uma tendência de baixa), sinal de que o ativo respirou sem inverter o quadro.</li><li>Confirme o gatilho: entre somente quando o MACD cruzar a favor da tendência, com o histograma virando positivo (alta) ou negativo (baixa).</li><li>Defina stop e alvo antes de entrar, usando a mínima ou máxima recente como referência de risco.</li></ol><h2>Exemplo prático com números</h2><p>Imagine uma ação negociada a R$ 40,00, com a SMA de 50 períodos em tendência de alta e o preço sempre acima dela nas últimas semanas. O papel corrige para R$ 39,80 e o RSI recua para 45 — dentro da faixa esperada de uma pausa, sem sinalizar reversão. Dois candles depois, o MACD cruza para cima da linha de sinal e o histograma vira positivo, com o preço voltando a R$ 40,10.</p><p>O trader entra comprado a R$ 40,10, coloca o stop loss em R$ 39,20 (abaixo da mínima da correção) e define o alvo em R$ 41,80, próximo de uma resistência anterior. O risco da operação é de R$ 0,90 por ação e o potencial de ganho é de R$ 1,70, uma relação risco-retorno de aproximadamente 1,9 para 1 — ou seja, o ganho esperado é quase o dobro do risco assumido.</p><h2>Erros comuns e gestão de risco</h2><ul><li>Operar contra a SMA só porque o RSI está em zona de sobrevenda: em tendências fortes, o RSI pode ficar esticado por muito tempo sem reverter.</li><li>Entrar assim que o MACD cruza, sem checar se o RSI já corrigiu o suficiente, o que costuma gerar entradas atrasadas.</li><li>Não definir stop loss antes de abrir a operação, o que transforma uma perda pequena em uma perda grande.</li><li>Usar os três indicadores com parâmetros diferentes em cada operação, sem testar antes em uma conta de demonstração.</li></ul><p>Nenhuma combinação de indicadores garante acerto em todas as operações — trading envolve risco real de perda, e por isso faz sentido testar essa estratégia em conta demo antes de operar com dinheiro de verdade. A vantagem de juntar SMA, RSI e MACD na Duotide ou em qualquer outra plataforma de gráficos é reduzir sinais falsos, já que cada indicador filtra os erros do anterior antes de você decidir entrar.
+        <div class="bq-post__cta">
+          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Leia também</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/blog/o-que-e-swing-trading-como-aplicar/"><img src="/assets/img/duotide-login-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é swing trading e como aplicar na prática</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/estrategia-repique-na-media-movel/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia de repique na média móvel para curto prazo</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/sistema-completo-woodies-cci-estrategia/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Sistema Woodies CCI: o indicador completo, não só o CCI básico</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Direitos autorais © 2026 Duotide.<br>
+            Todos os direitos reservados.<br>
+            Site não oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/duotide-e-confiavel/">Duotide é Confiável?</a></li>
+            <li><a href="/duotide-login/">Metódos de Login</a></li>
+            <li><a href="/duotide-corretora/">Conheça a Corretora</a></li>
+            <li><a href="/duotide-e-seguro/">Segurança da Broker</a></li>
+            <li><a href="/duotide-app/">Aplicativo</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contato</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gerente de contas 24h/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>A Duotide não possui autorização da Comissão de Valores Mobiliários (CVM) para ofertar
+          serviços de intermediação ou distribuição de valores mobiliários a investidores residentes
+          no Brasil. Portanto, qualquer informação aqui apresentada não deve ser interpretada como uma
+          oferta direta desses serviços a clientes brasileiros. Este site é informativo, não é o site
+          oficial da Duotide e é mantido por afiliação. Não há garantia de que projeções ou estratégias
+          resultem em desempenhos específicos, e o desempenho passado não assegura resultados futuros.
+          A volatilidade dos mercados pode gerar variações significativas nos retornos. Derivativos e
+          produtos alavancados são sofisticados e têm potencial elevado de risco: é essencial estar
+          ciente da possibilidade de perdas, inclusive totais, do capital investido. Nunca invista
+          valores que você não pode perder. A Duotide opera sob registro em São Vicente e Granadinas (SVG).</p>
+        <p class="footer__links">
+          <a href="/duotide-perguntas-frequentes/">Perguntas frequentes</a>
+          <a href="/sobre/">Sobre este site</a>
+          <a href="/contato/">Contato</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Fechar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bônus</span> <span class="pp__l2">de até 100%</span></h2>
+          <p>Turbine seus fundos com um bônus de depósito e desbloqueie uma recompensa que você poderá sacar</p>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Resgatar agora</a>
+          <p class="pp__mini">Sujeito às condições da promoção na plataforma parceira. Operar produtos alavancados envolve risco de perda.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-bonus-mob.webp"><img src="/assets/img/popup-bonus.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260925n" defer></script>
+</body>
+</html>

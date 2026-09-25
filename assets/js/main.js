@@ -205,3 +205,31 @@
     else setTimeout(carregarFita, 1200);
   }
 })();
+
+// Blog: filtro por categoria e "carregar mais"
+(function () {
+  var grade = document.querySelector('.bq__grade[data-visiveis]');
+  if (!grade) return;
+  var passo = +grade.getAttribute('data-visiveis') || 12, limite = passo, cat = '';
+  var cards = [].slice.call(grade.querySelectorAll('.bq__card'));
+  var mais = document.querySelector('.bq__mais');
+  function aplicar() {
+    var n = 0, total = 0;
+    cards.forEach(function (c) {
+      var ok = !cat || c.getAttribute('data-cat') === cat;
+      if (ok) total++;
+      var mostra = ok && n < limite;
+      if (mostra) n++;
+      c.classList.toggle('is-oculto', !mostra);
+    });
+    if (mais) mais.hidden = n >= total;
+  }
+  [].forEach.call(document.querySelectorAll('.bq__cat'), function (b) {
+    b.addEventListener('click', function () {
+      [].forEach.call(document.querySelectorAll('.bq__cat'), function (x) { x.classList.toggle('is-ativo', x === b); });
+      cat = b.getAttribute('data-cat'); limite = passo; aplicar();
+    });
+  });
+  if (mais) mais.addEventListener('click', function () { limite += passo; aplicar(); });
+  aplicar();
+})();

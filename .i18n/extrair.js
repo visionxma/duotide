@@ -21,7 +21,8 @@ function paginas() {
       const rel = path.relative(RAIZ, p);
       if (FORA.has(rel)) continue;
       if (fs.statSync(p).isDirectory()) { andar(p); continue; }
-      if (nome === 'index.html' && !REDIR.has('/' + path.relative(RAIZ, dir) + '/')) out.push(path.relative(RAIZ, dir));
+      // artigos do blog (.blog/artigos.js) ficam só em português e não passam pela tradução
+      if (nome === 'index.html' && !REDIR.has('/' + path.relative(RAIZ, dir) + '/') && !fs.readFileSync(p, 'utf8').includes('<!--artigo-blog-->')) out.push(path.relative(RAIZ, dir));
     }
   })(RAIZ);
   return out.sort();

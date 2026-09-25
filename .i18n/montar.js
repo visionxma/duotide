@@ -303,32 +303,39 @@ const BLOG_IMGS = ['duotide-o-que-e', 'duotide-seguranca', 'duotide-abrir-conta'
   'duotide-corretora-02', 'duotide-corretora-03', 'duotide-app-03', 'duotide-seguro-02', 'duotide-corretora-04'];
 const ATIVOS = [['Bitcoin', 'BTC/USD', '₿', '#f7931a'], ['Ethereum', 'ETH/USD', 'Ξ', '#627eea'], ['EUR/USD', 'Forex', '€', '#2d6cdf'],
   ['Gold', 'XAU/USD', 'Au', '#d4a017'], ['USD/JPY', 'Forex', '¥', '#c0392b']];
+const BLOG = require('../.blog/artigos.js');
 function blogLayout(h, idioma) {
   const B = chrome(idioma).blog;
-  const cards = [...h.matchAll(/<article class="card">\s*<h3><a href="([^"]+)">([\s\S]*?)<\/a><\/h3>\s*<p>([\s\S]*?)<\/p>\s*<\/article>/g)]
-    .map((m, i) => ({ href: m[1], titulo: m[2], resumo: m[3], img: `/assets/img/${BLOG_IMGS[i % BLOG_IMGS.length]}.webp` }));
-  if (!cards.length) return h;
-  let data = '06/08/2026';
-  try { data = new Intl.DateTimeFormat(idioma.codigo, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date('2026-08-06T12:00:00Z')); } catch (e) {}
-  const meta = `<span class="bq__meta">${data} · ${B.leitura.replace('{n}', 5)}</span>`;
-  const [d, ...resto] = cards;
-  const alta = cards.slice(-4);
+  const arts = BLOG.lista();
+  if (!arts.length) return h;
+  const fmt = d => { try { return new Intl.DateTimeFormat(idioma.codigo, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
+  const lg = idioma === PT ? '' : ' lang="pt-BR" hreflang="pt-BR"';
+  const meta = a => `<span class="bq__meta">${fmt(a.data)} · ${B.leitura.replace('{n}', a.leitura)}</span>`;
+  const [d, ...resto] = arts;
+  const alta = arts.slice(1, 5);
+  const cats = [...new Set(arts.map(a => a.categoria).filter(Boolean))];
+  const VISIVEIS = 12;
   const html = `<!--gerado--><div class="bq">
-        <a class="bq__hero" href="${d.href}" style="background-image:url('${d.img}')">
+        <a class="bq__hero" href="${d.href}"${lg} style="background-image:url('${d.img}')">
           <span class="bq__tag">${B.destaque}</span>
-          <span class="bq__hero-titulo">${d.titulo}</span>
-          ${meta}
+          <span class="bq__hero-titulo"${lg}>${escAttr(d.titulo)}</span>
+          ${meta(d)}
         </a>
         <div class="bq__corpo">
           <div class="bq__principal">
             <h2 class="bq__h">${B.recentes}</h2>
-            <div class="bq__grade">
-${resto.map(c => `              <a class="bq__card" href="${c.href}"><img src="${c.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${c.titulo}</span><span class="bq__resumo">${c.resumo}</span><span class="bq__autor">${B.equipe}</span>${meta}</a>`).join('\n')}
+            <div class="bq__cats" role="group">
+              <button type="button" class="bq__cat is-ativo" data-cat="">${B.todos}</button>
+${cats.map(c => `              <button type="button" class="bq__cat" data-cat="${escAttr(c)}" lang="pt-BR">${c}</button>`).join('\n')}
             </div>
+            <div class="bq__grade" data-visiveis="${VISIVEIS}">
+${resto.map((c, i) => `              <a class="bq__card${i >= VISIVEIS ? ' is-oculto' : ''}" href="${c.href}" data-cat="${escAttr(c.categoria || '')}"${lg}><img src="${c.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${escAttr(c.titulo)}</span><span class="bq__resumo">${escAttr(c.descricao || '')}</span><span class="bq__autor">${B.equipe}</span>${meta(c)}</a>`).join('\n')}
+            </div>
+            <button type="button" class="btn btn--outline bq__mais">${B.mais}</button>
           </div>
           <aside class="bq__lado">
             <h2 class="bq__h">${B.emalta}</h2>
-${alta.map(c => `            <a class="bq__alta" href="${c.href}" style="background-image:url('${c.img}')"><span>${c.titulo}</span><small>${data}</small></a>`).join('\n')}
+${alta.map(c => `            <a class="bq__alta" href="${c.href}" style="background-image:url('${c.img}')"${lg}><span>${escAttr(c.titulo)}</span><small>${fmt(c.data)}</small></a>`).join('\n')}
             <h2 class="bq__h bq__h--ativos">📈 ${B.ativos}</h2>
             <ul class="bq__ativos">
 ${ATIVOS.map(([n, s, ic, cor]) => `              <li><span class="bq__ic" style="background:${cor}">${ic}</span><span class="bq__an"><strong>${n}</strong><small>${s}</small></span><a class="bq__neg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${B.negociar}</a></li>`).join('\n')}
@@ -578,7 +585,7 @@ function main() {
 
   // 2. português
   for (const c of CHAVES) ajustarPt(path.join(RAIZ, ROTAS[c], 'index.html'), c);
-  for (const extra of ['404.html', 'noticias/index.html', '.noticias/modelo.html']) {
+  for (const extra of ['404.html']) {
     const f = path.join(RAIZ, extra);
     if (fs.existsSync(f)) ajustarPt(f, null);
   }
@@ -591,9 +598,9 @@ function main() {
     return { loc, lastmod: lastmodPt[loc] || HOJE, imagens: imagens(ler(path.join(RAIZ, ROTAS[c], 'index.html'))), alternados: alternados(c), post: c.startsWith('blog__') };
   };
   const pts = CHAVES.map(entradaPt);
-  const noticias = { loc: SITE + '/noticias/', lastmod: HOJE, imagens: imagens(ler(path.join(RAIZ, 'noticias/index.html'))), alternados: [], post: false };
-  const paginasPt = [...pts.filter(u => !u.post), noticias].sort((a, b) => a.loc === SITE + '/' ? -1 : b.loc === SITE + '/' ? 1 : 0);
-  const postsPt = pts.filter(u => u.post);
+  const paginasPt = [...pts.filter(u => !u.post)].sort((a, b) => a.loc === SITE + '/' ? -1 : b.loc === SITE + '/' ? 1 : 0);
+  // artigos do blog (.blog/artigos/*.json): páginas geradas a partir da casca /blog/
+  const postsPt = BLOG.gerar().map(a => ({ loc: `${SITE}${a.href}`, lastmod: a.data + 'T09:00:00-03:00', imagens: [SITE + a.img], alternados: [] }));
   fs.writeFileSync(path.join(RAIZ, 'page-sitemap.xml'), urlset(paginasPt));
   fs.writeFileSync(path.join(RAIZ, 'post-sitemap.xml'), urlset(postsPt));
   fs.writeFileSync(path.join(RAIZ, 'sitemap.xml'), urlset([...paginasPt, ...postsPt].map(u => ({ ...u, alternados: [] }))));
@@ -605,14 +612,6 @@ function main() {
     fs.writeFileSync(path.join(RAIZ, `sitemap-${idioma.pasta}.xml`), urlset(lista));
     indice.push([`sitemap-${idioma.pasta}.xml`, lista]);
   }
-  // notícias escritas (.noticias/artigos.json): páginas + sitemap próprio
-  const artigosF = path.join(RAIZ, '.noticias/artigos.json');
-  if (fs.existsSync(artigosF)) {
-    execFileSync('node', [path.join(RAIZ, '.noticias/artigos.js')], { stdio: 'pipe' });
-    const lista = JSON.parse(ler(artigosF)).map(a => ({ loc: `${SITE}/noticias/${a.slug}/`, lastmod: a.data + 'T09:00:00-03:00', imagens: [], alternados: [] }));
-    fs.writeFileSync(path.join(RAIZ, 'sitemap-noticias.xml'), urlset(lista));
-    indice.push(['sitemap-noticias.xml', lista]);
-  }
   const recente = l => l.map(u => u.lastmod).sort((a, b) => new Date(b) - new Date(a))[0];
   fs.writeFileSync(path.join(RAIZ, 'sitemap_index.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -623,10 +622,13 @@ ${indice.map(([f, l]) => `\t<sitemap>\n\t\t<loc>${SITE}/${f}</loc>\n\t\t<lastmod
   // 3b. páginas removidas: redirecionam para a home do idioma (evita 404 para quem vem do Google)
   const redir = path.join(__dirname, 'redirecionados.json');
   if (fs.existsSync(redir)) {
+    const vivos = new Set(postsPt.map(u => u.loc.slice(SITE.length)));
     for (const rota of JSON.parse(ler(redir))) {
       const pasta = rota.split('/')[1];
       const idioma = prontos.find(i => i.pasta === pasta) || PT;
-      const alvo = idioma === PT ? '/' : `/${idioma.pasta}/`;
+      const base = idioma === PT ? '/' : `/${idioma.pasta}/`;
+      const alvo = /^\/noticias\//.test(rota) ? '/blog/' : /\/blog\/[^/]+\/$/.test(rota) ? base + 'blog/' : base;
+      if (vivos.has(rota)) continue; // um artigo novo ocupa hoje esse endereço
       const f = path.join(RAIZ, rota, 'index.html');
       fs.mkdirSync(path.dirname(f), { recursive: true });
       fs.writeFileSync(f, `<!DOCTYPE html>
