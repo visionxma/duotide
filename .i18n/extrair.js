@@ -9,6 +9,9 @@ const FORA = new Set(['noticias', '404.html',
   // pastas geradas pelo montar.js (uma por idioma)
   ...JSON.parse(fs.readFileSync(path.join(__dirname, 'idiomas.json'), 'utf8')).map(i => i.pasta).filter(Boolean)]);
 
+// Endereços removidos que viraram redirecionamento (gerados pelo montar.js) não são páginas.
+const REDIR = new Set(fs.existsSync(path.join(__dirname, 'redirecionados.json'))
+  ? JSON.parse(fs.readFileSync(path.join(__dirname, 'redirecionados.json'), 'utf8')) : []);
 function paginas() {
   const out = [];
   (function andar(dir) {
@@ -18,7 +21,7 @@ function paginas() {
       const rel = path.relative(RAIZ, p);
       if (FORA.has(rel)) continue;
       if (fs.statSync(p).isDirectory()) { andar(p); continue; }
-      if (nome === 'index.html') out.push(path.relative(RAIZ, dir));
+      if (nome === 'index.html' && !REDIR.has('/' + path.relative(RAIZ, dir) + '/')) out.push(path.relative(RAIZ, dir));
     }
   })(RAIZ);
   return out.sort();
@@ -30,7 +33,8 @@ function extrair(rota) {
   const titulo = html.match(/<title>([\s\S]*?)<\/title>/)[1].trim();
   const desc = html.match(/<meta name="description" content="([^"]*)"/)[1];
   const trilha = (html.match(/<nav class="breadcrumb"[\s\S]*?<\/nav>/) || [''])[0];
-  const main = html.match(/<main[\s\S]*?<\/main>/)[0];
+  // o que o montar.js gera (botões das lojas, topo do app) não é texto para traduzir
+  const main = html.match(/<main[\s\S]*?<\/main>/)[0].replace(/\s*<!--gerado-->[\s\S]*?<!--\/gerado-->/g, '');
   const slug = rota.split('/').pop();
   return `<!--slug-->${slug}<!--/slug-->
 <!--title-->${titulo}<!--/title-->

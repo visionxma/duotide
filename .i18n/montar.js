@@ -108,7 +108,7 @@ function popup(idioma) {
           <p class="pp__mini">${P.mini}</p>
         </div>
         <div class="pp__fig" aria-hidden="true">
-          <img src="/assets/img/popup-bonus.svg" alt="" width="520" height="480" loading="lazy" decoding="async">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-bonus-mob.webp"><img src="/assets/img/popup-bonus.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
         </div>
       </div>
     </div>
@@ -189,6 +189,7 @@ function rodape(idioma, chaveMenu) {
         <div class="footer__nav footer__contact">
           <h2>${R.contato}</h2>
           <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>${R.suporte}</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
         </div>
       </div>
       <div class="footer__legal">
@@ -199,6 +200,42 @@ ${LINKS_RODAPE.map(([k, c]) => `          <a href="${caminho(idioma, c)}">${R.li
       </div>
     </div>
   </footer>`;
+}
+
+// ---------------------------------------------------------------- app: botões das lojas e topo da página
+const APPLE = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.37 12.73c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.35-.14-2.65.8-3.33.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.1 8.79.74 1.06 1.61 2.25 2.75 2.2 1.1-.04 1.52-.71 2.86-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.43 1.21-2.49-.03-.01-2.31-.89-2.33-3.52zM14.17 6.27c.6-.74 1.01-1.75.9-2.77-.87.04-1.94.59-2.56 1.32-.56.64-1.05 1.68-.92 2.67.97.07 1.97-.49 2.58-1.22z"/></svg>';
+const PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#34a853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.35-.2-.6-.6-.6-1.1V3.4c0-.5.25-.9.6-1.1z"/><path fill="#fbbc04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.45.8-1.6 0-2.05z"/><path fill="#ea4335" d="M13.4 12 3.6 21.7c.3.2.75.25 1.15.02l12.05-6.3z"/><path fill="#4285f4" d="M13.4 12 16.8 8.6 4.75 2.28c-.4-.23-.85-.18-1.15.02z"/></svg>';
+function lojas(idioma) {
+  const L = chrome(idioma).lojas;
+  const link = (icone, pre, nome) => `<a class="loja" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${icone}<span><small>${pre}</small>${nome}</span></a>`;
+  return `<!--gerado-->${link(APPLE, L.apple_pre, L.apple)}${link(PLAY, L.google_pre, L.google)}<!--/gerado-->`;
+}
+function topoApp(idioma) {
+  const C = chrome(idioma);
+  return `<!--gerado--><section class="app-hero">
+      <div class="container app-hero__inner">
+        <h2 class="app-hero__titulo">${C.app.titulo}</h2>
+        <div class="app-hero__palco">
+          <div class="app-hero__mao">
+            <img class="app-hero__tela" src="/assets/img/app/duotide-tela.svg" alt="" width="390" height="844" decoding="async" fetchpriority="high">
+            <img class="app-hero__foto" src="/assets/img/app/mao.webp" alt="" width="921" height="1272" decoding="async" fetchpriority="high">
+          </div>
+          <a class="app-qr" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">
+            <img src="/assets/img/qr/qr-${idioma.pasta || 'pt'}.svg" alt="QR code" width="120" height="120">
+            <span><strong>${C.app.qr_titulo}</strong><em>${C.app.qr_cta} &rsaquo;</em></span>
+          </a>
+        </div>
+        <div class="lojas lojas--centro">${lojas(idioma).replace(/<!--\/?gerado-->/g, "")}</div>
+      </div>
+    </section><!--/gerado-->`;
+}
+// Preenche o que é gerado dentro do <main> (idempotente: limpa antes de preencher).
+function gerados(h, idioma, chave) {
+  h = h.replace(/\s*<!--gerado--><section[\s\S]*?<\/section><!--\/gerado-->/g, '');
+  h = h.replace(/<!--gerado-->[\s\S]*?<!--\/gerado-->/g, '');
+  h = h.replace(/<div class="lojas"><\/div>/g, () => `<div class="lojas">${lojas(idioma)}</div>`);
+  if (chave === 'duotide-app') h = h.replace(/(<main id="conteudo">)/, (m, a) => a + '\n    ' + topoApp(idioma));
+  return h;
 }
 
 // ---------------------------------------------------------------- página traduzida
@@ -288,6 +325,7 @@ function paginaTraduzida(idioma, chave) {
   h = h.replace(/(<button class="to-top" type="button" aria-label=")[^"]*"/, (m, a) => a + escAttr(C.topo_aria) + '"');
   h = h.replace(/\s*<template id="pp-modelo">[\s\S]*?<\/template>/, '');
   h = h.replace(/(\s*<script src="\/assets\/js\/main\.js)/, (m, a) => '\n  ' + popup(idioma) + a);
+  h = gerados(h, idioma, chave);
   return h;
 }
 
@@ -302,11 +340,14 @@ function ajustarPt(arquivo, chave) {
   h = h.replace(/(<span><\/span>\s*<\/button>)\s*/, (m, a) => a + (sel ? '\n        ' + sel : '') + '\n      ');
   h = h.replace(/(<button class="nav-toggle"[^>]*aria-label="Abrir menu de navegação")(?![^>]*data-abrir)/,
     `$1\n                data-abrir="Abrir menu de navegação" data-fechar="Fechar menu de navegação"`);
+  if (!h.includes('footer__suporte')) h = h.replace(/(<p><a href="mailto:contato@duotide\.com\.br">contato@duotide\.com\.br<\/a><\/p>)/,
+    (m, a) => a + '\n          <p class="footer__suporte"><span>' + CHROME_PT.rodape.suporte + '</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>');
   const hrefPt = (h.match(/<nav class="site-nav"[\s\S]*?<a href="([^"]+)" aria-current="page"/) || [])[1];
   h = h.replace(/(<div class="footer__nav footer__empresa">\s*<h2>[^<]*<\/h2>\s*)<ul>[\s\S]*?<\/ul>/,
     (m, a) => a + menuRodape(PT, hrefPt ? chavePorRotaPt[hrefPt] : null));
   h = h.replace(/\s*<template id="pp-modelo">[\s\S]*?<\/template>/, '');
   h = h.replace(/(\s*<script src="\/assets\/js\/main\.js)/, (m, a) => '\n  ' + popup(PT) + a);
+  if (chave) h = gerados(h, PT, chave);
   fs.writeFileSync(arquivo, h);
 }
 

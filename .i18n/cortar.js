@@ -5,6 +5,7 @@
 // cortes.json: [{"chave": "duotide-atendimento", "tag": "details", "contem": "O suporte pode pedir"}]
 // Com "trocar": {"fonte": "<p>…</p>", "en": "<p>…</p>", …} o elemento fica e só o conteúdo
 // dele é substituído, pelo texto de cada idioma ("fonte" vale para a fonte e a página em pt).
+// Com "depois": "<div …></div>" o trecho é inserido logo após o elemento, igual em todos os idiomas.
 // "contem" tem de achar exatamente UM elemento daquela tag na fonte, senão nada é alterado.
 const fs = require('fs');
 const path = require('path');
@@ -80,7 +81,11 @@ for (const [chave, lista] of Object.entries(porPagina)) {
       const ts = tags(corpo);
       const t = ts[p.indice];
       if (!t || t.nome !== p.tag || t.fecha) throw new Error(`${f}: posição ${p.indice} não é <${p.tag}>`);
-      if (p.trocar) {
+      if (p.depois) {
+        const j = par(ts, p.indice);
+        const recuo = (corpo.slice(0, t.ini).match(/[ \t]*$/) || [''])[0];
+        corpo = corpo.slice(0, ts[j].fim) + '\n' + recuo + p.depois + corpo.slice(ts[j].fim);
+      } else if (p.trocar) {
         if (!p.trocar[pasta]) throw new Error(`${p.chave}: falta o texto em ${pasta}`);
         const j = par(ts, p.indice);
         corpo = corpo.slice(0, t.fim) + p.trocar[pasta] + corpo.slice(ts[j].ini);
