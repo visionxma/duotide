@@ -78,10 +78,10 @@ function seletor(idioma, chave) {
   const itens = prontos.map(i => {
     const href = chave ? caminho(i, chave) : caminho(i, 'inicio');
     const atual = i === idioma ? ' aria-current="true"' : '';
-    return `            <li><a href="${href}" hreflang="${i.codigo}" lang="${i.codigo}"${atual}>${i.nome} <small>${i.pasta || 'pt'}</small></a></li>`;
+    return `            <li><a href="${href}" hreflang="${i.codigo}" lang="${i.codigo}"${atual}><img class="bandeira" src="/assets/img/bandeiras/${i.pasta || 'pt'}.svg" alt="" width="20" height="15" loading="lazy">${i.nome} <small>${i.pasta || 'pt'}</small></a></li>`;
   }).join('\n');
   return `<details class="idioma">
-          <summary aria-label="${escAttr(C.idioma_aria)}">${GLOBO}<span>${idioma.pasta || 'pt'}</span></summary>
+          <summary aria-label="${escAttr(C.idioma_aria)}"><img class="bandeira" src="/assets/img/bandeiras/${idioma.pasta || 'pt'}.svg" alt="" width="22" height="16"><span>${idioma.pasta || 'pt'}</span></summary>
           <ul class="idioma__lista">
 ${itens}
           </ul>
@@ -229,13 +229,110 @@ function topoApp(idioma) {
       </div>
     </section><!--/gerado-->`;
 }
+const GLOBO_WEB = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+function plataformas(idioma) {
+  const P = chrome(idioma).plataformas, L = chrome(idioma).lojas;
+  const botao = (icone, nome, href, externo = true) => `<a class="plat__btn" href="${href}"${externo ? ' target="_blank" rel="noopener sponsored nofollow"' : ''}>${icone}<span>${nome}</span></a>`;
+  return `<!--gerado--><section class="plataformas">
+      <div class="container">
+        <h2 class="plataformas__titulo">${P.titulo} <span>${P.titulo2}</span></h2>
+        <div class="plataformas__palco" aria-hidden="true">
+          <div class="disp disp--tablet"><img src="/assets/img/app/duotide-tablet.svg" alt="" width="1180" height="780" loading="lazy" decoding="async"></div>
+          <div class="disp disp--fone"><img src="/assets/img/app/duotide-tela.svg" alt="" width="390" height="844" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="plataformas__cartao">
+          <div class="plat">
+            <h3>${P.desktop}</h3>
+            <p>${P.desktop_txt}</p>
+            <a class="plat__link" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${P.desktop_link} &rsaquo;</a>
+            <div class="plat__botoes">${botao(GLOBO_WEB, P.webapp, aff(idioma))}</div>
+          </div>
+          <div class="plat plat--movel">
+            <div class="plat__topo">
+              <div>
+                <h3>${P.movel}</h3>
+                <p>${P.movel_txt}</p>
+                <a class="plat__link" href="${caminho(idioma, 'duotide-app')}">${P.movel_link} &rsaquo;</a>
+              </div>
+              <img class="plat__qr" src="/assets/img/qr/qr-${idioma.pasta || 'pt'}.svg" alt="QR code" width="120" height="120" loading="lazy">
+            </div>
+            <div class="plat__botoes">${botao(APPLE, L.apple, aff(idioma))}${botao(PLAY, L.google, aff(idioma))}</div>
+          </div>
+        </div>
+      </div>
+    </section><!--/gerado-->`;
+}
+
 // Preenche o que é gerado dentro do <main> (idempotente: limpa antes de preencher).
 function gerados(h, idioma, chave) {
   h = h.replace(/\s*<!--gerado--><section[\s\S]*?<\/section><!--\/gerado-->/g, '');
   h = h.replace(/<!--gerado-->[\s\S]*?<!--\/gerado-->/g, '');
   h = h.replace(/<div class="lojas"><\/div>/g, () => `<div class="lojas">${lojas(idioma)}</div>`);
   if (chave === 'duotide-app') h = h.replace(/(<main id="conteudo">)/, (m, a) => a + '\n    ' + topoApp(idioma));
+  if (chave === 'inicio') h = h.replace(/(<section class="faixa">[\s\S]*?<\/section>)/, (m, a) => a + '\n    ' + plataformas(idioma));
   return h;
+}
+
+// ---------------------------------------------------------------- layout da home
+// Reorganiza o texto da home em blocos visuais SEM mudar a ordem nem o conteúdo dos
+// elementos: só acrescenta invólucros <div … data-g>…</div><!--/g--> (que o extrair.js
+// remove) e alguns trechos <!--gerado-->. Como a sequência de tags é a mesma em todos
+// os idiomas, o mesmo layout vale para as 17 versões.
+function filhosDiretos(html) {
+  const re = /<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>|<!--[\s\S]*?-->/g;
+  const vazias = new Set(['img', 'br', 'hr', 'source', 'input', 'meta', 'link']);
+  const out = []; let prof = 0, ini = -1, m;
+  while ((m = re.exec(html))) {
+    if (m[0].startsWith('<!--')) continue;
+    const nome = m[1].toLowerCase(), fecha = m[0][1] === '/';
+    if ((vazias.has(nome) || m[0].endsWith('/>')) && !fecha) { if (prof === 0) out.push({ ini: m.index, fim: re.lastIndex, tag: nome, abre: m[0] }); continue; }
+    if (!fecha) { if (prof === 0) ini = m.index, out.tagAtual = { tag: nome, abre: m[0] }; prof++; }
+    else { prof--; if (prof === 0) out.push({ ini, fim: re.lastIndex, ...out.tagAtual }); }
+  }
+  return out;
+}
+const tiraInvolucros = h => h.replace(/<div[^>]*\sdata-g(?:\s[^>]*)?>\s*/g, '').replace(/\s*<\/div><!--\/g-->/g, '');
+function layoutHome(h, idioma) {
+  h = tiraInvolucros(h);
+  let sec = 0;
+  return h.replace(/(<section class="bloco">\s*<div class="container">)([\s\S]*?)(<\/div>\s*<\/section>)/g, (tudo, a, miolo, z) => {
+    sec++;
+    const fs = filhosDiretos(miolo).map(f => ({ ...f, html: miolo.slice(f.ini, f.fim) }));
+    const grupos = [];
+    for (const f of fs) {
+      if (f.tag === 'h2' || f.tag === 'h3' || !grupos.length) grupos.push([]);
+      grupos[grupos.length - 1].push(f);
+    }
+    let lado = 0;
+    const partes = grupos.map((g, gi) => {
+      const ultimoDaHome = sec === 2 && gi === grupos.length - 1;
+      const fig = g.filter(f => f.tag === 'figure');
+      const resto = g.filter(f => f.tag !== 'figure');
+      const txt = resto.map(f => f.html).join('\n');
+      const temPassos = g.some(f => f.tag === 'ol');
+      const temLista = g.some(f => f.tag === 'ul');
+      const ehApp = g[0].tag === 'h3' && g.some(f => /class="lojas"/.test(f.abre || ''));
+      if (ultimoDaHome) {
+        const C = chrome(idioma);
+        return `<div class="hb hb--cta" data-g>${txt}<!--gerado--><div class="btn-row btn-row--center"><a class="btn btn--primary btn--lg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${C.criar_conta}</a></div><!--/gerado--></div><!--/g-->`;
+      }
+      if (ehApp) {
+        return `<div class="hb hb--split hb--app" data-g><div class="hb__txt" data-g>${txt}</div><!--/g--><!--gerado--><div class="hb__midia"><img src="/assets/img/duotide-app-celular.webp" alt="" width="720" height="720" loading="lazy" decoding="async"></div><!--/gerado--></div><!--/g-->`;
+      }
+      if (fig.length === 1) {
+        // mantém a ordem original: o que vem antes da foto, a foto, o que vem depois
+        const k = g.indexOf(fig[0]);
+        const antes = g.slice(0, k).map(f => f.html).join('\n');
+        const depois = g.slice(k + 1).map(f => f.html).join('\n');
+        const rev = (lado++ % 2) ? ' hb--rev' : '';
+        return `<div class="hb hb--split${rev}" data-g><div class="hb__txt" data-g>${antes}</div><!--/g-->${fig[0].html}${depois ? `<div class="hb__fim" data-g>${depois}</div><!--/g-->` : ''}</div><!--/g-->`;
+      }
+      if (temPassos) return `<div class="hb hb--passos" data-g>${txt}</div><!--/g-->`;
+      if (temLista) return `<div class="hb hb--recursos" data-g>${txt}</div><!--/g-->`;
+      return `<div class="hb hb--cartoes" data-g>${txt}</div><!--/g-->`;
+    });
+    return a + '\n' + partes.join('\n') + '\n' + z;
+  });
 }
 
 // ---------------------------------------------------------------- página traduzida
@@ -326,6 +423,7 @@ function paginaTraduzida(idioma, chave) {
   h = h.replace(/\s*<template id="pp-modelo">[\s\S]*?<\/template>/, '');
   h = h.replace(/(\s*<script src="\/assets\/js\/main\.js)/, (m, a) => '\n  ' + popup(idioma) + a);
   h = gerados(h, idioma, chave);
+  if (chave === 'inicio') h = layoutHome(h, idioma);
   return h;
 }
 
@@ -348,6 +446,7 @@ function ajustarPt(arquivo, chave) {
   h = h.replace(/\s*<template id="pp-modelo">[\s\S]*?<\/template>/, '');
   h = h.replace(/(\s*<script src="\/assets\/js\/main\.js)/, (m, a) => '\n  ' + popup(PT) + a);
   if (chave) h = gerados(h, PT, chave);
+  if (chave === 'inicio') h = layoutHome(h, PT);
   fs.writeFileSync(arquivo, h);
 }
 

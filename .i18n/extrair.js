@@ -34,7 +34,8 @@ function extrair(rota) {
   const desc = html.match(/<meta name="description" content="([^"]*)"/)[1];
   const trilha = (html.match(/<nav class="breadcrumb"[\s\S]*?<\/nav>/) || [''])[0];
   // o que o montar.js gera (botões das lojas, topo do app) não é texto para traduzir
-  const main = html.match(/<main[\s\S]*?<\/main>/)[0].replace(/\s*<!--gerado-->[\s\S]*?<!--\/gerado-->/g, '');
+  const main = html.match(/<main[\s\S]*?<\/main>/)[0].replace(/\s*<!--gerado-->[\s\S]*?<!--\/gerado-->/g, '')
+    .replace(/<div[^>]*\sdata-g(?:\s[^>]*)?>\s*/g, '').replace(/\s*<\/div><!--\/g-->/g, ''); // invólucros de layout da home
   const slug = rota.split('/').pop();
   return `<!--slug-->${slug}<!--/slug-->
 <!--title-->${titulo}<!--/title-->
