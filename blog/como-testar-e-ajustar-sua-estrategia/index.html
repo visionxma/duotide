@@ -19,9 +19,9 @@
   <meta property="og:description" content="Aprenda a fazer um backtest simples, ajustar o risco por operação e saber, com critério, quando é hora de trocar de estratégia.">
   <meta property="og:url" content="https://duotide.com.br/blog/como-testar-e-ajustar-sua-estrategia/">
   <meta property="og:site_name" content="Duotide">
-  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-login-02.webp">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-04.webp">
   <meta property="og:image:alt" content="Duotide — Blog Duotide">
-  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-login-02.webp">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-04.webp">
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260925n">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925o">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -53,7 +53,7 @@
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
       "dateModified": "2026-09-24T09:00:00-03:00",
-      "image": "https://duotide.com.br/assets/img/duotide-login-02.webp",
+      "image": "https://duotide.com.br/assets/img/duotide-app-04.webp",
       "articleSection": "Estratégias",
       "author": {
         "@type": "Organization",
@@ -169,7 +169,7 @@
         <span class="bq__tag">Estratégias</span>
         <h1>Como testar e ajustar sua estratégia de trading</h1>
         <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 6 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-login-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <figure class="foto"><img src="/assets/img/duotide-app-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         <p>Depois de definir o perfil de trader que combina com você — tempo disponível, tolerância a risco, capital e personalidade —, o passo seguinte é colocar a estratégia escolhida à prova antes de operar valores relevantes. É nessa etapa que muita gente pula direto para o dinheiro real, movida pela ansiedade de começar, e acaba pagando para aprender lições que um teste simples já teria mostrado sem custo.</p><p>Esta é a segunda parte do guia sobre como escolher uma estratégia de trading. Aqui o foco é prático: como testar uma estratégia no histórico, como ajustar o risco com base nesse teste, e como saber, com critério, quando é hora de trocar de estratégia.</p><h2>Um backtest simples, sem precisar de programação</h2><p>Backtest é só aplicar as regras da estratégia em dados que já aconteceram, para ver como ela teria se comportado. Não é preciso software caro para começar: um gráfico histórico e uma planilha já resolvem. Escolha o ativo, defina as regras exatas de entrada e saída (por exemplo, comprar quando o preço cruza a média móvel de 20 períodos para cima, e sair com um alvo de 2% ou um stop de 1%), e percorra manualmente os últimos seis a doze meses de gráfico, anotando cada sinal que a regra teria gerado.</p><p>Registre, para cada sinal, se o resultado teria sido positivo ou negativo e de quanto. Com 30 a 40 sinais anotados, já dá para calcular duas métricas simples: a taxa de acerto (quantas operações teriam sido positivas, dividido pelo total) e o resultado médio por operação. Uma estratégia com taxa de acerto de 40%, por exemplo, ainda pode ser lucrativa se os ganhos forem, em média, maiores que as perdas.</p><h2>Como ajustar o risco depois do teste</h2><p>O backtest também serve para calibrar o tamanho das posições. Suponha um capital de R$ 2.000 e uma regra de arriscar 1% por operação, o que equivale a R$ 20. Se o teste mostrou uma sequência de até cinco perdas seguidas no período analisado, vale simular esse cenário: cinco perdas de R$ 20 somam R$ 100, cerca de 5% do capital. Se esse valor parecer administrável, o risco de 1% por operação está dentro do razoável para aquele perfil; se parecer pesado demais, é hora de reduzir o risco por operação antes de operar com dinheiro real.</p><p>Esse ajuste não é feito uma única vez. Conforme o capital muda, ou conforme a volatilidade do ativo aumenta ou diminui, o valor de risco por operação deve ser recalculado, sempre como uma porcentagem fixa do capital atual, nunca como um valor fixo em reais que fica desatualizado com o tempo.</p><h2>Quando trocar de estratégia, com critério</h2><p>Trocar de estratégia toda vez que uma operação dá errado é um dos erros mais comuns entre iniciantes, e costuma piorar o resultado, porque a pessoa nunca chega a acumular sinais suficientes para avaliar nada com seriedade. O critério para trocar de estratégia deveria ser estatístico, não emocional: se depois de 30 ou 40 operações seguindo a regra à risca o resultado acumulado continua negativo, e não houve nenhuma mudança relevante nas condições do mercado, aí sim faz sentido revisar ou substituir a estratégia.</p><p>Também vale trocar quando as condições do mercado mudam de forma estrutural: uma estratégia desenhada para mercados em tendência, por exemplo, tende a produzir resultados ruins em períodos longos de lateralização, e insistir nela nesse cenário é diferente de a estratégia estar simplesmente errada.</p><h2>Documentar para aprender com o próprio histórico</h2><p>Manter um registro de cada operação — ativo, data, motivo da entrada, resultado e uma nota sobre o que foi seguido ou não à risca — é o que transforma meses de operação em aprendizado real. Sem esse registro, cada erro se repete porque ninguém tem como identificar o padrão. Com o registro, dá para responder perguntas concretas, como se as perdas se concentram em determinado horário, em determinado tipo de ativo, ou logo depois de um ganho grande, quando a confiança tende a subir mais do que deveria.</p><p>Testar, ajustar e documentar não são etapas que se fazem uma vez e se esquece: são um ciclo contínuo. Cada bloco de operações — seja em ações, moedas ou índices, inclusive em plataformas como a Duotide — gera dados novos para revisar o risco e confirmar, ou não, que a estratégia escolhida na primeira parte deste guia continua fazendo sentido para o seu perfil.</p>
         <div class="bq-post__cta">
           <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
@@ -178,9 +178,9 @@
         <aside class="bq-post__mais">
           <h2>Leia também</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">RSI, SMA e MACD: uma estratégia para qualquer mercado</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-swing-trading-como-aplicar/"><img src="/assets/img/duotide-e-confiavel-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é swing trading e como aplicar na prática</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/estrategia-repique-na-media-movel/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia de repique na média móvel para curto prazo</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/melhores-indicadores-para-day-trade/"><img src="/assets/img/duotide-app-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Os melhores indicadores para quem faz day trade</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/"><img src="/assets/img/duotide-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">RSI, SMA e MACD: uma estratégia para qualquer mercado</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/cruzamento-de-duas-medias-moveis-como-combinar/"><img src="/assets/img/duotide-e-confiavel-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cruzamento de duas médias móveis: como combinar</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -256,6 +256,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260925n" defer></script>
+  <script src="/assets/js/main.js?v=20260925o" defer></script>
 </body>
 </html>

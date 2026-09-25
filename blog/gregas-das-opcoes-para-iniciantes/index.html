@@ -19,9 +19,9 @@
   <meta property="og:description" content="Entenda de forma simples o que medem as principais gregas das opcoes e veja um exemplo numerico de como o delta afeta o preco de um contrato.">
   <meta property="og:url" content="https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/">
   <meta property="og:site_name" content="Duotide">
-  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-abrir-conta.webp">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:image:alt" content="Duotide — Blog Duotide">
-  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-abrir-conta.webp">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260925n">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925o">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -53,7 +53,7 @@
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
       "dateModified": "2026-09-24T09:00:00-03:00",
-      "image": "https://duotide.com.br/assets/img/duotide-abrir-conta.webp",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Opcoes",
       "author": {
         "@type": "Organization",
@@ -168,8 +168,8 @@
       <div class="container article bq-post">
         <span class="bq__tag">Opcoes</span>
         <h1>Gregas das opcoes para iniciantes: delta, gamma, theta e vega</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 3 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         
 <p>Quem comeca a estudar opcoes costuma esbarrar rapido em quatro palavras que parecem gregas de verdade: delta, gamma, theta e vega. Sao, na pratica, medidas que mostram como o preco de uma opcao reage a diferentes fatores, como o movimento do ativo-objeto, a passagem do tempo e a mudanca na volatilidade. Entender o que cada uma mede ajuda a avaliar uma operacao com opcoes antes de entrar, em vez de descobrir depois por que o preco do contrato se moveu de um jeito inesperado.</p>
 <h2>Delta: quanto a opcao se move junto com o ativo</h2>
@@ -180,6 +180,10 @@
 <p>O theta mede quanto valor a opcao tende a perder por dia, apenas pela passagem do tempo, mantendo os outros fatores constantes. Esse efeito e conhecido como decaimento temporal. Para quem compra opcoes, o theta trabalha contra a posicao: cada dia que passa sem que o ativo se mova o suficiente reduz o valor do contrato. Para quem vende opcoes, o theta trabalha a favor, o que explica por que estrategias de venda de opcoes costumam ser descritas como apostas no tempo, e nao apenas na direcao do preco.</p>
 <h2>Vega: sensibilidade a mudanca na volatilidade</h2>
 <p>O vega mede quanto o preco da opcao muda quando a volatilidade implicita do mercado sobe ou desce, sem que o preco do ativo-objeto precise se mover. Em periodos de incerteza, como antes de um resultado de empresa ou uma decisao de juros, a volatilidade implicita tende a subir, o que pode encarecer opcoes mesmo sem movimento imediato no preco do ativo. Depois do evento, a volatilidade costuma cair de forma abrupta, um efeito chamado de esmagamento de volatilidade, que pode reduzir o valor da opcao mesmo que o ativo tenha se movido na direcao esperada.</p>
+<h2>Um exemplo numerico juntando delta e gamma</h2>
+<p>Suponha uma opcao de compra negociada a R$ 2,00, com delta de 0,40 e gamma de 0,05, sobre um ativo cotado a R$ 50,00. Se o ativo subir R$ 1,00, para R$ 51,00, o novo preco estimado da opcao fica proximo de R$ 2,40, usando apenas o delta. Mas o gamma de 0,05 indica que o proprio delta tambem sobe, indo de 0,40 para cerca de 0,45 apos esse movimento. Isso significa que, se o ativo subir mais R$ 1,00 depois disso, a opcao deve reagir de forma um pouco mais forte do que reagiu na primeira alta. Esse efeito acumulado e o motivo pelo qual posicoes com gamma elevado podem parecer calmas e, de repente, comecar a se mover com muito mais forca do que o esperado.</p>
+<h2>Rho: a grega que poucos iniciantes notam</h2>
+<p>Existe ainda uma quinta grega, chamada rho, que mede a sensibilidade do preco da opcao a mudancas na taxa de juros. Na maioria das operacoes de curto prazo, o efeito do rho e pequeno perto dos outros fatores, mas ele ganha relevancia em opcoes de prazo mais longo ou em periodos de mudanca rapida na taxa de juros. Vale saber que ela existe, mesmo que o foco do dia a dia costume ficar em delta, gamma, theta e vega.</p>
 <h2>Como as gregas trabalham juntas</h2>
 <p>Nenhuma grega funciona isolada. Uma opcao pode ter delta favoravel a uma alta do ativo, mas perder valor de qualquer forma se o theta comer o ganho mais rapido do que o preco sobe, ou se a volatilidade cair logo depois da entrada. Antes de montar uma operacao com opcoes, vale perguntar nao apenas se o ativo vai subir ou cair, mas tambem quanto tempo isso deve levar e como a volatilidade implicita tende a se comportar nesse periodo.</p>
 <h2>Por que isso importa para quem esta comecando</h2>
@@ -270,6 +274,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260925n" defer></script>
+  <script src="/assets/js/main.js?v=20260925o" defer></script>
 </body>
 </html>

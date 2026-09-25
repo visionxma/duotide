@@ -301,8 +301,8 @@ function suporte(idioma) {
 // ---------------------------------------------------------------- blog no estilo do blog da IQ Option
 const BLOG_IMGS = ['duotide-o-que-e', 'duotide-seguranca', 'duotide-abrir-conta', 'duotide-vale-a-pena', 'duotide-e-confiavel-01',
   'duotide-corretora-02', 'duotide-corretora-03', 'duotide-app-03', 'duotide-seguro-02', 'duotide-corretora-04'];
-const ATIVOS = [['Bitcoin', 'BTC/USD', '₿', '#f7931a'], ['Ethereum', 'ETH/USD', 'Ξ', '#627eea'], ['EUR/USD', 'Forex', '€', '#2d6cdf'],
-  ['Gold', 'XAU/USD', 'Au', '#d4a017'], ['USD/JPY', 'Forex', '¥', '#c0392b']];
+const ATIVOS = [['Bitcoin', 'BTC/USD', ['btc']], ['Ethereum', 'ETH/USD', ['eth']], ['EUR/USD', 'Forex', ['eu', 'us']],
+  ['Gold', 'XAU/USD', ['xau']], ['USD/JPY', 'Forex', ['us', 'jp']]];
 const BLOG = require('../.blog/artigos.js');
 function blogLayout(h, idioma) {
   const B = chrome(idioma).blog;
@@ -338,7 +338,7 @@ ${resto.map((c, i) => `              <a class="bq__card${i >= VISIVEIS ? ' is-oc
 ${alta.map(c => `            <a class="bq__alta" href="${c.href}" style="background-image:url('${c.img}')"${lg}><span>${escAttr(c.titulo)}</span><small>${fmt(c.data)}</small></a>`).join('\n')}
             <h2 class="bq__h bq__h--ativos">📈 ${B.ativos}</h2>
             <ul class="bq__ativos">
-${ATIVOS.map(([n, s, ic, cor]) => `              <li><span class="bq__ic" style="background:${cor}">${ic}</span><span class="bq__an"><strong>${n}</strong><small>${s}</small></span><a class="bq__neg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${B.negociar}</a></li>`).join('\n')}
+${ATIVOS.map(([n, s, ics]) => `              <li><span class="bq__ic${ics.length > 1 ? ' bq__ic--par' : ''}">${ics.map(ic => `<img src="/assets/img/ativos/${ic}.svg" alt="" width="34" height="34" loading="lazy">`).join('')}</span><span class="bq__an"><strong>${n}</strong><small>${s}</small></span><a class="bq__neg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${B.negociar}</a></li>`).join('\n')}
             </ul>
             <p class="bq__risco">${B.risco}</p>
           </aside>
