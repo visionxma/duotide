@@ -19,9 +19,9 @@
   <meta property="og:description" content="Entenda por que o preço abre longe do fechamento anterior, os quatro tipos de gap mais comuns e como isso afeta stop, cálculo de ATR e gestão de risco.">
   <meta property="og:url" content="https://duotide.com.br/blog/gaps-de-preco-por-que-acontecem/">
   <meta property="og:site_name" content="Duotide">
-  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:image:alt" content="Duotide — Blog Duotide">
-  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260925o">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925q">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -53,7 +53,7 @@
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
       "dateModified": "2026-09-24T09:00:00-03:00",
-      "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Análise técnica",
       "author": {
         "@type": "Organization",
@@ -169,7 +169,7 @@
         <span class="bq__tag">Análise técnica</span>
         <h1>Gaps de preço: por que acontecem e por que importam</h1>
         <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         <p>Um gap acontece quando o preço de abertura de um ativo fica visivelmente distante do fechamento do período anterior, sem negociação registrada nesse intervalo. No gráfico, aparece como um espaço vazio entre um candle e o seguinte — daí o nome, do inglês para "vão" ou "lacuna".</p><p>Gaps são mais comuns em mercados que fecham por um período (ações, por exemplo, que não negociam 24 horas) do que em mercados que operam de forma contínua, como boa parte do câmbio. Entender por que eles acontecem ajuda a lidar melhor com o risco que carregam.</p><h2>Por que o preço pula em vez de andar</h2><p>Fora do horário normal de negociação, notícias continuam acontecendo: resultados trimestrais, decisões de juros, dados econômicos, eventos políticos. Como ninguém consegue negociar imediatamente enquanto o mercado está fechado, toda essa informação se acumula e é processada de uma vez quando o pregão reabre. O preço de abertura já reflete essa nova informação, mesmo sem ter havido negociação no meio do caminho — daí o salto.</p><p>Um exemplo simples: um ativo fecha a R$ 68,00. Depois do fechamento, a empresa divulga um resultado trimestral bem acima do esperado. No pregão seguinte, o ativo abre a R$ 74,50, sem nenhum negócio registrado entre R$ 68,00 e R$ 74,50 — esse intervalo é o gap.</p><h2>Os quatro tipos de gap</h2><ul><li><strong>Gap comum</strong>: acontece dentro de uma faixa de negociação sem tendência clara, geralmente por baixo volume ou notícia de menor impacto. Costuma ser preenchido rapidamente, ou seja, o preço volta a negociar dentro da faixa anterior em pouco tempo.</li><li><strong>Gap de ruptura (breakaway)</strong>: aparece no início de um novo movimento, muitas vezes rompendo uma faixa de consolidação longa, e costuma vir acompanhado de volume alto. Sinaliza início de tendência, não apenas ruído.</li><li><strong>Gap de continuação (ou de fuga)</strong>: surge no meio de uma tendência já em curso, reforçando o movimento existente. Costuma indicar que a tendência ainda tem força.</li><li><strong>Gap de exaustão</strong>: aparece perto do fim de um movimento prolongado, muitas vezes como o último impulso antes de uma reversão. Diferente do gap de continuação, esse tende a ser seguido de fechamento rápido do próprio gap.</li></ul><h2>Por que isso importa para quem opera</h2><p>Gaps afetam diretamente a gestão de risco de duas formas práticas. A primeira é o próprio stop-loss: uma ordem de stop, no papel, é executada num preço específico, mas se o mercado abrir com um gap além desse nível, a execução pode acontecer bem mais longe do que o planejado — um problema conhecido como deslizamento (slippage). Um stop pensado para limitar a perda em R$ 2,00 por ação pode, num cenário de gap, resultar numa perda de R$ 5,00 ou mais, porque não havia negociação no preço exato do stop.</p><p>A segunda forma é o próprio cálculo de indicadores de volatilidade, como o ATR, que precisam considerar gaps para não subestimar o movimento real do ativo — é exatamente por isso que o cálculo de True Range usa a distância entre o fechamento anterior e a máxima ou mínima atual, e não apenas a variação dentro do candle.</p><h2>O conceito de preenchimento do gap</h2><p>Um comportamento observado com frequência é o preço voltar para preencher o gap, negociando de novo na faixa de preço que ficou pulada na abertura. Isso não acontece sempre, nem em prazo previsível, mas é comum o suficiente para virar referência de alguns traders: alguns tratam o preenchimento como alvo de operação contrária ao gap, especialmente em gaps comuns e de exaustão, que estatisticamente tendem mais a fechar do que os de ruptura e continuação.</p><h2>Lidando com gaps na prática</h2><p>Evitar surpresas com gap é mais uma questão de gestão de risco do que de previsão. Isso inclui dimensionar posições considerando que o stop pode não ser executado no preço exato definido, evitar alavancagem excessiva em ativos que costumam abrir com gaps relevantes (em torno de resultados trimestrais, por exemplo), e reconhecer o tipo de gap antes de decidir se ele representa oportunidade ou apenas ruído a ser ignorado. Como em qualquer situação de mercado fora do padrão, o cuidado extra de gestão compensa mais do que tentar adivinhar a direção do próximo gap, especialmente em ativos e datas em que a chance de um evento de notícia relevante é conhecida com antecedência.</p>
         <div class="bq-post__cta">
           <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
@@ -178,9 +178,9 @@
         <aside class="bq-post__mais">
           <h2>Leia também</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/padrao-ombro-cabeca-ombro-como-identificar/"><img src="/assets/img/duotide-login-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Padrão Ombro-Cabeça-Ombro: como identificar a reversão</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/retracao-de-fibonacci-exemplo-pratico/"><img src="/assets/img/duotide-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Retração de Fibonacci no trading: um exemplo prático</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/3-padroes-de-candlestick-que-costumam-falhar/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">3 padrões de candlestick que costumam falhar</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/padrao-ombro-cabeca-ombro-como-identificar/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Padrão Ombro-Cabeça-Ombro: como identificar a reversão</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/retracao-de-fibonacci-exemplo-pratico/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Retração de Fibonacci no trading: um exemplo prático</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/3-padroes-de-candlestick-que-costumam-falhar/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">3 padrões de candlestick que costumam falhar</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -256,6 +256,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260925o" defer></script>
+  <script src="/assets/js/main.js?v=20260925q" defer></script>
 </body>
 </html>

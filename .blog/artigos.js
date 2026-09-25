@@ -12,6 +12,32 @@ const IMGS = ['duotide-o-que-e', 'duotide-seguranca', 'duotide-abrir-conta', 'du
   'duotide-e-confiavel-02', 'duotide-e-confiavel-03', 'duotide-corretora-01', 'duotide-corretora-02', 'duotide-corretora-03',
   'duotide-corretora-04', 'duotide-app-01', 'duotide-app-02', 'duotide-app-03', 'duotide-app-04', 'duotide-seguro-01',
   'duotide-seguro-02', 'duotide-login-01', 'duotide-login-02'];
+// Capas por categoria (imagens próprias em /assets/img/capas e fotos do site); notícias têm capa própria.
+const C = n => `/assets/img/capas/${n}.webp`, F = n => `/assets/img/duotide-${n}.webp`;
+const CAPAS = {
+  'Análise técnica': [C('blog-analise-tecnica-e-fundamentalista'), F('corretora-02'), F('vale-a-pena'), F('corretora-04')],
+  'Indicadores': [F('corretora-02'), C('blog-analise-tecnica-e-fundamentalista'), F('corretora-04'), F('app-03'), F('vale-a-pena')],
+  'Estratégias': [C('blog-day-trade-ou-swing-trade'), F('corretora-01'), F('app-01'), C('blog-slippage-e-execucao-de-ordem')],
+  'Gestão de risco': [C('blog-gestao-de-risco-stop-e-posicao'), F('seguro-02'), F('e-confiavel-02'), F('seguranca')],
+  'Psicologia': [C('blog-por-que-iniciante-perde-dinheiro'), F('vale-a-pena'), F('o-que-e'), F('e-confiavel-03')],
+  'Forex': [C('blog-corretora-offshore-o-que-e'), F('corretora-03'), '/assets/img/terra.webp', F('corretora-01')],
+  'Criptomoedas': [C('blog-cripto-corretora-ou-exchange'), C('noticia-mercado-cripto-sem-indice-de-referencia'), C('noticia-near-dispara-parceria-ondo-acoes-tokenizadas')],
+  'Ações': [C('noticia-futuros-nasdaq-caem-juros-treasuries'), C('noticia-alphabet-recua-na-bolsa-gastos-com-ia'), F('corretora-03'), F('corretora-04')],
+  'ETFs e índices': [C('noticia-divida-global-passa-365-trilhoes'), F('corretora-04'), C('noticia-titulos-globais-caem-apostas-fed')],
+  'Commodities': [C('noticia-petroleo-sobe-impasse-eua-ira'), C('noticia-divida-global-passa-365-trilhoes')],
+  'Opções': [C('blog-slippage-e-execucao-de-ordem'), F('corretora-02'), C('blog-day-trade-ou-swing-trade')],
+  'Mercado': [C('noticia-titulos-globais-caem-apostas-fed'), C('noticia-futuros-nasdaq-caem-juros-treasuries'), F('corretora-01')],
+  'Iniciantes': [C('blog-como-escolher-uma-corretora'), F('abrir-conta'), F('app-01'), F('app-04'), C('blog-kyc-por-que-pedem-documento'), C('blog-saque-nao-caiu-o-que-fazer'), F('login-01')]
+};
+const contagem = {};
+function capa(a, i) {
+  const propria = C('noticia-' + a.slug);
+  if (a.tipo === 'noticia' && fs.existsSync(path.join(RAIZ, propria))) return propria;
+  const lista = CAPAS[a.categoria];
+  if (!lista) return `/assets/img/${IMGS[i % IMGS.length]}.webp`;
+  const k = contagem[a.categoria] = (contagem[a.categoria] || 0) + 1;
+  return lista[(k - 1) % lista.length];
+}
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const dataBR = d => d.split('-').reverse().join('/');
 
@@ -31,13 +57,14 @@ function lista() {
     if (!a.data) { a.data = hoje; fs.writeFileSync(p, JSON.stringify(a, null, 2) + '\n'); }
     arts.push(a);
   }
+  for (const k in contagem) delete contagem[k];
   const pos = a => { const i = pautas.indexOf(a.pauta); return i < 0 ? 1e6 : i; };
   // notícias primeiro (dentro da mesma data), depois a ordem das pautas
   const noticia = a => a.tipo === 'noticia' ? 0 : 1;
   arts.sort((a, b) => b.data.localeCompare(a.data) || noticia(a) - noticia(b) || pos(a) - pos(b) || a.slug.localeCompare(b.slug));
   arts.forEach((a, i) => {
     a.href = `/blog/${a.slug}/`;
-    a.img = a.capa || `/assets/img/${IMGS[i % IMGS.length]}.webp`;
+    a.img = a.capa || capa(a, i);
     a.leitura = a.leitura || Math.max(3, Math.round(a.corpo.replace(/<[^>]+>/g, ' ').split(/\s+/).length / 200));
   });
   return arts;

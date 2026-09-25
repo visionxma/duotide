@@ -19,9 +19,9 @@
   <meta property="og:description" content="Conheça o Oscilador de Previsão de Chande, um indicador baseado em regressão linear que mostra se o preço está acima ou abaixo do esperado.">
   <meta property="og:url" content="https://duotide.com.br/blog/oscilador-de-previsao-de-chande/">
   <meta property="og:site_name" content="Duotide">
-  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguranca.webp">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:image:alt" content="Duotide — Blog Duotide">
-  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-seguranca.webp">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260925o">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925q">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -53,7 +53,7 @@
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
       "dateModified": "2026-09-24T09:00:00-03:00",
-      "image": "https://duotide.com.br/assets/img/duotide-seguranca.webp",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Indicadores",
       "author": {
         "@type": "Organization",
@@ -169,7 +169,7 @@
         <span class="bq__tag">Indicadores</span>
         <h1>Oscilador de Previsão de Chande: como usar no trading</h1>
         <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         <p>Entre os indicadores criados pelo analista e estatístico Tushar Chande, o Oscilador de Previsão de Chande (Chande Forecast Oscillator, ou CFO) é um dos menos conhecidos fora de círculos mais técnicos, mas carrega uma ideia interessante: em vez de olhar só para médias móveis simples, ele usa regressão linear para calcular um valor "esperado" do preço e compara esse valor com o preço real.</p><p>Neste artigo você vai entender a lógica por trás do CFO, como interpretá-lo e como ele pode complementar outros indicadores de tendência e momentum.</p><h2>A ideia por trás do indicador</h2><p>Uma regressão linear, aplicada a uma série de preços, traça a linha reta que melhor se ajusta ao movimento recente daquele ativo — é uma forma estatística de dizer "se essa tendência continuar exatamente como está, este seria o próximo preço esperado". O CFO usa essa linha para calcular um valor de previsão para o candle atual e depois mede a diferença percentual entre esse valor previsto e o preço de fechamento real.</p><p>Quando o preço real fica acima do valor previsto pela regressão, o CFO fica positivo, sinalizando que o mercado está avançando mais rápido do que a tendência linear recente sugeria. Quando o preço fica abaixo do previsto, o CFO fica negativo, indicando um avanço mais lento que o esperado, ou uma queda.</p><h2>Como o cálculo funciona, na prática</h2><p>Suponha que a regressão linear calculada com os últimos 14 candles de um ativo projete um preço esperado de R$ 48,00 para o candle atual, mas o preço de fechamento real seja R$ 49,44. A diferença percentual seria de aproximadamente 3% [(49,44 − 48,00) / 48,00 × 100], e esse seria o valor do CFO nesse candle: +3.</p><p>Um CFO positivo e crescente sugere que o preço está se afastando para cima da sua tendência linear recente — o que pode indicar tanto um movimento de força real quanto um esticamento que tende a ser corrigido. É aí que entra a interpretação combinada com outros elementos do gráfico.</p><h2>Cruzamento da linha zero</h2><p>Assim como outros osciladores, o CFO tem uma linha zero central. Um cruzamento de negativo para positivo indica que o preço passou a superar sua própria projeção linear recente, o que costuma ser lido como sinal de força compradora ganhando espaço. O cruzamento inverso, de positivo para negativo, sugere o oposto.</p><p>Esses cruzamentos tendem a funcionar melhor como confirmação de um movimento que já está em andamento do que como sinal antecipado de reversão, já que o cálculo depende da tendência linear dos períodos anteriores.</p><h2>Escolhendo o período de regressão</h2><p>O período usado para calcular a regressão linear também influencia bastante a leitura do CFO. Um período curto, como 5 ou 9 candles, deixa o indicador mais sensível a variações recentes, gerando cruzamentos e oscilações com mais frequência, útil para quem opera prazos mais curtos, mas também mais sujeito a ruído. Um período mais longo, como 20 ou 30 candles, suaviza a linha de regressão e faz o CFO reagir de forma mais lenta, refletindo tendências mais consolidadas.</p><p>Não existe um período fixo universal: o ideal é testar diferentes valores no mesmo ativo e observar qual configuração produz leituras que fazem sentido diante do comportamento histórico daquele mercado, em vez de simplesmente copiar o período padrão de outro indicador.</p><h2>Divergências no CFO</h2><p>Assim como no RSI, é possível observar divergências entre o CFO e o preço. Se o preço faz uma nova máxima, mas o CFO faz uma leitura mais baixa que na máxima anterior, isso sugere que, apesar do preço subir, ele está se afastando cada vez menos da sua tendência linear recente — um sinal de perda de força que pode anteceder uma correção.</p><h2>Combinando o CFO com outros indicadores</h2><p>Por ser um indicador baseado em regressão linear, o CFO tende a reagir de forma parecida a indicadores de tendência, então não costuma fazer sentido usá-lo ao lado de várias médias móveis diferentes — o sinal ficaria redundante. Ele funciona melhor complementado por um indicador de volume ou de volatilidade, que trazem uma dimensão diferente da análise.</p><p>Na Duotide, vale testar o CFO em diferentes períodos de regressão e comparar sua leitura com o comportamento real do preço em ativos que você já acompanha, antes de incorporá-lo como parte de uma estratégia. Como qualquer indicador estatístico baseado em dados passados, o CFO projeta uma tendência que pode não se confirmar, e toda decisão de entrada deve considerar o risco real de perda da operação.</p>
         <div class="bq-post__cta">
           <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
@@ -178,9 +178,9 @@
         <aside class="bq-post__mais">
           <h2>Leia também</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-app-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -256,6 +256,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260925o" defer></script>
+  <script src="/assets/js/main.js?v=20260925q" defer></script>
 </body>
 </html>

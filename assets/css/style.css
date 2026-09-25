@@ -638,7 +638,7 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 .hero{background:
   radial-gradient(640px 420px at 72% 38%,rgba(66,255,0,0.26),transparent 62%),
   linear-gradient(180deg,rgba(0,0,0,0.25),rgba(0,0,0,0.1) 45%,#050605 100%),
-  url('/assets/img/ot/terra.avif') center 75%/cover no-repeat,#000}
+  url('/assets/img/terra.webp') center 75%/cover no-repeat,#000}
 .terminal{position:relative;aspect-ratio:1920/1200;border-radius:22px;overflow:hidden;background:#0a0c0f}
 .terminal img{position:absolute;inset:0;width:100%;height:100%;display:block}
 .terminal__marca{inset:auto !important;left:1.9% !important;top:2.9% !important;width:3.6% !important;height:auto !important;border-radius:6px;background:#0b0d0b;padding:2px}
@@ -678,7 +678,7 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 [dir='rtl'] .passo:not(:last-child)::before{left:auto;right:27px}
 /* ---------- Home: suporte 24h/7 ---------- */
 .suporte24{position:relative;padding:clamp(70px,9vw,110px) 0;isolation:isolate;overflow:hidden;
-  background:linear-gradient(90deg,#050605 0%,rgba(5,6,5,0.92) 38%,rgba(5,6,5,0.35) 70%,rgba(5,6,5,0.15)),url('/assets/img/duotide-corretora-03.webp') right center/cover no-repeat}
+  background:linear-gradient(90deg,#050605 0%,rgba(5,6,5,0.92) 38%,rgba(5,6,5,0.35) 70%,rgba(5,6,5,0.15)),url('/assets/img/suporte-escritorio.webp') right center/cover no-repeat}
 .suporte24 .container{max-width:1200px}
 .suporte24__selo{display:inline-block;padding:9px 16px;border-radius:10px;background:rgba(106,255,65,0.1);border:1px solid rgba(106,255,65,0.3);color:var(--verde);font-weight:600;font-size:1.0625rem;margin-bottom:22px}
 .suporte24__titulo{color:#fff;font-size:clamp(2.4rem,5.4vw,4rem);font-weight:600;line-height:1.1;letter-spacing:-0.02em;max-width:640px;margin:0 0 22px;padding:0}
@@ -687,8 +687,8 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 .suporte24__txt{color:rgba(255,255,255,0.85);font-size:1.125rem;max-width:36ch;margin:0 0 24px}
 .suporte24__email{display:inline-flex;align-items:center;padding:12px 22px;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid var(--borda);color:#fff;font-weight:600}
 .suporte24__email:hover{background:rgba(255,255,255,0.14);color:#fff;text-decoration:none}
-[dir='rtl'] .suporte24{background:linear-gradient(270deg,#050605 0%,rgba(5,6,5,0.92) 38%,rgba(5,6,5,0.35) 70%,rgba(5,6,5,0.15)),url('/assets/img/duotide-corretora-03.webp') left center/cover no-repeat}
-@media (max-width:700px){.suporte24{background:linear-gradient(180deg,rgba(5,6,5,0.75),#050605),url('/assets/img/duotide-corretora-03.webp') center/cover no-repeat}}
+[dir='rtl'] .suporte24{background:linear-gradient(270deg,#050605 0%,rgba(5,6,5,0.92) 38%,rgba(5,6,5,0.35) 70%,rgba(5,6,5,0.15)),url('/assets/img/suporte-escritorio.webp') left center/cover no-repeat}
+@media (max-width:700px){.suporte24{background:linear-gradient(180deg,rgba(5,6,5,0.75),#050605),url('/assets/img/suporte-escritorio.webp') 70% center/cover no-repeat}}
 .suporte24::after{content:'';position:absolute;inset:0;z-index:-1;background:#0c3a06;mix-blend-mode:color;pointer-events:none}.suporte24::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 400px at 75% 40%,rgba(66,255,0,0.18),transparent 70%);pointer-events:none}
 .suporte24 .btn-row{justify-content:flex-start;gap:14px;margin:0}.suporte24__txt{max-width:44ch}
 /* ---------- Melhores corretoras: ranking em linhas (estilo Traders Union) ---------- */
@@ -783,3 +783,24 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 .bq__ic--par img:first-child{left:0;top:0}
 .bq__ic--par img:last-child{right:0;bottom:0}
 .bq__ic{width:44px}
+/* imagens próprias (set/2026): fundo do topo, faixa, 3 passos, app e banners de página */
+.hero{background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.7) 45%,rgba(0,0,0,.25) 100%),radial-gradient(760px 520px at 72% 42%,rgba(66,255,0,0.18),transparent 62%),url('/assets/img/hero-fundo.webp') center/cover no-repeat,#000}
+@media (max-width:760px){.hero{background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.92)),url('/assets/img/hero-fundo.webp') 70% center/cover no-repeat,#000}}
+.faixa{background:linear-gradient(180deg,rgba(5,6,5,.55),rgba(5,6,5,.85)),url('/assets/img/faixa-maximize.webp') center/cover no-repeat}
+.passos3{background:linear-gradient(180deg,#050605,rgba(5,6,5,.55) 30%,rgba(5,6,5,.55) 70%,#050605),url('/assets/img/passos-fundo.webp') center/cover no-repeat}
+.app-hero__tela{display:none}
+.topo-banner{border-radius:22px;background-size:cover;background-position:right center;background-repeat:no-repeat}
+.article:has(> .topo-banner),.section__head:has(> .topo-banner){position:relative;isolation:isolate}
+@media (min-width:761px){
+  .topo-banner{position:absolute;left:var(--gutter);right:var(--gutter);top:0;height:clamp(220px,24vw,300px);z-index:-1}
+  .section__head > .topo-banner{left:0;right:0}
+  .topo-banner::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,rgba(5,6,5,.85),rgba(5,6,5,.35) 55%,transparent)}
+  .topo-banner + h1{min-height:clamp(220px,24vw,300px);display:flex;align-items:center;padding:0 45% 0 36px;margin-bottom:32px;font-size:clamp(1.8rem,3vw,2.6rem)}
+  .section__head > .topo-banner + h1{text-align:left}
+}
+@media (max-width:760px){.topo-banner{height:150px;margin-bottom:18px;background-position:80% center}}
+/* fundo preto das artes some sobre o fundo escuro (sem caixa quadrada) */
+.hero__media img,.pp__fig img{mix-blend-mode:lighten}
+/* foto do escritório já é verde: sem o filtro de cor por cima */
+.suporte24::after{display:none}
+@media (min-width:761px){.hero{background:linear-gradient(90deg,rgba(0,0,0,.93) 0%,rgba(0,0,0,.75) 45%,rgba(0,0,0,.62) 100%),radial-gradient(520px 420px at 72% 45%,rgba(66,255,0,0.16),transparent 65%),url('/assets/img/hero-fundo.webp') center/cover no-repeat,#000}}

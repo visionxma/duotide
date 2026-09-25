@@ -19,9 +19,9 @@
   <meta property="og:description" content="Como o ZigZag ignora oscilações pequenas para mostrar apenas os movimentos relevantes de preço, e por que ele não deve ser usado como sinal de entrada.">
   <meta property="og:url" content="https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/">
   <meta property="og:site_name" content="Duotide">
-  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:image:alt" content="Duotide — Blog Duotide">
-  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
@@ -38,7 +38,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260925o">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925q">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -53,7 +53,7 @@
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
       "dateModified": "2026-09-24T09:00:00-03:00",
-      "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Indicadores",
       "author": {
         "@type": "Organization",
@@ -169,7 +169,7 @@
         <span class="bq__tag">Indicadores</span>
         <h1>Indicador ZigZag: como filtrar o ruído do gráfico</h1>
         <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         <p>Olhar um gráfico de preço sem filtro nenhum pode ser cansativo: dezenas de pequenas subidas e descidas competem pela atenção, dificultando enxergar o movimento realmente relevante por trás de tanto ruído. O ZigZag existe justamente para resolver esse problema visual, traçando linhas retas que conectam apenas os topos e fundos significativos do gráfico, ignorando o que fica no meio do caminho.</p><p>Este artigo explica como o ZigZag decide o que é ruído e o que é movimento relevante, para que serve na prática, e por que ele não deve ser confundido com um gerador de sinais de entrada.</p><h2>Como o ZigZag decide o que mostrar</h2><p>O indicador é configurado com um limite mínimo de variação, definido em porcentagem do preço ou em número de pontos. Qualquer movimento menor do que esse limite é ignorado, e o ZigZag só traça uma nova linha quando o preço se move o suficiente para superar esse limiar a partir do último topo ou fundo identificado. Por exemplo, com um limite de 5%, uma oscilação de 2% no meio de uma tendência simplesmente não aparece no indicador — só entra no desenho quando o movimento acumulado ultrapassa os 5% definidos.</p><h2>Para que o ZigZag é realmente útil</h2><h3>Identificar topos e fundos relevantes</h3><p>Ao remover o ruído de curto prazo, fica mais fácil enxergar onde estão os pontos de reversão que realmente importaram no histórico do ativo — informação útil para desenhar linhas de suporte e resistência com mais confiança do que tentando adivinhar isso em um gráfico cheio de pequenas oscilações.</p><h3>Apoiar a leitura de padrões gráficos</h3><p>Padrões como topo duplo, ombro-cabeça-ombro ou canais de tendência ficam mais evidentes quando o ZigZag já eliminou o ruído menor, funcionando como um esqueleto visual sobre o qual esses padrões podem ser identificados com mais clareza, inclusive para quem estuda contagem de ondas em análise técnica. Sem esse filtro, seria muito mais difícil separar visualmente qual perna do gráfico representa o movimento principal e qual é apenas uma correção dentro dele.</p><h3>Medir a amplitude de movimentos anteriores</h3><p>Como cada linha do ZigZag conecta um topo a um fundo (ou vice-versa), ele facilita medir rapidamente quantos pontos ou qual porcentagem o ativo se moveu em cada perna do gráfico, o que ajuda a calibrar expectativas de alvo com base em movimentos passados de tamanho parecido.</p><h2>A limitação mais importante do ZigZag</h2><p>O ZigZag é um indicador que olha para trás: ele só confirma um topo ou fundo depois que o preço já se moveu o suficiente na direção oposta para provar que aquele ponto foi, de fato, uma reversão. Isso significa que a última linha do indicador pode mudar, ou repintar, conforme novos candles se formam — o topo que parecia definitivo há pouco pode deixar de existir se o preço continuar subindo. Por essa razão, usar o ZigZag como gatilho direto de entrada é arriscado: no momento em que o sinal aparece com clareza, o movimento que ele descreve já aconteceu. Isso torna o ZigZag mais parecido com uma ferramenta de retrospectiva do que com um indicador de antecipação.</p><h2>Como ajustar o parâmetro de sensibilidade</h2><ul><li>Um limite pequeno (por exemplo, 1% ou 2%) mostra mais detalhes, mas volta a incluir bastante ruído de curto prazo.</li><li>Um limite maior (por exemplo, 8% ou 10%) simplifica bastante o gráfico, mas pode ignorar reversões relevantes para operações de prazo mais curto.</li><li>O ajuste ideal depende do ativo e do prazo gráfico: ativos mais voláteis geralmente pedem um limite maior para não gerar ruído em excesso, e o contrário vale para ativos mais estáveis.</li></ul><h2>Como usar o ZigZag de forma responsável</h2><p>A melhor forma de aproveitar o ZigZag é como ferramenta de análise visual e de estudo histórico, não como gatilho de entrada. Combine a leitura dos topos e fundos que ele destaca com um indicador de momento, como o RSI, ou com a leitura de volume, para decidir o momento real de entrar em uma operação. Como qualquer ferramenta baseada em dados já ocorridos, o ZigZag não prevê o próximo movimento, e o risco de perda continua presente mesmo com o gráfico mais organizado visualmente — vale estudar seu comportamento em conta de demonstração antes de incorporá-lo à sua rotina de análise.
         <div class="bq-post__cta">
           <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
@@ -178,9 +178,9 @@
         <aside class="bq-post__mais">
           <h2>Leia também</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-app-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -256,6 +256,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260925o" defer></script>
+  <script src="/assets/js/main.js?v=20260925q" defer></script>
 </body>
 </html>
