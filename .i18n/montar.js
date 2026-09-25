@@ -230,6 +230,11 @@ function topoApp(idioma) {
     </section><!--/gerado-->`;
 }
 const GLOBO_WEB = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+const WIN = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3 5.5 10.5 4.5v7H3zm8.5-1.1L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zm8.5 0H21V21l-9.5-1.4z"/></svg>';
+const MAC = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
+const HUAWEI = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M11 20C8 15 6.5 10.5 8.2 6.5 10 7.5 11.2 11 11 20zm2 0c-.2-9 1-12.5 2.8-13.5C17.5 10.5 16 15 13 20zM10 20.2C6.8 18.6 3.8 16 3 12.7c2.5-.4 5.4 2.7 7 7.5zm4 0c1.6-4.8 4.5-7.9 7-7.5-.8 3.3-3.8 5.9-7 7.5z"/></svg>';
+const GALAXY = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 7V6a4 4 0 0 1 8 0v1h3.2l1 13.2A1.7 1.7 0 0 1 18.5 22h-13a1.7 1.7 0 0 1-1.7-1.8L4.8 7zm2 0h4V6a2 2 0 0 0-4 0z"/></svg>';
+const ANDROID = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.5 9h11a1 1 0 0 1 1 1v7a4 4 0 0 1-4 4h-5a4 4 0 0 1-4-4v-7a1 1 0 0 1 1-1zm1-1a4.5 4.5 0 0 1 9 0zM9.5 5.5a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6zm5 0a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6zM7.6 2.3l1.3 2m7.5-2-1.3 2" stroke="currentColor" stroke-width="1.2"/></svg>';
 function plataformas(idioma) {
   const P = chrome(idioma).plataformas, L = chrome(idioma).lojas;
   const botao = (icone, nome, href, externo = true) => `<a class="plat__btn" href="${href}"${externo ? ' target="_blank" rel="noopener sponsored nofollow"' : ''}>${icone}<span>${nome}</span></a>`;
@@ -245,7 +250,7 @@ function plataformas(idioma) {
             <h3>${P.desktop}</h3>
             <p>${P.desktop_txt}</p>
             <a class="plat__link" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${P.desktop_link} &rsaquo;</a>
-            <div class="plat__botoes">${botao(GLOBO_WEB, P.webapp, aff(idioma))}</div>
+            <div class="plat__botoes">${botao(WIN, 'Windows x32', aff(idioma))}${botao(WIN, 'Windows x64', aff(idioma))}${botao(MAC, 'macOS', aff(idioma))}${botao(GLOBO_WEB, P.webapp, aff(idioma))}</div>
           </div>
           <div class="plat plat--movel">
             <div class="plat__topo">
@@ -256,7 +261,7 @@ function plataformas(idioma) {
               </div>
               <img class="plat__qr" src="/assets/img/qr/qr-${idioma.pasta || 'pt'}.svg" alt="QR code" width="120" height="120" loading="lazy">
             </div>
-            <div class="plat__botoes">${botao(APPLE, L.apple, aff(idioma))}${botao(PLAY, L.google, aff(idioma))}</div>
+            <div class="plat__botoes">${botao(APPLE, L.apple, aff(idioma))}${botao(PLAY, L.google, aff(idioma))}${botao(HUAWEI, 'Huawei', aff(idioma))}${botao(GALAXY, 'Galaxy Store', aff(idioma))}${botao(ANDROID, P.apk, aff(idioma))}</div>
           </div>
         </div>
       </div>
