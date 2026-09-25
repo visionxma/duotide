@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr" data-tema="dark" data-tv="br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Como operar CFDs na prática: da escolha do ativo à saída | Blog Duotide</title>
+  <meta name="description" content="Um roteiro prático para operar contratos por diferença, com exemplo numérico completo de margem, alavancagem, stop e resultado.">
+  <link rel="canonical" href="https://duotide.com.br/blog/como-operar-cfds-na-pratica/">
+  <!--hreflang-->
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <meta name="keywords" content="blog investimentos, guia corretora, educação financeira, trading para iniciantes">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Como operar CFDs na prática: da escolha do ativo à saída">
+  <meta property="og:description" content="Um roteiro prático para operar contratos por diferença, com exemplo numérico completo de margem, alavancagem, stop e resultado.">
+  <meta property="og:url" content="https://duotide.com.br/blog/como-operar-cfds-na-pratica/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-login-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-login-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como operar CFDs na prática: da escolha do ativo à saída">
+  <meta name="twitter:description" content="Um roteiro prático para operar contratos por diferença, com exemplo numérico completo de margem, alavancagem, stop e resultado.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tempo de leitura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925o">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/blog/como-operar-cfds-na-pratica/#artigo",
+      "headline": "Como operar CFDs na prática: da escolha do ativo à saída",
+      "description": "Um roteiro prático para operar contratos por diferença, com exemplo numérico completo de margem, alavancagem, stop e resultado.",
+      "url": "https://duotide.com.br/blog/como-operar-cfds-na-pratica/",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-login-02.webp",
+      "articleSection": "Mercado",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duotide",
+        "url": "https://duotide.com.br/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/blog/como-operar-cfds-na-pratica/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Como operar CFDs na prática: da escolha do ativo à saída",
+          "item": "https://duotide.com.br/blog/como-operar-cfds-na-pratica/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/" aria-label="Duotide — página inicial">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide</span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir menu de navegação"
+                data-abrir="Abrir menu de navegação" data-fechar="Fechar menu de navegação">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Escolher idioma"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="22" height="16"><span>pt</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/" hreflang="pt-BR" lang="pt-BR" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/duotide-e-confiavel/">É confiável?</a></li>
+          <li><a href="/duotide-login/">Login</a></li>
+          <li><a href="/duotide-corretora/">A corretora</a></li>
+          <li><a href="/duotide-e-seguro/">É seguro?</a></li>
+          <li><a href="/duotide-app/">Aplicativo</a></li>
+          <li><a href="/melhores-corretoras/">Melhores corretoras</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide"
+           target="_blank" rel="noopener sponsored nofollow">Criar conta</a>
+        <a class="btn btn--outline btn--sm" href="/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Trilha de navegação">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span aria-current="page">Como operar CFDs na prática: da escolha do ativo à saída</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Mercado</span>
+        <h1>Como operar CFDs na prática: da escolha do ativo à saída</h1>
+        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
+        <figure class="foto"><img src="/assets/img/duotide-login-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>CFD é a sigla para contrato por diferença (contract for difference): um instrumento em que você não compra o ativo em si, mas um contrato cujo resultado reflete a diferença entre o preço de entrada e o preço de saída. Isso permite operar tanto na alta quanto na baixa de ações, índices, moedas e commodities sem precisar deter o ativo fisicamente. Este guia foca na parte prática — os passos e os números de uma operação — deixando a teoria mais ampla para quem já entende o mecanismo básico.</p>
+<h2>Passo 1: entenda o que a margem realmente significa</h2>
+<p>Ao abrir um CFD, você não deposita o valor total da posição — apenas uma margem, um percentual dela. Suponha um CFD sobre uma ação cotada a R$ 100,00, com margem exigida de 20%. Para controlar uma posição de 100 unidades (R$ 10.000,00 de exposição), você precisa depositar apenas R$ 2.000,00. Esses outros R$ 8.000,00 são, na prática, emprestados pela alavancagem embutida no contrato — o que amplia tanto o ganho quanto a perda proporcional ao capital depositado.</p>
+<h2>Passo 2: calcule o resultado antes de entrar, não depois</h2>
+<p>Continuando o exemplo: se a ação subir para R$ 103,00, o ganho na posição é de R$ 300,00 (100 unidades × R$ 3,00). Sobre a margem depositada de R$ 2.000,00, isso representa 15% de retorno — bem mais do que os 3% de valorização do ativo, por causa da alavancagem. O espelho é verdadeiro: se a ação cair para R$ 97,00, a perda de R$ 300,00 também representa 15% da margem depositada. Fazer essa conta antes de abrir a posição evita a surpresa de ver uma variação pequena no preço do ativo virar uma perda grande no capital disponível.</p>
+<h2>Passo 3: defina o stop loss como parte da entrada, não como plano B</h2>
+<p>Como a alavancagem amplia o resultado, um movimento contrário maior que o esperado pode consumir a margem disponível rapidamente — em casos extremos, gerando uma chamada de margem, quando a corretora pede mais depósito ou encerra a posição automaticamente para conter a perda. Definir o nível de stop loss no momento da entrada, calculando quanto isso representa em reais e em percentual da margem, é o que evita que uma operação isolada comprometa o restante do capital disponível para operar.</p>
+<h2>Passo 4: considere o custo de manter a posição aberta</h2>
+<p>CFDs mantidos além do mesmo dia costumam gerar um custo (ou, mais raramente, um crédito) de rolagem, cobrado por manter a posição alavancada aberta de um dia para o outro. Em uma posição de R$ 10.000,00 de exposição com uma taxa de rolagem de 0,03% ao dia, o custo diário seria de R$ 3,00 — um valor pequeno isoladamente, mas que se acumula em posições mantidas por semanas, reduzindo o resultado líquido da operação.</p>
+<h2>Passo 5: escolha o tamanho da posição pela margem, não pela exposição</h2>
+<p>Um erro comum é dimensionar a operação pensando apenas na exposição total (os R$ 10.000,00 do exemplo) sem considerar que o risco real de perda rápida está atrelado à margem menor (os R$ 2.000,00). Como regra prática, muitos traders limitam o risco de cada operação a uma fração pequena do capital total disponível para operar — 1% a 2%, por exemplo — calculado sobre a distância entre o preço de entrada e o stop loss, não sobre o tamanho total do contrato.</p>
+<h2>Passo 6: acompanhe a posição, não só o preço do ativo</h2>
+<p>Depois de aberta a posição, o que importa monitorar não é só a cotação do ativo, mas o quanto resta de margem livre na conta — o valor que ainda não está comprometido com a posição aberta. Se várias operações alavancadas forem abertas ao mesmo tempo, a margem livre pode cair rápido mesmo sem nenhuma delas ter atingido o stop individualmente, aumentando o risco de uma chamada de margem conjunta. Verificar esse número junto com o preço é parte do acompanhamento, não um detalhe secundário.</p>
+<h2>Colocando tudo junto</h2>
+<p>Operar CFDs de forma organizada significa, na prática, calcular três números antes de qualquer entrada: quanto de margem a posição exige, quanto se perde se o stop for atingido, e quanto custa manter a posição pelo tempo planejado. Plataformas como a Duotide mostram esses valores diretamente na tela de abertura da ordem, o que ajuda a fazer essa conta antes de confirmar — mas a decisão de operar dentro desses limites continua sendo do trader, e a alavancagem embutida no CFD significa que perdas podem superar, em alguns casos, o valor originalmente depositado como margem. Por isso, CFDs costumam ser recomendados apenas depois que o operador já entende bem o comportamento do ativo sem alavancagem.</p>
+        <div class="bq-post__cta">
+          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Leia também</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/blog/ipo-da-anthropic-o-que-se-sabe-ate-agora/"><img src="/assets/img/duotide-app-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">IPO da Anthropic: o que é fato e o que ainda é rumor</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/negociacao-fora-do-horario-de-pregao/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é negociação fora do horário de pregão (after-hours)</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/4-livros-classicos-sobre-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">4 livros clássicos que todo trader deveria ler</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Direitos autorais © 2026 Duotide.<br>
+            Todos os direitos reservados.<br>
+            Site não oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/duotide-e-confiavel/">Duotide é Confiável?</a></li>
+            <li><a href="/duotide-login/">Metódos de Login</a></li>
+            <li><a href="/duotide-corretora/">Conheça a Corretora</a></li>
+            <li><a href="/duotide-e-seguro/">Segurança da Broker</a></li>
+            <li><a href="/duotide-app/">Aplicativo</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contato</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gerente de contas 24h/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>A Duotide não possui autorização da Comissão de Valores Mobiliários (CVM) para ofertar
+          serviços de intermediação ou distribuição de valores mobiliários a investidores residentes
+          no Brasil. Portanto, qualquer informação aqui apresentada não deve ser interpretada como uma
+          oferta direta desses serviços a clientes brasileiros. Este site é informativo, não é o site
+          oficial da Duotide e é mantido por afiliação. Não há garantia de que projeções ou estratégias
+          resultem em desempenhos específicos, e o desempenho passado não assegura resultados futuros.
+          A volatilidade dos mercados pode gerar variações significativas nos retornos. Derivativos e
+          produtos alavancados são sofisticados e têm potencial elevado de risco: é essencial estar
+          ciente da possibilidade de perdas, inclusive totais, do capital investido. Nunca invista
+          valores que você não pode perder. A Duotide opera sob registro em São Vicente e Granadinas (SVG).</p>
+        <p class="footer__links">
+          <a href="/duotide-perguntas-frequentes/">Perguntas frequentes</a>
+          <a href="/sobre/">Sobre este site</a>
+          <a href="/contato/">Contato</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Fechar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bônus</span> <span class="pp__l2">de até 100%</span></h2>
+          <p>Turbine seus fundos com um bônus de depósito e desbloqueie uma recompensa que você poderá sacar</p>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Resgatar agora</a>
+          <p class="pp__mini">Sujeito às condições da promoção na plataforma parceira. Operar produtos alavancados envolve risco de perda.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-bonus-mob.webp"><img src="/assets/img/popup-bonus.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260925o" defer></script>
+</body>
+</html>
