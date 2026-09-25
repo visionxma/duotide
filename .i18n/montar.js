@@ -608,7 +608,6 @@ function main() {
   const postsPt = BLOG.gerar().map(a => ({ loc: `${SITE}${a.href}`, lastmod: a.data + 'T09:00:00-03:00', imagens: [SITE + a.img], alternados: [] }));
   fs.writeFileSync(path.join(RAIZ, 'page-sitemap.xml'), urlset(paginasPt));
   fs.writeFileSync(path.join(RAIZ, 'post-sitemap.xml'), urlset(postsPt));
-  fs.writeFileSync(path.join(RAIZ, 'sitemap.xml'), urlset([...paginasPt, ...postsPt].map(u => ({ ...u, alternados: [] }))));
   const indice = [['post-sitemap.xml', postsPt], ['page-sitemap.xml', paginasPt]];
   for (const f of fs.readdirSync(RAIZ)) if (/^sitemap-[a-z]+\.xml$/.test(f)) fs.rmSync(path.join(RAIZ, f));
   for (const idioma of prontos.slice(1)) {
@@ -617,6 +616,8 @@ function main() {
     fs.writeFileSync(path.join(RAIZ, `sitemap-${idioma.pasta}.xml`), urlset(lista));
     indice.push([`sitemap-${idioma.pasta}.xml`, lista]);
   }
+  // sitemap.xml: todas as URLs do site num arquivo só (pt, artigos e os 16 idiomas)
+  fs.writeFileSync(path.join(RAIZ, 'sitemap.xml'), urlset(indice.flatMap(([, l]) => l).map(u => ({ ...u, alternados: [] }))));
   const recente = l => l.map(u => u.lastmod).sort((a, b) => new Date(b) - new Date(a))[0];
   fs.writeFileSync(path.join(RAIZ, 'sitemap_index.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
