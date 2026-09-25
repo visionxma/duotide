@@ -155,4 +155,53 @@
       window.addEventListener('scroll', aoRolar, { passive: true });
     }
   }
+
+  /* ----------------------------------------------------------------------
+     Animação ao rolar: blocos aparecem suavemente quando entram na tela
+     ---------------------------------------------------------------------- */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var alvos = document.querySelectorAll('main h2, main .foto, main .card, main .recurso, main .faq__item, main .cotacoes, main .check-list li, main .steps li, main .callout, main .lojas');
+    var obsRevela = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visivel'); obsRevela.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    alvos.forEach(function (el) {
+      if (el.getBoundingClientRect().top > window.innerHeight) { el.classList.add('revela'); obsRevela.observe(el); }
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     Faixa de cotações ao vivo (TradingView) logo abaixo do topo da home
+     ---------------------------------------------------------------------- */
+  var heroHome = document.querySelector('main > .hero');
+  if (heroHome) {
+    var fita = document.createElement('div');
+    fita.className = 'fita-cotacoes';
+    fita.setAttribute('aria-hidden', 'true');
+    heroHome.insertAdjacentElement('afterend', fita);
+    var carregarFita = function () {
+      var caixa = document.createElement('div');
+      caixa.className = 'tradingview-widget-container';
+      caixa.innerHTML = '<div class="tradingview-widget-container__widget"></div>';
+      var sc = document.createElement('script');
+      sc.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+      sc.async = true;
+      sc.textContent = JSON.stringify({
+        symbols: [
+          { proName: 'BITSTAMP:BTCUSD', title: 'BTC/USD' }, { proName: 'BITSTAMP:ETHUSD', title: 'ETH/USD' },
+          { proName: 'FX:EURUSD', title: 'EUR/USD' }, { proName: 'FX:GBPUSD', title: 'GBP/USD' },
+          { proName: 'FX:USDJPY', title: 'USD/JPY' }, { proName: 'OANDA:XAUUSD', title: 'XAU/USD' },
+          { proName: 'OANDA:SPX500USD', title: 'S&P 500' }, { proName: 'OANDA:NAS100USD', title: 'Nasdaq 100' },
+          { proName: 'TVC:USOIL', title: 'WTI' }
+        ],
+        showSymbolLogo: true, isTransparent: true, displayMode: 'adaptive', colorTheme: 'dark',
+        locale: document.documentElement.getAttribute('data-tv') || 'br'
+      });
+      caixa.appendChild(sc);
+      fita.appendChild(caixa);
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(carregarFita, { timeout: 2500 });
+    else setTimeout(carregarFita, 1200);
+  }
 })();

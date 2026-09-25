@@ -400,3 +400,139 @@ html:lang(ar) .pp__selo,html:lang(bn) .pp__selo,html:lang(hi) .pp__selo,html:lan
   .pp--bonus .pp__btn{align-self:center}
 }
 body:has(.app-hero) .breadcrumb{background:#000}body:has(.app-hero) .breadcrumb [aria-current='page']{color:rgba(255,255,255,0.7)}body:has(.app-hero) .breadcrumb a{color:var(--c-verde)}
+
+/* =====================================================================
+   Tema escuro "Olymptrade" (2026-09-25) — vale para o site inteiro.
+   Só CSS: o HTML das páginas (e das 16 traduções) não muda.
+   ===================================================================== */
+:root{
+  --bg:#050605;--bg-2:#0b0d0b;--bg-3:#111411;
+  --vidro:rgba(255,255,255,0.04);--vidro-2:rgba(255,255,255,0.07);--borda:rgba(255,255,255,0.09);
+  --txt:rgba(255,255,255,0.72);--txt-2:rgba(255,255,255,0.5);--branco:#fff;
+  --verde:#6aff41;--menta:#00ffc2;--brilho:rgba(66,255,0,0.35);
+  --c-heading:#fff;--c-body:var(--txt);--c-ink:var(--verde);--c-lilac:var(--bg-2);--c-lilac-line:var(--borda);--c-white:var(--bg-3)
+}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--txt)}
+h1,h2,h3,h4,strong,.article h1,.article h2,.article h3{color:var(--branco)}
+a{color:var(--verde)}
+::selection{background:rgba(106,255,65,0.3);color:#fff}
+
+/* fundo vivo: grade sutil + brilhos que acompanham a página */
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 85% -8%,rgba(66,255,0,0.14),transparent 60%),
+    radial-gradient(700px 480px at -10% 30%,rgba(0,255,194,0.07),transparent 60%),
+    linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px) 0 0/64px 64px,
+    linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px) 0 0/64px 64px,
+    var(--bg);
+  -webkit-mask-image:linear-gradient(#000,rgba(0,0,0,0.55));mask-image:linear-gradient(#000,rgba(0,0,0,0.55))}
+
+/* seções: tudo escuro, nada de faixa branca */
+.section,.bloco,.duvidas,.section--lilac,.breadcrumb{background:transparent}
+.section--lilac{background:linear-gradient(180deg,transparent,rgba(106,255,65,0.03),transparent)}
+.breadcrumb{padding-top:26px}
+.breadcrumb a{color:var(--verde)}.breadcrumb [aria-current='page']{color:var(--txt-2)}
+.breadcrumb li:not(:last-child)::after{color:rgba(255,255,255,0.25)}
+
+/* coluna de leitura: linhas mais curtas, ritmo melhor */
+.bloco .container,.article{max-width:880px}
+.bloco p,.article p,.article li,.bloco li{color:var(--txt);font-size:1.0625rem;line-height:1.75}
+.bloco h2,.article h2{position:relative;margin-top:2.2em;padding-top:22px;font-size:clamp(1.75rem,3.4vw,2.6rem);letter-spacing:-0.025em;line-height:1.1}
+.bloco h2::before,.article h2::before{content:'';position:absolute;top:0;left:0;width:44px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--menta),var(--verde));box-shadow:0 0 18px var(--brilho)}
+.bloco .container > h2:first-child,.article > h1 + h2,.article h2:first-child{margin-top:0}
+.article > h1{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-0.03em;line-height:1.05;margin-bottom:0.6em;
+  background:linear-gradient(180deg,#fff 40%,rgba(255,255,255,0.65));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bloco h3,.article h3{color:#fff;font-size:1.35rem;margin-top:1.8em}
+[dir='rtl'] .bloco h2::before,[dir='rtl'] .article h2::before{left:auto;right:0}
+
+/* fotos: cor natural, cantos grandes, borda iluminada */
+.foto{border-radius:24px;border:1px solid var(--borda);background:var(--bg-3);box-shadow:0 30px 80px rgba(0,0,0,0.55),0 0 0 1px rgba(106,255,65,0.06);margin:34px auto 26px}
+.foto img{filter:saturate(0.85) contrast(1.05) brightness(0.9)}
+.foto::after{background:linear-gradient(180deg,transparent 55%,rgba(5,6,5,0.55)),radial-gradient(circle at 85% 10%,rgba(106,255,65,0.18),transparent 45%);mix-blend-mode:normal;opacity:1}
+
+/* listas, passos, avisos */
+.check-list li::before{background:linear-gradient(135deg,var(--menta),var(--verde));box-shadow:0 0 12px var(--brilho)}
+.check-list li::after{background:#041000}
+.steps li::before{background:linear-gradient(135deg,var(--menta),var(--verde));color:#021000;box-shadow:0 0 18px var(--brilho)}
+.steps li::after{background:linear-gradient(var(--verde),transparent);opacity:0.35}
+.callout{background:var(--vidro);border:1px solid var(--borda);border-left:3px solid var(--verde);border-radius:16px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.callout p,.callout strong{color:#fff}
+[dir='rtl'] .callout{border-left:1px solid var(--borda);border-right:3px solid var(--verde)}
+.related{background:var(--vidro);border:1px solid var(--borda);border-radius:20px}
+.related h2{padding-top:0}.related h2::before{display:none}
+.related a{color:#fff}.related a:hover{color:var(--verde)}
+
+/* cartões (vidro com borda em degradê no hover) */
+.card,.ranking__item{background:linear-gradient(var(--bg-3),var(--bg-3)) padding-box,linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03)) border-box;border:1px solid transparent;border-radius:20px;box-shadow:none;color:var(--txt)}
+.card:hover,.ranking__item:hover{background:linear-gradient(var(--bg-3),var(--bg-3)) padding-box,linear-gradient(135deg,var(--menta),var(--verde)) border-box;box-shadow:0 20px 60px rgba(66,255,0,0.12);transform:translateY(-4px)}
+.card h3,.card h4,.card h3 a,.ranking__item h3 a{color:#fff}
+.card p,.ranking__para{color:var(--txt)}
+.ranking__item--destaque{box-shadow:0 0 0 1px var(--verde),0 20px 60px rgba(66,255,0,0.15)}
+.ranking__pos{color:var(--verde)}
+.ranking__selo--iniciais{color:#021000}
+
+/* FAQ em cartões de vidro */
+.faq__item{background:var(--vidro);border:1px solid var(--borda);border-radius:16px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:border-color .2s ease,background .2s ease}
+.faq__item:hover{border-color:rgba(106,255,65,0.35)}
+.faq__item[open]{background:var(--vidro-2);border-color:rgba(106,255,65,0.45)}
+.faq__item summary{color:#fff;font-weight:600;font-size:1.0625rem;padding:20px 22px}
+.faq__item summary::after{background:var(--verde)}
+.faq__answer,.faq__answer p{color:var(--txt)}
+.duvidas__linha{border-top:1px solid var(--borda)}
+.duvidas__titulo{color:#fff;font-size:clamp(2rem,4vw,3rem)}
+.section__head h2{color:#fff}
+
+/* home: topo com brilho grande, celular flutuando, partículas */
+.hero{background:radial-gradient(760px 520px at 72% 42%,rgba(66,255,0,0.32),transparent 62%),radial-gradient(520px 380px at 20% 90%,rgba(0,255,194,0.12),transparent 60%),#000;position:relative;isolation:isolate}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0.55;
+  background-image:radial-gradient(1.5px 1.5px at 12% 18%,#c9ff9e,transparent),radial-gradient(1.5px 1.5px at 78% 12%,#fff,transparent),radial-gradient(2px 2px at 88% 64%,#6aff41,transparent),radial-gradient(1.5px 1.5px at 30% 72%,#fff,transparent),radial-gradient(1.5px 1.5px at 55% 30%,#c9ff9e,transparent),radial-gradient(2px 2px at 8% 60%,#6aff41,transparent),radial-gradient(1.5px 1.5px at 66% 86%,#fff,transparent);
+  animation:faiscas 9s ease-in-out infinite alternate}
+@keyframes faiscas{from{transform:translateY(0)}to{transform:translateY(-18px)}}
+.hero h1{font-size:clamp(3rem,7vw,5.6rem);letter-spacing:-0.04em;line-height:0.95}
+.hero__subtitle{font-size:clamp(1.3rem,2.6vw,2rem);font-weight:600;background:linear-gradient(90deg,#fff,#c9ffb0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero__lead{color:rgba(255,255,255,0.7)}
+.hero__media img{animation:flutua 6s ease-in-out infinite;filter:drop-shadow(0 40px 60px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(66,255,0,0.25))}
+@keyframes flutua{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(1deg)}}
+.hero__nota{color:var(--txt-2)}
+
+/* faixas escuras da home */
+.ativos,.faixa{background:transparent}
+.faixa::before{display:none}
+.faixa{position:relative;margin-top:40px;padding-top:80px}
+.faixa::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 420px at 50% 0%,rgba(66,255,0,0.14),transparent 70%)}
+.faixa{isolation:isolate}
+.ativos h2,.faixa h2{font-size:clamp(2.2rem,5vw,3.8rem);letter-spacing:-0.03em}
+.ativos h2 span,.faixa__sub,.ativos__sub{background:linear-gradient(90deg,var(--menta),var(--verde));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cotacoes{background:var(--vidro);border:1px solid var(--borda);border-radius:24px;padding:12px;box-shadow:0 0 80px rgba(66,255,0,0.08)}
+.cotacao{background:#0a0c0a;border:1px solid var(--borda);border-radius:16px}
+.recurso{background:linear-gradient(var(--bg-3),var(--bg-3)) padding-box,linear-gradient(160deg,rgba(106,255,65,0.45),rgba(255,255,255,0.04) 55%) border-box;border:1px solid transparent;border-radius:22px;padding:22px 20px 26px;transition:transform .25s ease,box-shadow .25s ease}
+.recurso:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(66,255,0,0.14)}
+.recurso svg{color:var(--verde);filter:drop-shadow(0 0 10px var(--brilho))}
+
+/* faixa de cotações ao vivo (TradingView), inserida pelo main.js sob o topo da home */
+.fita-cotacoes{position:relative;border-top:1px solid var(--borda);border-bottom:1px solid var(--borda);background:rgba(0,0,0,0.6);height:46px;overflow:hidden}
+.fita-cotacoes .tradingview-widget-container{height:46px}
+
+/* rodapé */
+.site-footer{background:#020302;border-top:1px solid var(--borda)}
+.footer__legal{border-top-color:var(--borda);color:var(--txt-2)}
+
+/* animação ao rolar (o main.js adiciona .revela e depois .visivel) */
+.revela{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.revela.visivel{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.revela{opacity:1;transform:none;transition:none}.hero__media img,.hero::after{animation:none}}
+
+/* componentes de outras páginas que eram claros */
+.diagrama{background:var(--vidro);border-color:var(--borda);border-radius:18px}
+.diagrama .dg-caixa,.diagrama .dg-caixa-alt,.diagrama .dg-ponto-alt{fill:var(--bg-3)}
+.diagrama .dg-rot,.diagrama .dg-lbl{fill:#fff}.diagrama .dg-val,.diagrama .dg-nota{fill:var(--txt)}
+.manchetes li{border-bottom-color:var(--borda)}.manchetes a{color:#fff}.manchetes a:hover{color:var(--verde)}
+.indicador__valor{color:var(--verde)}.indicador__nome{color:var(--txt)}
+.stat__value{background:linear-gradient(90deg,var(--menta),var(--verde));-webkit-background-clip:text;background-clip:text;color:transparent}
+.site-nav{background:rgba(5,6,5,0.96)}
+.idioma__lista{background:#0b0d0b}
+.to-top{background:linear-gradient(135deg,var(--menta),var(--verde));color:#021000;box-shadow:0 0 24px var(--brilho)}
+:root{--c-white:#fff}
+.hero h1{color:#fff;background:linear-gradient(180deg,#fff 30%,#b9ffa0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.indicador__valor{background:linear-gradient(90deg,var(--menta),var(--verde));-webkit-background-clip:text;background-clip:text;color:transparent}
