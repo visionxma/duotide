@@ -218,7 +218,7 @@ function topoApp(idioma) {
         <div class="app-hero__palco">
           <div class="app-hero__mao">
             <img class="app-hero__tela" src="/assets/img/app/duotide-tela.svg" alt="" width="390" height="844" decoding="async" fetchpriority="high">
-            <img class="app-hero__foto" src="/assets/img/app/mao.webp" alt="" width="921" height="1272" decoding="async" fetchpriority="high">
+            <picture><source srcset="/assets/img/ot/mao.avif" type="image/avif"><img class="app-hero__foto" src="/assets/img/app/mao.webp" alt="" width="921" height="1272" decoding="async" fetchpriority="high"></picture>
           </div>
           <a class="app-qr" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">
             <img src="/assets/img/qr/qr-${idioma.pasta || 'pt'}.svg" alt="QR code" width="120" height="120">
@@ -237,7 +237,7 @@ function plataformas(idioma) {
       <div class="container">
         <h2 class="plataformas__titulo">${P.titulo} <span>${P.titulo2}</span></h2>
         <div class="plataformas__palco" aria-hidden="true">
-          <div class="disp disp--tablet"><img src="/assets/img/app/duotide-tablet.svg" alt="" width="1180" height="780" loading="lazy" decoding="async"></div>
+          <div class="disp disp--tablet"><div class="terminal"><img class="terminal__grafico" src="/assets/img/ot/grafico.svg" alt="" width="1920" height="1200" loading="lazy" decoding="async"><img class="terminal__ui" src="/assets/img/ot/terminal.avif" alt="" width="1920" height="1200" loading="lazy" decoding="async"><img class="terminal__marca" src="/assets/img/marca-duotide.png" alt="" width="64" height="64" loading="lazy"></div></div>
           <div class="disp disp--fone"><img src="/assets/img/app/duotide-tela.svg" alt="" width="390" height="844" loading="lazy" decoding="async"></div>
         </div>
         <div class="plataformas__cartao">
@@ -317,7 +317,7 @@ function layoutHome(h, idioma) {
         return `<div class="hb hb--cta" data-g>${txt}<!--gerado--><div class="btn-row btn-row--center"><a class="btn btn--primary btn--lg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${C.criar_conta}</a></div><!--/gerado--></div><!--/g-->`;
       }
       if (ehApp) {
-        return `<div class="hb hb--split hb--app" data-g><div class="hb__txt" data-g>${txt}</div><!--/g--><!--gerado--><div class="hb__midia"><img src="/assets/img/duotide-app-celular.webp" alt="" width="720" height="720" loading="lazy" decoding="async"></div><!--/gerado--></div><!--/g-->`;
+        return `<div class="hb hb--split hb--app" data-g><div class="hb__txt" data-g>${txt}</div><!--/g--><!--gerado--><div class="hb__midia hb__midia--bonus"><img src="/assets/img/ot/celular-bonus.avif" alt="" width="696" height="464" loading="lazy" decoding="async"></div><!--/gerado--></div><!--/g-->`;
       }
       if (fig.length === 1) {
         // mantém a ordem original: o que vem antes da foto, a foto, o que vem depois
