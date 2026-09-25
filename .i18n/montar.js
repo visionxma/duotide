@@ -392,6 +392,31 @@ ${indice.map(([f, l]) => `\t<sitemap>\n\t\t<loc>${SITE}/${f}</loc>\n\t\t<lastmod
 </sitemapindex>
 `);
 
+  // 3b. páginas removidas: redirecionam para a home do idioma (evita 404 para quem vem do Google)
+  const redir = path.join(__dirname, 'redirecionados.json');
+  if (fs.existsSync(redir)) {
+    for (const rota of JSON.parse(ler(redir))) {
+      const pasta = rota.split('/')[1];
+      const idioma = prontos.find(i => i.pasta === pasta) || PT;
+      const alvo = idioma === PT ? '/' : `/${idioma.pasta}/`;
+      const f = path.join(RAIZ, rota, 'index.html');
+      fs.mkdirSync(path.dirname(f), { recursive: true });
+      fs.writeFileSync(f, `<!DOCTYPE html>
+<html lang="${idioma.codigo}">
+<head>
+<meta charset="UTF-8">
+<title>Duotide</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="${SITE}${alvo}">
+<meta http-equiv="refresh" content="0; url=${alvo}">
+<script>location.replace(${JSON.stringify(alvo)})</script>
+</head>
+<body><a href="${alvo}">Duotide</a></body>
+</html>
+`);
+    }
+  }
+
   // 4. llms.txt: seção de idiomas (substitui a anterior, se houver)
   const llmsF = path.join(RAIZ, 'llms.txt');
   let llms = ler(llmsF).replace(/\n## Other languages[\s\S]*$/, '\n').trimEnd() + '\n';
