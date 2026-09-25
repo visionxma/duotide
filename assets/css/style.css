@@ -804,3 +804,7 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 /* foto do escritório já é verde: sem o filtro de cor por cima */
 .suporte24::after{display:none}
 @media (min-width:761px){.hero{background:linear-gradient(90deg,rgba(0,0,0,.93) 0%,rgba(0,0,0,.75) 45%,rgba(0,0,0,.62) 100%),radial-gradient(520px 420px at 72% 45%,rgba(66,255,0,0.16),transparent 65%),url('/assets/img/hero-fundo.webp') center/cover no-repeat,#000}}
+/* celular do topo: arte antiga de volta, sem mesclagem */
+.hero__media img{mix-blend-mode:normal}
+/* responsivo: itens da grade do blog podem encolher (a faixa de categorias rola por dentro) */
+.bq__corpo > *,.bq__principal,.bq__lado{min-width:0}
