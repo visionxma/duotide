@@ -690,3 +690,25 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 [dir='rtl'] .suporte24{background:linear-gradient(270deg,#050605 0%,rgba(5,6,5,0.92) 38%,rgba(5,6,5,0.35) 70%,rgba(5,6,5,0.15)),url('/assets/img/duotide-corretora-03.webp') left center/cover no-repeat}
 @media (max-width:700px){.suporte24{background:linear-gradient(180deg,rgba(5,6,5,0.75),#050605),url('/assets/img/duotide-corretora-03.webp') center/cover no-repeat}}
 .suporte24::after{content:'';position:absolute;inset:0;z-index:-1;background:#0c3a06;mix-blend-mode:color;pointer-events:none}.suporte24::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 400px at 75% 40%,rgba(66,255,0,0.18),transparent 70%);pointer-events:none}
+.suporte24 .btn-row{justify-content:flex-start;gap:14px;margin:0}.suporte24__txt{max-width:44ch}
+/* ---------- Melhores corretoras: ranking em linhas (estilo Traders Union) ---------- */
+.ranking{grid-template-columns:1fr !important;gap:14px;max-width:1100px;margin:0 auto}
+.ranking__item{display:grid;grid-template-columns:64px minmax(180px,1.1fr) 1.6fr auto;grid-template-areas:"pos topo para btn" "pos topo lista btn";align-items:center;column-gap:28px;row-gap:6px;padding:22px 26px !important}
+.ranking__pos{grid-area:pos;position:static !important;display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:#161916;border:1px solid var(--borda);font-size:1.25rem !important;opacity:1 !important;color:#fff !important}
+.ranking__pos::before{content:'#';color:var(--verde);font-size:0.8em;margin-right:1px}
+.ranking__topo{grid-area:topo;flex-direction:column;align-items:flex-start;gap:10px;margin:0 !important}
+.ranking__topo h3{font-size:1.25rem}
+.ranking__para{grid-area:para;margin:0 !important}
+.ranking__item .check-list{grid-area:lista;display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 !important}
+.ranking__item .check-list li{margin:0;font-size:0.875rem !important}
+.ranking__item .btn-row{grid-area:btn;margin:0}
+.ranking__item .btn-row .btn{white-space:nowrap}
+.ranking__item--destaque{background:linear-gradient(90deg,rgba(66,255,0,0.1),var(--bg-3) 40%) padding-box,linear-gradient(135deg,var(--menta),var(--verde)) border-box !important}
+.ranking__item--destaque .ranking__pos{background:linear-gradient(135deg,var(--menta),var(--verde));color:#021000 !important;border:none}
+.ranking__item--destaque .ranking__pos::before{color:#021000}
+@media (max-width:900px){
+  .ranking__item{grid-template-columns:52px 1fr;grid-template-areas:"pos topo" "para para" "lista lista" "btn btn";row-gap:14px}
+  .ranking__item .btn-row .btn{width:100%}
+}
+.article .faq{margin-bottom:10px}
+.ranking__pos{display:flex !important;align-items:center;justify-content:center}.ranking__item--destaque{background:linear-gradient(90deg,rgba(66,255,0,0.16),rgba(0,255,194,0.04) 45%,var(--bg-3) 70%) padding-box,linear-gradient(135deg,var(--menta),var(--verde)) border-box !important}

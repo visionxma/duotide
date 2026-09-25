@@ -23,8 +23,7 @@ const CHROME_PT = JSON.parse(fs.readFileSync(path.join(__dirname, 'fonte/_chrome
 const MENU = [['home', 'inicio'], ['confiavel', 'duotide-e-confiavel'], ['login', 'duotide-login'],
   ['corretora', 'duotide-corretora'], ['seguro', 'duotide-e-seguro'], ['app', 'duotide-app'],
   ['melhores', 'melhores-corretoras'], ['blog', 'blog']];
-const LINKS_RODAPE = [['faq', 'duotide-perguntas-frequentes'], ['sobre', 'sobre'], ['avaliamos', 'como-avaliamos'],
-  ['risco', 'aviso-de-risco'], ['contato', 'contato'], ['privacidade', 'privacidade'], ['termos', 'termos']];
+const LINKS_RODAPE = [['faq', 'duotide-perguntas-frequentes'], ['sobre', 'sobre'], ['contato', 'contato']];
 
 const ler = p => fs.readFileSync(p, 'utf8');
 const escAttr = s => s.replace(/&(?!(?:[a-z]+|#\d+);)/g, '&amp;').replace(/"/g, '&quot;');
@@ -291,7 +290,10 @@ function suporte(idioma) {
         <span class="suporte24__selo">${S.selo}</span>
         <h2 class="suporte24__titulo">${S.t1} <span>${S.t2}</span></h2>
         <p class="suporte24__txt">${S.txt}</p>
-        <a class="suporte24__email" href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--lg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${S.botao}</a>
+          <a class="suporte24__email" href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a>
+        </div>
       </div>
     </section><!--/gerado-->`;
 }
