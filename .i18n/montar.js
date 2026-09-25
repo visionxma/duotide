@@ -237,7 +237,7 @@ function plataformas(idioma) {
       <div class="container">
         <h2 class="plataformas__titulo">${P.titulo} <span>${P.titulo2}</span></h2>
         <div class="plataformas__palco" aria-hidden="true">
-          <div class="disp disp--tablet"><div class="terminal"><img class="terminal__grafico" src="/assets/img/ot/grafico.svg" alt="" width="1920" height="1200" loading="lazy" decoding="async"><img class="terminal__ui" src="/assets/img/ot/terminal.avif" alt="" width="1920" height="1200" loading="lazy" decoding="async"><img class="terminal__marca" src="/assets/img/marca-duotide.png" alt="" width="64" height="64" loading="lazy"></div></div>
+          <div class="disp disp--tablet disp--foto"><img src="/assets/img/ot/tablet.avif" alt="" width="488" height="512" loading="lazy" decoding="async"><span class="tablet__marca"><img src="/assets/img/marca-duotide.png" alt="" width="64" height="64" loading="lazy"></span></div>
           <div class="disp disp--fone"><img src="/assets/img/app/duotide-tela.svg" alt="" width="390" height="844" loading="lazy" decoding="async"></div>
         </div>
         <div class="plataformas__cartao">
