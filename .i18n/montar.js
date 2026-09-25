@@ -298,12 +298,56 @@ function suporte(idioma) {
     </section><!--/gerado-->`;
 }
 
+// ---------------------------------------------------------------- blog no estilo do blog da IQ Option
+const BLOG_IMGS = ['duotide-o-que-e', 'duotide-seguranca', 'duotide-abrir-conta', 'duotide-vale-a-pena', 'duotide-e-confiavel-01',
+  'duotide-corretora-02', 'duotide-corretora-03', 'duotide-app-03', 'duotide-seguro-02', 'duotide-corretora-04'];
+const ATIVOS = [['Bitcoin', 'BTC/USD', '₿', '#f7931a'], ['Ethereum', 'ETH/USD', 'Ξ', '#627eea'], ['EUR/USD', 'Forex', '€', '#2d6cdf'],
+  ['Gold', 'XAU/USD', 'Au', '#d4a017'], ['USD/JPY', 'Forex', '¥', '#c0392b']];
+function blogLayout(h, idioma) {
+  const B = chrome(idioma).blog;
+  const cards = [...h.matchAll(/<article class="card">\s*<h3><a href="([^"]+)">([\s\S]*?)<\/a><\/h3>\s*<p>([\s\S]*?)<\/p>\s*<\/article>/g)]
+    .map((m, i) => ({ href: m[1], titulo: m[2], resumo: m[3], img: `/assets/img/${BLOG_IMGS[i % BLOG_IMGS.length]}.webp` }));
+  if (!cards.length) return h;
+  let data = '06/08/2026';
+  try { data = new Intl.DateTimeFormat(idioma.codigo, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date('2026-08-06T12:00:00Z')); } catch (e) {}
+  const meta = `<span class="bq__meta">${data} · ${B.leitura.replace('{n}', 5)}</span>`;
+  const [d, ...resto] = cards;
+  const alta = cards.slice(-4);
+  const html = `<!--gerado--><div class="bq">
+        <a class="bq__hero" href="${d.href}" style="background-image:url('${d.img}')">
+          <span class="bq__tag">${B.destaque}</span>
+          <span class="bq__hero-titulo">${d.titulo}</span>
+          ${meta}
+        </a>
+        <div class="bq__corpo">
+          <div class="bq__principal">
+            <h2 class="bq__h">${B.recentes}</h2>
+            <div class="bq__grade">
+${resto.map(c => `              <a class="bq__card" href="${c.href}"><img src="${c.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${c.titulo}</span><span class="bq__resumo">${c.resumo}</span><span class="bq__autor">${B.equipe}</span>${meta}</a>`).join('\n')}
+            </div>
+          </div>
+          <aside class="bq__lado">
+            <h2 class="bq__h">${B.emalta}</h2>
+${alta.map(c => `            <a class="bq__alta" href="${c.href}" style="background-image:url('${c.img}')"><span>${c.titulo}</span><small>${data}</small></a>`).join('\n')}
+            <h2 class="bq__h bq__h--ativos">📈 ${B.ativos}</h2>
+            <ul class="bq__ativos">
+${ATIVOS.map(([n, s, ic, cor]) => `              <li><span class="bq__ic" style="background:${cor}">${ic}</span><span class="bq__an"><strong>${n}</strong><small>${s}</small></span><a class="bq__neg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${B.negociar}</a></li>`).join('\n')}
+            </ul>
+            <p class="bq__risco">${B.risco}</p>
+          </aside>
+        </div>
+      </div><!--/gerado-->`;
+  // a lista original fica no HTML (é ela que a extração e as traduções usam); o CSS a esconde
+  return h.replace(/\s*<div class="cards(?: cards--blog-original)?">/, () => '\n        ' + html + '\n        <div class="cards">');
+}
+
 // Preenche o que é gerado dentro do <main> (idempotente: limpa antes de preencher).
 function gerados(h, idioma, chave) {
   h = h.replace(/\s*<!--gerado--><section[\s\S]*?<\/section><!--\/gerado-->/g, '');
   h = h.replace(/<!--gerado-->[\s\S]*?<!--\/gerado-->/g, '');
   h = h.replace(/<div class="lojas"><\/div>/g, () => `<div class="lojas">${lojas(idioma)}</div>`);
   if (chave === 'duotide-app') h = h.replace(/(<main id="conteudo">)/, (m, a) => a + '\n    ' + topoApp(idioma));
+  if (chave === 'blog') h = blogLayout(h, idioma);
   if (chave === 'inicio') h = h.replace(/(<section class="faixa">[\s\S]*?<\/section>)/, (m, a) => a + '\n    ' + plataformas(idioma));
   if (chave === 'inicio') h = h.replace(/(<section class="duvidas">)/, (m, a) => passos(idioma) + '\n    ' + suporte(idioma) + '\n    ' + a);
   return h;
