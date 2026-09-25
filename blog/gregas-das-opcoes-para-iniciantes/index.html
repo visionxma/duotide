@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr" data-tema="dark" data-tv="br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Gregas das opcoes para iniciantes: delta, gamma, theta e vega | Blog Duotide</title>
+  <meta name="description" content="Entenda de forma simples o que medem as principais gregas das opcoes e veja um exemplo numerico de como o delta afeta o preco de um contrato.">
+  <link rel="canonical" href="https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/">
+  <!--hreflang-->
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <meta name="keywords" content="blog investimentos, guia corretora, educação financeira, trading para iniciantes">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Gregas das opcoes para iniciantes: delta, gamma, theta e vega">
+  <meta property="og:description" content="Entenda de forma simples o que medem as principais gregas das opcoes e veja um exemplo numerico de como o delta afeta o preco de um contrato.">
+  <meta property="og:url" content="https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-abrir-conta.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-abrir-conta.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gregas das opcoes para iniciantes: delta, gamma, theta e vega">
+  <meta name="twitter:description" content="Entenda de forma simples o que medem as principais gregas das opcoes e veja um exemplo numerico de como o delta afeta o preco de um contrato.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tempo de leitura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260925n">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/#artigo",
+      "headline": "Gregas das opcoes para iniciantes: delta, gamma, theta e vega",
+      "description": "Entenda de forma simples o que medem as principais gregas das opcoes e veja um exemplo numerico de como o delta afeta o preco de um contrato.",
+      "url": "https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-abrir-conta.webp",
+      "articleSection": "Opcoes",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipe Duotide",
+        "url": "https://duotide.com.br/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gregas das opcoes para iniciantes: delta, gamma, theta e vega",
+          "item": "https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/" aria-label="Duotide — página inicial">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide</span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir menu de navegação"
+                data-abrir="Abrir menu de navegação" data-fechar="Fechar menu de navegação">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Escolher idioma"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="22" height="16"><span>pt</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/" hreflang="pt-BR" lang="pt-BR" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/duotide-e-confiavel/">É confiável?</a></li>
+          <li><a href="/duotide-login/">Login</a></li>
+          <li><a href="/duotide-corretora/">A corretora</a></li>
+          <li><a href="/duotide-e-seguro/">É seguro?</a></li>
+          <li><a href="/duotide-app/">Aplicativo</a></li>
+          <li><a href="/melhores-corretoras/">Melhores corretoras</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide"
+           target="_blank" rel="noopener sponsored nofollow">Criar conta</a>
+        <a class="btn btn--outline btn--sm" href="/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Trilha de navegação">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span aria-current="page">Gregas das opcoes para iniciantes: delta, gamma, theta e vega</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Opcoes</span>
+        <h1>Gregas das opcoes para iniciantes: delta, gamma, theta e vega</h1>
+        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 3 min de leitura</p>
+        <figure class="foto"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        
+<p>Quem comeca a estudar opcoes costuma esbarrar rapido em quatro palavras que parecem gregas de verdade: delta, gamma, theta e vega. Sao, na pratica, medidas que mostram como o preco de uma opcao reage a diferentes fatores, como o movimento do ativo-objeto, a passagem do tempo e a mudanca na volatilidade. Entender o que cada uma mede ajuda a avaliar uma operacao com opcoes antes de entrar, em vez de descobrir depois por que o preco do contrato se moveu de um jeito inesperado.</p>
+<h2>Delta: quanto a opcao se move junto com o ativo</h2>
+<p>O delta mede a sensibilidade do preco da opcao a uma variacao no preco do ativo-objeto. Uma opcao de compra com delta de 0,60, por exemplo, tende a subir cerca de R$ 0,60 para cada alta de R$ 1,00 no ativo-objeto, mantendo os outros fatores constantes. Opcoes de compra tem delta positivo, entre 0 e 1. Opcoes de venda tem delta negativo, entre -1 e 0. Quanto mais dentro do dinheiro a opcao estiver, mais o delta se aproxima de 1 ou -1, e quanto mais fora do dinheiro, mais perto de zero.</p>
+<h2>Gamma: a velocidade de mudanca do delta</h2>
+<p>Se o delta mostra a direcao, o gamma mostra o quao rapido essa direcao pode mudar quando o preco do ativo se move. Um gamma alto significa que o delta da opcao pode variar bastante com pequenos movimentos do ativo-objeto, o que costuma acontecer com opcoes proximas do preco de exercicio e perto do vencimento. Isso importa porque uma posicao com gamma elevado pode mudar de perfil de risco rapidamente, exigindo mais atencao do que uma posicao com gamma baixo.</p>
+<h2>Theta: o custo de segurar a opcao ao longo do tempo</h2>
+<p>O theta mede quanto valor a opcao tende a perder por dia, apenas pela passagem do tempo, mantendo os outros fatores constantes. Esse efeito e conhecido como decaimento temporal. Para quem compra opcoes, o theta trabalha contra a posicao: cada dia que passa sem que o ativo se mova o suficiente reduz o valor do contrato. Para quem vende opcoes, o theta trabalha a favor, o que explica por que estrategias de venda de opcoes costumam ser descritas como apostas no tempo, e nao apenas na direcao do preco.</p>
+<h2>Vega: sensibilidade a mudanca na volatilidade</h2>
+<p>O vega mede quanto o preco da opcao muda quando a volatilidade implicita do mercado sobe ou desce, sem que o preco do ativo-objeto precise se mover. Em periodos de incerteza, como antes de um resultado de empresa ou uma decisao de juros, a volatilidade implicita tende a subir, o que pode encarecer opcoes mesmo sem movimento imediato no preco do ativo. Depois do evento, a volatilidade costuma cair de forma abrupta, um efeito chamado de esmagamento de volatilidade, que pode reduzir o valor da opcao mesmo que o ativo tenha se movido na direcao esperada.</p>
+<h2>Como as gregas trabalham juntas</h2>
+<p>Nenhuma grega funciona isolada. Uma opcao pode ter delta favoravel a uma alta do ativo, mas perder valor de qualquer forma se o theta comer o ganho mais rapido do que o preco sobe, ou se a volatilidade cair logo depois da entrada. Antes de montar uma operacao com opcoes, vale perguntar nao apenas se o ativo vai subir ou cair, mas tambem quanto tempo isso deve levar e como a volatilidade implicita tende a se comportar nesse periodo.</p>
+<h2>Por que isso importa para quem esta comecando</h2>
+<p>Ignorar as gregas nao torna a operacao mais simples, apenas esconde riscos que continuam existindo de qualquer jeito. Um comprador de opcoes que entende o theta sabe que precisa de um movimento relativamente rapido para compensar o desgaste do tempo. Um vendedor de opcoes que entende o gamma sabe que sua posicao pode se tornar bem mais arriscada perto do vencimento. Operar opcoes envolve risco, incluindo a possibilidade de perda total do valor investido no contrato, e entender as gregas e um passo pratico para avaliar esse risco antes de entrar, nao uma garantia de resultado.</p>
+
+        <div class="bq-post__cta">
+          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Leia também</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/blog/alphabet-recua-na-bolsa-gastos-com-ia/"><img src="/assets/img/duotide-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Alphabet perde fôlego na bolsa enquanto mercado pesa a conta da IA</span><span class="bq__meta">24/09/2026 · 3 min de leitura</span></a>
+            <a class="bq__card" href="/blog/bitcoin-perde-83750-juros-dos-eua-pressionam/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bitcoin cede abaixo de US$ 83.750 com juros americanos no maior nível em anos</span><span class="bq__meta">24/09/2026 · 3 min de leitura</span></a>
+            <a class="bq__card" href="/blog/divida-global-passa-365-trilhoes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dívida global passa de US$ 365 trilhões e juros já custam mais que defesa</span><span class="bq__meta">24/09/2026 · 3 min de leitura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Direitos autorais © 2026 Duotide.<br>
+            Todos os direitos reservados.<br>
+            Site não oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/duotide-e-confiavel/">Duotide é Confiável?</a></li>
+            <li><a href="/duotide-login/">Metódos de Login</a></li>
+            <li><a href="/duotide-corretora/">Conheça a Corretora</a></li>
+            <li><a href="/duotide-e-seguro/">Segurança da Broker</a></li>
+            <li><a href="/duotide-app/">Aplicativo</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contato</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gerente de contas 24h/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>A Duotide não possui autorização da Comissão de Valores Mobiliários (CVM) para ofertar
+          serviços de intermediação ou distribuição de valores mobiliários a investidores residentes
+          no Brasil. Portanto, qualquer informação aqui apresentada não deve ser interpretada como uma
+          oferta direta desses serviços a clientes brasileiros. Este site é informativo, não é o site
+          oficial da Duotide e é mantido por afiliação. Não há garantia de que projeções ou estratégias
+          resultem em desempenhos específicos, e o desempenho passado não assegura resultados futuros.
+          A volatilidade dos mercados pode gerar variações significativas nos retornos. Derivativos e
+          produtos alavancados são sofisticados e têm potencial elevado de risco: é essencial estar
+          ciente da possibilidade de perdas, inclusive totais, do capital investido. Nunca invista
+          valores que você não pode perder. A Duotide opera sob registro em São Vicente e Granadinas (SVG).</p>
+        <p class="footer__links">
+          <a href="/duotide-perguntas-frequentes/">Perguntas frequentes</a>
+          <a href="/sobre/">Sobre este site</a>
+          <a href="/contato/">Contato</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Fechar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bônus</span> <span class="pp__l2">de até 100%</span></h2>
+          <p>Turbine seus fundos com um bônus de depósito e desbloqueie uma recompensa que você poderá sacar</p>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Resgatar agora</a>
+          <p class="pp__mini">Sujeito às condições da promoção na plataforma parceira. Operar produtos alavancados envolve risco de perda.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-bonus-mob.webp"><img src="/assets/img/popup-bonus.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260925n" defer></script>
+</body>
+</html>

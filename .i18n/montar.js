@@ -627,7 +627,8 @@ ${indice.map(([f, l]) => `\t<sitemap>\n\t\t<loc>${SITE}/${f}</loc>\n\t\t<lastmod
       const pasta = rota.split('/')[1];
       const idioma = prontos.find(i => i.pasta === pasta) || PT;
       const base = idioma === PT ? '/' : `/${idioma.pasta}/`;
-      const alvo = /^\/noticias\//.test(rota) ? '/blog/' : /\/blog\/[^/]+\/$/.test(rota) ? base + 'blog/' : base;
+      const noticia = (rota.match(/^\/noticias\/([^/]+)\/$/) || [])[1];
+      const alvo = noticia && vivos.has(`/blog/${noticia}/`) ? `/blog/${noticia}/` : /^\/noticias\//.test(rota) ? '/blog/' : /\/blog\/[^/]+\/$/.test(rota) ? base + 'blog/' : base;
       if (vivos.has(rota)) continue; // um artigo novo ocupa hoje esse endereço
       const f = path.join(RAIZ, rota, 'index.html');
       fs.mkdirSync(path.dirname(f), { recursive: true });

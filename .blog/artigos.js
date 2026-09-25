@@ -32,7 +32,9 @@ function lista() {
     arts.push(a);
   }
   const pos = a => { const i = pautas.indexOf(a.pauta); return i < 0 ? 1e6 : i; };
-  arts.sort((a, b) => b.data.localeCompare(a.data) || pos(a) - pos(b) || a.slug.localeCompare(b.slug));
+  // notícias primeiro (dentro da mesma data), depois a ordem das pautas
+  const noticia = a => a.tipo === 'noticia' ? 0 : 1;
+  arts.sort((a, b) => b.data.localeCompare(a.data) || noticia(a) - noticia(b) || pos(a) - pos(b) || a.slug.localeCompare(b.slug));
   arts.forEach((a, i) => {
     a.href = `/blog/${a.slug}/`;
     a.img = a.capa || `/assets/img/${IMGS[i % IMGS.length]}.webp`;
@@ -81,7 +83,8 @@ function gerar() {
         <p class="bq-post__meta">Equipe Duotide · <time datetime="${a.data}">${dataBR(a.data)}</time> · ${a.leitura} min de leitura</p>
         <figure class="foto"><img src="${a.img}" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         ${a.corpo}
-        <div class="bq-post__cta">
+${a.fonte ? `        <p class="artigo__fonte">Com informações de <a href="${esc(a.fonte)}" target="_blank" rel="noopener nofollow">Traders Union</a>.</p>
+` : ''}        <div class="bq-post__cta">
           <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
           <a class="btn btn--primary" href="${AFF}" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
         </div>
