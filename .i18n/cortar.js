@@ -66,14 +66,19 @@ for (const p of plano) (porPagina[p.chave] = porPagina[p.chave] || []).push(p);
 let n = 0;
 for (const [chave, lista] of Object.entries(porPagina)) {
   lista.sort((a, b) => b.indice - a.indice);
-  const alvos = [path.join(__dirname, 'fonte', chave + '.html'),
+  const soPagina = process.argv.includes('--so-pagina');
+  const alvos = soPagina ? [path.join(RAIZ, ROTAS[chave], 'index.html')] : [path.join(__dirname, 'fonte', chave + '.html'),
     ...PASTAS.map(p => path.join(__dirname, p, chave + '.html')).filter(f => fs.existsSync(f)),
     path.join(RAIZ, ROTAS[chave], 'index.html')];
   for (const f of alvos) {
     let h = fs.readFileSync(f, 'utf8');
     const ehPagina = !f.includes('/.i18n/');
     let a, b;
-    if (ehPagina) [a, b] = corpoDe(h);
+    if (ehPagina) {
+      // tira o que o montar.js gera (blocos <!--gerado--> e invólucros de layout); ele recoloca depois
+      h = h.replace(/\s*<!--gerado-->[\s\S]*?<!--\/gerado-->/g, '').replace(/<div[^>]*\sdata-g(?:\s[^>]*)?>\s*/g, '').replace(/\s*<\/div><!--\/g-->/g, '');
+      [a, b] = corpoDe(h);
+    }
     else { a = h.indexOf('<!--corpo-->') + '<!--corpo-->'.length; b = h.indexOf('<!--/corpo-->'); }
     let corpo = h.slice(a, b);
     const pasta = f.includes('/.i18n/') && !f.includes('/.i18n/fonte/') ? path.basename(path.dirname(f)) : 'fonte';

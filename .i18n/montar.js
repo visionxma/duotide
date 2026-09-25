@@ -268,6 +268,34 @@ function plataformas(idioma) {
     </section><!--/gerado-->`;
 }
 
+function passos(idioma) {
+  const P = chrome(idioma).passos, C = chrome(idioma);
+  const item = (n, r, t, x) => `<li class="passo"><span class="passo__num">${n}</span><div><span class="passo__rotulo">${r}</span><h3>${t}</h3><p>${x}</p></div></li>`;
+  return `<!--gerado--><section class="passos3">
+      <div class="container">
+        <h2 class="passos3__titulo">${P.t1} <span>${P.t2}</span></h2>
+        <p class="passos3__sub">${P.sub}</p>
+        <ol class="passos3__lista">
+          ${item(1, P.r1, P.p1t, P.p1)}
+          ${item(2, P.r2, P.p2t, P.p2)}
+          ${item(3, P.r3, P.p3t, P.p3)}
+        </ol>
+        <div class="btn-row btn-row--center"><a class="btn btn--primary btn--lg" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${C.criar_conta}</a></div>
+      </div>
+    </section><!--/gerado-->`;
+}
+function suporte(idioma) {
+  const S = chrome(idioma).suporte;
+  return `<!--gerado--><section class="suporte24">
+      <div class="container">
+        <span class="suporte24__selo">${S.selo}</span>
+        <h2 class="suporte24__titulo">${S.t1} <span>${S.t2}</span></h2>
+        <p class="suporte24__txt">${S.txt}</p>
+        <a class="suporte24__email" href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a>
+      </div>
+    </section><!--/gerado-->`;
+}
+
 // Preenche o que é gerado dentro do <main> (idempotente: limpa antes de preencher).
 function gerados(h, idioma, chave) {
   h = h.replace(/\s*<!--gerado--><section[\s\S]*?<\/section><!--\/gerado-->/g, '');
@@ -275,6 +303,7 @@ function gerados(h, idioma, chave) {
   h = h.replace(/<div class="lojas"><\/div>/g, () => `<div class="lojas">${lojas(idioma)}</div>`);
   if (chave === 'duotide-app') h = h.replace(/(<main id="conteudo">)/, (m, a) => a + '\n    ' + topoApp(idioma));
   if (chave === 'inicio') h = h.replace(/(<section class="faixa">[\s\S]*?<\/section>)/, (m, a) => a + '\n    ' + plataformas(idioma));
+  if (chave === 'inicio') h = h.replace(/(<section class="duvidas">)/, (m, a) => passos(idioma) + '\n    ' + suporte(idioma) + '\n    ' + a);
   return h;
 }
 
@@ -529,6 +558,14 @@ function main() {
       imagens: imagens(ler(path.join(RAIZ, caminho(idioma, c), 'index.html'))), alternados: alternados(c) }));
     fs.writeFileSync(path.join(RAIZ, `sitemap-${idioma.pasta}.xml`), urlset(lista));
     indice.push([`sitemap-${idioma.pasta}.xml`, lista]);
+  }
+  // notícias escritas (.noticias/artigos.json): páginas + sitemap próprio
+  const artigosF = path.join(RAIZ, '.noticias/artigos.json');
+  if (fs.existsSync(artigosF)) {
+    execFileSync('node', [path.join(RAIZ, '.noticias/artigos.js')], { stdio: 'pipe' });
+    const lista = JSON.parse(ler(artigosF)).map(a => ({ loc: `${SITE}/noticias/${a.slug}/`, lastmod: a.data + 'T09:00:00-03:00', imagens: [], alternados: [] }));
+    fs.writeFileSync(path.join(RAIZ, 'sitemap-noticias.xml'), urlset(lista));
+    indice.push(['sitemap-noticias.xml', lista]);
   }
   const recente = l => l.map(u => u.lastmod).sort((a, b) => new Date(b) - new Date(a))[0];
   fs.writeFileSync(path.join(RAIZ, 'sitemap_index.xml'), `<?xml version="1.0" encoding="UTF-8"?>

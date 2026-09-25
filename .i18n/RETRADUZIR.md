@@ -4,7 +4,7 @@ A página abaixo foi reescrita em português. O arquivo em
 `/Users/alexandrehenrique/duotide/.i18n/fonte/` já está atualizado; a tradução antiga
 no seu idioma ficou velha e o verificador vai acusá-la.
 
-Página a retraduzir: `duotide-como-abrir-conta.html`
+Página a retraduzir: `duotide-para-iniciantes.html` (guia para iniciantes, reescrito no formato de guia passo a passo)
 
 Regras — além de tudo o que está em `INSTRUCOES-TRADUCAO.md`, que continua valendo:
 
