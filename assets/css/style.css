@@ -854,29 +854,35 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 .hero__media{display:flex;justify-content:center;align-items:center}
 .hero__media img{width:min(300px,70%);height:auto;padding:9px;border-radius:44px;background:linear-gradient(145deg,#2a2d31,#0f1012);box-shadow:inset 0 0 0 2px #3a3e44,0 40px 90px rgba(0,0,0,.75),0 0 80px rgba(106,255,65,.18);mix-blend-mode:normal;transform:rotate(-4deg);animation:flutua 7s ease-in-out infinite}
 @media (max-width:760px){.hero__media img{width:min(230px,62%);border-radius:36px}}
-/* ---------- topo da home no molde do safirion.com (cores da Duotide) ---------- */
-.hero{background:radial-gradient(900px 420px at 50% 100%,rgba(106,255,65,.16),transparent 70%),url('/assets/img/hero-terra.webp') center bottom/cover no-repeat,#020403 !important;padding:clamp(56px,7vw,96px) 0 0;overflow:hidden}
-.hero::before,.hero::after{display:none}
-.hero .hero__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;grid-template-columns:none}
-.hero .hero__text{max-width:880px;display:flex;flex-direction:column;align-items:center}
-.hero h1{font-size:clamp(3rem,7vw,5.2rem);letter-spacing:-.02em;text-transform:uppercase;line-height:1;margin:0 0 18px;background:none;-webkit-text-fill-color:#fff;color:#fff}
-.hero .hero__subtitle{text-transform:uppercase;letter-spacing:.32em;font-size:clamp(.95rem,1.7vw,1.4rem);font-weight:600;color:var(--verde,#6aff41);-webkit-text-fill-color:var(--verde,#6aff41);background:none;margin:0 0 22px}
-.hero .hero__lead{max-width:760px;color:rgba(255,255,255,.72);font-size:clamp(1rem,1.3vw,1.125rem);margin:0 auto 26px}
-.hero .btn-row{justify-content:center}
-.hero .btn--lg{border-radius:999px;padding:14px 16px 14px 26px;display:inline-flex;align-items:center;gap:14px;text-transform:uppercase;font-weight:700;letter-spacing:.01em;box-shadow:0 0 0 1px rgba(106,255,65,.5),0 10px 40px rgba(106,255,65,.35)}
-.hero .btn--lg::after{content:"↗";display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#021000;color:#6aff41;font-size:1rem;flex:none}
-.hero .hero__nota{margin-top:16px;color:rgba(255,255,255,.8)}
-.hero .hero__media{position:relative;width:min(980px,100%);margin:clamp(36px,5vw,56px) auto 0;display:block}
-.hero .hero__plat{display:block;width:78%;height:auto;margin:0 auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.7))}
-.hero .hero__media > img:not(.hero__plat){position:absolute;right:4%;bottom:-8%;width:min(24%,230px);transform:rotate(6deg);animation:none}
-@media (max-width:760px){
-  .hero .hero__subtitle{letter-spacing:.18em}
-  .hero .btn--lg{padding:12px 12px 12px 20px;font-size:.9rem}
-  .hero .hero__plat{width:92%}
-  .hero .hero__media > img:not(.hero__plat){width:34%;right:0;bottom:-4%}
+/* ---------- pop-up no molde do safirion.com, cores da Duotide ---------- */
+.pp--bonus{background:radial-gradient(ellipse 60% 55% at 50% 50%,rgba(20,40,14,.55),rgba(0,0,0,.9) 75%),rgba(0,0,0,.85)}
+.pp--bonus .pp__cx{max-width:960px;background:radial-gradient(520px 420px at 78% 70%,rgba(106,255,65,.2),transparent 70%),#030503;border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden}
+.pp--bonus .pp__cont{gap:22px}
+.pp--bonus .pp__cont h2{font-weight:600;letter-spacing:-.03em}
+.pp--bonus .pp__cont h2 .pp__l1{color:#fff}
+.pp--bonus .pp__cont h2 .pp__l2{display:block;color:#6aff41;background:none;-webkit-text-fill-color:#6aff41}
+.pp--bonus .pp__cont p{max-width:34ch;font-size:clamp(1rem,1.5vw,1.2rem);font-weight:400;line-height:1.5;color:rgba(255,255,255,.88)}
+.pp--bonus .pp__cont p strong{color:#fff;font-weight:700}
+.pp__cupom{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:8px 8px 8px 16px;border:1.5px dashed rgba(106,255,65,.55);border-radius:12px;background:rgba(106,255,65,.05)}
+.pp__cupom-rot{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.pp__cupom-cod{font-size:1.15rem;letter-spacing:.06em;color:#fff}
+.pp__copiar{border:0;border-radius:8px;padding:7px 12px;background:#b8ff9a;color:#062000;font:inherit;font-size:.85rem;font-weight:700;cursor:pointer}
+.pp__copiar:hover{background:#d4ffc2}
+.pp--bonus .pp__btn{align-self:flex-start;padding:16px 34px;border-radius:14px;background:linear-gradient(180deg,#9dff7a,#42d618);color:#031000;font-size:1.1rem;font-weight:700;box-shadow:0 10px 34px rgba(106,255,65,.35)}
+.pp--bonus .pp__cont .pp__mini{color:rgba(255,255,255,.45)}
+.pp--bonus .pp__fig{align-self:stretch;background:transparent}
+.pp--bonus .pp__fig picture,.pp--bonus .pp__fig img{object-fit:cover;object-position:center;mix-blend-mode:lighten}
+.pp--bonus .pp__x{background:transparent;color:rgba(255,255,255,.75)}
+@media (max-width:799px){
+  .pp--bonus .pp__cx{max-width:380px}
+  .pp--bonus .pp__fig{height:210px}
+  .pp--bonus .pp__fig img{object-fit:contain}
+  .pp--bonus .pp__cont{text-align:left;align-items:flex-start}
+  .pp--bonus .pp__btn{align-self:stretch;text-align:center}
+  .pp__cupom{align-self:stretch;justify-content:space-between}
 }
-.hero{background:radial-gradient(760px 330px at 50% 30%,rgba(2,4,3,.88),rgba(2,4,3,.55) 60%,transparent 100%),radial-gradient(900px 420px at 50% 100%,rgba(106,255,65,.14),transparent 70%),url('/assets/img/hero-terra.webp') center 70%/cover no-repeat,#020403 !important}
-.hero .hero__lead,.hero .hero__nota{text-shadow:0 2px 12px rgba(0,0,0,.9)}
-.hero .hero__media{order:2}
-@media (max-width:760px){.hero{background:linear-gradient(180deg,rgba(2,4,3,.9) 0%,rgba(2,4,3,.7) 55%,rgba(2,4,3,.2)),url('/assets/img/hero-terra.webp') 30% 80%/cover no-repeat,#020403 !important}.hero h1{font-size:2.8rem}}
-.hero .hero__plat{padding:0;background:none;border-radius:0;box-shadow:none;transform:none;animation:none;mix-blend-mode:normal}
+@media (min-width:800px){.pp--bonus .pp__fig picture,.pp--bonus .pp__fig img{object-fit:contain;object-position:center bottom}}
+@media (max-width:799px){.pp--bonus .pp__cont{padding:22px 22px 26px}.pp--bonus .pp__fig{padding-top:10px}}
+@media (max-width:799px){.pp--bonus .pp__cx{display:flex;flex-direction:column}.pp--bonus .pp__cont,.pp--bonus .pp__fig{width:100%;min-width:0;box-sizing:border-box}}
+@media (max-width:799px){.pp__cupom{gap:8px;padding-left:12px}.pp__cupom-rot{font-size:.7rem;letter-spacing:.08em}.pp__cupom-cod{font-size:1rem}}
+.pp__cupom{flex-wrap:wrap;max-width:100%;box-sizing:border-box}.pp__copiar{margin-left:auto}

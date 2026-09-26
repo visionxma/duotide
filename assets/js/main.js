@@ -134,6 +134,11 @@
       cx.querySelector('.pp__x').addEventListener('click', fechar);
       cx.querySelector('.pp__btn').addEventListener('click', function () { guardar(); setTimeout(fechar, 0); });
       cx.addEventListener('click', function (e) { if (e.target === cx) fechar(); });
+      var cp = cx.querySelector('.pp__copiar');
+      if (cp) cp.addEventListener('click', function () {
+        var ok = function () { var t = cp.textContent; cp.textContent = cp.getAttribute('data-copiado'); setTimeout(function () { cp.textContent = t; }, 1800); };
+        try { navigator.clipboard.writeText('WELCOME100').then(ok, ok); } catch (e) { ok(); }
+      });
       document.addEventListener('keydown', tecla);
     };
     var aoRolar = function () {

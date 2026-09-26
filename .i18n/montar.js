@@ -102,12 +102,13 @@ function popup(idioma) {
         <button class="pp__x" type="button" aria-label="${escAttr(P.fechar)}">&#10005;</button>
         <div class="pp__cont">
           <h2 id="ppTit"><span class="pp__l1">${P.linha1}</span> <span class="pp__l2">${P.linha2}</span></h2>
-          <p>${P.texto}</p>
+          <p>${P.texto.replace('{cupom}', '<strong>WELCOME100</strong>')}</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">${P.cupom}</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="${escAttr(P.copiado)}">${P.copiar}</button></div>
           <a class="pp__btn" href="${aff(idioma)}" target="_blank" rel="noopener sponsored nofollow">${P.botao}</a>
           <p class="pp__mini">${P.mini}</p>
         </div>
         <div class="pp__fig" aria-hidden="true">
-          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-bonus-mob.webp"><img src="/assets/img/popup-bonus.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
         </div>
       </div>
     </div>
@@ -359,8 +360,6 @@ function gerados(h, idioma, chave) {
   h = h.replace(/<div class="lojas"><\/div>/g, () => `<div class="lojas">${lojas(idioma)}</div>`);
   if (chave === 'duotide-app') h = h.replace(/(<main id="conteudo">)/, (m, a) => a + '\n    ' + topoApp(idioma));
   if (chave === 'blog') h = blogLayout(h, idioma);
-  // topo da home no molde do safirion.com: plataforma grande atrás do celular
-  if (chave === 'inicio') h = h.replace(/(<div class="hero__media">)/, (m, a) => a + '<!--gerado--><img class="hero__plat" src="/assets/img/hero-plataforma.webp" alt="" width="488" height="512" decoding="async" fetchpriority="high"><!--/gerado-->');
   // blog em modo claro, com "Duotide Blog" no logo do topo (os artigos herdam da casca /blog/)
   if (chave === 'blog') {
     h = h.replace(/<body(?: class="tema-claro")?>/, '<body class="tema-claro">');
