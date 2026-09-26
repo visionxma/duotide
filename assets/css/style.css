@@ -854,3 +854,29 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 .hero__media{display:flex;justify-content:center;align-items:center}
 .hero__media img{width:min(300px,70%);height:auto;padding:9px;border-radius:44px;background:linear-gradient(145deg,#2a2d31,#0f1012);box-shadow:inset 0 0 0 2px #3a3e44,0 40px 90px rgba(0,0,0,.75),0 0 80px rgba(106,255,65,.18);mix-blend-mode:normal;transform:rotate(-4deg);animation:flutua 7s ease-in-out infinite}
 @media (max-width:760px){.hero__media img{width:min(230px,62%);border-radius:36px}}
+/* ---------- topo da home no molde do safirion.com (cores da Duotide) ---------- */
+.hero{background:radial-gradient(900px 420px at 50% 100%,rgba(106,255,65,.16),transparent 70%),url('/assets/img/hero-terra.webp') center bottom/cover no-repeat,#020403 !important;padding:clamp(56px,7vw,96px) 0 0;overflow:hidden}
+.hero::before,.hero::after{display:none}
+.hero .hero__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;grid-template-columns:none}
+.hero .hero__text{max-width:880px;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(3rem,7vw,5.2rem);letter-spacing:-.02em;text-transform:uppercase;line-height:1;margin:0 0 18px;background:none;-webkit-text-fill-color:#fff;color:#fff}
+.hero .hero__subtitle{text-transform:uppercase;letter-spacing:.32em;font-size:clamp(.95rem,1.7vw,1.4rem);font-weight:600;color:var(--verde,#6aff41);-webkit-text-fill-color:var(--verde,#6aff41);background:none;margin:0 0 22px}
+.hero .hero__lead{max-width:760px;color:rgba(255,255,255,.72);font-size:clamp(1rem,1.3vw,1.125rem);margin:0 auto 26px}
+.hero .btn-row{justify-content:center}
+.hero .btn--lg{border-radius:999px;padding:14px 16px 14px 26px;display:inline-flex;align-items:center;gap:14px;text-transform:uppercase;font-weight:700;letter-spacing:.01em;box-shadow:0 0 0 1px rgba(106,255,65,.5),0 10px 40px rgba(106,255,65,.35)}
+.hero .btn--lg::after{content:"↗";display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#021000;color:#6aff41;font-size:1rem;flex:none}
+.hero .hero__nota{margin-top:16px;color:rgba(255,255,255,.8)}
+.hero .hero__media{position:relative;width:min(980px,100%);margin:clamp(36px,5vw,56px) auto 0;display:block}
+.hero .hero__plat{display:block;width:78%;height:auto;margin:0 auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.7))}
+.hero .hero__media > img:not(.hero__plat){position:absolute;right:4%;bottom:-8%;width:min(24%,230px);transform:rotate(6deg);animation:none}
+@media (max-width:760px){
+  .hero .hero__subtitle{letter-spacing:.18em}
+  .hero .btn--lg{padding:12px 12px 12px 20px;font-size:.9rem}
+  .hero .hero__plat{width:92%}
+  .hero .hero__media > img:not(.hero__plat){width:34%;right:0;bottom:-4%}
+}
+.hero{background:radial-gradient(760px 330px at 50% 30%,rgba(2,4,3,.88),rgba(2,4,3,.55) 60%,transparent 100%),radial-gradient(900px 420px at 50% 100%,rgba(106,255,65,.14),transparent 70%),url('/assets/img/hero-terra.webp') center 70%/cover no-repeat,#020403 !important}
+.hero .hero__lead,.hero .hero__nota{text-shadow:0 2px 12px rgba(0,0,0,.9)}
+.hero .hero__media{order:2}
+@media (max-width:760px){.hero{background:linear-gradient(180deg,rgba(2,4,3,.9) 0%,rgba(2,4,3,.7) 55%,rgba(2,4,3,.2)),url('/assets/img/hero-terra.webp') 30% 80%/cover no-repeat,#020403 !important}.hero h1{font-size:2.8rem}}
+.hero .hero__plat{padding:0;background:none;border-radius:0;box-shadow:none;transform:none;animation:none;mix-blend-mode:normal}
