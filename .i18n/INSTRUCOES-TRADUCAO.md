@@ -78,7 +78,7 @@ Cada arquivo de página tem quatro blocos. Mantenha os marcadores exatamente:
     e deixe claro que se refere ao Brasil.
 - **Não invente nada.** Não acrescente promessas, números, prazos, garantias, bônus
   ou qualidades que a fonte não diz. Não suavize os avisos de risco nem o aviso de
-  "site não oficial". Não escreva que a Duotide "é confiável" ou "é segura" se a
+  "Site Oficial". Não escreva que a Duotide "é confiável" ou "é segura" se a
   fonte não afirma isso.
 - Números e datas: mesmos valores; formato local (vírgula/ponto) é bem-vindo.
 - Árabe: escreva em árabe, sem acrescentar `dir` nem outros atributos (o montador
