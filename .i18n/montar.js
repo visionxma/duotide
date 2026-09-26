@@ -359,6 +359,11 @@ function gerados(h, idioma, chave) {
   h = h.replace(/<div class="lojas"><\/div>/g, () => `<div class="lojas">${lojas(idioma)}</div>`);
   if (chave === 'duotide-app') h = h.replace(/(<main id="conteudo">)/, (m, a) => a + '\n    ' + topoApp(idioma));
   if (chave === 'blog') h = blogLayout(h, idioma);
+  // blog em modo claro, com "Duotide Blog" no logo do topo (os artigos herdam da casca /blog/)
+  if (chave === 'blog') {
+    h = h.replace(/<body(?: class="tema-claro")?>/, '<body class="tema-claro">');
+    h = h.replace(/<span class="wordmark__text">Duotide(?: <span class="wordmark__blog">Blog<\/span>)?<\/span>/, '<span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>');
+  }
   if (BANNERS[chave]) h = h.replace(/(<main id="conteudo">[\s\S]*?)(<h1)/, (m, a, b) => `${a.replace(/\s*$/, '\n        ')}<!--gerado--><div class="topo-banner" style="background-image:url('/assets/img/banners/${BANNERS[chave]}.webp')" aria-hidden="true"></div><!--/gerado-->\n        ${b}`);
   if (chave === 'inicio') h = h.replace(/(<section class="faixa">[\s\S]*?<\/section>)/, (m, a) => a + '\n    ' + plataformas(idioma));
   if (chave === 'inicio') h = h.replace(/(<section class="duvidas">)/, (m, a) => passos(idioma) + '\n    ' + suporte(idioma) + '\n    ' + a);
