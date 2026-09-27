@@ -886,3 +886,12 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
 @media (max-width:799px){.pp--bonus .pp__cx{display:flex;flex-direction:column}.pp--bonus .pp__cont,.pp--bonus .pp__fig{width:100%;min-width:0;box-sizing:border-box}}
 @media (max-width:799px){.pp__cupom{gap:8px;padding-left:12px}.pp__cupom-rot{font-size:.7rem;letter-spacing:.08em}.pp__cupom-cod{font-size:1rem}}
 .pp__cupom{flex-wrap:wrap;max-width:100%;box-sizing:border-box}.pp__copiar{margin-left:auto}
+/* rodapé: sempre escuro, também nas páginas em modo claro (blog) */
+.tema-claro .site-footer,.tema-claro .site-footer h2,.tema-claro .site-footer .wordmark,.tema-claro .site-footer .wordmark__text,.tema-claro .site-footer strong{color:#fff}
+.tema-claro .site-footer .wordmark__badge-img{filter:none}
+.tema-claro .site-footer p,.tema-claro .site-footer li{color:rgba(255,255,255,.75)}
+.tema-claro .site-footer .footer__suporte span{color:#c9f31d}
+/* links de baixo do rodapé com espaço entre eles, com ou sem o parágrafo em volta */
+.footer__legal{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.footer__legal > a,.footer__legal .footer__links a{color:rgba(255,255,255,.7)}
+.footer__legal > a:hover,.footer__legal .footer__links a:hover{color:#fff}
