@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>如何计算外汇点差：公式与示例 | Blog Duotide</title>
+  <meta name="description" content="学习如何以点数和金额计算外汇点差，并了解为什么同样的点差可能无关紧要，也可能很沉重，取决于目标大小。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/how-to-calculate-forex-spread/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-calcular-o-spread-no-forex/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-calculate-forex-spread/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/how-to-calculate-forex-spread/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-den-spread-im-forex-berechnet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-kalkulahin-ang-spread-sa-forex/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-calculer-le-spread-en-forex/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-calcolare-lo-spread-nel-forex/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-calculate-forex-spread/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/forexte-spread-nasil-hesaplanir/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-calculate-forex-spread/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/como-calcular-o-spread-no-forex/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何计算外汇点差：公式与示例">
+  <meta property="og:description" content="学习如何以点数和金额计算外汇点差，并了解为什么同样的点差可能无关紧要，也可能很沉重，取决于目标大小。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/how-to-calculate-forex-spread/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-corretora-offshore-o-que-e.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-corretora-offshore-o-que-e.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何计算外汇点差：公式与示例">
+  <meta name="twitter:description" content="学习如何以点数和金额计算外汇点差，并了解为什么同样的点差可能无关紧要，也可能很沉重，取决于目标大小。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/how-to-calculate-forex-spread/#artigo",
+      "headline": "如何计算外汇点差：公式与示例",
+      "description": "学习如何以点数和金额计算外汇点差，并了解为什么同样的点差可能无关紧要，也可能很沉重，取决于目标大小。",
+      "url": "https://duotide.com.br/zh/blog/how-to-calculate-forex-spread/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-corretora-offshore-o-que-e.webp",
+      "articleSection": "外汇",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/how-to-calculate-forex-spread/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "如何计算外汇点差：公式与示例",
+          "item": "https://duotide.com.br/zh/blog/how-to-calculate-forex-spread/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-calcular-o-spread-no-forex/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-calculate-forex-spread/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/how-to-calculate-forex-spread/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-den-spread-im-forex-berechnet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-kalkulahin-ang-spread-sa-forex/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-calculer-le-spread-en-forex/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-calcolare-lo-spread-nel-forex/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-calculate-forex-spread/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/forexte-spread-nasil-hesaplanir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-calculate-forex-spread/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">如何计算外汇点差：公式与示例</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">外汇</span>
+        <h1>如何计算外汇点差：公式与示例</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>要计算外汇中的点差，只需用卖出价（bid）减去买入价（ask），再把这个差值换算成点数。如果EUR/USD的卖出价是1.08500，买入价是1.08512，点差就是0.00012，即1.2个点。如果这笔交易中每个点的价值是10雷亚尔，这个点差光是进出场就要花费约12雷亚尔。</p>
+<p>这是这笔计算中简单的部分。交易者之后真正感受到的，是点差对一个小目标、一个紧的止损，或一个交易频率过高的策略造成了什么影响。</p>
+<h2>第一步：以点数计算点差</h2>
+<p>点差是卖出价（bid）和买入价（ask）之间的差额：</p>
+<p>点差 = 买入价 − 卖出价</p>
+<p>对于大多数主要货币对，一个点等于0.0001。对于涉及日元的货币对，一个点等于0.01。以EUR/USD为例：卖出价1.08500，买入价1.08512。差值是0.00012，相当于1.2个点。</p>
+<p>一笔买入交易通常在买入价开仓，在卖出价平仓；一笔卖出交易则相反。这两个价格之间的差异，是交易成本悄悄显现的方式之一——交易一开始就已经略微处于亏损状态，人们很容易习惯于看到这一点，而没有意识到它每次入场都是一项真实的成本。</p>
+<h2>第二步：把点差换算成金额</h2>
+<p>知道了以点数计的点差之后，换算成金额的计算就很直接了：</p>
+<p>点差成本 = 点差（以点数计） × 点值</p>
+<p>如果点差是1.5个点，点值是10雷亚尔，预计成本就是：</p>
+<p>1.5 × 10雷亚尔 = 每笔交易15雷亚尔</p>
+<p>在一个月内做二十笔类似的交易，这项成本就会累积到300雷亚尔。这个计算很简单——难的是记得在依赖小目标的策略上投入之前先做这个计算。</p>
+<h2>为什么仓位大小会改变一切</h2>
+<p>点差以点数衡量，但以金额支付——这意味着同样1.5点的点差，可能无关紧要，也可能代价高昂，取决于仓位的大小：</p>
+<ul>
+<li><strong>0.01手</strong>（点值约0.50雷亚尔）——0.8点的点差花费0.40雷亚尔；1.5点的点差花费0.75雷亚尔；2.5点的点差花费1.25雷亚尔。</li>
+<li><strong>0.10手</strong>（点值约5.00雷亚尔）——同样的点差分别花费4.00雷亚尔、7.50雷亚尔和12.50雷亚尔。</li>
+<li><strong>1标准手</strong>（点值约50.00雷亚尔）——同样的点差分别花费40.00雷亚尔、75.00雷亚尔和125.00雷亚尔。</li>
+</ul>
+<p>只说“点差是1个点”是一条不完整的信息。0.01手EUR/USD中的一个点价值约0.50雷亚尔；同样一个点在1标准手中价值约50雷亚尔。操作大仓位或高频交易的人，不能把点差当作背景噪音来对待。</p>
+<h2>点差成本占目标的百分比</h2>
+<p>更有用的比较不是“点差是多少个点”，而是“点差占我计划目标的多大比例”。如果一笔交易的目标是5个点，点差是1个点，那么在价格还没有朝有利方向移动之前，点差就已经消耗掉了毛目标的20%。</p>
+<p>这个问题对操作超短线的人来说更明显，但并不仅限于他们。一位在同一个交易日内多次入场的交易者，可能会看到单笔交易中很小的点差，在整整一周的交易中变得相当可观。而操作更大目标的波段交易者，虽然单笔交易感受到的点差影响较小，但仍然需要比较不同货币对之间的成本——一个点差较大的冷门货币对，可能会让一个技术上很好的交易设置在实践中变得没那么有吸引力。</p>
+<h2>一个从头到尾的完整例子</h2>
+<p>一位账户资金为5000雷亚尔的交易者，交易0.20手EUR/USD（点值约2雷亚尔），点差为1.4点，目标为40点。点差成本为：</p>
+<p>1.4 × 2雷亚尔 = 每笔交易2.80雷亚尔</p>
+<p>与40点、相当于80雷亚尔的毛目标相比，点差占目标的3.5%——这是一个可以接受的成本。同一位交易者如果追求仅6个点（12雷亚尔）的剥头皮目标，点差消耗的比例将升至约23%的毛目标——这是一个明显更大的比例，仅仅为了弥补交易成本，就需要更高的胜率。</p>
+<h2>避免结果出现意外的习惯</h2>
+<p>在采用任何基于小目标的策略之前，值得先计算所选货币对的点差（以点数计），按计划的仓位大小换算成金额，再把这个数值与交易目标进行比较。如果点差只消耗目标的一小部分，这个成本是合理的。如果消耗了很大一部分，这个策略可能在还没考虑市场风险之前，就已经在和交易本身的成本竞争了。在Duotide或任何其他平台上确认订单之前做这个简单的计算，有助于判断一个策略是否真的可行，还是点差本身就已经让预期结果不再现实。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/pip-value-calculator-forex/"><img src="/assets/img/terra.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何逐步计算外汇中一个点的价值</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/swap-overnight-fee-calculator/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">隔夜利息（Swap）：如何计算持仓过夜的成本</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/alphabet-stock-pulls-back-ai-spending/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">阿尔法贝特股价走弱，市场开始权衡人工智能支出的代价</span><span class="bq__meta">2026/09/24 · 阅读 3 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>

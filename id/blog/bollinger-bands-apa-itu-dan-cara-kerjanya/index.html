@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr" data-tema="dark" data-tv="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Bollinger Bands: Apa Itu dan Cara Kerjanya | Blog Duotide</title>
+  <meta name="description" content="Pahami perhitungan di balik Bollinger Bands, apa itu squeeze volatilitas, dan mengapa menyentuh band tidak berarti pembalikan otomatis.">
+  <link rel="canonical" href="https://duotide.com.br/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/bandas-de-bollinger-como-funcionam/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/bollinger-bands-what-they-are-and-how-they-work/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/bandas-de-bollinger-como-funcionan/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/bollinger-bands-how-they-work/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/bollinger-baender-was-sie-sind-und-wie-sie-funktionieren/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/bollinger-bands-ano-ito-at-paano-gumagana/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/bandes-de-bollinger-comment-ca-marche/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/bande-di-bollinger-cosa-sono-e-come-funzionano/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-bollinger-bands-work/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/bollingerband-vad-de-ar-och-hur-de-fungerar/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/bollinger-bands-how-they-work/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/bollinger-bantlari-nasil-calisir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/dai-bollinger-la-gi-va-hoat-dong-ra-sao/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/bollinger-bands-how-they-work/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/bollinger-bands-what-they-are-and-how-they-work/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Bollinger Bands: Apa Itu dan Cara Kerjanya">
+  <meta property="og:description" content="Pahami perhitungan di balik Bollinger Bands, apa itu squeeze volatilitas, dan mengapa menyentuh band tidak berarti pembalikan otomatis.">
+  <meta property="og:url" content="https://duotide.com.br/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bollinger Bands: Apa Itu dan Cara Kerjanya">
+  <meta name="twitter:description" content="Pahami perhitungan di balik Bollinger Bands, apa itu squeeze volatilitas, dan mengapa menyentuh band tidak berarti pembalikan otomatis.">
+  <meta name="twitter:label1" content="Ditulis oleh">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Waktu baca">
+  <meta name="twitter:data2" content="5 menit">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/#artigo",
+      "headline": "Bollinger Bands: Apa Itu dan Cara Kerjanya",
+      "description": "Pahami perhitungan di balik Bollinger Bands, apa itu squeeze volatilitas, dan mengapa menyentuh band tidak berarti pembalikan otomatis.",
+      "url": "https://duotide.com.br/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/",
+      "inLanguage": "id",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
+      "articleSection": "Indikator",
+      "author": {
+        "@type": "Organization",
+        "name": "Tim Duotide",
+        "url": "https://duotide.com.br/id/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/id/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://duotide.com.br/id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/id/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bollinger Bands: Apa Itu dan Cara Kerjanya",
+          "item": "https://duotide.com.br/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Langsung ke konten</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/id/" aria-label="Duotide — halaman utama">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buka menu navigasi"
+                data-abrir="Buka menu navigasi" data-fechar="Tutup menu navigasi">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pilih bahasa"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="22" height="16"><span>id</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/bandas-de-bollinger-como-funcionam/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/bollinger-bands-what-they-are-and-how-they-work/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/bandas-de-bollinger-como-funcionan/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/bollinger-bands-how-they-work/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/bollinger-baender-was-sie-sind-und-wie-sie-funktionieren/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/bollinger-bands-ano-ito-at-paano-gumagana/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/bandes-de-bollinger-comment-ca-marche/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/bollinger-bands-apa-itu-dan-cara-kerjanya/" hreflang="id" lang="id" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/bande-di-bollinger-cosa-sono-e-come-funzionano/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-bollinger-bands-work/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/bollingerband-vad-de-ar-och-hur-de-fungerar/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/bollinger-bands-how-they-work/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/bollinger-bantlari-nasil-calisir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/dai-bollinger-la-gi-va-hoat-dong-ra-sao/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/bollinger-bands-how-they-work/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="/id/">Beranda</a></li>
+          <li><a href="/id/duotide-terpercaya/">Terpercaya?</a></li>
+          <li><a href="/id/duotide-login/">Login</a></li>
+          <li><a href="/id/duotide-broker/">Tentang broker</a></li>
+          <li><a href="/id/duotide-aman/">Aman?</a></li>
+          <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          <li><a href="/id/broker-terbaik/">Broker terbaik</a></li>
+          <li><a href="/id/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id"
+           target="_blank" rel="noopener sponsored nofollow">Buat akun</a>
+        <a class="btn btn--outline btn--sm" href="/id/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Jejak navigasi">
+    <div class="container">
+      <ol>
+        <li><a href="/id/">Beranda</a></li>
+        <li><a href="/id/blog/">Blog</a></li>
+        <li><span aria-current="page">Bollinger Bands: Apa Itu dan Cara Kerjanya</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Indikator</span>
+        <h1>Bollinger Bands: Apa Itu dan Cara Kerjanya</h1>
+        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 menit baca</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Diciptakan oleh John Bollinger pada tahun 1980-an, Bollinger Bands termasuk dalam kelompok kecil indikator yang menyesuaikan diri secara otomatis terhadap volatilitas aset, alih-alih menggunakan jarak harga tetap. Ini membuatnya berguna baik di pasar yang tenang maupun yang bergejolak, asalkan dipahami apa yang sebenarnya diukurnya.</p><p>Indikator ini terdiri dari tiga garis: satu moving average tengah dan dua band — atas dan bawah — dibangun dari deviasi standar harga di sekitar rata-rata tersebut. Jarak antar band membesar ketika volatilitas naik, dan mengecil ketika volatilitas turun.</p><h2>Cara Kerja Perhitungannya</h2><p>Konfigurasi standar menggunakan moving average sederhana 20 periode sebagai garis tengah, dengan band diposisikan pada jarak dua kali deviasi standar:</p><ul><li><strong>Band tengah</strong>: moving average sederhana 20 periode.</li><li><strong>Band atas</strong>: rata-rata 20 periode + (2 × deviasi standar 20 periode terakhir).</li><li><strong>Band bawah</strong>: rata-rata 20 periode − (2 × deviasi standar 20 periode terakhir).</li></ul><p>Misalkan rata-rata 20 periode sebuah aset berada di R$ 60,00 dan deviasi standar periode yang sama adalah R$ 3,00. Band atas akan berada di R$ 66,00 (60,00 + 2 × 3,00) dan band bawah di R$ 54,00 (60,00 − 2 × 3,00). Jika, pada periode yang lebih volatil, deviasi standar naik menjadi R$ 5,00, band akan melebar menjadi R$ 70,00 dan R$ 50,00, meski rata-rata tengah tetap di tempat yang sama.</p><h2>Apa yang Ditangkap oleh Deviasi Standar</h2><p>Deviasi standar adalah ukuran statistik dispersi: semakin banyak harga terkini bervariasi di sekitar rata-rata, semakin besar nilainya. Karena itulah band ini “bernapas” — melebar pada momen pergerakan lebih besar dan menyempit ketika harga mulai berosilasi sedikit.</p><h2>Mengapa Menyentuh Band Bukan Sinyal Otomatis</h2><p>Kesalahan umum adalah memperlakukan sentuhan pada band atas sebagai sinyal jual dan sentuhan pada band bawah sebagai sinyal beli, seolah-olah band itu adalah atap dan lantai yang tetap. Band ini bukan itu. Dalam tren naik yang kuat, harga bisa berjalan menempel pada band atas selama beberapa candle berturut-turut, tanpa itu berarti pembalikan — Bollinger sendiri menyebut perilaku ini sebagai sinyal kekuatan tren, bukan kelelahan.</p><p>Pembacaan yang lebih kuat melihat perilaku harga terhadap band sepanjang waktu, bukan satu sentuhan tunggal yang berdiri sendiri. Harga yang menyentuh band atas dan segera menutup kembali ke dalamnya, membentuk candle reversal, membawa sinyal yang berbeda dari harga yang menembus band dan terus menjauh darinya candle demi candle.</p><h2>Squeeze: Ketika Band Menyempit</h2><p>Salah satu penggunaan indikator ini yang paling dikenal adalah mengidentifikasi apa yang disebut squeeze — momen ketika band menyempit cukup jauh, menandakan volatilitas yang secara historis rendah. Periode squeeze cenderung mendahului pergerakan yang lebih kuat, meski indikator ini tidak mengatakan ke arah mana pergerakan itu akan condong.</p><p>Contoh: jika jarak antara band sebuah aset turun ke level terendah dalam tiga bulan terakhir, ini menunjukkan bahwa pasar sedang terkompresi, biasanya sebelum ekspansi volatilitas. Trader yang bertransaksi pada pola ini biasanya menunggu breakout dari salah satu sisi rentang, disertai volume, untuk menentukan arah entry — alih-alih mencoba menebak sisi mana sebelum breakout terjadi.</p><h2>Menyesuaikan Parameter</h2><p>Periode 20 dan pengali 2 deviasi standar adalah standar pasar, tetapi bukan aturan tetap. Periode lebih pendek (seperti 10) membuat band lebih sensitif terhadap pergerakan terkini, berguna untuk transaksi jangka lebih pendek. Pengali lebih kecil (seperti 1,5) mempersempit band dan menghasilkan lebih banyak sentuhan, dengan biaya lebih banyak sinyal palsu.</p><h2>Menggunakan Band dengan Kriteria</h2><p>Bollinger Bands bekerja lebih baik sebagai pembacaan volatilitas relatif dan konteks tren daripada sebagai pemicu beli atau jual yang berdiri sendiri. Dipadukan dengan indikator momentum, seperti RSI atau Stochastic, dan dengan perhatian pada perilaku harga — bukan hanya sentuhan pada garis —, band ini membantu membentuk pembacaan pasar yang lebih lengkap, selalu diingat bahwa tidak ada band yang menjamin harga akan berbalik pada titik yang diharapkan.</p>
+        <div class="bq-post__cta">
+          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Baca juga</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/id/blog/bandas-starc-atau-bollinger-bands-mana-yang-dipilih/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bandas STARC atau Bollinger Bands: Mana yang Dipilih?</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/5-indikator-populer-dijelaskan-dalam-5-menit-bagian-1/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 Indikator Populer Dijelaskan dalam 5 Menit (Bagian 1)</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/5-indikator-populer-dijelaskan-dalam-5-menit-bagian-2/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 Indikator Populer Dijelaskan dalam 5 Menit (Bagian 2)</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Hak cipta © 2026 Duotide.<br>
+            Seluruh hak dilindungi.<br>
+            Situs resmi.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Perusahaan</h2>
+          <ul>
+            <li><a href="/id/">Beranda</a></li>
+            <li><a href="/id/duotide-terpercaya/">Apakah Duotide Terpercaya?</a></li>
+            <li><a href="/id/duotide-login/">Metode Login</a></li>
+            <li><a href="/id/duotide-broker/">Kenali Broker</a></li>
+            <li><a href="/id/duotide-aman/">Keamanan Broker</a></li>
+            <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontak</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Manajer akun 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/id/duotide-pertanyaan-umum/">Pertanyaan umum</a>
+          <a href="/id/tentang/">Tentang situs ini</a>
+          <a href="/id/kontak/">Kontak</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Kembali ke atas halaman">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Tutup">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">100%</span></h2>
+          <p>Deposit dengan kupon <strong>WELCOME100</strong> dan dapatkan bonus 100% dari jumlah yang disetor.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Tersalin!">Salin</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Klaim sekarang</a>
+          <p class="pp__mini">Tunduk pada syarat promo. Trading produk leverage berisiko menimbulkan kerugian.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>

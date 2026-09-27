@@ -306,10 +306,10 @@ const ATIVOS = [['Bitcoin', 'BTC/USD', ['btc']], ['Ethereum', 'ETH/USD', ['eth']
 const BLOG = require('../.blog/artigos.js');
 function blogLayout(h, idioma) {
   const B = chrome(idioma).blog;
-  const arts = BLOG.lista();
+  const arts = BLOG.lista(idioma.pasta);
   if (!arts.length) return h;
   const fmt = d => { try { return new Intl.DateTimeFormat(idioma.codigo, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
-  const lg = idioma === PT ? '' : ' lang="pt-BR" hreflang="pt-BR"';
+  const lg = '';
   const meta = a => `<span class="bq__meta">${fmt(a.data)} · ${B.leitura.replace('{n}', a.leitura)}</span>`;
   const [d, ...resto] = arts;
   const alta = arts.slice(1, 5);
@@ -326,7 +326,7 @@ function blogLayout(h, idioma) {
             <h2 class="bq__h">${B.recentes}</h2>
             <div class="bq__cats" role="group">
               <button type="button" class="bq__cat is-ativo" data-cat="">${B.todos}</button>
-${cats.map(c => `              <button type="button" class="bq__cat" data-cat="${escAttr(c)}" lang="pt-BR">${c}</button>`).join('\n')}
+${cats.map(c => `              <button type="button" class="bq__cat" data-cat="${escAttr(c)}">${c}</button>`).join('\n')}
             </div>
             <div class="bq__grade" data-visiveis="${VISIVEIS}">
 ${resto.map((c, i) => `              <a class="bq__card${i >= VISIVEIS ? ' is-oculto' : ''}" href="${c.href}" data-cat="${escAttr(c.categoria || '')}"${lg}><img src="${c.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${escAttr(c.titulo)}</span><span class="bq__resumo">${escAttr(c.descricao || '')}</span><span class="bq__autor">${B.equipe}</span>${meta(c)}</a>`).join('\n')}
@@ -611,7 +611,7 @@ function main() {
   const pts = CHAVES.map(entradaPt);
   const paginasPt = [...pts.filter(u => !u.post)].sort((a, b) => a.loc === SITE + '/' ? -1 : b.loc === SITE + '/' ? 1 : 0);
   // artigos do blog (.blog/artigos/*.json): páginas geradas a partir da casca /blog/
-  const postsPt = BLOG.gerar().map(a => ({ loc: `${SITE}${a.href}`, lastmod: a.data + 'T09:00:00-03:00', imagens: [SITE + a.img], alternados: [] }));
+  const postsPt = BLOG.gerar('').map(a => ({ loc: `${SITE}${a.href}`, lastmod: a.data + 'T09:00:00-03:00', imagens: [SITE + a.img], alternados: [] }));
   fs.writeFileSync(path.join(RAIZ, 'page-sitemap.xml'), urlset(paginasPt));
   fs.writeFileSync(path.join(RAIZ, 'post-sitemap.xml'), urlset(postsPt));
   const indice = [['post-sitemap.xml', postsPt], ['page-sitemap.xml', paginasPt]];
@@ -619,6 +619,8 @@ function main() {
   for (const idioma of prontos.slice(1)) {
     const lista = CHAVES.map(c => ({ loc: SITE + caminho(idioma, c), lastmod: lastmodTrad[idioma.pasta + c],
       imagens: imagens(ler(path.join(RAIZ, caminho(idioma, c), 'index.html'))), alternados: alternados(c) }));
+    // artigos do blog traduzidos para este idioma
+    for (const art of BLOG.gerar(idioma.pasta)) lista.push({ loc: SITE + art.href, lastmod: art.data + 'T09:00:00-03:00', imagens: [SITE + art.img], alternados: [] });
     fs.writeFileSync(path.join(RAIZ, `sitemap-${idioma.pasta}.xml`), urlset(lista));
     indice.push([`sitemap-${idioma.pasta}.xml`, lista]);
   }

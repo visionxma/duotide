@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr" data-tema="dark" data-tv="de_DE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Swap-Gebühr: wie man die Kosten offener Positionen berechnet | Blog Duotide</title>
+  <meta name="description" content="Verstehen Sie, wie die Overnight-Swap-Gebühr in Forex und CFDs funktioniert, mit Formel, Beispiel des dreifachen Rollovers und vollständiger Berechnung in Real.">
+  <link rel="canonical" href="https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-swap-taxa-overnight/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/swap-rate-how-to-calculate-overnight-cost/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/swap-calculator-overnight-fees/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/swap-fee-paano-kalkulahin-ang-gastos-ng-bukas-na-posisyon/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/taxe-de-swap-comment-calculer-le-cout/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/tasso-di-swap-come-calcolare-il-costo-overnight/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/swap-fee-calculator-overnight-cost/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/swap-orani-overnight-maliyeti-hesaplama/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/phi-swap-cach-tinh-chi-phi-giu-vi-the-mo-qua-dem/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/swap-overnight-fee-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/swap-rate-how-to-calculate-overnight-cost/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Swap-Gebühr: wie man die Kosten offener Positionen berechnet">
+  <meta property="og:description" content="Verstehen Sie, wie die Overnight-Swap-Gebühr in Forex und CFDs funktioniert, mit Formel, Beispiel des dreifachen Rollovers und vollständiger Berechnung in Real.">
+  <meta property="og:url" content="https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide Blog">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swap-Gebühr: wie man die Kosten offener Positionen berechnet">
+  <meta name="twitter:description" content="Verstehen Sie, wie die Overnight-Swap-Gebühr in Forex und CFDs funktioniert, mit Formel, Beispiel des dreifachen Rollovers und vollständiger Berechnung in Real.">
+  <meta name="twitter:label1" content="Geschrieben von">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lesezeit">
+  <meta name="twitter:data2" content="5 Minuten">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/#artigo",
+      "headline": "Swap-Gebühr: wie man die Kosten offener Positionen berechnet",
+      "description": "Verstehen Sie, wie die Overnight-Swap-Gebühr in Forex und CFDs funktioniert, mit Formel, Beispiel des dreifachen Rollovers und vollständiger Berechnung in Real.",
+      "url": "https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/",
+      "inLanguage": "de",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
+      "articleSection": "Forex",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-Team",
+        "url": "https://duotide.com.br/de/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/de/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Start",
+          "item": "https://duotide.com.br/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/de/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Swap-Gebühr: wie man die Kosten offener Positionen berechnet",
+          "item": "https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/de/" aria-label="Duotide — Startseite">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Navigationsmenü öffnen"
+                data-abrir="Navigationsmenü öffnen" data-fechar="Navigationsmenü schließen">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Sprache wählen"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="22" height="16"><span>de</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-swap-taxa-overnight/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/swap-rate-how-to-calculate-overnight-cost/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/swap-calculator-overnight-fees/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/swap-fee-calculator-overnight-cost/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/" hreflang="de" lang="de" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/swap-fee-paano-kalkulahin-ang-gastos-ng-bukas-na-posisyon/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/taxe-de-swap-comment-calculer-le-cout/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/tasso-di-swap-come-calcolare-il-costo-overnight/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/swap-fee-calculator-overnight-cost/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/swap-orani-overnight-maliyeti-hesaplama/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/phi-swap-cach-tinh-chi-phi-giu-vi-the-mo-qua-dem/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/swap-overnight-fee-calculator/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="/de/">Start</a></li>
+          <li><a href="/de/duotide-serioes/">Seriös?</a></li>
+          <li><a href="/de/duotide-login/">Login</a></li>
+          <li><a href="/de/duotide-broker/">Der Broker</a></li>
+          <li><a href="/de/duotide-sicher/">Sicher?</a></li>
+          <li><a href="/de/duotide-app/">App</a></li>
+          <li><a href="/de/beste-broker/">Beste Broker</a></li>
+          <li><a href="/de/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de"
+           target="_blank" rel="noopener sponsored nofollow">Konto erstellen</a>
+        <a class="btn btn--outline btn--sm" href="/de/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
+    <div class="container">
+      <ol>
+        <li><a href="/de/">Start</a></li>
+        <li><a href="/de/blog/">Blog</a></li>
+        <li><span aria-current="page">Swap-Gebühr: wie man die Kosten offener Positionen berechnet</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Forex</span>
+        <h1>Swap-Gebühr: wie man die Kosten offener Positionen berechnet</h1>
+        <p class="bq-post__meta">Duotide-Team · <time datetime="2026-09-24">24.09.2026</time> · 4 Min. Lesezeit</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Jede gehebelte Position, die nach dem täglichen Marktschluss offen gehalten wird, kann eine Kosten — oder in manchen Fällen eine Gutschrift — namens Swap-Gebühr erzeugen, auch als Overnight- oder Rollover-Gebühr bekannt. Sie tritt bei Forex, CFDs, Rohstoffen, Indizes und Margin-Positionen in Kryptowährungen auf. Wird der Trade am selben Tag eröffnet und geschlossen, vor der Rollover-Zeit, gibt es normalerweise keinen Swap zu berechnen.</p>
+<p>Das Problem beim Swap ist, dass er nicht als sichtbare Belastung beim Einstieg erscheint. Er taucht später auf, still, im Konto. Deshalb bemerken viele Trader die Auswirkung erst, wenn ein scheinbar kurzfristiger Trade ungeplant zu einer über mehrere Tage gehaltenen Position wird.</p>
+<h2>Wie die Berechnung funktioniert</h2>
+<p>Die Formel hängt davon ab, wie der Broker die Swap-Gebühr anzeigt. Wird sie als Prozentsatz des Positionswerts angezeigt:</p>
+<p>Swap = Positionswert × täglicher Swap-Satz × berechnete Nächte</p>
+<p>Wird sie pro Lot angezeigt:</p>
+<p>Swap = Lotgröße × Swap pro Lot × berechnete Nächte</p>
+<p>Der Ausdruck "berechnete Nächte" verdient Aufmerksamkeit. Eine über das Wochenende gehaltene Position zählt meist als mehr als eine Nacht, weil der Markt den Zeitraum, in dem er geschlossen war, ausgleichen muss. Viele Plattformen wenden an einem bestimmten Wochentag den dreifachen Rollover an, aber der genaue Tag und der Satz variieren je nach Instrument und Broker — deshalb lohnt es sich immer, die geltenden Bedingungen zu prüfen, bevor entschieden wird, eine Position über Nacht offen zu halten.</p>
+<h2>Gelöstes Beispiel: prozentualer Swap</h2>
+<p>Angenommen, eine Position mit einem Exposure-Wert von R$ 7.500, einem täglichen Swap-Satz von 0,05% für Kaufpositionen, gehalten für drei berechnete Nächte (durch den dreifachen Wochenend-Rollover). Die Berechnung ist:</p>
+<p>R$ 7.500 × 0,05% × 3 = R$ 11,25 geschätzte Kosten</p>
+<p>Hat dieselbe Position, auf der Verkaufsseite, einen täglichen Satz von −0,02% (eine Gutschrift statt Kosten), wäre das Ergebnis für dieselben drei Nächte:</p>
+<p>R$ 7.500 × (−0,02%) × 3 = −R$ 4,50, also eine Gutschrift von R$ 4,50 im Konto</p>
+<p>Beachten Sie, dass das Vorzeichen des Satzes das Ergebnis von Kosten zu Gutschrift ändert — deshalb ist es entscheidend, genau das von der Plattform angezeigte Vorzeichen zu verwenden, ohne die Zahl gedanklich anzupassen.</p>
+<h2>Warum Kauf und Verkauf unterschiedlich kosten</h2>
+<p>Der Swap ist keine zufällige Gebühr. Im Forex ist er mit dem Unterschied der Zinssätze der beiden Währungen des Paares verbunden. Bei CFDs kann er Finanzierungskosten, Liquidität und spezifische Regeln des Instruments widerspiegeln. Deshalb ist es üblich, dass:</p>
+<ul>
+<li>Kaufpositionen andere Finanzierungskosten haben als Verkaufspositionen im selben Wert.</li>
+<li>Eine Seite des Paares zahlt, während die andere erhält, abhängig vom Zinsunterschied zwischen den beteiligten Währungen.</li>
+<li>Anpassungen des Brokers und spezifische Regeln jedes Instruments den Endwert ebenfalls beeinflussen.</li>
+</ul>
+<p>Das bedeutet nicht, dass die Richtung des Trades aufgrund des Swaps gewählt werden sollte. Die Richtung muss aus der technischen Analyse oder dem Szenario kommen, das den Trade motiviert hat. Aber wenn zwei Einstiegsideen ähnlich sind und eine davon deutlich höhere Overnight-Kosten hat, wird der Swap zu einem legitimen Tiebreaker-Kriterium.</p>
+<h2>Wann der Swap wirklich zählt</h2>
+<p>Eine Kosten von R$ 2 pro Nacht ist nicht automatisch relevant. Bei einem Trade mit Ziel von R$ 150 ist dieser Wert praktisch irrelevant. Beim selben Trade, aber mit einem Ziel von nur R$ 8 — typisch für einen Scalper —, zehren diese R$ 2 pro Nacht einen enormen Teil des erwarteten Ergebnisses auf.</p>
+<p>Die praktische Berechnung, die sich lohnt, bevor eine Position über Nacht offen gehalten wird, ist einfach: den geschätzten Swap-Wert für die geplante Anzahl an Nächten nehmen und mit dem Gewinnziel des Trades vergleichen. Macht der Swap einen kleinen Anteil des Ziels aus, sind die Kosten handhabbar. Macht er einen großen Anteil aus, lohnt es sich, zu überlegen, die Position nicht offen zu halten oder die Größe zum Ausgleich zu reduzieren.</p>
+<h2>Die Gewohnheit, die Überraschungen im Konto vermeidet</h2>
+<p>Der praktische Ablauf für diese Berechnung ist: erstens prüfen, wie der Broker die Swap-Gebühr anzeigt — prozentual oder pro Lot; zweitens den Positionswert oder die Lotgröße berechnen; drittens den Kauf- und den Verkaufssatz getrennt anwenden, da sie meist unterschiedlich sind; viertens mit der tatsächlichen Anzahl an Nächten multiplizieren, die die Position offen bleibt, ohne den dreifachen Rollover zu vergessen, falls zutreffend; schließlich das Ergebnis mit dem geplanten Ziel des Trades vergleichen.</p>
+<p>Der Swap wird meist als kleines Detail behandelt, weil er, anders als der Spread, nicht sofort auf dem Bildschirm erscheint. Aber eine unbemerkte Kosten bleibt eine reale Kosten. Bevor Sie sich entscheiden, eine Position über Nacht offen zu halten, sei es bei Duotide oder auf einer anderen Plattform, lohnt sich diese schnelle Rechnung — sie verhindert, dass ein positives Ergebnis im Chart zu einer negativen Überraschung im Kontoauszug wird.</p>
+        <div class="bq-post__cta">
+          <p><strong>Üben, bevor Sie etwas riskieren.</strong> Eröffnen Sie Ihr Duotide-Konto und testen Sie Ihre Ideen im Demokonto mit R$ 10.000 virtuellem Guthaben.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Lesen Sie auch</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/de/blog/wie-man-den-pip-wert-im-forex-schritt-fuer-schritt-berechnet/"><img src="/assets/img/terra.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wie man den Pip-Wert im Forex Schritt für Schritt berechnet</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/wie-man-den-spread-im-forex-berechnet/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wie man den Spread im Forex berechnet: Formel und Beispiele</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/cpi-nfp-oder-fomc-was-bewegt-den-forex-am-meisten/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">CPI, NFP oder FOMC: welche Nachricht bewegt den Forex am meisten</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Copyright © 2026 Duotide.<br>
+            Alle Rechte vorbehalten.<br>
+            offizielle Website.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Unternehmen</h2>
+          <ul>
+            <li><a href="/de/">Start</a></li>
+            <li><a href="/de/duotide-serioes/">Ist Duotide seriös?</a></li>
+            <li><a href="/de/duotide-login/">Login-Methoden</a></li>
+            <li><a href="/de/duotide-broker/">Den Broker kennenlernen</a></li>
+            <li><a href="/de/duotide-sicher/">Sicherheit des Brokers</a></li>
+            <li><a href="/de/duotide-app/">App</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kundenbetreuer rund um die Uhr</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/de/duotide-haeufige-fragen/">Häufige Fragen</a>
+          <a href="/de/ueber-uns/">Über diese Website</a>
+          <a href="/de/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Zurück zum Seitenanfang">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Schließen">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">von 100 %</span></h2>
+          <p>Zahle mit dem Code <strong>WELCOME100</strong> ein und erhalte 100 % Bonus auf den eingezahlten Betrag.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Code</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopiert!">Kopieren</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Jetzt sichern</a>
+          <p class="pp__mini">Es gelten die Aktionsbedingungen. Der Handel mit gehebelten Produkten birgt Verlustrisiken.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>

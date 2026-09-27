@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>如何逐步计算外汇中一个点的价值 | Blog Duotide</title>
+  <meta name="description" content="学习如何计算任意外汇货币对中一个点的价值，附公式、按仓位大小分类的表格，以及用雷亚尔计算的完整示例。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/pip-value-calculator-forex/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-pip-como-calcular/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-calculate-pip-value-in-forex/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/pip-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/pip-calculator-how-to-calculate-pip-value/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-den-pip-wert-im-forex-schritt-fuer-schritt-berechnet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-kalkulahin-ang-halaga-ng-pip-sa-forex/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-calculer-la-valeur-du-pip-forex/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-menghitung-nilai-pip-di-forex/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-calcolare-il-valore-del-pip-nel-forex/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/pip-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/pip-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/pip-degeri-nasil-hesaplanir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-tinh-gia-tri-pip-trong-forex-tung-buoc/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/pip-value-calculator-forex/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-calculate-pip-value-in-forex/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何逐步计算外汇中一个点的价值">
+  <meta property="og:description" content="学习如何计算任意外汇货币对中一个点的价值，附公式、按仓位大小分类的表格，以及用雷亚尔计算的完整示例。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/pip-value-calculator-forex/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/terra.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/terra.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何逐步计算外汇中一个点的价值">
+  <meta name="twitter:description" content="学习如何计算任意外汇货币对中一个点的价值，附公式、按仓位大小分类的表格，以及用雷亚尔计算的完整示例。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/pip-value-calculator-forex/#artigo",
+      "headline": "如何逐步计算外汇中一个点的价值",
+      "description": "学习如何计算任意外汇货币对中一个点的价值，附公式、按仓位大小分类的表格，以及用雷亚尔计算的完整示例。",
+      "url": "https://duotide.com.br/zh/blog/pip-value-calculator-forex/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/terra.webp",
+      "articleSection": "外汇",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/pip-value-calculator-forex/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "如何逐步计算外汇中一个点的价值",
+          "item": "https://duotide.com.br/zh/blog/pip-value-calculator-forex/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-pip-como-calcular/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-calculate-pip-value-in-forex/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/pip-calculator-how-to-calculate/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/pip-calculator-how-to-calculate-pip-value/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-den-pip-wert-im-forex-schritt-fuer-schritt-berechnet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-kalkulahin-ang-halaga-ng-pip-sa-forex/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-calculer-la-valeur-du-pip-forex/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-menghitung-nilai-pip-di-forex/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-calcolare-il-valore-del-pip-nel-forex/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/pip-calculator-how-to-calculate/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/pip-calculator-how-to-calculate/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/pip-degeri-nasil-hesaplanir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-tinh-gia-tri-pip-trong-forex-tung-buoc/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/pip-value-calculator-forex/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">如何逐步计算外汇中一个点的价值</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">外汇</span>
+        <h1>如何逐步计算外汇中一个点的价值</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/terra.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>每个外汇交易者都听过或说过这句话：“我今天赚了40个点。”这句话听起来很精确，但单独来看几乎什么都说明不了。小仓位上的40个点可能只值几个雷亚尔；同样的40个点放在更大的仓位上，可能值几百雷亚尔。以点数衡量的距离显示的是价格的变动。点值显示的才是账户的真实影响。</p>
+<p>在入场之前学会计算点值，才能把“我的止损设在25个点”变成“我的止损代表130雷亚尔的风险”——而真正对决定仓位大小起作用的，正是这第二个数字。</p>
+<h2>什么是点（pip），它的大小是多少</h2>
+<p>点是大多数货币对中最小的有意义的价格变动单位。对于大多数货币对，包括EUR/USD和GBP/USD，一个点等于0.0001。对于涉及日元的货币对，比如USD/JPY，一个点等于0.01——在小数点位置上大了一百倍，这经常让新手感到困惑。</p>
+<h2>基本公式</h2>
+<p>点值来自仓位大小乘以点的大小：</p>
+<p>点值 = 仓位大小 × 点的大小</p>
+<p>如果该货币对的报价货币与账户货币不同，就需要额外一步，按两者之间的汇率进行换算。</p>
+<h2>快速参考表</h2>
+<p>对于以美元计价、账户也以美元计价的货币对，下表可以作为快速核对：</p>
+<ul>
+<li><strong>1标准手</strong>（100000单位）——每点价值约为10美元。</li>
+<li><strong>0.10手，即1迷你手</strong>（10000单位）——每点价值约为1美元。</li>
+<li><strong>0.01手，即1微型手</strong>（1000单位）——每点价值约为0.10美元。</li>
+</ul>
+<p>按假设的USD/BRL汇率5.00换算成雷亚尔，这些数值分别约等于每点50雷亚尔、5雷亚尔和0.50雷亚尔。这张表可以用来做一个简单的合理性检查：如果平台在EUR/USD上显示的数值与此相差很大，就值得确认所选的货币对、手数或账户货币是否正确。</p>
+<h2>解答示例：EUR/USD</h2>
+<p>一位交易者以美元账户交易0.10手的EUR/USD，相当于10000欧元的敞口。点的大小是0.0001。点值为：</p>
+<p>10000 × 0.0001 = 每点1美元</p>
+<p>止损设为25个点时，这笔交易的总风险是：</p>
+<p>25 × 1美元 = 25美元，按示例汇率约合125雷亚尔</p>
+<p>由于美元既是该货币对的报价货币，也是账户货币，因此不需要任何额外的换算步骤。</p>
+<h2>解答示例：USD/JPY</h2>
+<p>涉及日元的货币对通常是手工计算容易出错的地方。USD/JPY报价接近150.00，使用的点大小是0.01，而不是0.0001。一位交易者开出0.10手（10000美元敞口）：</p>
+<p>以日元计的点值 = 10000 × 0.01 = 每点1000日元</p>
+<p>按150.00的汇率换算成美元：</p>
+<p>1000 ÷ 150.00 = 约每点6.67美元</p>
+<p>这笔仓位上25个点的止损，价值并不是25美元——而是大约25 × 6.67美元 = 166.75美元，几乎是简化计算所暗示数值的七倍。假设“0.10手总是每点值1美元”，对以美元计价账户中的EUR/USD和GBP/USD来说效果还算不错，但在涉及日元的货币对或交叉货币对中，则是一个代价高昂的错误。</p>
+<h2>为什么这比数点数更重要</h2>
+<p>持续做好风险管理的人，其工作流程始终遵循同样的顺序：先选择入场场景，再确定止损在哪里会让这个想法失效，接着以点数衡量止损的距离，为计划的仓位大小计算点值，最后才确认总风险是否在账户限额之内。如果算出来的风险太大，正确的回应几乎从来不是人为地缩短止损——而是缩小仓位大小，同时把止损保持在技术上有意义的水平。</p>
+<p>忽视这个计算，是一种在不知不觉中承担超出预期风险的方式。两笔交易在图表上可能看起来完全一样——相同的入场点、相同的止损点数、相同的货币对——但仅仅因为仓位大小不同，实际的财务影响就可能完全不同。在Duotide或任何其他平台上确认任何订单之前，养成快速做这个计算的习惯是值得的：把仓位大小乘以点的大小，如有必要再进行换算，然后再把结果与你愿意在那笔交易中承受的损失进行比较。这是一个不到一分钟就能完成的计算，却能在止损真正被触发时避免不愉快的意外。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/swap-overnight-fee-calculator/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">隔夜利息（Swap）：如何计算持仓过夜的成本</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-calculate-forex-spread/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何计算外汇点差：公式与示例</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/alphabet-stock-pulls-back-ai-spending/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">阿尔法贝特股价走弱，市场开始权衡人工智能支出的代价</span><span class="bq__meta">2026/09/24 · 阅读 3 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>

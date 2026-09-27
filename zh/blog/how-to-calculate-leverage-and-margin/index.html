@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>如何计算交易中的杠杆和所需保证金 | Blog Duotide</title>
+  <meta name="description" content="学习杠杆公式，了解所需保证金与真实敞口之间的区别，并查看外汇和加密货币中的完整示例。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-alavancagem-como-calcular/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-calculate-leverage-and-margin/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/leverage-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/leverage-calculator-how-to-calculate-margin/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-hebel-und-benoetigte-margin-berechnet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-kalkulahin-ang-leverage-at-kailangang-margin/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-calculer-leffet-de-levier-en-trading/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-menghitung-leverage-dan-margin-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-calcolare-la-leva-e-il-margine-nel-trading/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/leverage-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/leverage-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/kaldirac-hesaplama-nasil-hesaplanir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-tinh-don-bay-va-ky-quy-can-thiet-trong-giao-dich/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-calculate-leverage-and-margin/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何计算交易中的杠杆和所需保证金">
+  <meta property="og:description" content="学习杠杆公式，了解所需保证金与真实敞口之间的区别，并查看外汇和加密货币中的完整示例。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何计算交易中的杠杆和所需保证金">
+  <meta name="twitter:description" content="学习杠杆公式，了解所需保证金与真实敞口之间的区别，并查看外汇和加密货币中的完整示例。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/#artigo",
+      "headline": "如何计算交易中的杠杆和所需保证金",
+      "description": "学习杠杆公式，了解所需保证金与真实敞口之间的区别，并查看外汇和加密货币中的完整示例。",
+      "url": "https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp",
+      "articleSection": "风险管理",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "如何计算交易中的杠杆和所需保证金",
+          "item": "https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-alavancagem-como-calcular/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-calculate-leverage-and-margin/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/leverage-calculator-how-to-calculate/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/leverage-calculator-how-to-calculate-margin/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-hebel-und-benoetigte-margin-berechnet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-kalkulahin-ang-leverage-at-kailangang-margin/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-calculer-leffet-de-levier-en-trading/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-menghitung-leverage-dan-margin-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-calcolare-la-leva-e-il-margine-nel-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/leverage-calculator-how-to-calculate/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/leverage-calculator-how-to-calculate/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/kaldirac-hesaplama-nasil-hesaplanir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-tinh-don-bay-va-ky-quy-can-thiet-trong-giao-dich/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-calculate-leverage-and-margin/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">如何计算交易中的杠杆和所需保证金</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">风险管理</span>
+        <h1>如何计算交易中的杠杆和所需保证金</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>杠杆是一种机制，让你可以用存入券商账户的一小部分资金作为保证金，来控制市场上一笔更大规模的仓位。它存在于外汇、加密货币、差价合约、大宗商品和指数交易中，在所有这些情况下，核心公式都是一样的。</p>
+<p>最容易引起误解的一点，是以为杠杆本身就决定了交易的风险。事实并非如此。杠杆改变的是开仓所需的资金量——它并不会改变该仓位所代表的市场波动幅度。</p>
+<h2>通用公式</h2>
+<p>开仓所需的保证金计算方式如下：</p>
+<p>所需保证金 = 仓位价值 ÷ 杠杆倍数</p>
+<p>如果一笔仓位价值50000雷亚尔，杠杆为1:20，所需保证金就是2500雷亚尔。如果杠杆是1:100，同样价值50000雷亚尔的仓位只需要500雷亚尔的保证金。但无论哪种情况，这笔仓位的表现依然和一笔50000雷亚尔的仓位一样——决定该资产每次百分比波动带来多少盈亏的，是这个价值，而不是所存入的保证金。</p>
+<h2>真正重要的数字：有效杠杆</h2>
+<p>大多数关于杠杆的解释就到此为止，但还缺少一个关键部分：有效杠杆，计算方式是仓位总价值除以账户余额。一位交易者可能有权使用1:500的杠杆，却依然保持保守操作，只用很小的仓位。另一位交易者可能只用1:10的杠杆，却因为开出的仓位相对自己账户规模来说过大，而承担了过高的风险。</p>
+<p>在进行任何杠杆交易之前，有四个问题值得回答：这笔仓位的总价值是多少、将占用多少保证金、由此产生的有效杠杆是多少，以及如果价格到达计划中的止损点，预计的损失会是多少。</p>
+<h2>外汇示例：同一笔仓位，不同的杠杆</h2>
+<p>一位账户资金为5000雷亚尔的交易者，在EUR/USD接近1.0850的价位开出0.10手的仓位，止损设在30个点。该仓位价值约为54250雷亚尔（按示例汇率换算的1万欧元），这笔仓位中每个点的价值约为5雷亚尔。因此，无论选择哪种杠杆，止损时的风险都是150雷亚尔。</p>
+<ul>
+<li><strong>杠杆1:10</strong>——所需保证金约为5425雷亚尔；有效杠杆为10.85倍；止损风险为150雷亚尔。</li>
+<li><strong>杠杆1:30</strong>——所需保证金约为1808雷亚尔；有效杠杆相同；风险同样为150雷亚尔。</li>
+<li><strong>杠杆1:100</strong>——所需保证金约为543雷亚尔；有效杠杆相同；风险同样为150雷亚尔。</li>
+</ul>
+<p>三种情境下被占用的保证金差别很大。但这笔交易的财务风险完全没有变化，因为仓位大小和止损距离始终保持一致。这正是核心的教训：杠杆决定的是开仓需要预留多少资金；真正决定实际风险敞口的，是仓位的大小。</p>
+<h2>加密货币示例</h2>
+<p>同样的逻辑也适用于外汇之外的市场。假设比特币报价350000雷亚尔，一位交易者以1:10的杠杆开出0.02 BTC的仓位。该仓位的价值为：</p>
+<p>0.02 × 350000雷亚尔 = 7000雷亚尔</p>
+<p>所需保证金为：</p>
+<p>7000雷亚尔 ÷ 10 = 700雷亚尔</p>
+<p>如果比特币价格朝不利方向下跌5%，扣除成本前的大致损失为：</p>
+<p>7000雷亚尔 × 5% = 350雷亚尔</p>
+<p>再一次说明，杠杆本身并没有单独决定亏损的大小。真正决定结果的是所交易的比特币数量和价格变动的幅度。更少的BTC数量会降低敞口；更紧或更宽的止损会改变亏损兑现的位置——但这些变量都不是杠杆本身。</p>
+<h2>如何在实践中运用这个计算</h2>
+<p>在任何交易中选择杠杆之前，最稳妥的做法是把问题的顺序倒过来：不要问“我能用的最大杠杆是多少”，而要问“考虑到我的资金和我愿意承担的风险，我真正想要的仓位价值是多少”。从这个仓位价值出发，所需的保证金只是公式的结果，而不是出发点。</p>
+<p>高杠杆会放大潜在收益，但同样也会成比例地放大潜在亏损，并且当市场快速朝不利方向变动时，可能引发追加保证金的要求。杠杆是一种工具，不是稳赚不赔的捷径——无论杠杆倍数是多少，交易都存在亏损风险，在操作前，无论是在Duotide还是在任何其他交易平台上，都应该始终确认每种工具具体的保证金条件。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/5-risk-management-tips-for-traders/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5个风险管理技巧，避免赔光全部资金</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-diversify-a-trading-portfolio/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何分散交易组合、降低风险</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/trading-expectancy-calculator/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">数学期望计算器：你的策略是否有优势</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>

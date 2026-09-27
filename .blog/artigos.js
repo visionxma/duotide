@@ -6,7 +6,13 @@ const path = require('path');
 const RAIZ = path.join(__dirname, '..');
 const SITE = 'https://duotide.com.br';
 const PASTA = path.join(__dirname, 'artigos');
-const AFF = 'https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide';
+const AFF_BASE = 'https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=';
+const affDe = pasta => AFF_BASE + (pasta ? 'duotide-' + pasta : 'duotide');
+const IDIOMAS = JSON.parse(fs.readFileSync(path.join(RAIZ, '.i18n/idiomas.json'), 'utf8'));
+const TRAD = path.join(__dirname, 'traducoes');
+const chromeDe = pasta => JSON.parse(fs.readFileSync(path.join(RAIZ, '.i18n', pasta || 'fonte', '_chrome.json'), 'utf8'));
+const base = pasta => pasta ? `/${pasta}/blog/` : '/blog/';
+const fmtData = (d, codigo) => { try { return new Intl.DateTimeFormat(codigo, { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
 // Capas provisórias (até chegarem as imagens próprias de cada artigo).
 const IMGS = ['duotide-o-que-e', 'duotide-seguranca', 'duotide-abrir-conta', 'duotide-vale-a-pena', 'duotide-e-confiavel-01',
   'duotide-e-confiavel-02', 'duotide-e-confiavel-03', 'duotide-corretora-01', 'duotide-corretora-02', 'duotide-corretora-03',
@@ -42,7 +48,7 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 const dataBR = d => d.split('-').reverse().join('/');
 
 // Ordem: a da lista de pautas (.blog/pautas.txt); artigos sem pauta listada vão para o fim.
-function lista() {
+function listaPt() {
   if (!fs.existsSync(PASTA)) return [];
   const pautas = fs.existsSync(path.join(__dirname, 'pautas.txt'))
     ? fs.readFileSync(path.join(__dirname, 'pautas.txt'), 'utf8').split('\n').map(s => s.trim()).filter(Boolean) : [];
@@ -70,34 +76,68 @@ function lista() {
   return arts;
 }
 
-function gerar() {
-  const arts = lista();
-  const casca = fs.readFileSync(path.join(RAIZ, 'blog/index.html'), 'utf8');
+// Artigos de um idioma. pt: todos. Outros: só os que têm tradução em .blog/traducoes/<pasta>/,
+// com a mesma ordem, data e capa do original. Cada item traz .alts (href em cada idioma).
+function lista(pasta = '') {
+  const pt = listaPt();
+  const traducoes = {};
+  for (const i of IDIOMAS.filter(i => i.pasta)) {
+    const d = path.join(TRAD, i.pasta);
+    traducoes[i.pasta] = {};
+    if (!fs.existsSync(d)) continue;
+    for (const f of fs.readdirSync(d).filter(f => f.endsWith('.json'))) {
+      try { const t = JSON.parse(fs.readFileSync(path.join(d, f), 'utf8')); if (t.slug && t.titulo && t.corpo) traducoes[i.pasta][f.slice(0, -5)] = t; } catch (e) {}
+    }
+  }
+  const out = [];
+  for (const a of pt) {
+    const alts = { '': `/blog/${a.slug}/` };
+    for (const i of IDIOMAS.filter(i => i.pasta)) { const t = traducoes[i.pasta][a.slug]; if (t) alts[i.pasta] = `/${i.pasta}/blog/${t.slug}/`; }
+    if (!pasta) { out.push({ ...a, slugPt: a.slug, alts }); continue; }
+    const t = traducoes[pasta][a.slug];
+    if (!t) continue;
+    const cats = (chromeDe(pasta).blog || {}).cats || {};
+    out.push({ ...a, slugPt: a.slug, slug: t.slug, titulo: t.titulo, descricao: t.descricao, corpo: t.corpo,
+      categoriaPt: a.categoria, categoria: cats[a.categoria] || a.categoria, href: alts[pasta], alts });
+  }
+  return out;
+}
+
+function gerar(pasta = '') {
+  const idioma = IDIOMAS.find(i => i.pasta === pasta);
+  const C = chromeDe(pasta), B = C.blog || {};
+  const arts = lista(pasta);
+  const dirBlog = path.join(RAIZ, pasta, 'blog');
+  const casca = fs.readFileSync(path.join(dirBlog, 'index.html'), 'utf8');
+  const aria = (casca.match(/<nav class="breadcrumb" aria-label="([^"]*)"/) || [, 'Breadcrumb'])[1];
+  const AFF = affDe(pasta);
+  const leitura = n => (B.leitura || '{n} min').replace('{n}', n);
   // apaga páginas de artigos que não existem mais (só pastas de artigo: blog/<slug>/index.html)
   const vivos = new Set(arts.map(a => a.slug));
-  for (const d of fs.readdirSync(path.join(RAIZ, 'blog'))) {
-    const f = path.join(RAIZ, 'blog', d, 'index.html');
-    if (!vivos.has(d) && fs.existsSync(f) && fs.readFileSync(f, 'utf8').includes('<!--artigo-blog-->')) fs.rmSync(path.join(RAIZ, 'blog', d), { recursive: true });
+  for (const d of fs.readdirSync(dirBlog)) {
+    const f = path.join(dirBlog, d, 'index.html');
+    if (!vivos.has(d) && fs.existsSync(f) && fs.readFileSync(f, 'utf8').includes('<!--artigo-blog-->')) fs.rmSync(path.join(dirBlog, d), { recursive: true });
   }
   for (const a of arts) {
-    const url = `${SITE}/blog/${a.slug}/`;
+    const url = `${SITE}${a.href}`;
     const iso = a.data + 'T09:00:00-03:00';
+    const home = pasta ? `/${pasta}/` : '/';
     const ld = { '@context': 'https://schema.org', '@graph': [
-      { '@type': 'BlogPosting', '@id': url + '#artigo', headline: a.titulo, description: a.descricao, url, inLanguage: 'pt-BR',
+      { '@type': 'BlogPosting', '@id': url + '#artigo', headline: a.titulo, description: a.descricao, url, inLanguage: idioma.codigo,
         datePublished: iso, dateModified: iso, image: SITE + a.img, articleSection: a.categoria,
-        author: { '@type': 'Organization', name: 'Equipe Duotide', url: SITE + '/' }, publisher: { '@id': SITE + '/#organization' },
-        mainEntityOfPage: url, isPartOf: { '@id': SITE + '/blog/#blog' } },
+        author: { '@type': 'Organization', name: B.equipe || 'Duotide', url: SITE + home }, publisher: { '@id': SITE + '/#organization' },
+        mainEntityOfPage: url, isPartOf: { '@id': SITE + base(pasta) + '#blog' } },
       { '@type': 'BreadcrumbList', itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + '/' },
-        { '@type': 'ListItem', position: 2, name: 'Blog', item: SITE + '/blog/' },
+        { '@type': 'ListItem', position: 1, name: C.nav.home, item: SITE + home },
+        { '@type': 'ListItem', position: 2, name: C.nav.blog, item: SITE + base(pasta) },
         { '@type': 'ListItem', position: 3, name: a.titulo, item: url }] }] };
     const mesma = arts.filter(o => o.slug !== a.slug && o.categoria === a.categoria);
     const outros = [...mesma, ...arts.filter(o => o.slug !== a.slug && o.categoria !== a.categoria)].slice(0, 3);
-    const main = `<nav class="breadcrumb" aria-label="Trilha de navegação">
+    const main = `<nav class="breadcrumb" aria-label="${esc(aria)}">
     <div class="container">
       <ol>
-        <li><a href="/">Home</a></li>
-        <li><a href="/blog/">Blog</a></li>
+        <li><a href="${home}">${esc(C.nav.home)}</a></li>
+        <li><a href="${base(pasta)}">${esc(C.nav.blog)}</a></li>
         <li><span aria-current="page">${esc(a.titulo)}</span></li>
       </ol>
     </div>
@@ -107,18 +147,18 @@ function gerar() {
       <div class="container article bq-post">
         <span class="bq__tag">${esc(a.categoria || 'Blog')}</span>
         <h1>${esc(a.titulo)}</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="${a.data}">${dataBR(a.data)}</time> · ${a.leitura} min de leitura</p>
+        <p class="bq-post__meta">${esc(B.equipe || 'Duotide')} · <time datetime="${a.data}">${fmtData(a.data, idioma.codigo)}</time> · ${leitura(a.leitura)}</p>
         <figure class="foto"><img src="${a.img}" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         ${a.corpo}
-${a.fonte ? `        <p class="artigo__fonte">Com informações de <a href="${esc(a.fonte)}" target="_blank" rel="noopener nofollow">Traders Union</a>.</p>
+${a.fonte ? `        <p class="artigo__fonte">${esc(B.fonte || '')} <a href="${esc(a.fonte)}" target="_blank" rel="noopener nofollow">Traders Union</a>.</p>
 ` : ''}        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="${AFF}" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+          <p><strong>${esc(B.cta_titulo)}</strong> ${esc(B.cta_texto)}</p>
+          <a class="btn btn--primary" href="${AFF}" target="_blank" rel="noopener sponsored nofollow">${esc(B.cta_botao)}</a>
         </div>
         <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+          <h2>${esc(B.leia)}</h2>
           <div class="bq__grade bq__grade--3">
-${outros.map(o => `            <a class="bq__card" href="${o.href}"><img src="${o.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${esc(o.titulo)}</span><span class="bq__meta">${dataBR(o.data)} · ${o.leitura} min de leitura</span></a>`).join('\n')}
+${outros.map(o => `            <a class="bq__card" href="${o.href}"><img src="${o.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${esc(o.titulo)}</span><span class="bq__meta">${fmtData(o.data, idioma.codigo)} · ${leitura(o.leitura)}</span></a>`).join('\n')}
           </div>
         </aside>
       </div>
@@ -128,7 +168,16 @@ ${outros.map(o => `            <a class="bq__card" href="${o.href}"><img src="${
     h = h.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${esc(a.titulo)} | Blog Duotide</title>`);
     h = h.replace(/(<meta name="description" content=")[^"]*"/, (m, x) => x + esc(a.descricao) + '"');
     h = h.replace(/(<link rel="canonical" href=")[^"]*"/, (m, x) => x + url + '"');
-    h = h.replace(/\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*">/g, '');
+    // hreflang: versões deste artigo que existem
+    const alts = IDIOMAS.filter(i => a.alts[i.pasta]).map(i => `  <link rel="alternate" hreflang="${i.codigo}" href="${SITE}${a.alts[i.pasta]}">`);
+    const xd = a.alts.en || a.alts[''];
+    alts.push(`  <link rel="alternate" hreflang="x-default" href="${SITE}${xd}">`);
+    h = h.replace(/<!--hreflang-->[\s\S]*?<!--\/hreflang-->/, () => `<!--hreflang-->\n${alts.join('\n')}\n  <!--/hreflang-->`);
+    // seletor de idioma: leva a este mesmo artigo no outro idioma (ou ao blog daquele idioma, se ainda não traduzido)
+    h = h.replace(/<details class="idioma">[\s\S]*?<\/details>/, sel => sel.replace(/<a href="[^"]*" hreflang="([^"]+)"/g, (m, cod) => {
+      const i = IDIOMAS.find(x => x.codigo === cod);
+      return i ? `<a href="${a.alts[i.pasta] || base(i.pasta)}" hreflang="${cod}"` : m;
+    }));
     h = h.replace(/(<meta (?:property="og:title"|name="twitter:title") content=")[^"]*"/g, (m, x) => x + esc(a.titulo) + '"');
     h = h.replace(/(<meta (?:property="og:description"|name="twitter:description") content=")[^"]*"/g, (m, x) => x + esc(a.descricao) + '"');
     h = h.replace(/(<meta property="og:url" content=")[^"]*"/, (m, x) => x + url + '"');
@@ -136,12 +185,12 @@ ${outros.map(o => `            <a class="bq__card" href="${o.href}"><img src="${
     h = h.replace(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*"/g, (m, x) => x + SITE + a.img + '"');
     h = h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => `<script type="application/ld+json">\n${JSON.stringify(ld, null, 2)}\n</script>`);
     h = h.replace(/(?:<nav class="breadcrumb"[\s\S]*?<\/nav>\s*)?<main[\s\S]*?<\/main>/, () => main);
-    const f = path.join(RAIZ, 'blog', a.slug, 'index.html');
+    const f = path.join(dirBlog, a.slug, 'index.html');
     fs.mkdirSync(path.dirname(f), { recursive: true });
     fs.writeFileSync(f, h);
   }
   return arts;
 }
 
-module.exports = { lista, gerar };
-if (require.main === module) console.log(gerar().length, 'artigos gerados');
+module.exports = { lista, gerar, IDIOMAS };
+if (require.main === module) console.log(gerar(process.argv[2] || '').length, 'artigos gerados');

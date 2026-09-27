@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>STARC通道还是布林带：该选哪一个？ | Blog Duotide</title>
+  <meta name="description" content="了解STARC和布林带在计算方式上的区别、各自在什么情况下对波动率反应更好，以及如何在同一张图表上测试两者。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/bandas-starc-ou-bandas-de-bollinger-qual-usar/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/starc-bands-or-bollinger-bands-which-to-use/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/bandas-starc-o-bandas-de-bollinger-cual-usar/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/starc-bands-or-bollinger-bands-which-to-use/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/starc-bands-or-bollinger-bands-which-to-use/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/starc-baender-oder-bollinger-baender-was-waehlen/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/starc-bands-o-bollinger-bands-alin-ang-gagamitin/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/bandes-starc-ou-bollinger-laquelle-choisir/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/bandas-starc-atau-bollinger-bands-mana-yang-dipilih/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/bande-starc-o-bande-di-bollinger-quale-scegliere/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/starc-bands-or-bollinger-bands-which-to-use/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/starc-bands-or-bollinger-bands-which-to-use/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/starc-bantlari-mi-bollinger-bantlari-mi/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/dai-starc-hay-dai-bollinger-nen-chon-cai-nao/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/starc-bands-or-bollinger-bands-which-to-use/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="STARC通道还是布林带：该选哪一个？">
+  <meta property="og:description" content="了解STARC和布林带在计算方式上的区别、各自在什么情况下对波动率反应更好，以及如何在同一张图表上测试两者。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="STARC通道还是布林带：该选哪一个？">
+  <meta name="twitter:description" content="了解STARC和布林带在计算方式上的区别、各自在什么情况下对波动率反应更好，以及如何在同一张图表上测试两者。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/#artigo",
+      "headline": "STARC通道还是布林带：该选哪一个？",
+      "description": "了解STARC和布林带在计算方式上的区别、各自在什么情况下对波动率反应更好，以及如何在同一张图表上测试两者。",
+      "url": "https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
+      "articleSection": "技术指标",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "STARC通道还是布林带：该选哪一个？",
+          "item": "https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/bandas-starc-ou-bandas-de-bollinger-qual-usar/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/starc-bands-or-bollinger-bands-which-to-use/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/bandas-starc-o-bandas-de-bollinger-cual-usar/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/starc-bands-or-bollinger-bands-which-to-use/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/starc-bands-or-bollinger-bands-which-to-use/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/starc-baender-oder-bollinger-baender-was-waehlen/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/starc-bands-o-bollinger-bands-alin-ang-gagamitin/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/bandes-starc-ou-bollinger-laquelle-choisir/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/bandas-starc-atau-bollinger-bands-mana-yang-dipilih/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/bande-starc-o-bande-di-bollinger-quale-scegliere/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/starc-bands-or-bollinger-bands-which-to-use/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/starc-bands-or-bollinger-bands-which-to-use/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/starc-bantlari-mi-bollinger-bantlari-mi/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/dai-starc-hay-dai-bollinger-nen-chon-cai-nao/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/starc-vs-bollinger-bands-which-to-use/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">STARC通道还是布林带：该选哪一个？</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">技术指标</span>
+        <h1>STARC通道还是布林带：该选哪一个？</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>当有人第一次打开图表，看到两条像走廊一样把价格包围起来的线时，很容易把STARC指标（Stoller Average Range Channel）和布林带弄混。它们在视觉上确实相似：一条中线，两条分别位于价格上方和下方的轨道。但每种指标计算这些轨道的方式大不相同，这会显著改变信号的表现，为你的交易风格选错指标可能导致糟糕的入场。</p><p>本文解释这两种指标在构造上的差异，说明各自在什么情况下表现更好，并给出一个结合风险管理规则使用它们的示例。</p><h2>每种指标是如何计算的</h2><h3>布林带</h3><p>布林带以一条简单移动均线（通常为20周期）为基础，再加减该周期内价格的两倍标准差。由于标准差衡量的是价格围绕均线的离散程度，轨道会在波动率上升时张开，在市场趋于平静时收拢——这种一张一合的运动被称为收窄（squeeze）。</p><h3>STARC通道</h3><p>STARC同样以简单移动均线作为中线，但上下轨是通过加减ATR（平均真实波幅）的某个倍数构建的，而不是标准差。由于ATR衡量的是价格K线（包括跳空）的平均波幅，STARC通道往往对波动率变化的反应更为平缓和稳定，不会像布林带那样有时出现剧烈的波动。</p><h2>在实践中，这对交易者意味着什么</h2><p>由于标准差对孤立的价格尖峰更敏感，布林带往往张合速度更快——这对希望迅速识别低波动率时期（通常是强势行情之前的预兆）的人来说很有用。而STARC由于基于ATR，产生的通道更稳定，这有助于偏好在一个明确价格区间内操作的交易者，即在没有明显趋势的市场中，靠近下轨买入、靠近上轨卖出。</p><h2>一个对比两者的例子</h2><p>假设某资产报价25.00雷亚尔，20周期均线同样是25.00雷亚尔。在布林带中，标准差为0.80雷亚尔，轨道分别为26.60雷亚尔（上轨）和23.40雷亚尔（下轨）。在STARC中，ATR为0.60雷亚尔，乘数为2，轨道分别为26.20雷亚尔和23.80雷亚尔——一个略微更窄、也不太容易因单根较长K线突然扩大的通道。</p><p>如果价格触及23.80雷亚尔（STARC的下轨），但还没有到达布林带的23.40雷亚尔，一位跟随STARC的交易者已经会得到一个可能的买入信号，而使用布林带的人则还在等待。</p><h2>如何决定使用哪一个</h2><ul><li>如果你的重点是在突破之前识别波动率的收缩，布林带通常更直接。</li><li>如果你在横盘中交易，偏好一个更稳定、不会突然大幅扩张的通道，STARC往往表现更好。</li><li>两者都不能预测未来：它们描述的都是价格近期的表现，所以和一个动能指标（比如RSI）或支撑阻力的解读结合使用效果更好。</li><li>在选择之前，先在同一个资产、同一个周期上测试这两种指标——表现的差异会因资产和图表周期而不同。</li></ul><h2>两种指标都存在的局限</h2><p>STARC是分析师曼宁·斯托勒作为布林带的替代方案而创立的，但这两种指标都没有解决操作波动率通道最主要的风险：在强劲趋势中，价格可能连续多根K线贴着上轨或下轨运行，这并不意味着反转。每次价格触及下轨就买入、却不检查趋势背景的人，就有可能在一波仍将继续的下跌中买入。</p><p>另一个重要的点是图表周期：在1分钟图上计算的轨道，反应方式会和日线图上计算的同样轨道大不相同，因为标准差和ATR都直接依赖于所选择的时间区间。调整均线周期（例如测试14、20或30）以及轨道的乘数，是找到最能描述你所关注资产表现的配置的过程的一部分。</p><h2>付诸实践</h2><p>STARC和布林带之间没有绝对的对错——只有哪一个更适合你的交易风格。一个不错的做法是在Duotide的模拟账户中同时打开这两个指标，应用到你平常关注的资产上，观察几周时间，看哪一个能更好地预判你想要捕捉的行情。请记住，任何波动率通道都只是辅助工具，不是准确率的保证，基于这些通道的任何策略都仍然离不开止损这种风险控制手段。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/bollinger-bands-how-they-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">布林带：是什么、如何运作</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/5-popular-indicators-in-5-minutes-part-1/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5分钟看懂5个热门指标（第一部分）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/5-popular-indicators-in-5-minutes-part-2/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5分钟看懂5个热门指标（第二部分）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>

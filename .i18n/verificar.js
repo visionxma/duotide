@@ -102,7 +102,9 @@ else {
         if (k === '_nota') continue;
         if (!(k in y)) { erro('_chrome.json', `chave ausente: ${p}${k}`); continue; }
         if (typeof x[k] === 'object') { comparar(x[k], y[k], `${p}${k}.`); continue; }
-        if (typeof y[k] !== 'string' || !y[k].trim()) { erro('_chrome.json', `valor vazio: ${p}${k}`); continue; }
+        // rodape.legal pode ficar vazio por decisão do dono (26/09/2026)
+        if (typeof y[k] !== 'string' || (!y[k].trim() && p + k !== 'rodape.legal')) { erro('_chrome.json', `valor vazio: ${p}${k}`); continue; }
+        if (!y[k].trim()) continue;
         for (const ph of ['{ano}', '{n}']) if (x[k].includes(ph) && !y[k].includes(ph)) erro('_chrome.json', `${p}${k} perdeu ${ph}`);
         if (pasta !== 'pt-BR' && y[k] === x[k] && x[k].length > 12 && !/Duotide/.test(x[k]) && !['plataformas.apk'].includes(p + k)) erro('_chrome.json', `${p}${k} não traduzido`);
       }

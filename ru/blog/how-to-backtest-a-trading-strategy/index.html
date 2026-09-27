@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" data-tema="dark" data-tv="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Как сделать бэктест стратегии перед реальной торговлей | Blog Duotide</title>
+  <meta name="description" content="Пошаговое руководство по ручному бэктесту, с объяснением формулы математического ожидания и полным решенным числовым примером.">
+  <link rel="canonical" href="https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-fazer-o-backtest-de-uma-estrategia/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-backtest-a-strategy/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-fare-il-backtest-di-una-strategia/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/como-fazer-o-backtest-de-uma-estrategia/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Как сделать бэктест стратегии перед реальной торговлей">
+  <meta property="og:description" content="Пошаговое руководство по ручному бэктесту, с объяснением формулы математического ожидания и полным решенным числовым примером.">
+  <meta property="og:url" content="https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:image:alt" content="Duotide — Блог Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Как сделать бэктест стратегии перед реальной торговлей">
+  <meta name="twitter:description" content="Пошаговое руководство по ручному бэктесту, с объяснением формулы математического ожидания и полным решенным числовым примером.">
+  <meta name="twitter:label1" content="Автор">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Время чтения">
+  <meta name="twitter:data2" content="5 мин.">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/#artigo",
+      "headline": "Как сделать бэктест стратегии перед реальной торговлей",
+      "description": "Пошаговое руководство по ручному бэктесту, с объяснением формулы математического ожидания и полным решенным числовым примером.",
+      "url": "https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/",
+      "inLanguage": "ru",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
+      "articleSection": "Стратегии",
+      "author": {
+        "@type": "Organization",
+        "name": "Команда Duotide",
+        "url": "https://duotide.com.br/ru/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/ru/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://duotide.com.br/ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://duotide.com.br/ru/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Как сделать бэктест стратегии перед реальной торговлей",
+          "item": "https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Перейти к содержанию</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/ru/" aria-label="Duotide — главная страница">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Открыть меню навигации"
+                data-abrir="Открыть меню навигации" data-fechar="Закрыть меню навигации">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Выбрать язык"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="22" height="16"><span>ru</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-fazer-o-backtest-de-uma-estrategia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-backtest-a-strategy/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-fare-il-backtest-di-una-strategia/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-backtest-a-trading-strategy/" hreflang="ru" lang="ru" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-backtest-a-trading-strategy/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Основная навигация">
+        <ul>
+          <li><a href="/ru/">Главная</a></li>
+          <li><a href="/ru/duotide-legit/">Можно ли доверять?</a></li>
+          <li><a href="/ru/duotide-login/">Вход</a></li>
+          <li><a href="/ru/duotide-broker/">О брокере</a></li>
+          <li><a href="/ru/duotide-safe/">Это безопасно?</a></li>
+          <li><a href="/ru/duotide-app/">Приложение</a></li>
+          <li><a href="/ru/best-brokers/">Лучшие брокеры</a></li>
+          <li><a href="/ru/blog/" aria-current="page">Блог</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru"
+           target="_blank" rel="noopener sponsored nofollow">Открыть счёт</a>
+        <a class="btn btn--outline btn--sm" href="/ru/duotide-login/">Вход</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Навигационная цепочка">
+    <div class="container">
+      <ol>
+        <li><a href="/ru/">Главная</a></li>
+        <li><a href="/ru/blog/">Блог</a></li>
+        <li><span aria-current="page">Как сделать бэктест стратегии перед реальной торговлей</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Стратегии</span>
+        <h1>Как сделать бэктест стратегии перед реальной торговлей</h1>
+        <p class="bq-post__meta">Команда Duotide · <time datetime="2026-09-24">24.09.2026</time> · 4 мин чтения</p>
+        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Бэктест — это процесс тестирования торговой стратегии с использованием исторических данных, прежде чем рисковать в ней реальным капиталом. Идея проста: применить те же правила входа и выхода, которые вы использовали бы вживую, к прошлому периоду графика, и зафиксировать, что произошло бы при каждом сгенерированном сигнале. Это этап, который отделяет стратегию с доказанной работоспособностью от идеи, которая лишь кажется хорошей при взгляде на график задним числом.</p><h2>Шаг 1: письменно определите правило входа и выхода</h2><p>Прежде чем смотреть на какие-либо исторические данные, запишите точное правило, которое будете тестировать — например: «покупать, когда цена пробивает максимум последних 20 свечей с объемом на 30% выше среднего; выходить в прибыли при росте на 2% или по стопу при падении на 1%». Расплывчатые правила вроде «покупать, когда кажется хорошей возможностью» невозможно тестировать последовательно, потому что они зависят от субъективного суждения при каждом сигнале.</p><h2>Шаг 2: пройдите историю сигнал за сигналом</h2><p>С определенным правилом пройдите исторический график, определяя каждый раз, когда условие входа было бы выполнено, и зафиксируйте результат, который дало бы правило выхода — прибыль или убыток, в пунктах или процентах. Важно сохранять дисциплину применения правила именно так, как оно написано, не «корректируя» результат после того, как увидели, что произошло, под риском смещения теста в пользу стратегии.</p><h2>Шаг 3: рассчитайте процент успеха и средний payoff</h2><p>После сбора разумной выборки — минимум 30 сигналов, в идеале больше — рассчитайте два числа: процент успеха (доля выигрышных сделок) и средний payoff (средний выигрыш выигрышных сделок, деленный на средний убыток проигрышных). Предположим бэктест с 40 сигналами, 18 выигрышными и 22 проигрышными, средний выигрыш R$ 60,00 в выигрышных и средний убыток R$ 35,00 в проигрышных. Процент успеха составляет 45% (18/40), а payoff — 1,71 (60/35).</p><h2>Шаг 4: рассчитайте математическое ожидание</h2><p>Математическое ожидание измеряет средний ожидаемый результат на сделку и рассчитывается так: (процент успеха × средний выигрыш) − (процент неудач × средний убыток). Используя цифры примера: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = в среднем R$ 7,75 положительных на сделку. Положительное ожидание указывает, что при сохранении той же пропорции успеха и того же payoff со временем стратегия склонна давать положительный результат — что не гарантирует прибыльности каждой отдельной сделки, но указывает на статистическое преимущество в протестированной выборке.</p><h2>Что бэктест не гарантирует</h2><p>Положительный результат на истории не гарантирует такую же динамику в будущем — рыночные условия меняются, и небольшая выборка могла оказаться благоприятной случайно. Кроме того, ручные бэктесты подвержены ретроспективному искажению: легко, невольно, скорректировать интерпретацию сигнала, зная, что произошло потом. Поэтому многие трейдеры продолжают бэктест периодом тестирования на симулированном счете, применяя то же правило в реальном времени, прежде чем торговать значимым капиталом.</p><h2>Применение процесса на практике</h2><ul><li>Запишите правило входа и выхода до просмотра каких-либо исторических данных.</li><li>Соберите минимальную выборку в 30 сигналов, чтобы цифры имели статистический вес.</li><li>Рассчитайте процент успеха, средний payoff и математическое ожидание, прежде чем считать стратегию подтвержденной.</li><li>Протестируйте на симулированном счете в течение периода перед применением реального капитала, даже при положительном бэктесте.</li></ul><p>Бэктест — инструмент фильтрации, а не гарантии: он помогает отбросить стратегии без видимого статистического преимущества и лучше понять ожидаемое поведение оставшихся — но ни одно математическое ожидание, рассчитанное по прошлому, не является обещанием будущего результата.</p><h2>Дополнительная предосторожность: размер выборки важнее, чем кажется</h2><p>Положительное математическое ожидание, рассчитанное всего на 10–15 сигналах, имеет малую статистическую ценность — может быть результатом удачи в выборке, а не реального преимущества стратегии. Чем больше протестированных сигналов, тем больше доверия заслуживает результат, хотя ни одна выборка, какой бы большой она ни была, полностью не устраняет неопределенность относительно будущего. Также стоит тестировать стратегию в разных рыночных периодах — роста, падения и бокового движения, — поскольку правило может хорошо работать в одном режиме и плохо в другом, а бэктест, сделанный только на периоде сильного роста, склонен переоценивать ожидаемый результат.</p>
+        <div class="bq-post__cta">
+          <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными R$ 10 000.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть бесплатный счёт</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Читайте также</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/ru/blog/how-to-choose-the-expiration-of-a-trade/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Как выбрать срок (экспирацию) сделки</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/how-to-choose-a-strategy-for-your-profile/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Как выбрать стратегию по своему типу личности</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/5-most-used-trading-strategies/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 самых используемых стратегий трейдинга, разъяснены</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Авторские права © 2026 Duotide.<br>
+            Все права защищены.<br>
+            Официальный сайт Duotide.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Компания</h2>
+          <ul>
+            <li><a href="/ru/">Главная</a></li>
+            <li><a href="/ru/duotide-legit/">Можно ли доверять Duotide?</a></li>
+            <li><a href="/ru/duotide-login/">Способы входа</a></li>
+            <li><a href="/ru/duotide-broker/">О брокере</a></li>
+            <li><a href="/ru/duotide-safe/">Безопасность брокера</a></li>
+            <li><a href="/ru/duotide-app/">Приложение</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Контакты</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Персональный менеджер 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/ru/duotide-faq/">Частые вопросы</a>
+          <a href="/ru/about/">Об этом сайте</a>
+          <a href="/ru/contact/">Контакты</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Вернуться в начало страницы">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Закрыть">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Бонус</span> <span class="pp__l2">100%</span></h2>
+          <p>Пополните счёт с промокодом <strong>WELCOME100</strong> и получите бонус 100% от суммы депозита.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Промокод</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Скопировано!">Копировать</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Получить</a>
+          <p class="pp__mini">Действуют условия акции. Торговля продуктами с кредитным плечом связана с риском убытков.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>

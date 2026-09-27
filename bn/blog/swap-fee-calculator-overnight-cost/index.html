@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr" data-tema="dark" data-tv="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>সোয়াপ ফি: পজিশন খোলা রাখার খরচ কীভাবে হিসাব করবেন | Blog Duotide</title>
+  <meta name="description" content="ফরেক্স ও সিএফডিতে ওভারনাইট সোয়াপ ফি কীভাবে কাজ করে, তার সূত্র, ট্রিপল রোলওভারের উদাহরণ এবং রিয়ালে সম্পূর্ণ হিসাব জানুন।">
+  <link rel="canonical" href="https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-swap-taxa-overnight/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/swap-rate-how-to-calculate-overnight-cost/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/swap-calculator-overnight-fees/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/swap-fee-paano-kalkulahin-ang-gastos-ng-bukas-na-posisyon/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/taxe-de-swap-comment-calculer-le-cout/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/tasso-di-swap-come-calcolare-il-costo-overnight/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/swap-fee-calculator-overnight-cost/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/swap-orani-overnight-maliyeti-hesaplama/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/phi-swap-cach-tinh-chi-phi-giu-vi-the-mo-qua-dem/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/swap-overnight-fee-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/swap-rate-how-to-calculate-overnight-cost/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="সোয়াপ ফি: পজিশন খোলা রাখার খরচ কীভাবে হিসাব করবেন">
+  <meta property="og:description" content="ফরেক্স ও সিএফডিতে ওভারনাইট সোয়াপ ফি কীভাবে কাজ করে, তার সূত্র, ট্রিপল রোলওভারের উদাহরণ এবং রিয়ালে সম্পূর্ণ হিসাব জানুন।">
+  <meta property="og:url" content="https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide ব্লগ">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="সোয়াপ ফি: পজিশন খোলা রাখার খরচ কীভাবে হিসাব করবেন">
+  <meta name="twitter:description" content="ফরেক্স ও সিএফডিতে ওভারনাইট সোয়াপ ফি কীভাবে কাজ করে, তার সূত্র, ট্রিপল রোলওভারের উদাহরণ এবং রিয়ালে সম্পূর্ণ হিসাব জানুন।">
+  <meta name="twitter:label1" content="লিখেছেন">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="পড়ার সময়">
+  <meta name="twitter:data2" content="5 মিনিট">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260926h">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/#artigo",
+      "headline": "সোয়াপ ফি: পজিশন খোলা রাখার খরচ কীভাবে হিসাব করবেন",
+      "description": "ফরেক্স ও সিএফডিতে ওভারনাইট সোয়াপ ফি কীভাবে কাজ করে, তার সূত্র, ট্রিপল রোলওভারের উদাহরণ এবং রিয়ালে সম্পূর্ণ হিসাব জানুন।",
+      "url": "https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/",
+      "inLanguage": "bn",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
+      "articleSection": "ফরেক্স",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide টিম",
+        "url": "https://duotide.com.br/bn/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/bn/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "হোম",
+          "item": "https://duotide.com.br/bn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ব্লগ",
+          "item": "https://duotide.com.br/bn/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "সোয়াপ ফি: পজিশন খোলা রাখার খরচ কীভাবে হিসাব করবেন",
+          "item": "https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">মূল বিষয়বস্তুতে যান</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/bn/" aria-label="Duotide — হোম পেজ">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="নেভিগেশন মেনু খুলুন"
+                data-abrir="নেভিগেশন মেনু খুলুন" data-fechar="নেভিগেশন মেনু বন্ধ করুন">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="ভাষা নির্বাচন করুন"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="22" height="16"><span>bn</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-swap-taxa-overnight/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/swap-rate-how-to-calculate-overnight-cost/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/swap-calculator-overnight-fees/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/swap-fee-calculator-overnight-cost/" hreflang="bn" lang="bn" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/swap-fee-paano-kalkulahin-ang-gastos-ng-bukas-na-posisyon/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/taxe-de-swap-comment-calculer-le-cout/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/tasso-di-swap-come-calcolare-il-costo-overnight/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/swap-fee-calculator-overnight-cost/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/swap-orani-overnight-maliyeti-hesaplama/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/phi-swap-cach-tinh-chi-phi-giu-vi-the-mo-qua-dem/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/swap-overnight-fee-calculator/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="প্রধান নেভিগেশন">
+        <ul>
+          <li><a href="/bn/">হোম</a></li>
+          <li><a href="/bn/duotide-is-it-trustworthy/">বিশ্বাসযোগ্য কি?</a></li>
+          <li><a href="/bn/duotide-login/">লগইন</a></li>
+          <li><a href="/bn/duotide-broker/">ব্রোকার পরিচিতি</a></li>
+          <li><a href="/bn/duotide-is-it-safe/">নিরাপদ কি?</a></li>
+          <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          <li><a href="/bn/best-brokers/">সেরা ব্রোকার</a></li>
+          <li><a href="/bn/blog/" aria-current="page">ব্লগ</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn"
+           target="_blank" rel="noopener sponsored nofollow">অ্যাকাউন্ট খুলুন</a>
+        <a class="btn btn--outline btn--sm" href="/bn/duotide-login/">লগইন</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="নেভিগেশন পথ">
+    <div class="container">
+      <ol>
+        <li><a href="/bn/">হোম</a></li>
+        <li><a href="/bn/blog/">ব্লগ</a></li>
+        <li><span aria-current="page">সোয়াপ ফি: পজিশন খোলা রাখার খরচ কীভাবে হিসাব করবেন</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">ফরেক্স</span>
+        <h1>সোয়াপ ফি: পজিশন খোলা রাখার খরচ কীভাবে হিসাব করবেন</h1>
+        <p class="bq-post__meta">Duotide টিম · <time datetime="2026-09-24">২৪/০৯/২০২৬</time> · 4 মিনিটে পড়ুন</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>বাজারের দৈনিক সমাপনী সময়ের পরও খোলা রাখা প্রতিটি লিভারেজড পজিশন একটি খরচ — অথবা কিছু ক্ষেত্রে একটি ক্রেডিট — তৈরি করতে পারে, যাকে বলা হয় সোয়াপ ফি, ওভারনাইট ফি বা রোলওভার ফি নামেও পরিচিত। এটি ফরেক্স, সিএফডি, কমোডিটি, সূচক এবং ক্রিপ্টোকারেন্সির মার্জিন পজিশনে দেখা যায়। যদি অপারেশনটি একই দিনে, রোলওভার সময়ের আগে খোলা ও বন্ধ করা হয়, তাহলে সাধারণত হিসাব করার মতো কোনো সোয়াপ থাকে না।</p><p>সোয়াপের সমস্যা হলো, এটি প্রবেশের সময় দৃশ্যমান কোনো চার্জ হিসেবে আসে না। এটি পরে, নীরবে, অ্যাকাউন্টে দেখা দেয়। এ কারণে অনেক ট্রেডার তখনই এর প্রভাব বুঝতে পারেন, যখন স্বল্পমেয়াদী মনে হওয়া একটি অপারেশন, কোনো পরিকল্পনা ছাড়াই, কয়েক দিন ধরে রাখা একটি পজিশনে পরিণত হয়।</p><h2>হিসাব কীভাবে কাজ করে</h2><p>সূত্রটি নির্ভর করে ব্রোকার কীভাবে সোয়াপ ফি প্রদর্শন করে তার উপর। যখন এটি পজিশনের মূল্যের শতাংশ হিসেবে দেখানো হয়:</p><p>সোয়াপ = পজিশনের মূল্য × দৈনিক সোয়াপ হার × চার্জকৃত রাতের সংখ্যা</p><p>যখন এটি লট অনুযায়ী দেখানো হয়:</p><p>সোয়াপ = লটের আকার × প্রতি লটে সোয়াপ × চার্জকৃত রাতের সংখ্যা</p><p>“চার্জকৃত রাতের সংখ্যা” শব্দগুচ্ছটি মনোযোগ দাবি করে। সপ্তাহান্তে ধরে রাখা একটি পজিশন সাধারণত একের বেশি রাত হিসেবে গণনা করা হয়, কারণ বাজার বন্ধ থাকা সময়টুকু নিষ্পত্তি করতে হয়। অনেক প্ল্যাটফর্ম সপ্তাহের একটি নির্দিষ্ট দিনে ট্রিপল রোলওভার প্রয়োগ করে, তবে সঠিক দিন এবং হার যন্ত্র ও ব্রোকার ভেদে পরিবর্তিত হয় — তাই রাতভর কোনো পজিশন খোলা রাখার সিদ্ধান্ত নেওয়ার আগে সবসময় বর্তমান শর্তাবলি যাচাই করা ভালো।</p><h2>সমাধানকৃত উদাহরণ: শতাংশ সোয়াপ</h2><p>ধরুন R$ 7.500 এক্সপোজার মূল্যের একটি পজিশন, ক্রয় অপারেশনের জন্য দৈনিক সোয়াপ হার 0,05% এবং তিন রাত চার্জ ধরে রাখা হয়েছে (সপ্তাহান্তের ট্রিপল রোলওভার অন্তর্ভুক্ত থাকায়)। হিসাবটি হলো:</p><p>R$ 7.500 × 0,05% × 3 = R$ 11,25 আনুমানিক খরচ</p><p>যদি একই পজিশনের বিক্রয় দিকে দৈনিক হার −0,02% হয় (খরচের বদলে একটি ক্রেডিট), তাহলে একই তিন রাতের ফলাফল হবে:</p><p>R$ 7.500 × (−0,02%) × 3 = −R$ 4,50, অর্থাৎ অ্যাকাউন্টে R$ 4,50 এর একটি ক্রেডিট</p><p>লক্ষ করুন যে হারের চিহ্ন ফলাফলকে খরচ থেকে ক্রেডিটে পরিবর্তন করে দেয় — তাই প্ল্যাটফর্মে দেখানো চিহ্নটি ঠিক যেমন আছে তেমনই ব্যবহার করা জরুরি, সংখ্যাটি মনে মনে অভিযোজিত না করে।</p><h2>কেন ক্রয় ও বিক্রয়ের খরচ ভিন্ন হয়</h2><p>সোয়াপ কোনো এলোমেলো চার্জ নয়। ফরেক্সে এটি জোড়ার দুটি মুদ্রার সুদের হারের পার্থক্যের সঙ্গে যুক্ত। সিএফডিতে এটি অর্থায়ন খরচ, তারল্য এবং যন্ত্রের নির্দিষ্ট নিয়ম প্রতিফলিত করতে পারে। তাই এটি সাধারণ যে:</p><ul><li>একই সম্পদে ক্রয় অপারেশনের অর্থায়ন খরচ বিক্রয় অপারেশনের থেকে ভিন্ন হয়।</li><li>জোড়ার একদিক পরিশোধ করে, অন্যদিক গ্রহণ করে, জড়িত মুদ্রাগুলোর সুদের পার্থক্যের উপর নির্ভর করে।</li><li>ব্রোকারের সমন্বয় এবং প্রতিটি যন্ত্রের নির্দিষ্ট নিয়মও চূড়ান্ত মূল্যকে প্রভাবিত করে।</li></ul><p>এর অর্থ এই নয় যে অপারেশনের দিক সোয়াপের ভিত্তিতে বেছে নিতে হবে। দিকটি অবশ্যই টেকনিক্যাল বিশ্লেষণ বা অপারেশনের পেছনের পরিস্থিতি থেকে আসতে হবে। কিন্তু যখন দুটি এন্ট্রি ধারণা একই রকম হয় এবং একটির ওভারনাইট খরচ অনেক বেশি, তখন সোয়াপ একটি বৈধ নির্ধারক মানদণ্ড হয়ে ওঠে।</p><h2>সোয়াপ আসলে কখন গুরুত্বপূর্ণ</h2><p>প্রতি রাতে R$ 2 খরচ স্বয়ংক্রিয়ভাবে গুরুত্বপূর্ণ নয়। R$ 150 লক্ষ্যমাত্রার একটি অপারেশনে এই মূল্য প্রায় অপ্রাসঙ্গিক। একই অপারেশনে, কিন্তু মাত্র R$ 8 লক্ষ্যমাত্রায় — একজন স্ক্যালপারের জন্য সাধারণ —, প্রতি রাতের এই R$ 2 প্রত্যাশিত ফলাফলের একটি বিশাল অংশ ক্ষয় করে দেয়।</p><p>রাতভর পজিশন খোলা রাখার আগে করার মতো বাস্তবসম্মত হিসাবটি সহজ: পরিকল্পিত রাতের সংখ্যার জন্য সোয়াপের আনুমানিক মূল্য নিয়ে অপারেশনের লাভের লক্ষ্যমাত্রার সঙ্গে তুলনা করা। যদি সোয়াপ লক্ষ্যমাত্রার একটি ছোট অংশ প্রতিনিধিত্ব করে, তবে খরচটি সামলানো যায়। যদি এটি একটি বড় অংশ প্রতিনিধিত্ব করে, তাহলে পজিশন খোলা রাখা পুনর্বিবেচনা করা বা তা পূরণ করতে আকার কমানো বিবেচ্য।</p><h2>যে অভ্যাস অ্যাকাউন্টে বিস্ময় এড়ায়</h2><p>এই হিসাব ব্যবহার করার বাস্তবসম্মত ধাপগুলো হলো: প্রথমত, ব্রোকার কীভাবে সোয়াপ হার দেখায় তা যাচাই করা — শতাংশ নাকি প্রতি লট; দ্বিতীয়ত, পজিশনের মূল্য বা লটের আকার হিসাব করা; তৃতীয়ত, ক্রয় ও বিক্রয়ের হার আলাদাভাবে প্রয়োগ করা, যেহেতু এগুলো সাধারণত ভিন্ন হয়; চতুর্থত, পজিশনটি প্রকৃতপক্ষে যত রাত খোলা থাকবে তার সংখ্যা দিয়ে গুণ করা, প্রযোজ্য ক্ষেত্রে ট্রিপল রোলওভার ভুলে না গিয়ে; সবশেষে, ফলাফলটি অপারেশনের পরিকল্পিত লক্ষ্যমাত্রার সঙ্গে তুলনা করা।</p><p>সোয়াপকে প্রায়ই একটি ছোট বিষয় হিসেবে বিবেচনা করা হয়, কারণ স্প্রেডের বিপরীতে এটি স্ক্রিনে তাৎক্ষণিকভাবে প্রদর্শিত হয় না। কিন্তু অলক্ষ্যে চলে যাওয়া একটি খরচও খরচই থেকে যায়। কোনো পজিশন একদিন থেকে অন্যদিনে খোলা রাখার সিদ্ধান্ত নেওয়ার আগে, তা Duotide-এ হোক বা অন্য কোনো প্ল্যাটফর্মে, এই দ্রুত হিসাবটি করে নেওয়া মূল্যবান — এটি চার্টে একটি ইতিবাচক ফলাফলকে স্টেটমেন্টে একটি নেতিবাচক বিস্ময়ে পরিণত হওয়া থেকে রক্ষা করে।</p>
+        <div class="bq-post__cta">
+          <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>আরও পড়ুন</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/bn/blog/pip-calculator-how-to-calculate-pip-value/"><img src="/assets/img/terra.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ফরেক্সে পিপের মূল্য ধাপে ধাপে কীভাবে হিসাব করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/how-to-calculate-forex-spread/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">কীভাবে ফরেক্সে স্প্রেড হিসাব করবেন: সূত্র ও উদাহরণ</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/alphabet-googl-stock-pulls-back-ai-spending/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Alphabet-এর শেয়ারে ভাটা, বাজার AI-এর খরচের হিসাব কষছে</span><span class="bq__meta">২৪/০৯/২০২৬ · 3 মিনিটে পড়ুন</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">কপিরাইট © 2026 Duotide।<br>
+            সর্বস্বত্ব সংরক্ষিত।<br>
+            الموقع الرسمي.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>প্রতিষ্ঠান</h2>
+          <ul>
+            <li><a href="/bn/">হোম</a></li>
+            <li><a href="/bn/duotide-is-it-trustworthy/">Duotide কি বিশ্বাসযোগ্য?</a></li>
+            <li><a href="/bn/duotide-login/">লগইন পদ্ধতি</a></li>
+            <li><a href="/bn/duotide-broker/">ব্রোকার সম্পর্কে জানুন</a></li>
+            <li><a href="/bn/duotide-is-it-safe/">ব্রোকারের নিরাপত্তা</a></li>
+            <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>যোগাযোগ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>২৪/৭ অ্যাকাউন্ট ম্যানেজার</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/bn/duotide-faq/">সাধারণ প্রশ্নোত্তর</a>
+          <a href="/bn/about-this-site/">এই সাইট সম্পর্কে</a>
+          <a href="/bn/contact/">যোগাযোগ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="পেজের উপরে ফিরে যান">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="বন্ধ করুন">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">বোনাস</span> <span class="pp__l2">100%</span></h2>
+          <p><strong>WELCOME100</strong> কুপন দিয়ে ডিপোজিট করুন এবং জমা করা অর্থের উপর 100% বোনাস পান।</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">কুপন</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="কপি হয়েছে!">কপি</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">এখনই নিন</a>
+          <p class="pp__mini">অফারের শর্তাবলী প্রযোজ্য। লিভারেজড পণ্যে ট্রেডিংয়ে ক্ষতির ঝুঁকি আছে।</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260926h" defer></script>
+</body>
+</html>
