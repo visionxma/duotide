@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr" data-tema="dark" data-tv="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>ট্রেডিংয়ে হেজ: অন্য পজিশন দিয়ে একটি ট্রেড রক্ষা | Blog Duotide</title>
+  <meta name="description" content="স্বল্পমেয়াদি ট্রেডে হেজ কীভাবে কাজ করে, একটি সম্পূর্ণ সংখ্যাগত উদাহরণ এবং কখন এই সুরক্ষা অর্থবহ তা জানার মানদণ্ডসহ।">
+  <link rel="canonical" href="https://duotide.com.br/bn/blog/hedging-strategy-for-options-trades/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-de-hedge-para-operacoes-de-opcoes/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/estrategia-de-hedge-para-operaciones-de-opciones/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/hedging-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/hedge-im-trading-operation-absichern/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/hedge-sa-trading-protektahan-ang-operasyon/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/hedge-en-trading-comment-proteger-une-operation/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/hedge-i-trading-skydda-en-affar/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/trading-de-hedge-bir-islemi-baska-pozisyonla-korumak/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/hedge-trong-giao-dich-cach-bao-ve-mot-lenh-bang-lenh-khac/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ট্রেডিংয়ে হেজ: অন্য পজিশন দিয়ে একটি ট্রেড রক্ষা">
+  <meta property="og:description" content="স্বল্পমেয়াদি ট্রেডে হেজ কীভাবে কাজ করে, একটি সম্পূর্ণ সংখ্যাগত উদাহরণ এবং কখন এই সুরক্ষা অর্থবহ তা জানার মানদণ্ডসহ।">
+  <meta property="og:url" content="https://duotide.com.br/bn/blog/hedging-strategy-for-options-trades/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide ব্লগ">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ট্রেডিংয়ে হেজ: অন্য পজিশন দিয়ে একটি ট্রেড রক্ষা">
+  <meta name="twitter:description" content="স্বল্পমেয়াদি ট্রেডে হেজ কীভাবে কাজ করে, একটি সম্পূর্ণ সংখ্যাগত উদাহরণ এবং কখন এই সুরক্ষা অর্থবহ তা জানার মানদণ্ডসহ।">
+  <meta name="twitter:label1" content="লিখেছেন">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="পড়ার সময়">
+  <meta name="twitter:data2" content="5 মিনিট">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/bn/blog/hedging-strategy-for-options-trades/#artigo",
+      "headline": "ট্রেডিংয়ে হেজ: অন্য পজিশন দিয়ে একটি ট্রেড রক্ষা",
+      "description": "স্বল্পমেয়াদি ট্রেডে হেজ কীভাবে কাজ করে, একটি সম্পূর্ণ সংখ্যাগত উদাহরণ এবং কখন এই সুরক্ষা অর্থবহ তা জানার মানদণ্ডসহ।",
+      "url": "https://duotide.com.br/bn/blog/hedging-strategy-for-options-trades/",
+      "inLanguage": "bn",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
+      "articleSection": "কৌশল",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide টিম",
+        "url": "https://duotide.com.br/bn/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/bn/blog/hedging-strategy-for-options-trades/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/bn/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "হোম",
+          "item": "https://duotide.com.br/bn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ব্লগ",
+          "item": "https://duotide.com.br/bn/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ট্রেডিংয়ে হেজ: অন্য পজিশন দিয়ে একটি ট্রেড রক্ষা",
+          "item": "https://duotide.com.br/bn/blog/hedging-strategy-for-options-trades/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">মূল বিষয়বস্তুতে যান</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/bn/" aria-label="Duotide — হোম পেজ">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="নেভিগেশন মেনু খুলুন"
+                data-abrir="নেভিগেশন মেনু খুলুন" data-fechar="নেভিগেশন মেনু বন্ধ করুন">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="ভাষা নির্বাচন করুন"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="22" height="16"><span>bn</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/estrategia-de-hedge-para-operacoes-de-opcoes/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/hedging-strategy-for-options-trades/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/estrategia-de-hedge-para-operaciones-de-opciones/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/hedge-strategy-for-options-trades/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/hedging-strategy-for-options-trades/" hreflang="bn" lang="bn" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/hedge-im-trading-operation-absichern/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/hedge-sa-trading-protektahan-ang-operasyon/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/hedge-en-trading-comment-proteger-une-operation/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/strategi-hedge-untuk-transaksi-opsi/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/hedge-nel-trading-come-proteggere-unoperazione/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/hedge-strategy-for-options-trades/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/hedge-i-trading-skydda-en-affar/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/hedge-strategy-for-options-trades/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/trading-de-hedge-bir-islemi-baska-pozisyonla-korumak/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/hedge-trong-giao-dich-cach-bao-ve-mot-lenh-bang-lenh-khac/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/hedge-strategy-for-options-trades/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="প্রধান নেভিগেশন">
+        <ul>
+          <li><a href="/bn/">হোম</a></li>
+          <li><a href="/bn/duotide-is-it-trustworthy/">বিশ্বাসযোগ্য কি?</a></li>
+          <li><a href="/bn/duotide-login/">লগইন</a></li>
+          <li><a href="/bn/duotide-broker/">ব্রোকার পরিচিতি</a></li>
+          <li><a href="/bn/duotide-is-it-safe/">নিরাপদ কি?</a></li>
+          <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          <li><a href="/bn/best-brokers/">সেরা ব্রোকার</a></li>
+          <li><a href="/bn/blog/" aria-current="page">ব্লগ</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn"
+           target="_blank" rel="noopener sponsored nofollow">অ্যাকাউন্ট খুলুন</a>
+        <a class="btn btn--outline btn--sm" href="/bn/duotide-login/">লগইন</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="নেভিগেশন পথ">
+    <div class="container">
+      <ol>
+        <li><a href="/bn/">হোম</a></li>
+        <li><a href="/bn/blog/">ব্লগ</a></li>
+        <li><span aria-current="page">ট্রেডিংয়ে হেজ: অন্য পজিশন দিয়ে একটি ট্রেড রক্ষা</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">কৌশল</span>
+        <h1>ট্রেডিংয়ে হেজ: অন্য পজিশন দিয়ে একটি ট্রেড রক্ষা</h1>
+        <p class="bq-post__meta">Duotide টিম · <time datetime="2026-09-24">২৪/০৯/২০২৬</time> · 4 মিনিটে পড়ুন</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>হেজ একটি শব্দ যা অর্থনীতিতে সবসময় দেখা যায় এবং প্রায়ই একটি জটিল কিছু হিসেবে বিবেচিত হয়, বড় ফান্ডের জন্য সংরক্ষিত। বাস্তবে, যুক্তিটি সহজ: একটি একক দিকে সবকিছু বাজি ধরার বদলে, আপনি একটি দ্বিতীয় পজিশন খোলেন যা বাজার প্রথমটির বিপক্ষে নড়াচড়া করলে ফলাফলের একটি অংশ রক্ষা করে। লক্ষ্য দুইবার লাভ করা নয় — বাজারের পাঠ ভুল হলে ক্ষতির আকার কমানো।</p><p>এই ধারণাটি শেয়ার, মুদ্রা, কমোডিটি এবং অতি স্বল্পমেয়াদি ট্রেডেও প্রযোজ্য। সাধারণ বিষয়টি সবসময় একই: এক ধরনের বীমা কেনা, এমনকি এটি মূল ট্রেডের সম্ভাব্য লাভের একটি অংশ খরচ করলেও।</p><h2>হেজের পেছনের নীতি</h2><p>একটি ক্লাসিক হেজ একই সম্পদে, বা একই রকম নড়াচড়া করা সম্পদে, বিপরীত ফলাফলসহ দুটি পজিশন একত্রিত করে। যদি প্রথম পজিশনটি একটি মুদ্রার বৃদ্ধিতে বাজি ধরে এবং দ্বিতীয়টি একই মুদ্রার পতনে বাজি ধরে, তাহলে চূড়ান্ত ফলাফল নির্ভর করে দাম কতটা নড়াচড়া করেছে এবং প্রতিটি পজিশনের আপেক্ষিক আকারের ওপর — শুধু কে জিতেছে এবং কে হেরেছে তার ওপর নয়।</p><p>এই সুরক্ষা তৈরি করার দুটি সাধারণ উপায় আছে। প্রথমটি হলো একযোগে হেজ: প্রায় একই সময়ে দুটি প্রান্ত খোলা, সাধারণত কারণ বাজারের পাঠ দুটি সম্ভাব্য পরিস্থিতির মধ্যে বিভক্ত। দ্বিতীয়টি হলো সমন্বয় হেজ: প্রথমটি ইতিমধ্যে ক্ষতিতে থাকার পর দ্বিতীয় পজিশন খোলা, একটি সর্বোচ্চ ক্ষতি নির্ধারণ করতে এবং দাম বিপরীত দিকে চলতে থাকলে ফলাফলকে আরও খারাপ হতে না দিতে।</p><h2>গোল সংখ্যাসহ একটি উদাহরণ</h2><p>ধরুন রিয়েলের বিপক্ষে ডলারের বৃদ্ধিতে বাজি ধরে R$ 200.00-এর একটি ট্রেড, সঠিক হলে 85% রিটার্ন এবং 30 মিনিটে মেয়াদ শেষ। 10 মিনিট বাকি থাকতে, একটি অর্থনৈতিক সংবাদ পরিস্থিতি বদলে দেয় এবং দাম পজিশনের বিপক্ষে চলতে শুরু করে। শুধু ফলাফলের অপেক্ষা করার বদলে, আপনি একই 85% রিটার্নসহ ডলারের পতনে বাজি ধরে R$ 100.00-এর একটি দ্বিতীয় ট্রেড খোলেন।</p><p>দুটি সম্ভাব্য ফলাফল আছে। যদি ডলার বৃদ্ধিতে বন্ধ হয়, প্রথম ট্রেডটি R$ 170.00 লাভ দেয় (R$ 200.00-এর 85%) এবং দ্বিতীয়টি বিনিয়োগ করা R$ 100.00 হারায় — R$ 70.00 লাভের নিট ফলাফল। যদি ডলার পতনে বন্ধ হয়, প্রথম ট্রেডটি R$ 200.00 হারায় এবং দ্বিতীয়টি R$ 85.00 লাভ দেয় (R$ 100.00-এর 85%) — R$ 115.00 ক্ষতির নিট ফলাফল। কিছু না করার সঙ্গে তুলনা করলে — ডলার পড়ে গেলে পুরো R$ 200.00 হারানো — হেজ খারাপ পরিস্থিতিতে ক্ষতি R$ 85.00 কমিয়েছে, ভালো পরিস্থিতিতে লাভ কমানোর খরচে।</p><h2>কখন হেজ ব্যবহার করা অর্থবহ</h2><ul><li>যখন ইতিমধ্যে খোলা একটি ট্রেডের মাঝখানে একটি প্রাসঙ্গিক সংবাদ আসে এবং বাকি মেয়াদ নিরাপদে পজিশন বন্ধ করার সুযোগ দেয় না।</li><li>যখন টেকনিক্যাল পাঠ দুটি পরিস্থিতির মধ্যে বিভক্ত হয়ে যায় এবং সঠিক দিক অনুমান করার চেষ্টার চেয়ে মোট এক্সপোজার কমানো বেশি গুরুত্বপূর্ণ হয়।</li><li>যখন লক্ষ্য দিনের লাভের একটি ধারা রক্ষা করা, একটি একক ট্রেডে সবকিছু ফিরিয়ে দেওয়ার ঝুঁকি নেওয়ার বদলে একটি ছোট ফলাফল মেনে নেওয়া।</li></ul><h2>কখন হেজ সাহায্যের চেয়ে বেশি বাধা দেয়</h2><p>হেজের একটি খরচ আছে — সাধারণত সম্ভাব্য লাভ কমায়, কারণ দুটি পজিশন সাধারণত প্রতিটি পরিস্থিতিতে একই শতাংশ রিটার্ন ভাগ করে না। একটি ট্রেড খারাপ যেতে শুরু করলেই প্রতিবার প্রতিফলিতভাবে হেজ ব্যবহার করা, বাজারে প্রবেশের আগে নির্ধারিত একটি পরিকল্পনার অংশ হিসেবে হেজ ব্যবহার করা থেকে ভিন্ন। প্রথম ক্ষেত্রে, হেজ ক্ষতি অস্বীকার করার একটি উপায়ে পরিণত হয়; দ্বিতীয় ক্ষেত্রে, এটি একটি ঝুঁকি ব্যবস্থাপনা টুল। পার্থক্যটি হলো ট্রেড করার আগে ব্যবহারের মানদণ্ড ঠিক করা, মুহূর্তের উত্তেজনায় নয়।</p><h2>দৈনন্দিন প্রয়োগের আগে কীভাবে পরীক্ষা করবেন</h2><p>আসল টাকা দিয়ে হেজ ব্যবহার করার আগে, একটি ট্রেডের চারটি সম্ভাব্য পরিস্থিতি সিমুলেট করা ভালো — ছোট বৃদ্ধি, বড় বৃদ্ধি, ছোট পতন, বড় পতন — এবং দ্বিতীয় পজিশনসহ ও ছাড়া প্রতিটির নিট ফলাফল হিসাব করা। ডুওটাইডের মতো টুল ট্রেড খোলার আগে প্রতিটি সম্পদের রিটার্ন দেখায়, যা চাপের মধ্যে ট্রেডের মাঝখানে সিদ্ধান্ত নেওয়ার বদলে আগে থেকে এই হিসাব করা সহজ করে। হেজ ঝুঁকি দূর করে না: এটি পরিস্থিতিগুলোর মধ্যে ঝুঁকি পুনর্বণ্টন করে, এবং এই বিনিময় আপনার মূলধন এবং পরিকল্পনার জন্য অর্থবহ কিনা তা সিদ্ধান্ত নেওয়া যিনি ট্রেড করেন তার ওপর নির্ভর করে।</p>
+        <div class="bq-post__cta">
+          <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>আরও পড়ুন</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/bn/blog/ema-crossover-trading-technique/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ট্রেডিংয়ে এক্সপোনেনশিয়াল মুভিং এভারেজ (EMA) ক্রসওভার</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/choosing-a-trading-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">কীভাবে একটি ট্রেডের মেয়াদ (এক্সপায়ারি) বেছে নেবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/dual-stochastic-trading-strategy/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ডুয়াল স্টোকাস্টিক কৌশল: দুটি অসিলেটর মেলানো</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">কপিরাইট © 2026 Duotide।<br>
+            সর্বস্বত্ব সংরক্ষিত।<br>
+            الموقع الرسمي.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>প্রতিষ্ঠান</h2>
+          <ul>
+            <li><a href="/bn/">হোম</a></li>
+            <li><a href="/bn/duotide-is-it-trustworthy/">Duotide কি বিশ্বাসযোগ্য?</a></li>
+            <li><a href="/bn/duotide-login/">লগইন পদ্ধতি</a></li>
+            <li><a href="/bn/duotide-broker/">ব্রোকার সম্পর্কে জানুন</a></li>
+            <li><a href="/bn/duotide-is-it-safe/">ব্রোকারের নিরাপত্তা</a></li>
+            <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>যোগাযোগ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>২৪/৭ অ্যাকাউন্ট ম্যানেজার</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/bn/duotide-faq/">সাধারণ প্রশ্নোত্তর</a>
+          <a href="/bn/about-this-site/">এই সাইট সম্পর্কে</a>
+          <a href="/bn/contact/">যোগাযোগ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="পেজের উপরে ফিরে যান">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="বন্ধ করুন">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">বোনাস</span> <span class="pp__l2">100%</span></h2>
+          <p><strong>WELCOME100</strong> কুপন দিয়ে ডিপোজিট করুন এবং জমা করা অর্থের উপর 100% বোনাস পান।</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">কুপন</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="কপি হয়েছে!">কপি</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">এখনই নিন</a>
+          <p class="pp__mini">অফারের শর্তাবলী প্রযোজ্য। লিভারেজড পণ্যে ট্রেডিংয়ে ক্ষতির ঝুঁকি আছে।</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr" data-tema="dark" data-tv="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>ঐতিহাসিক ভোলাটিলিটি: কনফিগার ও ব্যাখ্যা | Blog Duotide</title>
+  <meta name="description" content="ঐতিহাসিক ভোলাটিলিটি ইনডিকেটর কীভাবে হিসাব করা হয়, পিরিয়ড কীভাবে কনফিগার করবেন এবং স্টপ ও পজিশন সামঞ্জস্য করতে এটি কীভাবে ব্যবহার করবেন তা বুঝুন।">
+  <link rel="canonical" href="https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-de-volatilidade-historica/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/historical-volatility-indicator/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/historical-volatility-indicator/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/volatilite-historique-comment-configurer-et-interpreter/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/indikator-volatilitas-historis/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/volatilita-storica-come-configurare-e-interpretare/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/historical-volatility-indicator/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/tarihsel-volatilite-nasil-yapilandirilir-ve-yorumlanir/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/historical-volatility-indicator/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ঐতিহাসিক ভোলাটিলিটি: কনফিগার ও ব্যাখ্যা">
+  <meta property="og:description" content="ঐতিহাসিক ভোলাটিলিটি ইনডিকেটর কীভাবে হিসাব করা হয়, পিরিয়ড কীভাবে কনফিগার করবেন এবং স্টপ ও পজিশন সামঞ্জস্য করতে এটি কীভাবে ব্যবহার করবেন তা বুঝুন।">
+  <meta property="og:url" content="https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide ব্লগ">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ঐতিহাসিক ভোলাটিলিটি: কনফিগার ও ব্যাখ্যা">
+  <meta name="twitter:description" content="ঐতিহাসিক ভোলাটিলিটি ইনডিকেটর কীভাবে হিসাব করা হয়, পিরিয়ড কীভাবে কনফিগার করবেন এবং স্টপ ও পজিশন সামঞ্জস্য করতে এটি কীভাবে ব্যবহার করবেন তা বুঝুন।">
+  <meta name="twitter:label1" content="লিখেছেন">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="পড়ার সময়">
+  <meta name="twitter:data2" content="5 মিনিট">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/#artigo",
+      "headline": "ঐতিহাসিক ভোলাটিলিটি: কনফিগার ও ব্যাখ্যা",
+      "description": "ঐতিহাসিক ভোলাটিলিটি ইনডিকেটর কীভাবে হিসাব করা হয়, পিরিয়ড কীভাবে কনফিগার করবেন এবং স্টপ ও পজিশন সামঞ্জস্য করতে এটি কীভাবে ব্যবহার করবেন তা বুঝুন।",
+      "url": "https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/",
+      "inLanguage": "bn",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "ইন্ডিকেটর",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide টিম",
+        "url": "https://duotide.com.br/bn/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/bn/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "হোম",
+          "item": "https://duotide.com.br/bn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ব্লগ",
+          "item": "https://duotide.com.br/bn/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ঐতিহাসিক ভোলাটিলিটি: কনফিগার ও ব্যাখ্যা",
+          "item": "https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">মূল বিষয়বস্তুতে যান</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/bn/" aria-label="Duotide — হোম পেজ">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="নেভিগেশন মেনু খুলুন"
+                data-abrir="নেভিগেশন মেনু খুলুন" data-fechar="নেভিগেশন মেনু বন্ধ করুন">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="ভাষা নির্বাচন করুন"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="22" height="16"><span>bn</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/indicador-de-volatilidade-historica/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/historical-volatility-indicator/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/historical-volatility-indicator/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/historical-volatility-indicator-guide/" hreflang="bn" lang="bn" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/volatilite-historique-comment-configurer-et-interpreter/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/indikator-volatilitas-historis/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/volatilita-storica-come-configurare-e-interpretare/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/historical-volatility-indicator/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/historisk-volatilitet-installning-tolkning/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/tarihsel-volatilite-nasil-yapilandirilir-ve-yorumlanir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="প্রধান নেভিগেশন">
+        <ul>
+          <li><a href="/bn/">হোম</a></li>
+          <li><a href="/bn/duotide-is-it-trustworthy/">বিশ্বাসযোগ্য কি?</a></li>
+          <li><a href="/bn/duotide-login/">লগইন</a></li>
+          <li><a href="/bn/duotide-broker/">ব্রোকার পরিচিতি</a></li>
+          <li><a href="/bn/duotide-is-it-safe/">নিরাপদ কি?</a></li>
+          <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          <li><a href="/bn/best-brokers/">সেরা ব্রোকার</a></li>
+          <li><a href="/bn/blog/" aria-current="page">ব্লগ</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn"
+           target="_blank" rel="noopener sponsored nofollow">অ্যাকাউন্ট খুলুন</a>
+        <a class="btn btn--outline btn--sm" href="/bn/duotide-login/">লগইন</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="নেভিগেশন পথ">
+    <div class="container">
+      <ol>
+        <li><a href="/bn/">হোম</a></li>
+        <li><a href="/bn/blog/">ব্লগ</a></li>
+        <li><span aria-current="page">ঐতিহাসিক ভোলাটিলিটি: কনফিগার ও ব্যাখ্যা</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">ইন্ডিকেটর</span>
+        <h1>ঐতিহাসিক ভোলাটিলিটি: কনফিগার ও ব্যাখ্যা</h1>
+        <p class="bq-post__meta">Duotide টিম · <time datetime="2026-09-24">২৪/০৯/২০২৬</time> · 4 মিনিটে পড়ুন</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>দামের দিক ভবিষ্যদ্বাণী করার চেষ্টা করা বেশিরভাগ ইনডিকেটরের বিপরীতে, ঐতিহাসিক ভোলাটিলিটি ইনডিকেটর বাজার বাড়বে নাকি কমবে তা নিয়ে মতামত দেয় না — এটি পরিমাপ করে একটি নির্দিষ্ট পিরিয়ডে দাম ওপরে বা নিচে কতটা ওঠানামা করেছে। এই তথ্যটি, একটি কেনা বা বিক্রির সংকেতের চেয়ে কম আকর্ষণীয় হলেও, স্টপ, পজিশনের আকার নির্ধারণ করতে এবং এমনকি কোন মুহূর্তে ট্রেড করা বেশি মূল্যবান তা বেছে নিতে মৌলিক।</p><p>এই লেখায় আপনি বুঝবেন ঐতিহাসিক ভোলাটিলিটি কীভাবে হিসাব করা হয়, ইনডিকেটরটি কীভাবে কনফিগার করবেন এবং বাস্তবে এর পরিবর্তনগুলো কীভাবে ব্যাখ্যা করবেন।</p><h2>ঐতিহাসিক ভোলাটিলিটি কী পরিমাপ করে</h2><p>ঐতিহাসিক ভোলাটিলিটি একটি নির্দিষ্ট সংখ্যক ক্যান্ডেলে একটি সম্পদের দৈনিক (বা বেছে নেওয়া পিরিয়ডের) রিটার্নের স্ট্যান্ডার্ড ডেভিয়েশন হিসাব করে, সাধারণত ভিন্ন সম্পদের মধ্যে তুলনা সহজ করতে বার্ষিকীকৃত শর্তে প্রকাশ করা হয়। সহজ কথায়: ক্লোজিং দাম একটি ক্যান্ডেল থেকে আরেকটিতে যত বেশি পরিবর্তিত হয়, ঐতিহাসিক ভোলাটিলিটি তত বেশি; দাম যত স্থিতিশীল, এটি তত কম।</p><p>ভোলাটিলিটিকে দিকের সঙ্গে গুলিয়ে না ফেলা গুরুত্বপূর্ণ। একটি সম্পদের একটি তীব্র পতনের সময় এবং একটি তীব্র বৃদ্ধির সময় উভয় ক্ষেত্রেই উচ্চ ঐতিহাসিক ভোলাটিলিটি থাকতে পারে — ইনডিকেটরটি এটি আলাদা করে না, শুধু দিক নির্বিশেষে পরিবর্তনের ব্যাপ্তি পরিমাপ করে।</p><h2>সরলীকৃতভাবে হিসাবটি কীভাবে কাজ করে</h2><p>ধরুন পাঁচটি ক্যান্ডেল জুড়ে +2%, −1%, +3%, −2% এবং +1% দৈনিক রিটার্নসহ একটি সম্পদ। ঐতিহাসিক ভোলাটিলিটি হিসাব করে গড়ে এই রিটার্নগুলো পিরিয়ডের গড় রিটার্ন থেকে কতটা দূরে সরে যায় — এই বিচ্ছুরণ যত বেশি, ইনডিকেটরের চূড়ান্ত মান তত বেশি। যে সম্পদের দৈনিক রিটার্ন সাধারণত −0.5% এবং +0.5%-এর মধ্যে থাকে তার ঐতিহাসিক ভোলাটিলিটি এমন একটি সম্পদের চেয়ে অনেক কম দেখাবে যার দৈনিক রিটার্ন সাধারণত −3% এবং +3%-এর মধ্যে পরিবর্তিত হয়, এমনকি উভয়ে একই সঞ্চিত ফলাফল দিয়ে পিরিয়ড শেষ করলেও।</p><h2>ইনডিকেটরের পিরিয়ড কনফিগার করা</h2><p>ঐতিহাসিক ভোলাটিলিটি হিসাব করার সবচেয়ে সাধারণ পিরিয়ড হলো 10, 20 বা 30 ক্যান্ডেল, বিশ্লেষণের দিগন্তের ওপর নির্ভর করে। 10-এর মতো ছোট পিরিয়ড সাম্প্রতিকতম ভোলাটিলিটি প্রতিফলিত করে, সম্পদের আচরণে পরিবর্তনে দ্রুত প্রতিক্রিয়া দেখায় — যারা স্বল্প মেয়াদে ট্রেড করেন এবং সবচেয়ে সাম্প্রতিক পরিবেশের সঙ্গে স্টপ সামঞ্জস্য করতে চান তাদের জন্য উপকারী। 30-এর মতো বড় পিরিয়ড এই পরিবর্তনগুলো মসৃণ করে এবং সম্পদের একটি বেশি কাঠামোগত ভোলাটিলিটি দেখায়, যারা দীর্ঘ মেয়াদে ট্রেড করেন তাদের জন্য উপকারী।</p><p>একটি সাধারণ অভ্যাস হলো ইনডিকেটরের বর্তমান পাঠকে একই সম্পদে তার নিজের ঐতিহাসিক গড়ের সঙ্গে তুলনা করা: সাধারণত 10% এবং 15%-এর মধ্যে ট্রেড করা একটি সম্পদের জন্য 25%-এর একটি ঐতিহাসিক ভোলাটিলিটি বেশি বিবেচিত হতে পারে, কিন্তু সাধারণত 35% এবং 45%-এর মধ্যে পরিবর্তিত হওয়া একটি সম্পদের জন্য কম বিবেচিত হবে।</p><h2>স্টপ নির্ধারণ করতে ঐতিহাসিক ভোলাটিলিটি ব্যবহার করা</h2><p>যখন ঐতিহাসিক ভোলাটিলিটি বেশি থাকে, রিয়েল বা পয়েন্টে একটি স্থির দূরত্বের ভিত্তিতে হিসাব করা একটি স্টপ ট্রেডের মূল কারণের সঙ্গে কোনো সম্পর্ক ছাড়াই শুধু বাজারের স্বাভাবিক নয়েজ দ্বারা বেশি ঘনঘন পৌঁছাতে থাকে। এই সময়ে, অনুপাতে বড় স্টপ ব্যবহার করা অর্থবহ, যার জন্য পরিবর্তে রিয়েলে ঝুঁকি নিয়ন্ত্রণে রাখতে পজিশনের আকার কমানো দরকার।</p><p>যখন ঐতিহাসিক ভোলাটিলিটি কম থাকে, বিপরীতটি প্রযোজ্য: এন্ট্রি প্রাইসের কাছাকাছি স্টপ বেশি অর্থবহ হতে থাকে, যেহেতু সম্পদটি সেই মুহূর্তে স্বাভাবিকের চেয়ে কম ওঠানামা করছে।</p><h2>ঐতিহাসিক ভোলাটিলিটি এবং ট্রেড করার মুহূর্ত</h2><p>কিছু ট্রেডার সেই মুহূর্তে একটি নির্দিষ্ট সম্পদ ট্রেড করা মূল্যবান কিনা তা সিদ্ধান্ত নিতে ঐতিহাসিক ভোলাটিলিটিও ব্যবহার করেন। অত্যন্ত কম ভোলাটিলিটি একটি সঞ্চয়ের সময়কাল নির্দেশ করতে পারে, ছোট মুভমেন্টসহ যা বেশি ব্যাপ্তির ট্রেড খোঁজা মানুষদের জন্য কম আকর্ষণীয়। অত্যন্ত বেশি ভোলাটিলিটি, অন্যদিকে, উচ্চ অনিশ্চয়তার একটি মুহূর্ত নির্দেশ করতে পারে, উভয় দিকে হঠাৎ এবং অপ্রত্যাশিত মুভমেন্টের বেশি ঝুঁকিসহ।</p><h2>বাস্তবে প্রয়োগ করা</h2><p>ডুওটাইডে, বিভিন্ন সম্পদের ঐতিহাসিক ভোলাটিলিটি অনুসরণ করা এবং প্রতিটির বর্তমান মান তার ঐতিহাসিক গড়ের সঙ্গে তুলনা করা সম্ভব, প্রতিটি মুহূর্তের পরিবেশ অনুযায়ী স্টপ এবং পজিশনের আকার সামঞ্জস্য করে। উচ্চ ভোলাটিলিটি, নিজে থেকে, ট্রেড বন্ধ করার কারণ নয়, কিন্তু ঝুঁকি নির্ধারণে বেশি সতর্কতা দাবি করে — যা, যেকোনো ট্রেডের মতো, কখনো অস্তিত্বহীন হয় না।</p><p>শুধু একটি একক ক্যান্ডেলের পরম মান নয়, ভোলাটিলিটির নিজের প্রবণতাও অনুসরণ করা ভালো। একটি ঐতিহাসিক ভোলাটিলিটি যা ক্রমাগত বাড়ছে, এমনকি সম্পদের জন্য স্বাভাবিক বিবেচিত পরিসরের মধ্যে থেকেও, একটি সংকেত হতে পারে যে পরিবেশ বদলাচ্ছে এবং এখন পর্যন্ত ব্যবহৃত স্টপ ও পজিশনের আকারের প্যারামিটারের পরিবর্তন আরও বড় হওয়ার আগে হয়তো সামঞ্জস্যের প্রয়োজন।</p>
+        <div class="bq-post__cta">
+          <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>আরও পড়ুন</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/bn/blog/belkhayate-timing-quick-how-to/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">বেলখায়াতে টাইমিং ইনডিকেটর: বাস্তবে ব্যবহার</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/bollinger-bands-how-they-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">বোলিঙ্গার ব্যান্ড: এটি কী এবং কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/awesome-oscillator-guide/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">অসাম অসিলেটর: এটি কী এবং ব্যবহারের 3টি কৌশল</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">কপিরাইট © 2026 Duotide।<br>
+            সর্বস্বত্ব সংরক্ষিত।<br>
+            الموقع الرسمي.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>প্রতিষ্ঠান</h2>
+          <ul>
+            <li><a href="/bn/">হোম</a></li>
+            <li><a href="/bn/duotide-is-it-trustworthy/">Duotide কি বিশ্বাসযোগ্য?</a></li>
+            <li><a href="/bn/duotide-login/">লগইন পদ্ধতি</a></li>
+            <li><a href="/bn/duotide-broker/">ব্রোকার সম্পর্কে জানুন</a></li>
+            <li><a href="/bn/duotide-is-it-safe/">ব্রোকারের নিরাপত্তা</a></li>
+            <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>যোগাযোগ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>২৪/৭ অ্যাকাউন্ট ম্যানেজার</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/bn/duotide-faq/">সাধারণ প্রশ্নোত্তর</a>
+          <a href="/bn/about-this-site/">এই সাইট সম্পর্কে</a>
+          <a href="/bn/contact/">যোগাযোগ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="পেজের উপরে ফিরে যান">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="বন্ধ করুন">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">বোনাস</span> <span class="pp__l2">100%</span></h2>
+          <p><strong>WELCOME100</strong> কুপন দিয়ে ডিপোজিট করুন এবং জমা করা অর্থের উপর 100% বোনাস পান।</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">কুপন</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="কপি হয়েছে!">কপি</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">এখনই নিন</a>
+          <p class="pp__mini">অফারের শর্তাবলী প্রযোজ্য। লিভারেজড পণ্যে ট্রেডিংয়ে ক্ষতির ঝুঁকি আছে।</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

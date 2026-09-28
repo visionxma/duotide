@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr" data-tema="dark" data-tv="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Risiko Trading Margin: Margin Call, Stop Out, dan Likuidasi | Blog Duotide</title>
+  <meta name="description" content="Apa itu margin call, stop out, dan likuidasi, cara menghitung leverage efektif, dan strategi kontrol praktis, dengan contoh dalam rupiah.">
+  <link rel="canonical" href="https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/riscos-e-estrategias-no-trading-com-margem/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/rischi-del-trading-con-margine/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/riscos-e-estrategias-no-trading-com-margem/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Risiko Trading Margin: Margin Call, Stop Out, dan Likuidasi">
+  <meta property="og:description" content="Apa itu margin call, stop out, dan likuidasi, cara menghitung leverage efektif, dan strategi kontrol praktis, dengan contoh dalam rupiah.">
+  <meta property="og:url" content="https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Risiko Trading Margin: Margin Call, Stop Out, dan Likuidasi">
+  <meta name="twitter:description" content="Apa itu margin call, stop out, dan likuidasi, cara menghitung leverage efektif, dan strategi kontrol praktis, dengan contoh dalam rupiah.">
+  <meta name="twitter:label1" content="Ditulis oleh">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Waktu baca">
+  <meta name="twitter:data2" content="5 menit">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/#artigo",
+      "headline": "Risiko Trading Margin: Margin Call, Stop Out, dan Likuidasi",
+      "description": "Apa itu margin call, stop out, dan likuidasi, cara menghitung leverage efektif, dan strategi kontrol praktis, dengan contoh dalam rupiah.",
+      "url": "https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/",
+      "inLanguage": "id",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
+      "articleSection": "Manajemen risiko",
+      "author": {
+        "@type": "Organization",
+        "name": "Tim Duotide",
+        "url": "https://duotide.com.br/id/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/id/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://duotide.com.br/id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/id/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Risiko Trading Margin: Margin Call, Stop Out, dan Likuidasi",
+          "item": "https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Langsung ke konten</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/id/" aria-label="Duotide — halaman utama">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buka menu navigasi"
+                data-abrir="Buka menu navigasi" data-fechar="Tutup menu navigasi">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pilih bahasa"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="22" height="16"><span>id</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/riscos-e-estrategias-no-trading-com-margem/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/" hreflang="id" lang="id" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/rischi-del-trading-con-margine/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="/id/">Beranda</a></li>
+          <li><a href="/id/duotide-terpercaya/">Terpercaya?</a></li>
+          <li><a href="/id/duotide-login/">Login</a></li>
+          <li><a href="/id/duotide-broker/">Tentang broker</a></li>
+          <li><a href="/id/duotide-aman/">Aman?</a></li>
+          <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          <li><a href="/id/broker-terbaik/">Broker terbaik</a></li>
+          <li><a href="/id/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id"
+           target="_blank" rel="noopener sponsored nofollow">Buat akun</a>
+        <a class="btn btn--outline btn--sm" href="/id/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Jejak navigasi">
+    <div class="container">
+      <ol>
+        <li><a href="/id/">Beranda</a></li>
+        <li><a href="/id/blog/">Blog</a></li>
+        <li><span aria-current="page">Risiko Trading Margin: Margin Call, Stop Out, dan Likuidasi</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Manajemen risiko</span>
+        <h1>Risiko Trading Margin: Margin Call, Stop Out, dan Likuidasi</h1>
+        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 5 menit baca</p>
+        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Setiap transaksi dengan margin membawa risiko yang melampaui harga aset: risiko struktur transaksi itu sendiri, yang mampu mengakhiri posisi bahkan sebelum pasar membuktikan siapa yang benar. Margin call, stop out, dan likuidasi adalah alasan mengapa dua akun dengan modal yang sama dan leverage "yang diizinkan" yang sama bisa memiliki nasib yang sepenuhnya berbeda.</p><p>Tulisan ini tidak mengulang dasar cara kerja margin. Fokusnya di sini memahami mengapa leverage yang ditawarkan broker bukanlah leverage yang benar-benar Anda ambil, bagaimana margin call berubah menjadi stop out, dan keputusan praktis apa yang mengurangi risiko ini sebelum muncul di layar.</p><h2>Leverage Efektif: Perhitungan yang Jarang Dilakukan Sebelum Bertransaksi</h2><p>Leverage yang diumumkan broker — 10:1, 20:1, 30:1 — hanyalah batas maksimum yang diizinkan untuk instrumen itu. Yang benar-benar penting adalah leverage efektif: total nilai posisi terbuka dibagi ekuitas akun. Perbedaan inilah yang memisahkan transaksi berisiko dari transaksi terkendali.</p><p>Pertimbangkan akun dengan ekuitas R$ 10.000,00, pada aset dengan leverage maksimum 30:1. Trader agresif membuka posisi R$ 90.000,00, dengan margin R$ 3.000,00 (90.000 ÷ 30). Meski dengan batas 30:1 tersedia, leverage efektif atas total ekuitas adalah 9:1 (90.000 ÷ 10.000). Dengan angka ini, penurunan hanya 3,33% pada aset sudah menghasilkan kerugian 30% ekuitas (9 × 3,33%) — leverage efektif, bukan batas yang diumumkan broker, yang menentukan besarnya pukulan nyata.</p><p>Bandingkan dengan trader kedua, ekuitas sama dan leverage tersedia sama, yang hanya membuka posisi R$ 20.000,00. Leverage efektifnya turun menjadi 2:1, dan penurunan 3,33% yang sama pada aset mewakili kerugian 6,67% ekuitas — lima kali lebih kecil, dengan broker dan aset yang sama.</p><h2>Margin Call: Peringatan Sebelum Akhir</h2><p>Margin call terjadi ketika level margin akun — ekuitas dibagi margin yang digunakan, dalam persentase — turun di bawah batas yang ditentukan broker, biasanya mendekati 100%. Di bawah titik ini, broker memberi sinyal bahwa jaminan mulai menipis dan bisa meminta setoran tambahan.</p><p>Pada trader agresif (posisi R$ 90.000,00, margin R$ 3.000,00, ekuitas R$ 10.000,00), margin call pada level margin 100% terpicu ketika ekuitas turun di bawah R$ 3.000,00 yang digunakan sebagai margin, yaitu, setelah kerugian R$ 7.000,00 — cukup penurunan 7,78% pada aset (7.000 ÷ 90.000). Sementara pada trader konservatif, dengan margin R$ 666,67 (20.000 ÷ 30), margin call baru terjadi setelah kerugian R$ 9.333,33, setara penurunan 46,67% pada aset — kelonggaran yang jauh lebih besar, dibangun hanya dengan posisi lebih kecil relatif terhadap ekuitas.</p><h2>Stop Out: Ketika Broker Menutup Posisi untuk Anda</h2><p>Stop out adalah tahap berikutnya, dan tidak lagi bergantung pada keinginan trader: ketika level margin turun di bawah batas kedua, biasanya lebih rendah dari margin call — 50%, 30%, atau 20%, tergantung broker dan instrumen —, posisi ditutup secara otomatis untuk mencegah kerugian melebihi modal yang tersedia.</p><p>Pada trader agresif, stop out pada level margin 50% berarti ekuitas di bawah R$ 1.500,00, yang terjadi setelah kerugian R$ 8.500,00 — penurunan hanya 9,44% pada aset (8.500 ÷ 90.000). Dalam kurang dari 10% variasi harga, lebih dari 80% ekuitas awal sudah hilang. Bagi trader konservatif, perhitungan yang sama baru terpenuhi setelah penurunan 48,33% pada aset. Perbedaan antara 9,44% dan 48,33% adalah hasil hanya dari leverage efektif yang dipilih, bukan keberuntungan atau broker yang "lebih baik".</p><h2>Mengapa Likuidasi Bisa Berbiaya Lebih Mahal dari yang Diharapkan</h2><p>Harga tempat stop out benar-benar dieksekusi tidak selalu sama dengan harga tempat level margin melewati batas. Di pasar volatil, gap harga dan eksekusi yang lebih lambat pada momen likuidasi simultan berbagai akun bisa menutup posisi dengan kerugian lebih besar dari yang dihitung — yang disebut slippage eksekusi. Risikonya semakin besar ketika trader mempertahankan berbagai posisi pada aset yang berkorelasi: jika mereka bergerak bersama melawan akun, semuanya kehilangan nilai pada saat yang sama, menghabiskan level margin jauh lebih cepat dari yang disarankan satu transaksi tersendiri.</p><h2>Strategi Praktis Mengendalikan Risiko</h2><p>Mengurangi risiko margin call dan stop out bergantung pada keputusan yang diambil sebelum membuka posisi:</p><ul><li><strong>Hitung leverage efektif sebelum bertransaksi</strong> — posisi terbuka dibagi ekuitas akun, bukan nilai yang digunakan sebagai margin. Angka inilah, bukan batas broker, yang menentukan risiko nyata.</li><li><strong>Tentukan ukuran posisi berdasarkan stop loss, bukan margin yang tersedia</strong> — putuskan berapa yang bersedia Anda rugikan dalam rupiah (misalnya, 1% hingga 2% ekuitas) dan hitung posisi dari jarak ke stop.</li><li><strong>Pertahankan margin bebas yang murah hati</strong> — hindari menggunakan seluruh ekuitas sebagai margin satu transaksi tunggal; semakin besar margin bebas, semakin tinggi level margin dan semakin jauh margin call.</li><li><strong>Hindari memperkuat posisi yang merugi</strong> — menambah margin pada transaksi merugi untuk "menunggu pembalikan" mendekatkan stop out alih-alih menjauhkannya.</li><li><strong>Waspadai posisi yang berkorelasi</strong> — berbagai transaksi yang bergerak ke arah yang sama melipatgandakan efek satu peristiwa pasar tunggal pada level margin akun.</li><li><strong>Pantau level margin, bukan hanya harga aset</strong> — aturan pribadi untuk keluar jauh di atas stop out broker memberi waktu bereaksi sebelum likuidasi paksa.</li></ul><h2>Mengendalikan Leverage Efektif Ada di Tangan Anda</h2><p>Broker menentukan batas maksimum leverage serta level margin call dan stop out, tetapi leverage efektif setiap transaksi tetap pilihan trader. Menguji perilaku ini di akun demo, baik di Duotide maupun platform lain, sebelum bertransaksi dengan modal sungguhan membantu memvisualisasikan bagaimana level margin bereaksi terhadap berbagai ukuran posisi, tanpa biaya mempelajarinya saat kerugian sungguhan. Margin memperbesar hasil dalam kedua arah, dan risiko kehilangan seluruh modal yang disetor itu nyata.</p>
+        <div class="bq-post__cta">
+          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Baca juga</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/id/blog/cara-menggunakan-stop-loss-dan-take-profit-di-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cara Menggunakan Stop Loss dan Take Profit di Forex</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/strategi-martingale-dalam-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strategi Martingale dalam Trading: Cara Kerja dan Risikonya</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/kapan-mengakhiri-transaksi-sinyal-keluar/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Kapan Mengakhiri Transaksi: Sinyal Keluar</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Hak cipta © 2026 Duotide.<br>
+            Seluruh hak dilindungi.<br>
+            Situs resmi.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Perusahaan</h2>
+          <ul>
+            <li><a href="/id/">Beranda</a></li>
+            <li><a href="/id/duotide-terpercaya/">Apakah Duotide Terpercaya?</a></li>
+            <li><a href="/id/duotide-login/">Metode Login</a></li>
+            <li><a href="/id/duotide-broker/">Kenali Broker</a></li>
+            <li><a href="/id/duotide-aman/">Keamanan Broker</a></li>
+            <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontak</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Manajer akun 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/id/duotide-pertanyaan-umum/">Pertanyaan umum</a>
+          <a href="/id/tentang/">Tentang situs ini</a>
+          <a href="/id/kontak/">Kontak</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Kembali ke atas halaman">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Tutup">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">100%</span></h2>
+          <p>Deposit dengan kupon <strong>WELCOME100</strong> dan dapatkan bonus 100% dari jumlah yang disetor.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Tersalin!">Salin</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Klaim sekarang</a>
+          <p class="pp__mini">Tunduk pada syarat promo. Trading produk leverage berisiko menimbulkan kerugian.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

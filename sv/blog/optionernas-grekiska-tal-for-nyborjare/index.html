@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" data-tema="dark" data-tv="sv_SE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega | Blog Duotide</title>
+  <meta name="description" content="Förstå enkelt vad optionernas viktigaste grekiska tal mäter och se ett räkneexempel på hur deltat påverkar priset på ett kontrakt.">
+  <link rel="canonical" href="https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/options-griechen-fuer-einsteiger/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/grecques-des-options-pour-debutants/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/greeks-opsi-untuk-pemula/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/greche-delle-opzioni-per-principianti/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/yeni-baslayanlar-icin-opsiyon-greekleri/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/options-greeks-for-beginners/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega">
+  <meta property="og:description" content="Förstå enkelt vad optionernas viktigaste grekiska tal mäter och se ett räkneexempel på hur deltat påverkar priset på ett kontrakt.">
+  <meta property="og:url" content="https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide-bloggen">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega">
+  <meta name="twitter:description" content="Förstå enkelt vad optionernas viktigaste grekiska tal mäter och se ett räkneexempel på hur deltat påverkar priset på ett kontrakt.">
+  <meta name="twitter:label1" content="Skriven av">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lästid">
+  <meta name="twitter:data2" content="5 minuter">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/#artigo",
+      "headline": "Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega",
+      "description": "Förstå enkelt vad optionernas viktigaste grekiska tal mäter och se ett räkneexempel på hur deltat påverkar priset på ett kontrakt.",
+      "url": "https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/",
+      "inLanguage": "sv",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
+      "articleSection": "Optioner",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-teamet",
+        "url": "https://duotide.com.br/sv/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/sv/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://duotide.com.br/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://duotide.com.br/sv/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega",
+          "item": "https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/sv/" aria-label="Duotide — startsida">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Öppna navigeringsmenyn"
+                data-abrir="Öppna navigeringsmenyn" data-fechar="Stäng navigeringsmenyn">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Välj språk"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="22" height="16"><span>sv</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/gregas-das-opcoes-para-iniciantes/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/options-greeks-for-beginners/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/griegas-de-las-opciones-para-principiantes/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/options-greeks-for-beginners/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/options-greeks-for-beginners/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/options-griechen-fuer-einsteiger/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/grecques-des-options-pour-debutants/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/greeks-opsi-untuk-pemula/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/greche-delle-opzioni-per-principianti/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/options-greeks-for-beginners/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/optionernas-grekiska-tal-for-nyborjare/" hreflang="sv" lang="sv" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/yeni-baslayanlar-icin-opsiyon-greekleri/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/options-greeks-for-beginners/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Huvudnavigering">
+        <ul>
+          <li><a href="/sv/">Hem</a></li>
+          <li><a href="/sv/duotide-ar-den-palitlig/">Är den pålitlig?</a></li>
+          <li><a href="/sv/duotide-logga-in/">Logga in</a></li>
+          <li><a href="/sv/duotide-maklaren/">Mäklaren</a></li>
+          <li><a href="/sv/duotide-ar-den-saker/">Är den säker?</a></li>
+          <li><a href="/sv/duotide-app/">App</a></li>
+          <li><a href="/sv/basta-maklarna/">Bästa mäklarna</a></li>
+          <li><a href="/sv/blog/" aria-current="page">Blogg</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv"
+           target="_blank" rel="noopener sponsored nofollow">Skapa konto</a>
+        <a class="btn btn--outline btn--sm" href="/sv/duotide-logga-in/">Logga in</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Navigeringsspår">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+        <li><a href="/sv/blog/">Blogg</a></li>
+        <li><span aria-current="page">Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Optioner</span>
+        <h1>Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega</h1>
+        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        
+<p>Den som börjar studera optioner stöter oftast snabbt på fyra ord som verkar vara riktig grekiska: delta, gamma, theta och vega. De är, i praktiken, mått som visar hur priset på en option reagerar på olika faktorer, som den underliggande tillgångens rörelse, tidens gång och förändringar i volatiliteten. Att förstå vad var och en mäter hjälper till att bedöma en optionsaffär innan man går in, i stället för att i efterhand upptäcka varför kontraktets pris rörde sig på ett oväntat sätt.</p>
+<h2>Delta: hur mycket optionen rör sig tillsammans med tillgången</h2>
+<p>Deltat mäter känsligheten hos optionens pris för en förändring i den underliggande tillgångens pris. En köpoption med delta 0,60, till exempel, tenderar att stiga cirka R$ 0,60 för varje uppgång på R$ 1,00 i den underliggande tillgången, med övriga faktorer konstanta. Köpoptioner har positivt delta, mellan 0 och 1. Säljoptioner har negativt delta, mellan -1 och 0. Ju mer optionen är in the money, desto närmare 1 eller -1 ligger deltat, och ju mer den är out of the money, desto närmare noll.</p>
+<h2>Gamma: hastigheten på deltats förändring</h2>
+<p>Om deltat visar riktningen visar gamma hur snabbt den riktningen kan förändras när tillgångens pris rör sig. Ett högt gamma betyder att optionens delta kan variera mycket vid små rörelser i den underliggande tillgången, vilket ofta händer med optioner nära lösenpriset och nära förfall. Det spelar roll eftersom en position med högt gamma snabbt kan ändra riskprofil, vilket kräver mer uppmärksamhet än en position med lågt gamma.</p>
+<h2>Theta: kostnaden för att hålla optionen över tid</h2>
+<p>Theta mäter hur mycket värde optionen tenderar att förlora per dag, enbart genom tidens gång, med övriga faktorer konstanta. Den här effekten kallas tidsförfall. För den som köper optioner arbetar theta mot positionen: varje dag som går utan att tillgången rör sig tillräckligt minskar kontraktets värde. För den som säljer optioner arbetar theta till fördel, vilket förklarar varför optionsförsäljningsstrategier ofta beskrivs som satsningar på tiden, inte bara på prisets riktning.</p>
+<h2>Vega: känslighet för förändringar i volatiliteten</h2>
+<p>Vega mäter hur mycket optionens pris förändras när marknadens implicita volatilitet stiger eller sjunker, utan att den underliggande tillgångens pris behöver röra sig. Under perioder av osäkerhet, som inför ett företagsresultat eller ett räntebeslut, tenderar den implicita volatiliteten att stiga, vilket kan fördyra optioner även utan omedelbar rörelse i tillgångens pris. Efter händelsen brukar volatiliteten falla abrupt, en effekt som kallas volatilitetskrasch, vilket kan minska optionens värde även om tillgången rört sig i den förväntade riktningen.</p>
+<h2>Ett numeriskt exempel som kombinerar delta och gamma</h2>
+<p>Anta en köpoption som handlas till R$ 2,00, med delta 0,40 och gamma 0,05, på en tillgång noterad till R$ 50,00. Om tillgången stiger R$ 1,00, till R$ 51,00, hamnar optionens nya uppskattade pris nära R$ 2,40, med bara deltat som grund. Men gamma på 0,05 visar att själva deltat också stiger, från 0,40 till cirka 0,45 efter den rörelsen. Det betyder att om tillgången stiger ytterligare R$ 1,00 efter det, bör optionen reagera lite starkare än den gjorde vid den första uppgången. Den ackumulerade effekten är anledningen till att positioner med högt gamma kan verka lugna och sedan plötsligt börja röra sig med mycket mer kraft än väntat.</p>
+<h2>Rho: det grekiska talet som få nybörjare lägger märke till</h2>
+<p>Det finns också ett femte grekiskt tal, kallat rho, som mäter känsligheten hos optionens pris för förändringar i räntan. I de flesta kortsiktiga affärer är effekten av rho liten jämfört med de andra faktorerna, men den blir mer relevant i optioner med längre löptid eller under perioder av snabb ränteförändring. Det är värt att veta att det finns, även om det vardagliga fokuset brukar ligga på delta, gamma, theta och vega.</p>
+<h2>Hur de grekiska talen samverkar</h2>
+<p>Inget grekiskt tal fungerar isolerat. En option kan ha ett delta som gynnas av en uppgång i tillgången, men ändå förlora värde om theta äter upp vinsten snabbare än priset stiger, eller om volatiliteten faller strax efter ingången. Innan du sätter ihop en optionsaffär är det värt att fråga inte bara om tillgången kommer att stiga eller falla, utan också hur lång tid det bör ta och hur den implicita volatiliteten tenderar att bete sig under den perioden.</p>
+<h2>Varför detta spelar roll för den som börjar</h2>
+<p>Att ignorera de grekiska talen gör inte affären enklare, det döljer bara risker som ändå fortsätter att existera. En optionsköpare som förstår theta vet att hen behöver en relativt snabb rörelse för att kompensera för tidens slitage. En optionssäljare som förstår gamma vet att positionen kan bli betydligt mer riskabel nära förfallet. Att handla optioner innebär risk, inklusive möjligheten till total förlust av det investerade beloppet i kontraktet, och att förstå de grekiska talen är ett praktiskt steg för att bedöma den risken innan man går in, inte en garanti för resultat.</p>
+
+        <div class="bq-post__cta">
+          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Läs också</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/sv/blog/sa-fungerar-binara-optioner-i-praktiken/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så fungerar binära optioner, i praktiken</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/5-tips-for-effektivare-trading/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 tips för att handla effektivare med tid och kapital</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/5-optionsstrategier-for-nyborjare/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 optionsstrategier för dig som är nybörjare</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Upphovsrätt © 2026 Duotide.<br>
+            Alla rättigheter förbehållna.<br>
+            officiell webbplats.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Företag</h2>
+          <ul>
+            <li><a href="/sv/">Hem</a></li>
+            <li><a href="/sv/duotide-ar-den-palitlig/">Är Duotide pålitlig?</a></li>
+            <li><a href="/sv/duotide-logga-in/">Inloggningsmetoder</a></li>
+            <li><a href="/sv/duotide-maklaren/">Lär känna mäklaren</a></li>
+            <li><a href="/sv/duotide-ar-den-saker/">Mäklarens säkerhet</a></li>
+            <li><a href="/sv/duotide-app/">Appen</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kontoansvarig dygnet runt</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/sv/duotide-vanliga-fragor/">Vanliga frågor</a>
+          <a href="/sv/om-denna-webbplats/">Om denna webbplats</a>
+          <a href="/sv/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Tillbaka till början av sidan">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Stäng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">på 100 %</span></h2>
+          <p>Sätt in med koden <strong>WELCOME100</strong> och få 100 % bonus på insatt belopp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kod</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopierad!">Kopiera</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Hämta nu</a>
+          <p class="pp__mini">Kampanjvillkor gäller. Handel med hävstångsprodukter innebär risk för förlust.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

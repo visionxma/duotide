@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" data-tema="dark" data-tv="sv_SE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Historisk volatilitet: hur du ställer in och tolkar den | Blog Duotide</title>
+  <meta name="description" content="Förstå hur indikatorn för historisk volatilitet beräknas, hur du ställer in perioden och hur du använder den för att justera stopp och positioner.">
+  <link rel="canonical" href="https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-de-volatilidade-historica/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/historical-volatility-indicator/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/historical-volatility-indicator/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/historical-volatility-indicator-guide/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/volatilite-historique-comment-configurer-et-interpreter/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/indikator-volatilitas-historis/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/volatilita-storica-come-configurare-e-interpretare/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/historical-volatility-indicator/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/tarihsel-volatilite-nasil-yapilandirilir-ve-yorumlanir/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/historical-volatility-indicator/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Historisk volatilitet: hur du ställer in och tolkar den">
+  <meta property="og:description" content="Förstå hur indikatorn för historisk volatilitet beräknas, hur du ställer in perioden och hur du använder den för att justera stopp och positioner.">
+  <meta property="og:url" content="https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide-bloggen">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Historisk volatilitet: hur du ställer in och tolkar den">
+  <meta name="twitter:description" content="Förstå hur indikatorn för historisk volatilitet beräknas, hur du ställer in perioden och hur du använder den för att justera stopp och positioner.">
+  <meta name="twitter:label1" content="Skriven av">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lästid">
+  <meta name="twitter:data2" content="5 minuter">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/#artigo",
+      "headline": "Historisk volatilitet: hur du ställer in och tolkar den",
+      "description": "Förstå hur indikatorn för historisk volatilitet beräknas, hur du ställer in perioden och hur du använder den för att justera stopp och positioner.",
+      "url": "https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/",
+      "inLanguage": "sv",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "Indikatorer",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-teamet",
+        "url": "https://duotide.com.br/sv/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/sv/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://duotide.com.br/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://duotide.com.br/sv/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Historisk volatilitet: hur du ställer in och tolkar den",
+          "item": "https://duotide.com.br/sv/blog/historisk-volatilitet-installning-tolkning/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/sv/" aria-label="Duotide — startsida">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Öppna navigeringsmenyn"
+                data-abrir="Öppna navigeringsmenyn" data-fechar="Stäng navigeringsmenyn">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Välj språk"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="22" height="16"><span>sv</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/indicador-de-volatilidade-historica/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/historical-volatility-indicator/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/historical-volatility-indicator/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/historical-volatility-indicator-guide/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/volatilite-historique-comment-configurer-et-interpreter/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/indikator-volatilitas-historis/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/volatilita-storica-come-configurare-e-interpretare/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/historical-volatility-indicator/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/historisk-volatilitet-installning-tolkning/" hreflang="sv" lang="sv" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/tarihsel-volatilite-nasil-yapilandirilir-ve-yorumlanir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Huvudnavigering">
+        <ul>
+          <li><a href="/sv/">Hem</a></li>
+          <li><a href="/sv/duotide-ar-den-palitlig/">Är den pålitlig?</a></li>
+          <li><a href="/sv/duotide-logga-in/">Logga in</a></li>
+          <li><a href="/sv/duotide-maklaren/">Mäklaren</a></li>
+          <li><a href="/sv/duotide-ar-den-saker/">Är den säker?</a></li>
+          <li><a href="/sv/duotide-app/">App</a></li>
+          <li><a href="/sv/basta-maklarna/">Bästa mäklarna</a></li>
+          <li><a href="/sv/blog/" aria-current="page">Blogg</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv"
+           target="_blank" rel="noopener sponsored nofollow">Skapa konto</a>
+        <a class="btn btn--outline btn--sm" href="/sv/duotide-logga-in/">Logga in</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Navigeringsspår">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+        <li><a href="/sv/blog/">Blogg</a></li>
+        <li><span aria-current="page">Historisk volatilitet: hur du ställer in och tolkar den</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Indikatorer</span>
+        <h1>Historisk volatilitet: hur du ställer in och tolkar den</h1>
+        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Till skillnad från de flesta indikatorer som försöker förutse prisets riktning tar indikatorn för historisk volatilitet inte ställning till om marknaden ska stiga eller falla — den mäter hur mycket priset svängt, uppåt eller nedåt, under en viss period. Den informationen, även om den är mindre iögonfallande än en köp- eller säljsignal, är grundläggande för att kalibrera stopp, positionsstorlek och till och med för att välja vilka stunder som är mest värda att handla.</p><p>I den här artikeln kommer du att förstå hur historisk volatilitet beräknas, hur man ställer in indikatorn och hur man tolkar dess variationer i praktiken.</p><h2>Vad historisk volatilitet mäter</h2><p>Historisk volatilitet beräknar standardavvikelsen för de dagliga avkastningarna (eller den valda periodens) för en tillgång, under ett visst antal candlar, oftast uttryckt i årsbasis för att underlätta jämförelse mellan olika tillgångar. Enkelt uttryckt: ju mer stängningspriserna varierar från en candle till en annan, desto högre är den historiska volatiliteten; ju stabilare priserna är, desto lägre är den.</p><p>Det är viktigt att inte förväxla volatilitet med riktning. En tillgång kan ha hög historisk volatilitet både under en kraftig nedgång och under en kraftig uppgång — indikatorn skiljer inte på det, den mäter bara amplituden av förändringarna, oavsett riktning.</p><h2>Hur beräkningen fungerar, förenklat</h2><p>Anta en tillgång med dagliga avkastningar på +2%, −1%, +3%, −2% och +1% under fem candlar. Historisk volatilitet beräknar hur mycket de här avkastningarna i genomsnitt avviker från periodens genomsnittliga avkastning — ju större den spridningen är, desto högre blir indikatorns slutvärde. En tillgång vars dagliga avkastningar brukar ligga mellan −0,5% och +0,5% kommer att uppvisa en betydligt lägre historisk volatilitet än en tillgång vars dagliga avkastningar brukar variera mellan −3% och +3%, även om båda avslutade perioden med samma ackumulerade resultat.</p><h2>Att ställa in indikatorns period</h2><p>Den vanligaste perioden för att beräkna historisk volatilitet är 10, 20 eller 30 candlar, beroende på analyshorisonten. Kortare perioder, som 10, återspeglar den senaste volatiliteten och reagerar snabbt på förändringar i tillgångens beteende — användbart för den som handlar korta tidsramar och vill anpassa stoppen till den aktuella miljön. Längre perioder, som 30, dämpar de här variationerna och visar en mer strukturell volatilitet hos tillgången, användbart för den som handlar längre tidsramar.</p><p>En vanlig praxis är att jämföra indikatorns aktuella avläsning med dess eget historiska genomsnitt för just den tillgången: en historisk volatilitet på 25% kan anses hög för en tillgång som normalt rör sig mellan 10% och 15%, men skulle anses låg för en tillgång som brukar variera mellan 35% och 45%.</p><h2>Att använda historisk volatilitet för att kalibrera stopp</h2><p>När den historiska volatiliteten är hög tenderar en stopp beräknad utifrån ett fast avstånd i kronor eller punkter att nås oftare bara av marknadens normala brus, utan koppling till affärens ursprungliga motiv. Under de perioderna är det meningsfullt att använda proportionellt större stoppar, vilket i sin tur kräver en minskad positionsstorlek för att hålla risken i kronor under kontroll.</p><p>När den historiska volatiliteten är låg gäller motsatsen: stoppar närmare ingångspriset tenderar att vara mer meningsfulla, eftersom tillgången just då svänger mindre än vanligt.</p><h2>Historisk volatilitet och rätt tillfälle att handla</h2><p>Vissa traders använder också historisk volatilitet för att avgöra om det är värt att handla en viss tillgång just då. Extremt låg volatilitet kan tyda på en ackumuleringsperiod, med små och mindre attraktiva rörelser för den som söker affärer med större amplitud. Extremt hög volatilitet kan däremot tyda på en period av hög osäkerhet, med större risk för plötsliga och oförutsägbara rörelser i båda riktningarna.</p><h2>Att omsätta det i praktiken</h2><p>Hos Duotide går det att följa den historiska volatiliteten för olika tillgångar och jämföra det aktuella värdet med varje tillgångs historiska genomsnitt, och justera stopp och positionsstorlek utifrån varje ögonblicks miljö. Hög volatilitet är inte i sig ett skäl att sluta handla, men den kräver mer omsorg vid riskdimensioneringen — som, precis som i alla affärer, aldrig upphör att existera.</p><p>Det är också värt att följa trenden hos själva volatiliteten, inte bara det absoluta värdet i en enskild candle. En historisk volatilitet som stigit stadigt, även om den fortfarande ligger inom det intervall som anses normalt för tillgången, kan vara ett tecken på att miljön förändras och att de stopp- och positionsstorleksparametrar som använts hittills kanske behöver justeras innan variationen blir ännu större.</p>
+        <div class="bq-post__cta">
+          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Läs också</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/sv/blog/macd-stokastik-och-parabolic-sar-kombination/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, stokastik och Parabolic SAR: så kombinerar du de tre</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/belkhayate-timing-indikator-hur-anvanda/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Belkhayate Timing-indikatorn: hur du använder den i praktiken</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/bollingerband-vad-de-ar-och-hur-de-fungerar/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bollingerband: vad de är och hur de fungerar</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Upphovsrätt © 2026 Duotide.<br>
+            Alla rättigheter förbehållna.<br>
+            officiell webbplats.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Företag</h2>
+          <ul>
+            <li><a href="/sv/">Hem</a></li>
+            <li><a href="/sv/duotide-ar-den-palitlig/">Är Duotide pålitlig?</a></li>
+            <li><a href="/sv/duotide-logga-in/">Inloggningsmetoder</a></li>
+            <li><a href="/sv/duotide-maklaren/">Lär känna mäklaren</a></li>
+            <li><a href="/sv/duotide-ar-den-saker/">Mäklarens säkerhet</a></li>
+            <li><a href="/sv/duotide-app/">Appen</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kontoansvarig dygnet runt</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/sv/duotide-vanliga-fragor/">Vanliga frågor</a>
+          <a href="/sv/om-denna-webbplats/">Om denna webbplats</a>
+          <a href="/sv/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Tillbaka till början av sidan">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Stäng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">på 100 %</span></h2>
+          <p>Sätt in med koden <strong>WELCOME100</strong> och få 100 % bonus på insatt belopp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kod</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopierad!">Kopiera</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Hämta nu</a>
+          <p class="pp__mini">Kampanjvillkor gäller. Handel med hävstångsprodukter innebär risk för förlust.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

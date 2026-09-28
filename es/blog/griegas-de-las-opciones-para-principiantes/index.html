@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-tema="dark" data-tv="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Las griegas de las opciones para principiantes | Blog Duotide</title>
+  <meta name="description" content="Entiende de forma simple qué miden las principales griegas de las opciones y mira un ejemplo numérico de cómo el delta afecta el precio de un contrato.">
+  <link rel="canonical" href="https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/options-griechen-fuer-einsteiger/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/grecques-des-options-pour-debutants/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/greeks-opsi-untuk-pemula/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/greche-delle-opzioni-per-principianti/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/yeni-baslayanlar-icin-opsiyon-greekleri/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/options-greeks-for-beginners/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Las griegas de las opciones para principiantes">
+  <meta property="og:description" content="Entiende de forma simple qué miden las principales griegas de las opciones y mira un ejemplo numérico de cómo el delta afecta el precio de un contrato.">
+  <meta property="og:url" content="https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Las griegas de las opciones para principiantes">
+  <meta name="twitter:description" content="Entiende de forma simple qué miden las principales griegas de las opciones y mira un ejemplo numérico de cómo el delta afecta el precio de un contrato.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tiempo de lectura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/#artigo",
+      "headline": "Las griegas de las opciones para principiantes",
+      "description": "Entiende de forma simple qué miden las principales griegas de las opciones y mira un ejemplo numérico de cómo el delta afecta el precio de un contrato.",
+      "url": "https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/",
+      "inLanguage": "es",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
+      "articleSection": "Opciones",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo Duotide",
+        "url": "https://duotide.com.br/es/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/es/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://duotide.com.br/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Las griegas de las opciones para principiantes",
+          "item": "https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/es/" aria-label="Duotide — página de inicio">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir el menú de navegación"
+                data-abrir="Abrir el menú de navegación" data-fechar="Cerrar el menú de navegación">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Elegir idioma"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="22" height="16"><span>es</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/gregas-das-opcoes-para-iniciantes/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/options-greeks-for-beginners/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/griegas-de-las-opciones-para-principiantes/" hreflang="es" lang="es" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/options-greeks-for-beginners/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/options-greeks-for-beginners/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/options-griechen-fuer-einsteiger/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/grecques-des-options-pour-debutants/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/greeks-opsi-untuk-pemula/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/greche-delle-opzioni-per-principianti/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/options-greeks-for-beginners/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/optionernas-grekiska-tal-for-nyborjare/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/yeni-baslayanlar-icin-opsiyon-greekleri/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/options-greeks-for-beginners/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/duotide-es-confiable/">¿Es confiable?</a></li>
+          <li><a href="/es/duotide-login/">Iniciar sesión</a></li>
+          <li><a href="/es/duotide-broker/">El bróker</a></li>
+          <li><a href="/es/duotide-es-seguro/">¿Es seguro?</a></li>
+          <li><a href="/es/duotide-app/">Aplicación</a></li>
+          <li><a href="/es/mejores-brokers/">Mejores brókers</a></li>
+          <li><a href="/es/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es"
+           target="_blank" rel="noopener sponsored nofollow">Crear cuenta</a>
+        <a class="btn btn--outline btn--sm" href="/es/duotide-login/">Iniciar sesión</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Las griegas de las opciones para principiantes</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Opciones</span>
+        <h1>Las griegas de las opciones para principiantes</h1>
+        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        
+<p>Quien empieza a estudiar opciones suele toparse rápido con cuatro palabras que parecen griego de verdad: delta, gamma, theta y vega. Son, en la práctica, medidas que muestran cómo reacciona el precio de una opción ante diferentes factores, como el movimiento del activo subyacente, el paso del tiempo y el cambio en la volatilidad. Entender qué mide cada una ayuda a evaluar una operación con opciones antes de entrar, en vez de descubrir después por qué el precio del contrato se movió de una forma inesperada.</p>
+<h2>Delta: cuánto se mueve la opción junto con el activo</h2>
+<p>El delta mide la sensibilidad del precio de la opción a una variación en el precio del activo subyacente. Una opción de compra con delta de 0,60, por ejemplo, tiende a subir cerca de R$ 0,60 por cada alza de R$ 1,00 en el activo subyacente, manteniendo constantes los demás factores. Las opciones de compra tienen delta positivo, entre 0 y 1. Las opciones de venta tienen delta negativo, entre -1 y 0. Cuanto más dentro del dinero esté la opción, más se acerca el delta a 1 o -1, y cuanto más fuera del dinero, más cerca de cero.</p>
+<h2>Gamma: la velocidad de cambio del delta</h2>
+<p>Si el delta muestra la dirección, el gamma muestra qué tan rápido puede cambiar esa dirección cuando se mueve el precio del activo. Un gamma alto significa que el delta de la opción puede variar bastante con pequeños movimientos del activo subyacente, algo que suele ocurrir con opciones cercanas al precio de ejercicio y próximas al vencimiento. Esto importa porque una posición con gamma elevado puede cambiar de perfil de riesgo rápidamente, exigiendo más atención que una posición con gamma bajo.</p>
+<h2>Theta: el costo de mantener la opción a lo largo del tiempo</h2>
+<p>El theta mide cuánto valor tiende a perder la opción por día, solo por el paso del tiempo, manteniendo constantes los demás factores. Este efecto se conoce como decaimiento temporal. Para quien compra opciones, el theta trabaja en contra de la posición: cada día que pasa sin que el activo se mueva lo suficiente reduce el valor del contrato. Para quien vende opciones, el theta trabaja a favor, lo que explica por qué las estrategias de venta de opciones suelen describirse como apuestas al tiempo, y no solo a la dirección del precio.</p>
+<h2>Vega: sensibilidad al cambio en la volatilidad</h2>
+<p>El vega mide cuánto cambia el precio de la opción cuando sube o baja la volatilidad implícita del mercado, sin que el precio del activo subyacente necesite moverse. En períodos de incertidumbre, como antes de un resultado de empresa o una decisión de tasas, la volatilidad implícita tiende a subir, lo que puede encarecer las opciones incluso sin movimiento inmediato en el precio del activo. Después del evento, la volatilidad suele caer de forma abrupta, un efecto llamado aplastamiento de volatilidad, que puede reducir el valor de la opción aunque el activo se haya movido en la dirección esperada.</p>
+<h2>Un ejemplo numérico juntando delta y gamma</h2>
+<p>Supongamos una opción de compra negociada a R$ 2,00, con delta de 0,40 y gamma de 0,05, sobre un activo cotizado a R$ 50,00. Si el activo sube R$ 1,00, a R$ 51,00, el nuevo precio estimado de la opción queda cerca de R$ 2,40, usando solo el delta. Pero el gamma de 0,05 indica que el propio delta también sube, pasando de 0,40 a cerca de 0,45 después de ese movimiento. Esto significa que, si el activo sube otro R$ 1,00 después de eso, la opción debería reaccionar de forma un poco más fuerte de lo que reaccionó en el primer alza. Este efecto acumulado es el motivo por el cual posiciones con gamma elevado pueden parecer tranquilas y, de repente, empezar a moverse con mucha más fuerza de lo esperado.</p>
+<h2>Rho: la griega que pocos principiantes notan</h2>
+<p>Existe todavía una quinta griega, llamada rho, que mide la sensibilidad del precio de la opción a cambios en la tasa de interés. En la mayoría de las operaciones de corto plazo, el efecto del rho es pequeño frente a los demás factores, pero gana relevancia en opciones de plazo más largo o en períodos de cambio rápido en la tasa de interés. Vale la pena saber que existe, aunque el foco del día a día suele estar en delta, gamma, theta y vega.</p>
+<h2>Cómo trabajan juntas las griegas</h2>
+<p>Ninguna griega funciona de forma aislada. Una opción puede tener un delta favorable a un alza del activo, pero perder valor de todas formas si el theta consume la ganancia más rápido de lo que sube el precio, o si la volatilidad cae justo después de la entrada. Antes de armar una operación con opciones, vale la pena preguntarse no solo si el activo va a subir o bajar, sino también cuánto tiempo debería tomar eso y cómo tiende a comportarse la volatilidad implícita en ese período.</p>
+<h2>Por qué esto importa para quien está empezando</h2>
+<p>Ignorar las griegas no vuelve la operación más simple, solo esconde riesgos que siguen existiendo de todas formas. Un comprador de opciones que entiende el theta sabe que necesita un movimiento relativamente rápido para compensar el desgaste del tiempo. Un vendedor de opciones que entiende el gamma sabe que su posición puede volverse bastante más arriesgada cerca del vencimiento. Operar opciones implica riesgo, incluyendo la posibilidad de pérdida total del valor invertido en el contrato, y entender las griegas es un paso práctico para evaluar ese riesgo antes de entrar, no una garantía de resultado.</p>
+
+        <div class="bq-post__cta">
+          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Lee también</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/es/blog/como-funcionan-las-opciones-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo funcionan las opciones binarias, en la práctica</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/5-consejos-para-operar-con-mas-eficiencia-tiempo-capital/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 consejos para operar con más eficiencia de tiempo y capital</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/5-estrategias-de-opciones-para-principiantes/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 estrategias de opciones para quien está empezando</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Derechos de autor © 2026 Duotide.<br>
+            Todos los derechos reservados.<br>
+            Sitio oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/es/">Inicio</a></li>
+            <li><a href="/es/duotide-es-confiable/">¿Duotide es Confiable?</a></li>
+            <li><a href="/es/duotide-login/">Métodos de Login</a></li>
+            <li><a href="/es/duotide-broker/">Conoce el Bróker</a></li>
+            <li><a href="/es/duotide-es-seguro/">Seguridad del Bróker</a></li>
+            <li><a href="/es/duotide-app/">Aplicación</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contacto</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestor de cuenta 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/es/duotide-preguntas-frecuentes/">Preguntas frecuentes</a>
+          <a href="/es/sobre/">Sobre este sitio</a>
+          <a href="/es/contacto/">Contacto</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Volver al inicio de la página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Cerrar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bono</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con el cupón <strong>WELCOME100</strong> y recibe un 100% de bono sobre el monto depositado.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Cupón</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="¡Copiado!">Copiar</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Reclamar ahora</a>
+          <p class="pp__mini">Sujeto a las condiciones de la promoción. Operar productos apalancados implica riesgo de pérdida.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

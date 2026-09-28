@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr" data-tema="dark" data-tv="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>DPO: come usare l'Oscillatore di Prezzo Destendenzializzato | Blog Duotide</title>
+  <meta name="description" content="Capisci come il DPO rimuove il trend dal grafico per rivelare cicli di breve periodo, con formula, esempio numerico e accorgimenti d'uso.">
+  <link rel="canonical" href="https://duotide.com.br/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/oscilador-de-preco-destendenciado-dpo/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/detrended-price-oscillator-dpo/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/dpo-cara-menggunakan-detrended-price-oscillator/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/detrended-price-oscillator-dpo/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="DPO: come usare l'Oscillatore di Prezzo Destendenzializzato">
+  <meta property="og:description" content="Capisci come il DPO rimuove il trend dal grafico per rivelare cicli di breve periodo, con formula, esempio numerico e accorgimenti d'uso.">
+  <meta property="og:url" content="https://duotide.com.br/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DPO: come usare l'Oscillatore di Prezzo Destendenzializzato">
+  <meta name="twitter:description" content="Capisci come il DPO rimuove il trend dal grafico per rivelare cicli di breve periodo, con formula, esempio numerico e accorgimenti d'uso.">
+  <meta name="twitter:label1" content="Scritto da">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tempo di lettura">
+  <meta name="twitter:data2" content="5 minuti">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/#artigo",
+      "headline": "DPO: come usare l'Oscillatore di Prezzo Destendenzializzato",
+      "description": "Capisci come il DPO rimuove il trend dal grafico per rivelare cicli di breve periodo, con formula, esempio numerico e accorgimenti d'uso.",
+      "url": "https://duotide.com.br/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/",
+      "inLanguage": "it",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "Indicatori",
+      "author": {
+        "@type": "Organization",
+        "name": "Team Duotide",
+        "url": "https://duotide.com.br/it/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/it/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/it/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "DPO: come usare l'Oscillatore di Prezzo Destendenzializzato",
+          "item": "https://duotide.com.br/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/it/" aria-label="Duotide — pagina iniziale">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Apri il menu di navigazione"
+                data-abrir="Apri il menu di navigazione" data-fechar="Chiudi il menu di navigazione">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Scegli la lingua"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="22" height="16"><span>it</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/oscilador-de-preco-destendenciado-dpo/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/detrended-price-oscillator-dpo/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/dpo-cara-menggunakan-detrended-price-oscillator/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/dpo-come-usare-loscillatore-di-prezzo-destagionalizzato/" hreflang="it" lang="it" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="/it/">Home</a></li>
+          <li><a href="/it/duotide-affidabile/">È affidabile?</a></li>
+          <li><a href="/it/duotide-login/">Login</a></li>
+          <li><a href="/it/duotide-broker/">Il broker</a></li>
+          <li><a href="/it/duotide-sicuro/">È sicuro?</a></li>
+          <li><a href="/it/duotide-app/">App</a></li>
+          <li><a href="/it/migliori-broker/">Migliori broker</a></li>
+          <li><a href="/it/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it"
+           target="_blank" rel="noopener sponsored nofollow">Apri un conto</a>
+        <a class="btn btn--outline btn--sm" href="/it/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Percorso di navigazione">
+    <div class="container">
+      <ol>
+        <li><a href="/it/">Home</a></li>
+        <li><a href="/it/blog/">Blog</a></li>
+        <li><span aria-current="page">DPO: come usare l'Oscillatore di Prezzo Destendenzializzato</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Indicatori</span>
+        <h1>DPO: come usare l'Oscillatore di Prezzo Destendenzializzato</h1>
+        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>La maggior parte degli indicatori di trend è progettata per seguire il prezzo in tempo reale. L'Oscillatore di Prezzo Destendenzializzato, noto con la sigla DPO (dall'inglese <em>Detrended Price Oscillator</em>), fa l'opposto di proposito: rimuove il trend a lungo termine dal grafico per lasciare visibili solo i cicli a breve e medio termine che restano nascosti dietro di esso.</p>
+<h2>Il problema che il DPO prova a risolvere</h2>
+<p>Quando un asset è in forte trend rialzista, è comune che formi picchi e valli minori dentro questo rialzo generale. Guardando solo il prezzo grezzo, è difficile separare visivamente questi cicli minori dal movimento di fondo. Il DPO attacca questo problema confrontando il prezzo attuale con una media mobile spostata indietro nel tempo, eliminando buona parte della componente di trend a lungo termine dall'equazione.</p>
+<h2>Come funziona il calcolo</h2>
+<p>La formula prende una media mobile semplice di un determinato numero di periodi — 20, per esempio — e la sposta indietro di circa metà di questo periodo più uno. Poi, sottrae questa media spostata dal prezzo di chiusura di ogni candela. Il risultato è una linea che oscilla sopra e sotto lo zero, evidenziando picchi e valli che rappresentano cicli di breve periodo, senza che l'inclinazione generale del trend disturbi la lettura.</p>
+<h2>Cosa rivela la linea del DPO</h2>
+<p>Quando il DPO è in valori positivi, il prezzo è sopra la media spostata, indicando un momento di forza dentro il ciclo di breve periodo osservato. Quando è in valori negativi, il prezzo è sotto questa media, indicando debolezza dentro lo stesso ciclo. Il valore pratico dell'indicatore sta nell'aiutare a identificare la durata approssimativa di questi cicli — contando quanti periodi separano un picco dall'altro nel DPO — il che può orientare, per esempio, l'intervallo atteso tra un ingresso e l'altro in una strategia basata su cicli.</p>
+<h2>Un esempio con i numeri</h2>
+<p>Supponi un asset con media mobile semplice a 20 periodi spostata indietro di 11 periodi, attualmente a R$ 45,00. Se il prezzo di chiusura della candela più recente è a R$ 47,25, il valore del DPO in questo punto è 47,25 − 45,00 = 2,25, un valore positivo che indica che il prezzo è R$ 2,25 sopra la media di riferimento spostata. Se, alcune settimane dopo, lo stesso calcolo risulta in -1,80, questo mostra che il ciclo di breve periodo è passato da forza a debolezza dentro quel periodo osservato — un'informazione che diventa molto più difficile da percepire guardando solo il prezzo grezzo in un trend rialzista continuo.</p>
+<h2>Perché il DPO non serve per leggere il trend</h2>
+<p>Proprio perché il suo calcolo rimuove il trend intenzionalmente, il DPO non deve essere usato per decidere se un asset è in rialzo o in ribasso nel lungo periodo — per questo, gli indicatori di trend tradizionali restano più adeguati. Un altro punto di attenzione è lo spostamento nel tempo: poiché la media usata nel calcolo è spostata indietro, il DPO tende a restare "in ritardo" rispetto alla candela più recente, il che rafforza il suo ruolo come strumento di identificazione di cicli passati, non di segnale anticipato del prossimo movimento.</p>
+<h2>Combinare il DPO con altri strumenti</h2>
+<p>Un modo comune di uso è combinare il DPO con un indicatore di trend a periodo più lungo: l'indicatore di trend definisce la direzione generale (rialzo, ribasso o laterale), e il DPO aiuta a identificare dentro questa direzione i momenti in cui il ciclo di breve periodo è favorevole per un ingresso allineato con il trend principale — per esempio, entrando in un trend rialzista solo quando il DPO esce da valori negativi e inizia a salire, suggerendo l'inizio di un nuovo ciclo di forza dentro il trend maggiore.</p>
+<h2>Accorgimenti pratici</h2>
+<p>Come qualsiasi strumento basato su medie spostate, il DPO funziona meglio su asset che storicamente mostrano un pattern ciclico ragionevolmente regolare. In mercati molto erratici, senza ciclo identificabile, l'indicatore può generare letture che cambiano segno molto frequentemente, senza un'utilità pratica chiara.</p>
+<h2>Per concludere</h2>
+<p>Il DPO è uno strumento di nicchia, utile specificamente per chi vuole studiare cicli di breve e medio periodo nascosti dentro un trend maggiore, e non dovrebbe sostituire gli indicatori di trend tradizionali nella decisione sulla direzione generale del mercato. Testarlo fianco a fianco con il grafico di prezzo, osservando la distanza tra picchi e valli su asset che già segui, è il modo migliore per capire se aggiunge davvero valore alla tua analisi.</p>
+        <div class="bq-post__cta">
+          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Leggi anche</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-loscillatore-stocastico-e-come-funziona/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Oscillatore Stocastico e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Average True Range (ATR) e come calcolarlo</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Copyright © 2026 Duotide.<br>
+            Tutti i diritti riservati.<br>
+            Sito ufficiale.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Azienda</h2>
+          <ul>
+            <li><a href="/it/">Home</a></li>
+            <li><a href="/it/duotide-affidabile/">Duotide è affidabile?</a></li>
+            <li><a href="/it/duotide-login/">Metodi di accesso</a></li>
+            <li><a href="/it/duotide-broker/">Scopri il broker</a></li>
+            <li><a href="/it/duotide-sicuro/">Sicurezza del broker</a></li>
+            <li><a href="/it/duotide-app/">App</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contatti</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Account manager 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/it/duotide-domande-frequenti/">Domande frequenti</a>
+          <a href="/it/chi-siamo/">Chi siamo</a>
+          <a href="/it/contatti/">Contatti</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Chiudi">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con il codice <strong>WELCOME100</strong> e ricevi un bonus del 100% sull'importo depositato.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Codice</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Copiato!">Copia</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Riscatta ora</a>
+          <p class="pp__mini">Soggetto alle condizioni della promozione. Il trading di prodotti con leva comporta rischio di perdita.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

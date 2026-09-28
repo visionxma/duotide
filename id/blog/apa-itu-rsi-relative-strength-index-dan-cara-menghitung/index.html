@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr" data-tema="dark" data-tv="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Apa itu RSI, Relative Strength Index, dan Cara Menghitungnya | Blog Duotide</title>
+  <meta name="description" content="Lihat rumus RSI langkah demi langkah, contoh numerik yang diselesaikan manual, dan cara menafsirkan overbought, oversold, dan divergensi.">
+  <link rel="canonical" href="https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/o-que-e-o-rsi-indice-de-forca-relativa/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/what-is-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/cose-lrsi-indice-di-forza-relativa-e-come-calcolarlo/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/what-is-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/what-is-rsi-relative-strength-index/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Apa itu RSI, Relative Strength Index, dan Cara Menghitungnya">
+  <meta property="og:description" content="Lihat rumus RSI langkah demi langkah, contoh numerik yang diselesaikan manual, dan cara menafsirkan overbought, oversold, dan divergensi.">
+  <meta property="og:url" content="https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apa itu RSI, Relative Strength Index, dan Cara Menghitungnya">
+  <meta name="twitter:description" content="Lihat rumus RSI langkah demi langkah, contoh numerik yang diselesaikan manual, dan cara menafsirkan overbought, oversold, dan divergensi.">
+  <meta name="twitter:label1" content="Ditulis oleh">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Waktu baca">
+  <meta name="twitter:data2" content="5 menit">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/#artigo",
+      "headline": "Apa itu RSI, Relative Strength Index, dan Cara Menghitungnya",
+      "description": "Lihat rumus RSI langkah demi langkah, contoh numerik yang diselesaikan manual, dan cara menafsirkan overbought, oversold, dan divergensi.",
+      "url": "https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/",
+      "inLanguage": "id",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "Indikator",
+      "author": {
+        "@type": "Organization",
+        "name": "Tim Duotide",
+        "url": "https://duotide.com.br/id/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/id/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://duotide.com.br/id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/id/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Apa itu RSI, Relative Strength Index, dan Cara Menghitungnya",
+          "item": "https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Langsung ke konten</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/id/" aria-label="Duotide — halaman utama">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buka menu navigasi"
+                data-abrir="Buka menu navigasi" data-fechar="Tutup menu navigasi">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pilih bahasa"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="22" height="16"><span>id</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/o-que-e-o-rsi-indice-de-forca-relativa/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/what-is-rsi-relative-strength-index/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/" hreflang="id" lang="id" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/cose-lrsi-indice-di-forza-relativa-e-come-calcolarlo/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/what-is-rsi-relative-strength-index/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="/id/">Beranda</a></li>
+          <li><a href="/id/duotide-terpercaya/">Terpercaya?</a></li>
+          <li><a href="/id/duotide-login/">Login</a></li>
+          <li><a href="/id/duotide-broker/">Tentang broker</a></li>
+          <li><a href="/id/duotide-aman/">Aman?</a></li>
+          <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          <li><a href="/id/broker-terbaik/">Broker terbaik</a></li>
+          <li><a href="/id/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id"
+           target="_blank" rel="noopener sponsored nofollow">Buat akun</a>
+        <a class="btn btn--outline btn--sm" href="/id/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Jejak navigasi">
+    <div class="container">
+      <ol>
+        <li><a href="/id/">Beranda</a></li>
+        <li><a href="/id/blog/">Blog</a></li>
+        <li><span aria-current="page">Apa itu RSI, Relative Strength Index, dan Cara Menghitungnya</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Indikator</span>
+        <h1>Apa itu RSI, Relative Strength Index, dan Cara Menghitungnya</h1>
+        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 menit baca</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>RSI, atau relative strength index, adalah salah satu indikator momentum yang paling banyak digunakan dalam analisis teknikal. Ia membandingkan kekuatan keuntungan terbaru sebuah aset dengan kekuatan kerugian terbarunya, menghasilkan angka antara 0 dan 100 yang membantu mengidentifikasi kapan sebuah pergerakan mungkin sudah terlalu meregang.</p><h2>Rumus RSI</h2><p>Perhitungan dimulai dengan rata-rata keuntungan dan rata-rata kerugian selama sejumlah periode tertentu, biasanya 14. Dari rata-rata ini, dihitung kekuatan relatif, disebut RS:</p><p><strong>RS = rata-rata keuntungan / rata-rata kerugian</strong></p><p>Kemudian, RS diubah ke skala 0 hingga 100 menggunakan rumus:</p><p><strong>RSI = 100 - [100 / (1 + RS)]</strong></p><h2>Contoh yang Diselesaikan Manual</h2><p>Untuk menyederhanakan perhitungan, lihat contoh dengan hanya 5 variasi harga, alih-alih 14 yang biasa digunakan, hanya untuk mengilustrasikan perhitungannya. Anggaplah penutupan harian sebuah saham berikut: R$ 10,00; R$ 10,20; R$ 10,15; R$ 10,40; R$ 10,30; R$ 10,50.</p><p>Variasi antara satu penutupan dan berikutnya adalah:</p><ul><li>Hari 2: +R$ 0,20 (untung)</li><li>Hari 3: -R$ 0,05 (rugi)</li><li>Hari 4: +R$ 0,25 (untung)</li><li>Hari 5: -R$ 0,10 (rugi)</li><li>Hari 6: +R$ 0,20 (untung)</li></ul><p>Rata-rata keuntungan, menjumlahkan tiga keuntungan dan membagi dengan 5 variasi, menjadi (0,20 + 0,25 + 0,20) / 5 = 0,13. Rata-rata kerugian, menjumlahkan dua kerugian dan membagi dengan 5 variasi, menjadi (0,05 + 0,10) / 5 = 0,03. Kekuatan relatifnya menjadi RS = 0,13 / 0,03 = 4,33. Menerapkan rumus akhir: RSI = 100 - [100 / (1 + 4,33)] = 100 - 18,76 = <strong>81,24</strong>.</p><p>RSI mendekati 81 menandakan keuntungan terbaru jelas mendominasi kerugian dalam periode yang disederhanakan ini, menempatkan indikator pada pembacaan overbought.</p><h2>Cara Menafsirkan Level Overbought dan Oversold</h2><p>Pembacaan tradisional menganggap nilai di atas 70 sebagai overbought, menyarankan pergerakan naik mungkin sudah meregang, dan nilai di bawah 30 sebagai oversold, menyarankan hal yang sama untuk pergerakan turun. Angka-angka ini bukan sinyal otomatis beli atau jual. Dalam tren naik yang kuat, RSI bisa tetap di atas 70 untuk waktu yang cukup lama, dan menjual setiap kali ia melintasi level ini bisa berarti keluar dari tren yang masih memiliki cukup ruang untuk berlanjut.</p><h2>Divergensi: Ketika Harga dan RSI Tidak Sepakat</h2><p>Divergensi terjadi ketika harga membentuk tertinggi baru, tetapi RSI membentuk tertinggi lebih rendah dari sebelumnya, menyarankan pergerakan naik kehilangan kekuatan di balik layar, meski harga masih naik. Hal yang sama berlaku sebaliknya, dengan harga membuat terendah lebih rendah sementara RSI membuat terendah lebih tinggi. Divergensi adalah peringatan kemungkinan hilangnya kekuatan pergerakan, bukan jaminan pembalikan segera.</p><h2>Kesalahan Umum saat Menggunakan RSI</h2><ul><li>Memperlakukan setiap persilangan 70 atau 30 sebagai sinyal entri otomatis, mengabaikan konteks tren yang lebih besar.</li><li>Menggunakan RSI sendirian, tanpa memeriksa support, resistance, atau struktur grafik secara umum.</li><li>Membandingkan RSI aset berbeda seolah-olah angka yang sama berarti hal yang sama dalam konteks volatilitas apa pun.</li><li>Mengabaikan timeframe: RSI yang dihitung pada grafik 5 menit mengukur hal yang sangat berbeda dari indikator yang sama pada grafik harian.</li></ul><h2>RSI pada Timeframe Berbeda</h2><p>Aset yang sama bisa menunjukkan pembacaan RSI yang sangat berbeda tergantung grafik yang digunakan. RSI yang dihitung pada candle 5 menit bereaksi terhadap osilasi sangat jangka pendek dan bisa berganti-ganti antara overbought dan oversold beberapa kali dalam satu hari. Sementara RSI yang dihitung pada candle harian atau mingguan cenderung bergerak lebih lambat dan biasanya mencerminkan pergerakan jangka lebih panjang. Sebelum membandingkan pembacaan RSI dengan aturan tetap, ada baiknya mengonfirmasi bahwa timeframe yang dipilih masuk akal untuk jenis transaksi yang direncanakan, baik itu day trade cepat maupun posisi beberapa hari.</p><h2>Cara Menggunakan RSI dengan Lebih Bertanggung Jawab</h2><p>RSI bekerja lebih baik sebagai satu bagian dalam analisis yang lebih luas, bukan sebagai pemicu entri berdiri sendiri. Menggabungkan pembacaan RSI dengan tren timeframe yang lebih besar, level support dan resistance, serta reaksi harga dekat level-level ini biasanya menghasilkan pembacaan yang lebih dapat diandalkan dibandingkan hanya menggunakan persilangan satu angka tetap. Seperti indikator teknikal mana pun, RSI menggambarkan perilaku harga masa lalu dan tidak menjamin apa yang akan terjadi berikutnya.</p>
+        <div class="bq-post__cta">
+          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Baca juga</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/id/blog/apa-itu-indikator-adx-dan-cara-kerjanya/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Indikator ADX dan Cara Kerjanya</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/apa-itu-osilator-stokastik-dan-cara-kerjanya/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Osilator Stokastik dan Cara Kerjanya</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/apa-itu-average-true-range-atr-dan-cara-menghitung/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Average True Range (ATR) dan Cara Menghitungnya</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Hak cipta © 2026 Duotide.<br>
+            Seluruh hak dilindungi.<br>
+            Situs resmi.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Perusahaan</h2>
+          <ul>
+            <li><a href="/id/">Beranda</a></li>
+            <li><a href="/id/duotide-terpercaya/">Apakah Duotide Terpercaya?</a></li>
+            <li><a href="/id/duotide-login/">Metode Login</a></li>
+            <li><a href="/id/duotide-broker/">Kenali Broker</a></li>
+            <li><a href="/id/duotide-aman/">Keamanan Broker</a></li>
+            <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontak</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Manajer akun 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/id/duotide-pertanyaan-umum/">Pertanyaan umum</a>
+          <a href="/id/tentang/">Tentang situs ini</a>
+          <a href="/id/kontak/">Kontak</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Kembali ke atas halaman">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Tutup">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">100%</span></h2>
+          <p>Deposit dengan kupon <strong>WELCOME100</strong> dan dapatkan bonus 100% dari jumlah yang disetor.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Tersalin!">Salin</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Klaim sekarang</a>
+          <p class="pp__mini">Tunduk pada syarat promo. Trading produk leverage berisiko menimbulkan kerugian.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

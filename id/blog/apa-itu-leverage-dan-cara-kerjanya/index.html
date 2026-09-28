@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr" data-tema="dark" data-tv="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Apa itu Leverage dan Cara Kerjanya dalam Trading | Blog Duotide</title>
+  <meta name="description" content="Pahami konsep leverage, peran margin, risiko margin call, dan cara menghitung risiko nyata sebuah posisi dengan leverage.">
+  <link rel="canonical" href="https://duotide.com.br/id/blog/apa-itu-leverage-dan-cara-kerjanya/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/o-que-e-alavancagem-e-como-ela-funciona/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/what-is-leverage-and-how-it-works/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/what-is-leverage-and-how-it-works/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/apa-itu-leverage-dan-cara-kerjanya/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/cose-la-leva-e-come-funziona-nel-trading/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/what-is-leverage-and-how-it-works/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/what-is-leverage-and-how-it-works/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Apa itu Leverage dan Cara Kerjanya dalam Trading">
+  <meta property="og:description" content="Pahami konsep leverage, peran margin, risiko margin call, dan cara menghitung risiko nyata sebuah posisi dengan leverage.">
+  <meta property="og:url" content="https://duotide.com.br/id/blog/apa-itu-leverage-dan-cara-kerjanya/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apa itu Leverage dan Cara Kerjanya dalam Trading">
+  <meta name="twitter:description" content="Pahami konsep leverage, peran margin, risiko margin call, dan cara menghitung risiko nyata sebuah posisi dengan leverage.">
+  <meta name="twitter:label1" content="Ditulis oleh">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Waktu baca">
+  <meta name="twitter:data2" content="5 menit">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/id/blog/apa-itu-leverage-dan-cara-kerjanya/#artigo",
+      "headline": "Apa itu Leverage dan Cara Kerjanya dalam Trading",
+      "description": "Pahami konsep leverage, peran margin, risiko margin call, dan cara menghitung risiko nyata sebuah posisi dengan leverage.",
+      "url": "https://duotide.com.br/id/blog/apa-itu-leverage-dan-cara-kerjanya/",
+      "inLanguage": "id",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
+      "articleSection": "Manajemen risiko",
+      "author": {
+        "@type": "Organization",
+        "name": "Tim Duotide",
+        "url": "https://duotide.com.br/id/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/id/blog/apa-itu-leverage-dan-cara-kerjanya/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/id/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://duotide.com.br/id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/id/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Apa itu Leverage dan Cara Kerjanya dalam Trading",
+          "item": "https://duotide.com.br/id/blog/apa-itu-leverage-dan-cara-kerjanya/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Langsung ke konten</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/id/" aria-label="Duotide — halaman utama">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buka menu navigasi"
+                data-abrir="Buka menu navigasi" data-fechar="Tutup menu navigasi">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pilih bahasa"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="22" height="16"><span>id</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/o-que-e-alavancagem-e-como-ela-funciona/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/what-is-leverage-and-how-it-works/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/what-is-leverage-and-how-it-works/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/apa-itu-leverage-dan-cara-kerjanya/" hreflang="id" lang="id" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/cose-la-leva-e-come-funziona-nel-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/what-is-leverage-and-how-it-works/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="/id/">Beranda</a></li>
+          <li><a href="/id/duotide-terpercaya/">Terpercaya?</a></li>
+          <li><a href="/id/duotide-login/">Login</a></li>
+          <li><a href="/id/duotide-broker/">Tentang broker</a></li>
+          <li><a href="/id/duotide-aman/">Aman?</a></li>
+          <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          <li><a href="/id/broker-terbaik/">Broker terbaik</a></li>
+          <li><a href="/id/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id"
+           target="_blank" rel="noopener sponsored nofollow">Buat akun</a>
+        <a class="btn btn--outline btn--sm" href="/id/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Jejak navigasi">
+    <div class="container">
+      <ol>
+        <li><a href="/id/">Beranda</a></li>
+        <li><a href="/id/blog/">Blog</a></li>
+        <li><span aria-current="page">Apa itu Leverage dan Cara Kerjanya dalam Trading</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Manajemen risiko</span>
+        <h1>Apa itu Leverage dan Cara Kerjanya dalam Trading</h1>
+        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 menit baca</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Leverage adalah salah satu konsep paling kuat sekaligus paling kurang dipahami dalam trading. Secara sederhana, ia memungkinkan membuka posisi lebih besar dari modal yang benar-benar disetor, menggunakan sebagian kecil modal itu sebagai margin — semacam jaminan — untuk mendukung transaksi tersebut. Sisa nilai posisi tidak keluar dari kantong trader, tetapi memperbesar baik hasil positif maupun negatif dalam proporsi yang sama.</p><h2>Cara Kerja Leverage dalam Praktik</h2><p>Leverage 1:10, misalnya, berarti, untuk setiap R$ 1 yang disetor sebagai margin, dimungkinkan mengendalikan posisi R$ 10. Ini tidak mengubah eksposur nyata terhadap pasar — hasil finansial tetap dihitung atas total nilai posisi, bukan atas margin yang disetor — tetapi secara drastis mengurangi modal yang dibutuhkan untuk membuka posisi tersebut.</p><h2>Contoh Numerik Lengkap</h2><p>Anggaplah sebuah aset dikuotasi R$ 100, dan seorang trader menyetor margin R$ 200 untuk membuka posisi dengan leverage 1:10, secara efektif mengendalikan eksposur R$ 2.000, yaitu 20 unit aset. Jika harga naik 5%, menjadi R$ 105, keuntungan pada posisi tersebut adalah R$ 5 per unit × 20 unit = R$ 100 — setara dengan imbal hasil 50% atas R$ 200 yang disetor sebagai margin, meski aset hanya naik 5%. Jika sebaliknya, harga turun 5%, menjadi R$ 95, kerugiannya akan R$ 100, juga 50% dari margin yang disetor. Inilah inti leverage: ia melipatgandakan persentase imbal hasil atas modal margin, ke atas dan ke bawah, dengan intensitas yang sama.</p><h2>Peran Margin dan Risiko Margin Call</h2><p>Margin berfungsi sebagai jaminan minimum yang disyaratkan untuk mempertahankan posisi terbuka. Jika pasar bergerak melawan posisi hingga kerugian akumulasi mendekati nilai yang disetor sebagai margin, broker bisa mengeluarkan margin call, meminta setoran tambahan, atau menutup posisi secara otomatis untuk mencegah kerugian melebihi modal yang tersedia di akun. Memahami mekanisme ini menghindarkan kejutan melihat posisi ditutup secara otomatis pada pergerakan pasar yang lebih tajam.</p><h2>Mengapa Leverage Membutuhkan Lebih Banyak Disiplin Risiko, Bukan Lebih Sedikit</h2><p>Menggoda untuk hanya melihat leverage dari sisi keuntungan potensial yang diperbesar, tetapi mekanisme yang sama memperbesar kerugian potensial dalam proporsi yang sama. Karena itu, semakin besar leverage yang digunakan, semakin kecil seharusnya, secara proporsional, ukuran posisi relatif terhadap total modal yang tersedia, untuk menjaga risiko dalam rupiah tetap dalam batas yang setara dengan yang akan diambil dalam transaksi tanpa leverage sama sekali.</p><h2>Cara Menentukan Ukuran Risiko Saat Menggunakan Leverage</h2><p>Cara praktis memikirkan ini adalah selalu menghitung risiko dalam rupiah dari jarak antara harga masuk dan stop, dikalikan ukuran total posisi (sudah mempertimbangkan leverage), bukan dari nilai margin yang disetor secara terpisah. Kembali ke contoh sebelumnya, dengan posisi 20 unit di R$ 100, stop di R$ 97 akan mewakili risiko R$ 3 per unit × 20 unit = R$ 60, terlepas dari berapa yang disetor sebagai margin untuk mewujudkan posisi ini.</p><h2>Leverage Bukan, dengan Sendirinya, Baik atau Buruk</h2><p>Alat ini sendiri netral: ia hanya memperbesar hasil, baik positif maupun negatif, sesuai proporsi yang digunakan. Yang menentukan apakah penggunaannya bertanggung jawab atau tidak adalah apakah ukuran posisi yang dihasilkan menghormati batas risiko yang ditentukan sebelum entri, mempertimbangkan skenario terburuk yang mungkin, bukan hanya skenario yang diinginkan.</p><h2>Level Leverage Berbeda untuk Aset Berbeda</h2><p>Umum broker menawarkan level leverage berbeda sesuai volatilitas khas setiap kelas aset — biasanya lebih konservatif untuk aset yang secara historis lebih volatil, seperti beberapa kripto, dan lebih tinggi untuk pasangan mata uang tradisional, dengan pergerakan harian yang secara proporsional lebih kecil. Memahami perbedaan ini membantu tidak menerapkan penalaran risiko yang sama pada aset dengan perilaku yang sangat berbeda satu sama lain.</p><h2>Kesimpulan Praktis</h2><p>Leverage melipatgandakan eksposur terhadap pasar dari modal yang lebih kecil, dan karena itu juga melipatgandakan risiko kerugian dalam proporsi yang sama dengan potensi keuntungan. Menggunakannya membutuhkan menghitung risiko dalam rupiah dengan mempertimbangkan total ukuran posisi dengan leverage, bukan hanya nilai yang disetor sebagai margin, dan menyesuaikan ukuran ini untuk menjaga risiko dalam batas yang ditentukan sebelumnya — tidak pernah lebih besar dari yang benar-benar bersedia dirugikan orang tersebut dalam transaksi itu.</p>
+        <div class="bq-post__cta">
+          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Baca juga</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/id/blog/cara-menggunakan-stop-loss-dan-take-profit-di-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cara Menggunakan Stop Loss dan Take Profit di Forex</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/strategi-martingale-dalam-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strategi Martingale dalam Trading: Cara Kerja dan Risikonya</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/kapan-mengakhiri-transaksi-sinyal-keluar/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Kapan Mengakhiri Transaksi: Sinyal Keluar</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Hak cipta © 2026 Duotide.<br>
+            Seluruh hak dilindungi.<br>
+            Situs resmi.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Perusahaan</h2>
+          <ul>
+            <li><a href="/id/">Beranda</a></li>
+            <li><a href="/id/duotide-terpercaya/">Apakah Duotide Terpercaya?</a></li>
+            <li><a href="/id/duotide-login/">Metode Login</a></li>
+            <li><a href="/id/duotide-broker/">Kenali Broker</a></li>
+            <li><a href="/id/duotide-aman/">Keamanan Broker</a></li>
+            <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontak</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Manajer akun 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/id/duotide-pertanyaan-umum/">Pertanyaan umum</a>
+          <a href="/id/tentang/">Tentang situs ini</a>
+          <a href="/id/kontak/">Kontak</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Kembali ke atas halaman">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Tutup">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">100%</span></h2>
+          <p>Deposit dengan kupon <strong>WELCOME100</strong> dan dapatkan bonus 100% dari jumlah yang disetor.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Tersalin!">Salin</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Klaim sekarang</a>
+          <p class="pp__mini">Tunduk pada syarat promo. Trading produk leverage berisiko menimbulkan kerugian.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>
