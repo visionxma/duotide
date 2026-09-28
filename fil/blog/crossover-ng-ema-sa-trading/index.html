@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fil" dir="ltr" data-tema="dark" data-tv="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Crossover ng exponential moving average (EMA) sa trading | Blog Duotide</title>
+  <meta name="description" content="Paano bumuo ng diskarteng crossover ng EMA, may numerical na halimbawa, at bakit nabibigo ang method na ito sa mga merkadong walang tiyak na trend.">
+  <link rel="canonical" href="https://duotide.com.br/fil/blog/crossover-ng-ema-sa-trading/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/cruzamento-de-medias-moveis-exponenciais-ema/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/exponential-moving-average-ema-crossover-trading/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/cruce-de-medias-moviles-exponenciales-ema/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/ema-crossover-in-trading/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/crossover-ng-ema-sa-trading/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/croisement-de-moyennes-mobiles-exponentielles-ema/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/ema-crossover-trading/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/persilangan-exponential-moving-average-ema-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/incrocio-di-medie-mobili-esponenziali-ema/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/exponential-moving-average-ema-crossover/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/ema-crossover-trading/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/exponential-moving-average-ema-crossover-trading/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="fil_PH">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Crossover ng exponential moving average (EMA) sa trading">
+  <meta property="og:description" content="Paano bumuo ng diskarteng crossover ng EMA, may numerical na halimbawa, at bakit nabibigo ang method na ito sa mga merkadong walang tiyak na trend.">
+  <meta property="og:url" content="https://duotide.com.br/fil/blog/crossover-ng-ema-sa-trading/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crossover ng exponential moving average (EMA) sa trading">
+  <meta name="twitter:description" content="Paano bumuo ng diskarteng crossover ng EMA, may numerical na halimbawa, at bakit nabibigo ang method na ito sa mga merkadong walang tiyak na trend.">
+  <meta name="twitter:label1" content="Isinulat ni">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Oras ng pagbasa">
+  <meta name="twitter:data2" content="5 minuto">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/fil/blog/crossover-ng-ema-sa-trading/#artigo",
+      "headline": "Crossover ng exponential moving average (EMA) sa trading",
+      "description": "Paano bumuo ng diskarteng crossover ng EMA, may numerical na halimbawa, at bakit nabibigo ang method na ito sa mga merkadong walang tiyak na trend.",
+      "url": "https://duotide.com.br/fil/blog/crossover-ng-ema-sa-trading/",
+      "inLanguage": "fil",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
+      "articleSection": "Mga estratehiya",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide Team",
+        "url": "https://duotide.com.br/fil/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/fil/blog/crossover-ng-ema-sa-trading/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/fil/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/fil/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/fil/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Crossover ng exponential moving average (EMA) sa trading",
+          "item": "https://duotide.com.br/fil/blog/crossover-ng-ema-sa-trading/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Lumaktaw sa nilalaman</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/fil/" aria-label="Duotide — home page">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buksan ang navigation menu"
+                data-abrir="Buksan ang navigation menu" data-fechar="Isara ang navigation menu">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pumili ng wika"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="22" height="16"><span>fil</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/cruzamento-de-medias-moveis-exponenciais-ema/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/exponential-moving-average-ema-crossover-trading/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/cruce-de-medias-moviles-exponenciales-ema/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/ema-crossover-in-trading/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/crossover-ng-ema-sa-trading/" hreflang="fil" lang="fil" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/croisement-de-moyennes-mobiles-exponentielles-ema/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/ema-crossover-trading/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/persilangan-exponential-moving-average-ema-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/incrocio-di-medie-mobili-esponenziali-ema/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/exponential-moving-average-ema-crossover/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/ema-crossover-trading/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Pangunahing navigation">
+        <ul>
+          <li><a href="/fil/">Home</a></li>
+          <li><a href="/fil/duotide-legit-ba/">Legit ba?</a></li>
+          <li><a href="/fil/duotide-login/">Login</a></li>
+          <li><a href="/fil/duotide-broker/">Ang broker</a></li>
+          <li><a href="/fil/duotide-ligtas-ba/">Ligtas ba?</a></li>
+          <li><a href="/fil/duotide-app/">App</a></li>
+          <li><a href="/fil/pinakamahusay-na-broker/">Pinakamahusay na broker</a></li>
+          <li><a href="/fil/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil"
+           target="_blank" rel="noopener sponsored nofollow">Gumawa ng account</a>
+        <a class="btn btn--outline btn--sm" href="/fil/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+    <div class="container">
+      <ol>
+        <li><a href="/fil/">Home</a></li>
+        <li><a href="/fil/blog/">Blog</a></li>
+        <li><span aria-current="page">Crossover ng exponential moving average (EMA) sa trading</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Mga estratehiya</span>
+        <h1>Crossover ng exponential moving average (EMA) sa trading</h1>
+        <p class="bq-post__meta">Duotide Team · <time datetime="2026-09-24">09/24/2026</time> · 4 min basahin</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Ang crossover ng exponential moving average ay isa sa pinaka-itinuturong diskarte para sa nagsisimula sa technical analysis, at may magandang dahilan: madaling i-visualize, madaling i-automate, at hindi nakadepende sa subjective na interpretasyon ng chart pattern. Ang pangunahing ideya ay gumamit ng dalawang EMA na magkaibang period at obserbahan ang sandaling tumatawid ang isa sa isa.</p><p>Ang pagpili sa EMA, sa halip na simple moving average, ay hindi aksidente. Dahil binibigyan ng EMA ng mas malaking timbang ang mga kamakailang presyo, mas mabilis itong tumutugon sa mga pagbabago ng direksyon — isang bagay na napakahalaga sa isang diskarteng umaasa mismo sa eksaktong sandali ng crossover sa pagitan ng dalawang linya.</p><h2>Paano gumagana ang diskarte</h2><p>Ginagamit ng pinakakaraniwang format ang dalawang EMA, isang mas maiksi at isang mas mahaba — halimbawa, 9 at 21 period:</p><ul><li><strong>Bullish crossover</strong>: tumatawid ang maiksing EMA mula sa ibaba patungo sa itaas ng mahabang EMA, na nagmumungkahi na lumalakas ang kamakailang momentum kaysa sa background na average.</li><li><strong>Bearish crossover</strong>: tumatawid ang maiksing EMA mula sa itaas patungo sa ibaba ng mahabang EMA, na nagmumungkahi ng paghina ng naunang bullish na momentum.</li></ul><p>Ang lohika sa likod nito ay, kapag ang short-term na average ay nagiging mas mataas kaysa sa long-term na average, ang mga kamakailang presyo ay hinihila ang average pataas nang mas malakas kaysa sa mas malayong history — isang di-tuwirang senyales na maaaring nagbabago na ang direksyon ng trend.</p><h2>Isang halimbawa na may numero</h2><p>Isipin ang isang asset kung saan ang EMA ng 9-period ay nasa R$ 74,20 at ang EMA ng 21-period ay nasa R$ 74,80, na tumataas ang presyo sa mga huling candle. Kung, dalawang candle pagkatapos, tumaas ang EMA ng 9 sa R$ 75,10 at ang EMA ng 21 ay nasa R$ 74,90, nangyari ang bullish crossover: naging mas mataas ang maiksing average kaysa sa mahaba. Ito ang punto na itinuturing ng diskarte bilang senyales ng bought na entry.</p><p>Ang kabaligtarang landas — ang EMA ng 9 na tumatawid pababa sa EMA ng 21 — ay bubuo ng senyales ng exit o ng pagbenta, depende sa kung paano nabuo ang diskarte.</p><h2>Ang antala ang presyong babayaran</h2><p>Tulad ng anumang moving average, ang EMA ay tumutugon sa kung ano ang nangyari na, hindi sa kung ano ang mangyayari. Nakukumpirma lang ang crossover matapos gumalaw nang sapat ang presyo para baligtarin ang relative na posisyon ng dalawang linya. Ibig sabihin nito, may bahagi na ng galaw na naiwan na sa likod sa sandaling lumitaw ang senyales — ipinagpapalit ng diskarte ang prediksyon para sa confirmation, at may direktang gastos ito sa laki ng potensyal na kita ng bawat entry.</p><h2>Saan madalas nabibigo ang method</h2><p>Sa mga merkadong walang malinaw na trend, umiindayog sa gilid sa loob ng makitid na range, ang dalawang EMA ay nagkakadikit-dikit, paulit-ulit na tumatawid sa maiksing agwat ng oras. Bawat crossover ay bumubuo ng senyales, ngunit hindi sapat na gumalaw ang presyo sa nasabing direksyon bago mag-reverse at bumuo ng kabaligtarang crossover. Ang resulta ay isang sunud-sunod na maliliit na pagkalugi — ang epekto ng whipsaw na kadalasang kumakain sa mga account na nagta-trade sa bawat crossover nang walang anumang dagdag na filter.</p><p>Isang paraan para bawasan ang problemang ito ay ang pagsasama ng crossover sa isang filter ng lakas ng trend, tulad ng ADX: ang paghingi na ang ADX ay nasa itaas ng isang tiyak na antas bago ituring na valid ang isang crossover ay tumutulong itakwil ang malaking bahagi ng mga senyales na nabubuo sa mga merkadong walang tiyak na direksyon.</p><h2>Pag-aayos ng period ng mga moving average</h2><p>Ang mas maiksing kombinasyon, tulad ng 5 at 13, ay bumubuo ng mas maagang senyales, ngunit mas maraming huwad na senyales din. Ang mas mahabang kombinasyon, tulad ng 21 at 55, ay tumatagal bago kumpirmahin, ngunit mas mahusay na sumasala sa short-term na noise. Walang universally na mas mahusay na kombinasyon — depende ang ideal sa timeframe na balak mong panatilihin ang operasyon at sa dami ng antala sa confirmation na handa mong tanggapin kapalit ng mas kaunting huwad na senyales.</p><h2>Paggamit ng crossover nang may criteria</h2><p>Mas mahusay gumana ang crossover ng EMA bilang bahagi ng isang sistemang may dagdag na filter — lakas ng trend, volume, o konteksto ng suporte at resistensya — kaysa bilang isolated na panuntunan na inilalapat nang walang exception. Ino-automate nito ang isang bahagi ng desisyon, ngunit hindi nito pinapalitan ang pangangailangan ng risk management: kahit ang pinakamahusay na kombinasyon ng period ay bubuo pa rin ng huwad na senyales sa ilang frequency, lalo na sa mga sideways na merkado.</p>
+        <div class="bq-post__cta">
+          <p><strong>Magsanay muna bago sumugal.</strong> Gumawa ng account sa Duotide at subukan ang iyong mga ideya sa demo account na may R$ 10,000 na virtual na pondo.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Gumawa ng libreng account</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Basahin din</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/fil/blog/paano-pumili-ng-expiration-ng-operasyon/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Paano pumili ng expiration ng isang operasyon</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
+            <a class="bq__card" href="/fil/blog/diskarteng-dual-stochastic/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Diskarteng dual stochastic: pagsamahin ang dalawang oscillator</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
+            <a class="bq__card" href="/fil/blog/crossover-ng-dalawang-moving-average/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Crossover ng dalawang moving average: paano ikombina</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Copyright © 2026 Duotide.<br>
+            Nakalaan ang lahat ng karapatan.<br>
+            opisyal na site.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Kompanya</h2>
+          <ul>
+            <li><a href="/fil/">Home</a></li>
+            <li><a href="/fil/duotide-legit-ba/">Legit ba ang Duotide?</a></li>
+            <li><a href="/fil/duotide-login/">Mga Paraan ng Login</a></li>
+            <li><a href="/fil/duotide-broker/">Kilalanin ang Broker</a></li>
+            <li><a href="/fil/duotide-ligtas-ba/">Seguridad ng Broker</a></li>
+            <li><a href="/fil/duotide-app/">App</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Makipag-ugnayan</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>24/7 na account manager</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/fil/duotide-faq/">Mga madalas itanong</a>
+          <a href="/fil/tungkol-sa-site/">Tungkol sa site na ito</a>
+          <a href="/fil/makipag-ugnayan/">Makipag-ugnayan</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Bumalik sa itaas ng pahina">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Isara">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">na 100%</span></h2>
+          <p>Mag-deposit gamit ang coupon na <strong>WELCOME100</strong> at makakuha ng 100% bonus sa halagang idineposito.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Coupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Nakopya!">Kopyahin</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Kunin na ngayon</a>
+          <p class="pp__mini">Napapailalim sa mga kondisyon ng promo. May panganib ng pagkalugi ang pag-trade ng leveraged products.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

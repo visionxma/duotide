@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" data-tema="dark" data-tv="sv_SE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Så konfigurerar du en handelsrobot steg för steg | Blog Duotide</title>
+  <meta name="description" content="Se steg för steg hur du bygger en handelsrobot, från regeldefinitionen till testerna, och förstå försiktighetsåtgärderna innan du handlar på riktigt.">
+  <link rel="canonical" href="https://duotide.com.br/sv/blog/sa-konfigurerar-du-en-handelsrobot/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-configurar-um-robo-de-trading/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-set-up-a-trading-bot-step-by-step/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/como-configurar-un-robot-de-trading/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-set-up-a-trading-bot/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/how-to-set-up-a-trading-bot/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-einen-trading-bot-schritt-fuer-schritt-einrichtet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-i-set-up-ang-isang-trading-bot/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-configurer-un-robot-de-trading/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/how-to-set-up-a-trading-bot/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-mengonfigurasi-robot-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-configurare-un-robot-di-trading/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-set-up-a-trading-bot/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-konfigurerar-du-en-handelsrobot/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/how-to-set-up-a-trading-bot/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/trading-robotu-adim-adim-nasil-kurulur/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-cau-hinh-robot-giao-dich-tung-buoc/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-set-up-a-trading-bot/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-set-up-a-trading-bot-step-by-step/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Så konfigurerar du en handelsrobot steg för steg">
+  <meta property="og:description" content="Se steg för steg hur du bygger en handelsrobot, från regeldefinitionen till testerna, och förstå försiktighetsåtgärderna innan du handlar på riktigt.">
+  <meta property="og:url" content="https://duotide.com.br/sv/blog/sa-konfigurerar-du-en-handelsrobot/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide-bloggen">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Så konfigurerar du en handelsrobot steg för steg">
+  <meta name="twitter:description" content="Se steg för steg hur du bygger en handelsrobot, från regeldefinitionen till testerna, och förstå försiktighetsåtgärderna innan du handlar på riktigt.">
+  <meta name="twitter:label1" content="Skriven av">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lästid">
+  <meta name="twitter:data2" content="5 minuter">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/sv/blog/sa-konfigurerar-du-en-handelsrobot/#artigo",
+      "headline": "Så konfigurerar du en handelsrobot steg för steg",
+      "description": "Se steg för steg hur du bygger en handelsrobot, från regeldefinitionen till testerna, och förstå försiktighetsåtgärderna innan du handlar på riktigt.",
+      "url": "https://duotide.com.br/sv/blog/sa-konfigurerar-du-en-handelsrobot/",
+      "inLanguage": "sv",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
+      "articleSection": "Strategier",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-teamet",
+        "url": "https://duotide.com.br/sv/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/sv/blog/sa-konfigurerar-du-en-handelsrobot/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/sv/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://duotide.com.br/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://duotide.com.br/sv/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Så konfigurerar du en handelsrobot steg för steg",
+          "item": "https://duotide.com.br/sv/blog/sa-konfigurerar-du-en-handelsrobot/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/sv/" aria-label="Duotide — startsida">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Öppna navigeringsmenyn"
+                data-abrir="Öppna navigeringsmenyn" data-fechar="Stäng navigeringsmenyn">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Välj språk"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="22" height="16"><span>sv</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-configurar-um-robo-de-trading/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-set-up-a-trading-bot-step-by-step/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/como-configurar-un-robot-de-trading/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-set-up-a-trading-bot/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/how-to-set-up-a-trading-bot/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-einen-trading-bot-schritt-fuer-schritt-einrichtet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-i-set-up-ang-isang-trading-bot/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-configurer-un-robot-de-trading/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/how-to-set-up-a-trading-bot/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-mengonfigurasi-robot-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-configurare-un-robot-di-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-set-up-a-trading-bot/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-konfigurerar-du-en-handelsrobot/" hreflang="sv" lang="sv" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/how-to-set-up-a-trading-bot/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/trading-robotu-adim-adim-nasil-kurulur/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-cau-hinh-robot-giao-dich-tung-buoc/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-set-up-a-trading-bot/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Huvudnavigering">
+        <ul>
+          <li><a href="/sv/">Hem</a></li>
+          <li><a href="/sv/duotide-ar-den-palitlig/">Är den pålitlig?</a></li>
+          <li><a href="/sv/duotide-logga-in/">Logga in</a></li>
+          <li><a href="/sv/duotide-maklaren/">Mäklaren</a></li>
+          <li><a href="/sv/duotide-ar-den-saker/">Är den säker?</a></li>
+          <li><a href="/sv/duotide-app/">App</a></li>
+          <li><a href="/sv/basta-maklarna/">Bästa mäklarna</a></li>
+          <li><a href="/sv/blog/" aria-current="page">Blogg</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv"
+           target="_blank" rel="noopener sponsored nofollow">Skapa konto</a>
+        <a class="btn btn--outline btn--sm" href="/sv/duotide-logga-in/">Logga in</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Navigeringsspår">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+        <li><a href="/sv/blog/">Blogg</a></li>
+        <li><span aria-current="page">Så konfigurerar du en handelsrobot steg för steg</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Strategier</span>
+        <h1>Så konfigurerar du en handelsrobot steg för steg</h1>
+        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 6 min läsning</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>En handelsrobot är i grunden ett regelverk skrivet i kod som köper och säljer tillgångar automatiskt när vissa villkor uppfylls. Löftet är lockande: att handla utan att behöva sitta framför skärmen och utan att låta känslor påverka beslutet. Men att bygga en robot som verkligen fungerar kräver mer planering än de flesta tror.</p><p>Den här guiden visar stegen för att konfigurera en handelsrobot, från strategidefinitionen till de sista testerna, och de försiktighetsåtgärder som förhindrar att den blir en pengaförlorande maskin på autopilot.</p><h2>Steg 1: definiera strategin i tydliga regler</h2><p>Innan du tänker på kod, skriv din strategi i enkla och tydliga meningar. Till exempel: köp när det glidande medelvärdet på 9 perioder korsar över medelvärdet på 21 perioder, och sälj när priset faller 2% under ingångspriset. Om du inte kan beskriva strategin utan tvetydighet i text kommer inte heller roboten att kunna utföra den konsekvent.</p><p>I det här steget definierar du också de tre pelarna i alla automatiserade system: ingångsvillkoret, utgångsvillkoret med vinst och utgångsvillkoret med förlust (stoppen). En robot utan definierad stopp är inte en automatiserad strategi, det är en automatiserad risk.</p><h2>Steg 2: välj plattform och språk</h2><p>Det finns i grunden två vägar: använda en visuell byggare, där du sätter ihop logiken med block och menyer, utan att skriva kod, eller programmera roboten i ett språk som Python, vilket ger mer frihet men kräver teknisk kunskap. För den som börjar är visuella plattformar snabbare för att validera en enkel idé innan man investerar tid i programmering.</p><h3>Att testa logiken innan du automatiserar</h3><p>Ett vanligt misstag är att börja programmera roboten utan att först manuellt kontrollera, i ett historiskt diagram, om strategin skulle ha fungerat de senaste veckorna. Det manuella testet, snabbt och gjort med egna ögon, förhindrar att man slösar tid på att automatisera en regel som redan misslyckades på pappret.</p><h2>Steg 3: gör backtest med historiska data</h2><p>Backtest är processen att köra din strategi mot historiska prisdata för att se hur den skulle ha betett sig. Ett bra utfört backtest tar hänsyn till handelskostnader, spreaden mellan köp och sälj, och en tillräckligt lång period för att inkludera både lugna marknadsperioder och perioder med hög volatilitet.</p><p>Föreställ dig en robot testad med R$ 10.000 i startkapital, som riskerar 2% per affär (R$ 200). I 100 simulerade affärer, med 55% träffsäkerhet och en risk-avkastningsrelation på 1 till 1,5, skulle det förväntade resultatet vara ungefär 21 fler vinnande än förlorande affärer, multiplicerat med genomsnittsvinsten — en matematisk övning som bara är meningsfull när backtestsiffrorna är realistiska, och inte uppblåsta av tur under den valda perioden.</p><ul><li>Använd minst ett eller två år av historiska data, om tillgängligt.</li><li>Inkludera handelskostnader och spread i beräkningen.</li><li>Misstro alltför perfekta resultat: de kan tyda på ett fel i testet.</li><li>Avsätt en del av data för att validera utanför den period som användes för justeringen.</li></ul><h2>Steg 4: testa på demokonto innan riktigt kapital</h2><p>Även efter ett tillfredsställande backtest bör roboten köras på ett demokonto, med marknadsdata i realtid men utan riktiga pengar, under en rimlig period. Det är i den fasen som problem dyker upp som backtestet inte fångar, som exekveringsfördröjningar, anslutningsfel eller robotens beteende vid nyheter i sista minuten.</p><h3>Kontinuerlig övervakning</h3><p>En handelsrobot är inte ett projekt som konfigureras en gång och sedan glöms bort. Förändringar i marknadens beteende kan göra en lönsam strategi inkonsekvent. Avsätt tid varje vecka för att granska resultaten och jämföra den verkliga prestandan med vad backtestet förutspådde.</p><h2>Hur man sätter roboten i drift på ett säkert sätt</h2><p>När du går över till ett riktigt konto, börja med ett litet kapital, tillräckligt för att validera att exekveringen i realtid stämmer överens med det som testats, men litet nog för att ett konfigurationsfel inte ska orsaka en allvarlig förlust. Öka det tilldelade kapitalet gradvis, i takt med att den verkliga historiken bekräftar det som sågs i testerna.</p><p>Oavsett vilken plattform som används för att utföra ordrarna är roboten ett disciplinverktyg, inte en garanti för vinst. Den eliminerar den känslomässiga tvekan vid knapptryckningen, men förblir utsatt för marknadsrisk precis som vilken annan handelsform som helst, och förluster är en del av processen även med ett väl uppbyggt system.</p>
+        <div class="bq-post__cta">
+          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Läs också</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/sv/blog/sa-valjer-du-loptiden-for-en-affar/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du löptiden (expiration) för en affär</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-valjer-du-en-strategi-efter-din-profil/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du en strategi utifrån din profil</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-testar-och-justerar-du-din-strategi/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så testar och justerar du din tradingstrategi</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Upphovsrätt © 2026 Duotide.<br>
+            Alla rättigheter förbehållna.<br>
+            officiell webbplats.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Företag</h2>
+          <ul>
+            <li><a href="/sv/">Hem</a></li>
+            <li><a href="/sv/duotide-ar-den-palitlig/">Är Duotide pålitlig?</a></li>
+            <li><a href="/sv/duotide-logga-in/">Inloggningsmetoder</a></li>
+            <li><a href="/sv/duotide-maklaren/">Lär känna mäklaren</a></li>
+            <li><a href="/sv/duotide-ar-den-saker/">Mäklarens säkerhet</a></li>
+            <li><a href="/sv/duotide-app/">Appen</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kontoansvarig dygnet runt</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/sv/duotide-vanliga-fragor/">Vanliga frågor</a>
+          <a href="/sv/om-denna-webbplats/">Om denna webbplats</a>
+          <a href="/sv/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Tillbaka till början av sidan">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Stäng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">på 100 %</span></h2>
+          <p>Sätt in med koden <strong>WELCOME100</strong> och få 100 % bonus på insatt belopp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kod</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopierad!">Kopiera</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Hämta nu</a>
+          <p class="pp__mini">Kampanjvillkor gäller. Handel med hävstångsprodukter innebär risk för förlust.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

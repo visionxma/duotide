@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" data-tema="dark" data-tv="sv_SE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Så beräknar du hävstång och nödvändig marginal i trading | Blog Duotide</title>
+  <meta name="description" content="Lär dig hävstångsformeln, skillnaden mellan begärd marginal och verklig exponering, och se fullständiga exempel inom forex och krypto.">
+  <link rel="canonical" href="https://duotide.com.br/sv/blog/sa-beraknar-du-havstang-i-trading/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-alavancagem-como-calcular/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-calculate-leverage-and-margin/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/calculadora-de-apalancamiento-como-calcular/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/leverage-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/leverage-calculator-how-to-calculate-margin/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-hebel-und-benoetigte-margin-berechnet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-kalkulahin-ang-leverage-at-kailangang-margin/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-calculer-leffet-de-levier-en-trading/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/leverage-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-menghitung-leverage-dan-margin-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-calcolare-la-leva-e-il-margine-nel-trading/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/leverage-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-beraknar-du-havstang-i-trading/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/leverage-calculator-how-to-calculate/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/kaldirac-hesaplama-nasil-hesaplanir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-tinh-don-bay-va-ky-quy-can-thiet-trong-giao-dich/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-calculate-leverage-and-margin/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Så beräknar du hävstång och nödvändig marginal i trading">
+  <meta property="og:description" content="Lär dig hävstångsformeln, skillnaden mellan begärd marginal och verklig exponering, och se fullständiga exempel inom forex och krypto.">
+  <meta property="og:url" content="https://duotide.com.br/sv/blog/sa-beraknar-du-havstang-i-trading/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide-bloggen">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Så beräknar du hävstång och nödvändig marginal i trading">
+  <meta name="twitter:description" content="Lär dig hävstångsformeln, skillnaden mellan begärd marginal och verklig exponering, och se fullständiga exempel inom forex och krypto.">
+  <meta name="twitter:label1" content="Skriven av">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lästid">
+  <meta name="twitter:data2" content="5 minuter">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/sv/blog/sa-beraknar-du-havstang-i-trading/#artigo",
+      "headline": "Så beräknar du hävstång och nödvändig marginal i trading",
+      "description": "Lär dig hävstångsformeln, skillnaden mellan begärd marginal och verklig exponering, och se fullständiga exempel inom forex och krypto.",
+      "url": "https://duotide.com.br/sv/blog/sa-beraknar-du-havstang-i-trading/",
+      "inLanguage": "sv",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp",
+      "articleSection": "Riskhantering",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-teamet",
+        "url": "https://duotide.com.br/sv/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/sv/blog/sa-beraknar-du-havstang-i-trading/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/sv/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://duotide.com.br/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://duotide.com.br/sv/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Så beräknar du hävstång och nödvändig marginal i trading",
+          "item": "https://duotide.com.br/sv/blog/sa-beraknar-du-havstang-i-trading/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/sv/" aria-label="Duotide — startsida">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Öppna navigeringsmenyn"
+                data-abrir="Öppna navigeringsmenyn" data-fechar="Stäng navigeringsmenyn">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Välj språk"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="22" height="16"><span>sv</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-alavancagem-como-calcular/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-calculate-leverage-and-margin/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/calculadora-de-apalancamiento-como-calcular/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/leverage-calculator-how-to-calculate/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/leverage-calculator-how-to-calculate-margin/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-hebel-und-benoetigte-margin-berechnet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-kalkulahin-ang-leverage-at-kailangang-margin/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-calculer-leffet-de-levier-en-trading/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/leverage-calculator-how-to-calculate/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-menghitung-leverage-dan-margin-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-calcolare-la-leva-e-il-margine-nel-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/leverage-calculator-how-to-calculate/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-beraknar-du-havstang-i-trading/" hreflang="sv" lang="sv" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/leverage-calculator-how-to-calculate/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/kaldirac-hesaplama-nasil-hesaplanir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-tinh-don-bay-va-ky-quy-can-thiet-trong-giao-dich/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-calculate-leverage-and-margin/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Huvudnavigering">
+        <ul>
+          <li><a href="/sv/">Hem</a></li>
+          <li><a href="/sv/duotide-ar-den-palitlig/">Är den pålitlig?</a></li>
+          <li><a href="/sv/duotide-logga-in/">Logga in</a></li>
+          <li><a href="/sv/duotide-maklaren/">Mäklaren</a></li>
+          <li><a href="/sv/duotide-ar-den-saker/">Är den säker?</a></li>
+          <li><a href="/sv/duotide-app/">App</a></li>
+          <li><a href="/sv/basta-maklarna/">Bästa mäklarna</a></li>
+          <li><a href="/sv/blog/" aria-current="page">Blogg</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv"
+           target="_blank" rel="noopener sponsored nofollow">Skapa konto</a>
+        <a class="btn btn--outline btn--sm" href="/sv/duotide-logga-in/">Logga in</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Navigeringsspår">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+        <li><a href="/sv/blog/">Blogg</a></li>
+        <li><span aria-current="page">Så beräknar du hävstång och nödvändig marginal i trading</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Riskhantering</span>
+        <h1>Så beräknar du hävstång och nödvändig marginal i trading</h1>
+        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
+        <figure class="foto"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Hävstång är mekanismen som gör det möjligt att kontrollera en större position på marknaden genom att använda en bråkdel av det värdet som marginal, insatt hos mäklaren. Den finns inom forex, kryptovalutor, CFD:er, råvaror och index, och i alla dessa fall är grundformeln densamma.</p>
+<p>Det som skapar mest förvirring är att tro att hävstången i sig avgör affärens risk. Det gör den inte. Hävstången ändrar hur mycket kapital som krävs för att öppna positionen — den ändrar inte storleken på den marknadsrörelse som positionen representerar.</p>
+<h2>Den universella formeln</h2>
+<p>Den marginal som krävs för att öppna en position beräknas så här:</p>
+<p>Nödvändig marginal = positionens värde ÷ hävstång</p>
+<p>Om en position är värd R$ 50.000 och hävstången är 1:20, är den nödvändiga marginalen R$ 2.500. Med hävstång 1:100 kräver samma position på R$ 50.000 bara R$ 500 i marginal. I båda fallen fortsätter dock positionen att bete sig som en position på R$ 50.000 — det är det värdet som avgör hur mycket man vinner eller förlorar vid varje procentuell rörelse i tillgången, inte den insatta marginalen.</p>
+<h2>Talet som verkligen spelar roll: den effektiva hävstången</h2>
+<p>De flesta förklaringar om hävstång stannar där, men en pusselbit saknas: den effektiva hävstången, beräknad som positionens totala värde delat med kontosaldot. En trader kan ha tillgång till en hävstång på 1:500 och ändå handla konservativt genom att använda små positioner. En annan trader kan använda bara 1:10 och ändå ta en överdriven risk, helt enkelt genom att öppna en position som är för stor för det egna kontots storlek.</p>
+<p>Innan en hävstångsaffär genomförs förtjänar fyra frågor svar: vad är positionens totala värde, hur mycket marginal kommer att låsas, vad blir den resulterande effektiva hävstången, och hur stor skulle den uppskattade förlusten vara om priset nådde den planerade stoppen.</p>
+<h2>Exempel inom forex: samma position, olika hävstänger</h2>
+<p>En trader med ett konto på R$ 5.000 öppnar 0,10 lot EUR/USD nära 1,0850, med en stopp på 30 pip. Positionens värde är cirka R$ 54.250 (10.000 euro omräknat till exempelkursen), och pip-värdet i den här positionen är omkring R$ 5. Risken vid stoppen är därför R$ 150, oavsett vilken hävstång som väljs.</p>
+<ul>
+<li><strong>Hävstång 1:10</strong> — nödvändig marginal på cirka R$ 5.425; effektiv hävstång på 10,85x; risk vid stoppen på R$ 150.</li>
+<li><strong>Hävstång 1:30</strong> — nödvändig marginal på cirka R$ 1.808; samma effektiva hävstång; samma risk på R$ 150.</li>
+<li><strong>Hävstång 1:100</strong> — nödvändig marginal på cirka R$ 543; samma effektiva hävstång; samma risk på R$ 150.</li>
+</ul>
+<p>Den låsta marginalen skiljer sig avsevärt mellan de tre scenarierna. Affärens finansiella risk förändras inte alls, eftersom positionens storlek och avståndet till stoppen förblev identiska. Det är den centrala lärdomen: hävstången avgör hur mycket kapital som reserveras för att öppna positionen; positionens storlek är det som avgör den verkliga riskexponeringen.</p>
+<h2>Exempel inom kryptovalutor</h2>
+<p>Samma resonemang gäller utanför forex. Anta att bitcoin är noterat till R$ 350.000 och att en trader öppnar en position på 0,02 BTC med hävstång 1:10. Positionens värde är:</p>
+<p>0,02 × R$ 350.000 = R$ 7.000</p>
+<p>Den nödvändiga marginalen är:</p>
+<p>R$ 7.000 ÷ 10 = R$ 700</p>
+<p>Om bitcoinpriset faller 5% mot positionen är den ungefärliga förlusten, före kostnader:</p>
+<p>R$ 7.000 × 5% = R$ 350</p>
+<p>Återigen var det inte hävstången ensam som avgjorde förlustens storlek. Det var mängden handlad bitcoin och storleken på prisrörelsen som bestämde resultatet. En mindre mängd BTC skulle minska exponeringen; en snävare eller vidare stopp skulle ändra punkten där förlusten realiseras — men ingen av dessa variabler är hävstången i sig.</p>
+<h2>Hur man använder den här beräkningen i praktiken</h2>
+<p>Innan man väljer hävstång i någon affär är det säkraste sättet att vända på frågornas ordning: i stället för att fråga vilken är den högsta tillgängliga hävstången, fråga vilket positionsvärde jag verkligen vill exponera mig för, givet mitt kapital och den risk jag är villig att ta. Utifrån det positionsvärdet blir den nödvändiga marginalen en konsekvens av formeln, inte utgångspunkten.</p>
+<p>Hög hävstång ökar vinstpotentialen, men i samma proportion ökar den förlustpotentialen, och kan leda till marginalanrop när marknaden rör sig snabbt mot positionen. Den är ett verktyg, inte en genväg till garanterad vinst — trading innebär risk för förlust oavsett hävstångsnivå, och det lönar sig alltid att bekräfta varje instruments specifika marginalvillkor på plattformen innan man handlar, oavsett om det är hos Duotide eller i någon annan handelsmiljö.</p>
+        <div class="bq-post__cta">
+          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Läs också</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/sv/blog/5-tips-om-riskhantering-for-tradrar/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 tips om riskhantering som skyddar ditt kapital</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-handlar-du-binara-optioner-steg-for-steg/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så handlar du binära optioner i praktiken, steg för steg</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-fungerar-cfder-inifran-havstang-marginal/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så fungerar CFD:er inifrån: hävstång, marginal och risk</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Upphovsrätt © 2026 Duotide.<br>
+            Alla rättigheter förbehållna.<br>
+            officiell webbplats.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Företag</h2>
+          <ul>
+            <li><a href="/sv/">Hem</a></li>
+            <li><a href="/sv/duotide-ar-den-palitlig/">Är Duotide pålitlig?</a></li>
+            <li><a href="/sv/duotide-logga-in/">Inloggningsmetoder</a></li>
+            <li><a href="/sv/duotide-maklaren/">Lär känna mäklaren</a></li>
+            <li><a href="/sv/duotide-ar-den-saker/">Mäklarens säkerhet</a></li>
+            <li><a href="/sv/duotide-app/">Appen</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kontoansvarig dygnet runt</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/sv/duotide-vanliga-fragor/">Vanliga frågor</a>
+          <a href="/sv/om-denna-webbplats/">Om denna webbplats</a>
+          <a href="/sv/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Tillbaka till början av sidan">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Stäng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">på 100 %</span></h2>
+          <p>Sätt in med koden <strong>WELCOME100</strong> och få 100 % bonus på insatt belopp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kod</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopierad!">Kopiera</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Hämta nu</a>
+          <p class="pp__mini">Kampanjvillkor gäller. Handel med hävstångsprodukter innebär risk för förlust.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

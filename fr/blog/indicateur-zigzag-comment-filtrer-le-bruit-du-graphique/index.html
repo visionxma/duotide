@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-tema="dark" data-tv="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Indicateur ZigZag : comment filtrer le bruit du graphique | Blog Duotide</title>
+  <meta name="description" content="Comment le ZigZag ignore les petites oscillations pour ne montrer que les mouvements de prix importants, et pourquoi il ne doit pas servir de signal d'entrée.">
+  <link rel="canonical" href="https://duotide.com.br/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/zigzag-indicator-how-to-filter-chart-noise/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/indikator-zigzag-cara-menyaring-noise-grafik/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/indicatore-zigzag-come-filtrare-il-rumore-del-grafico/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/zigzag-indicator-how-to-filter-chart-noise/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/zigzag-gostergesi-grafigin-gurultusu-nasil-filtrelenir/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/zigzag-indicator-how-to-filter-chart-noise/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Indicateur ZigZag : comment filtrer le bruit du graphique">
+  <meta property="og:description" content="Comment le ZigZag ignore les petites oscillations pour ne montrer que les mouvements de prix importants, et pourquoi il ne doit pas servir de signal d'entrée.">
+  <meta property="og:url" content="https://duotide.com.br/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Indicateur ZigZag : comment filtrer le bruit du graphique">
+  <meta name="twitter:description" content="Comment le ZigZag ignore les petites oscillations pour ne montrer que les mouvements de prix importants, et pourquoi il ne doit pas servir de signal d'entrée.">
+  <meta name="twitter:label1" content="Rédigé par">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Temps de lecture">
+  <meta name="twitter:data2" content="5 minutes">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/#artigo",
+      "headline": "Indicateur ZigZag : comment filtrer le bruit du graphique",
+      "description": "Comment le ZigZag ignore les petites oscillations pour ne montrer que les mouvements de prix importants, et pourquoi il ne doit pas servir de signal d'entrée.",
+      "url": "https://duotide.com.br/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/",
+      "inLanguage": "fr",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
+      "articleSection": "Indicateurs",
+      "author": {
+        "@type": "Organization",
+        "name": "Équipe Duotide",
+        "url": "https://duotide.com.br/fr/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/fr/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://duotide.com.br/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/fr/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Indicateur ZigZag : comment filtrer le bruit du graphique",
+          "item": "https://duotide.com.br/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/fr/" aria-label="Duotide — page d’accueil">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Ouvrir le menu de navigation"
+                data-abrir="Ouvrir le menu de navigation" data-fechar="Fermer le menu de navigation">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Choisir la langue"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="22" height="16"><span>fr</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/zigzag-indicator-how-to-filter-chart-noise/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/indicateur-zigzag-comment-filtrer-le-bruit-du-graphique/" hreflang="fr" lang="fr" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/indikator-zigzag-cara-menyaring-noise-grafik/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/indicatore-zigzag-come-filtrare-il-rumore-del-grafico/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/zigzag-indicator-how-to-filter-chart-noise/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/zigzag-gostergesi-grafigin-gurultusu-nasil-filtrelenir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/fr/">Accueil</a></li>
+          <li><a href="/fr/duotide-avis-fiable/">Fiable ?</a></li>
+          <li><a href="/fr/duotide-connexion/">Connexion</a></li>
+          <li><a href="/fr/duotide-courtier/">Le courtier</a></li>
+          <li><a href="/fr/duotide-securite/">Sécurité</a></li>
+          <li><a href="/fr/duotide-application/">Application</a></li>
+          <li><a href="/fr/meilleurs-courtiers/">Meilleurs courtiers</a></li>
+          <li><a href="/fr/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr"
+           target="_blank" rel="noopener sponsored nofollow">Créer un compte</a>
+        <a class="btn btn--outline btn--sm" href="/fr/duotide-connexion/">Connexion</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Fil d’Ariane">
+    <div class="container">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li><a href="/fr/blog/">Blog</a></li>
+        <li><span aria-current="page">Indicateur ZigZag : comment filtrer le bruit du graphique</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Indicateurs</span>
+        <h1>Indicateur ZigZag : comment filtrer le bruit du graphique</h1>
+        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Regarder un graphique de prix sans aucun filtre peut être épuisant : des dizaines de petites hausses et baisses se disputent l'attention, rendant difficile de percevoir le mouvement réellement important derrière tout ce bruit. Le ZigZag existe précisément pour résoudre ce problème visuel, en traçant des lignes droites qui relient uniquement les sommets et creux significatifs du graphique, en ignorant ce qui se trouve entre les deux.</p><p>Cet article explique comment le ZigZag décide de ce qui est du bruit et ce qui est un mouvement important, à quoi il sert en pratique, et pourquoi il ne doit pas être confondu avec un générateur de signaux d'entrée.</p><h2>Comment le ZigZag décide de ce qu'il faut montrer</h2><p>L'indicateur est configuré avec un seuil minimal de variation, défini en pourcentage du prix ou en nombre de points. Tout mouvement inférieur à ce seuil est ignoré, et le ZigZag ne trace une nouvelle ligne que lorsque le prix bouge suffisamment pour dépasser ce seuil à partir du dernier sommet ou creux identifié. Par exemple, avec un seuil de 5 %, une oscillation de 2 % au milieu d'une tendance n'apparaît tout simplement pas dans l'indicateur — elle n'entre dans le dessin que lorsque le mouvement cumulé dépasse les 5 % définis.</p><h2>À quoi le ZigZag est réellement utile</h2><h3>Identifier les sommets et creux importants</h3><p>En supprimant le bruit de court terme, il devient plus facile de voir où se trouvent les points de renversement qui ont réellement compté dans l'historique de l'actif — une information utile pour tracer des lignes de support et de résistance avec plus de confiance qu'en essayant de le deviner sur un graphique rempli de petites oscillations.</p><h3>Soutenir la lecture des figures graphiques</h3><p>Des figures comme le double sommet, l'épaule-tête-épaule ou les canaux de tendance deviennent plus évidentes quand le ZigZag a déjà éliminé le bruit mineur, fonctionnant comme un squelette visuel sur lequel ces figures peuvent être identifiées plus clairement, y compris pour ceux qui étudient le comptage des vagues en analyse technique. Sans ce filtre, il serait bien plus difficile de distinguer visuellement quelle jambe du graphique représente le mouvement principal et laquelle n'est qu'une correction à l'intérieur de celui-ci.</p><h3>Mesurer l'amplitude des mouvements précédents</h3><p>Comme chaque ligne du ZigZag relie un sommet à un creux (ou l'inverse), il facilite la mesure rapide du nombre de points ou du pourcentage de mouvement de l'actif sur chaque jambe du graphique, ce qui aide à calibrer les attentes d'objectif sur la base de mouvements passés de taille similaire.</p><h2>La limite la plus importante du ZigZag</h2><p>Le ZigZag est un indicateur qui regarde en arrière : il ne confirme un sommet ou un creux qu'après que le prix a déjà suffisamment bougé dans la direction opposée pour prouver que ce point était bien un renversement. Cela signifie que la dernière ligne de l'indicateur peut changer, ou se redessiner, à mesure que de nouvelles bougies se forment — le sommet qui semblait définitif il y a peu peut cesser d'exister si le prix continue de monter. Pour cette raison, utiliser le ZigZag comme déclencheur direct d'entrée est risqué : au moment où le signal apparaît clairement, le mouvement qu'il décrit s'est déjà produit. Cela rend le ZigZag plus proche d'un outil rétrospectif que d'un indicateur d'anticipation.</p><h2>Comment ajuster le paramètre de sensibilité</h2><ul><li>Un seuil faible (par exemple, 1 % ou 2 %) montre plus de détails, mais réintroduit beaucoup de bruit de court terme.</li><li>Un seuil plus élevé (par exemple, 8 % ou 10 %) simplifie beaucoup le graphique, mais peut ignorer des renversements importants pour des opérations de plus court terme.</li><li>Le réglage idéal dépend de l'actif et de l'échéance graphique : les actifs plus volatils demandent généralement un seuil plus élevé pour ne pas générer un excès de bruit, et l'inverse vaut pour les actifs plus stables.</li></ul><h2>Comment utiliser le ZigZag de façon responsable</h2><p>La meilleure façon de tirer parti du ZigZag est comme outil d'analyse visuelle et d'étude historique, pas comme déclencheur d'entrée. Combinez la lecture des sommets et creux qu'il met en évidence avec un indicateur de momentum, comme le RSI, ou avec la lecture du volume, pour décider du moment réel d'entrer dans une opération. Comme tout outil basé sur des données déjà survenues, le ZigZag ne prédit pas le prochain mouvement, et le risque de perte reste présent même avec le graphique visuellement plus organisé — il vaut la peine d'étudier son comportement sur un compte de démonstration avant de l'intégrer à votre routine d'analyse.</p>
+        <div class="bq-post__cta">
+          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>À lire aussi</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/fr/blog/indicateur-belkhayate-timing-comment-lutiliser/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Indicateur Belkhayate Timing : comment l'utiliser en pratique</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/bandes-de-bollinger-comment-ca-marche/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bandes de Bollinger : ce que c'est et comment ça marche</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/indicateur-vortex-comment-configurer-et-utiliser/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Indicateur Vortex : comment le configurer et l'utiliser</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Copyright © 2026 Duotide.<br>
+            Tous droits réservés.<br>
+            Site officiel.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Entreprise</h2>
+          <ul>
+            <li><a href="/fr/">Accueil</a></li>
+            <li><a href="/fr/duotide-avis-fiable/">Duotide est-elle fiable ?</a></li>
+            <li><a href="/fr/duotide-connexion/">Méthodes de connexion</a></li>
+            <li><a href="/fr/duotide-courtier/">Découvrir le courtier</a></li>
+            <li><a href="/fr/duotide-securite/">Sécurité du courtier</a></li>
+            <li><a href="/fr/duotide-application/">Application</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contact</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestionnaire de compte 24h/24</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/fr/duotide-questions-frequentes/">Questions fréquentes</a>
+          <a href="/fr/a-propos/">À propos de ce site</a>
+          <a href="/fr/contact/">Contact</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Revenir en haut de la page">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Fermer">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">de 100 %</span></h2>
+          <p>Déposez avec le code <strong>WELCOME100</strong> et recevez 100 % de bonus sur le montant déposé.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Code</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Copié !">Copier</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">En profiter</a>
+          <p class="pp__mini">Soumis aux conditions de la promotion. Le trading de produits à effet de levier comporte un risque de perte.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

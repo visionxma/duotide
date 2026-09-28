@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-tema="dark" data-tv="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Cómo hacer el backtest de una estrategia antes de operar de verdad | Blog Duotide</title>
+  <meta name="description" content="Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.">
+  <link rel="canonical" href="https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-fazer-o-backtest-de-uma-estrategia/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-backtest-a-strategy/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-backtest-a-strategy/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-mag-backtest-ng-diskarte/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-faire-le-backtest-dune-strategie/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-melakukan-backtest-strategi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-fare-il-backtest-di-una-strategia/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-thuc-hien-backtest-mot-chien-luoc/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-backtest-a-strategy/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo hacer el backtest de una estrategia antes de operar de verdad">
+  <meta property="og:description" content="Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.">
+  <meta property="og:url" content="https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo hacer el backtest de una estrategia antes de operar de verdad">
+  <meta name="twitter:description" content="Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tiempo de lectura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/#artigo",
+      "headline": "Cómo hacer el backtest de una estrategia antes de operar de verdad",
+      "description": "Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.",
+      "url": "https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/",
+      "inLanguage": "es",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
+      "articleSection": "Estrategias",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo Duotide",
+        "url": "https://duotide.com.br/es/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/es/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://duotide.com.br/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cómo hacer el backtest de una estrategia antes de operar de verdad",
+          "item": "https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/es/" aria-label="Duotide — página de inicio">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir el menú de navegación"
+                data-abrir="Abrir el menú de navegación" data-fechar="Cerrar el menú de navegación">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Elegir idioma"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="22" height="16"><span>es</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-fazer-o-backtest-de-uma-estrategia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-backtest-a-strategy/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/como-hacer-el-backtest-de-una-estrategia/" hreflang="es" lang="es" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-backtest-a-strategy/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/how-to-backtest-a-trading-strategy/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-mag-backtest-ng-diskarte/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-faire-le-backtest-dune-strategie/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/how-to-backtest-a-trading-strategy/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-melakukan-backtest-strategi/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-fare-il-backtest-di-una-strategia/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-backtest-a-trading-strategy/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-gor-du-backtest-av-en-strategi/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/how-to-backtest-a-trading-strategy/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-thuc-hien-backtest-mot-chien-luoc/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-backtest-a-trading-strategy/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/duotide-es-confiable/">¿Es confiable?</a></li>
+          <li><a href="/es/duotide-login/">Iniciar sesión</a></li>
+          <li><a href="/es/duotide-broker/">El bróker</a></li>
+          <li><a href="/es/duotide-es-seguro/">¿Es seguro?</a></li>
+          <li><a href="/es/duotide-app/">Aplicación</a></li>
+          <li><a href="/es/mejores-brokers/">Mejores brókers</a></li>
+          <li><a href="/es/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es"
+           target="_blank" rel="noopener sponsored nofollow">Crear cuenta</a>
+        <a class="btn btn--outline btn--sm" href="/es/duotide-login/">Iniciar sesión</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Cómo hacer el backtest de una estrategia antes de operar de verdad</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Estrategias</span>
+        <h1>Cómo hacer el backtest de una estrategia antes de operar de verdad</h1>
+        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
+        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Backtest es el proceso de probar una estrategia de operación usando datos históricos, antes de arriesgar capital real en ella. La idea es simple: aplicar las mismas reglas de entrada y salida que usarías en vivo sobre un período pasado del gráfico, y registrar lo que habría ocurrido en cada señal generada. Es una etapa que separa una estrategia con evidencia de funcionamiento de una idea que solo parece buena mirando el gráfico de forma retrospectiva.</p>
+<h2>Paso 1: define la regla de entrada y salida por escrito</h2>
+<p>Antes de mirar cualquier dato histórico, escribe la regla exacta que vas a probar — por ejemplo: "comprar cuando el precio rompa el máximo de las últimas 20 velas con volumen 30% por encima del promedio; salir con ganancia en un alza del 2% o en el stop con una caída del 1%". Reglas vagas como "comprar cuando parezca una buena oportunidad" no pueden probarse de forma consistente, porque dependen del juicio subjetivo en cada señal.</p>
+<h2>Paso 2: recorre el historial señal por señal</h2>
+<p>Con la regla definida, recorre el gráfico histórico identificando cada vez que se habría cumplido la condición de entrada, y registra el resultado que habría generado la regla de salida — ganancia o pérdida, en puntos o porcentaje. Es importante mantener la disciplina de aplicar la regla exactamente como se escribió, sin "ajustar" el resultado después de ver lo que ocurrió, bajo riesgo de sesgar la prueba a favor de la estrategia.</p>
+<h2>Paso 3: calcula la tasa de acierto y el payoff medio</h2>
+<p>Después de reunir una muestra razonable — 30 señales, como mínimo, idealmente más — calcula dos números: la tasa de acierto (porcentaje de operaciones ganadoras) y el payoff medio (la ganancia media de las operaciones ganadoras dividida entre la pérdida media de las perdedoras). Supongamos un backtest con 40 señales, 18 ganadoras y 22 perdedoras, ganancia media de R$ 60,00 en las ganadoras y pérdida media de R$ 35,00 en las perdedoras. La tasa de acierto es 45% (18/40) y el payoff es de 1,71 (60/35).</p>
+<h2>Paso 4: calcula la expectativa matemática</h2>
+<p>La expectativa matemática mide el resultado medio esperado por operación, y se calcula así: (tasa de acierto × ganancia media) − (tasa de error × pérdida media). Usando los números del ejemplo: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positivos por operación, en promedio. Una expectativa positiva indica que, manteniendo la misma proporción de aciertos y el mismo payoff a lo largo del tiempo, la estrategia tiende a generar un resultado positivo — lo que no garantiza que cada operación individual será rentable, pero indica una ventaja estadística en la muestra probada.</p>
+<h2>Lo que el backtest no garantiza</h2>
+<p>Un resultado positivo en el historial no garantiza el mismo desempeño de aquí en adelante — las condiciones de mercado cambian, y una muestra pequeña puede haber sido favorable por casualidad. Además, los backtests manuales están sujetos al sesgo retrospectivo: es fácil, sin querer, ajustar la interpretación de una señal sabiendo lo que ocurrió después. Por eso, muchos traders siguen el backtest con un período de prueba en cuenta simulada, aplicando la misma regla en tiempo real antes de operar con capital relevante.</p>
+<h2>Poniendo el proceso en práctica</h2>
+<ul>
+<li>Escribe la regla de entrada y salida antes de mirar cualquier dato histórico.</li>
+<li>Reúne una muestra mínima de 30 señales para que los números tengan algún peso estadístico.</li>
+<li>Calcula la tasa de acierto, el payoff medio y la expectativa matemática antes de considerar validada la estrategia.</li>
+<li>Prueba en cuenta simulada durante un período antes de aplicar capital real, incluso con un backtest positivo.</li>
+</ul>
+<p>El backtest es una herramienta de filtro, no de garantía: ayuda a descartar estrategias sin ninguna ventaja estadística aparente, y a entender mejor el comportamiento esperado de las que quedan — pero ninguna expectativa matemática calculada sobre el pasado es una promesa de resultado futuro.</p>
+<h2>Un cuidado extra: el tamaño de la muestra importa más de lo que parece</h2>
+<p>Una expectativa matemática positiva calculada sobre apenas 10 o 15 señales tiene poco valor estadístico — puede ser resultado de la suerte en la muestra, no de una ventaja real de la estrategia. Cuanto mayor sea el número de señales probadas, más confianza carga el resultado, aunque ninguna muestra, por grande que sea, elimina por completo la incertidumbre sobre el futuro. También vale la pena probar la estrategia en períodos de mercado diferentes — de alza, de baja y de lateralización — ya que una regla puede funcionar bien en un régimen y mal en otro, y un backtest hecho solo sobre un período de alza fuerte tiende a sobreestimar el resultado esperado.</p>
+        <div class="bq-post__cta">
+          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Lee también</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/es/blog/cruce-de-medias-moviles-exponenciales-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cruce de medias móviles exponenciales (EMA) en el trading</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/como-elegir-el-plazo-de-una-operacion/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo elegir el plazo (expiración) de una operación</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/estrategia-dual-stochastic/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia del doble estocástico: cómo combinar dos osciladores</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Derechos de autor © 2026 Duotide.<br>
+            Todos los derechos reservados.<br>
+            Sitio oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/es/">Inicio</a></li>
+            <li><a href="/es/duotide-es-confiable/">¿Duotide es Confiable?</a></li>
+            <li><a href="/es/duotide-login/">Métodos de Login</a></li>
+            <li><a href="/es/duotide-broker/">Conoce el Bróker</a></li>
+            <li><a href="/es/duotide-es-seguro/">Seguridad del Bróker</a></li>
+            <li><a href="/es/duotide-app/">Aplicación</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contacto</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestor de cuenta 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/es/duotide-preguntas-frecuentes/">Preguntas frecuentes</a>
+          <a href="/es/sobre/">Sobre este sitio</a>
+          <a href="/es/contacto/">Contacto</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Volver al inicio de la página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Cerrar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bono</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con el cupón <strong>WELCOME100</strong> y recibe un 100% de bono sobre el monto depositado.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Cupón</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="¡Copiado!">Copiar</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Reclamar ahora</a>
+          <p class="pp__mini">Sujeto a las condiciones de la promoción. Operar productos apalancados implica riesgo de pérdida.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr" data-tema="dark" data-tv="vi_VN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Chiến lược martingale trong giao dịch: hoạt động và rủi ro | Blog Duotide</title>
+  <meta name="description" content="Hiểu cách chiến lược martingale được áp dụng vào giao dịch hoạt động và tại sao nó có thể đẩy nhanh việc mất vốn thay vì bảo vệ nó.">
+  <link rel="canonical" href="https://duotide.com.br/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-martingale-no-trading/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/martingale-strategy-in-trading/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/estrategia-martingala-en-el-trading/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/martingale-strategy-in-trading/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/martingale-strategie-im-trading/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/diskarteng-martingale-sa-trading/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/strategie-martingale-en-trading/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/strategi-martingale-dalam-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/strategia-martingale-nel-trading/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/martingale-strategy-in-trading/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/trading-de-martingale-stratejisi-nasil-calisir-ve-riskleri/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/martingale-strategy-in-trading/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/martingale-strategy-in-trading/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Chiến lược martingale trong giao dịch: hoạt động và rủi ro">
+  <meta property="og:description" content="Hiểu cách chiến lược martingale được áp dụng vào giao dịch hoạt động và tại sao nó có thể đẩy nhanh việc mất vốn thay vì bảo vệ nó.">
+  <meta property="og:url" content="https://duotide.com.br/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chiến lược martingale trong giao dịch: hoạt động và rủi ro">
+  <meta name="twitter:description" content="Hiểu cách chiến lược martingale được áp dụng vào giao dịch hoạt động và tại sao nó có thể đẩy nhanh việc mất vốn thay vì bảo vệ nó.">
+  <meta name="twitter:label1" content="Tác giả">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Thời gian đọc">
+  <meta name="twitter:data2" content="5 phút">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/#artigo",
+      "headline": "Chiến lược martingale trong giao dịch: hoạt động và rủi ro",
+      "description": "Hiểu cách chiến lược martingale được áp dụng vào giao dịch hoạt động và tại sao nó có thể đẩy nhanh việc mất vốn thay vì bảo vệ nó.",
+      "url": "https://duotide.com.br/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/",
+      "inLanguage": "vi",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
+      "articleSection": "Quản lý rủi ro",
+      "author": {
+        "@type": "Organization",
+        "name": "Đội ngũ Duotide",
+        "url": "https://duotide.com.br/vi/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/vi/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Trang chủ",
+          "item": "https://duotide.com.br/vi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/vi/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Chiến lược martingale trong giao dịch: hoạt động và rủi ro",
+          "item": "https://duotide.com.br/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Chuyển đến nội dung</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/vi/" aria-label="Duotide — trang chủ">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Mở menu điều hướng"
+                data-abrir="Mở menu điều hướng" data-fechar="Đóng menu điều hướng">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Chọn ngôn ngữ"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="22" height="16"><span>vi</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/estrategia-martingale-no-trading/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/martingale-strategy-in-trading/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/estrategia-martingala-en-el-trading/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/martingale-strategy-in-trading/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/martingale-strategie-im-trading/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/diskarteng-martingale-sa-trading/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/strategie-martingale-en-trading/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/strategi-martingale-dalam-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/strategia-martingale-nel-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/martingale-strategy-in-trading/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/trading-de-martingale-stratejisi-nasil-calisir-ve-riskleri/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/" hreflang="vi" lang="vi" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/martingale-strategy-in-trading/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="/vi/">Trang chủ</a></li>
+          <li><a href="/vi/duotide-co-uy-tin-khong/">Có uy tín không?</a></li>
+          <li><a href="/vi/duotide-dang-nhap/">Đăng nhập</a></li>
+          <li><a href="/vi/duotide-san-moi-gioi/">Về sàn</a></li>
+          <li><a href="/vi/duotide-co-an-toan-khong/">Có an toàn không?</a></li>
+          <li><a href="/vi/duotide-ung-dung/">Ứng dụng</a></li>
+          <li><a href="/vi/san-moi-gioi-tot-nhat/">Sàn môi giới tốt nhất</a></li>
+          <li><a href="/vi/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi"
+           target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+        <a class="btn btn--outline btn--sm" href="/vi/duotide-dang-nhap/">Đăng nhập</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Đường dẫn điều hướng">
+    <div class="container">
+      <ol>
+        <li><a href="/vi/">Trang chủ</a></li>
+        <li><a href="/vi/blog/">Blog</a></li>
+        <li><span aria-current="page">Chiến lược martingale trong giao dịch: hoạt động và rủi ro</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Quản lý rủi ro</span>
+        <h1>Chiến lược martingale trong giao dịch: hoạt động và rủi ro</h1>
+        <p class="bq-post__meta">Đội ngũ Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 phút đọc</p>
+        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Rất ít chiến lược gây nhiều tranh cãi như martingale. Ý tưởng đằng sau nó rất dễ hiểu, và có lẽ chính sự đơn giản này khiến nó hấp dẫn với người mới bắt đầu: tăng gấp đôi số tiền của giao dịch tiếp theo sau một khoản lỗ, với kỳ vọng rằng, khi cuối cùng có một lần thắng, nó sẽ lấy lại tất cả những gì đã mất trước đó và vẫn để lại một khoản lãi nhỏ.</p><p>Trong bài viết này, bạn sẽ hiểu cách martingale hoạt động trong thực tế, nó bắt nguồn từ đâu và tại sao hầu hết các nhà quản lý rủi ro nghiêm túc khuyến nghị hết sức thận trọng — hoặc tránh hoàn toàn cách tiếp cận này trong giao dịch.</p><h2>Cách martingale hoạt động</h2><p>Martingale ra đời như một hệ thống cá cược, ban đầu được áp dụng cho các trò chơi có kết quả khoảng 50% xác suất, như tung đồng xu. Quy tắc là: đặt cược một số tiền ban đầu; nếu thua, tăng gấp đôi số tiền cược tiếp theo; nếu thắng, quay lại số tiền ban đầu. Vì mỗi lần thắng mới, về lý thuyết, bù đắp tất cả các khoản thua trước đó cộng thêm một khoản lãi nhỏ, chiến lược này có vẻ đảm bảo kết quả dương, miễn là có đủ vốn để tiếp tục tăng gấp đôi.</p><p>Áp dụng vào giao dịch, martingale hoạt động theo cách tương tự: sau một giao dịch thua, trader tăng gấp đôi (hoặc tăng đáng kể) quy mô vị thế tiếp theo, với kỳ vọng lấy lại khoản lỗ trước đó ngay khi giao dịch tiếp theo thắng.</p><h2>Tại sao toán học của martingale thất bại trong thực tế</h2><p>Vấn đề trung tâm là martingale phụ thuộc vào hai điều kiện hiếm khi tồn tại cùng nhau: vốn không giới hạn và không có giới hạn về quy mô vị thế. Giả sử một giao dịch ban đầu R$ 100. Sau bốn lần thua liên tiếp, giao dịch thứ năm đã cần phải là R$ 1.600 chỉ để lấy lại các khoản lỗ trước đó. Sau bảy lần thua liên tiếp, số tiền này vượt quá R$ 12.800. Các chuỗi thua lỗ ở quy mô này không hiếm ngay cả trong các trò chơi 50% xác suất, và trong giao dịch xác suất thắng của một giao dịch hiếm khi chính xác là 50%, có thể thấp hơn nhiều tùy vào chiến lược và điều kiện thị trường.</p><p>Ngoài ra, các sàn giao dịch và nền tảng thường áp đặt giới hạn về quy mô vị thế và yêu cầu ký quỹ tăng dần, điều này có thể ngăn cản việc tiếp tục martingale trong một chuỗi thua lỗ ngay cả trước khi vốn cạn kiệt hoàn toàn.</p><h2>Rủi ro phá sản</h2><p>Kịch bản này — hết vốn hoặc không thể mở giao dịch tiếp theo giữa một chuỗi thua lỗ — được gọi là rủi ro phá sản, và cao hơn đáng kể trong các chiến lược martingale so với các chiến lược quy mô vị thế cố định. Chỉ một chuỗi thua lỗ dài hơn dự kiến là đủ để xóa sạch nhiều tháng lợi nhuận trước đó, hoặc toàn bộ tài khoản, chỉ trong vài giao dịch.</p><p>Quan trọng cần làm rõ: martingale không làm giảm rủi ro của một giao dịch thua lỗ, nó làm tăng mức tiếp xúc chính xác vào thời điểm tồi tệ nhất, tức là sau một chuỗi thua lỗ — thời điểm ít biết nhất liệu giao dịch tiếp theo sẽ thắng hay không.</p><h2>Các phương án quản lý vị thế an toàn hơn</h2><p>Thay vì tăng quy mô vị thế sau một khoản lỗ, hầu hết các cách tiếp cận quản lý rủi ro khuyến nghị điều ngược lại: duy trì rủi ro cho mỗi giao dịch là một tỷ lệ phần trăm cố định và nhỏ của tổng vốn, bất kể kết quả của các giao dịch trước đó. Nếu rủi ro xác định là 1% tài khoản mỗi giao dịch, nó vẫn là 1% sau một khoản lỗ và sau một khoản lãi, không leo thang một cách nguy hiểm.</p><p>Loại quản lý này chấp nhận rằng các chuỗi thua lỗ là một phần của bất kỳ chiến lược nào, dù tốt đến đâu, và bảo vệ vốn chính vào những thời điểm đó, thay vì đặt cược tất cả vào việc lấy lại ngay lập tức.</p><h2>Một quyết định đòi hỏi hết sức thận trọng</h2><p>Nếu, dù vậy, ai đó quyết định khám phá một biến thể nào đó của martingale, mức tối thiểu được khuyến nghị là xác định một giới hạn cứng về số lần số tiền có thể được tăng lên trước khi dừng chuỗi, chấp nhận khoản lỗ và bắt đầu lại từ số tiền ban đầu. Ngay cả với giới hạn đó, chiến lược vẫn đòi hỏi vốn không tương xứng với quy mô của giao dịch ban đầu, và không nên được coi là một phương pháp phục hồi an toàn hay được đảm bảo.</p><p>Trên Duotide, như trên bất kỳ nền tảng nào, quy mô của mỗi vị thế là một lựa chọn của trader, và việc xây dựng quản lý rủi ro dựa trên các tỷ lệ phần trăm cố định và bền vững có giá trị hơn nhiều so với tin tưởng vào một hệ thống, về mặt toán học, làm tăng mức tiếp xúc chính xác khi kết quả đã bất lợi. Giao dịch có rủi ro thực sự về thua lỗ trong mọi giao dịch, và không chiến lược quản lý vị thế nào loại bỏ được khả năng đó.</p>
+        <div class="bq-post__cta">
+          <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Đọc thêm</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/vi/blog/5-meo-quan-ly-rui-ro-giup-khong-mat-het-von/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 mẹo quản lý rủi ro giúp không mất hết vốn</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-giao-dich-quyen-chon-nhi-phan-tung-buoc/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách giao dịch quyền chọn nhị phân trong thực tế, từng bước</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/co-che-ben-trong-cua-cfd-don-bay-ky-quy-va-rui-ro/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cơ chế bên trong của CFD: đòn bẩy, ký quỹ và rủi ro</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Bản quyền © 2026 Duotide.<br>
+            Đã đăng ký bản quyền.<br>
+            Trang web chính thức.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Công ty</h2>
+          <ul>
+            <li><a href="/vi/">Trang chủ</a></li>
+            <li><a href="/vi/duotide-co-uy-tin-khong/">Duotide có uy tín không?</a></li>
+            <li><a href="/vi/duotide-dang-nhap/">Cách đăng nhập</a></li>
+            <li><a href="/vi/duotide-san-moi-gioi/">Tìm hiểu sàn</a></li>
+            <li><a href="/vi/duotide-co-an-toan-khong/">Bảo mật của sàn</a></li>
+            <li><a href="/vi/duotide-ung-dung/">Ứng dụng</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Liên hệ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Quản lý tài khoản 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/vi/duotide-cau-hoi-thuong-gap/">Câu hỏi thường gặp</a>
+          <a href="/vi/ve-trang-nay/">Về trang web này</a>
+          <a href="/vi/lien-he/">Liên hệ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Quay lại đầu trang">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Đóng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Thưởng</span> <span class="pp__l2">100%</span></h2>
+          <p>Nạp tiền với mã <strong>WELCOME100</strong> và nhận thưởng 100% trên số tiền đã nạp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Mã</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Đã sao chép!">Sao chép</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Nhận ngay</a>
+          <p class="pp__mini">Áp dụng điều kiện của chương trình. Giao dịch sản phẩm đòn bẩy có rủi ro thua lỗ.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

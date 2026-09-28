@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" data-tema="dark" data-tv="sv_SE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Så beräknar du expectancy: har din strategi en edge? | Blog Duotide</title>
+  <meta name="description" content="Lär dig formeln för matematisk förväntan i trading, se ett löst exempel i kronor och förstå varför träffsäkerhet ensam kan vilseleda.">
+  <link rel="canonical" href="https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-expectativa-matematica-no-trading/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/trading-expectancy-calculator/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/calculadora-de-expectativa-matematica-en-el-trading/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/trading-expectancy-calculator/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/trading-expectancy-calculator/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/expectancy-rechner-hat-ihre-strategie-einen-edge/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/calculator-ng-mathematical-expectancy-sa-trading/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/calculateur-desperance-mathematique-trading/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/trading-expectancy-calculator/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/kalkulator-expectancy-matematis-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/calcolatrice-aspettativa-matematica-nel-trading/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/trading-expectancy-calculator/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/trading-expectancy-calculator/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/matematiksel-beklenti-hesaplama-trading/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/may-tinh-ky-vong-toan-hoc-chien-luoc-co-edge-khong/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/trading-expectancy-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/trading-expectancy-calculator/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Så beräknar du expectancy: har din strategi en edge?">
+  <meta property="og:description" content="Lär dig formeln för matematisk förväntan i trading, se ett löst exempel i kronor och förstå varför träffsäkerhet ensam kan vilseleda.">
+  <meta property="og:url" content="https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide-bloggen">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Så beräknar du expectancy: har din strategi en edge?">
+  <meta name="twitter:description" content="Lär dig formeln för matematisk förväntan i trading, se ett löst exempel i kronor och förstå varför träffsäkerhet ensam kan vilseleda.">
+  <meta name="twitter:label1" content="Skriven av">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lästid">
+  <meta name="twitter:data2" content="5 minuter">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/#artigo",
+      "headline": "Så beräknar du expectancy: har din strategi en edge?",
+      "description": "Lär dig formeln för matematisk förväntan i trading, se ett löst exempel i kronor och förstå varför träffsäkerhet ensam kan vilseleda.",
+      "url": "https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/",
+      "inLanguage": "sv",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
+      "articleSection": "Riskhantering",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-teamet",
+        "url": "https://duotide.com.br/sv/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/sv/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://duotide.com.br/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://duotide.com.br/sv/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Så beräknar du expectancy: har din strategi en edge?",
+          "item": "https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/sv/" aria-label="Duotide — startsida">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Öppna navigeringsmenyn"
+                data-abrir="Öppna navigeringsmenyn" data-fechar="Stäng navigeringsmenyn">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Välj språk"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="22" height="16"><span>sv</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-expectativa-matematica-no-trading/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/trading-expectancy-calculator/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/calculadora-de-expectativa-matematica-en-el-trading/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/trading-expectancy-calculator/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/trading-expectancy-calculator/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/expectancy-rechner-hat-ihre-strategie-einen-edge/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/calculator-ng-mathematical-expectancy-sa-trading/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/calculateur-desperance-mathematique-trading/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/trading-expectancy-calculator/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/kalkulator-expectancy-matematis-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/calcolatrice-aspettativa-matematica-nel-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/trading-expectancy-calculator/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-beraknar-du-expectancy-i-trading/" hreflang="sv" lang="sv" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/trading-expectancy-calculator/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/matematiksel-beklenti-hesaplama-trading/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/may-tinh-ky-vong-toan-hoc-chien-luoc-co-edge-khong/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/trading-expectancy-calculator/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Huvudnavigering">
+        <ul>
+          <li><a href="/sv/">Hem</a></li>
+          <li><a href="/sv/duotide-ar-den-palitlig/">Är den pålitlig?</a></li>
+          <li><a href="/sv/duotide-logga-in/">Logga in</a></li>
+          <li><a href="/sv/duotide-maklaren/">Mäklaren</a></li>
+          <li><a href="/sv/duotide-ar-den-saker/">Är den säker?</a></li>
+          <li><a href="/sv/duotide-app/">App</a></li>
+          <li><a href="/sv/basta-maklarna/">Bästa mäklarna</a></li>
+          <li><a href="/sv/blog/" aria-current="page">Blogg</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv"
+           target="_blank" rel="noopener sponsored nofollow">Skapa konto</a>
+        <a class="btn btn--outline btn--sm" href="/sv/duotide-logga-in/">Logga in</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Navigeringsspår">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+        <li><a href="/sv/blog/">Blogg</a></li>
+        <li><span aria-current="page">Så beräknar du expectancy: har din strategi en edge?</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Riskhantering</span>
+        <h1>Så beräknar du expectancy: har din strategi en edge?</h1>
+        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        
+<p>En strategi kan träffa rätt i de flesta affärerna och ändå tömma kontot lite i taget. Motsatsen gäller också: det är möjligt att ha fel i mer än hälften av ingångarna och ändå avsluta månaden med vinst. Träffsäkerheten ensam svarar inte på om en strategi har en verklig fördel. Den som svarar på den frågan är den matematiska förväntan, även kallad expectancy.</p>
+<p>Den matematiska förväntan visar, i genomsnitt, hur mycket en strategi vinner eller förlorar per affär, med hänsyn till resultathistoriken. Ett positivt tal är ett bevis på statistisk fördel inom det observerade urvalet, inte en garanti för framtida vinst.</p>
+<h2>Formeln för matematisk förväntan</h2>
+<p>Den mest kända versionen av formeln är:</p>
+<p><strong>Förväntan = (träffsäkerhet x genomsnittlig vinst) - (felfrekvens x genomsnittlig förlust)</strong></p>
+<p>Den här formeln fungerar bra när varje affär slutar med vinst eller förlust, och när genomsnitten redan inkluderar kostnader som courtage. För att göra beräkningen ännu tydligare går det också att beräkna nettoförväntan direkt utifrån totalerna:</p>
+<p><strong>Nettoförväntan = [(antal vinster x genomsnittlig vinst) - (antal förluster x genomsnittlig förlust) - totala kostnader] / totalt antal affärer</strong></p>
+<h2>Ett löst exempel i kronor</h2>
+<p>Anta att en trader granskade 40 affärer från samma setup, alla med samma planerade risk per ingång, och kom fram till följande siffror:</p>
+<ul>
+<li>Vinnande affärer: 18</li>
+<li>Förlorande affärer: 22</li>
+<li>Genomsnittlig vinst per vinnande affär: R$ 150,00</li>
+<li>Genomsnittlig förlust per förlorande affär: R$ 80,00</li>
+<li>Genomsnittlig planerad risk per affär: R$ 100,00</li>
+</ul>
+<p>Beräkningen börjar med att separera totala vinster och förluster:</p>
+<ul>
+<li>Total vinst: 18 x R$ 150,00 = R$ 2.700,00</li>
+<li>Total förlust: 22 x R$ 80,00 = R$ 1.760,00</li>
+<li>Urvalets nettoresultat: R$ 2.700,00 - R$ 1.760,00 = R$ 940,00</li>
+<li>Förväntan per affär: R$ 940,00 / 40 = R$ 23,50</li>
+</ul>
+<p>Om man uttrycker resultatet i multiplar av risken (R), med den genomsnittliga risken på R$ 100,00 per affär, blir förväntan <strong>+0,235R per affär</strong>. Det betyder att, i genomsnitt för det här urvalet, gav varje affär cirka 23,5% av den planerade risken. Vinstfaktorn för samma urval, beräknad som total vinst delat med total förlust, blir 2.700 / 1.760, eller ungefär <strong>1,53</strong>.</p>
+<h2>En träffsäkerhet på 45% kan vara positiv</h2>
+<p>Lägg märke till att träffsäkerheten i exemplet ovan bara är 45% (18 av 40 affärer), under hälften. Ändå är förväntan positiv, eftersom den genomsnittliga vinsten är nästan dubbelt så stor som den genomsnittliga förlusten. Det är anledningen till att det ofta leder till felaktiga slutsatser om en strategis kvalitet att bara fråga vad dess träffsäkerhet är.</p>
+<h2>Glöm inte kostnaderna</h2>
+<p>Courtage, mäklaravgifter och eventuella kostnader för att hålla en position öppen över natten minskar nettoförväntan. En strategi med en bruttoförväntan på R$ 6,00 per affär kan bli negativ efter avdrag för R$ 7,00 i genomsnittliga kostnader per affär. Använd om möjligt de verkliga kostnaderna som mäklaren tar ut, inte en optimistisk uppskattning, för att inte konstgjort blåsa upp resultatet.</p>
+<h2>Ett andra exempel, nu med negativ förväntan</h2>
+<p>För att göra kontrasten tydlig, se ett andra fall med 50 affärer: 21 vinnande med en genomsnittlig vinst på R$ 90,00 och 29 förlorande med en genomsnittlig förlust på R$ 75,00. Den totala vinsten blir 21 x R$ 90,00 = R$ 1.890,00, och den totala förlusten 29 x R$ 75,00 = R$ 2.175,00. Urvalets nettoresultat är negativt, R$ 285,00, vilket ger en förväntan på R$ 1.890,00 minus R$ 2.175,00, delat på 50 affärer, det vill säga en genomsnittlig förlust på R$ 5,70 per affär. Trots en träffsäkerhet på 42%, nära det intervall som anses normalt för många strategier, räckte inte förhållandet mellan genomsnittlig vinst och genomsnittlig förlust för att upprätthålla ett positivt resultat.</p>
+<h2>Hur man använder detta i vardagen</h2>
+<h2>Hur många affärer räcker för att lita på siffran</h2>
+<p>Det finns inget universellt magiskt tal. Ett urval under 30 affärer brukar anses vara alldeles för litet för någon solid slutsats. Mellan 30 och 100 affärer ger resultatet redan en första uppskattning, men det kan fortfarande förändras mycket av några få extrema resultat. Över 100 eller 200 affärer börjar talet bli mer informativt, även om det aldrig är ett definitivt bevis på att fördelen kommer att fortsätta finnas i framtiden.</p>
+<h2>Vad man ska göra efter att ha beräknat förväntan</h2>
+<p>Om förväntan blir negativ efter att de verkliga kostnaderna räknats med är det inte meningsfullt att diskutera större positioner innan strategin korrigerats. Om den blir positiv är det värt att testa resultatets robusthet: ta bort den största vinnande affären från urvalet och räkna om. Om förväntan blir negativ enbart av den borttagningen kan resultatet vara alltför beroende av en enda extrem affär, och det förtjänar mer försiktighet innan positionsstorlekarna ökas.</p>
+
+        <div class="bq-post__cta">
+          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Läs också</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/sv/blog/5-tips-om-riskhantering-for-tradrar/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 tips om riskhantering som skyddar ditt kapital</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-handlar-du-binara-optioner-steg-for-steg/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så handlar du binära optioner i praktiken, steg för steg</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-fungerar-cfder-inifran-havstang-marginal/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så fungerar CFD:er inifrån: hävstång, marginal och risk</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Upphovsrätt © 2026 Duotide.<br>
+            Alla rättigheter förbehållna.<br>
+            officiell webbplats.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Företag</h2>
+          <ul>
+            <li><a href="/sv/">Hem</a></li>
+            <li><a href="/sv/duotide-ar-den-palitlig/">Är Duotide pålitlig?</a></li>
+            <li><a href="/sv/duotide-logga-in/">Inloggningsmetoder</a></li>
+            <li><a href="/sv/duotide-maklaren/">Lär känna mäklaren</a></li>
+            <li><a href="/sv/duotide-ar-den-saker/">Mäklarens säkerhet</a></li>
+            <li><a href="/sv/duotide-app/">Appen</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kontoansvarig dygnet runt</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/sv/duotide-vanliga-fragor/">Vanliga frågor</a>
+          <a href="/sv/om-denna-webbplats/">Om denna webbplats</a>
+          <a href="/sv/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Tillbaka till början av sidan">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Stäng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">på 100 %</span></h2>
+          <p>Sätt in med koden <strong>WELCOME100</strong> och få 100 % bonus på insatt belopp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kod</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopierad!">Kopiera</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Hämta nu</a>
+          <p class="pp__mini">Kampanjvillkor gäller. Handel med hävstångsprodukter innebär risk för förlust.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

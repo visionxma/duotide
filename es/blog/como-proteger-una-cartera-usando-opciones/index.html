@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-tema="dark" data-tv="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Cómo proteger una cartera usando opciones: el hedge en la práctica | Blog Duotide</title>
+  <meta name="description" content="Cómo usar opciones de venta para proteger una posición comprada, con ejemplo numérico completo del costo y el resultado del hedge.">
+  <link rel="canonical" href="https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-proteger-uma-carteira-usando-opcoes/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-hedge-a-portfolio-using-options/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-hedge-portfolio-using-options/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-ein-portfolio-mit-optionen-absichert/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-protektahan-ang-portfolio-gamit-ang-options/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-proteger-un-portefeuille-avec-des-options/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/how-to-hedge-a-portfolio-with-options/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-melindungi-portofolio-menggunakan-opsi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-proteggere-un-portafoglio-con-le-opzioni/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-hedge-a-portfolio-using-options/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-skyddar-du-en-portfolj-med-optioner/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/opsiyonlarla-portfoy-nasil-korunur/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-bao-ve-danh-muc-bang-quyen-chon-phong-ho-thuc-te/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-hedge-portfolio-with-options/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-hedge-a-portfolio-using-options/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo proteger una cartera usando opciones: el hedge en la práctica">
+  <meta property="og:description" content="Cómo usar opciones de venta para proteger una posición comprada, con ejemplo numérico completo del costo y el resultado del hedge.">
+  <meta property="og:url" content="https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo proteger una cartera usando opciones: el hedge en la práctica">
+  <meta name="twitter:description" content="Cómo usar opciones de venta para proteger una posición comprada, con ejemplo numérico completo del costo y el resultado del hedge.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tiempo de lectura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/#artigo",
+      "headline": "Cómo proteger una cartera usando opciones: el hedge en la práctica",
+      "description": "Cómo usar opciones de venta para proteger una posición comprada, con ejemplo numérico completo del costo y el resultado del hedge.",
+      "url": "https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/",
+      "inLanguage": "es",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
+      "articleSection": "Opciones",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo Duotide",
+        "url": "https://duotide.com.br/es/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/es/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://duotide.com.br/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cómo proteger una cartera usando opciones: el hedge en la práctica",
+          "item": "https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/es/" aria-label="Duotide — página de inicio">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir el menú de navegación"
+                data-abrir="Abrir el menú de navegación" data-fechar="Cerrar el menú de navegación">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Elegir idioma"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="22" height="16"><span>es</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-proteger-uma-carteira-usando-opcoes/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-hedge-a-portfolio-using-options/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/como-proteger-una-cartera-usando-opciones/" hreflang="es" lang="es" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-hedge-portfolio-using-options/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-ein-portfolio-mit-optionen-absichert/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-protektahan-ang-portfolio-gamit-ang-options/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-proteger-un-portefeuille-avec-des-options/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/how-to-hedge-a-portfolio-with-options/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-melindungi-portofolio-menggunakan-opsi/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-proteggere-un-portafoglio-con-le-opzioni/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-hedge-a-portfolio-using-options/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-skyddar-du-en-portfolj-med-optioner/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/opsiyonlarla-portfoy-nasil-korunur/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-bao-ve-danh-muc-bang-quyen-chon-phong-ho-thuc-te/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-hedge-portfolio-with-options/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/duotide-es-confiable/">¿Es confiable?</a></li>
+          <li><a href="/es/duotide-login/">Iniciar sesión</a></li>
+          <li><a href="/es/duotide-broker/">El bróker</a></li>
+          <li><a href="/es/duotide-es-seguro/">¿Es seguro?</a></li>
+          <li><a href="/es/duotide-app/">Aplicación</a></li>
+          <li><a href="/es/mejores-brokers/">Mejores brókers</a></li>
+          <li><a href="/es/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es"
+           target="_blank" rel="noopener sponsored nofollow">Crear cuenta</a>
+        <a class="btn btn--outline btn--sm" href="/es/duotide-login/">Iniciar sesión</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Cómo proteger una cartera usando opciones: el hedge en la práctica</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Opciones</span>
+        <h1>Cómo proteger una cartera usando opciones: el hedge en la práctica</h1>
+        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Hedge es el nombre que se le da a cualquier operación hecha con el objetivo de reducir el riesgo de otra posición ya existente, no de generar ganancia por sí sola. En el mercado de opciones, la forma más común de hedge para quien tiene acciones compradas es el uso de puts protectoras — un seguro con precio definido contra caídas del activo.</p>
+<h2>El escenario: una cartera expuesta a una caída</h2>
+<p>Supongamos que tienes 500 acciones de una empresa, compradas a R$ 40,00 cada una, totalizando R$ 20.000,00 invertidos. Crees en el potencial de largo plazo de la empresa, pero temes una caída fuerte en el corto plazo por causa de un evento específico — la publicación de resultados trimestrales, por ejemplo. Vender las acciones significaría renunciar a la posición de largo plazo; no hacer nada significa aceptar el riesgo total de la caída. El hedge con opciones ofrece un término medio.</p>
+<h2>Armando la protección con puts</h2>
+<p>Compras 5 contratos de put (cubriendo las 500 acciones, considerando lotes de 100 acciones cada uno), con strike de R$ 38,00 y prima de R$ 1,00 por acción, totalizando R$ 500,00 de costo (500 acciones × R$ 1,00). Esa prima es el precio del seguro: independientemente de lo que ocurra, ya gastaste esos R$ 500,00.</p>
+<h2>Cómo se comporta el resultado en diferentes escenarios</h2>
+<p>Si la acción cae a R$ 30,00, tu posición en acciones pierde R$ 5.000,00 (500 × R$ 10,00). Pero las puts, con strike R$ 38,00, valen al menos R$ 8,00 cada una (38 − 30), generando una ganancia de R$ 4.000,00 (500 × R$ 8,00) que compensa buena parte de la pérdida en las acciones. Descontando la prima de R$ 500,00 pagada, la pérdida neta de la operación combinada queda en R$ 1.500,00, bastante menor que los R$ 5.000,00 que habrías perdido sin la protección.</p>
+<p>Si, por el contrario, la acción sube a R$ 46,00, tu posición en acciones gana R$ 3.000,00 (500 × R$ 6,00). Las puts expiran sin valor, y pierdes solo la prima de R$ 500,00 pagada por ellas. El resultado neto queda en R$ 2.500,00 de ganancia — menor que los R$ 3.000,00 sin la protección, pero todavía positivo. Esa diferencia de R$ 500,00 es, en la práctica, el costo del seguro, pagado independientemente de que el escenario se concrete o no.</p>
+<h2>Lo que el hedge realmente entrega</h2>
+<p>Nota que el hedge no elimina el riesgo de pérdida — en la caída a R$ 30,00, todavía perdiste R$ 1.500,00 netos, solo que un valor bastante menor que sin la protección. Lo que hace es limitar la pérdida máxima posible a un valor conocido de antemano, cambiando parte del potencial de ganancia (el costo de la prima) por esa previsibilidad en el peor escenario. Es una decisión de gestión de riesgo, no una forma de eliminar la incertidumbre del mercado.</p>
+<h2>Cuándo tiene sentido considerar este tipo de protección</h2>
+<ul>
+<li>Antes de eventos con potencial de generar alta volatilidad concentrada, como la publicación de resultados.</li>
+<li>Cuando no quieres deshacerte de una posición de largo plazo, pero reconoces un riesgo elevado en el corto plazo.</li>
+<li>Cuando el costo de la prima, calculado en reales, es compatible con el tamaño de la protección que estás buscando — un hedge muy caro puede no valer la pena frente al riesgo que se está protegiendo.</li>
+</ul>
+<p>Usar opciones para proteger una cartera exige entender que esa protección tiene un costo cierto y un beneficio condicional — solo "devuelve" la prima, y más, si el escenario de caída realmente se concreta. Aun así, para quien quiere mantener una posición de largo plazo sin quedar expuesto por completo a un evento específico de corto plazo, es una herramienta concreta, con un resultado calculable incluso antes de aplicarse.</p>
+<h2>Ajustando el tamaño de la protección al riesgo que quieres cubrir</h2>
+<p>No siempre tiene sentido proteger el 100% de la posición. Comprar puts para solo la mitad de las 500 acciones, por ejemplo, reduce el costo de la prima a la mitad, pero también reduce a la mitad la compensación recibida en caso de caída. Esta decisión depende de cuánto riesgo estás dispuesto a mantener descubierto: una protección parcial cuesta menos y aun así reduce el impacto del peor escenario, sin eliminar la exposición por completo — un término medio que muchos inversores prefieren frente al costo de una protección total.</p>
+        <div class="bq-post__cta">
+          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Lee también</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/es/blog/como-funcionan-las-opciones-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo funcionan las opciones binarias, en la práctica</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/5-consejos-para-operar-con-mas-eficiencia-tiempo-capital/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 consejos para operar con más eficiencia de tiempo y capital</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/5-estrategias-de-opciones-para-principiantes/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 estrategias de opciones para quien está empezando</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Derechos de autor © 2026 Duotide.<br>
+            Todos los derechos reservados.<br>
+            Sitio oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/es/">Inicio</a></li>
+            <li><a href="/es/duotide-es-confiable/">¿Duotide es Confiable?</a></li>
+            <li><a href="/es/duotide-login/">Métodos de Login</a></li>
+            <li><a href="/es/duotide-broker/">Conoce el Bróker</a></li>
+            <li><a href="/es/duotide-es-seguro/">Seguridad del Bróker</a></li>
+            <li><a href="/es/duotide-app/">Aplicación</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contacto</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestor de cuenta 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/es/duotide-preguntas-frecuentes/">Preguntas frecuentes</a>
+          <a href="/es/sobre/">Sobre este sitio</a>
+          <a href="/es/contacto/">Contacto</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Volver al inicio de la página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Cerrar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bono</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con el cupón <strong>WELCOME100</strong> y recibe un 100% de bono sobre el monto depositado.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Cupón</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="¡Copiado!">Copiar</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Reclamar ahora</a>
+          <p class="pp__mini">Sujeto a las condiciones de la promoción. Operar productos apalancados implica riesgo de pérdida.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

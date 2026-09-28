@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr" data-tema="dark" data-tv="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Hedge nel trading: come proteggere un'operazione con un'altra posizione | Blog Duotide</title>
+  <meta name="description" content="Come funziona l'hedge nelle operazioni a breve termine, con esempio numerico completo e criteri per sapere quando questa protezione ha senso.">
+  <link rel="canonical" href="https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-de-hedge-para-operacoes-de-opcoes/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/estrategia-de-hedge-para-operaciones-de-opciones/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/hedge-im-trading-operation-absichern/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/hedge-sa-trading-protektahan-ang-operasyon/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/hedge-en-trading-comment-proteger-une-operation/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/trading-de-hedge-bir-islemi-baska-pozisyonla-korumak/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/hedge-trong-giao-dich-cach-bao-ve-mot-lenh-bang-lenh-khac/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hedge nel trading: come proteggere un'operazione con un'altra posizione">
+  <meta property="og:description" content="Come funziona l'hedge nelle operazioni a breve termine, con esempio numerico completo e criteri per sapere quando questa protezione ha senso.">
+  <meta property="og:url" content="https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hedge nel trading: come proteggere un'operazione con un'altra posizione">
+  <meta name="twitter:description" content="Come funziona l'hedge nelle operazioni a breve termine, con esempio numerico completo e criteri per sapere quando questa protezione ha senso.">
+  <meta name="twitter:label1" content="Scritto da">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tempo di lettura">
+  <meta name="twitter:data2" content="5 minuti">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/#artigo",
+      "headline": "Hedge nel trading: come proteggere un'operazione con un'altra posizione",
+      "description": "Come funziona l'hedge nelle operazioni a breve termine, con esempio numerico completo e criteri per sapere quando questa protezione ha senso.",
+      "url": "https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/",
+      "inLanguage": "it",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
+      "articleSection": "Strategie",
+      "author": {
+        "@type": "Organization",
+        "name": "Team Duotide",
+        "url": "https://duotide.com.br/it/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/it/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/it/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hedge nel trading: come proteggere un'operazione con un'altra posizione",
+          "item": "https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Vai al contenuto</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/it/" aria-label="Duotide — pagina iniziale">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Apri il menu di navigazione"
+                data-abrir="Apri il menu di navigazione" data-fechar="Chiudi il menu di navigazione">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Scegli la lingua"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="22" height="16"><span>it</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/estrategia-de-hedge-para-operacoes-de-opcoes/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/hedging-strategy-for-options-trades/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/estrategia-de-hedge-para-operaciones-de-opciones/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/hedge-strategy-for-options-trades/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/hedge-im-trading-operation-absichern/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/hedge-sa-trading-protektahan-ang-operasyon/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/hedge-en-trading-comment-proteger-une-operation/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/strategi-hedge-untuk-transaksi-opsi/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/hedge-nel-trading-come-proteggere-unoperazione/" hreflang="it" lang="it" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/hedge-strategy-for-options-trades/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/trading-de-hedge-bir-islemi-baska-pozisyonla-korumak/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/hedge-trong-giao-dich-cach-bao-ve-mot-lenh-bang-lenh-khac/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/hedge-strategy-for-options-trades/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="/it/">Home</a></li>
+          <li><a href="/it/duotide-affidabile/">È affidabile?</a></li>
+          <li><a href="/it/duotide-login/">Login</a></li>
+          <li><a href="/it/duotide-broker/">Il broker</a></li>
+          <li><a href="/it/duotide-sicuro/">È sicuro?</a></li>
+          <li><a href="/it/duotide-app/">App</a></li>
+          <li><a href="/it/migliori-broker/">Migliori broker</a></li>
+          <li><a href="/it/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it"
+           target="_blank" rel="noopener sponsored nofollow">Apri un conto</a>
+        <a class="btn btn--outline btn--sm" href="/it/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Percorso di navigazione">
+    <div class="container">
+      <ol>
+        <li><a href="/it/">Home</a></li>
+        <li><a href="/it/blog/">Blog</a></li>
+        <li><span aria-current="page">Hedge nel trading: come proteggere un'operazione con un'altra posizione</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Strategie</span>
+        <h1>Hedge nel trading: come proteggere un'operazione con un'altra posizione</h1>
+        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Hedge è una parola che compare in continuazione in finanza e tende a essere trattata come qualcosa di complicato, riservato ai grandi fondi. Nella pratica, la logica è semplice: invece di scommettere tutto su un'unica direzione, apri una seconda posizione che protegge parte del risultato se il mercato si muove contro la prima. L'obiettivo non è guadagnare due volte — è ridurre l'entità del danno quando la lettura del mercato risulta sbagliata.</p>
+<p>Questa idea si applica ad azioni, valute, commodity e anche a operazioni brevissime. Il punto comune è sempre lo stesso: comprare un qualche tipo di assicurazione, anche se ciò costa una parte del profitto potenziale dell'operazione originale.</p>
+<h2>Il principio dietro l'hedge</h2>
+<p>Un hedge classico combina due posizioni con risultati opposti sullo stesso asset, o su asset che si muovono in modo simile. Se la prima posizione scommette sul rialzo di una valuta e la seconda scommette sul calo della stessa valuta, il risultato finale dipende da quanto il prezzo si è mosso e dalla dimensione relativa di ogni posizione — non semplicemente da chi ha vinto e chi ha perso.</p>
+<p>Esistono due modi comuni di costruire questa protezione. Il primo è l'hedge simultaneo: aprire entrambi i lati praticamente allo stesso tempo, di solito perché la lettura del mercato è divisa tra due scenari probabili. Il secondo è l'hedge di aggiustamento: aprire la seconda posizione dopo che la prima è già in perdita, per bloccare una perdita massima e non lasciare che il risultato peggiori se il prezzo continua nella direzione contraria.</p>
+<h2>Un esempio con numeri tondi</h2>
+<p>Supponi un'operazione di R$ 200,00 che scommette sul rialzo del dollaro contro il real, con rendimento dell'85% in caso di successo e scadenza in 30 minuti. Mancando 10 minuti, una notizia economica cambia lo scenario e il prezzo inizia ad andare contro la posizione. Invece di aspettare semplicemente il risultato, apri una seconda operazione di R$ 100,00 scommettendo sul calo del dollaro, con lo stesso rendimento dell'85%.</p>
+<p>Ci sono due esiti possibili. Se il dollaro chiude in rialzo, la prima operazione paga R$ 170,00 di profitto (85% di R$ 200,00) e la seconda perde i R$ 100,00 investiti — risultato netto di R$ 70,00 di guadagno. Se il dollaro chiude in calo, la prima operazione perde i R$ 200,00 e la seconda paga R$ 85,00 di profitto (85% di R$ 100,00) — risultato netto di R$ 115,00 di perdita. Confrontando con il non fare nulla — perdere l'intero R$ 200,00 se il dollaro calasse —, l'hedge ha ridotto la perdita di R$ 85,00 nello scenario negativo, al costo di ridurre il guadagno nello scenario positivo.</p>
+<h2>Quando ha senso usare l'hedge</h2>
+<ul>
+<li>Quando emerge una notizia rilevante a metà di un'operazione già aperta e il tempo restante non permette di chiudere la posizione con sicurezza.</li>
+<li>Quando la lettura tecnica si è divisa tra due scenari e ridurre l'esposizione totale conta più che provare ad azzeccare la direzione esatta.</li>
+<li>Quando l'obiettivo è proteggere una sequenza di guadagni della giornata, accettando un risultato minore invece di rischiare di restituire tutto in un'unica operazione.</li>
+</ul>
+<h2>Quando l'hedge disturba più di quanto aiuti</h2>
+<p>L'hedge ha un costo — di solito riduce il profitto possibile, perché le due posizioni generalmente non condividono lo stesso rendimento percentuale in ogni scenario. Usare l'hedge ogni volta che un'operazione inizia ad andare male, per riflesso, è diverso dall'usare l'hedge come parte di un piano definito prima di entrare nel mercato. Nel primo caso, l'hedge diventa un modo di negare la perdita; nel secondo, è uno strumento di gestione del rischio. La differenza sta nel decidere i criteri d'uso prima di operare, e non nel calore del momento.</p>
+<h2>Come testare prima di applicare nella routine quotidiana</h2>
+<p>Prima di usare l'hedge con denaro reale, vale la pena simulare i quattro scenari possibili di un'operazione — rialzo piccolo, rialzo grande, calo piccolo, calo grande — e calcolare il risultato netto di ognuno, con e senza la seconda posizione. Strumenti come Duotide mostrano il rendimento di ogni asset prima dell'apertura dell'operazione, il che facilita fare questo conto in anticipo, invece di decidere a metà operazione sotto pressione. L'hedge non elimina il rischio: ridistribuisce il rischio tra scenari, e spetta a chi opera decidere se questo scambio ha senso per il proprio capitale e per il proprio piano.</p>
+        <div class="bq-post__cta">
+          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Leggi anche</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/it/blog/incrocio-di-medie-mobili-esponenziali-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Incrocio di medie mobili esponenziali (EMA) nel trading</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/come-scegliere-la-scadenza-di-una-operazione/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come scegliere la scadenza di un'operazione</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/i-migliori-indicatori-per-chi-fa-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">I migliori indicatori per chi fa day trade</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Copyright © 2026 Duotide.<br>
+            Tutti i diritti riservati.<br>
+            Sito ufficiale.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Azienda</h2>
+          <ul>
+            <li><a href="/it/">Home</a></li>
+            <li><a href="/it/duotide-affidabile/">Duotide è affidabile?</a></li>
+            <li><a href="/it/duotide-login/">Metodi di accesso</a></li>
+            <li><a href="/it/duotide-broker/">Scopri il broker</a></li>
+            <li><a href="/it/duotide-sicuro/">Sicurezza del broker</a></li>
+            <li><a href="/it/duotide-app/">App</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contatti</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Account manager 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/it/duotide-domande-frequenti/">Domande frequenti</a>
+          <a href="/it/chi-siamo/">Chi siamo</a>
+          <a href="/it/contatti/">Contatti</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Torna all'inizio della pagina">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Chiudi">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con il codice <strong>WELCOME100</strong> e ricevi un bonus del 100% sull'importo depositato.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Codice</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Copiato!">Copia</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Riscatta ora</a>
+          <p class="pp__mini">Soggetto alle condizioni della promozione. Il trading di prodotti con leva comporta rischio di perdita.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-tema="dark" data-tv="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Guide des fondamentaux des options : prime, exercice et échéance | Blog Duotide</title>
+  <meta name="description" content="Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.">
+  <link rel="canonical" href="https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/guia-de-fundamentos-de-opcoes-tradicionais/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/traditional-options-fundamentals-guide/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/options-fundamentals-guide/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/panduan-dasar-opsi-tradisional/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/guida-ai-fondamenti-delle-opzioni-tradizionali/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/traditional-options-fundamentals-guide/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/opsiyon-temelleri-rehberi-prim-kullanim-ve-vade/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/options-fundamentals-guide/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/traditional-options-fundamentals-guide/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Guide des fondamentaux des options : prime, exercice et échéance">
+  <meta property="og:description" content="Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.">
+  <meta property="og:url" content="https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guide des fondamentaux des options : prime, exercice et échéance">
+  <meta name="twitter:description" content="Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.">
+  <meta name="twitter:label1" content="Rédigé par">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Temps de lecture">
+  <meta name="twitter:data2" content="5 minutes">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/#artigo",
+      "headline": "Guide des fondamentaux des options : prime, exercice et échéance",
+      "description": "Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.",
+      "url": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/",
+      "inLanguage": "fr",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
+      "articleSection": "Options",
+      "author": {
+        "@type": "Organization",
+        "name": "Équipe Duotide",
+        "url": "https://duotide.com.br/fr/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/fr/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://duotide.com.br/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/fr/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Guide des fondamentaux des options : prime, exercice et échéance",
+          "item": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/fr/" aria-label="Duotide — page d’accueil">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Ouvrir le menu de navigation"
+                data-abrir="Ouvrir le menu de navigation" data-fechar="Fermer le menu de navigation">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Choisir la langue"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="22" height="16"><span>fr</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/guia-de-fundamentos-de-opcoes-tradicionais/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/traditional-options-fundamentals-guide/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/options-fundamentals-guide/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/" hreflang="fr" lang="fr" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/panduan-dasar-opsi-tradisional/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/guida-ai-fondamenti-delle-opzioni-tradizionali/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/traditional-options-fundamentals-guide/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/opsiyon-temelleri-rehberi-prim-kullanim-ve-vade/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/options-fundamentals-guide/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/fr/">Accueil</a></li>
+          <li><a href="/fr/duotide-avis-fiable/">Fiable ?</a></li>
+          <li><a href="/fr/duotide-connexion/">Connexion</a></li>
+          <li><a href="/fr/duotide-courtier/">Le courtier</a></li>
+          <li><a href="/fr/duotide-securite/">Sécurité</a></li>
+          <li><a href="/fr/duotide-application/">Application</a></li>
+          <li><a href="/fr/meilleurs-courtiers/">Meilleurs courtiers</a></li>
+          <li><a href="/fr/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr"
+           target="_blank" rel="noopener sponsored nofollow">Créer un compte</a>
+        <a class="btn btn--outline btn--sm" href="/fr/duotide-connexion/">Connexion</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Fil d’Ariane">
+    <div class="container">
+      <ol>
+        <li><a href="/fr/">Accueil</a></li>
+        <li><a href="/fr/blog/">Blog</a></li>
+        <li><span aria-current="page">Guide des fondamentaux des options : prime, exercice et échéance</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Options</span>
+        <h1>Guide des fondamentaux des options : prime, exercice et échéance</h1>
+        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Avant d'appliquer toute stratégie avec des options, il vaut la peine de bien comprendre les quatre éléments qui composent tout contrat de ce type : le droit qu'il confère, le prix d'exercice, la date d'échéance et la prime payée pour ce droit. Ce guide se concentre sur ces fondamentaux, laissant les combinaisons de stratégies spécifiques pour un autre moment.</p>
+<h2>Ce qu'une option accorde réellement</h2>
+<p>Une option d'achat (call) donne à l'acheteur le droit, mais non l'obligation, d'acheter l'actif sous-jacent à un prix fixe (le strike) jusqu'à une date déterminée. Une option de vente (put) accorde le droit de vendre dans les mêmes conditions. Celui qui vend l'option (le vendeur) assume l'obligation du côté opposé : si l'acheteur de la call décide d'exercer son droit, le vendeur est obligé de vendre l'actif au strike convenu, même si le prix du marché est bien plus élevé.</p>
+<h2>La prime : le prix du droit lui-même</h2>
+<p>La prime est le montant payé par l'acheteur au vendeur pour acquérir ce droit, et elle est composée de deux éléments : la valeur intrinsèque et la valeur extrinsèque (ou valeur temps). Supposons une action cotée à 48,00 R$ et une call de strike 45,00 R$ coûtant 4,50 R$. La valeur intrinsèque est de 3,00 R$ (48 − 45, ce que l'option vaut déjà si elle est exercée maintenant) ; la valeur extrinsèque est de 1,50 R$ (4,50 − 3,00), qui reflète le temps restant jusqu'à l'échéance et l'attente de variation du prix pendant cette période. Plus on se rapproche de l'échéance, plus la valeur extrinsèque tend à diminuer, dans un processus appelé érosion temporelle (theta).</p>
+<h2>Dans, à et hors de la monnaie</h2>
+<p>Une call est considérée « dans la monnaie » quand le prix de l'actif est au-dessus du strike (comme dans l'exemple ci-dessus), « à la monnaie » quand il est égal, et « hors de la monnaie » quand il est en dessous — dans ce dernier cas, l'option n'a que de la valeur extrinsèque, sans aucune valeur intrinsèque. Pour une put, la logique s'inverse : elle est dans la monnaie quand le prix de l'actif est en dessous du strike. Cette classification change tout au long de la vie du contrat, selon l'évolution du prix de l'actif.</p>
+<h2>Ce qui se passe à l'échéance</h2>
+<p>Si, à la date d'échéance, la call est dans la monnaie, l'acheteur exerce généralement son droit (ou l'option est automatiquement réglée par la différence, selon le marché), empochant la différence entre le prix du marché et le strike. Si elle est hors de la monnaie, l'option expire sans valeur, et l'acheteur perd la prime payée intégralement — c'est le risque maximal de celui qui achète une option : jamais plus que la prime, mais avec un risque réel de perdre ce montant entièrement.</p>
+<h2>Le risque est différent pour l'acheteur et pour le vendeur</h2>
+<p>Celui qui achète une option a un risque limité à la prime payée et un potentiel de gain qui peut être important, selon le mouvement de l'actif. Celui qui vend une option à découvert — sans posséder l'actif correspondant — reçoit la prime à l'avance, mais assume un risque qui peut être bien plus élevé que ce montant reçu, car il est obligé d'honorer le contrat si l'acheteur décide d'exercer. Cette asymétrie explique pourquoi vendre des options à découvert est généralement considéré plus risqué que les acheter, et exige généralement plus de capital de garantie de la part du vendeur.</p>
+<h2>Pourquoi il vaut la peine de comprendre cela avant toute stratégie</h2>
+<p>Les stratégies aux noms spécifiques — spread haussier, papillon, straddle — ne sont que des combinaisons de ces éléments de base : acheter et vendre des calls et des puts avec des strikes et des échéances différents en même temps. Sans comprendre comment la prime, le strike, l'échéance et l'effet du temps se rapportent entre eux, il devient difficile d'évaluer si une stratégie combinée a du sens pour le scénario que vous anticipez, ou si vous suivez simplement une recette sans comprendre le risque intégré à chaque jambe du contrat.</p>
+<h2>Un point qui passe souvent inaperçu</h2>
+<p>La valeur extrinsèque d'une option ne diminue pas de façon linéaire dans le temps — elle s'accélère près de l'échéance. Une option avec 60 jours restants perd de la valeur temps plus lentement que la même option avec seulement 10 jours restants, même si le prix de l'actif ne bouge pas du tout pendant cet intervalle. Ce comportement affecte directement ceux qui achètent des options en pensant les conserver peu de temps près de l'échéance, car l'érosion accélérée joue contre la position même sans aucun mouvement défavorable de l'actif.</p>
+        <div class="bq-post__cta">
+          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>À lire aussi</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/fr/blog/comment-fonctionnent-les-options-binaires/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment fonctionnent les options binaires, en pratique</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/5-conseils-pour-trader-efficacite-temps-capital/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 conseils pour trader avec plus d'efficacité de temps et de capital</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/5-strategies-d-options-pour-debutants/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 stratégies d'options pour qui débute maintenant</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Copyright © 2026 Duotide.<br>
+            Tous droits réservés.<br>
+            Site officiel.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Entreprise</h2>
+          <ul>
+            <li><a href="/fr/">Accueil</a></li>
+            <li><a href="/fr/duotide-avis-fiable/">Duotide est-elle fiable ?</a></li>
+            <li><a href="/fr/duotide-connexion/">Méthodes de connexion</a></li>
+            <li><a href="/fr/duotide-courtier/">Découvrir le courtier</a></li>
+            <li><a href="/fr/duotide-securite/">Sécurité du courtier</a></li>
+            <li><a href="/fr/duotide-application/">Application</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contact</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestionnaire de compte 24h/24</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/fr/duotide-questions-frequentes/">Questions fréquentes</a>
+          <a href="/fr/a-propos/">À propos de ce site</a>
+          <a href="/fr/contact/">Contact</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Revenir en haut de la page">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Fermer">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">de 100 %</span></h2>
+          <p>Déposez avec le code <strong>WELCOME100</strong> et recevez 100 % de bonus sur le montant déposé.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Code</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Copié !">Copier</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">En profiter</a>
+          <p class="pp__mini">Soumis aux conditions de la promotion. Le trading de produits à effet de levier comporte un risque de perte.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

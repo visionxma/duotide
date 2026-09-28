@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr" data-tema="dark" data-tv="th_TH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>วิธีทำแบ็กเทสต์กลยุทธ์ก่อนเทรดด้วยเงินจริง | Blog Duotide</title>
+  <meta name="description" content="ขั้นตอนการทำแบ็กเทสต์ด้วยมือ พร้อมสูตรความคาดหวังทางคณิตศาสตร์ที่อธิบายไว้ และตัวอย่างตัวเลขที่คำนวณให้ดูครบถ้วน">
+  <link rel="canonical" href="https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-fazer-o-backtest-de-uma-estrategia/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-backtest-a-strategy/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-backtest-a-strategy/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-mag-backtest-ng-diskarte/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-faire-le-backtest-dune-strategie/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-melakukan-backtest-strategi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-fare-il-backtest-di-una-strategia/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-thuc-hien-backtest-mot-chien-luoc/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-backtest-a-strategy/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="วิธีทำแบ็กเทสต์กลยุทธ์ก่อนเทรดด้วยเงินจริง">
+  <meta property="og:description" content="ขั้นตอนการทำแบ็กเทสต์ด้วยมือ พร้อมสูตรความคาดหวังทางคณิตศาสตร์ที่อธิบายไว้ และตัวอย่างตัวเลขที่คำนวณให้ดูครบถ้วน">
+  <meta property="og:url" content="https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:image:alt" content="Duotide — บล็อก Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="วิธีทำแบ็กเทสต์กลยุทธ์ก่อนเทรดด้วยเงินจริง">
+  <meta name="twitter:description" content="ขั้นตอนการทำแบ็กเทสต์ด้วยมือ พร้อมสูตรความคาดหวังทางคณิตศาสตร์ที่อธิบายไว้ และตัวอย่างตัวเลขที่คำนวณให้ดูครบถ้วน">
+  <meta name="twitter:label1" content="เขียนโดย">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="เวลาในการอ่าน">
+  <meta name="twitter:data2" content="5 นาที">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/#artigo",
+      "headline": "วิธีทำแบ็กเทสต์กลยุทธ์ก่อนเทรดด้วยเงินจริง",
+      "description": "ขั้นตอนการทำแบ็กเทสต์ด้วยมือ พร้อมสูตรความคาดหวังทางคณิตศาสตร์ที่อธิบายไว้ และตัวอย่างตัวเลขที่คำนวณให้ดูครบถ้วน",
+      "url": "https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/",
+      "inLanguage": "th",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
+      "articleSection": "กลยุทธ์",
+      "author": {
+        "@type": "Organization",
+        "name": "ทีม Duotide",
+        "url": "https://duotide.com.br/th/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/th/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "หน้าแรก",
+          "item": "https://duotide.com.br/th/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "บล็อก",
+          "item": "https://duotide.com.br/th/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "วิธีทำแบ็กเทสต์กลยุทธ์ก่อนเทรดด้วยเงินจริง",
+          "item": "https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">ข้ามไปยังเนื้อหา</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/th/" aria-label="Duotide — หน้าแรก">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="เปิดเมนูนำทาง"
+                data-abrir="เปิดเมนูนำทาง" data-fechar="ปิดเมนูนำทาง">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="เลือกภาษา"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="22" height="16"><span>th</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-fazer-o-backtest-de-uma-estrategia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-backtest-a-strategy/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/como-hacer-el-backtest-de-una-estrategia/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-backtest-a-strategy/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/how-to-backtest-a-trading-strategy/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-mag-backtest-ng-diskarte/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-faire-le-backtest-dune-strategie/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/how-to-backtest-a-trading-strategy/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-melakukan-backtest-strategi/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-fare-il-backtest-di-una-strategia/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-backtest-a-trading-strategy/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-gor-du-backtest-av-en-strategi/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/how-to-backtest-a-trading-strategy/" hreflang="th" lang="th" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-thuc-hien-backtest-mot-chien-luoc/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-backtest-a-trading-strategy/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="เมนูนำทางหลัก">
+        <ul>
+          <li><a href="/th/">หน้าแรก</a></li>
+          <li><a href="/th/duotide-is-it-reliable/">น่าเชื่อถือไหม?</a></li>
+          <li><a href="/th/duotide-login/">เข้าสู่ระบบ</a></li>
+          <li><a href="/th/duotide-broker/">เกี่ยวกับโบรกเกอร์</a></li>
+          <li><a href="/th/duotide-safe/">ปลอดภัยไหม?</a></li>
+          <li><a href="/th/duotide-app/">แอป</a></li>
+          <li><a href="/th/best-brokers/">โบรกเกอร์ที่ดีที่สุด</a></li>
+          <li><a href="/th/blog/" aria-current="page">บล็อก</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th"
+           target="_blank" rel="noopener sponsored nofollow">เปิดบัญชี</a>
+        <a class="btn btn--outline btn--sm" href="/th/duotide-login/">เข้าสู่ระบบ</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+    <div class="container">
+      <ol>
+        <li><a href="/th/">หน้าแรก</a></li>
+        <li><a href="/th/blog/">บล็อก</a></li>
+        <li><span aria-current="page">วิธีทำแบ็กเทสต์กลยุทธ์ก่อนเทรดด้วยเงินจริง</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">กลยุทธ์</span>
+        <h1>วิธีทำแบ็กเทสต์กลยุทธ์ก่อนเทรดด้วยเงินจริง</h1>
+        <p class="bq-post__meta">ทีม Duotide · <time datetime="2026-09-24">24/09/2569</time> · อ่าน 4 นาที</p>
+        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>แบ็กเทสต์คือกระบวนการทดสอบกลยุทธ์การเทรดโดยใช้ข้อมูลย้อนหลัง ก่อนที่จะเสี่ยงเงินทุนจริงกับมัน แนวคิดนั้นง่ายมาก คือนำกฎการเข้าและออกแบบเดียวกับที่คุณจะใช้จริงมาใช้กับช่วงเวลาในอดีตของกราฟ แล้วบันทึกว่าจะเกิดอะไรขึ้นในแต่ละสัญญาณที่เกิดขึ้น นี่คือขั้นตอนที่แยกกลยุทธ์ที่มีหลักฐานว่าใช้ได้ผลจริง ออกจากไอเดียที่ดูดีแค่เมื่อมองกราฟย้อนหลัง</p>
+<h2>ขั้นที่ 1: กำหนดกฎการเข้าและออกเป็นลายลักษณ์อักษร</h2>
+<p>ก่อนดูข้อมูลย้อนหลังใด ๆ ให้เขียนกฎที่แน่นอนที่จะทดสอบ ตัวอย่างเช่น “ซื้อเมื่อราคาทะลุจุดสูงสุดของ 20 แท่งเทียนล่าสุด โดยมีปริมาณการซื้อขายสูงกว่าค่าเฉลี่ย 30%; ออกเมื่อมีกำไร 2% หรือที่จุดตัดขาดทุนเมื่อขาดทุน 1%” กฎที่คลุมเครือ เช่น “ซื้อเมื่อดูเหมือนเป็นโอกาสที่ดี” ไม่สามารถทดสอบได้อย่างสม่ำเสมอ เพราะขึ้นอยู่กับการตัดสินใจตามความรู้สึกในแต่ละสัญญาณ</p>
+<h2>ขั้นที่ 2: ไล่ดูประวัติทีละสัญญาณ</h2>
+<p>เมื่อกำหนดกฎแล้ว ให้ไล่ดูกราฟย้อนหลัง โดยระบุทุกครั้งที่เงื่อนไขการเข้าจะเป็นจริง แล้วบันทึกผลลัพธ์ที่กฎการออกจะสร้างขึ้น คือกำไรหรือขาดทุน เป็นจุดหรือเปอร์เซ็นต์ สิ่งสำคัญคือต้องมีวินัยในการใช้กฎตามที่เขียนไว้เป๊ะ ๆ โดยไม่ “ปรับ” ผลลัพธ์หลังจากเห็นว่าเกิดอะไรขึ้นแล้ว เพราะมีความเสี่ยงที่จะทำให้การทดสอบลำเอียงไปในทางที่เอื้อต่อกลยุทธ์นั้น</p>
+<h2>ขั้นที่ 3: คำนวณอัตราการชนะและ payoff เฉลี่ย</h2>
+<p>หลังจากรวบรวมกลุ่มตัวอย่างที่เหมาะสม อย่างน้อย 30 สัญญาณ และควรมากกว่านั้น ให้คำนวณตัวเลขสองตัว คืออัตราการชนะ (เปอร์เซ็นต์ของการเทรดที่ชนะ) และ payoff เฉลี่ย (กำไรเฉลี่ยของการเทรดที่ชนะหารด้วยขาดทุนเฉลี่ยของการเทรดที่แพ้) สมมติว่ามีแบ็กเทสต์ที่มี 40 สัญญาณ ชนะ 18 ครั้ง แพ้ 22 ครั้ง กำไรเฉลี่ย R$ 60,00 ในการเทรดที่ชนะ และขาดทุนเฉลี่ย R$ 35,00 ในการเทรดที่แพ้ อัตราการชนะคือ 45% (18/40) และ payoff คือ 1,71 (60/35)</p>
+<h2>ขั้นที่ 4: คำนวณความคาดหวังทางคณิตศาสตร์</h2>
+<p>ความคาดหวังทางคณิตศาสตร์วัดผลลัพธ์เฉลี่ยที่คาดหวังต่อการเทรด และคำนวณได้ดังนี้ (อัตราการชนะ × กำไรเฉลี่ย) − (อัตราการแพ้ × ขาดทุนเฉลี่ย) เมื่อใช้ตัวเลขจากตัวอย่าง: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 เป็นบวกต่อการเทรดโดยเฉลี่ย ความคาดหวังที่เป็นบวกบ่งบอกว่า หากรักษาสัดส่วนการชนะและ payoff เดิมไว้ตลอดเวลา กลยุทธ์นั้นมักจะสร้างผลลัพธ์เป็นบวก ซึ่งไม่ได้รับประกันว่าการเทรดแต่ละครั้งจะทำกำไร แต่บ่งบอกถึงความได้เปรียบทางสถิติในกลุ่มตัวอย่างที่ทดสอบ</p>
+<h2>สิ่งที่แบ็กเทสต์ไม่ได้รับประกัน</h2>
+<p>ผลลัพธ์เชิงบวกในอดีตไม่ได้รับประกันผลการดำเนินงานแบบเดียวกันในอนาคต เพราะสภาวะตลาดเปลี่ยนแปลงไป และกลุ่มตัวอย่างขนาดเล็กอาจเอื้ออำนวยเพียงเพราะโชคช่วย นอกจากนี้ แบ็กเทสต์ที่ทำด้วยมือยังมีความเสี่ยงต่ออคติแบบมองย้อนหลัง เพราะง่ายมากที่จะปรับการตีความสัญญาณโดยไม่ตั้งใจ เนื่องจากรู้อยู่แล้วว่าเกิดอะไรขึ้นภายหลัง ด้วยเหตุนี้ เทรดเดอร์หลายคนจึงตามด้วยช่วงทดสอบในบัญชีจำลองหลังแบ็กเทสต์ โดยใช้กฎเดียวกันแบบเรียลไทม์ก่อนเทรดด้วยเงินทุนจำนวนมาก</p>
+<h2>นำกระบวนการไปใช้จริง</h2>
+<ul>
+<li>เขียนกฎการเข้าและออกก่อนดูข้อมูลย้อนหลังใด ๆ</li>
+<li>รวบรวมกลุ่มตัวอย่างอย่างน้อย 30 สัญญาณ เพื่อให้ตัวเลขมีน้ำหนักทางสถิติ</li>
+<li>คำนวณอัตราการชนะ payoff เฉลี่ย และความคาดหวังทางคณิตศาสตร์ ก่อนพิจารณาว่ากลยุทธ์นั้นผ่านการยืนยันแล้ว</li>
+<li>ทดสอบในบัญชีจำลองเป็นระยะเวลาหนึ่งก่อนใช้เงินทุนจริง แม้ว่าแบ็กเทสต์จะเป็นบวกก็ตาม</li>
+</ul>
+<p>แบ็กเทสต์เป็นเครื่องมือคัดกรอง ไม่ใช่การรับประกัน มันช่วยตัดกลยุทธ์ที่ไม่มีความได้เปรียบทางสถิติที่ชัดเจนออกไป และช่วยให้เข้าใจพฤติกรรมที่คาดหวังของกลยุทธ์ที่เหลือได้ดีขึ้น แต่ไม่มีความคาดหวังทางคณิตศาสตร์ใดที่คำนวณจากอดีตที่จะเป็นคำสัญญาสำหรับผลลัพธ์ในอนาคต</p>
+<h2>ข้อควรระวังเพิ่มเติม: ขนาดของกลุ่มตัวอย่างสำคัญกว่าที่คิด</h2>
+<p>ความคาดหวังทางคณิตศาสตร์ที่เป็นบวกซึ่งคำนวณจากเพียง 10 หรือ 15 สัญญาณ มีคุณค่าทางสถิติน้อยมาก อาจเป็นผลจากโชคในกลุ่มตัวอย่าง ไม่ใช่ความได้เปรียบที่แท้จริงของกลยุทธ์ ยิ่งจำนวนสัญญาณที่ทดสอบมากเท่าไหร่ ผลลัพธ์ก็ยิ่งน่าเชื่อถือมากขึ้น แม้ว่าไม่มีกลุ่มตัวอย่างใด ไม่ว่าจะใหญ่แค่ไหน ที่จะขจัดความไม่แน่นอนเกี่ยวกับอนาคตได้ทั้งหมด ควรทดสอบกลยุทธ์ในช่วงตลาดที่แตกต่างกันด้วย ทั้งขาขึ้น ขาลง และไซด์เวย์ เพราะกฎหนึ่งอาจได้ผลดีในสภาวะหนึ่งแต่ไม่ดีในอีกสภาวะหนึ่ง และแบ็กเทสต์ที่ทำเฉพาะในช่วงขาขึ้นที่แข็งแกร่งมักประเมินผลลัพธ์ที่คาดหวังไว้สูงเกินจริง</p>
+        <div class="bq-post__cta">
+          <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>อ่านเพิ่มเติม</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/th/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีเลือกระยะเวลา (วันหมดอายุ) ของการเทรด</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
+            <a class="bq__card" href="/th/blog/how-to-choose-a-strategy-based-on-your-profile/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีเลือกกลยุทธ์ตามโปรไฟล์ของคุณ</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/5-most-used-trading-strategies-explained/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 กลยุทธ์การเทรดที่ใช้กันมากที่สุด อธิบายให้เข้าใจ</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">ลิขสิทธิ์ © 2026 Duotide<br>
+            สงวนลิขสิทธิ์<br>
+            เว็บไซต์อย่างเป็นทางการ</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>บริษัท</h2>
+          <ul>
+            <li><a href="/th/">หน้าแรก</a></li>
+            <li><a href="/th/duotide-is-it-reliable/">Duotide น่าเชื่อถือไหม?</a></li>
+            <li><a href="/th/duotide-login/">วิธีเข้าสู่ระบบ</a></li>
+            <li><a href="/th/duotide-broker/">รู้จักโบรกเกอร์</a></li>
+            <li><a href="/th/duotide-safe/">ความปลอดภัยของโบรกเกอร์</a></li>
+            <li><a href="/th/duotide-app/">แอป</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>ติดต่อ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>ผู้จัดการบัญชี 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/th/duotide-faq/">คำถามที่พบบ่อย</a>
+          <a href="/th/about/">เกี่ยวกับเว็บไซต์นี้</a>
+          <a href="/th/contact/">ติดต่อ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="กลับไปด้านบนของหน้า">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="ปิด">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">โบนัส</span> <span class="pp__l2">100%</span></h2>
+          <p>ฝากเงินด้วยคูปอง <strong>WELCOME100</strong> และรับโบนัส 100% จากยอดเงินฝาก</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">คูปอง</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="คัดลอกแล้ว!">คัดลอก</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">รับเลย</a>
+          <p class="pp__mini">เป็นไปตามเงื่อนไขของโปรโมชัน การเทรดผลิตภัณฑ์ที่มีเลเวอเรจมีความเสี่ยงที่จะขาดทุน</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

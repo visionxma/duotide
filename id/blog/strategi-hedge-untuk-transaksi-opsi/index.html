@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr" data-tema="dark" data-tv="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Hedge dalam Trading: Cara Melindungi Transaksi dengan Posisi Lain | Blog Duotide</title>
+  <meta name="description" content="Cara kerja hedge dalam transaksi jangka pendek, dengan contoh numerik lengkap dan kriteria untuk mengetahui kapan perlindungan ini masuk akal.">
+  <link rel="canonical" href="https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-de-hedge-para-operacoes-de-opcoes/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/estrategia-de-hedge-para-operaciones-de-opciones/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/hedge-im-trading-operation-absichern/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/hedge-sa-trading-protektahan-ang-operasyon/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/hedge-en-trading-comment-proteger-une-operation/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/hedge-nel-trading-come-proteggere-unoperazione/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/trading-de-hedge-bir-islemi-baska-pozisyonla-korumak/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/hedge-trong-giao-dich-cach-bao-ve-mot-lenh-bang-lenh-khac/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/hedge-strategy-for-options-trades/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hedge dalam Trading: Cara Melindungi Transaksi dengan Posisi Lain">
+  <meta property="og:description" content="Cara kerja hedge dalam transaksi jangka pendek, dengan contoh numerik lengkap dan kriteria untuk mengetahui kapan perlindungan ini masuk akal.">
+  <meta property="og:url" content="https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hedge dalam Trading: Cara Melindungi Transaksi dengan Posisi Lain">
+  <meta name="twitter:description" content="Cara kerja hedge dalam transaksi jangka pendek, dengan contoh numerik lengkap dan kriteria untuk mengetahui kapan perlindungan ini masuk akal.">
+  <meta name="twitter:label1" content="Ditulis oleh">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Waktu baca">
+  <meta name="twitter:data2" content="5 menit">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/#artigo",
+      "headline": "Hedge dalam Trading: Cara Melindungi Transaksi dengan Posisi Lain",
+      "description": "Cara kerja hedge dalam transaksi jangka pendek, dengan contoh numerik lengkap dan kriteria untuk mengetahui kapan perlindungan ini masuk akal.",
+      "url": "https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/",
+      "inLanguage": "id",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
+      "articleSection": "Strategi",
+      "author": {
+        "@type": "Organization",
+        "name": "Tim Duotide",
+        "url": "https://duotide.com.br/id/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/id/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://duotide.com.br/id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/id/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hedge dalam Trading: Cara Melindungi Transaksi dengan Posisi Lain",
+          "item": "https://duotide.com.br/id/blog/strategi-hedge-untuk-transaksi-opsi/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Langsung ke konten</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/id/" aria-label="Duotide — halaman utama">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buka menu navigasi"
+                data-abrir="Buka menu navigasi" data-fechar="Tutup menu navigasi">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pilih bahasa"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="22" height="16"><span>id</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/estrategia-de-hedge-para-operacoes-de-opcoes/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/hedging-strategy-for-options-trades/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/estrategia-de-hedge-para-operaciones-de-opciones/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/hedge-strategy-for-options-trades/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/hedge-im-trading-operation-absichern/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/hedge-sa-trading-protektahan-ang-operasyon/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/hedge-en-trading-comment-proteger-une-operation/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/strategi-hedge-untuk-transaksi-opsi/" hreflang="id" lang="id" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/hedge-nel-trading-come-proteggere-unoperazione/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/hedge-strategy-for-options-trades/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/trading-de-hedge-bir-islemi-baska-pozisyonla-korumak/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/hedge-trong-giao-dich-cach-bao-ve-mot-lenh-bang-lenh-khac/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/hedge-strategy-for-options-trades/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="/id/">Beranda</a></li>
+          <li><a href="/id/duotide-terpercaya/">Terpercaya?</a></li>
+          <li><a href="/id/duotide-login/">Login</a></li>
+          <li><a href="/id/duotide-broker/">Tentang broker</a></li>
+          <li><a href="/id/duotide-aman/">Aman?</a></li>
+          <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          <li><a href="/id/broker-terbaik/">Broker terbaik</a></li>
+          <li><a href="/id/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id"
+           target="_blank" rel="noopener sponsored nofollow">Buat akun</a>
+        <a class="btn btn--outline btn--sm" href="/id/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Jejak navigasi">
+    <div class="container">
+      <ol>
+        <li><a href="/id/">Beranda</a></li>
+        <li><a href="/id/blog/">Blog</a></li>
+        <li><span aria-current="page">Hedge dalam Trading: Cara Melindungi Transaksi dengan Posisi Lain</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Strategi</span>
+        <h1>Hedge dalam Trading: Cara Melindungi Transaksi dengan Posisi Lain</h1>
+        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 menit baca</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Hedge adalah kata yang sering muncul di dunia keuangan dan biasanya diperlakukan sebagai sesuatu yang rumit, khusus untuk dana besar. Dalam praktiknya, logikanya sederhana: alih-alih bertaruh semuanya pada satu arah, Anda membuka posisi kedua yang melindungi sebagian hasil jika pasar bergerak melawan posisi pertama. Tujuannya bukan untung dua kali — melainkan mengurangi besarnya kerusakan ketika pembacaan pasar ternyata salah.</p><p>Ide ini berlaku pada saham, mata uang, komoditas, dan juga transaksi sangat jangka pendek. Titik temunya selalu sama: membeli semacam asuransi, meski itu memakan sebagian dari potensi keuntungan transaksi asli.</p><h2>Prinsip di Balik Hedge</h2><p>Hedge klasik menggabungkan dua posisi dengan hasil berlawanan pada aset yang sama, atau pada aset yang bergerak dengan cara serupa. Jika posisi pertama bertaruh pada kenaikan sebuah mata uang dan posisi kedua bertaruh pada penurunan mata uang yang sama, hasil akhirnya bergantung pada seberapa besar harga bergerak dan ukuran relatif setiap posisi — bukan sekadar siapa yang menang dan siapa yang kalah.</p><p>Ada dua cara umum menyusun perlindungan ini. Pertama adalah hedge simultan: membuka kedua sisi hampir bersamaan, biasanya karena pembacaan pasar terbagi antara dua skenario yang mungkin. Kedua adalah hedge penyesuaian: membuka posisi kedua setelah posisi pertama sudah merugi, untuk mengunci kerugian maksimum dan mencegah hasil memburuk jika harga terus bergerak ke arah berlawanan.</p><h2>Contoh dengan Angka Bulat</h2><p>Anggaplah sebuah transaksi R$ 200,00 bertaruh pada kenaikan dolar terhadap real, dengan imbal hasil 85% jika benar dan jatuh tempo 30 menit. Tersisa 10 menit, sebuah berita ekonomi mengubah skenario dan harga mulai bergerak melawan posisi. Alih-alih hanya menunggu hasilnya, Anda membuka transaksi kedua R$ 100,00 bertaruh pada penurunan dolar, dengan imbal hasil yang sama 85%.</p><p>Ada dua kemungkinan hasil. Jika dolar menutup naik, transaksi pertama membayar keuntungan R$ 170,00 (85% dari R$ 200,00) dan transaksi kedua kehilangan R$ 100,00 yang diinvestasikan — hasil bersih keuntungan R$ 70,00. Jika dolar menutup turun, transaksi pertama kehilangan R$ 200,00 dan transaksi kedua membayar keuntungan R$ 85,00 (85% dari R$ 100,00) — hasil bersih kerugian R$ 115,00. Dibandingkan dengan tidak melakukan apa pun — kehilangan seluruh R$ 200,00 jika dolar turun —, hedge mengurangi kerugian sebesar R$ 85,00 dalam skenario buruk, dengan biaya mengurangi keuntungan dalam skenario baik.</p><h2>Kapan Masuk Akal Menggunakan Hedge</h2><ul><li>Ketika muncul berita relevan di tengah transaksi yang sudah terbuka dan sisa waktu tidak memungkinkan menutup posisi dengan aman.</li><li>Ketika pembacaan teknikal terbagi antara dua skenario dan mengurangi eksposur total lebih penting daripada mencoba menebak arah pasti.</li><li>Ketika tujuannya melindungi rangkaian keuntungan hari itu, menerima hasil lebih kecil alih-alih mempertaruhkan semuanya dalam satu transaksi.</li></ul><h2>Kapan Hedge Lebih Merugikan daripada Membantu</h2><p>Hedge memiliki biaya — biasanya mengurangi keuntungan yang mungkin, karena kedua posisi umumnya tidak berbagi imbal hasil persentase yang sama pada setiap skenario. Menggunakan hedge setiap kali transaksi mulai berjalan buruk, secara refleks, berbeda dengan menggunakan hedge sebagai bagian dari rencana yang ditentukan sebelum masuk pasar. Pada kasus pertama, hedge menjadi cara menyangkal kerugian; pada kasus kedua, ia adalah alat manajemen risiko. Perbedaannya terletak pada menentukan kriteria penggunaan sebelum bertransaksi, bukan dalam suasana panas saat itu.</p><h2>Cara Menguji Sebelum Menerapkannya Sehari-hari</h2><p>Sebelum menggunakan hedge dengan uang sungguhan, ada baiknya mensimulasikan empat skenario yang mungkin dari sebuah transaksi — naik kecil, naik besar, turun kecil, turun besar — dan menghitung hasil bersih masing-masing, dengan dan tanpa posisi kedua. Alat seperti Duotide menunjukkan imbal hasil setiap aset sebelum pembukaan transaksi, yang memudahkan melakukan perhitungan ini sebelumnya, alih-alih memutuskan di tengah transaksi di bawah tekanan. Hedge tidak menghilangkan risiko: ia mendistribusikan ulang risiko antar skenario, dan terserah trader untuk memutuskan apakah pertukaran ini masuk akal untuk modal dan rencana mereka.</p>
+        <div class="bq-post__cta">
+          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Baca juga</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/id/blog/persilangan-exponential-moving-average-ema-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Persilangan Exponential Moving Average (EMA) dalam Trading</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/cara-memilih-jangka-waktu-transaksi/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cara Memilih Jangka Waktu (Kedaluwarsa) Transaksi</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/strategi-dual-stochastic/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strategi Dual Stochastic: Cara Menggabungkan Dua Osilator</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Hak cipta © 2026 Duotide.<br>
+            Seluruh hak dilindungi.<br>
+            Situs resmi.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Perusahaan</h2>
+          <ul>
+            <li><a href="/id/">Beranda</a></li>
+            <li><a href="/id/duotide-terpercaya/">Apakah Duotide Terpercaya?</a></li>
+            <li><a href="/id/duotide-login/">Metode Login</a></li>
+            <li><a href="/id/duotide-broker/">Kenali Broker</a></li>
+            <li><a href="/id/duotide-aman/">Keamanan Broker</a></li>
+            <li><a href="/id/duotide-aplikasi/">Aplikasi</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontak</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Manajer akun 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/id/duotide-pertanyaan-umum/">Pertanyaan umum</a>
+          <a href="/id/tentang/">Tentang situs ini</a>
+          <a href="/id/kontak/">Kontak</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Kembali ke atas halaman">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Tutup">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">100%</span></h2>
+          <p>Deposit dengan kupon <strong>WELCOME100</strong> dan dapatkan bonus 100% dari jumlah yang disetor.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Tersalin!">Salin</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Klaim sekarang</a>
+          <p class="pp__mini">Tunduk pada syarat promo. Trading produk leverage berisiko menimbulkan kerugian.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" data-tema="dark" data-tv="sv_SE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Så gör du backtest av en strategi innan du handlar på riktigt | Blog Duotide</title>
+  <meta name="description" content="Steg för steg för ett manuellt backtest, med formeln för matematisk förväntan förklarad och ett fullständigt löst räkneexempel.">
+  <link rel="canonical" href="https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-fazer-o-backtest-de-uma-estrategia/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-backtest-a-strategy/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-backtest-a-strategy/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-mag-backtest-ng-diskarte/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-faire-le-backtest-dune-strategie/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-melakukan-backtest-strategi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-fare-il-backtest-di-una-strategia/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-thuc-hien-backtest-mot-chien-luoc/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-backtest-a-trading-strategy/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-backtest-a-strategy/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Så gör du backtest av en strategi innan du handlar på riktigt">
+  <meta property="og:description" content="Steg för steg för ett manuellt backtest, med formeln för matematisk förväntan förklarad och ett fullständigt löst räkneexempel.">
+  <meta property="og:url" content="https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide-bloggen">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Så gör du backtest av en strategi innan du handlar på riktigt">
+  <meta name="twitter:description" content="Steg för steg för ett manuellt backtest, med formeln för matematisk förväntan förklarad och ett fullständigt löst räkneexempel.">
+  <meta name="twitter:label1" content="Skriven av">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lästid">
+  <meta name="twitter:data2" content="5 minuter">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/#artigo",
+      "headline": "Så gör du backtest av en strategi innan du handlar på riktigt",
+      "description": "Steg för steg för ett manuellt backtest, med formeln för matematisk förväntan förklarad och ett fullständigt löst räkneexempel.",
+      "url": "https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/",
+      "inLanguage": "sv",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
+      "articleSection": "Strategier",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-teamet",
+        "url": "https://duotide.com.br/sv/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/sv/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://duotide.com.br/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://duotide.com.br/sv/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Så gör du backtest av en strategi innan du handlar på riktigt",
+          "item": "https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/sv/" aria-label="Duotide — startsida">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Öppna navigeringsmenyn"
+                data-abrir="Öppna navigeringsmenyn" data-fechar="Stäng navigeringsmenyn">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Välj språk"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="22" height="16"><span>sv</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-fazer-o-backtest-de-uma-estrategia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-backtest-a-strategy/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/como-hacer-el-backtest-de-una-estrategia/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-backtest-a-strategy/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/how-to-backtest-a-trading-strategy/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-mag-backtest-ng-diskarte/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-faire-le-backtest-dune-strategie/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/how-to-backtest-a-trading-strategy/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-melakukan-backtest-strategi/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-fare-il-backtest-di-una-strategia/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-backtest-a-trading-strategy/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-gor-du-backtest-av-en-strategi/" hreflang="sv" lang="sv" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/how-to-backtest-a-trading-strategy/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-thuc-hien-backtest-mot-chien-luoc/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-backtest-a-trading-strategy/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Huvudnavigering">
+        <ul>
+          <li><a href="/sv/">Hem</a></li>
+          <li><a href="/sv/duotide-ar-den-palitlig/">Är den pålitlig?</a></li>
+          <li><a href="/sv/duotide-logga-in/">Logga in</a></li>
+          <li><a href="/sv/duotide-maklaren/">Mäklaren</a></li>
+          <li><a href="/sv/duotide-ar-den-saker/">Är den säker?</a></li>
+          <li><a href="/sv/duotide-app/">App</a></li>
+          <li><a href="/sv/basta-maklarna/">Bästa mäklarna</a></li>
+          <li><a href="/sv/blog/" aria-current="page">Blogg</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv"
+           target="_blank" rel="noopener sponsored nofollow">Skapa konto</a>
+        <a class="btn btn--outline btn--sm" href="/sv/duotide-logga-in/">Logga in</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Navigeringsspår">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+        <li><a href="/sv/blog/">Blogg</a></li>
+        <li><span aria-current="page">Så gör du backtest av en strategi innan du handlar på riktigt</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Strategier</span>
+        <h1>Så gör du backtest av en strategi innan du handlar på riktigt</h1>
+        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
+        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Backtest är processen att testa en handelsstrategi med hjälp av historiska data, innan man riskerar riktigt kapital i den. Idén är enkel: tillämpa samma ingångs- och utgångsregler som du skulle använda live på en tidigare period i diagrammet, och registrera vad som skulle ha hänt vid varje genererad signal. Det är ett steg som skiljer en strategi med belägg för att fungera från en idé som bara verkar bra när man tittar på diagrammet i efterhand.</p>
+<h2>Steg 1: definiera ingångs- och utgångsregeln skriftligt</h2>
+<p>Innan du tittar på någon historisk data, skriv den exakta regel du kommer att testa — till exempel: "köp när priset bryter över de senaste 20 candlarnas högsta med en volym 30% över genomsnittet; ta vinst vid 2% uppgång eller stoppa vid 1% nedgång". Vaga regler som "köp när det verkar vara ett bra tillfälle" kan inte testas konsekvent, eftersom de beror på subjektivt omdöme vid varje signal.</p>
+<h2>Steg 2: gå igenom historiken signal för signal</h2>
+<p>Med regeln definierad, gå igenom det historiska diagrammet och identifiera varje gång ingångsvillkoret skulle ha uppfyllts, och registrera resultatet som utgångsregeln skulle ha gett — vinst eller förlust, i punkter eller procent. Det är viktigt att hålla disciplinen att tillämpa regeln exakt som den är skriven, utan att "justera" resultatet efter att ha sett vad som hände, med risk att snedvrida testet till strategins fördel.</p>
+<h2>Steg 3: beräkna träffsäkerheten och den genomsnittliga payoffen</h2>
+<p>Efter att ha samlat ett rimligt urval — minst 30 signaler, helst fler — beräkna två tal: träffsäkerheten (andel vinnande affärer) och den genomsnittliga payoffen (den genomsnittliga vinsten för vinnande affärer delat med den genomsnittliga förlusten för förlorande). Anta ett backtest med 40 signaler, 18 vinnande och 22 förlorande, en genomsnittlig vinst på R$ 60,00 i de vinnande och en genomsnittlig förlust på R$ 35,00 i de förlorande. Träffsäkerheten är 45% (18/40) och payoffen är 1,71 (60/35).</p>
+<h2>Steg 4: beräkna den matematiska förväntan</h2>
+<p>Den matematiska förväntan mäter det genomsnittliga förväntade resultatet per affär, och beräknas så här: (träffsäkerhet × genomsnittlig vinst) − (felfrekvens × genomsnittlig förlust). Med siffrorna från exemplet: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positivt per affär, i genomsnitt. En positiv förväntan tyder på att strategin, om samma andel träffar och samma payoff bibehålls över tid, tenderar att generera ett positivt resultat — vilket inte garanterar att varje enskild affär blir lönsam, men indikerar en statistisk fördel i det testade urvalet.</p>
+<h2>Vad backtestet inte garanterar</h2>
+<p>Ett positivt resultat i historiken garanterar inte samma prestanda framöver — marknadsförhållanden förändras, och ett litet urval kan ha varit gynnsamt av en slump. Dessutom är manuella backtester utsatta för efterklokhetsbias: det är lätt att, utan att mena det, justera tolkningen av en signal med vetskap om vad som hände sedan. Därför följer många traders upp backtestet med en testperiod på ett simulerat konto, där samma regel tillämpas i realtid innan man handlar med betydande kapital.</p>
+<h2>Att sätta processen i praktiken</h2>
+<ul>
+<li>Skriv ingångs- och utgångsregeln innan du tittar på någon historisk data.</li>
+<li>Samla ett minsta urval på 30 signaler så att siffrorna får någon statistisk tyngd.</li>
+<li>Beräkna träffsäkerhet, genomsnittlig payoff och matematisk förväntan innan du betraktar strategin som validerad.</li>
+<li>Testa på ett simulerat konto under en period innan du använder riktigt kapital, även med ett positivt backtest.</li>
+</ul>
+<p>Backtest är ett filterverktyg, inte en garanti: det hjälper till att förkasta strategier utan någon synbar statistisk fördel, och att bättre förstå det förväntade beteendet hos dem som blir kvar — men ingen matematisk förväntan beräknad på det förflutna är ett löfte om framtida resultat.</p>
+<h2>En extra försiktighetsåtgärd: urvalets storlek spelar större roll än det verkar</h2>
+<p>En positiv matematisk förväntan beräknad på bara 10 eller 15 signaler har litet statistiskt värde — det kan vara resultatet av tur i urvalet, inte en verklig fördel hos strategin. Ju fler signaler som testas, desto mer förtroende bär resultatet, även om inget urval, hur stort det än är, helt eliminerar osäkerheten om framtiden. Det är också värt att testa strategin under olika marknadsperioder — uppgång, nedgång och sidledes — eftersom en regel kan fungera bra i ett regime och dåligt i ett annat, och ett backtest gjort bara över en period av stark uppgång tenderar att överskatta det förväntade resultatet.</p>
+        <div class="bq-post__cta">
+          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Läs också</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/sv/blog/sa-valjer-du-loptiden-for-en-affar/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du löptiden (expiration) för en affär</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-valjer-du-en-strategi-efter-din-profil/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du en strategi utifrån din profil</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-testar-och-justerar-du-din-strategi/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så testar och justerar du din tradingstrategi</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Upphovsrätt © 2026 Duotide.<br>
+            Alla rättigheter förbehållna.<br>
+            officiell webbplats.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Företag</h2>
+          <ul>
+            <li><a href="/sv/">Hem</a></li>
+            <li><a href="/sv/duotide-ar-den-palitlig/">Är Duotide pålitlig?</a></li>
+            <li><a href="/sv/duotide-logga-in/">Inloggningsmetoder</a></li>
+            <li><a href="/sv/duotide-maklaren/">Lär känna mäklaren</a></li>
+            <li><a href="/sv/duotide-ar-den-saker/">Mäklarens säkerhet</a></li>
+            <li><a href="/sv/duotide-app/">Appen</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kontoansvarig dygnet runt</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/sv/duotide-vanliga-fragor/">Vanliga frågor</a>
+          <a href="/sv/om-denna-webbplats/">Om denna webbplats</a>
+          <a href="/sv/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Tillbaka till början av sidan">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Stäng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">på 100 %</span></h2>
+          <p>Sätt in med koden <strong>WELCOME100</strong> och få 100 % bonus på insatt belopp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kod</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopierad!">Kopiera</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Hämta nu</a>
+          <p class="pp__mini">Kampanjvillkor gäller. Handel med hävstångsprodukter innebär risk för förlust.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

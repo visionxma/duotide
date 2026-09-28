@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>双随机指标策略：如何组合两个振荡指标 | Blog Duotide</title>
+  <meta name="description" content="了解如何使用两个不同周期的随机振荡指标来过滤信号，改善交易的入场时机。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/dual-stochastic-strategy/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-dual-stochastic/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/dual-stochastic-strategy/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/estrategia-dual-stochastic/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/dual-stochastic-strategy/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/doppel-stochastik-strategie/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/diskarteng-dual-stochastic/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/strategie-du-double-stochastique/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/strategi-dual-stochastic/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/strategia-del-doppio-stocastico/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/dual-stochastic-strategy/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/cift-stokastik-stratejisi-iki-osilator-nasil-birlestirilir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/chien-luoc-dual-stochastic-cach-ket-hop-hai-dao-dong/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/dual-stochastic-strategy/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/dual-stochastic-strategy/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="双随机指标策略：如何组合两个振荡指标">
+  <meta property="og:description" content="了解如何使用两个不同周期的随机振荡指标来过滤信号，改善交易的入场时机。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/dual-stochastic-strategy/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="双随机指标策略：如何组合两个振荡指标">
+  <meta name="twitter:description" content="了解如何使用两个不同周期的随机振荡指标来过滤信号，改善交易的入场时机。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/dual-stochastic-strategy/#artigo",
+      "headline": "双随机指标策略：如何组合两个振荡指标",
+      "description": "了解如何使用两个不同周期的随机振荡指标来过滤信号，改善交易的入场时机。",
+      "url": "https://duotide.com.br/zh/blog/dual-stochastic-strategy/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
+      "articleSection": "交易策略",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/dual-stochastic-strategy/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "双随机指标策略：如何组合两个振荡指标",
+          "item": "https://duotide.com.br/zh/blog/dual-stochastic-strategy/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/estrategia-dual-stochastic/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/dual-stochastic-strategy/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/estrategia-dual-stochastic/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/dual-stochastic-strategy/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/doppel-stochastik-strategie/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/diskarteng-dual-stochastic/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/strategie-du-double-stochastique/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/strategi-dual-stochastic/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/strategia-del-doppio-stocastico/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/dual-stochastic-strategy/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/cift-stokastik-stratejisi-iki-osilator-nasil-birlestirilir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/chien-luoc-dual-stochastic-cach-ket-hop-hai-dao-dong/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/dual-stochastic-strategy/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">双随机指标策略：如何组合两个振荡指标</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">交易策略</span>
+        <h1>双随机指标策略：如何组合两个振荡指标</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>只使用一个随机振荡指标的问题之一，是它在波动较大的市场中可能产生大量信号，其中很多在短时间内相互矛盾。双随机指标策略试图通过组合两个设置不同的振荡指标来解决这个问题：一个较慢的，用作背景过滤器；一个较快的，用来寻找确切的入场时机。</p><p>在本文中，你将了解如何搭建这种组合、其背后的逻辑，以及一个如何综合解读这两个振荡指标的实际示例。</p><h2>为什么使用两个随机指标而不是一个</h2><p>设置为短周期的随机指标对价格变动反应很快，这对精确的入场点很有用，但也会产生大量毫无结果的超买超卖信号，尤其是在强劲趋势期间。而周期较长的随机指标变动更平滑，反映的是更长周期的动量，但反应太慢，不适合单独作为入场触发条件。</p><p>双随机指标的理念是同时使用这两种速度：慢速随机指标确定背景——即顺着哪个方向交易才合理——而快速随机指标则在这个背景之内指出更精确的时机。</p><h2>设置这两个振荡指标</h2><p>一种常见的设置是使用一个周期较长的慢速随机指标（例如21周期，并附加平滑处理），用来捕捉资产的背景动量，以及一个周期较短的快速随机指标（例如5周期），用来产生入场信号。周期的确切选择可能因所交易的时间周期和资产而异，但一慢一快的逻辑保持不变。</p><p>在图表上，慢速随机指标通常显示在价格图表下方，快速随机指标紧接其下，这样就能逐根K线地在视觉上比较两者。</p><h2>如何综合解读这两者</h2><p>基本的解读方式是这样的：首先观察慢速随机指标。如果它正从超卖区（低于20）走出并向上回升，那么背景条件就有利于做多。只有在这之后，才观察快速随机指标，寻找与这个背景相符的入场信号——例如，快速随机指标的%K线和%D线出现上涨交叉，同样是从超卖区出发。</p><p>当两个振荡指标意见一致时——慢速指标显示背景有利，快速指标在此背景内给出入场信号——理论上，这笔交易比单独使用其中任何一个指标获得更多支持。如果快速指标发出买入信号，但慢速指标仍处于超买区或正在下降，这种分歧就是入场前需要更加谨慎的理由。</p><h2>一个实际的解读示例</h2><p>假设某资产报价为33.20雷亚尔，慢速随机指标从18上升到25，正走出超卖区。此时，快速随机指标在15的位置从下方向上穿越，同样处于超卖区内。这种组合暗示了一个可能的买入入场机会，止损设在近期最低点稍下方，目标由图表上下一个重要阻力位确定。</p><h2>应用该策略时的注意事项</h2><p>即使两个振荡指标意见一致，双随机指标也不应该脱离图表更大的背景孤立使用，比如更高时间周期的趋势和附近的支撑阻力水平。这个策略能减少相互矛盾的信号数量，但不能消除假信号，尤其是在高度横盘或有突发新闻的市场中。</p><h2>付诸实践</h2><p>在Duotide上，可以在同一张图表上设置两个不同周期的随机振荡指标，并在投入真实资金之前先测试这种组合。值得记录一段时间内观察到的信号结果，根据所选资产的表现调整周期。和任何基于指标的策略一样，这里存在真实的亏损风险，每笔头寸的规模都应该与这种风险相匹配。</p><p>应用同一理念的另一种方式，是对同一资产在两个不同的时间周期上使用同一个随机指标周期——例如，用4小时图确定背景，用15分钟图确定入场时机。其背后的逻辑与经典的双随机指标策略相同：较长的周期确定首选方向，较短的周期在这个方向内精确入场点，这有助于避免逆着资产当时的主导走势入场。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/double-moving-average-crossover/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">两条移动平均线的交叉：如何组合使用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

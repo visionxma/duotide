@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" data-tema="dark" data-tv="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Скользящая средняя: что это и как использовать в трейдинге | Blog Duotide</title>
+  <meta name="description" content="Узнайте, что такое скользящая средняя, разницу между простой и экспоненциальной, как определять тренд с ее помощью и предостережения о запаздывающих сигналах.">
+  <link rel="canonical" href="https://duotide.com.br/ru/blog/moving-average-what-it-is-and-how-to-use/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/media-movel-o-que-e-e-como-usar/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/moving-average-what-it-is-and-how-to-use-it/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/moving-average-apa-itu-dan-cara-menggunakan/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/media-mobile-cose-e-come-usarla-nel-trading/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/moving-average-what-it-is-and-how-to-use/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/moving-average-what-it-is-and-how-to-use-it/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Скользящая средняя: что это и как использовать в трейдинге">
+  <meta property="og:description" content="Узнайте, что такое скользящая средняя, разницу между простой и экспоненциальной, как определять тренд с ее помощью и предостережения о запаздывающих сигналах.">
+  <meta property="og:url" content="https://duotide.com.br/ru/blog/moving-average-what-it-is-and-how-to-use/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-vale-a-pena.webp">
+  <meta property="og:image:alt" content="Duotide — Блог Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-vale-a-pena.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Скользящая средняя: что это и как использовать в трейдинге">
+  <meta name="twitter:description" content="Узнайте, что такое скользящая средняя, разницу между простой и экспоненциальной, как определять тренд с ее помощью и предостережения о запаздывающих сигналах.">
+  <meta name="twitter:label1" content="Автор">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Время чтения">
+  <meta name="twitter:data2" content="5 мин.">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/ru/blog/moving-average-what-it-is-and-how-to-use/#artigo",
+      "headline": "Скользящая средняя: что это и как использовать в трейдинге",
+      "description": "Узнайте, что такое скользящая средняя, разницу между простой и экспоненциальной, как определять тренд с ее помощью и предостережения о запаздывающих сигналах.",
+      "url": "https://duotide.com.br/ru/blog/moving-average-what-it-is-and-how-to-use/",
+      "inLanguage": "ru",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-vale-a-pena.webp",
+      "articleSection": "Индикаторы",
+      "author": {
+        "@type": "Organization",
+        "name": "Команда Duotide",
+        "url": "https://duotide.com.br/ru/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/ru/blog/moving-average-what-it-is-and-how-to-use/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/ru/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://duotide.com.br/ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Блог",
+          "item": "https://duotide.com.br/ru/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Скользящая средняя: что это и как использовать в трейдинге",
+          "item": "https://duotide.com.br/ru/blog/moving-average-what-it-is-and-how-to-use/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Перейти к содержанию</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/ru/" aria-label="Duotide — главная страница">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Открыть меню навигации"
+                data-abrir="Открыть меню навигации" data-fechar="Закрыть меню навигации">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Выбрать язык"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="22" height="16"><span>ru</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/media-movel-o-que-e-e-como-usar/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/moving-average-what-it-is-and-how-to-use-it/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/moving-average-apa-itu-dan-cara-menggunakan/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/media-mobile-cose-e-come-usarla-nel-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/moving-average-what-it-is-and-how-to-use/" hreflang="ru" lang="ru" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Основная навигация">
+        <ul>
+          <li><a href="/ru/">Главная</a></li>
+          <li><a href="/ru/duotide-legit/">Можно ли доверять?</a></li>
+          <li><a href="/ru/duotide-login/">Вход</a></li>
+          <li><a href="/ru/duotide-broker/">О брокере</a></li>
+          <li><a href="/ru/duotide-safe/">Это безопасно?</a></li>
+          <li><a href="/ru/duotide-app/">Приложение</a></li>
+          <li><a href="/ru/best-brokers/">Лучшие брокеры</a></li>
+          <li><a href="/ru/blog/" aria-current="page">Блог</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru"
+           target="_blank" rel="noopener sponsored nofollow">Открыть счёт</a>
+        <a class="btn btn--outline btn--sm" href="/ru/duotide-login/">Вход</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Навигационная цепочка">
+    <div class="container">
+      <ol>
+        <li><a href="/ru/">Главная</a></li>
+        <li><a href="/ru/blog/">Блог</a></li>
+        <li><span aria-current="page">Скользящая средняя: что это и как использовать в трейдинге</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Индикаторы</span>
+        <h1>Скользящая средняя: что это и как использовать в трейдинге</h1>
+        <p class="bq-post__meta">Команда Duotide · <time datetime="2026-09-24">24.09.2026</time> · 6 мин чтения</p>
+        <figure class="foto"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Мало какие индикаторы используются так же часто и понимаются так же плохо, как скользящая средняя. Присутствующая практически на любой платформе для графиков, она помогает сгладить хаотичное поведение цены, облегчая визуализацию общего направления тренда. Но использование скользящей средней без понимания ее ограничений может приводить к запоздалым решениям именно из-за самой природы индикатора.</p><p>Эта статья объясняет, что такое скользящая средняя, основные типы, используемые трейдерами, и как интерпретировать ее, не попадая в самые распространенные ловушки.</p><h2>Что такое скользящая средняя</h2><p>Скользящая средняя — это расчет средней цены актива за определенное число периодов, обновляемый с каждым новым прошедшим периодом. Например, скользящая средняя за 20 дней показывает каждый день среднюю цен закрытия последних 20 дней, отбрасывая самый старый день по мере включения нового.</p><p>В результате линия скользящей средней движется более плавно, чем сама цена, отфильтровывая часть краткосрочного шума и облегчая визуализацию преобладающего тренда за определенный период.</p><h2>Простая скользящая средняя и экспоненциальная скользящая средняя</h2><h3>Простая скользящая средняя (SMA)</h3><p>Рассчитывает обычное арифметическое среднее цен выбранного периода, придавая одинаковый вес каждому дню внутри рассматриваемого окна. Это самый простой для понимания и расчета вручную тип.</p><h3>Экспоненциальная скользящая средняя (EMA)</h3><p>Придает больший вес более недавним ценам, заставляя линию быстрее реагировать на изменения направления цены по сравнению с простой средней. Это дает как преимущества (более быстрые сигналы), так и недостатки (большая чувствительность к краткосрочным движениям, которые могут не представлять реального изменения тренда).</p><h2>Как интерпретировать скользящую среднюю на практике</h2><p>Когда цена стабильно выше скользящей средней, это обычно интерпретируется как сигнал восходящего тренда; когда ниже — как сигнал нисходящего тренда. Другое распространенное чтение — пересечение двух средних разных периодов: когда более короткая средняя пересекает более длинную снизу вверх, многие трейдеры интерпретируют это как сигнал возможного начала роста, а обратное пересечение — как сигнал возможного начала падения.</p><p>Упрощенный числовой пример: у акции с ценами закрытия 48, 49, 51, 50 и 52 руб. за последние пять дней простая скользящая средняя за 5 дней составила бы (48+49+51+50+52) ÷ 5 = 250 ÷ 5 = 50 руб. Если текущая цена находится на 52 руб., выше этой средней, многие трейдеры читают это как сигнал относительной краткосрочной силы.</p><ul><li>Простая скользящая средняя придает равный вес всем ценам периода.</li><li>Экспоненциальная скользящая средняя реагирует быстрее на недавние изменения.</li><li>Пересечение средних используется как сигнал возможной смены тренда.</li><li>Скользящие средние — запаздывающие индикаторы, а не опережающие.</li></ul><h2>Главное ограничение: задержка индикатора</h2><p>Поскольку скользящая средняя рассчитывается на основе прошлых цен, она всегда реагирует после того, как движение уже началось, никогда раньше. Это значит, что на рынках без четкого тренда, колеблющихся из стороны в сторону, скользящая средняя может генерировать несколько ложных сигналов пересечения, каждый из которых приходит слишком поздно, чтобы захватить движение целиком.</p><h3>Сочетание с другими индикаторами</h3><p>Из-за этой естественной задержки многие трейдеры сочетают скользящую среднюю с другими индикаторами, такими как RSI или объем, вместо использования ее изолированно. Идея в том, чтобы использовать среднюю для подтверждения общего направления, а другой индикатор — для уточнения момента входа внутри этого направления.</p><h2>Как использовать скользящую среднюю сбалансированно</h2><p>Выбирайте период средней в соответствии с горизонтом вашей сделки: более короткие периоды для краткосрочных сделок, более длинные для более широкого взгляда на тренд. Избегайте принятия решения о входе только на основе пересечения средних, без учета общего рыночного контекста, и помните, что, будучи запаздывающим индикатором, скользящая средняя работает лучше, подтверждая уже идущее движение, чем предвосхищая развороты.</p><p>Тестируйте разные периоды средней на исторических данных актива, которым вы обычно торгуете, прежде чем принимать фиксированное значение, поскольку период, лучше всего работающий для высоковолатильной акции, может не подходить для более стабильной валютной пары. Ни одна настройка скользящей средней не устраняет риск ложных сигналов, и индикатор следует рассматривать как часть более широкого анализа, а не как изолированное правило решения.</p>
+        <div class="bq-post__cta">
+          <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными R$ 10 000.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть бесплатный счёт</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Читайте также</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Авторские права © 2026 Duotide.<br>
+            Все права защищены.<br>
+            Официальный сайт Duotide.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Компания</h2>
+          <ul>
+            <li><a href="/ru/">Главная</a></li>
+            <li><a href="/ru/duotide-legit/">Можно ли доверять Duotide?</a></li>
+            <li><a href="/ru/duotide-login/">Способы входа</a></li>
+            <li><a href="/ru/duotide-broker/">О брокере</a></li>
+            <li><a href="/ru/duotide-safe/">Безопасность брокера</a></li>
+            <li><a href="/ru/duotide-app/">Приложение</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Контакты</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Персональный менеджер 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/ru/duotide-faq/">Частые вопросы</a>
+          <a href="/ru/about/">Об этом сайте</a>
+          <a href="/ru/contact/">Контакты</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Вернуться в начало страницы">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Закрыть">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Бонус</span> <span class="pp__l2">100%</span></h2>
+          <p>Пополните счёт с промокодом <strong>WELCOME100</strong> и получите бонус 100% от суммы депозита.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Промокод</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Скопировано!">Копировать</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Получить</a>
+          <p class="pp__mini">Действуют условия акции. Торговля продуктами с кредитным плечом связана с риском убытков.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

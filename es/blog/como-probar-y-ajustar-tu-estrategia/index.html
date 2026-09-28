@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-tema="dark" data-tv="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Cómo probar y ajustar tu estrategia de trading | Blog Duotide</title>
+  <meta name="description" content="Aprende a hacer un backtest simple, ajustar el riesgo por operación y saber, con criterio, cuándo es hora de cambiar de estrategia.">
+  <link rel="canonical" href="https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-testar-e-ajustar-sua-estrategia/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/how-to-test-and-adjust-your-trading-strategy/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-to-test-and-adjust-your-trading-strategy/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/wie-man-seine-trading-strategie-testet-und-anpasst/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/paano-subukan-at-ayusin-ang-diskarte-sa-trading/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/comment-tester-et-ajuster-votre-strategie/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/how-to-test-and-adjust-your-strategy/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/cara-menguji-dan-menyesuaikan-strategi-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/come-testare-e-adattare-la-tua-strategia/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-test-and-adjust-your-strategy/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/sa-testar-och-justerar-du-din-strategi/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/trading-stratejisi-nasil-test-edilir-ve-ayarlanir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/cach-kiem-thu-va-dieu-chinh-chien-luoc-giao-dich/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/how-to-test-and-adjust-your-strategy/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/how-to-test-and-adjust-your-trading-strategy/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo probar y ajustar tu estrategia de trading">
+  <meta property="og:description" content="Aprende a hacer un backtest simple, ajustar el riesgo por operación y saber, con criterio, cuándo es hora de cambiar de estrategia.">
+  <meta property="og:url" content="https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo probar y ajustar tu estrategia de trading">
+  <meta name="twitter:description" content="Aprende a hacer un backtest simple, ajustar el riesgo por operación y saber, con criterio, cuándo es hora de cambiar de estrategia.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tiempo de lectura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/#artigo",
+      "headline": "Cómo probar y ajustar tu estrategia de trading",
+      "description": "Aprende a hacer un backtest simple, ajustar el riesgo por operación y saber, con criterio, cuándo es hora de cambiar de estrategia.",
+      "url": "https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/",
+      "inLanguage": "es",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
+      "articleSection": "Estrategias",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo Duotide",
+        "url": "https://duotide.com.br/es/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/es/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://duotide.com.br/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cómo probar y ajustar tu estrategia de trading",
+          "item": "https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/es/" aria-label="Duotide — página de inicio">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir el menú de navegación"
+                data-abrir="Abrir el menú de navegación" data-fechar="Cerrar el menú de navegación">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Elegir idioma"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="22" height="16"><span>es</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/como-testar-e-ajustar-sua-estrategia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/how-to-test-and-adjust-your-trading-strategy/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/como-probar-y-ajustar-tu-estrategia/" hreflang="es" lang="es" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-to-test-and-adjust-your-trading-strategy/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/wie-man-seine-trading-strategie-testet-und-anpasst/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/paano-subukan-at-ayusin-ang-diskarte-sa-trading/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/comment-tester-et-ajuster-votre-strategie/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/how-to-test-and-adjust-your-strategy/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/cara-menguji-dan-menyesuaikan-strategi-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/come-testare-e-adattare-la-tua-strategia/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-test-and-adjust-your-strategy/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/sa-testar-och-justerar-du-din-strategi/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/trading-stratejisi-nasil-test-edilir-ve-ayarlanir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/cach-kiem-thu-va-dieu-chinh-chien-luoc-giao-dich/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/how-to-test-and-adjust-your-strategy/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/duotide-es-confiable/">¿Es confiable?</a></li>
+          <li><a href="/es/duotide-login/">Iniciar sesión</a></li>
+          <li><a href="/es/duotide-broker/">El bróker</a></li>
+          <li><a href="/es/duotide-es-seguro/">¿Es seguro?</a></li>
+          <li><a href="/es/duotide-app/">Aplicación</a></li>
+          <li><a href="/es/mejores-brokers/">Mejores brókers</a></li>
+          <li><a href="/es/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es"
+           target="_blank" rel="noopener sponsored nofollow">Crear cuenta</a>
+        <a class="btn btn--outline btn--sm" href="/es/duotide-login/">Iniciar sesión</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Cómo probar y ajustar tu estrategia de trading</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Estrategias</span>
+        <h1>Cómo probar y ajustar tu estrategia de trading</h1>
+        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 6 min de lectura</p>
+        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Después de definir el perfil de trader que combina contigo — tiempo disponible, tolerancia al riesgo, capital y personalidad —, el paso siguiente es poner a prueba la estrategia elegida antes de operar montos relevantes. Es en esta etapa donde mucha gente salta directo al dinero real, movida por la ansiedad de empezar, y termina pagando para aprender lecciones que una prueba simple ya habría mostrado sin costo.</p><p>Esta es la segunda parte de la guía sobre cómo elegir una estrategia de trading. Aquí el foco es práctico: cómo probar una estrategia en el historial, cómo ajustar el riesgo con base en esa prueba, y cómo saber, con criterio, cuándo es hora de cambiar de estrategia.</p><h2>Un backtest simple, sin necesidad de programación</h2><p>Backtest es solo aplicar las reglas de la estrategia a datos que ya ocurrieron, para ver cómo se habría comportado. No se necesita software caro para empezar: un gráfico histórico y una hoja de cálculo ya resuelven. Elige el activo, define las reglas exactas de entrada y salida (por ejemplo, comprar cuando el precio cruza la media móvil de 20 períodos hacia arriba, y salir con un objetivo del 2% o un stop del 1%), y recorre manualmente los últimos seis a doce meses de gráfico, anotando cada señal que la regla habría generado.</p><p>Registra, para cada señal, si el resultado habría sido positivo o negativo y de cuánto. Con 30 a 40 señales anotadas, ya se pueden calcular dos métricas simples: la tasa de acierto (cuántas operaciones habrían sido positivas, dividido entre el total) y el resultado medio por operación. Una estrategia con una tasa de acierto del 40%, por ejemplo, todavía puede ser rentable si las ganancias son, en promedio, mayores que las pérdidas.</p><h2>Cómo ajustar el riesgo después de la prueba</h2><p>El backtest también sirve para calibrar el tamaño de las posiciones. Supongamos un capital de R$ 2.000 y una regla de arriesgar 1% por operación, lo que equivale a R$ 20. Si la prueba mostró una racha de hasta cinco pérdidas seguidas en el período analizado, vale la pena simular ese escenario: cinco pérdidas de R$ 20 suman R$ 100, cerca del 5% del capital. Si ese valor parece manejable, el riesgo del 1% por operación está dentro de lo razonable para ese perfil; si parece demasiado pesado, es hora de reducir el riesgo por operación antes de operar con dinero real.</p><p>Ese ajuste no se hace una única vez. Conforme el capital cambia, o conforme la volatilidad del activo aumenta o disminuye, el valor de riesgo por operación debe recalcularse, siempre como un porcentaje fijo del capital actual, nunca como un valor fijo en reales que queda desactualizado con el tiempo.</p><h2>Cuándo cambiar de estrategia, con criterio</h2><p>Cambiar de estrategia cada vez que una operación sale mal es uno de los errores más comunes entre principiantes, y suele empeorar el resultado, porque la persona nunca llega a acumular señales suficientes para evaluar nada con seriedad. El criterio para cambiar de estrategia debería ser estadístico, no emocional: si después de 30 o 40 operaciones siguiendo la regla al pie de la letra el resultado acumulado sigue siendo negativo, y no hubo ningún cambio relevante en las condiciones del mercado, entonces sí tiene sentido revisar o sustituir la estrategia.</p><p>También vale la pena cambiar cuando las condiciones del mercado cambian de forma estructural: una estrategia diseñada para mercados en tendencia, por ejemplo, tiende a producir resultados malos en períodos largos de lateralización, e insistir en ella en ese escenario es diferente de que la estrategia esté simplemente equivocada.</p><h2>Documentar para aprender del propio historial</h2><p>Mantener un registro de cada operación — activo, fecha, motivo de la entrada, resultado y una nota sobre qué se siguió o no al pie de la letra — es lo que transforma meses de operación en aprendizaje real. Sin ese registro, cada error se repite porque nadie tiene cómo identificar el patrón. Con el registro, se pueden responder preguntas concretas, como si las pérdidas se concentran en determinado horario, en determinado tipo de activo, o justo después de una ganancia grande, cuando la confianza tiende a subir más de lo que debería.</p><p>Probar, ajustar y documentar no son etapas que se hacen una vez y se olvidan: son un ciclo continuo. Cada bloque de operaciones — ya sea en acciones, monedas o índices, incluso en plataformas como Duotide — genera datos nuevos para revisar el riesgo y confirmar, o no, que la estrategia elegida en la primera parte de esta guía sigue teniendo sentido para tu perfil.</p>
+        <div class="bq-post__cta">
+          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Lee también</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/es/blog/cruce-de-medias-moviles-exponenciales-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cruce de medias móviles exponenciales (EMA) en el trading</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/como-elegir-el-plazo-de-una-operacion/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo elegir el plazo (expiración) de una operación</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/estrategia-dual-stochastic/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia del doble estocástico: cómo combinar dos osciladores</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Derechos de autor © 2026 Duotide.<br>
+            Todos los derechos reservados.<br>
+            Sitio oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/es/">Inicio</a></li>
+            <li><a href="/es/duotide-es-confiable/">¿Duotide es Confiable?</a></li>
+            <li><a href="/es/duotide-login/">Métodos de Login</a></li>
+            <li><a href="/es/duotide-broker/">Conoce el Bróker</a></li>
+            <li><a href="/es/duotide-es-seguro/">Seguridad del Bróker</a></li>
+            <li><a href="/es/duotide-app/">Aplicación</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contacto</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestor de cuenta 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/es/duotide-preguntas-frecuentes/">Preguntas frecuentes</a>
+          <a href="/es/sobre/">Sobre este sitio</a>
+          <a href="/es/contacto/">Contacto</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Volver al inicio de la página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Cerrar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bono</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con el cupón <strong>WELCOME100</strong> y recibe un 100% de bono sobre el monto depositado.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Cupón</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="¡Copiado!">Copiar</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Reclamar ahora</a>
+          <p class="pp__mini">Sujeto a las condiciones de la promoción. Operar productos apalancados implica riesgo de pérdida.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

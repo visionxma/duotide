@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr" data-tema="dark" data-tv="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>ATR দিয়ে স্টপ লস ক্যালকুলেটর: দূরত্ব নির্ধারণ | Blog Duotide</title>
+  <meta name="description" content="ATR-ভিত্তিক স্টপের সূত্র শিখুন, পজিশনের আকারসহ একটি সমাধানকৃত উদাহরণ দেখুন এবং জানুন কেন গুণক স্থির নয়।">
+  <link rel="canonical" href="https://duotide.com.br/bn/blog/atr-stop-loss-calculator/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-stop-loss-com-atr/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/atr-stop-loss-calculator/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/calculadora-de-stop-loss-con-atr/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/atr-stop-loss-calculator/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/atr-stop-loss-calculator/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/stop-loss-rechner-mit-atr-wie-man-den-abstand-festlegt/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/calculator-ng-stop-loss-gamit-ang-atr/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/calculateur-de-stop-loss-avec-atr/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/atr-stop-loss-calculator/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/kalkulator-stop-loss-dengan-atr/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/calcolatrice-stop-loss-con-atr/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/atr-stop-loss-calculator/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/stop-loss-kalkylator-med-atr/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/atr-stop-loss-calculator/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/atr-ile-stop-loss-hesaplama/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/may-tinh-diem-cat-lo-bang-atr-cach-xac-dinh-khoang-cach/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/atr-stop-loss-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/atr-stop-loss-calculator/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ATR দিয়ে স্টপ লস ক্যালকুলেটর: দূরত্ব নির্ধারণ">
+  <meta property="og:description" content="ATR-ভিত্তিক স্টপের সূত্র শিখুন, পজিশনের আকারসহ একটি সমাধানকৃত উদাহরণ দেখুন এবং জানুন কেন গুণক স্থির নয়।">
+  <meta property="og:url" content="https://duotide.com.br/bn/blog/atr-stop-loss-calculator/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide ব্লগ">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ATR দিয়ে স্টপ লস ক্যালকুলেটর: দূরত্ব নির্ধারণ">
+  <meta name="twitter:description" content="ATR-ভিত্তিক স্টপের সূত্র শিখুন, পজিশনের আকারসহ একটি সমাধানকৃত উদাহরণ দেখুন এবং জানুন কেন গুণক স্থির নয়।">
+  <meta name="twitter:label1" content="লিখেছেন">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="পড়ার সময়">
+  <meta name="twitter:data2" content="5 মিনিট">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/bn/blog/atr-stop-loss-calculator/#artigo",
+      "headline": "ATR দিয়ে স্টপ লস ক্যালকুলেটর: দূরত্ব নির্ধারণ",
+      "description": "ATR-ভিত্তিক স্টপের সূত্র শিখুন, পজিশনের আকারসহ একটি সমাধানকৃত উদাহরণ দেখুন এবং জানুন কেন গুণক স্থির নয়।",
+      "url": "https://duotide.com.br/bn/blog/atr-stop-loss-calculator/",
+      "inLanguage": "bn",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
+      "articleSection": "ঝুঁকি ব্যবস্থাপনা",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide টিম",
+        "url": "https://duotide.com.br/bn/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/bn/blog/atr-stop-loss-calculator/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/bn/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "হোম",
+          "item": "https://duotide.com.br/bn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ব্লগ",
+          "item": "https://duotide.com.br/bn/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ATR দিয়ে স্টপ লস ক্যালকুলেটর: দূরত্ব নির্ধারণ",
+          "item": "https://duotide.com.br/bn/blog/atr-stop-loss-calculator/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">মূল বিষয়বস্তুতে যান</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/bn/" aria-label="Duotide — হোম পেজ">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="নেভিগেশন মেনু খুলুন"
+                data-abrir="নেভিগেশন মেনু খুলুন" data-fechar="নেভিগেশন মেনু বন্ধ করুন">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="ভাষা নির্বাচন করুন"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="22" height="16"><span>bn</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-stop-loss-com-atr/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/atr-stop-loss-calculator/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/calculadora-de-stop-loss-con-atr/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/atr-stop-loss-calculator/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/atr-stop-loss-calculator/" hreflang="bn" lang="bn" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/stop-loss-rechner-mit-atr-wie-man-den-abstand-festlegt/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/calculator-ng-stop-loss-gamit-ang-atr/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/calculateur-de-stop-loss-avec-atr/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/atr-stop-loss-calculator/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/kalkulator-stop-loss-dengan-atr/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/calcolatrice-stop-loss-con-atr/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/atr-stop-loss-calculator/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/stop-loss-kalkylator-med-atr/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/atr-stop-loss-calculator/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/atr-ile-stop-loss-hesaplama/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/may-tinh-diem-cat-lo-bang-atr-cach-xac-dinh-khoang-cach/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/atr-stop-loss-calculator/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="প্রধান নেভিগেশন">
+        <ul>
+          <li><a href="/bn/">হোম</a></li>
+          <li><a href="/bn/duotide-is-it-trustworthy/">বিশ্বাসযোগ্য কি?</a></li>
+          <li><a href="/bn/duotide-login/">লগইন</a></li>
+          <li><a href="/bn/duotide-broker/">ব্রোকার পরিচিতি</a></li>
+          <li><a href="/bn/duotide-is-it-safe/">নিরাপদ কি?</a></li>
+          <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          <li><a href="/bn/best-brokers/">সেরা ব্রোকার</a></li>
+          <li><a href="/bn/blog/" aria-current="page">ব্লগ</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn"
+           target="_blank" rel="noopener sponsored nofollow">অ্যাকাউন্ট খুলুন</a>
+        <a class="btn btn--outline btn--sm" href="/bn/duotide-login/">লগইন</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="নেভিগেশন পথ">
+    <div class="container">
+      <ol>
+        <li><a href="/bn/">হোম</a></li>
+        <li><a href="/bn/blog/">ব্লগ</a></li>
+        <li><span aria-current="page">ATR দিয়ে স্টপ লস ক্যালকুলেটর: দূরত্ব নির্ধারণ</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">ঝুঁকি ব্যবস্থাপনা</span>
+        <h1>ATR দিয়ে স্টপ লস ক্যালকুলেটর: দূরত্ব নির্ধারণ</h1>
+        <p class="bq-post__meta">Duotide টিম · <time datetime="2026-09-24">২৪/০৯/২০২৬</time> · 4 মিনিটে পড়ুন</p>
+        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>যারা সবেমাত্র ট্রেড শুরু করছেন তাদের সবচেয়ে সাধারণ প্রশ্নগুলোর একটি হলো কত দূরত্বে স্টপ লস বসাতে হবে। খুব কাছে বসালে সম্পদের স্বাভাবিক ওঠানামায় স্টপ হয়ে যাওয়ার সম্ভাবনা বেড়ে যায়। খুব দূরে বসালে ট্রেড ভুল হলে ক্ষতি বেড়ে যায়। এই প্রশ্নের একটি কার্যকর উত্তর হলো ATR, অর্থাৎ অ্যাভারেজ ট্রু রেঞ্জ ব্যবহার করা, স্টপের দূরত্ব হিসাব করার জন্য সাম্প্রতিক ভোলাটিলিটির রেফারেন্স হিসেবে।</p><h2>ATR কী পরিমাপ করে</h2><p>ATR একটি নির্দিষ্ট সংখ্যক পিরিয়ডে, সাধারণত 14টিতে, দামের গড় মুভমেন্টের আকার পরিমাপ করে। এটি দিক নির্দেশ করে না, শুধু সম্পদটি সাধারণত কতটা নড়াচড়া করে তা দেখায়। প্রতিটি ক্যান্ডেলের জন্য, ট্রু রেঞ্জ হিসাব করা হয়, যা এই তিনটি বিকল্পের মধ্যে সবচেয়ে বড় মান: বর্তমান ক্যান্ডেলের সর্বোচ্চ ও সর্বনিম্নের পার্থক্য, বর্তমান সর্বোচ্চ এবং আগের ক্লোজের পার্থক্য, এবং বর্তমান সর্বনিম্ন এবং আগের ক্লোজের পার্থক্য। ATR হলো বেছে নেওয়া পিরিয়ড জুড়ে এই মানগুলোর গড়।</p><h2>ATR-ভিত্তিক স্টপের সূত্র</h2><p><strong>স্টপের দূরত্ব = ATR x গুণক</strong></p><p>কেনা পজিশনের জন্য: <strong>স্টপ = এন্ট্রি প্রাইস - স্টপের দূরত্ব</strong></p><p>বিক্রি পজিশনের জন্য: <strong>স্টপ = এন্ট্রি প্রাইস + স্টপের দূরত্ব</strong></p><h2>রিয়েলে সমাধানকৃত একটি উদাহরণ</h2><p>ধরুন R$ 50.00-তে লেনদেন হওয়া একটি শেয়ারে একটি কেনা পজিশন, দৈনিক ATR R$ 1.20 এবং গুণক 2। স্টপের দূরত্ব হবে:</p><ul><li>দূরত্ব = R$ 1.20 x 2 = R$ 2.40</li><li>স্টপ = R$ 50.00 - R$ 2.40 = R$ 47.60</li></ul><p>এখন ধরুন R$ 20,000.00-এর একটি অ্যাকাউন্ট, প্রতি ট্রেডে সর্বোচ্চ 1% ঝুঁকি, অর্থাৎ R$ 200.00। পজিশনের আকার হিসাব করা হয় রিয়েলে ঝুঁকিকে স্টপের দূরত্ব দিয়ে ভাগ করে:</p><ul><li>পজিশনের আকার = R$ 200.00 / R$ 2.40 = প্রায় 83টি শেয়ার</li></ul><p>এই পজিশনে, যদি দাম R$ 47.60 পর্যন্ত নেমে যায়, তাহলে ব্রোকারেজ খরচের আগে ক্ষতি পরিকল্পিত R$ 200.00-এর কাছাকাছি থাকবে। 2R-এর একটি রেফারেন্স টার্গেট, অর্থাৎ নেওয়া ঝুঁকির দ্বিগুণ, প্রায় R$ 54.80-এর কাছাকাছি হবে, তবে এটি শুধু একটি গাণিতিক রেফারেন্স, দাম সেখানে পৌঁছাবে তার নিশ্চয়তা নয়।</p><h2>ATR চার্টের কাঠামোর বিকল্প নয়</h2><p>ATR এই প্রশ্নের উত্তর দেয় যে এই সম্পদটি সাধারণত কতটা নড়াচড়া করে। এটি এই প্রশ্নের উত্তর দেয় না যে আমার এন্ট্রির ধারণা কোথায় ভুল প্রমাণিত হয়। এই দ্বিতীয় প্রশ্নটি আসে চার্ট বিশ্লেষণ থেকে, যেমন আগের একটি নিম্ন বিন্দু বা একটি সাপোর্ট জোন। প্রস্তাবিত ধারা হলো: প্রথমে ট্রেডকে অবৈধ করে দেয় এমন লেভেল চিহ্নিত করুন, তারপর এন্ট্রি এবং সেই লেভেলের মধ্যে দূরত্ব মাপুন, এবং তারপরই সাম্প্রতিক ভোলাটিলিটির সাপেক্ষে এটি যুক্তিসঙ্গত কিনা দেখতে সেই দূরত্বকে ATR-এর সঙ্গে তুলনা করুন। যদি কাঠামোগত দূরত্ব ATR-এর পরামর্শের চেয়ে অনেক ছোট হয়, তাহলে স্টপটি সম্পদের স্বাভাবিক নয়েজের জন্য খুব বেশি টাইট হতে পারে।</p><h2>নিখুঁত গুণক বলে কিছু নেই</h2><p>একটি কম গুণক একই রিয়েল ঝুঁকির জন্য কাছাকাছি স্টপ এবং বড় পজিশন তৈরি করে, কিন্তু সাধারণ ওঠানামার প্রতি বেশি উন্মুক্ত থাকে। একটি বেশি গুণক দূরের স্টপ এবং ছোট পজিশন তৈরি করে, নয়েজের কারণে বেরিয়ে যাওয়া কমায়, কিন্তু ঝুঁকির গুণিতকে একই ফলাফল পেতে দামকে আরও বেশি দূরত্ব অতিক্রম করতে হয়। আদর্শ গুণক নির্ভর করে সম্পদ, ব্যবহৃত টাইমফ্রেম এবং সেটআপের ধরনের ওপর, এবং সব ট্রেডের জন্য একটি স্থির সংখ্যা গ্রহণ করার আগে ইতিহাসে বিভিন্ন মান পরীক্ষা করা ভালো।</p><h2>গ্যাপ এবং এক্সিকিউশন নিয়ে সতর্কতা</h2><p>এই হিসাবটি ধরে নেয় যে পজিশনটি ঠিক স্টপ প্রাইসেই বন্ধ হবে। বাস্তবে, গ্যাপ, সংবাদ এবং কম তারল্যের বাজার এক্সিকিউশনকে পরিকল্পিত দাম থেকে অনেক দূরে ঘটাতে পারে, বিশেষ করে রাতে বা সপ্তাহান্তে বন্ধ থাকা সম্পদগুলোতে। ATR স্বাভাবিক পরিস্থিতিতে প্রত্যাশিত ঝুঁকির আকার নির্ধারণে সাহায্য করে, কিন্তু বাজারে চাপের মুহূর্তে পরিকল্পনার চেয়ে খারাপ এক্সিকিউশনের ঝুঁকি দূর করে না।</p><h2>ট্রেড করার আগে একটি শেষ মনে করিয়ে দেওয়া</h2><p>ফলে আসা পজিশনের আকার দেখার আগে গুণকটি নির্ধারণ করুন, উল্টোটা নয়। শুধু আরামদায়ক মনে হওয়া একটি পজিশনের আকারে পৌঁছানোর জন্য গুণক বেছে নেওয়া ঝুঁকি ব্যবস্থাপনার যুক্তিকে উল্টে দেয়: স্টপেরই পজিশনের আকার নির্ধারণ করা উচিত, চাওয়া আকারের স্টপ নির্ধারণ করা উচিত নয়।</p>
+        <div class="bq-post__cta">
+          <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>আরও পড়ুন</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/bn/blog/5-risk-management-tips-for-traders/"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5টি ঝুঁকি ব্যবস্থাপনা টিপস যা পুরো মূলধন হারানো রোধ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/how-to-trade-binary-options/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">কীভাবে বাইনারি অপশন ট্রেড করবেন, ধাপে ধাপে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/how-cfds-work-inside/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">কীভাবে CFD ভেতর থেকে কাজ করে: লিভারেজ ও মার্জিন</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">কপিরাইট © 2026 Duotide।<br>
+            সর্বস্বত্ব সংরক্ষিত।<br>
+            الموقع الرسمي.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>প্রতিষ্ঠান</h2>
+          <ul>
+            <li><a href="/bn/">হোম</a></li>
+            <li><a href="/bn/duotide-is-it-trustworthy/">Duotide কি বিশ্বাসযোগ্য?</a></li>
+            <li><a href="/bn/duotide-login/">লগইন পদ্ধতি</a></li>
+            <li><a href="/bn/duotide-broker/">ব্রোকার সম্পর্কে জানুন</a></li>
+            <li><a href="/bn/duotide-is-it-safe/">ব্রোকারের নিরাপত্তা</a></li>
+            <li><a href="/bn/duotide-app/">অ্যাপ</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>যোগাযোগ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>২৪/৭ অ্যাকাউন্ট ম্যানেজার</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/bn/duotide-faq/">সাধারণ প্রশ্নোত্তর</a>
+          <a href="/bn/about-this-site/">এই সাইট সম্পর্কে</a>
+          <a href="/bn/contact/">যোগাযোগ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="পেজের উপরে ফিরে যান">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="বন্ধ করুন">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">বোনাস</span> <span class="pp__l2">100%</span></h2>
+          <p><strong>WELCOME100</strong> কুপন দিয়ে ডিপোজিট করুন এবং জমা করা অর্থের উপর 100% বোনাস পান।</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">কুপন</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="কপি হয়েছে!">কপি</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">এখনই নিন</a>
+          <p class="pp__mini">অফারের শর্তাবলী প্রযোজ্য। লিভারেজড পণ্যে ট্রেডিংয়ে ক্ষতির ঝুঁকি আছে।</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

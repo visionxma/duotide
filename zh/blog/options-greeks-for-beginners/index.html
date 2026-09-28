@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>期权希腊字母入门：delta、gamma、theta和vega | Blog Duotide</title>
+  <meta name="description" content="简单理解期权主要希腊字母各自衡量什么，并附一个delta如何影响合约价格的数字示例。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/options-greeks-for-beginners/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/grecques-des-options-pour-debutants/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/greeks-opsi-untuk-pemula/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/greche-delle-opzioni-per-principianti/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/yeni-baslayanlar-icin-opsiyon-greekleri/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/options-greeks-for-beginners/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/options-greeks-for-beginners/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="期权希腊字母入门：delta、gamma、theta和vega">
+  <meta property="og:description" content="简单理解期权主要希腊字母各自衡量什么，并附一个delta如何影响合约价格的数字示例。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/options-greeks-for-beginners/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="期权希腊字母入门：delta、gamma、theta和vega">
+  <meta name="twitter:description" content="简单理解期权主要希腊字母各自衡量什么，并附一个delta如何影响合约价格的数字示例。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/options-greeks-for-beginners/#artigo",
+      "headline": "期权希腊字母入门：delta、gamma、theta和vega",
+      "description": "简单理解期权主要希腊字母各自衡量什么，并附一个delta如何影响合约价格的数字示例。",
+      "url": "https://duotide.com.br/zh/blog/options-greeks-for-beginners/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
+      "articleSection": "期权",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/options-greeks-for-beginners/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "期权希腊字母入门：delta、gamma、theta和vega",
+          "item": "https://duotide.com.br/zh/blog/options-greeks-for-beginners/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/gregas-das-opcoes-para-iniciantes/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/options-greeks-for-beginners/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/options-greeks-for-beginners/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/grecques-des-options-pour-debutants/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/greeks-opsi-untuk-pemula/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/greche-delle-opzioni-per-principianti/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/options-greeks-for-beginners/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/yeni-baslayanlar-icin-opsiyon-greekleri/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/options-greeks-for-beginners/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">期权希腊字母入门：delta、gamma、theta和vega</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">期权</span>
+        <h1>期权希腊字母入门：delta、gamma、theta和vega</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        
+<p>开始学习期权的人，很快就会遇到四个看起来像天书一样的词：delta（德尔塔）、gamma（伽马）、theta（西塔）和vega（维加）。实际上，这些都是衡量期权价格如何对不同因素做出反应的指标，例如标的资产的走势、时间的流逝以及波动率的变化。理解每一个指标衡量的是什么，有助于在入场之前就评估一笔期权交易，而不是事后才发现为什么合约价格出现了意外的波动。</p>
+<h2>Delta：期权跟随资产变动的幅度</h2>
+<p>delta衡量期权价格对标的资产价格变动的敏感程度。例如，一份delta为0.60的看涨期权，在其他因素保持不变的情况下，标的资产每上涨1.00雷亚尔，该期权往往会上涨约0.60雷亚尔。看涨期权的delta为正值，介于0和1之间。看跌期权的delta为负值，介于-1和0之间。期权越处于价内，delta就越接近1或-1；越处于价外，delta就越接近零。</p>
+<h2>Gamma：delta变化的速度</h2>
+<p>如果说delta显示的是方向，那么gamma显示的就是当资产价格变动时，这个方向能变化得多快。高gamma意味着期权的delta可能会随着标的资产的小幅变动而大幅变化，这种情况通常出现在接近行权价、临近到期的期权上。这一点很重要，因为一个高gamma的头寸，其风险特征可能会迅速改变，需要比低gamma头寸更多的关注。</p>
+<h2>Theta：持有期权随时间产生的成本</h2>
+<p>theta衡量的是，在其他因素不变的情况下，期权仅仅因为时间流逝，每天往往会损失多少价值。这种效应被称为时间衰减。对于买入期权的人来说，theta对头寸不利：每过一天，只要资产没有出现足够的变动，合约的价值就会减少。对于卖出期权的人来说，theta则对其有利，这也解释了为什么卖出期权的策略常常被描述为对时间的押注，而不仅仅是对价格方向的押注。</p>
+<h2>Vega：对波动率变化的敏感度</h2>
+<p>vega衡量的是，当市场隐含波动率上升或下降时，期权价格会发生多大变化，而这不需要标的资产的价格发生任何变动。在不确定时期，比如公司财报公布或利率决议之前，隐含波动率往往会上升，这可能使期权变得更贵，即便资产价格没有立即出现变动。事件发生之后，波动率通常会急剧下降，这种效应被称为波动率坍塌，即使资产按预期方向变动，也可能因此降低期权的价值。</p>
+<h2>一个把delta和gamma结合起来的数字示例</h2>
+<p>假设一份看涨期权交易价格为2.00雷亚尔，delta为0.40，gamma为0.05，标的资产报价为50.00雷亚尔。如果资产上涨1.00雷亚尔，达到51.00雷亚尔，仅凭delta估算，期权的新价格约为2.40雷亚尔。但0.05的gamma表明，delta本身也会上升，在这次变动之后从0.40升至约0.45。这意味着，如果资产之后再上涨1.00雷亚尔，期权的反应会比第一次上涨时略强一些。这种累积效应，正是为什么高gamma的头寸可能看起来平静，却会突然开始以远超预期的力度波动的原因。</p>
+<h2>Rho：很少有新手注意到的希腊字母</h2>
+<p>还有第五个希腊字母，叫做rho，衡量的是期权价格对利率变化的敏感度。在大多数短期交易中，与其他因素相比，rho的影响很小，但在期限较长的期权，或利率快速变化的时期，它的重要性会上升。即使日常关注点通常集中在delta、gamma、theta和vega上，值得知道它的存在。</p>
+<h2>希腊字母是如何协同作用的</h2>
+<p>没有一个希腊字母是孤立起作用的。一份期权可能拥有有利于资产上涨的delta，但如果theta侵蚀收益的速度比价格上涨更快，或者波动率在入场后不久就下降，它仍然可能贬值。在构建一笔期权交易之前，不仅要问资产会涨还是会跌，还要问这需要多长时间，以及在这段时间内隐含波动率会如何变化。</p>
+<h2>这对新手为什么重要</h2>
+<p>忽视希腊字母并不会让交易变得更简单，只是掩盖了本来就一直存在的风险。理解theta的期权买方知道，自己需要一个相对较快的走势来弥补时间的损耗。理解gamma的期权卖方知道，自己的头寸在临近到期时可能会变得风险大得多。期权交易涉及风险，包括合约投入价值全部损失的可能性，而理解希腊字母是在入场前评估这种风险的实用一步，而不是对结果的保证。</p>
+
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/how-binary-options-work/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">二元期权实际上是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/5-tips-trade-time-capital-efficiency/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">提高交易时间和资金效率的5个技巧</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/5-options-strategies-for-beginners/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5种适合期权新手的策略</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

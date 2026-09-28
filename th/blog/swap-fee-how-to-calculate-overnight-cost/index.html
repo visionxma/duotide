@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr" data-tema="dark" data-tv="th_TH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>ค่าธรรมเนียมสวอป: วิธีคำนวณต้นทุนการถือสถานะข้ามคืน | Blog Duotide</title>
+  <meta name="description" content="ทำความเข้าใจค่าธรรมเนียมสวอปข้ามคืนในฟอเร็กซ์และ CFD พร้อมสูตรคำนวณ ตัวอย่างโรลโอเวอร์สามเท่า และการคำนวณฉบับเต็มเป็นเรอัล">
+  <link rel="canonical" href="https://duotide.com.br/th/blog/swap-fee-how-to-calculate-overnight-cost/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-swap-taxa-overnight/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/swap-rate-how-to-calculate-overnight-cost/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/calculadora-de-swap-tasa-overnight/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/swap-calculator-overnight-fees/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/swap-fee-calculator-overnight-cost/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/swap-fee-paano-kalkulahin-ang-gastos-ng-bukas-na-posisyon/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/taxe-de-swap-comment-calculer-le-cout/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/swap-calculator-overnight-fee/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/kalkulator-swap-biaya-overnight/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/tasso-di-swap-come-calcolare-il-costo-overnight/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/swap-fee-calculator-overnight-cost/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/swapavgift-sa-beraknar-du-overnightkostnaden/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/swap-fee-how-to-calculate-overnight-cost/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/swap-orani-overnight-maliyeti-hesaplama/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/phi-swap-cach-tinh-chi-phi-giu-vi-the-mo-qua-dem/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/swap-overnight-fee-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/swap-rate-how-to-calculate-overnight-cost/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ค่าธรรมเนียมสวอป: วิธีคำนวณต้นทุนการถือสถานะข้ามคืน">
+  <meta property="og:description" content="ทำความเข้าใจค่าธรรมเนียมสวอปข้ามคืนในฟอเร็กซ์และ CFD พร้อมสูตรคำนวณ ตัวอย่างโรลโอเวอร์สามเท่า และการคำนวณฉบับเต็มเป็นเรอัล">
+  <meta property="og:url" content="https://duotide.com.br/th/blog/swap-fee-how-to-calculate-overnight-cost/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:image:alt" content="Duotide — บล็อก Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ค่าธรรมเนียมสวอป: วิธีคำนวณต้นทุนการถือสถานะข้ามคืน">
+  <meta name="twitter:description" content="ทำความเข้าใจค่าธรรมเนียมสวอปข้ามคืนในฟอเร็กซ์และ CFD พร้อมสูตรคำนวณ ตัวอย่างโรลโอเวอร์สามเท่า และการคำนวณฉบับเต็มเป็นเรอัล">
+  <meta name="twitter:label1" content="เขียนโดย">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="เวลาในการอ่าน">
+  <meta name="twitter:data2" content="5 นาที">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/th/blog/swap-fee-how-to-calculate-overnight-cost/#artigo",
+      "headline": "ค่าธรรมเนียมสวอป: วิธีคำนวณต้นทุนการถือสถานะข้ามคืน",
+      "description": "ทำความเข้าใจค่าธรรมเนียมสวอปข้ามคืนในฟอเร็กซ์และ CFD พร้อมสูตรคำนวณ ตัวอย่างโรลโอเวอร์สามเท่า และการคำนวณฉบับเต็มเป็นเรอัล",
+      "url": "https://duotide.com.br/th/blog/swap-fee-how-to-calculate-overnight-cost/",
+      "inLanguage": "th",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
+      "articleSection": "ฟอเร็กซ์",
+      "author": {
+        "@type": "Organization",
+        "name": "ทีม Duotide",
+        "url": "https://duotide.com.br/th/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/th/blog/swap-fee-how-to-calculate-overnight-cost/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/th/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "หน้าแรก",
+          "item": "https://duotide.com.br/th/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "บล็อก",
+          "item": "https://duotide.com.br/th/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ค่าธรรมเนียมสวอป: วิธีคำนวณต้นทุนการถือสถานะข้ามคืน",
+          "item": "https://duotide.com.br/th/blog/swap-fee-how-to-calculate-overnight-cost/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">ข้ามไปยังเนื้อหา</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/th/" aria-label="Duotide — หน้าแรก">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="เปิดเมนูนำทาง"
+                data-abrir="เปิดเมนูนำทาง" data-fechar="ปิดเมนูนำทาง">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="เลือกภาษา"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="22" height="16"><span>th</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/calculadora-de-swap-taxa-overnight/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/swap-rate-how-to-calculate-overnight-cost/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/calculadora-de-swap-tasa-overnight/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/swap-calculator-overnight-fees/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/swap-fee-calculator-overnight-cost/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/swap-fee-paano-kalkulahin-ang-gastos-ng-bukas-na-posisyon/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/taxe-de-swap-comment-calculer-le-cout/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/swap-calculator-overnight-fee/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/kalkulator-swap-biaya-overnight/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/tasso-di-swap-come-calcolare-il-costo-overnight/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/swap-fee-calculator-overnight-cost/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/swapavgift-sa-beraknar-du-overnightkostnaden/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/swap-fee-how-to-calculate-overnight-cost/" hreflang="th" lang="th" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/swap-orani-overnight-maliyeti-hesaplama/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/phi-swap-cach-tinh-chi-phi-giu-vi-the-mo-qua-dem/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/swap-overnight-fee-calculator/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="เมนูนำทางหลัก">
+        <ul>
+          <li><a href="/th/">หน้าแรก</a></li>
+          <li><a href="/th/duotide-is-it-reliable/">น่าเชื่อถือไหม?</a></li>
+          <li><a href="/th/duotide-login/">เข้าสู่ระบบ</a></li>
+          <li><a href="/th/duotide-broker/">เกี่ยวกับโบรกเกอร์</a></li>
+          <li><a href="/th/duotide-safe/">ปลอดภัยไหม?</a></li>
+          <li><a href="/th/duotide-app/">แอป</a></li>
+          <li><a href="/th/best-brokers/">โบรกเกอร์ที่ดีที่สุด</a></li>
+          <li><a href="/th/blog/" aria-current="page">บล็อก</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th"
+           target="_blank" rel="noopener sponsored nofollow">เปิดบัญชี</a>
+        <a class="btn btn--outline btn--sm" href="/th/duotide-login/">เข้าสู่ระบบ</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+    <div class="container">
+      <ol>
+        <li><a href="/th/">หน้าแรก</a></li>
+        <li><a href="/th/blog/">บล็อก</a></li>
+        <li><span aria-current="page">ค่าธรรมเนียมสวอป: วิธีคำนวณต้นทุนการถือสถานะข้ามคืน</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">ฟอเร็กซ์</span>
+        <h1>ค่าธรรมเนียมสวอป: วิธีคำนวณต้นทุนการถือสถานะข้ามคืน</h1>
+        <p class="bq-post__meta">ทีม Duotide · <time datetime="2026-09-24">24/09/2569</time> · อ่าน 4 นาที</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>ทุกสถานะที่มีการใช้เลเวอเรจและถือค้างไว้หลังเวลาปิดตลาดประจำวัน อาจก่อให้เกิดต้นทุน หรือในบางกรณีก็เป็นเครดิต ที่เรียกว่าค่าธรรมเนียมสวอป หรือที่รู้จักกันในชื่อค่าธรรมเนียมข้ามคืนหรือค่าโรลโอเวอร์ ค่านี้ปรากฏในฟอเร็กซ์ CFD สินค้าโภคภัณฑ์ ดัชนี และสถานะมาร์จิ้นในคริปโทเคอร์เรนซี หากเปิดและปิดการเทรดภายในวันเดียวกัน ก่อนถึงเวลาโรลโอเวอร์ โดยปกติจะไม่มีสวอปให้คำนวณ</p><p>ปัญหาของสวอปคือมันไม่ได้ปรากฏเป็นค่าใช้จ่ายที่มองเห็นได้ตอนเข้าสถานะ แต่จะปรากฏขึ้นภายหลังอย่างเงียบ ๆ ในบัญชี ทำให้เทรดเดอร์จำนวนมากรับรู้ผลกระทบก็ต่อเมื่อการเทรดที่ดูเหมือนจะเป็นระยะสั้นกลับกลายเป็นสถานะที่ถือไว้หลายวันโดยไม่ได้วางแผนไว้ก่อน</p><h2>วิธีการคำนวณ</h2><p>สูตรคำนวณขึ้นอยู่กับว่าโบรกเกอร์แสดงค่าธรรมเนียมสวอปอย่างไร เมื่อแสดงเป็นเปอร์เซ็นต์ของมูลค่าสถานะ:</p><p>สวอป = มูลค่าสถานะ × อัตราสวอปรายวัน × จำนวนคืนที่คิดค่าธรรมเนียม</p><p>เมื่อแสดงเป็นค่าต่อลอต:</p><p>สวอป = ขนาดลอต × ค่าสวอปต่อลอต × จำนวนคืนที่คิดค่าธรรมเนียม</p><p>คำว่า “จำนวนคืนที่คิดค่าธรรมเนียม” ควรให้ความสนใจเป็นพิเศษ สถานะที่ถือข้ามสุดสัปดาห์มักถูกนับเป็นมากกว่าหนึ่งคืน เพราะตลาดต้องชำระราคาสำหรับช่วงเวลาที่ปิดทำการ หลายแพลตฟอร์มใช้การคิดโรลโอเวอร์สามเท่าในวันใดวันหนึ่งของสัปดาห์ แต่วันที่แน่ชัดและอัตราค่าธรรมเนียมจะแตกต่างกันไปตามตราสารและโบรกเกอร์ ดังนั้นควรตรวจสอบเงื่อนไขที่ใช้อยู่เสมอ ก่อนตัดสินใจถือสถานะข้ามคืน</p><h2>ตัวอย่างที่แก้แล้ว: สวอปแบบเปอร์เซ็นต์</h2><p>สมมติว่ามีสถานะที่มีมูลค่าความเสี่ยง R$ 7.500 อัตราสวอปรายวัน 0,05% สำหรับสถานะซื้อ (Long) และถือไว้เป็นเวลาสามคืนที่คิดค่าธรรมเนียม (เนื่องจากรวมโรลโอเวอร์สามเท่าของวันหยุดสุดสัปดาห์) การคำนวณเป็นดังนี้:</p><p>R$ 7.500 × 0,05% × 3 = R$ 11,25 เป็นต้นทุนโดยประมาณ</p><p>หากสถานะเดียวกันแต่เป็นฝั่งขาย (Short) มีอัตรารายวันอยู่ที่ −0,02% (ซึ่งเป็นเครดิตแทนที่จะเป็นต้นทุน) ผลลัพธ์ในสามคืนเดียวกันจะเป็นดังนี้:</p><p>R$ 7.500 × (−0,02%) × 3 = −R$ 4,50 กล่าวคือเป็นเครดิต R$ 4,50 เข้าบัญชี</p><p>สังเกตว่าเครื่องหมายของอัตราค่าธรรมเนียมเปลี่ยนผลลัพธ์จากต้นทุนเป็นเครดิต ดังนั้นจึงจำเป็นต้องใช้เครื่องหมายตามที่แพลตฟอร์มแสดงไว้อย่างเคร่งครัด โดยไม่ปรับตัวเลขเอาเองในใจ</p><h2>ทำไมฝั่งซื้อและฝั่งขายจึงมีต้นทุนต่างกัน</h2><p>สวอปไม่ใช่ค่าธรรมเนียมที่กำหนดขึ้นแบบสุ่ม ในฟอเร็กซ์ ค่านี้เชื่อมโยงกับส่วนต่างของอัตราดอกเบี้ยระหว่างสองสกุลเงินในคู่เงินนั้น ส่วนใน CFD อาจสะท้อนต้นทุนทางการเงิน สภาพคล่อง และกฎเฉพาะของตราสารนั้น ๆ ด้วยเหตุนี้จึงเป็นเรื่องปกติที่:</p><ul><li>สถานะซื้อจะมีต้นทุนทางการเงินแตกต่างจากสถานะขายในสินทรัพย์เดียวกัน</li><li>ฝั่งหนึ่งของคู่เงินต้องจ่าย ในขณะที่อีกฝั่งได้รับเครดิต ขึ้นอยู่กับส่วนต่างอัตราดอกเบี้ยระหว่างสกุลเงินที่เกี่ยวข้อง</li><li>การปรับค่าของโบรกเกอร์และกฎเฉพาะของแต่ละตราสารก็มีผลต่อมูลค่าสุดท้ายเช่นกัน</li></ul><p>นี่ไม่ได้หมายความว่าควรเลือกทิศทางการเทรดโดยอิงจากค่าสวอป ทิศทางการเทรดต้องมาจากการวิเคราะห์ทางเทคนิคหรือสถานการณ์ที่เป็นเหตุจูงใจให้เข้าเทรด แต่เมื่อแนวคิดการเข้าสถานะสองแบบมีความคล้ายกัน และแบบหนึ่งมีต้นทุนข้ามคืนสูงกว่ามาก สวอปก็สามารถใช้เป็นเกณฑ์ตัดสินใจที่สมเหตุสมผลได้</p><h2>เมื่อไหร่ที่สวอปมีความสำคัญจริง ๆ</h2><p>ต้นทุน R$ 2 ต่อคืนไม่ได้มีนัยสำคัญเสมอไป ในการเทรดที่มีเป้าหมายกำไร R$ 150 มูลค่านี้แทบไม่มีผลใด ๆ แต่ในการเทรดแบบเดียวกันที่มีเป้าหมายเพียง R$ 8 ซึ่งเป็นลักษณะทั่วไปของสแคลเปอร์ ค่า R$ 2 ต่อคืนนี้กัดกินสัดส่วนที่ใหญ่มากของผลลัพธ์ที่คาดหวังไว้</p><p>การคำนวณเชิงปฏิบัติที่ควรทำก่อนถือสถานะข้ามคืนนั้นง่ายมาก คือนำมูลค่าสวอปโดยประมาณสำหรับจำนวนคืนที่วางแผนไว้มาเปรียบเทียบกับเป้าหมายกำไรของการเทรด หากสวอปคิดเป็นสัดส่วนเล็กน้อยของเป้าหมาย ต้นทุนนี้ก็ยังจัดการได้ แต่หากคิดเป็นสัดส่วนที่ใหญ่ ควรพิจารณาใหม่ว่าจะถือสถานะต่อไปหรือลดขนาดสถานะลงเพื่อชดเชย</p><h2>นิสัยที่ช่วยป้องกันความประหลาดใจในบัญชี</h2><p>ขั้นตอนปฏิบัติสำหรับการคำนวณนี้คือ ขั้นแรกตรวจสอบว่าโบรกเกอร์แสดงอัตราสวอปอย่างไร เป็นเปอร์เซ็นต์หรือต่อลอต ขั้นที่สองคำนวณมูลค่าสถานะหรือขนาดลอต ขั้นที่สามใช้อัตราของฝั่งซื้อและฝั่งขายแยกกัน เนื่องจากมักไม่เท่ากัน ขั้นที่สี่คูณด้วยจำนวนคืนจริงที่จะถือสถานะไว้ โดยไม่ลืมโรลโอเวอร์สามเท่าเมื่อเข้าเงื่อนไข และสุดท้ายนำผลลัพธ์ไปเทียบกับเป้าหมายที่วางแผนไว้สำหรับการเทรดนั้น</p><p>สวอปมักถูกมองว่าเป็นรายละเอียดเล็กน้อย เพราะต่างจากสเปรดตรงที่มันไม่ปรากฏให้เห็นทันทีบนหน้าจอ แต่ต้นทุนที่ไม่มีใครสังเกตเห็นก็ยังคงเป็นต้นทุนอยู่ดี ก่อนตัดสินใจถือสถานะใด ๆ ข้ามคืน ไม่ว่าจะเป็นบน Duotide หรือแพลตฟอร์มอื่น ควรทำการคำนวณอย่างรวดเร็วนี้ก่อน เพราะมันช่วยป้องกันไม่ให้ผลลัพธ์ที่เป็นบวกบนกราฟกลายเป็นความประหลาดใจในทางลบในใบแจ้งยอดบัญชี</p>
+        <div class="bq-post__cta">
+          <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>อ่านเพิ่มเติม</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/th/blog/pip-calculator-how-to-calculate/"><img src="/assets/img/terra.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีคำนวณมูลค่าของ pip ในฟอเร็กซ์ ทีละขั้นตอน</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
+            <a class="bq__card" href="/th/blog/how-to-calculate-forex-spread/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีคำนวณสเปรดในฟอเร็กซ์: สูตรและตัวอย่าง</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
+            <a class="bq__card" href="/th/blog/alphabet-stock-pulls-back-ai-spending/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Alphabet เสียแรงในตลาดหุ้นขณะที่ตลาดชั่งน้ำหนักค่าใช้จ่าย AI</span><span class="bq__meta">24/09/2569 · อ่าน 3 นาที</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">ลิขสิทธิ์ © 2026 Duotide<br>
+            สงวนลิขสิทธิ์<br>
+            เว็บไซต์อย่างเป็นทางการ</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>บริษัท</h2>
+          <ul>
+            <li><a href="/th/">หน้าแรก</a></li>
+            <li><a href="/th/duotide-is-it-reliable/">Duotide น่าเชื่อถือไหม?</a></li>
+            <li><a href="/th/duotide-login/">วิธีเข้าสู่ระบบ</a></li>
+            <li><a href="/th/duotide-broker/">รู้จักโบรกเกอร์</a></li>
+            <li><a href="/th/duotide-safe/">ความปลอดภัยของโบรกเกอร์</a></li>
+            <li><a href="/th/duotide-app/">แอป</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>ติดต่อ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>ผู้จัดการบัญชี 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/th/duotide-faq/">คำถามที่พบบ่อย</a>
+          <a href="/th/about/">เกี่ยวกับเว็บไซต์นี้</a>
+          <a href="/th/contact/">ติดต่อ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="กลับไปด้านบนของหน้า">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="ปิด">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">โบนัส</span> <span class="pp__l2">100%</span></h2>
+          <p>ฝากเงินด้วยคูปอง <strong>WELCOME100</strong> และรับโบนัส 100% จากยอดเงินฝาก</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">คูปอง</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="คัดลอกแล้ว!">คัดลอก</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">รับเลย</a>
+          <p class="pp__mini">เป็นไปตามเงื่อนไขของโปรโมชัน การเทรดผลิตภัณฑ์ที่มีเลเวอเรจมีความเสี่ยงที่จะขาดทุน</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

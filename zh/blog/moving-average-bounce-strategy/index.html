@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>均线反弹策略：适用于短期交易 | Blog Duotide</title>
+  <meta name="description" content="学习均线反弹策略：如何选择周期、确认趋势、入场，并计算每笔交易的风险。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/moving-average-bounce-strategy/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-repique-na-media-movel/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/moving-average-bounce-strategy/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/estrategia-de-rebote-en-la-media-movil/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/moving-average-bounce-strategy-short-term/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/moving-average-bounce-strategie/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/diskarteng-moving-average-bounce/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/strategie-de-rebond-sur-la-moyenne-mobile/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/strategi-pantulan-moving-average-jangka-pendek/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/strategia-del-rimbalzo-sulla-media-mobile/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/moving-average-bounce-strategy/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/kisa-vade-icin-hareketli-ortalamada-sekme-stratejisi/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/chien-luoc-bat-lai-tren-duong-trung-binh-dong-ngan-han/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/moving-average-bounce-strategy/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/moving-average-bounce-strategy/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="均线反弹策略：适用于短期交易">
+  <meta property="og:description" content="学习均线反弹策略：如何选择周期、确认趋势、入场，并计算每笔交易的风险。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/moving-average-bounce-strategy/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="均线反弹策略：适用于短期交易">
+  <meta name="twitter:description" content="学习均线反弹策略：如何选择周期、确认趋势、入场，并计算每笔交易的风险。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/moving-average-bounce-strategy/#artigo",
+      "headline": "均线反弹策略：适用于短期交易",
+      "description": "学习均线反弹策略：如何选择周期、确认趋势、入场，并计算每笔交易的风险。",
+      "url": "https://duotide.com.br/zh/blog/moving-average-bounce-strategy/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
+      "articleSection": "交易策略",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/moving-average-bounce-strategy/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "均线反弹策略：适用于短期交易",
+          "item": "https://duotide.com.br/zh/blog/moving-average-bounce-strategy/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/estrategia-repique-na-media-movel/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/moving-average-bounce-strategy/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/estrategia-de-rebote-en-la-media-movil/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/moving-average-bounce-strategy-short-term/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/moving-average-bounce-strategie/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/diskarteng-moving-average-bounce/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/strategie-de-rebond-sur-la-moyenne-mobile/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/strategi-pantulan-moving-average-jangka-pendek/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/strategia-del-rimbalzo-sulla-media-mobile/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/moving-average-bounce-strategy/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/kisa-vade-icin-hareketli-ortalamada-sekme-stratejisi/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/chien-luoc-bat-lai-tren-duong-trung-binh-dong-ngan-han/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/moving-average-bounce-strategy/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">均线反弹策略：适用于短期交易</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">交易策略</span>
+        <h1>均线反弹策略：适用于短期交易</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>在趋势跟踪策略中，所谓的“均线反弹”（moving average bounce）有一个明显的优势：只使用一个指标，在图表上容易看清，也不需要记住多条汇合规则才能开始练习。</p>
+<p>核心理念很简单：在一个明确的趋势中，价格很少呈直线上涨（或下跌）。它会前进，回调到触及或接近一条均线，然后恢复原来的方向——而这个策略正是想捕捉这种先回调、后反弹的过程。</p>
+<h2>选择均线</h2>
+<p>最常见的选择是21周期的指数移动平均线（EMA），因为它对近期价格的反应比同样周期的简单移动平均线更快。较短的均线，如9周期，会产生更多信号，但也会产生更多假反弹；较长的均线，如50周期，能过滤噪音，但反应更慢，产生的机会也更少。不存在“正确”的周期——只存在与你所跟踪的图表周期和资产相匹配的周期。</p>
+<h2>在交易前确认趋势</h2>
+<p>在寻找反弹之前，需要先确认存在趋势。这可以通过观察均线本身的斜率来判断：如果均线向上倾斜，且价格大部分时间都保持在均线上方，那么上升趋势就是有效的，在这个策略中只有买入入场才有意义。如果均线向下倾斜，价格在其下方，情况正好相反，只考虑卖出入场。</p>
+<h2>入场信号</h2>
+<p>假设某股票以5.40雷亚尔交易，处于上升趋势，21周期EMA也在上升。价格回调到5.39雷亚尔，触及均线，并在均线稍上方以5.41雷亚尔收出一根阳线。这个在触及均线之后收在均线上方的行为，才是入场的触发条件——而不是触及本身，因为价格也可能直接穿过均线而不反弹。</p>
+<p>在这个例子中，止损设在反弹K线最低点稍下方，比如说5.35雷亚尔——每股风险为0.06雷亚尔。采用1比2的风险回报比，目标就设在入场价上方0.12雷亚尔的位置，即5.53雷亚尔。</p>
+<h2>为什么风险需要在入场前就计算好</h2>
+<p>在每股风险定为0.06雷亚尔、账户敞口限额为例如10,000雷亚尔资金的1%——即每笔交易最大风险为100雷亚尔——的情况下，就可以在入场前计算出仓位大小：100雷亚尔÷0.06雷亚尔≈1,666股。这个计算避免了两个常见的陷阱：使用相对于所设止损来说过大的手数，或者把止损设得太紧，以至于任何正常的市场噪音都会把交易者踢出局。</p>
+<h2>这个策略中常见的错误</h2>
+<p>最常见的错误，是把任何接近均线的动作都误认为入场信号——必须等待确认K线收盘，而不是提前入场。第二个错误，是在没有明确趋势的市场中使用这个策略，此时价格会反复无方向地穿越均线，产生一连串小额亏损。第三个错误，是在交易已经出现亏损之后，把止损移动以给反弹“更多空间”，这会把一个经过计算的风险变成一个不确定的风险。</p>
+<h2>在用真实资金交易前练习反弹</h2>
+<p>由于反弹的行为在波动较大的资产和较稳定的资产之间差异很大，在实盘应用这个策略之前，值得回顾图表历史，数一数价格在所选均线上干净利落地反弹了多少次。这有助于校准预期：没有任何基于均线的策略能每次都判断正确，工作的一部分就是接受小额、可控的亏损是整个过程的一部分，而不是试图用更大的仓位一次性挽回一切。</p>
+<h2>该方法的优势与局限</h2>
+<p>均线反弹的主要优势在于简单：单一指标、单一入场规则和单一趋势过滤条件，让这个方法容易遵循，不需要依赖多个屏幕或多个指标同时达成一致。这也让事后复盘交易变得更容易，因为每一次入场的原因都很清楚。</p>
+<p>主要的局限恰恰是同一枚硬币的另一面：由于依赖已经确立的趋势，这个策略在横盘市场中表现不佳，因为此时不存在一个占主导地位的方向让价格“顺势反弹”。能够快速识别市场何时已经不再有趋势、进入横盘状态——通常表现为均线本身不再倾斜、变得水平——正是避免在方法不适用的背景下继续坚持它的关键。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/dual-stochastic-strategy/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">双随机指标策略：如何组合两个振荡指标</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>
