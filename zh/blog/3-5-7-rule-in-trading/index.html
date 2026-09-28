@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>交易中的3-5-7法则：是什么，如何应用 | Blog Duotide</title>
+  <meta name="description" content="了解3-5-7风险管理法则：单笔亏损限额、组合总敞口和盈利目标，附带以雷亚尔计算的示例。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/3-5-7-rule-in-trading/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/regra-3-5-7-no-trading/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/3-5-7-regel-im-trading/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/3-5-7-rule-sa-trading/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/the-3-5-7-rule-in-trading/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/aturan-3-5-7-dalam-trading/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/regola-3-5-7-nel-trading/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/3-5-7-rule-in-trading/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/regra-3-5-7-no-trading/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="交易中的3-5-7法则：是什么，如何应用">
+  <meta property="og:description" content="了解3-5-7风险管理法则：单笔亏损限额、组合总敞口和盈利目标，附带以雷亚尔计算的示例。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/3-5-7-rule-in-trading/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="交易中的3-5-7法则：是什么，如何应用">
+  <meta name="twitter:description" content="了解3-5-7风险管理法则：单笔亏损限额、组合总敞口和盈利目标，附带以雷亚尔计算的示例。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/3-5-7-rule-in-trading/#artigo",
+      "headline": "交易中的3-5-7法则：是什么，如何应用",
+      "description": "了解3-5-7风险管理法则：单笔亏损限额、组合总敞口和盈利目标，附带以雷亚尔计算的示例。",
+      "url": "https://duotide.com.br/zh/blog/3-5-7-rule-in-trading/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
+      "articleSection": "风险管理",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/3-5-7-rule-in-trading/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "交易中的3-5-7法则：是什么，如何应用",
+          "item": "https://duotide.com.br/zh/blog/3-5-7-rule-in-trading/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/regra-3-5-7-no-trading/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/3-5-7-regel-im-trading/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/3-5-7-rule-sa-trading/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/the-3-5-7-rule-in-trading/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/aturan-3-5-7-dalam-trading/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/regola-3-5-7-nel-trading/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/3-5-7-rule-in-trading/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">交易中的3-5-7法则：是什么，如何应用</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">风险管理</span>
+        <h1>交易中的3-5-7法则：是什么，如何应用</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 6 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>许多交易者亏钱，并不是因为选错了资产，而是因为每笔操作冒的风险太大，也没有对同时暴露的总风险设定明确的限制。3-5-7法则是一种把这些限制整理成三个易记数字的简单方法，创造出一个任何初学者都能应用、不需要复杂表格的风险管理框架。</p><p>这篇文章解释了这三个数字各自的含义，如何在实践中计算它们，以及为什么这种纪律通常比策略本身的选择对最终结果影响更大。</p><h2>第一个数字：单笔操作最大风险3%</h2><p>该法则的第一个支柱，确定了如果止损被触发，你愿意在单笔操作中损失多少：最多是账户总资金的3%。这个百分比指的是价格触及止损时损失的金额，而不是所开仓位的总规模。</p><p>要根据这个限制计算仓位大小，可以使用这个公式：仓位大小 = (账户资金 x 0.03) ÷ (入场价 − 止损价)。一个实际的例子：账户资金为R$ 10.000，每笔操作最大风险为R$ 300。如果某资产价格为R$ 50，技术止损设在R$ 47（距离R$ 3），那么最大仓位就是R$ 300 ÷ R$ 3 = 100个单位，代表投入R$ 5.000，即便风险被限制在R$ 300。</p><h3>为什么是3%而不是更多</h3><p>这个逻辑基于统计学：每笔操作冒3%的风险，即使连续遭遇10次亏损这样的极端情况，账户也会剩下约74%的原始资金——这是一个艰难但可以恢复的情况。而每笔操作冒10%的风险，同样一连串亏损几乎会把账户清零。</p><h2>第二个数字：同时敞口最大5%</h2><p>第二个支柱限制了所有已开仓操作加在一起，同一时刻能承担多少风险资金。这避免了相关性带来的问题：如果你开出三笔不同的操作，每笔都冒3%的风险，但都是走势相似的资产（比如同一行业的三只股票），实际的综合风险可能超过9%，即使每笔操作单独看起来都在限额之内。</p><p>该法则建议，把所有已开仓操作的风险总和控制在总资金的5%以内，这自然限制了你能同时持有多少个仓位，尤其是在相关性较高的资产上。</p><h2>第三个数字：盈利目标7%或更高</h2><p>第三个支柱涉及风险与预期回报之间的关系：盈利的操作应该追求至少7%的收益，或者与所承担的最大亏损相当的比例。如果每笔操作的风险是3%，追求7%或更高的回报，能保证一个有利的盈亏比，大约在1比2.3的水平。</p><p>有了这个比例，即使一位交易者判断正确的次数不到一半，总体结果也可能是正的。假设进行40笔操作，胜率为45%：18笔盈利、每笔获利7%，22笔亏损、每笔损失3%。累计结果为(18 x 7%) − (22 x 3%) = 126% − 66% = 按所承担风险比例计算累计获利60%，这个例子说明了盈亏比的数学原理如何弥补低于50%的胜率。</p><ul><li>3%：单笔操作可接受的最大风险。</li><li>5%：所有已开仓位加总的最大风险。</li><li>7%：盈利操作的最低目标收益。</li><li>遵守这三个数字的纪律，比任何一个数字本身都更重要。</li></ul><h2>如何在日常操作中应用3-5-7法则</h2><p>在开出任何操作之前，根据3%的限额计算仓位大小，核实已开仓位的风险总和不超过5%，并且只进入那些潜在盈利目标相对于所承担风险至少达到7%比例的操作。</p><p>值得记住的是，3-5-7法则并不能保证盈利，也不能消除亏损的风险：它只是把下注的规模结构化，让任何策略最终都会遇到的一连串糟糕结果，不至于危及账户的延续。交易涉及真实的资金亏损风险，没有任何管理体系能改变这个现实。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何在外汇交易中使用止损和止盈</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/when-to-close-a-trade-exit-signals/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">何时结束一笔操作：出场信号</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

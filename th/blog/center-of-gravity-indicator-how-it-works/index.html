@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr" data-tema="dark" data-tv="th_TH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>อินดิเคเตอร์ Center of Gravity ทำงานอย่างไรและใช้อย่างไร | Blog Duotide</title>
+  <meta name="description" content="รู้จักอินดิเคเตอร์ Center of Gravity ที่สร้างขึ้นเพื่อคาดการณ์จุดกลับตัวของราคาล่วงหน้าโดยมีความล่าช้าน้อยกว่าค่าเฉลี่ยเคลื่อนที่ทั่วไป">
+  <link rel="canonical" href="https://duotide.com.br/th/blog/center-of-gravity-indicator-how-it-works/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-centro-de-gravidade/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/center-of-gravity-indicator/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/indicador-centro-de-gravedad/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/center-of-gravity-indicator/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/center-of-gravity-indicator/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/indikator-schwerpunkt-center-of-gravity/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/center-of-gravity-indicator-paano-gumagana/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/indicateur-centre-de-gravite/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/center-of-gravity-indicator/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/indikator-center-of-gravity-cara-kerja-dan-penggunaan/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/indicatore-centro-di-gravita-come-funziona-e-come-usarlo/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/center-of-gravity-indicator/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/indikatorn-tyngdpunkt-centro-de-gravidade/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/center-of-gravity-indicator-how-it-works/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/agirlik-merkezi-gostergesi-nasil-calisir-ve-kullanilir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/chi-bao-trong-tam-center-of-gravity/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/center-of-gravity-indicator/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/center-of-gravity-indicator/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="อินดิเคเตอร์ Center of Gravity ทำงานอย่างไรและใช้อย่างไร">
+  <meta property="og:description" content="รู้จักอินดิเคเตอร์ Center of Gravity ที่สร้างขึ้นเพื่อคาดการณ์จุดกลับตัวของราคาล่วงหน้าโดยมีความล่าช้าน้อยกว่าค่าเฉลี่ยเคลื่อนที่ทั่วไป">
+  <meta property="og:url" content="https://duotide.com.br/th/blog/center-of-gravity-indicator-how-it-works/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-vale-a-pena.webp">
+  <meta property="og:image:alt" content="Duotide — บล็อก Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-vale-a-pena.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="อินดิเคเตอร์ Center of Gravity ทำงานอย่างไรและใช้อย่างไร">
+  <meta name="twitter:description" content="รู้จักอินดิเคเตอร์ Center of Gravity ที่สร้างขึ้นเพื่อคาดการณ์จุดกลับตัวของราคาล่วงหน้าโดยมีความล่าช้าน้อยกว่าค่าเฉลี่ยเคลื่อนที่ทั่วไป">
+  <meta name="twitter:label1" content="เขียนโดย">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="เวลาในการอ่าน">
+  <meta name="twitter:data2" content="5 นาที">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/th/blog/center-of-gravity-indicator-how-it-works/#artigo",
+      "headline": "อินดิเคเตอร์ Center of Gravity ทำงานอย่างไรและใช้อย่างไร",
+      "description": "รู้จักอินดิเคเตอร์ Center of Gravity ที่สร้างขึ้นเพื่อคาดการณ์จุดกลับตัวของราคาล่วงหน้าโดยมีความล่าช้าน้อยกว่าค่าเฉลี่ยเคลื่อนที่ทั่วไป",
+      "url": "https://duotide.com.br/th/blog/center-of-gravity-indicator-how-it-works/",
+      "inLanguage": "th",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-vale-a-pena.webp",
+      "articleSection": "อินดิเคเตอร์",
+      "author": {
+        "@type": "Organization",
+        "name": "ทีม Duotide",
+        "url": "https://duotide.com.br/th/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/th/blog/center-of-gravity-indicator-how-it-works/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/th/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "หน้าแรก",
+          "item": "https://duotide.com.br/th/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "บล็อก",
+          "item": "https://duotide.com.br/th/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "อินดิเคเตอร์ Center of Gravity ทำงานอย่างไรและใช้อย่างไร",
+          "item": "https://duotide.com.br/th/blog/center-of-gravity-indicator-how-it-works/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">ข้ามไปยังเนื้อหา</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/th/" aria-label="Duotide — หน้าแรก">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="เปิดเมนูนำทาง"
+                data-abrir="เปิดเมนูนำทาง" data-fechar="ปิดเมนูนำทาง">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="เลือกภาษา"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="22" height="16"><span>th</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/indicador-centro-de-gravidade/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/center-of-gravity-indicator/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/indicador-centro-de-gravedad/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/center-of-gravity-indicator/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/center-of-gravity-indicator/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/indikator-schwerpunkt-center-of-gravity/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/center-of-gravity-indicator-paano-gumagana/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/indicateur-centre-de-gravite/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/center-of-gravity-indicator/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/indikator-center-of-gravity-cara-kerja-dan-penggunaan/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/indicatore-centro-di-gravita-come-funziona-e-come-usarlo/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/center-of-gravity-indicator/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/indikatorn-tyngdpunkt-centro-de-gravidade/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/center-of-gravity-indicator-how-it-works/" hreflang="th" lang="th" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/agirlik-merkezi-gostergesi-nasil-calisir-ve-kullanilir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/chi-bao-trong-tam-center-of-gravity/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/center-of-gravity-indicator/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="เมนูนำทางหลัก">
+        <ul>
+          <li><a href="/th/">หน้าแรก</a></li>
+          <li><a href="/th/duotide-is-it-reliable/">น่าเชื่อถือไหม?</a></li>
+          <li><a href="/th/duotide-login/">เข้าสู่ระบบ</a></li>
+          <li><a href="/th/duotide-broker/">เกี่ยวกับโบรกเกอร์</a></li>
+          <li><a href="/th/duotide-safe/">ปลอดภัยไหม?</a></li>
+          <li><a href="/th/duotide-app/">แอป</a></li>
+          <li><a href="/th/best-brokers/">โบรกเกอร์ที่ดีที่สุด</a></li>
+          <li><a href="/th/blog/" aria-current="page">บล็อก</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th"
+           target="_blank" rel="noopener sponsored nofollow">เปิดบัญชี</a>
+        <a class="btn btn--outline btn--sm" href="/th/duotide-login/">เข้าสู่ระบบ</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="เส้นทางนำทาง">
+    <div class="container">
+      <ol>
+        <li><a href="/th/">หน้าแรก</a></li>
+        <li><a href="/th/blog/">บล็อก</a></li>
+        <li><span aria-current="page">อินดิเคเตอร์ Center of Gravity ทำงานอย่างไรและใช้อย่างไร</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">อินดิเคเตอร์</span>
+        <h1>อินดิเคเตอร์ Center of Gravity ทำงานอย่างไรและใช้อย่างไร</h1>
+        <p class="bq-post__meta">ทีม Duotide · <time datetime="2026-09-24">24/09/2569</time> · อ่าน 4 นาที</p>
+        <figure class="foto"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>หนึ่งในความรำคาญที่ใหญ่ที่สุดของผู้ใช้ค่าเฉลี่ยเคลื่อนที่คือความล่าช้า เนื่องจากค่าเฉลี่ยเหล่านี้คำนวณจากราคาในอดีต สัญญาณการกลับตัวของแนวโน้มจึงมาถึงหลังจากการเคลื่อนไหวเริ่มต้นไปแล้วเสมอ อินดิเคเตอร์ Center of Gravity ซึ่งพัฒนาโดยวิศวกรและนักวิเคราะห์ John Ehlers ถูกสร้างขึ้นมาเพื่อพยายามลดความล่าช้านี้ โดยใช้แนวคิดที่ยืมมาจากฟิสิกส์เพื่อคำนวณจุดกลับตัวที่เป็นไปได้ล่วงหน้ามากขึ้น</p><p>ในบทความนี้คุณจะเข้าใจตรรกะเบื้องหลัง Center of Gravity วิธีที่มันปรากฏบนกราฟ และตลาดประเภทใดที่มันทำงานได้ดีที่สุด</p><h2>แนวคิดเรื่อง จุดศูนย์ถ่วง ที่นำมาใช้กับราคา</h2><p>ในทางฟิสิกส์ จุดศูนย์ถ่วงของชุดน้ำหนักคือจุดสมดุลระหว่างน้ำหนักเหล่านั้น Ehlers ปรับแนวคิดนี้ให้ใช้กับลำดับของราคา แทนที่จะคำนวณค่าเฉลี่ยธรรมดา อินดิเคเตอร์นี้ให้น้ำหนักที่แตกต่างกันกับแต่ละราคาภายในช่วงเวลาที่วิเคราะห์ โดยราคาล่าสุดจะได้รับน้ำหนักมากกว่า ผลลัพธ์คือค่าที่ทำงานเหมือนจุดสมดุลของการเคลื่อนไหวล่าสุด แต่ตอบสนองต่อการเปลี่ยนแปลงได้เร็วกว่าค่าเฉลี่ยทั่วไป</p><p>ค่านี้จะถูกคูณด้วย −1 และพล็อตเป็นออสซิลเลเตอร์ พร้อมกับเวอร์ชันของอินดิเคเตอร์เดียวกันที่เลื่อนช้าไปหนึ่งช่วงเวลา ทำหน้าที่เป็นเส้นสัญญาณ คล้ายกับ MACD แต่มีพื้นฐานการคำนวณที่แตกต่างกัน</p><h2>วิธีตีความการตัดกันของเส้นทั้งสอง</h2><p>การตีความ Center of Gravity ที่พบบ่อยที่สุดคือการสังเกตการตัดกันระหว่างเส้นหลักกับเส้นสัญญาณที่เลื่อนช้ากว่า เมื่อเส้นหลักตัดขึ้นเหนือเส้นสัญญาณ จะถูกตีความว่าอาจเป็นจุดเริ่มต้นของการเคลื่อนไหวขาขึ้น เมื่อตัดลง จะถูกตีความว่าอาจเป็นจุดเริ่มต้นของการเคลื่อนไหวขาลง</p><p>เนื่องจากอินดิเคเตอร์นี้ถูกออกแบบมาเพื่อลดความล่าช้า การตัดกันเหล่านี้มักปรากฏขึ้นเร็วกว่าการตัดกันที่คำนวณด้วยค่าเฉลี่ยเคลื่อนที่แบบธรรมดาในสินทรัพย์เดียวกันเล็กน้อย แต่การเร็วกว่าเล็กน้อยไม่ได้หมายความว่าสมบูรณ์แบบ อินดิเคเตอร์นี้ก็สร้างสัญญาณหลอกได้เช่นกัน โดยเฉพาะในตลาดที่ไม่มีทิศทางชัดเจน</p><h2>Center of Gravity ทำงานได้ดีที่สุดที่ไหน</h2><p>เช่นเดียวกับอินดิเคเตอร์อื่นๆ ที่สร้างโดย Ehlers Center of Gravity ถูกออกแบบมาสำหรับตลาดที่เคลื่อนไหวเป็นวัฏจักรค่อนข้างสม่ำเสมอ สลับขึ้นลงอยู่ภายในกรอบ มากกว่าตลาดที่มีแนวโน้มแข็งแกร่งและยืดเยื้อ ในสินทรัพย์ที่เคลื่อนไหวแบบไซด์เวย์ เช่น แกว่งอยู่ระหว่าง R$ 22,00 และ R$ 25,00 การตัดกันของอินดิเคเตอร์มักตรงกับจุดกลับตัวระยะสั้นภายในกรอบนั้นได้แม่นยำกว่า</p><p>แต่ในแนวโน้มที่แข็งแกร่งและยืดเยื้อ อินดิเคเตอร์อาจสร้างการตัดกันที่สวนทางกับแนวโน้มบ่อยขึ้น เพียงเพราะมันกำลังพยายามคาดการณ์จุดกลับตัวในบริบทที่ในขณะนั้นยังไม่ได้กลับตัวจริงๆ</p><h2>การใช้ Center of Gravity ร่วมกับเครื่องมืออื่น</h2><p>เนื่องจากเป็นอินดิเคเตอร์เชิงคาดการณ์ Center of Gravity ทำงานได้ดีที่สุดในฐานะส่วนเสริมของการอ่านบริบท เช่น อินดิเคเตอร์แนวโน้มระยะยาวกว่า หรือการสังเกตด้วยสายตาว่าสินทรัพย์กำลังเคลื่อนไหวแบบวัฏจักรและไซด์เวย์จริงๆ แทนที่จะอยู่ในแนวโน้ม</p><p>การใช้อินดิเคเตอร์นี้เดี่ยวๆ โดยไม่มีตัวกรองบริบทนี้ มักนำไปสู่การเทรดสวนแนวโน้มที่แข็งแกร่ง ซึ่งมักมีความเสี่ยงมากที่สุด การใช้ร่วมกับการตรวจสอบแนวโน้มแบบง่ายๆ ช่วยกรองสัญญาณคุณภาพต่ำเหล่านี้ออกไปได้มาก</p><h2>การปรับช่วงเวลาในการคำนวณ</h2><p>Center of Gravity ยังให้ปรับจำนวนราคาที่นำมาคำนวณได้ คล้ายกับช่วงเวลาของค่าเฉลี่ยเคลื่อนที่ ช่วงเวลาที่สั้นกว่าทำให้อินดิเคเตอร์ตอบสนองเร็วขึ้นอีก แต่ก็เสี่ยงต่อการสร้างการตัดกันภายในความผันผวนเล็กๆ ที่ไม่มีความสำคัญจริงสำหรับผู้ที่เทรดระยะยาวกว่า ช่วงเวลาที่ยาวกว่าจะทำให้การตอบสนองนุ่มนวลขึ้น ทำให้พฤติกรรมของอินดิเคเตอร์ใกล้เคียงกับค่าเฉลี่ยที่มีความล่าช้ามากขึ้นเล็กน้อย แต่ก็ยังน้อยกว่าค่าเฉลี่ยเคลื่อนที่แบบธรรมดาที่เทียบเท่ากัน</p><p>ควรทดสอบมากกว่าหนึ่งช่วงเวลาในสินทรัพย์เดียวกันก่อนตัดสินใจว่าจะใช้แบบไหน โดยสังเกตว่าการตัดกันที่เกิดขึ้นสมเหตุสมผลกับวัฏจักรที่ราคาสร้างขึ้นจริงในอดีตหรือไม่ ไม่ใช่แค่ตามทฤษฎีเบื้องหลังการคำนวณ</p><h2>นำไปใช้จริง</h2><p>ใน Duotide สามารถทดสอบ Center of Gravity ในสินทรัพย์ต่างๆ และสังเกตว่ามันเคยทำงานในอดีตอย่างไรในช่วงไซด์เวย์และช่วงแนวโน้ม ซึ่งช่วยตัดสินใจว่าควรเชื่อถือการตัดกันที่มันสร้างขึ้นมากหรือน้อยแค่ไหน เช่นเดียวกับอินดิเคเตอร์เชิงคาดการณ์ใดๆ มันลดความล่าช้าลง แต่ไม่ได้ขจัดความไม่แน่นอน การเทรดใดๆ ที่อิงตามมันควรมีสต็อปที่ชัดเจนและคำนึงถึงความเสี่ยงในการขาดทุนจริง</p>
+        <div class="bq-post__cta">
+          <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>อ่านเพิ่มเติม</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/th/blog/macd-stochastic-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic และ Parabolic SAR วิธีใช้สามตัวนี้ร่วมกัน</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
+            <a class="bq__card" href="/th/blog/belkhayate-timing-indicator-how-to-use/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ Belkhayate Timing วิธีใช้ในทางปฏิบัติ</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
+            <a class="bq__card" href="/th/blog/bollinger-bands-how-they-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bollinger Bands: คืออะไรและทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">ลิขสิทธิ์ © 2026 Duotide<br>
+            สงวนลิขสิทธิ์<br>
+            เว็บไซต์อย่างเป็นทางการ</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>บริษัท</h2>
+          <ul>
+            <li><a href="/th/">หน้าแรก</a></li>
+            <li><a href="/th/duotide-is-it-reliable/">Duotide น่าเชื่อถือไหม?</a></li>
+            <li><a href="/th/duotide-login/">วิธีเข้าสู่ระบบ</a></li>
+            <li><a href="/th/duotide-broker/">รู้จักโบรกเกอร์</a></li>
+            <li><a href="/th/duotide-safe/">ความปลอดภัยของโบรกเกอร์</a></li>
+            <li><a href="/th/duotide-app/">แอป</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>ติดต่อ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>ผู้จัดการบัญชี 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/th/duotide-faq/">คำถามที่พบบ่อย</a>
+          <a href="/th/about/">เกี่ยวกับเว็บไซต์นี้</a>
+          <a href="/th/contact/">ติดต่อ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="กลับไปด้านบนของหน้า">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="ปิด">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">โบนัส</span> <span class="pp__l2">100%</span></h2>
+          <p>ฝากเงินด้วยคูปอง <strong>WELCOME100</strong> และรับโบนัส 100% จากยอดเงินฝาก</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">คูปอง</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="คัดลอกแล้ว!">คัดลอก</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">รับเลย</a>
+          <p class="pp__mini">เป็นไปตามเงื่อนไขของโปรโมชัน การเทรดผลิตภัณฑ์ที่มีเลเวอเรจมีความเสี่ยงที่จะขาดทุน</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

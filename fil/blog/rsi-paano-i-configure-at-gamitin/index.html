@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fil" dir="ltr" data-tema="dark" data-tv="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>RSI: paano i-configure at gamitin ang Relative Strength Index | Blog Duotide</title>
+  <meta name="description" content="Alamin ang formula ng RSI, kung paano i-configure ang period ng indicator, at kung paano bigyang-kahulugan ang overbought, oversold, at divergence.">
+  <link rel="canonical" href="https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indice-de-forca-relativa-rsi-guia/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/indice-de-fuerza-relativa-rsi-guia/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/rsi-relative-strength-index-guide/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/relative-strength-index-rsi-how-to-set-up-and-use-in-trading/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/rsi-relative-staerke-index-einstellen-und-nutzen/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/rsi-comment-configurer-et-utiliser-indice-force-relative/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/rsi-cara-mengonfigurasi-dan-menggunakan/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/rsi-come-configurare-e-usare-lindice-di-forza-relativa/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/rsi-installning-och-anvandning/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/rsi-relative-strength-index-setup-guide/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/rsi-goreceli-guc-endeksi-nasil-yapilandirilir-ve-kullanilir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/relative-strength-index-rsi-guide/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="fil_PH">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RSI: paano i-configure at gamitin ang Relative Strength Index">
+  <meta property="og:description" content="Alamin ang formula ng RSI, kung paano i-configure ang period ng indicator, at kung paano bigyang-kahulugan ang overbought, oversold, at divergence.">
+  <meta property="og:url" content="https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RSI: paano i-configure at gamitin ang Relative Strength Index">
+  <meta name="twitter:description" content="Alamin ang formula ng RSI, kung paano i-configure ang period ng indicator, at kung paano bigyang-kahulugan ang overbought, oversold, at divergence.">
+  <meta name="twitter:label1" content="Isinulat ni">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Oras ng pagbasa">
+  <meta name="twitter:data2" content="5 minuto">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/#artigo",
+      "headline": "RSI: paano i-configure at gamitin ang Relative Strength Index",
+      "description": "Alamin ang formula ng RSI, kung paano i-configure ang period ng indicator, at kung paano bigyang-kahulugan ang overbought, oversold, at divergence.",
+      "url": "https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/",
+      "inLanguage": "fil",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "Mga indicator",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide Team",
+        "url": "https://duotide.com.br/fil/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/fil/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/fil/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/fil/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "RSI: paano i-configure at gamitin ang Relative Strength Index",
+          "item": "https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Lumaktaw sa nilalaman</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/fil/" aria-label="Duotide — home page">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Buksan ang navigation menu"
+                data-abrir="Buksan ang navigation menu" data-fechar="Isara ang navigation menu">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Pumili ng wika"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="22" height="16"><span>fil</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/indice-de-forca-relativa-rsi-guia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/relative-strength-index-rsi-guide/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/indice-de-fuerza-relativa-rsi-guia/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/rsi-relative-strength-index-guide/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/relative-strength-index-rsi-how-to-set-up-and-use-in-trading/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/rsi-relative-staerke-index-einstellen-und-nutzen/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/rsi-paano-i-configure-at-gamitin/" hreflang="fil" lang="fil" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/rsi-comment-configurer-et-utiliser-indice-force-relative/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/relative-strength-index-rsi-guide/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/rsi-cara-mengonfigurasi-dan-menggunakan/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/rsi-come-configurare-e-usare-lindice-di-forza-relativa/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/relative-strength-index-rsi-guide/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/rsi-installning-och-anvandning/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/rsi-relative-strength-index-setup-guide/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/rsi-goreceli-guc-endeksi-nasil-yapilandirilir-ve-kullanilir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/relative-strength-index-rsi-guide/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Pangunahing navigation">
+        <ul>
+          <li><a href="/fil/">Home</a></li>
+          <li><a href="/fil/duotide-legit-ba/">Legit ba?</a></li>
+          <li><a href="/fil/duotide-login/">Login</a></li>
+          <li><a href="/fil/duotide-broker/">Ang broker</a></li>
+          <li><a href="/fil/duotide-ligtas-ba/">Ligtas ba?</a></li>
+          <li><a href="/fil/duotide-app/">App</a></li>
+          <li><a href="/fil/pinakamahusay-na-broker/">Pinakamahusay na broker</a></li>
+          <li><a href="/fil/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil"
+           target="_blank" rel="noopener sponsored nofollow">Gumawa ng account</a>
+        <a class="btn btn--outline btn--sm" href="/fil/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+    <div class="container">
+      <ol>
+        <li><a href="/fil/">Home</a></li>
+        <li><a href="/fil/blog/">Blog</a></li>
+        <li><span aria-current="page">RSI: paano i-configure at gamitin ang Relative Strength Index</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Mga indicator</span>
+        <h1>RSI: paano i-configure at gamitin ang Relative Strength Index</h1>
+        <p class="bq-post__meta">Duotide Team · <time datetime="2026-09-24">09/24/2026</time> · 4 min basahin</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Kaunti ang indicator na kasingsikat ng RSI, o Relative Strength Index. Lumalabas ito sa halos lahat ng platform ng gráfiko, madaling i-configure, at ang basic na pagbasa nito — overbought at oversold — ay karaniwang isa sa mga unang natutunan ng isang baguhang trader. Ngunit mas marami pa sa RSI kaysa sa pagtingin lang kung nasa itaas ito ng 70 o sa ibaba ng 30.</p><p>Sa artikulong ito, mauunawaan mo kung paano kinakalkula ang RSI, kung paano ito wastong i-configure, at kung paano gamitin ang mga pangunahing pagbasa nito, kasama ang divergence sa pagitan ng indicator at ng presyo.</p><h2>Ano ang RSI at paano ito kinakalkula</h2><p>Sinusukat ng RSI ang bilis at intensity ng pagbabago ng presyo sa isang tiyak na panahon, karaniwang 14 candle, at nagreresulta sa isang value na nagbabago sa pagitan ng 0 at 100. Inihahambing ng kalkulasyon ang average ng mga gain sa average ng mga loss sa panahong iyon: habang mas malaki ang proporsyon ng gain kumpara sa loss, mas malapit sa 100 ang RSI; habang mas malaki ang proporsyon ng loss, mas malapit sa 0.</p><p>Sa pinasimpleng paraan, ang formula ay RSI = 100 − [100 / (1 + FR)], kung saan ang FR ay ang relative strength, kinakalkula sa paghati ng average ng gain sa average ng loss sa napiling panahon. Kung, sa huling 14 candle, ang average ng gain ay R$ 0,80 kada bullish candle at ang average ng loss ay R$ 0,40 kada bearish candle, ang relative strength ay magiging 2 (0,80 hinati sa 0,40), na magreresulta sa RSI na humigit-kumulang 67 — nasa ibaba pa ng overbought zone, ngunit nagpapahiwatig na ng pangingibabaw ng bumibili.</p><h2>Pag-configure ng period ng RSI</h2><p>Mahusay gumana ang default na period na 14 candle bilang panimulang punto, ngunit hindi ito nakapirming batas. Ang mas maiikling period, gaya ng 7, ay ginagawang mas sensitibo ang RSI, gumagawa ng senyales ng overbought at oversold nang mas madalas — kapaki-pakinabang ito sa mas maikling-panahong operasyon, ngunit gumagawa rin ng mas maraming peke na senyales. Ang mas mahabang period, gaya ng 21, ay pinapadulas ang indicator at binabawasan ang bilang ng senyales, ginagawang potensyal na mas maaasahan, ngunit mas naantala.</p><p>Ang pagpili ng period ay dapat sumunod sa timeframe at istilo ng operasyon: ang mga nagta-trade ng gráfikong minuto ay may posibilidad na mas gusto ang mas maiikling period, habang ang mga nagta-trade ng daily o weekly na gráfiko ay karaniwang pinapanatili ang default na 14 o kahit dinaragdagan pa ang bilang na ito.</p><h2>Overbought at oversold</h2><p>Ang pinakakilalang pagbasa ng RSI ay gumagamit ng mga linyang 70 at 30 bilang reperensya: ang mga value sa itaas ng 70 ay nagpapahiwatig ng overbought condition, nagmumungkahi na naunat na ang uptrend; ang mga value sa ibaba ng 30 ay nagpapahiwatig ng oversold, nagmumungkahi na sobra na ang pagbaba. Ang mga pagbasang ito ay hindi nangangahulugang agad babaligtad ang presyo — sa isang malakas na trend, ang RSI ay maaaring manatiling nasa itaas ng 70 (o sa ibaba ng 30) sa loob ng mahabang panahon bago ang anumang correction.</p><p>Kaya naman, mas mahusay gumana ang mga zone na ito bilang babala para mag-ingat kaysa bilang awtomatikong gatilyo ng entry na kontra sa trend, lalo na sa mga asset na may malakas at matagal na trend.</p><h2>Divergence: ang mas advanced na pagbasa ng RSI</h2><p>May divergence kapag ang presyo at ang RSI ay gumagalaw sa magkasalungat na direksyon. Kung gumagawa ang presyo ng bagong high, ngunit gumagawa naman ang RSI ng mas mababang high kaysa sa naunang, ito ay isang bearish divergence: kahit tumataas ang presyo, humihina ang momentum sa likod ng pagtaas na iyon, na maaaring mangunahan sa isang reversal o kahit ay pahinga lamang sa trend.</p><p>Totoo rin ang kabaligtaran: ang presyo na gumagawa ng mas mababang low habang ang RSI ay gumagawa ng mas mataas na low ay isang bullish divergence, nagmumungkahi na nauubos na ang selling pressure kahit patuloy pa ring bumababa ang presyo. Ang mga divergence ay karaniwang mas matatag na senyales kaysa sa simpleng pagbasa ng overbought at oversold, ngunit kailangan pa rin ng pagkumpirma mula sa presyo mismo bago bigyang-katwiran ang isang operasyon.</p><h2>Paggamit ng RSI sa praktika</h2><p>Mas mahusay gumana ang RSI kapag isinama sa isang pagbasa ng trend: ang paggamit ng mga pagbasa nitong overbought at oversold na pabor sa mas malaking trend, hindi kontra dito, ay may posibilidad na gumawa ng mas consistent na resulta. Sa Duotide, maaaring iayos ang period ng RSI at subukan ang iba't ibang configuration sa magkakaibang asset hanggang mahanap ang pinakamahusay sumasalamin sa pag-uugali ng merkadong iyon. Gaya ng anumang indicator na batay sa nakaraang presyo, hindi ginagarantiya ng RSI ang tamang pagtaya, at may tunay na risk ng pagkalugi ang bawat operasyon.</p>
+        <div class="bq-post__cta">
+          <p><strong>Magsanay muna bago sumugal.</strong> Gumawa ng account sa Duotide at subukan ang iyong mga ideya sa demo account na may R$ 10,000 na virtual na pondo.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Gumawa ng libreng account</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Basahin din</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/fil/blog/ano-ang-adx-indicator-at-paano-ito-gumagana/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ano ang ADX indicator at paano ito gumagana</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
+            <a class="bq__card" href="/fil/blog/ano-ang-stochastic-oscillator-at-paano-ito-gumagana/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ano ang Stochastic Oscillator at paano ito gumagana</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
+            <a class="bq__card" href="/fil/blog/ano-ang-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ano ang Average True Range (ATR) at paano ito kalkulahin</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Copyright © 2026 Duotide.<br>
+            Nakalaan ang lahat ng karapatan.<br>
+            opisyal na site.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Kompanya</h2>
+          <ul>
+            <li><a href="/fil/">Home</a></li>
+            <li><a href="/fil/duotide-legit-ba/">Legit ba ang Duotide?</a></li>
+            <li><a href="/fil/duotide-login/">Mga Paraan ng Login</a></li>
+            <li><a href="/fil/duotide-broker/">Kilalanin ang Broker</a></li>
+            <li><a href="/fil/duotide-ligtas-ba/">Seguridad ng Broker</a></li>
+            <li><a href="/fil/duotide-app/">App</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Makipag-ugnayan</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>24/7 na account manager</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/fil/duotide-faq/">Mga madalas itanong</a>
+          <a href="/fil/tungkol-sa-site/">Tungkol sa site na ito</a>
+          <a href="/fil/makipag-ugnayan/">Makipag-ugnayan</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Bumalik sa itaas ng pahina">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Isara">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">na 100%</span></h2>
+          <p>Mag-deposit gamit ang coupon na <strong>WELCOME100</strong> at makakuha ng 100% bonus sa halagang idineposito.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Coupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Nakopya!">Kopyahin</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Kunin na ngayon</a>
+          <p class="pp__mini">Napapailalim sa mga kondisyon ng promo. May panganib ng pagkalugi ang pag-trade ng leveraged products.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

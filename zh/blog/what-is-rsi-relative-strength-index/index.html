@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>什么是RSI相对强弱指数，如何计算 | Blog Duotide</title>
+  <meta name="description" content="逐步了解RSI的公式，一个手工演算的数值示例，以及如何解读该指标的超买、超卖和背离。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/what-is-rsi-relative-strength-index/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/o-que-e-o-rsi-indice-de-forca-relativa/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/what-is-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/que-es-el-rsi-indice-de-fuerza-relativa/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/what-is-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/what-is-the-rsi/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/was-ist-der-rsi-relativer-staerke-index/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/ano-ang-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/what-is-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/cose-lrsi-indice-di-forza-relativa-e-come-calcolarlo/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/what-is-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/what-is-rsi-relative-strength-index/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/what-is-rsi-relative-strength-index/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="什么是RSI相对强弱指数，如何计算">
+  <meta property="og:description" content="逐步了解RSI的公式，一个手工演算的数值示例，以及如何解读该指标的超买、超卖和背离。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/what-is-rsi-relative-strength-index/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="什么是RSI相对强弱指数，如何计算">
+  <meta name="twitter:description" content="逐步了解RSI的公式，一个手工演算的数值示例，以及如何解读该指标的超买、超卖和背离。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/what-is-rsi-relative-strength-index/#artigo",
+      "headline": "什么是RSI相对强弱指数，如何计算",
+      "description": "逐步了解RSI的公式，一个手工演算的数值示例，以及如何解读该指标的超买、超卖和背离。",
+      "url": "https://duotide.com.br/zh/blog/what-is-rsi-relative-strength-index/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "技术指标",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/what-is-rsi-relative-strength-index/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "什么是RSI相对强弱指数，如何计算",
+          "item": "https://duotide.com.br/zh/blog/what-is-rsi-relative-strength-index/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/o-que-e-o-rsi-indice-de-forca-relativa/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/what-is-rsi-relative-strength-index/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/que-es-el-rsi-indice-de-fuerza-relativa/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/what-is-rsi-relative-strength-index/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/what-is-the-rsi/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/was-ist-der-rsi-relativer-staerke-index/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/ano-ang-rsi-relative-strength-index/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/what-is-rsi-relative-strength-index/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/apa-itu-rsi-relative-strength-index-dan-cara-menghitung/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/cose-lrsi-indice-di-forza-relativa-e-come-calcolarlo/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/what-is-rsi-relative-strength-index/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/what-is-rsi-relative-strength-index/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">什么是RSI相对强弱指数，如何计算</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">技术指标</span>
+        <h1>什么是RSI相对强弱指数，如何计算</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>RSI，即相对强弱指数，是技术分析中最常用的动量指标之一。它比较某资产近期涨幅的力度和近期跌幅的力度，生成一个0到100之间的数字，帮助识别一次行情是否可能已经拉伸过度。</p><h2>RSI的公式</h2><p>计算首先要得到特定周期数（通常为14）内的平均涨幅和平均跌幅。基于这两个平均值，计算出相对强度，称为RS：</p><p><strong>RS = 平均涨幅 / 平均跌幅</strong></p><p>然后，用以下公式把RS转换成0到100的刻度：</p><p><strong>RSI = 100 − [100 / (1 + RS)]</strong></p><h2>一个手工演算的例子</h2><p>为了简化计算，这里用一个只有5次价格变动的例子，而不是通常使用的14次，仅用来说明计算过程。假设某股票连续几天的收盘价为：R$ 10,00；R$ 10,20；R$ 10,15；R$ 10,40；R$ 10,30；R$ 10,50。</p><p>相邻两次收盘价之间的变化为：</p><ul><li>第2天：+R$ 0,20（上涨）</li><li>第3天：−R$ 0,05（下跌）</li><li>第4天：+R$ 0,25（上涨）</li><li>第5天：−R$ 0,10（下跌）</li><li>第6天：+R$ 0,20（上涨）</li></ul><p>把三次上涨相加再除以5次变动，得到平均涨幅为(0,20 + 0,25 + 0,20) / 5 = 0,13。把两次下跌相加再除以5次变动，得到平均跌幅为(0,05 + 0,10) / 5 = 0,03。相对强度为RS = 0,13 / 0,03 = 4,33。代入最终公式：RSI = 100 − [100 / (1 + 4,33)] = 100 − 18,76 = <strong>81,24</strong>。</p><p>接近81的RSI表明，在这个简化的周期内，近期的涨幅明显压倒了跌幅，使该指标处于超买的读数。</p><h2>如何解读超买和超卖水平</h2><p>传统的解读认为，高于70的数值为超买，暗示上涨行情可能已经拉伸过度；低于30的数值为超卖，对下跌行情暗示同样的情况。这些数字并不是自动的买入或卖出信号。在强劲的上升趋势中，RSI可能长时间保持在70以上，如果每次它穿越这个水平就卖出，可能意味着提前退出一个仍有很大延续空间的趋势。</p><h2>背离：当价格和RSI出现分歧</h2><p>当价格创出新高，但RSI的高点却低于前一个高点时，就出现了背离，这表明即使价格仍在上涨，上涨行情的内在力量也正在减弱。反过来也是如此，价格创出更低的低点，而RSI却形成更高的低点。背离是对行情可能正在失去力量的一种警示，而不是对即将反转的保证。</p><h2>使用RSI时常见的错误</h2><ul><li>把每一次穿越70或30的情况都当作自动的入场信号，而忽视更大趋势的背景。</li><li>单独使用RSI，而不检查支撑、阻力或图表的整体结构。</li><li>把不同资产的RSI放在一起比较，仿佛同一个数字在任何波动性背景下都代表同样的意思。</li><li>忽视时间周期：在5分钟图上计算出的RSI，衡量的内容与日线图上同一指标衡量的内容大不相同。</li></ul><h2>不同时间周期上的RSI</h2><p>根据所使用的图表不同，同一资产可能显示出完全不同的RSI读数。基于5分钟K线计算的RSI，会对极短期的波动做出反应，在一天之内可能多次在超买和超卖之间切换。而基于日K线或周K线计算的RSI，则往往变化更缓慢，通常反映的是更长周期的行情。在用一个固定规则来比较RSI读数之前，值得先确认所选的时间周期，是否与计划进行的操作类型相符，无论是一次快速的日内交易，还是一个持续多天的仓位。</p><h2>如何更负责任地使用RSI</h2><p>RSI最适合作为更全面分析中的一部分，而不是一个单独的入场触发条件。把RSI的解读与更大时间周期的趋势、支撑和阻力水平，以及价格在这些水平附近的反应结合起来，通常比仅仅依据某个固定数字的穿越，能得到更可靠的判断。与任何技术指标一样，RSI描述的是价格过去的表现，并不能保证接下来会发生什么。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

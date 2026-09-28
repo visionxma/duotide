@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>什么是波段交易，如何在实践中应用 | Blog Duotide</title>
+  <meta name="description" content="了解什么是波段交易，它与日内交易的区别，并看一个包含入场、止损、目标和仓位计算的实际例子。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/swing-trading-how-to-apply-it/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/o-que-e-swing-trading-como-aplicar/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/what-is-swing-trading-how-to-apply-it/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/que-es-el-swing-trading-como-aplicarlo/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/was-ist-swing-trading-und-wie-man-es-anwendet/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/ano-ang-swing-trading-paano-ilapat-sa-praktika/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/what-is-swing-trading-how-to-apply/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/apa-itu-swing-trading-cara-menerapkannya/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/cose-lo-swing-trading-e-come-applicarlo-nella-pratica/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-to-apply-swing-trading-in-practice/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/swing-trading-how-to-apply-it/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/what-is-swing-trading-how-to-apply-it/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="什么是波段交易，如何在实践中应用">
+  <meta property="og:description" content="了解什么是波段交易，它与日内交易的区别，并看一个包含入场、止损、目标和仓位计算的实际例子。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/swing-trading-how-to-apply-it/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-01.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="什么是波段交易，如何在实践中应用">
+  <meta name="twitter:description" content="了解什么是波段交易，它与日内交易的区别，并看一个包含入场、止损、目标和仓位计算的实际例子。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/swing-trading-how-to-apply-it/#artigo",
+      "headline": "什么是波段交易，如何在实践中应用",
+      "description": "了解什么是波段交易，它与日内交易的区别，并看一个包含入场、止损、目标和仓位计算的实际例子。",
+      "url": "https://duotide.com.br/zh/blog/swing-trading-how-to-apply-it/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
+      "articleSection": "交易策略",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/swing-trading-how-to-apply-it/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "什么是波段交易，如何在实践中应用",
+          "item": "https://duotide.com.br/zh/blog/swing-trading-how-to-apply-it/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/o-que-e-swing-trading-como-aplicar/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/what-is-swing-trading-how-to-apply-it/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/que-es-el-swing-trading-como-aplicarlo/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/was-ist-swing-trading-und-wie-man-es-anwendet/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/ano-ang-swing-trading-paano-ilapat-sa-praktika/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/what-is-swing-trading-how-to-apply/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/apa-itu-swing-trading-cara-menerapkannya/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/cose-lo-swing-trading-e-come-applicarlo-nella-pratica/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-to-apply-swing-trading-in-practice/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/swing-trading-how-to-apply-it/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">什么是波段交易，如何在实践中应用</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">交易策略</span>
+        <h1>什么是波段交易，如何在实践中应用</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>在当天操作和着眼数年的投资之间，存在一个空间，波段交易正处在这个空间里。它的理念说起来很简单：交易者不在收盘前平仓，而是持仓几天或几周，试图捕捉一段比单一交易时段更大的价格行情。</p><p>这大大改变了操作者的日常节奏。不需要整天盯着图表，但需要接受价格在到达（或没有到达）目标之前，某个时刻会朝不利方向波动，并且要有应对这种情况的框架。</p><h2>波段交易处于什么位置</h2><p>在日内交易中，仓位在同一天开立和平仓，追求短暂的行情，使用分钟图。在长期投资中，时间跨度是以年为单位，关注公司或资产的基本面。波段交易居于两者之间：最常用的图表是1小时图、4小时图和日线图，仓位通常持续两三天到几周，跟随一段趋势从开始到结束。</p><p>这种中间位置带来一个实际的优势：比日内交易需要更少的盯盘时间，因为不需要对每一分钟都做出反应，但仍然可以非常客观地使用技术分析，明确设定入场点、止损和目标。</p><h2>最常用的工具</h2><p>做波段交易的人通常只结合少数几个要素，但会持续使用：用移动平均线判断趋势方向，用支撑和阻力水平标出价格历史上做出反应的位置，用某个振荡指标（比如RSI或随机指标）来避免在资产已经涨得太多时买入，或在跌得太多时卖出。目标不是精确地抓住最低点或最高点，而是在方向已经显示出确定迹象之后再入场，愿意放弃行情最初的一段，以换取更高的安全性。</p><h2>一个实际操作的例子</h2><p>假设一位交易者有R$ 5.000用于操作的资金，事先设定每笔入场最多冒1%资金的风险——在这个例子中是R$ 50。她发现某只股票处于上升趋势，在日线图上遵循着20周期移动平均线，决定在价格回调到这条均线、也就是R$ 25,00每股时买入。</p><p>止损设在R$ 24,00，正好位于最近一个支撑位下方——每股风险为R$ 1,00。用风险限额（R$ 50）除以每股风险（R$ 1,00），得到仓位大小为50股，总投入金额为R$ 1.250,00。目标基于此前的阻力位设定在R$ 27,00，这意味着每股潜在盈利为R$ 2,00，总计R$ 100,00——盈亏比为1比2。如果价格触及止损，亏损限制在R$ 50,00；如果触及目标，盈利则是所冒风险的两倍。</p><p>这种计算方式——先确定以雷亚尔计的风险，再决定买多少股——正是把一笔有计划的操作与一次赌博区分开来的关键。仓位的大小源自可接受的风险，而不是反过来。</p><h2>如何建立波段交易的日常节奏</h2><ul><li>选择少数几种资产密切跟踪，而不是试图关注整个市场——这有助于更容易识别每种资产正常的行为模式。</li><li>在交易时段之外从容地分析图表，在开仓之前就确定好入场点、止损和目标。</li><li>每天查看一两次已开立的仓位，不需要持续盯盘。</li><li>接受并非每笔操作都会朝预期方向发展——支撑长期结果的，是每笔操作的风险控制，而不是某一次孤立的判断正确。</li></ul><h2>对初学者来说值得吗</h2><p>波段交易通常对白天有其他工作的人来说更容易上手，正是因为它不需要持续盯盘。尽管如此，它仍然需要耐心去持有一个仓位几天而不随时去调整它，对很多人来说，这在心理上比看起来更困难。</p><p>与任何操作市场的方式一样，结果没有任何保证，即使分析做得很好，行情也可能朝不利方向发展——这就是为什么像上面例子中那样按笔进行的风险管理，是策略的一部分，而不是可有可无的细节。在模拟账户中测试这种方法，包括练习持有仓位数天的耐心，是在用真实资金操作之前，判断这种风格是否适合你的一种安全方式。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">日内交易者最实用的指标</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

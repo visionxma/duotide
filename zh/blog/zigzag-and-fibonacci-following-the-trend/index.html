@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>ZigZag和斐波那契：如何跟踪图表的趋势 | Blog Duotide</title>
+  <meta name="description" content="了解ZigZag指标如何过滤图表噪音，以及如何把它与斐波那契回撤结合起来寻找入场点。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/zigzag-and-fibonacci-following-the-trend/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/zig-zag-fibonacci-seguindo-tendencia/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/zigzag-und-fibonacci-dem-trend-folgen/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/zig-zag-dan-fibonacci-cara-mengikuti-tren-grafik/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/zig-zag-e-fibonacci-come-seguire-il-trend-del-grafico/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/zigzag-and-fibonacci-following-the-trend/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/zig-zag-fibonacci-seguindo-tendencia/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ZigZag和斐波那契：如何跟踪图表的趋势">
+  <meta property="og:description" content="了解ZigZag指标如何过滤图表噪音，以及如何把它与斐波那契回撤结合起来寻找入场点。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/zigzag-and-fibonacci-following-the-trend/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZigZag和斐波那契：如何跟踪图表的趋势">
+  <meta name="twitter:description" content="了解ZigZag指标如何过滤图表噪音，以及如何把它与斐波那契回撤结合起来寻找入场点。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/zigzag-and-fibonacci-following-the-trend/#artigo",
+      "headline": "ZigZag和斐波那契：如何跟踪图表的趋势",
+      "description": "了解ZigZag指标如何过滤图表噪音，以及如何把它与斐波那契回撤结合起来寻找入场点。",
+      "url": "https://duotide.com.br/zh/blog/zigzag-and-fibonacci-following-the-trend/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "技术指标",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/zigzag-and-fibonacci-following-the-trend/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ZigZag和斐波那契：如何跟踪图表的趋势",
+          "item": "https://duotide.com.br/zh/blog/zigzag-and-fibonacci-following-the-trend/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/zig-zag-fibonacci-seguindo-tendencia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/zigzag-und-fibonacci-dem-trend-folgen/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/zig-zag-dan-fibonacci-cara-mengikuti-tren-grafik/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/zig-zag-e-fibonacci-come-seguire-il-trend-del-grafico/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/zigzag-and-fibonacci-following-the-trend/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">ZigZag和斐波那契：如何跟踪图表的趋势</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">技术指标</span>
+        <h1>ZigZag和斐波那契：如何跟踪图表的趋势</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>刚开始看价格图表的人很快就会发现一个问题：价格从不沿直线上涨或下跌。它前进，稍微回落，再前进，这种由小行情组成的锯齿状走势，让人很难看清趋势真正的方向。两个工具结合使用，有助于解决这个问题：ZigZag指标，它清除噪音并突出重要的行情；以及斐波那契回撤，它有助于估计趋势内的一次回调可能到达多远，然后价格才会重新回到主要方向。</p><p>这两者单独都不能预测未来。它们的力量在于，一个把图表的视觉解读系统化，另一个则指出更有可能出现反应的价格区域。</p><h2>ZigZag真正做的是什么</h2><p>ZigZag是一个用直线连接图表上最重要的高点和低点、忽略较小波动的指标。它使用一个最小变动参数，通常以百分比表示：只有当价格从最后一个标记点开始的变动超过这个百分比时，才会画出一条新线。举例来说，如果你把ZigZag设置为5%，那么一轮上涨中间出现的2%回调根本不会出现在这条线上。</p><p>结果是一张更清晰的图表，更容易识别构成趋势的上涨和下跌波段。有一个众所周知的局限值得记住：随着新价格的到来，ZigZag的最后一段会重新绘制，因为该指标只有在随后的行情已经发生之后，才会确认一个顶部或底部。因此，它适合用来整理已经发生的行情，而不适合在转折点那一刻生成入场信号。</p><h2>斐波那契回撤在哪里发挥作用</h2><p>斐波那契回撤基于这样一个观察：在一次强劲行情之后，价格通常会先回吐一部分已经走过的距离，然后才继续朝同一方向前进。最常用的水平是行情起点到终点距离的23.6%、38.2%、50%、61.8%和78.6%。</p><p>要绘制这些水平，需要选择两个点：一段趋势波段的起点和终点。这正是ZigZag发挥作用的地方，因为它已经为你分离出了这些波段，消除了应该用哪个较小波动作为参考的疑惑。</p><h2>一个EUR/USD的实际例子</h2><p>假设ZigZag在EUR/USD上显示出一段清晰的上涨波段，从1.0500涨到1.0800——一次300点的行情。把斐波那契应用到这段波段上，61.8%的水平就是1.0800减去300点的61.8%，也就是1.0800减去185.4点，结果约为1.0615。而38.2%的水平则接近1.0685。</p><p>如果在1.0800的顶部之后，价格开始回落，接近1.0615到1.0685这个区间，这两个水平就值得密切关注：从历史上看，如果上升趋势依然健康，市场往往会在这个区域重新找到买家。这不是反应的保证——只是一个值得关注的高概率区域，在做出任何决定之前，需要其他信号的确认。</p><h2>如何在实践中把两者结合起来</h2><p>一个简单的工作流程分三步。第一，在图表上应用ZigZag，观察最近一段清晰的趋势波段，从一个重要的低点到一个重要的高点（在下降趋势中则相反）。第二，正好在这段波段上，从起点到终点绘制斐波那契。第三，等待价格接近其中一个关键水平——通常是38.2%、50%或61.8%——并用另一个工具寻求确认，比如一个反转K线形态、一次均线交叉，或者该区域更强的成交量。</p><p>值得再次强调：这类分析有助于组织寻找机会的思路，但不能替代风险控制。事先通过止损确定你能接受错到什么程度，依然是不可或缺的，因为市场并不总是尊重某个斐波那契水平。</p><h2>使用这种组合时需要注意的事项</h2><ul><li>ZigZag会在新价格到来时改变最后一段——不要把它最近的那个点当作已经确认的。</li><li>斐波那契在趋势明确的市场中效果最好；在横盘市场中，这些水平会失去参考价值。</li><li>入场前始终使用不止一个信号：单独触及一个斐波那契水平，理由并不充分。</li><li>在应用到真实操作之前，先在模拟账户中练习解读这两个指标——Duotide可以让你在不冒资金风险的情况下练习这类解读。</li></ul><p>归根结底，把ZigZag和斐波那契结合起来，是一种为原本只是凭直觉看图表的解读方式带来更多结构的方法。先客观地识别趋势波段，从中绘制水平，并把每个回撤区域当作一个需要确认的问题——而不是一个现成的答案。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

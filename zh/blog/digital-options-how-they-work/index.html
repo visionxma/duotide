@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>数字期权：如何运作，如何计算真实风险 | Blog Duotide</title>
+  <meta name="description" content="了解数字期权是如何运作的、行权价所扮演的角色，以及如何计算所提供的回报是否值得承担的风险。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/digital-options-how-they-work/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/opcoes-digitais-como-funcionam/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/digital-options-how-they-work/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/digitale-optionen-wie-sie-funktionieren/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/digital-options-paano-ito-gumagana/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/digital-options-how-they-work/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/opsi-digital-cara-kerja-dan-menghitung-risiko-nyata/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/opzioni-digitali-come-funzionano-e-come-calcolare-il-rischio/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/digital-options-how-they-work/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/digital-options-how-they-work/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="数字期权：如何运作，如何计算真实风险">
+  <meta property="og:description" content="了解数字期权是如何运作的、行权价所扮演的角色，以及如何计算所提供的回报是否值得承担的风险。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/digital-options-how-they-work/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="数字期权：如何运作，如何计算真实风险">
+  <meta name="twitter:description" content="了解数字期权是如何运作的、行权价所扮演的角色，以及如何计算所提供的回报是否值得承担的风险。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/digital-options-how-they-work/#artigo",
+      "headline": "数字期权：如何运作，如何计算真实风险",
+      "description": "了解数字期权是如何运作的、行权价所扮演的角色，以及如何计算所提供的回报是否值得承担的风险。",
+      "url": "https://duotide.com.br/zh/blog/digital-options-how-they-work/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
+      "articleSection": "期权",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/digital-options-how-they-work/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "数字期权：如何运作，如何计算真实风险",
+          "item": "https://duotide.com.br/zh/blog/digital-options-how-they-work/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/opcoes-digitais-como-funcionam/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/digital-options-how-they-work/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/digitale-optionen-wie-sie-funktionieren/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/digital-options-paano-ito-gumagana/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/digital-options-how-they-work/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/opsi-digital-cara-kerja-dan-menghitung-risiko-nyata/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/opzioni-digitali-come-funzionano-e-come-calcolare-il-rischio/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/digital-options-how-they-work/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">数字期权：如何运作，如何计算真实风险</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">期权</span>
+        <h1>数字期权：如何运作，如何计算真实风险</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>研究金融市场的人迟早会遇到“数字期权”这个词。它的核心理念很简单：你选择一种资产，确定一个方向（上涨或下跌）和到期时间，操作的结果取决于该资产的价格最终是高于还是低于一个被称为行权价（strike）的参考值。不存在中间地带——要么判断正确，获得预先设定的回报，要么判断错误，损失投入这笔操作的金额。</p><p>这种形式之所以流行，是因为它在视觉上容易理解，但容易理解并不等于容易稳定地操作。在冒险投入真实资金之前，值得先了解价格是如何形成的、它与其他类型期权的区别，尤其是对你的资金来说，多大的风险规模才合理。</p><h2>数字期权与传统期权的区别</h2><p>在传统期权中（金融课程中讲授的那种，在受监管交易所交易），买方支付一笔权利金，获得在到期日之前以约定价格买入或卖出某资产的权利，而非义务。期权的价值会随着市场的变动持续变化，结果可以是部分的：你可能小赚，可能大赚，也可能只损失所付权利金的一部分。</p><p>而在数字期权中，结构是二元的，期限通常也短得多——从几分钟到几天不等。在开仓之前，你就确切知道能赚多少、能亏多少。这种可预测性是有代价的：由于结果是全有或全无，微小的时机误差所造成的影响，比在价格逐渐变动的传统期权中要大得多。</p><h2>行权价和期限如何影响结果</h2><p>行权价是决定这笔操作赢还是输的标尺。如果你押注某资产会上涨，选择了一个远离当前价格的行权价，判断正确的概率会下降，但通常提供的回报会更高。如果选择一个接近当前价格的行权价，判断正确的概率会上升，但回报往往会更低。不存在孤立意义上“好”的行权价——存在的是距离、期限和回报之间的一种关系，这种关系对你来说必须在数学上讲得通。</p><p>假设某资产报价为R$ 100,00。你投入R$ 50,00，押注它会在15分钟内收在R$ 100,00以上，判断正确时的回报率为80%。如果判断正确，你会拿到R$ 90,00（投入的R$ 50,00加上R$ 40,00的利润）。如果判断错误，你会损失R$ 50,00。为了让这笔操作长期打平，你需要在超过55.5%的时候判断正确——因为每次判断错误的代价是R$ 50,00，而每次判断正确的净收益是R$ 40,00。指导你决定是否入场的，应该是这个计算，而不是“我看到了一个趋势”这种感觉。</p><h2>操作前制定一个计划</h2><p>一个简单的计划能减少操作过程中的情绪化决策。在开出任何仓位之前，有几点值得先确定下来：</p><ul><li>你的策略历史上的胜率是多少，至少要基于此前30到50笔操作来衡量。</li><li>所选行权价和期限提供的回报是多少，它是否能够覆盖这个胜率。</li><li>每笔操作分配的资金占总资金的比例是多少——比例越小，你的账户越能承受一连串亏损。</li><li>在什么情况下你会在当天停止操作，无论是达到盈利目标，还是触及亏损限额。</li></ul><h2>值得关注的风险</h2><p>数字期权的短期限是主要的风险因素：它缩短了反应时间，增加了凭冲动操作的诱惑，试图用下一笔操作“挽回”一次亏损。这被称为报复性交易，往往会把一次单独的亏损变成一连串更大的亏损。另一个需要注意的点，是在不了解参考资产——货币、指数或大宗商品——的情况下进行操作，因为新闻和市场流动性会影响接下来几分钟内价格的速度和方向。</p><p>像Duotide这样的平台会以可视化的方式组织这些数据，但图表的解读，仍然是操作者自己的责任。没有任何工具能替代一个事先制定好的风险管理计划。</p><h2>把这一切付诸实践</h2><p>在投入真实资金之前，值得先在纸面上模拟操作：记录资产、行权价、期限、提供的回报和结果，但不实际下单。在模拟了30笔操作之后，计算胜率，并与打平所需的回报进行比较，就像上面R$ 100,00的例子那样。如果这个数字对不上，问题就不在于下一轮的运气——而在于策略本身。交易涉及真实的资金亏损风险，没有任何技巧能保证持续盈利；真正存在的，是做得好的风险管理，它能避免一次单独的失误拖垮全部可用资金。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/how-binary-options-work/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">二元期权实际上是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/binary-options-step-by-step-risk-management/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">二元期权：实用操作步骤与风险管理</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/5-tips-trade-time-capital-efficiency/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">提高交易时间和资金效率的5个技巧</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

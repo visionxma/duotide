@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>什么是暗池（dark pools），它们如何影响市场可见的流动性 | Blog Duotide</title>
+  <meta name="description" content="一份关于暗池的中立指南：它们为什么存在、谁在使用它们，以及对小散户而言，它们对价格透明度有何真实影响。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/what-are-dark-pools-financial-market/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/o-que-sao-dark-pools-no-mercado-financeiro/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/what-are-dark-pools-in-the-financial-market/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/que-son-los-dark-pools-en-el-mercado-financiero/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/was-sind-dark-pools-im-finanzmarkt/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/ano-ang-dark-pools-sa-financial-market/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/what-are-dark-pools-in-financial-markets/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/apa-itu-dark-pool-dan-pengaruhnya-pada-likuiditas/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/cosa-sono-i-dark-pool-nel-mercato-finanziario/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/understanding-dark-pools-in-trading/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/what-are-dark-pools-financial-market/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/what-are-dark-pools-in-the-financial-market/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="什么是暗池（dark pools），它们如何影响市场可见的流动性">
+  <meta property="og:description" content="一份关于暗池的中立指南：它们为什么存在、谁在使用它们，以及对小散户而言，它们对价格透明度有何真实影响。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/what-are-dark-pools-financial-market/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="什么是暗池（dark pools），它们如何影响市场可见的流动性">
+  <meta name="twitter:description" content="一份关于暗池的中立指南：它们为什么存在、谁在使用它们，以及对小散户而言，它们对价格透明度有何真实影响。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/what-are-dark-pools-financial-market/#artigo",
+      "headline": "什么是暗池（dark pools），它们如何影响市场可见的流动性",
+      "description": "一份关于暗池的中立指南：它们为什么存在、谁在使用它们，以及对小散户而言，它们对价格透明度有何真实影响。",
+      "url": "https://duotide.com.br/zh/blog/what-are-dark-pools-financial-market/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp",
+      "articleSection": "市场",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/what-are-dark-pools-financial-market/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "什么是暗池（dark pools），它们如何影响市场可见的流动性",
+          "item": "https://duotide.com.br/zh/blog/what-are-dark-pools-financial-market/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/o-que-sao-dark-pools-no-mercado-financeiro/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/what-are-dark-pools-in-the-financial-market/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/que-son-los-dark-pools-en-el-mercado-financiero/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/was-sind-dark-pools-im-finanzmarkt/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/ano-ang-dark-pools-sa-financial-market/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/what-are-dark-pools-in-financial-markets/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/apa-itu-dark-pool-dan-pengaruhnya-pada-likuiditas/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/cosa-sono-i-dark-pool-nel-mercato-finanziario/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/understanding-dark-pools-in-trading/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/what-are-dark-pools-financial-market/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">什么是暗池（dark pools），它们如何影响市场可见的流动性</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">市场</span>
+        <h1>什么是暗池（dark pools），它们如何影响市场可见的流动性</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>并非所有股票和其他资产的交易，都发生在任何投资者都能实时观察到的公开交易所。全球交易量中有相当一部分，是通过被称为暗池（dark pools）的私人交易场所完成的——之所以这样称呼，是因为其中的订单在执行之前不会公开显示。</p><h2>暗池究竟是什么</h2><p>暗池是一种由银行、经纪商或专业公司运营的私人交易平台，机构投资者——养老基金、资产管理公司、大型投资基金——可以在这里交易大宗股票，而不需要在执行之前将订单暴露给公开市场。这笔交易只有在完成之后才会公开，通常还会有一个小小的报告延迟。</p><h2>为什么机构更愿意这样交易</h2><p>设想一个需要卖出一家公司200万股股票的基金。如果这整笔订单一次性出现在交易所的公开订单簿上，市场很可能在完全成交之前就做出反应，随着其他参与者察觉到卖压而压低价格——这种效应被称为市场冲击。通过在暗池中交易，该基金能够与同样是机构的对手方完成这笔大额交易，事先不暴露意图，也不会在交易完成之前把价格推向对自己不利的方向。</p><h2>对小散户透明度的影响</h2><p>由于一部分成交量在执行之前不会出现在公开订单簿上，公开交易所显示的价格和成交量，只代表该资产真实市场活动的一部分。这意味着，一个只看公开交易所成交量的小散户，可能看到的是该股票在某一时刻真实供需情况的不完整写照——这本身并不代表存在任何违规行为。</p><h2>这类交易的监管与限制</h2><p>暗池的运作受到各市场监管机构的监管，对交易报告、最低手数以及交易完成后公开的时限都有具体规定。这些规则的存在，正是为了在减少大额订单市场冲击这一好处，与维持整个市场最低限度透明度的需要之间取得平衡。</p><h2>这不是阴谋论，而是这套体系的一部分</h2><p>人们常常有一种想法，认为暗池的存在是为了让大玩家的行动“瞒着”小散户。实际上，这个机制的存在，是为了在一个受监管、需要报告的框架内解决一个真实且被公认的问题——超大订单的市场冲击——而不是为了游走在法律边缘运作。小散户无法直接进入这些场所，是因为它们是为大规模机构交易设计的，而不是因为存在专门损害他们利益的意图。</p><h2>这对散户操作者在实践中意味着什么</h2><p>了解暗池的存在，有助于解释一些价格波动看起来与公开交易所可见成交量不成比例的情况——部分真实的活动，只是在这笔交易被报告之前，根本不可见。这也提醒人们，不要仅凭单一交易所的成交量就得出确定的结论，尤其是在机构交易更为密集的大盘股上，应该把成交量和订单流的解读，当作部分数据，而不是市场的完整图景。</p><h2>当成交量似乎与行情不匹配时该关注什么</h2><p>当一种资产出现明显的行情，而公开交易所却没有相应可见的成交量时，值得考虑在这笔交易被报告之前，可能已经发生了重要的场外交易。这并不会改变是否操作的决定，但能避免草率地得出“市场无缘无故就动了”的结论——很多时候，原因是存在的，只是在行情发生的那一刻并不可见。在可获取的情况下，关注定期发布的汇总成交量报告，有助于获得比实时订单簿更完整一些的视角。这个习惯对那些依据成交量分析做决策的人尤其有用：理解显示的数字只是部分数据，而不是市场上的总成交量，可以避免从不完整的数据中得出错误的结论。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/anthropic-ipo-what-is-known-so-far/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Anthropic的IPO：目前哪些是事实，哪些是传闻</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/after-hours-trading-explained/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是盘后交易（after-hours）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/4-classic-trading-books/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">每个交易者都应该读的4本经典著作</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

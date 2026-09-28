@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>什么是真实波幅均值（ATR），如何计算 | Blog Duotide</title>
+  <meta name="description" content="学习如何逐步计算ATR，附带一个数值示例，并了解如何用这个波动性指标来调整止损和仓位。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/what-is-average-true-range-atr/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/o-que-e-o-average-true-range-atr/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/what-is-average-true-range-atr/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/que-es-el-average-true-range-atr/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/what-is-average-true-range-atr/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/what-is-average-true-range/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/was-ist-average-true-range-atr/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/ano-ang-average-true-range-atr/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/what-is-average-true-range-atr/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/apa-itu-average-true-range-atr-dan-cara-menghitung/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/what-is-average-true-range-atr/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/what-is-average-true-range-atr/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/what-is-average-true-range-atr/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="什么是真实波幅均值（ATR），如何计算">
+  <meta property="og:description" content="学习如何逐步计算ATR，附带一个数值示例，并了解如何用这个波动性指标来调整止损和仓位。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/what-is-average-true-range-atr/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="什么是真实波幅均值（ATR），如何计算">
+  <meta name="twitter:description" content="学习如何逐步计算ATR，附带一个数值示例，并了解如何用这个波动性指标来调整止损和仓位。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/what-is-average-true-range-atr/#artigo",
+      "headline": "什么是真实波幅均值（ATR），如何计算",
+      "description": "学习如何逐步计算ATR，附带一个数值示例，并了解如何用这个波动性指标来调整止损和仓位。",
+      "url": "https://duotide.com.br/zh/blog/what-is-average-true-range-atr/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
+      "articleSection": "技术指标",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/what-is-average-true-range-atr/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "什么是真实波幅均值（ATR），如何计算",
+          "item": "https://duotide.com.br/zh/blog/what-is-average-true-range-atr/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/o-que-e-o-average-true-range-atr/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/what-is-average-true-range-atr/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/que-es-el-average-true-range-atr/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/what-is-average-true-range-atr/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/what-is-average-true-range/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/was-ist-average-true-range-atr/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/ano-ang-average-true-range-atr/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/what-is-average-true-range-atr/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/apa-itu-average-true-range-atr-dan-cara-menghitung/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/what-is-average-true-range-atr/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/what-is-average-true-range-atr/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">什么是真实波幅均值（ATR），如何计算</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">技术指标</span>
+        <h1>什么是真实波幅均值（ATR），如何计算</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>与大多数指标不同，真实波幅均值（ATR）并不试图预测任何方向。它只衡量一件事：某资产在一段周期内通常以绝对值计算移动多少。它是一把衡量波动性的尺子，而不是买入或卖出的信号。</p><p>ATR由J. Welles Wilder创建，此人也是ADX和RSI的作者，几乎出现在每一个需要根据资产真实表现来确定止损大小或仓位大小的策略中，而不是使用一个随意选定的固定数值。</p><h2>为什么简单的“最高价减最低价”还不够</h2><p>如果你只是用每根K线的最高价减去最低价，就会遗漏一个重要的细节：跳空。假设某资产前一个交易日以R$ 50,00收盘，第二个交易日一开盘就是R$ 46,00，随后在R$ 45,50和R$ 46,80之间交易。K线内部的波幅（最高价减最低价）只有R$ 1,30。但自上一次收盘以来的真实变动却是R$ 4,50。忽视这一点，会低估该资产真实的波动性。</p><h2>如何计算真实波幅</h2><p>为了解决这个问题，每根K线的真实波幅（TR）取以下三个计算结果中的最大值：</p><ul><li>当前K线最高价减去当前K线最低价；</li><li>当前K线最高价减去前一根K线收盘价（取绝对值）；</li><li>当前K线最低价减去前一根K线收盘价（取绝对值）。</li></ul><p>在上面的例子中，TR就是1.30（46,80 − 45,50）、3.20（|46,80 − 50,00|）和4.50（|45,50 − 50,00|）三者中的最大值。也就是说，TR = R$ 4,50——这才是真正捕捉到包括跳空在内的行情幅度的数字。</p><h2>从真实波幅到ATR</h2><p>ATR是真实波幅在一段周期内（通常为14根K线）的平滑平均值。第一个数值通常是前14个TR的简单平均值。此后，就应用Wilder的平滑公式：</p><p><strong>今日ATR = ((前一日ATR × 13) + 今日TR) ÷ 14</strong></p><p>假设昨天的ATR为R$ 2,00，按照前面的例子，今天的TR为R$ 4,50：</p><p><strong>今日ATR = ((2,00 × 13) + 4,50) ÷ 14 = (26,00 + 4,50) ÷ 14 = 30,50 ÷ 14 ≈ R$ 2,18</strong></p><p>请注意，一根强劲行情的K线并不会让ATR一下子飙升——它是逐渐上升的，因为它承载着此前13个周期的权重。这是刻意设计的：ATR衡量的是反复出现的波动性，而不是一次孤立的峰值。</p><h2>在实践中有什么用</h2><p>ATR最常见的用途，是按照资产自身的表现，按比例设定止损和仓位大小，而不是对任何市场都使用固定的点数或金额。</p><p>举个例子：如果某资产的ATR为R$ 2,18，一个设在距入场点1.5倍ATR处的止损，就会距入场价R$ 3,27（2,18 × 1,5）。而在一个波动性更大、ATR为R$ 8,00的资产上，同样1.5倍ATR的倍数会得出R$ 12,00的止损——宽得多，因为这个资产本身日常波动就更大。在这两种情况下都使用同样固定的止损距离没有多大意义：在更平静的资产上，止损会显得太宽；在波动更大的资产上，止损则太紧，容易被单纯的市场噪音触发。</p><h2>ATR不能告诉你价格会往哪个方向走</h2><p>一个常见的错误是试图把ATR当作入场信号——ATR高既不表示看涨也不表示看跌，只表示波动更大。一次剧烈的10%下跌和一次剧烈的10%上涨，可能产生相似的真实波幅读数，因为计算使用的是绝对值。因此，ATR通常与另一个指标或趋势判断一起出现，从不单独作为操作的触发条件。</p><h2>把ATR应用到日常操作中</h2><p>ATR更适合作为风险管理工具，而不是入场信号。它有助于回答一些实际问题：这个止损是否与资产当前的波动性成比例？考虑到价格通常的波动幅度，这个仓位大小是否合理？以这种方式使用，该指标能降低止损被该资产常见噪音触发的可能性，尽管没有任何风险管理技巧能完全消除风险——它只是帮助更一致地衡量风险的大小。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD、随机指标与抛物线SAR：如何组合使用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>用随机振荡指标判断超买和超卖 | Blog Duotide</title>
+  <meta name="description" content="学习如何用随机振荡指标识别超买和超卖区域，以及在趋势市场和横盘市场中使用它的区别。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/stochastic-oscillator-overbought-oversold/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/oscilador-estocastico-sobrecompra-sobrevenda/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/stochastic-oscillator-overbought-oversold/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/stochastik-oszillator-ueberkauft-ueberverkauft/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/stochastic-oscillator-overbought-oversold/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/stochastic-oscillator-overbought-oversold/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/overbought-oversold-dengan-osilator-stokastik/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/ipercomprato-e-ipervenduto-con-loscillatore-stocastico/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/stochastic-oscillator-overbought-oversold/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/stochastic-oscillator-overbought-oversold/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="用随机振荡指标判断超买和超卖">
+  <meta property="og:description" content="学习如何用随机振荡指标识别超买和超卖区域，以及在趋势市场和横盘市场中使用它的区别。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/stochastic-oscillator-overbought-oversold/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-03.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-app-03.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="用随机振荡指标判断超买和超卖">
+  <meta name="twitter:description" content="学习如何用随机振荡指标识别超买和超卖区域，以及在趋势市场和横盘市场中使用它的区别。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/stochastic-oscillator-overbought-oversold/#artigo",
+      "headline": "用随机振荡指标判断超买和超卖",
+      "description": "学习如何用随机振荡指标识别超买和超卖区域，以及在趋势市场和横盘市场中使用它的区别。",
+      "url": "https://duotide.com.br/zh/blog/stochastic-oscillator-overbought-oversold/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
+      "articleSection": "技术指标",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/stochastic-oscillator-overbought-oversold/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "用随机振荡指标判断超买和超卖",
+          "item": "https://duotide.com.br/zh/blog/stochastic-oscillator-overbought-oversold/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/oscilador-estocastico-sobrecompra-sobrevenda/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/stochastic-oscillator-overbought-oversold/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/stochastik-oszillator-ueberkauft-ueberverkauft/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/stochastic-oscillator-overbought-oversold/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/stochastic-oscillator-overbought-oversold/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/overbought-oversold-dengan-osilator-stokastik/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/ipercomprato-e-ipervenduto-con-loscillatore-stocastico/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/stochastic-oscillator-overbought-oversold/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">用随机振荡指标判断超买和超卖</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">技术指标</span>
+        <h1>用随机振荡指标判断超买和超卖</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>判断一种资产短期内是否“太贵”或“太便宜”，是技术分析中最常见的任务之一，而随机振荡指标是为此最常用的工具之一。与只看价格不同，随机指标把当前收盘价与最近若干周期的波动区间进行比较，这有助于看出一次行情在其自身近期区间内已经推进了多远。</p><p>这篇文章的重点正是这个问题：如何正确解读随机指标的超买和超卖区域，以及为什么这种解读会因市场类型而不同。</p><h2>随机指标真正衡量的是什么</h2><p>随机指标计算的是当前收盘价位于特定周期（通常为14）最高价和最低价区间中的哪个位置。结果以0到100的刻度表示：接近100的数值表示收盘价接近近期最高点；接近0的数值表示接近近期最低点。</p><p>最常用的参考区域是80以上，被认为是超买，以及20以下，被认为是超卖。这在实践中意味着，价格收盘时非常接近其自身近期波动区间的顶部或底部——但不一定意味着它会从那里反转。</p><h2>横盘市场中的超买和超卖</h2><p>正是在没有明确趋势、在一个区间内波动的市场中，随机指标的超买和超卖区域效果最好。在这种情境下，一种反复涨到区间顶部又跌到区间底部的资产，产生的超买和超卖信号，往往能真正预示着该区间内一次短期反转。</p><p>一个实际的例子：如果某资产几周来一直在R$ 18,00和R$ 21,00之间波动，没有突破任何一端，那么当随机指标在接近R$ 20,80时超过80，很有可能预示着价格将回落到区间中部，而在接近R$ 18,20、随机指标低于20时，情况正好相反。</p><h2>为什么同样的解读在强劲趋势中会失效</h2><p>初学者使用随机指标时最常犯的错误，是在一个趋势强劲且明确的资产上套用同样的逻辑。在持续的上涨行情中，价格可能反复收在近期最高点附近，让随机指标连续多根K线保持在80以上，这并不意味着反转——只是意味着上升趋势依然强劲。</p><p>在一个明确的上升趋势中，仅仅因为随机指标处于超买就卖出，是学习使用这个指标的人最常犯、代价也最高的错误之一。反过来，在强劲的下降趋势中，仅仅因为随机指标处于超卖就买入，也是同样的道理。</p><h2>如何在行动前区分这两种情境</h2><p>在把超买或超卖当作信号使用之前，值得先识别图表更大的背景：这种资产是处于明确的趋势中，还是处于横盘状态？一个简单的检查方法，是观察比用于入场的图表更大的时间周期，或者用一个趋势指标，比如更长周期的移动平均线，作为背景参考。</p><p>在强劲的趋势中，随机指标的超买和超卖区域，更适合作为可能出现短暂暂停的提示，而不是完全反转的信号。而在横盘市场中，它们可以更直接地当作逆势入场的触发条件，但始终要设定好止损，以防区间最终被突破。</p><h2>付诸实践</h2><p>在Duotide上，可以调整随机指标的周期，观察你已经关注的资产上，80和20这两个区域在趋势和横盘时期历史上的表现。把这种解读与图表的背景结合起来，而不是单独使用随机指标，能大大减少误判信号的数量。即便如此，任何超买或超卖的解读都不能保证一笔操作的结果，入场前始终应该计算亏损的风险。</p><p>还值得观察随机指标进出极端区域的速度。一个迅速冲到90、又以同样速度跌回50的随机指标，通常反映的是一次短暂的孤立行情。而一个连续多根K线“粘”在80以上的随机指标，通常更多是趋势的信号，而不是即将反转的信号——这再次强调了在决定那个读数对这笔操作意味着什么之前，先看清背景的重要性。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>包络线指标：移动平均带实战 | Blog Duotide</title>
+  <meta name="description" content="了解包络线指标如何在移动平均线周围建立百分比通道，用来识别价格的过度波动。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-envelopes-moving-average/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/envelopes-moving-average-indicator/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/indicador-envelopes-moving-average/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/envelopes-moving-average-indicator/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/envelopes-indicator-guide/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/envelopes-indikator-gleitender-durchschnitt/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/envelopes-indicator-moving-average-bands/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/indicateur-envelopes-bandes-de-moyenne-mobile/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/envelopes-moving-average-indicator/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/indikator-envelopes-band-moving-average/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/indicatore-envelopes-bande-di-media-mobile/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/envelopes-moving-average-indicator/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/envelopes-indikator-glidande-medelvardesband/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/envelopes-indicator-moving-average-bands/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/envelopes-gostergesi-pratikte-hareketli-ortalama-bantlari/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/chi-bao-envelopes-dai-trung-binh-dong/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/envelopes-moving-average-indicator/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="包络线指标：移动平均带实战">
+  <meta property="og:description" content="了解包络线指标如何在移动平均线周围建立百分比通道，用来识别价格的过度波动。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="包络线指标：移动平均带实战">
+  <meta name="twitter:description" content="了解包络线指标如何在移动平均线周围建立百分比通道，用来识别价格的过度波动。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/#artigo",
+      "headline": "包络线指标：移动平均带实战",
+      "description": "了解包络线指标如何在移动平均线周围建立百分比通道，用来识别价格的过度波动。",
+      "url": "https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
+      "articleSection": "技术指标",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "包络线指标：移动平均带实战",
+          "item": "https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/indicador-envelopes-moving-average/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/envelopes-moving-average-indicator/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/indicador-envelopes-moving-average/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/envelopes-moving-average-indicator/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/envelopes-indicator-guide/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/envelopes-indikator-gleitender-durchschnitt/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/envelopes-indicator-moving-average-bands/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/indicateur-envelopes-bandes-de-moyenne-mobile/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/envelopes-moving-average-indicator/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/indikator-envelopes-band-moving-average/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/indicatore-envelopes-bande-di-media-mobile/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/envelopes-moving-average-indicator/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/envelopes-indikator-glidande-medelvardesband/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/envelopes-indicator-moving-average-bands/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/envelopes-gostergesi-pratikte-hareketli-ortalama-bantlari/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/chi-bao-envelopes-dai-trung-binh-dong/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/moving-average-envelopes-indicator/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">包络线指标：移动平均带实战</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">技术指标</span>
+        <h1>包络线指标：移动平均带实战</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>包络线（Envelopes）指标的逻辑与布林带类似，但方式更简单：它不是根据价格的标准差来计算带宽距离，而是在移动平均线上下使用一个固定的百分比。结果是形成一条跟随均线移动的通道，价格大多数时间都在其中运行。</p><p>在这篇文章中，你将了解包络线是如何计算的，如何进行设置，以及如何利用价格触及边界的情况来识别可能的价格过度波动。</p><h2>包络线是如何计算的</h2><p>计算首先从一条简单或指数移动平均线开始，通常使用中等周期，比如20。在此基础上，上轨是在均线数值上加上一个固定百分比得到的，下轨则是减去同样的百分比得到的。如果某资产的20周期移动平均线为R$ 40,00，设定的百分比为2.5%，那么上轨为R$ 41,00，下轨为R$ 39,00。</p><p>与布林带不同的是，布林带会随着资产波动性的变化自动扩大或收窄，而包络线的两条轨道始终与均线保持相同的百分比距离，除非交易者自己手动调整这个百分比。</p><h2>触及轨道通常意味着什么</h2><p>当价格触及或突破上轨时，被解读为该资产已经向上大幅偏离其近期均线——可能是短期的过度买入。当价格触及或突破下轨时，信号则相反：可能是过度卖出。</p><p>最常见的解读是向均值回归：在触及某条轨道之后，价格往往会朝中间的移动平均线方向回归，许多交易者正是想要捕捉这段回归行情。这种解读在没有强劲趋势、在相对稳定的区间内波动的市场中效果最好。</p><h2>调整轨道的百分比</h2><p>理想的百分比因资产而异，直接取决于每种资产典型的波动性。一种历史上波动性较大的资产，可能需要更大的百分比，比如5%，才能让轨道的触及真正代表行情的过度波动，而不只是日常的正常波动。一种更稳定的资产，可能用更小的百分比，比如1.5%或2%，效果更好。</p><p>为波动性较大的资产设置过小的百分比，会导致价格过于频繁地触及轨道，从而降低这些信号作为真实行情过度波动指示的价值。</p><h2>警惕强劲趋势</h2><p>与任何基于均值回归的指标一样，包络线在强劲趋势期间可能产生具有误导性的信号。在持续的上涨行情中，价格可能连续多根K线紧贴上轨运行，而不回归均线——在这种情况下把每次触及都解读为卖出信号的人，就有反复逆着一个仍然强劲的趋势操作的风险。</p><p>因此，在把触及轨道当作入场触发条件之前，值得先检查趋势背景：在横盘市场中，均值回归的解读往往更有效；在强劲趋势中，触及轨道更多是可能暂停的警示，而不是完全反转的信号。</p><h2>将包络线与成交量或动量结合使用</h2><p>过滤包络线信号的一种方法，是观察触及轨道那一刻的成交量。触及上轨时成交量正在减少，说明买方力量已经开始减弱，从而强化了可能回归均线的判断。而触及轨道时成交量正在增加，则可能说明尽管价格已经远离均线，行情仍有力量继续。</p><p>像RSI这样的动量振荡指标，也可以作为额外的确认：触及上轨的同时RSI处于超买状态，强化了过度波动的判断；而同样的触及若伴随RSI处于中性水平，则需要在假设行情会反转之前更加谨慎。</p><h2>在实践中使用包络线</h2><p>在Duotide上，可以同时调整移动平均线的周期和轨道的百分比，在特定资产上测试不同的组合，直到找到最能反映该市场历史行为的设置。与任何均值回归指标一样，包络线最好与图表背景的解读结合使用，不应作为唯一的入场依据单独使用，因为任何操作都带有真实的亏损风险。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" data-tema="dark" data-tv="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>交易中的斐波那契回撤：一个实际例子 | Blog Duotide</title>
+  <meta name="description" content="了解如何在一次真实的价格行情中绘制斐波那契回撤，计算主要水平位，并结合另一个技术确认来使用它们。">
+  <link rel="canonical" href="https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/retracao-de-fibonacci-exemplo-pratico/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/fibonacci-retracement-praktisches-beispiel/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/fibonacci-retracement-praktikal-na-halimbawa/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/fibonacci-retracement-practical-example/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/fibonacci-retracement-dalam-trading-contoh-praktis/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/ritracciamento-di-fibonacci-nel-trading-esempio-pratico/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/retracao-de-fibonacci-exemplo-pratico/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="交易中的斐波那契回撤：一个实际例子">
+  <meta property="og:description" content="了解如何在一次真实的价格行情中绘制斐波那契回撤，计算主要水平位，并结合另一个技术确认来使用它们。">
+  <meta property="og:url" content="https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide 博客">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="交易中的斐波那契回撤：一个实际例子">
+  <meta name="twitter:description" content="了解如何在一次真实的价格行情中绘制斐波那契回撤，计算主要水平位，并结合另一个技术确认来使用它们。">
+  <meta name="twitter:label1" content="作者">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="阅读时间">
+  <meta name="twitter:data2" content="5 分钟">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/#artigo",
+      "headline": "交易中的斐波那契回撤：一个实际例子",
+      "description": "了解如何在一次真实的价格行情中绘制斐波那契回撤，计算主要水平位，并结合另一个技术确认来使用它们。",
+      "url": "https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
+      "articleSection": "技术分析",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide 团队",
+        "url": "https://duotide.com.br/zh/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/zh/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://duotide.com.br/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://duotide.com.br/zh/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "交易中的斐波那契回撤：一个实际例子",
+          "item": "https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">跳至正文</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/zh/" aria-label="Duotide — 首页">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="打开导航菜单"
+                data-abrir="打开导航菜单" data-fechar="关闭导航菜单">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="选择语言"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="22" height="16"><span>zh</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/retracao-de-fibonacci-exemplo-pratico/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/fibonacci-retracement-praktisches-beispiel/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/fibonacci-retracement-praktikal-na-halimbawa/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/fibonacci-retracement-practical-example/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/fibonacci-retracement-dalam-trading-contoh-praktis/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/ritracciamento-di-fibonacci-nel-trading-esempio-pratico/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/fibonacci-retracement-practical-example/" hreflang="zh-CN" lang="zh-CN" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="主导航">
+        <ul>
+          <li><a href="/zh/">首页</a></li>
+          <li><a href="/zh/duotide-is-it-trustworthy/">是否可靠？</a></li>
+          <li><a href="/zh/duotide-login/">登录</a></li>
+          <li><a href="/zh/duotide-broker/">经纪商介绍</a></li>
+          <li><a href="/zh/duotide-is-it-safe/">是否安全？</a></li>
+          <li><a href="/zh/duotide-app/">App</a></li>
+          <li><a href="/zh/best-brokers/">最佳经纪商</a></li>
+          <li><a href="/zh/blog/" aria-current="page">博客</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh"
+           target="_blank" rel="noopener sponsored nofollow">注册账户</a>
+        <a class="btn btn--outline btn--sm" href="/zh/duotide-login/">登录</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <div class="container">
+      <ol>
+        <li><a href="/zh/">首页</a></li>
+        <li><a href="/zh/blog/">博客</a></li>
+        <li><span aria-current="page">交易中的斐波那契回撤：一个实际例子</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">技术分析</span>
+        <h1>交易中的斐波那契回撤：一个实际例子</h1>
+        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>斐波那契回撤是技术分析中最常用——也是最容易被误用——的工具之一。核心理念很简单：在一次强劲的价格行情之后，部分回调往往会在原行情继续之前，停在特定的水平上。问题出现在有人把这些水平当作确定无疑的精确入场点，而不是需要关注的区域时。</p><p>这些水平来自意大利数学家斐波那契描述的数列，但你不需要理解背后的数学原理就能使用这个工具。重要的是由它衍生出的比率：23.6%、38.2%、50%、61.8%和78.6%（50%这个水平严格来说不是斐波那契数字，但因为代表行情的一半，被广泛纳入使用）。</p><h2>如何绘制回撤</h2><p>要绘制这个工具，你需要选择两个点：一段重要价格行情的起点和终点——图表上一段清晰的上涨或下跌波段。平台会自动计算这两点之间的中间水平。</p><p>在一次上涨行情中，你从底部画到冲高的顶部。回撤水平会显示在顶部下方，标出一次回调在原本的上涨行情可能重新恢复之前，会回落到什么位置。</p><h2>一个数值示例</h2><p>假设某资产从R$ 80,00涨到R$ 100,00——一次R$ 20,00的冲高。为这段行情绘制回撤，主要水平如下：</p><ul><li><strong>23.6%：</strong>100,00 − (20,00 × 0,236) = R$ 95,28</li><li><strong>38.2%：</strong>100,00 − (20,00 × 0,382) = R$ 92,36</li><li><strong>50%：</strong>100,00 − (20,00 × 0,50) = R$ 90,00</li><li><strong>61.8%：</strong>100,00 − (20,00 × 0,618) = R$ 87,64</li><li><strong>78.6%：</strong>100,00 − (20,00 × 0,786) = R$ 84,28</li></ul><p>如果在R$ 100,00的顶部之后，价格回落并在接近R$ 87,64（61.8%水平）的位置找到支撑，并在这个区域形成一根反转K线，这种斐波那契水平与价格信号的重合，正是交易者通常寻找的那种共振——不是水平本身单独存在，而是水平加上另一项证据。</p><h2>为什么61.8%水平受到如此多的关注</h2><p>在各个回撤水平中，61.8%通常被认为是那些寻求原趋势延续的人最重要的水平，因为它代表了一次相当可观的回调，同时又不会使此前的行情失效。如果回调突破这个水平，深入到78.6%甚至更远，就会让人怀疑原本的行情是否还成立，或者正在发生的是一次更大的反转，而不仅仅是一次暂停。</p><h2>将斐波那契与另一个确认结合使用</h2><p>如果只单独使用回撤，没有其他辅助，往往会导致过早入场——价格可能突破一个水平，继续下跌（或上涨），而不理会标出的区域。强化信号的常见方法包括：</p><ul><li>检查斐波那契水平是否与图表上已经存在的支撑或阻力重合，这些支撑阻力由此前的高点或低点形成。</li><li>等待在该水平附近出现一个反转K线形态，而不是一触及这条线就买入或卖出。</li><li>查看一个动量指标，比如随机指标，看它是否也显示出回调行情耗尽的迹象。</li></ul><h2>常见错误</h2><p>一个反复出现的错误，是在图表上任何微小的波动上都绘制这个工具，而不是选择一段真正重要的行情作为基础。另一个错误是忽视更大的背景：在强劲的下降趋势中出现的斐波那契回撤，如果与主导行情方向相反，分量会比与之一致时更弱。而且，与任何基于价格几何形态的工具一样，它并不能保证价格一定会尊重任何特定的水平——它只是标出了历史上曾经有反应的重要区域。</p><h2>如何在实践中使用这一点</h2><p>斐波那契回撤最好作为一张需要关注区域的地图，而不是自动的入场触发条件。标出这些水平，等待价格接近其中一个，然后再结合另一个技术要素寻求确认，通常比单独操作触及这条线的行为能产生更稳定的入场——并且始终要设定止损，因为没有任何斐波那契水平能保证价格会如预期般做出反应，同样的数值逻辑，反过来也适用于下跌行情中的回撤。</p>
+        <div class="bq-post__cta">
+          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>延伸阅读</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/zh/blog/head-and-shoulders-pattern-how-to-identify/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">头肩顶形态：如何识别这种反转形态</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/candlestick-patterns-that-often-fail/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">3种经常失效的K线形态</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/price-gaps-why-they-happen/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">价格跳空：为什么会发生，为什么重要</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">版权所有 © 2026 Duotide。<br>
+            保留所有权利。<br>
+            官方网站。</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>公司</h2>
+          <ul>
+            <li><a href="/zh/">首页</a></li>
+            <li><a href="/zh/duotide-is-it-trustworthy/">Duotide 靠谱吗？</a></li>
+            <li><a href="/zh/duotide-login/">登录方式</a></li>
+            <li><a href="/zh/duotide-broker/">了解经纪商</a></li>
+            <li><a href="/zh/duotide-is-it-safe/">经纪商安全性</a></li>
+            <li><a href="/zh/duotide-app/">应用</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>联系我们</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7×24 客户经理</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/zh/duotide-faq/">常见问题</a>
+          <a href="/zh/about-us/">关于本站</a>
+          <a href="/zh/contact/">联系我们</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="返回页面顶部">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="关闭">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">存款奖金</span> <span class="pp__l2">100%</span></h2>
+          <p>使用优惠码 <strong>WELCOME100</strong> 入金，即可获得入金金额 100% 的奖金。</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">优惠码</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="已复制！">复制</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">立即领取</a>
+          <p class="pp__mini">受促销条款约束。交易杠杆产品存在亏损风险。</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

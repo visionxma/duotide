@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr" data-tema="dark" data-tv="vi_VN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>RSI: cách cài đặt và sử dụng chỉ số sức mạnh tương đối | Blog Duotide</title>
+  <meta name="description" content="Hiểu công thức của RSI, cách cài đặt chu kỳ của chỉ báo và cách diễn giải mua quá mức, bán quá mức và phân kỳ.">
+  <link rel="canonical" href="https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indice-de-forca-relativa-rsi-guia/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/indice-de-fuerza-relativa-rsi-guia/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/rsi-relative-strength-index-guide/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/relative-strength-index-rsi-how-to-set-up-and-use-in-trading/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/rsi-relative-staerke-index-einstellen-und-nutzen/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/rsi-paano-i-configure-at-gamitin/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/rsi-comment-configurer-et-utiliser-indice-force-relative/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/rsi-cara-mengonfigurasi-dan-menggunakan/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/rsi-come-configurare-e-usare-lindice-di-forza-relativa/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/rsi-installning-och-anvandning/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/rsi-relative-strength-index-setup-guide/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/rsi-goreceli-guc-endeksi-nasil-yapilandirilir-ve-kullanilir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/relative-strength-index-rsi-guide/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/relative-strength-index-rsi-guide/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RSI: cách cài đặt và sử dụng chỉ số sức mạnh tương đối">
+  <meta property="og:description" content="Hiểu công thức của RSI, cách cài đặt chu kỳ của chỉ báo và cách diễn giải mua quá mức, bán quá mức và phân kỳ.">
+  <meta property="og:url" content="https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RSI: cách cài đặt và sử dụng chỉ số sức mạnh tương đối">
+  <meta name="twitter:description" content="Hiểu công thức của RSI, cách cài đặt chu kỳ của chỉ báo và cách diễn giải mua quá mức, bán quá mức và phân kỳ.">
+  <meta name="twitter:label1" content="Tác giả">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Thời gian đọc">
+  <meta name="twitter:data2" content="5 phút">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/#artigo",
+      "headline": "RSI: cách cài đặt và sử dụng chỉ số sức mạnh tương đối",
+      "description": "Hiểu công thức của RSI, cách cài đặt chu kỳ của chỉ báo và cách diễn giải mua quá mức, bán quá mức và phân kỳ.",
+      "url": "https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/",
+      "inLanguage": "vi",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
+      "articleSection": "Chỉ báo",
+      "author": {
+        "@type": "Organization",
+        "name": "Đội ngũ Duotide",
+        "url": "https://duotide.com.br/vi/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/vi/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Trang chủ",
+          "item": "https://duotide.com.br/vi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/vi/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "RSI: cách cài đặt và sử dụng chỉ số sức mạnh tương đối",
+          "item": "https://duotide.com.br/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Chuyển đến nội dung</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/vi/" aria-label="Duotide — trang chủ">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Mở menu điều hướng"
+                data-abrir="Mở menu điều hướng" data-fechar="Đóng menu điều hướng">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Chọn ngôn ngữ"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="22" height="16"><span>vi</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/indice-de-forca-relativa-rsi-guia/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/relative-strength-index-rsi-guide/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/indice-de-fuerza-relativa-rsi-guia/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/rsi-relative-strength-index-guide/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/relative-strength-index-rsi-how-to-set-up-and-use-in-trading/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/rsi-relative-staerke-index-einstellen-und-nutzen/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/rsi-paano-i-configure-at-gamitin/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/rsi-comment-configurer-et-utiliser-indice-force-relative/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/relative-strength-index-rsi-guide/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/rsi-cara-mengonfigurasi-dan-menggunakan/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/rsi-come-configurare-e-usare-lindice-di-forza-relativa/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/relative-strength-index-rsi-guide/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/rsi-installning-och-anvandning/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/rsi-relative-strength-index-setup-guide/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/rsi-goreceli-guc-endeksi-nasil-yapilandirilir-ve-kullanilir/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/rsi-cach-cai-dat-va-su-dung-chi-so-suc-manh/" hreflang="vi" lang="vi" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/relative-strength-index-rsi-guide/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Điều hướng chính">
+        <ul>
+          <li><a href="/vi/">Trang chủ</a></li>
+          <li><a href="/vi/duotide-co-uy-tin-khong/">Có uy tín không?</a></li>
+          <li><a href="/vi/duotide-dang-nhap/">Đăng nhập</a></li>
+          <li><a href="/vi/duotide-san-moi-gioi/">Về sàn</a></li>
+          <li><a href="/vi/duotide-co-an-toan-khong/">Có an toàn không?</a></li>
+          <li><a href="/vi/duotide-ung-dung/">Ứng dụng</a></li>
+          <li><a href="/vi/san-moi-gioi-tot-nhat/">Sàn môi giới tốt nhất</a></li>
+          <li><a href="/vi/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi"
+           target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+        <a class="btn btn--outline btn--sm" href="/vi/duotide-dang-nhap/">Đăng nhập</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Đường dẫn điều hướng">
+    <div class="container">
+      <ol>
+        <li><a href="/vi/">Trang chủ</a></li>
+        <li><a href="/vi/blog/">Blog</a></li>
+        <li><span aria-current="page">RSI: cách cài đặt và sử dụng chỉ số sức mạnh tương đối</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Chỉ báo</span>
+        <h1>RSI: cách cài đặt và sử dụng chỉ số sức mạnh tương đối</h1>
+        <p class="bq-post__meta">Đội ngũ Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 phút đọc</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Ít chỉ báo nào phổ biến như RSI, hay chỉ số sức mạnh tương đối. Nó xuất hiện trên đại đa số các nền tảng biểu đồ, dễ cài đặt và cách đọc cơ bản của nó — mua quá mức và bán quá mức — thường là một trong những điều đầu tiên mà một trader mới học. Nhưng RSI còn nhiều điều hơn là chỉ quan sát xem nó có ở trên 70 hay dưới 30 hay không.</p><p>Trong bài viết này, bạn sẽ hiểu cách RSI được tính toán, cách cài đặt đúng và cách sử dụng những cách đọc chính của nó, bao gồm sự phân kỳ giữa chỉ báo và giá.</p><h2>RSI là gì và được tính như thế nào</h2><p>RSI đo tốc độ và cường độ của những biến động giá trong một chu kỳ nhất định, thường là 14 cây nến, và cho ra một giá trị dao động từ 0 đến 100. Phép tính so sánh mức tăng trung bình với mức giảm trung bình trong chu kỳ đó: tỷ lệ tăng so với giảm càng lớn, RSI càng gần 100; tỷ lệ giảm càng lớn, RSI càng gần 0.</p><p>Nói đơn giản, công thức là RSI = 100 − [100 / (1 + FR)], trong đó FR là sức mạnh tương đối, được tính bằng cách lấy mức tăng trung bình chia cho mức giảm trung bình trong chu kỳ đã chọn. Nếu, trong 14 cây nến gần nhất, mức tăng trung bình là R$ 0,80 mỗi cây nến tăng và mức giảm trung bình là R$ 0,40 mỗi cây nến giảm, sức mạnh tương đối sẽ là 2 (0,80 chia cho 0,40), tạo ra một RSI khoảng 67 — vẫn dưới vùng mua quá mức, nhưng đã cho thấy sự áp đảo của bên mua.</p><h2>Cài đặt chu kỳ của RSI</h2><p>Chu kỳ mặc định 14 cây nến hoạt động tốt như một điểm khởi đầu, nhưng không phải là quy tắc cố định. Chu kỳ ngắn hơn, như 7, khiến RSI nhạy hơn, tạo ra tín hiệu mua quá mức và bán quá mức thường xuyên hơn — điều có thể hữu ích trong các giao dịch ngắn hạn hơn, nhưng cũng tạo ra nhiều tín hiệu giả hơn. Chu kỳ dài hơn, như 21, làm mượt chỉ báo và giảm số lượng tín hiệu, khiến chúng có khả năng đáng tin cậy hơn, nhưng lại chậm hơn.</p><p>Việc chọn chu kỳ nên đi theo khung thời gian và phong cách giao dịch: người giao dịch trên biểu đồ theo phút có xu hướng ưu tiên chu kỳ ngắn hơn, trong khi người giao dịch trên biểu đồ hằng ngày hoặc hằng tuần thường giữ mặc định 14 hoặc thậm chí tăng con số đó lên.</p><h2>Mua quá mức và bán quá mức</h2><p>Cách đọc phổ biến nhất của RSI dùng các đường 70 và 30 làm tham chiếu: giá trị trên 70 cho thấy trạng thái mua quá mức, gợi ý biến động tăng có thể đã bị kéo căng; giá trị dưới 30 cho thấy bán quá mức, gợi ý đợt giảm có thể đã quá đà. Những cách đọc này không có nghĩa là giá sẽ đảo chiều ngay lập tức — trong một xu hướng mạnh, RSI có thể duy trì trên 70 (hoặc dưới 30) trong thời gian khá dài trước bất kỳ đợt điều chỉnh nào.</p><p>Vì vậy, những vùng này hoạt động tốt hơn khi đóng vai trò cảnh báo chú ý hơn là một cơ chế tự động kích hoạt vào lệnh ngược xu hướng, đặc biệt ở những tài sản có xu hướng mạnh và kéo dài.</p><h2>Phân kỳ: cách đọc nâng cao nhất của RSI</h2><p>Một sự phân kỳ xảy ra khi giá và RSI di chuyển theo hướng ngược nhau. Nếu giá lập đỉnh mới, nhưng RSI lại lập đỉnh thấp hơn đỉnh trước đó, đây là phân kỳ giảm: dù giá tăng, động lượng đứng sau đợt tăng đó đang suy yếu, điều có thể báo trước một đợt đảo chiều hoặc ít nhất là một đợt tạm dừng trong xu hướng.</p><p>Điều ngược lại cũng đúng: giá lập đáy thấp hơn trong khi RSI lập đáy cao hơn là phân kỳ tăng, gợi ý áp lực bán đang mất sức ngay cả khi giá vẫn đang giảm. Phân kỳ thường là tín hiệu mạnh mẽ hơn so với cách đọc đơn giản về mua quá mức và bán quá mức, nhưng vẫn cần sự xác nhận từ chính giá trước khi biện minh cho một giao dịch.</p><h2>Sử dụng RSI trong thực tế</h2><p>RSI hoạt động tốt hơn khi kết hợp với việc đọc xu hướng: sử dụng các cách đọc mua quá mức và bán quá mức của nó thuận theo xu hướng lớn hơn, chứ không ngược lại, có xu hướng tạo ra kết quả nhất quán hơn. Trên Duotide, có thể điều chỉnh chu kỳ của RSI và thử nghiệm nhiều cấu hình khác nhau trên các tài sản khác nhau cho đến khi tìm được cấu hình phản ánh tốt nhất hành vi của thị trường đó. Như bất kỳ chỉ báo nào dựa trên giá trong quá khứ, RSI không đảm bảo chính xác, và mọi giao dịch đều mang rủi ro thua lỗ thực sự.</p>
+        <div class="bq-post__cta">
+          <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Đọc thêm</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Bản quyền © 2026 Duotide.<br>
+            Đã đăng ký bản quyền.<br>
+            Trang web chính thức.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Công ty</h2>
+          <ul>
+            <li><a href="/vi/">Trang chủ</a></li>
+            <li><a href="/vi/duotide-co-uy-tin-khong/">Duotide có uy tín không?</a></li>
+            <li><a href="/vi/duotide-dang-nhap/">Cách đăng nhập</a></li>
+            <li><a href="/vi/duotide-san-moi-gioi/">Tìm hiểu sàn</a></li>
+            <li><a href="/vi/duotide-co-an-toan-khong/">Bảo mật của sàn</a></li>
+            <li><a href="/vi/duotide-ung-dung/">Ứng dụng</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Liên hệ</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Quản lý tài khoản 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/vi/duotide-cau-hoi-thuong-gap/">Câu hỏi thường gặp</a>
+          <a href="/vi/ve-trang-nay/">Về trang web này</a>
+          <a href="/vi/lien-he/">Liên hệ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Quay lại đầu trang">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Đóng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Thưởng</span> <span class="pp__l2">100%</span></h2>
+          <p>Nạp tiền với mã <strong>WELCOME100</strong> và nhận thưởng 100% trên số tiền đã nạp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Mã</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Đã sao chép!">Sao chép</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Nhận ngay</a>
+          <p class="pp__mini">Áp dụng điều kiện của chương trình. Giao dịch sản phẩm đòn bẩy có rủi ro thua lỗ.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>
