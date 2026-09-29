@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-tema="dark" data-tv="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Riesgos del trading con margen: llamada, stop out y liquidación | Blog Duotide</title>
+  <meta name="description" content="Qué es la llamada de margen, el stop out y la liquidación, cómo calcular el apalancamiento efectivo y estrategias prácticas de control, con ejemplos.">
+  <link rel="canonical" href="https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/riscos-e-estrategias-no-trading-com-margem/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/risiken-und-strategien-beim-margin-trading/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/mga-risk-at-diskarte-sa-margin-trading/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/risks-and-strategies-in-margin-trading/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/rischi-del-trading-con-margine/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/margin-trading-risks-margin-call-stop-out/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/rui-ro-giao-dich-ky-quy-goi-ky-quy-stop-out-thanh-ly/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/margin-trading-risks-and-strategies/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/riscos-e-estrategias-no-trading-com-margem/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Riesgos del trading con margen: llamada, stop out y liquidación">
+  <meta property="og:description" content="Qué es la llamada de margen, el stop out y la liquidación, cómo calcular el apalancamiento efectivo y estrategias prácticas de control, con ejemplos.">
+  <meta property="og:url" content="https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Riesgos del trading con margen: llamada, stop out y liquidación">
+  <meta name="twitter:description" content="Qué es la llamada de margen, el stop out y la liquidación, cómo calcular el apalancamiento efectivo y estrategias prácticas de control, con ejemplos.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tiempo de lectura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/#artigo",
+      "headline": "Riesgos del trading con margen: llamada, stop out y liquidación",
+      "description": "Qué es la llamada de margen, el stop out y la liquidación, cómo calcular el apalancamiento efectivo y estrategias prácticas de control, con ejemplos.",
+      "url": "https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/",
+      "inLanguage": "es",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
+      "articleSection": "Gestión de riesgo",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo Duotide",
+        "url": "https://duotide.com.br/es/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/es/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://duotide.com.br/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Riesgos del trading con margen: llamada, stop out y liquidación",
+          "item": "https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/es/" aria-label="Duotide — página de inicio">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir el menú de navegación"
+                data-abrir="Abrir el menú de navegación" data-fechar="Cerrar el menú de navegación">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Elegir idioma"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="22" height="16"><span>es</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/riscos-e-estrategias-no-trading-com-margem/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/" hreflang="es" lang="es" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/risiken-und-strategien-beim-margin-trading/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/mga-risk-at-diskarte-sa-margin-trading/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/risks-and-strategies-in-margin-trading/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/risiko-trading-margin-margin-call-stop-out-likuidasi/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/rischi-del-trading-con-margine/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/margin-trading-risks-margin-call-stop-out/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/rui-ro-giao-dich-ky-quy-goi-ky-quy-stop-out-thanh-ly/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/margin-trading-risks-and-strategies/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/duotide-es-confiable/">¿Es confiable?</a></li>
+          <li><a href="/es/duotide-login/">Iniciar sesión</a></li>
+          <li><a href="/es/duotide-broker/">El bróker</a></li>
+          <li><a href="/es/duotide-es-seguro/">¿Es seguro?</a></li>
+          <li><a href="/es/duotide-app/">Aplicación</a></li>
+          <li><a href="/es/mejores-brokers/">Mejores brókers</a></li>
+          <li><a href="/es/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es"
+           target="_blank" rel="noopener sponsored nofollow">Crear cuenta</a>
+        <a class="btn btn--outline btn--sm" href="/es/duotide-login/">Iniciar sesión</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Riesgos del trading con margen: llamada, stop out y liquidación</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Gestión de riesgo</span>
+        <h1>Riesgos del trading con margen: llamada, stop out y liquidación</h1>
+        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 5 min de lectura</p>
+        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Toda operación con margen carga un riesgo que va más allá del precio del activo: el riesgo de la propia estructura de la operación, capaz de cerrar una posición incluso antes de que el mercado demuestre quién tenía razón. La llamada de margen, el stop out y la liquidación son el motivo por el cual dos cuentas con el mismo capital y el mismo apalancamiento "permitido" pueden tener destinos completamente distintos.</p><p>Este texto no repite lo básico de cómo funciona el margen. El foco aquí es entender por qué el apalancamiento que ofrece el bróker no es el apalancamiento que realmente asumes, cómo una llamada de margen se convierte en stop out, y qué decisiones prácticas reducen ese riesgo antes de que aparezca en la pantalla.</p><h2>Apalancamiento efectivo: la cuenta que pocos hacen antes de operar</h2><p>El apalancamiento que anuncia el bróker —10:1, 20:1, 30:1— es solo el límite máximo permitido para ese instrumento. El que realmente importa es el efectivo: el valor total de las posiciones abiertas dividido entre el patrimonio de la cuenta. Esa diferencia es lo que separa una operación arriesgada de una operación controlada.</p><p>Considera una cuenta con un patrimonio de R$ 10.000,00, en un activo con apalancamiento máximo de 30:1. Un trader agresivo abre una posición de R$ 90.000,00, con un margen de R$ 3.000,00 (90.000 ÷ 30). Aunque el límite de 30:1 esté disponible, el apalancamiento efectivo sobre el patrimonio total es de 9:1 (90.000 ÷ 10.000). Con ese número, una caída de apenas 3,33% en el activo ya genera una pérdida del 30% del patrimonio (9 × 3,33%): es el apalancamiento efectivo, y no el límite anunciado por el bróker, lo que define el tamaño real del golpe.</p><p>Compara con un segundo trader, mismo patrimonio y mismo apalancamiento disponible, que abre una posición de solo R$ 20.000,00. El apalancamiento efectivo cae a 2:1, y la misma caída de 3,33% en el activo representa una pérdida del 6,67% del patrimonio, cinco veces menor, con el mismo bróker y el mismo activo.</p><h2>Llamada de margen: el aviso antes del final</h2><p>La llamada de margen ocurre cuando el nivel de margen de la cuenta —patrimonio dividido entre el margen usado, en porcentaje— cae por debajo de un límite definido por el bróker, normalmente cerca del 100%. Por debajo de ese punto, el bróker señala que la garantía se está quedando corta y puede exigir un depósito adicional.</p><p>En el trader agresivo (posición de R$ 90.000,00, margen de R$ 3.000,00, patrimonio de R$ 10.000,00), la llamada al 100% de nivel de margen se dispara cuando el patrimonio cae por debajo de los R$ 3.000,00 usados como margen, es decir, tras una pérdida de R$ 7.000,00: basta una caída del 7,78% en el activo (7.000 ÷ 90.000). En el trader conservador, con un margen de R$ 666,67 (20.000 ÷ 30), la llamada solo ocurriría tras una pérdida de R$ 9.333,33, equivalente a una caída del 46,67% en el activo, un margen de maniobra mucho mayor, construido solo con una posición menor en relación con el patrimonio.</p><h2>Stop out: cuando el bróker cierra la posición por ti</h2><p>El stop out es la etapa siguiente, y ya no depende de la voluntad del trader: cuando el nivel de margen cae por debajo de un segundo límite, generalmente más bajo que el de la llamada —50%, 30% o 20%, según el bróker y el instrumento—, las posiciones se cierran automáticamente para impedir que la pérdida supere el capital disponible.</p><p>En el trader agresivo, un stop out al 50% del nivel de margen significa un patrimonio por debajo de R$ 1.500,00, lo que ocurre tras una pérdida de R$ 8.500,00: una caída de apenas 9,44% en el activo (8.500 ÷ 90.000). En menos de un 10% de variación del precio, ya desapareció más del 80% del patrimonio inicial. Para el trader conservador, el mismo cálculo solo se cumpliría tras una caída del 48,33% en el activo. La diferencia entre 9,44% y 48,33% es resultado solo del apalancamiento efectivo elegido, no de suerte ni de un bróker "mejor".</p><h2>Por qué la liquidación puede costar más de lo esperado</h2><p>El precio en el que el stop out realmente se ejecuta no siempre es el precio en el que el nivel de margen cruzó el límite. En mercados volátiles, los saltos de precio (gaps) y la ejecución más lenta en momentos de liquidación simultánea de varias cuentas pueden cerrar la posición con una pérdida mayor a la calculada, el llamado deslizamiento, o slippage, de ejecución. El riesgo crece todavía más cuando el trader mantiene varias posiciones en activos correlacionados: si se mueven juntos en contra de la cuenta, todos pierden valor al mismo tiempo, consumiendo el nivel de margen mucho más rápido de lo que una operación aislada haría suponer.</p><h2>Estrategias prácticas para controlar el riesgo</h2><p>Reducir el riesgo de llamada de margen y de stop out depende de decisiones tomadas antes de abrir la posición:</p><ul><li><strong>Calcula el apalancamiento efectivo antes de operar</strong>: posiciones abiertas divididas entre el patrimonio de la cuenta, no entre el valor usado como margen. Es ese número, no el límite del bróker, el que determina el riesgo real.</li><li><strong>Define el tamaño de la posición por el stop loss, no por el margen disponible</strong>: decide cuánto estás dispuesto a perder en dinero (por ejemplo, 1% a 2% del patrimonio) y calcula la posición a partir de la distancia hasta el stop.</li><li><strong>Mantén un margen libre generoso</strong>: evita usar todo el patrimonio como margen de una sola operación; cuanto mayor el margen libre, más alto queda el nivel de margen y más lejos queda la llamada de margen.</li><li><strong>Evita reforzar posiciones perdedoras</strong>: agregar margen a una operación en rojo para "esperar el giro" acerca el stop out en lugar de alejarlo.</li><li><strong>Cuidado con las posiciones correlacionadas</strong>: varias operaciones que se mueven en la misma dirección multiplican el efecto de un único evento de mercado sobre el nivel de margen de la cuenta.</li><li><strong>Sigue el nivel de margen, no solo el precio del activo</strong>: una regla personal de salida bien por encima del stop out del bróker da tiempo de reaccionar antes de la liquidación forzada.</li></ul><h2>Controlar el apalancamiento efectivo es lo que queda en tus manos</h2><p>El bróker define el límite máximo de apalancamiento y los niveles de llamada de margen y de stop out, pero el apalancamiento efectivo de cada operación sigue siendo elección del trader. Probar ese comportamiento en una cuenta de demostración, ya sea en Duotide o en otra plataforma, antes de operar con capital real ayuda a visualizar cómo reacciona el nivel de margen a distintos tamaños de posición, sin el costo de aprender eso durante una pérdida real. El margen amplía el resultado en los dos sentidos, y el riesgo de perder todo el capital depositado es real.</p>
+        <div class="bq-post__cta">
+          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Lee también</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en el forex</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia martingala en el trading: cómo funciona y sus riesgos</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/cuando-cerrar-una-operacion-senales-de-salida/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cuándo cerrar una operación: señales de salida</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Derechos de autor © 2026 Duotide.<br>
+            Todos los derechos reservados.<br>
+            Sitio oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/es/">Inicio</a></li>
+            <li><a href="/es/duotide-es-confiable/">¿Duotide es Confiable?</a></li>
+            <li><a href="/es/duotide-login/">Métodos de Login</a></li>
+            <li><a href="/es/duotide-broker/">Conoce el Bróker</a></li>
+            <li><a href="/es/duotide-es-seguro/">Seguridad del Bróker</a></li>
+            <li><a href="/es/duotide-app/">Aplicación</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contacto</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestor de cuenta 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/es/duotide-preguntas-frecuentes/">Preguntas frecuentes</a>
+          <a href="/es/sobre/">Sobre este sitio</a>
+          <a href="/es/contacto/">Contacto</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Volver al inicio de la página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Cerrar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bono</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con el cupón <strong>WELCOME100</strong> y recibe un 100% de bono sobre el monto depositado.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Cupón</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="¡Copiado!">Copiar</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Reclamar ahora</a>
+          <p class="pp__mini">Sujeto a las condiciones de la promoción. Operar productos apalancados implica riesgo de pérdida.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

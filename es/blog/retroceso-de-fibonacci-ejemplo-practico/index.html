@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-tema="dark" data-tv="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Retroceso de Fibonacci en el trading: un ejemplo práctico | Blog Duotide</title>
+  <meta name="description" content="Mira cómo trazar el retroceso de Fibonacci en un movimiento real de precio, calcular los niveles principales y usarlos junto a otra confirmación técnica.">
+  <link rel="canonical" href="https://duotide.com.br/es/blog/retroceso-de-fibonacci-ejemplo-practico/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/retracao-de-fibonacci-exemplo-pratico/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/retroceso-de-fibonacci-ejemplo-practico/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/fibonacci-retracement-praktisches-beispiel/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/fibonacci-retracement-praktikal-na-halimbawa/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/fibonacci-retracement-practical-example/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/fibonacci-retracement-dalam-trading-contoh-praktis/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/ritracciamento-di-fibonacci-nel-trading-esempio-pratico/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/fibonacci-retracement-practical-example/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/thoai-lui-fibonacci-trong-giao-dich-vi-du-thuc-te/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/fibonacci-retracement-practical-example/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/retracao-de-fibonacci-exemplo-pratico/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Retroceso de Fibonacci en el trading: un ejemplo práctico">
+  <meta property="og:description" content="Mira cómo trazar el retroceso de Fibonacci en un movimiento real de precio, calcular los niveles principales y usarlos junto a otra confirmación técnica.">
+  <meta property="og:url" content="https://duotide.com.br/es/blog/retroceso-de-fibonacci-ejemplo-practico/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retroceso de Fibonacci en el trading: un ejemplo práctico">
+  <meta name="twitter:description" content="Mira cómo trazar el retroceso de Fibonacci en un movimiento real de precio, calcular los niveles principales y usarlos junto a otra confirmación técnica.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tiempo de lectura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/es/blog/retroceso-de-fibonacci-ejemplo-practico/#artigo",
+      "headline": "Retroceso de Fibonacci en el trading: un ejemplo práctico",
+      "description": "Mira cómo trazar el retroceso de Fibonacci en un movimiento real de precio, calcular los niveles principales y usarlos junto a otra confirmación técnica.",
+      "url": "https://duotide.com.br/es/blog/retroceso-de-fibonacci-ejemplo-practico/",
+      "inLanguage": "es",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
+      "articleSection": "Análisis técnico",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo Duotide",
+        "url": "https://duotide.com.br/es/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/es/blog/retroceso-de-fibonacci-ejemplo-practico/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/es/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://duotide.com.br/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/es/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Retroceso de Fibonacci en el trading: un ejemplo práctico",
+          "item": "https://duotide.com.br/es/blog/retroceso-de-fibonacci-ejemplo-practico/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/es/" aria-label="Duotide — página de inicio">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir el menú de navegación"
+                data-abrir="Abrir el menú de navegación" data-fechar="Cerrar el menú de navegación">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Elegir idioma"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="22" height="16"><span>es</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/retracao-de-fibonacci-exemplo-pratico/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/retroceso-de-fibonacci-ejemplo-practico/" hreflang="es" lang="es" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/fibonacci-retracement-praktisches-beispiel/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/fibonacci-retracement-praktikal-na-halimbawa/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/fibonacci-retracement-practical-example/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/fibonacci-retracement-dalam-trading-contoh-praktis/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/ritracciamento-di-fibonacci-nel-trading-esempio-pratico/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/fibonacci-retracement-practical-example/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/thoai-lui-fibonacci-trong-giao-dich-vi-du-thuc-te/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/fibonacci-retracement-practical-example/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/es/">Inicio</a></li>
+          <li><a href="/es/duotide-es-confiable/">¿Es confiable?</a></li>
+          <li><a href="/es/duotide-login/">Iniciar sesión</a></li>
+          <li><a href="/es/duotide-broker/">El bróker</a></li>
+          <li><a href="/es/duotide-es-seguro/">¿Es seguro?</a></li>
+          <li><a href="/es/duotide-app/">Aplicación</a></li>
+          <li><a href="/es/mejores-brokers/">Mejores brókers</a></li>
+          <li><a href="/es/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es"
+           target="_blank" rel="noopener sponsored nofollow">Crear cuenta</a>
+        <a class="btn btn--outline btn--sm" href="/es/duotide-login/">Iniciar sesión</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol>
+        <li><a href="/es/">Inicio</a></li>
+        <li><a href="/es/blog/">Blog</a></li>
+        <li><span aria-current="page">Retroceso de Fibonacci en el trading: un ejemplo práctico</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Análisis técnico</span>
+        <h1>Retroceso de Fibonacci en el trading: un ejemplo práctico</h1>
+        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
+        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>El retroceso de Fibonacci es una de las herramientas más usadas —y también una de las más mal aplicadas— del análisis técnico. La idea central es simple: después de un movimiento fuerte de precio, una corrección parcial suele detenerse en niveles específicos antes de que el movimiento original continúe. El problema aparece cuando alguien trata esos niveles como puntos exactos de entrada garantizada, en lugar de zonas de atención.</p><p>Los niveles vienen de la secuencia numérica descrita por el matemático italiano Fibonacci, pero no necesitas entender la matemática detrás para usar la herramienta. Lo que importa son las razones derivadas de ella: 23,6%, 38,2%, 50%, 61,8% y 78,6% (el nivel de 50% no es técnicamente un número de Fibonacci, pero se incluye ampliamente por representar la mitad del movimiento).</p><h2>Cómo trazar el retroceso</h2><p>Para dibujar la herramienta, eliges dos puntos: el inicio y el fin de un movimiento de precio relevante, una pierna alcista o bajista clara en el gráfico. La plataforma calcula automáticamente los niveles intermedios entre esos dos puntos.</p><p>En un movimiento alcista, trazas desde el mínimo hasta el máximo del impulso. Los niveles de retroceso aparecen por debajo del máximo, mostrando hasta dónde puede retroceder una corrección antes de que, potencialmente, el movimiento alcista se reanude.</p><h2>Un ejemplo numérico</h2><p>Imagina un activo que subió de R$ 80,00 a R$ 100,00, un impulso de R$ 20,00. Trazando el retroceso de ese movimiento, los principales niveles quedarían así:</p><ul><li><strong>23,6%</strong>: 100,00 − (20,00 × 0,236) = R$ 95,28</li><li><strong>38,2%</strong>: 100,00 − (20,00 × 0,382) = R$ 92,36</li><li><strong>50%</strong>: 100,00 − (20,00 × 0,50) = R$ 90,00</li><li><strong>61,8%</strong>: 100,00 − (20,00 × 0,618) = R$ 87,64</li><li><strong>78,6%</strong>: 100,00 − (20,00 × 0,786) = R$ 84,28</li></ul><p>Si, después del máximo en R$ 100,00, el precio retrocede y encuentra soporte cerca de R$ 87,64 (el nivel de 61,8%), formando una vela de reversión en esa región, ese encuentro entre el nivel de Fibonacci y una señal de precio es el tipo de confluencia que los traders suelen buscar, no el nivel solo, sino el nivel sumado a otra evidencia.</p><h2>Por qué el nivel de 61,8% recibe tanta atención</h2><p>Entre los niveles de retroceso, el 61,8% suele tratarse como el más relevante para quien busca la continuidad de la tendencia original, por representar una corrección considerable sin invalidar el movimiento anterior. Una corrección que supera ese nivel y se profundiza hasta el 78,6% o más allá genera dudas sobre si el movimiento original todavía sigue en pie, o si lo que está en curso es una reversión mayor, no solo una pausa.</p><h2>Combinando Fibonacci con otra confirmación</h2><p>Usar el retroceso aislado, sin nada más, tiende a generar entradas prematuras: el precio puede perforar un nivel y seguir cayendo (o subiendo) sin respetar la zona marcada. Formas comunes de reforzar la señal incluyen:</p><ul><li>Verificar si el nivel de Fibonacci coincide con un soporte o resistencia ya existente en el gráfico, formado por máximos o mínimos anteriores.</li><li>Esperar un patrón de vela de reversión en la región del nivel, en lugar de comprar o vender en cuanto el precio toca la línea.</li><li>Revisar un indicador de momento, como el Estocástico, para ver si también muestra señales de agotamiento del movimiento de corrección.</li></ul><h2>Errores comunes</h2><p>Un error recurrente es dibujar la herramienta en cualquier oscilación pequeña del gráfico, sin elegir un movimiento realmente relevante como base. Otro es ignorar el contexto mayor: un retroceso de Fibonacci en una tendencia bajista fuerte tiene menos peso cuando contraría el flujo dominante que cuando está alineado con él. Y, como cualquier herramienta basada en geometría de precio, no garantiza que el precio vaya a respetar ningún nivel específico: solo indica zonas históricamente relevantes de reacción.</p><h2>Cómo usar esto en la práctica</h2><p>El retroceso de Fibonacci funciona mejor como un mapa de zonas de atención que como un gatillo automático de entrada. Marcar los niveles, esperar a que el precio se acerque a uno de ellos, y solo entonces buscar confirmación con otro elemento técnico suele producir entradas más consistentes que operar el toque en la línea por sí solo, siempre con un stop definido, ya que ningún nivel de Fibonacci garantiza que el precio vaya a reaccionar como se espera, y el mismo razonamiento numérico vale, de forma espejada, para retrocesos en movimientos de caída.</p>
+        <div class="bq-post__cta">
+          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Lee también</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/es/blog/patron-hombro-cabeza-hombro-como-identificarlo/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Patrón Hombro-Cabeza-Hombro: cómo identificar la reversión</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/3-patrones-de-candlestick-que-suelen-fallar/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">3 patrones de candlestick que suelen fallar</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/gaps-de-precio-por-que-ocurren/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Gaps de precio: por qué ocurren y por qué importan</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Derechos de autor © 2026 Duotide.<br>
+            Todos los derechos reservados.<br>
+            Sitio oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/es/">Inicio</a></li>
+            <li><a href="/es/duotide-es-confiable/">¿Duotide es Confiable?</a></li>
+            <li><a href="/es/duotide-login/">Métodos de Login</a></li>
+            <li><a href="/es/duotide-broker/">Conoce el Bróker</a></li>
+            <li><a href="/es/duotide-es-seguro/">Seguridad del Bróker</a></li>
+            <li><a href="/es/duotide-app/">Aplicación</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contacto</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gestor de cuenta 24/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/es/duotide-preguntas-frecuentes/">Preguntas frecuentes</a>
+          <a href="/es/sobre/">Sobre este sitio</a>
+          <a href="/es/contacto/">Contacto</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Volver al inicio de la página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Cerrar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bono</span> <span class="pp__l2">del 100%</span></h2>
+          <p>Deposita con el cupón <strong>WELCOME100</strong> y recibe un 100% de bono sobre el monto depositado.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Cupón</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="¡Copiado!">Copiar</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Reclamar ahora</a>
+          <p class="pp__mini">Sujeto a las condiciones de la promoción. Operar productos apalancados implica riesgo de pérdida.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>
