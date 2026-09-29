@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr" data-tema="dark" data-tv="sv_SE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>RSI, SMA och MACD: en strategi för vilken marknad som helst | Blog Duotide</title>
+  <meta name="description" content="Se hur du kombinerar glidande medelvärde, RSI och MACD för att filtrera trend, momentum och ingångspunkt i vilken tillgång som helst, med fullständigt räkneexempel.">
+  <link rel="canonical" href="https://duotide.com.br/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/rsi-sma-macd-strategy-for-any-market/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/rsi-sma-macd-estrategia-para-cualquier-mercado/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/rsi-sma-macd-strategy/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/rsi-sma-macd-strategy-for-any-market/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/rsi-sma-macd-strategie-fuer-jeden-markt/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/rsi-sma-macd-diskarte-para-sa-anumang-merkado/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/rsi-sma-macd-une-strategie-pour-tout-marche/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/rsi-sma-macd-strategy-for-any-market/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/rsi-sma-macd-strategi-untuk-pasar-apa-pun/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/rsi-sma-macd-una-strategia-per-qualsiasi-mercato/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/rsi-sma-macd-strategy-for-any-market/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/rsi-sma-macd-a-strategy-for-any-market/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/rsi-sma-macd-chien-luoc-cho-moi-thi-truong/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/rsi-sma-macd-strategy-for-any-market/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/rsi-sma-macd-strategy-for-any-market/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RSI, SMA och MACD: en strategi för vilken marknad som helst">
+  <meta property="og:description" content="Se hur du kombinerar glidande medelvärde, RSI och MACD för att filtrera trend, momentum och ingångspunkt i vilken tillgång som helst, med fullständigt räkneexempel.">
+  <meta property="og:url" content="https://duotide.com.br/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide-bloggen">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RSI, SMA och MACD: en strategi för vilken marknad som helst">
+  <meta name="twitter:description" content="Se hur du kombinerar glidande medelvärde, RSI och MACD för att filtrera trend, momentum och ingångspunkt i vilken tillgång som helst, med fullständigt räkneexempel.">
+  <meta name="twitter:label1" content="Skriven av">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Lästid">
+  <meta name="twitter:data2" content="5 minuter">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/#artigo",
+      "headline": "RSI, SMA och MACD: en strategi för vilken marknad som helst",
+      "description": "Se hur du kombinerar glidande medelvärde, RSI och MACD för att filtrera trend, momentum och ingångspunkt i vilken tillgång som helst, med fullständigt räkneexempel.",
+      "url": "https://duotide.com.br/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/",
+      "inLanguage": "sv",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
+      "articleSection": "Strategier",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide-teamet",
+        "url": "https://duotide.com.br/sv/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/sv/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://duotide.com.br/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://duotide.com.br/sv/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "RSI, SMA och MACD: en strategi för vilken marknad som helst",
+          "item": "https://duotide.com.br/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Hoppa till innehållet</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/sv/" aria-label="Duotide — startsida">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Öppna navigeringsmenyn"
+                data-abrir="Öppna navigeringsmenyn" data-fechar="Stäng navigeringsmenyn">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Välj språk"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="22" height="16"><span>sv</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/rsi-sma-macd-estrategia-para-qualquer-mercado/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/rsi-sma-macd-strategy-for-any-market/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/rsi-sma-macd-estrategia-para-cualquier-mercado/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/rsi-sma-macd-strategy/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/rsi-sma-macd-strategy-for-any-market/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/rsi-sma-macd-strategie-fuer-jeden-markt/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/rsi-sma-macd-diskarte-para-sa-anumang-merkado/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/rsi-sma-macd-une-strategie-pour-tout-marche/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/rsi-sma-macd-strategy-for-any-market/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/rsi-sma-macd-strategi-untuk-pasar-apa-pun/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/rsi-sma-macd-una-strategia-per-qualsiasi-mercato/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/rsi-sma-macd-strategy-for-any-market/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/rsi-sma-och-macd-en-strategi-for-vilken-marknad-som-helst/" hreflang="sv" lang="sv" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/rsi-sma-macd-a-strategy-for-any-market/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/rsi-sma-macd-chien-luoc-cho-moi-thi-truong/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/rsi-sma-macd-strategy-for-any-market/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Huvudnavigering">
+        <ul>
+          <li><a href="/sv/">Hem</a></li>
+          <li><a href="/sv/duotide-ar-den-palitlig/">Är den pålitlig?</a></li>
+          <li><a href="/sv/duotide-logga-in/">Logga in</a></li>
+          <li><a href="/sv/duotide-maklaren/">Mäklaren</a></li>
+          <li><a href="/sv/duotide-ar-den-saker/">Är den säker?</a></li>
+          <li><a href="/sv/duotide-app/">App</a></li>
+          <li><a href="/sv/basta-maklarna/">Bästa mäklarna</a></li>
+          <li><a href="/sv/blog/" aria-current="page">Blogg</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv"
+           target="_blank" rel="noopener sponsored nofollow">Skapa konto</a>
+        <a class="btn btn--outline btn--sm" href="/sv/duotide-logga-in/">Logga in</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Navigeringsspår">
+    <div class="container">
+      <ol>
+        <li><a href="/sv/">Hem</a></li>
+        <li><a href="/sv/blog/">Blogg</a></li>
+        <li><span aria-current="page">RSI, SMA och MACD: en strategi för vilken marknad som helst</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Strategier</span>
+        <h1>RSI, SMA och MACD: en strategi för vilken marknad som helst</h1>
+        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Ett vanligt misstag hos den som just börjat är att leta efter en enda indikator som ger den perfekta köp- eller säljsignalen. I praktiken gör isolerade indikatorer många fel, eftersom var och en bara ser en del av marknaden: en mäter trend, en annan mäter hastighet, en tredje mäter uttömning.</p><p>Den vanligaste lösningen bland erfarna traders är att kombinera tre verktyg som kompletterar varandra: det enkla glidande medelvärdet (SMA), som visar prisets övergripande riktning; RSI, som mäter momentum; och MACD, som bekräftar rörelsens styrka. Tillsammans fungerar de som tre filter i följd, och den här logiken kan tillämpas på aktier, valutor, index eller kryptotillgångar, så länge diagrammet har tillräcklig volym och historik.</p><h2>Vad varje indikator i kombinationen är till för</h2><h3>Enkelt glidande medelvärde (SMA)</h3><p>SMA på 50 eller 100 perioder fungerar som en referenslinje: när priset ligger över den och den lutar uppåt är bottentrenden uppåtgående; när priset ligger under den och den lutar nedåt är trenden nedåtgående. Den fungerar inte för att markera den exakta ingångstidpunkten, men den avgör på vilken sida av marknaden tradern bör handla.</p><h3>RSI (Relative Strength Index)</h3><p>RSI varierar mellan 0 och 100 och mäter hastigheten i prisförändringarna. I stället för att bara använda de klassiska zonerna för överköpt (över 70) och översålt (under 30), är det mest användbara, inom en trend som redan identifierats av SMA, att observera mellanintervallet: i en uppgångstrend brukar RSI-nedgångar till området 40–50 indikera en sund paus, inte en vändning.</p><h3>MACD</h3><p>MACD föds ur skillnaden mellan två exponentiella medelvärden och åtföljs av en signallinje och ett histogram. När MACD-linjen korsar över signallinjen och histogrammet går från negativt till positivt, antyder det att det kortsiktiga momentumet vänder till förmån för den större trenden — det är utlösaren som saknades efter att SMA och RSI redan pekat ut riktningen.</p><h2>Hur du bygger strategin steg för steg</h2><p>Kombinationslogiken följer en fast ordning, från de långsammare filtren till de snabbare:</p><ol><li>Bekräfta trenden: priset måste ligga på samma sida av SMA på 50 perioder, med medelvärdet lutande i rörelsens riktning.</li><li>Vänta på korrigeringen: vänta tills RSI backar till intervallet 40–50 i en uppgångstrend (eller 50–60 i en nedgångstrend), ett tecken på att tillgången andats ut utan att vända bilden.</li><li>Bekräfta utlösaren: gå bara in när MACD korsar till förmån för trenden, med histogrammet som blir positivt (uppgång) eller negativt (nedgång).</li><li>Fastställ stopp och mål innan du går in, med den senaste bottnen eller toppen som riskreferens.</li></ol><h2>Praktiskt exempel med siffror</h2><p>Föreställ dig en aktie som handlas till 400,00 kr, med SMA på 50 perioder i en uppgångstrend och priset konsekvent över den de senaste veckorna. Papperet korrigerar till 398,00 kr och RSI backar till 45 — inom det förväntade intervallet för en paus, utan att signalera vändning. Två candlar senare korsar MACD över signallinjen och histogrammet blir positivt, samtidigt som priset återvänder till 401,00 kr.</p><p>Tradern går in lång på 401,00 kr, sätter stop loss på 392,00 kr (under korrigeringens botten) och sätter målet på 418,00 kr, nära ett tidigare motstånd. Affärens risk är 9,00 kr per aktie och vinstpotentialen är 17,00 kr, ett risk-avkastningsförhållande på ungefär 1,9 till 1 — det vill säga den förväntade vinsten är nästan dubbelt så stor som den tagna risken.</p><h2>Vanliga misstag och riskhantering</h2><ul><li>Att handla mot SMA bara för att RSI ligger i en översåld zon: i starka trender kan RSI förbli utsträckt länge utan att vända.</li><li>Att gå in så fort MACD korsar, utan att kontrollera om RSI redan korrigerat tillräckligt, vilket brukar ge sena ingångar.</li><li>Att inte fastställa stop loss innan affären öppnas, vilket förvandlar en liten förlust till en stor förlust.</li><li>Att använda de tre indikatorerna med olika parametrar i varje affär, utan att först testa på ett demokonto.</li></ul><p>Ingen kombination av indikatorer garanterar rätt gissning i alla affärer — trading innebär verklig förlustrisk, och därför är det meningsfullt att testa den här strategin på demokonto innan man handlar med riktiga pengar. Fördelen med att kombinera SMA, RSI och MACD hos Duotide eller på någon annan diagramplattform är att minska falska signaler, eftersom varje indikator filtrerar bort den föregåendes fel innan du bestämmer dig för att gå in.</p>
+        <div class="bq-post__cta">
+          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Läs också</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/sv/blog/korsning-av-ema-i-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Korsning av exponentiella glidande medelvärden (EMA) i trading</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-valjer-du-loptiden-for-en-affar/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du löptiden (expiration) för en affär</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/basta-indikatorerna-for-daytrading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">De bästa indikatorerna för den som gör daytrading</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Upphovsrätt © 2026 Duotide.<br>
+            Alla rättigheter förbehållna.<br>
+            officiell webbplats.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Företag</h2>
+          <ul>
+            <li><a href="/sv/">Hem</a></li>
+            <li><a href="/sv/duotide-ar-den-palitlig/">Är Duotide pålitlig?</a></li>
+            <li><a href="/sv/duotide-logga-in/">Inloggningsmetoder</a></li>
+            <li><a href="/sv/duotide-maklaren/">Lär känna mäklaren</a></li>
+            <li><a href="/sv/duotide-ar-den-saker/">Mäklarens säkerhet</a></li>
+            <li><a href="/sv/duotide-app/">Appen</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Kontakt</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Kontoansvarig dygnet runt</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/sv/duotide-vanliga-fragor/">Vanliga frågor</a>
+          <a href="/sv/om-denna-webbplats/">Om denna webbplats</a>
+          <a href="/sv/kontakt/">Kontakt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Tillbaka till början av sidan">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Stäng">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">på 100 %</span></h2>
+          <p>Sätt in med koden <strong>WELCOME100</strong> och få 100 % bonus på insatt belopp.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kod</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopierad!">Kopiera</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Hämta nu</a>
+          <p class="pp__mini">Kampanjvillkor gäller. Handel med hävstångsprodukter innebär risk för förlust.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>

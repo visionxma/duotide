@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr" data-tema="dark" data-tv="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır | Blog Duotide</title>
+  <meta name="description" content="Dijital opsiyonların nasıl çalıştığını, strike fiyatının rolünü ve sunulan getirinin üstlenilen riski karşılayıp karşılamadığının nasıl hesaplanacağını öğrenin.">
+  <link rel="canonical" href="https://duotide.com.br/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/opcoes-digitais-como-funcionam/">
+  <link rel="alternate" hreflang="en" href="https://duotide.com.br/en/blog/digital-options-how-they-work/">
+  <link rel="alternate" hreflang="es" href="https://duotide.com.br/es/blog/opciones-digitales-como-funcionan/">
+  <link rel="alternate" hreflang="ar" href="https://duotide.com.br/ar/blog/how-digital-options-work/">
+  <link rel="alternate" hreflang="bn" href="https://duotide.com.br/bn/blog/digital-options-explained/">
+  <link rel="alternate" hreflang="de" href="https://duotide.com.br/de/blog/digitale-optionen-wie-sie-funktionieren/">
+  <link rel="alternate" hreflang="fil" href="https://duotide.com.br/fil/blog/digital-options-paano-ito-gumagana/">
+  <link rel="alternate" hreflang="fr" href="https://duotide.com.br/fr/blog/options-digitales-comment-elles-fonctionnent/">
+  <link rel="alternate" hreflang="hi" href="https://duotide.com.br/hi/blog/digital-options-how-they-work/">
+  <link rel="alternate" hreflang="id" href="https://duotide.com.br/id/blog/opsi-digital-cara-kerja-dan-menghitung-risiko-nyata/">
+  <link rel="alternate" hreflang="it" href="https://duotide.com.br/it/blog/opzioni-digitali-come-funzionano-e-come-calcolare-il-rischio/">
+  <link rel="alternate" hreflang="ru" href="https://duotide.com.br/ru/blog/how-digital-options-work/">
+  <link rel="alternate" hreflang="sv" href="https://duotide.com.br/sv/blog/digitala-optioner-hur-de-fungerar-och-hur-du-berakna-risken/">
+  <link rel="alternate" hreflang="th" href="https://duotide.com.br/th/blog/how-digital-options-work/">
+  <link rel="alternate" hreflang="tr" href="https://duotide.com.br/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/">
+  <link rel="alternate" hreflang="vi" href="https://duotide.com.br/vi/blog/quyen-chon-so-hoat-dong-nhu-the-nao/">
+  <link rel="alternate" hreflang="zh-CN" href="https://duotide.com.br/zh/blog/digital-options-how-they-work/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/en/blog/digital-options-how-they-work/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır">
+  <meta property="og:description" content="Dijital opsiyonların nasıl çalıştığını, strike fiyatının rolünü ve sunulan getirinin üstlenilen riski karşılayıp karşılamadığının nasıl hesaplanacağını öğrenin.">
+  <meta property="og:url" content="https://duotide.com.br/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:image:alt" content="Duotide — Duotide Blog">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır">
+  <meta name="twitter:description" content="Dijital opsiyonların nasıl çalıştığını, strike fiyatının rolünü ve sunulan getirinin üstlenilen riski karşılayıp karşılamadığının nasıl hesaplanacağını öğrenin.">
+  <meta name="twitter:label1" content="Yazan">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Okuma süresi">
+  <meta name="twitter:data2" content="5 dakika">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/#artigo",
+      "headline": "Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır",
+      "description": "Dijital opsiyonların nasıl çalıştığını, strike fiyatının rolünü ve sunulan getirinin üstlenilen riski karşılayıp karşılamadığının nasıl hesaplanacağını öğrenin.",
+      "url": "https://duotide.com.br/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/",
+      "inLanguage": "tr",
+      "datePublished": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-24T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
+      "articleSection": "Opsiyonlar",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide Ekibi",
+        "url": "https://duotide.com.br/tr/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/tr/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://duotide.com.br/tr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/tr/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır",
+          "item": "https://duotide.com.br/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">İçeriğe geç</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/tr/" aria-label="Duotide — ana sayfa">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Gezinme menüsünü aç"
+                data-abrir="Gezinme menüsünü aç" data-fechar="Gezinme menüsünü kapat">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Dil seçin"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="22" height="16"><span>tr</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/opcoes-digitais-como-funcionam/" hreflang="pt-BR" lang="pt-BR"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/digital-options-how-they-work/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/opciones-digitales-como-funcionan/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/how-digital-options-work/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/digital-options-explained/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/digitale-optionen-wie-sie-funktionieren/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/digital-options-paano-ito-gumagana/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/options-digitales-comment-elles-fonctionnent/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/digital-options-how-they-work/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/opsi-digital-cara-kerja-dan-menghitung-risiko-nyata/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/opzioni-digitali-come-funzionano-e-come-calcolare-il-rischio/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/how-digital-options-work/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/digitala-optioner-hur-de-fungerar-och-hur-du-berakna-risken/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/how-digital-options-work/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/" hreflang="tr" lang="tr" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/quyen-chon-so-hoat-dong-nhu-the-nao/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/digital-options-how-they-work/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Ana gezinme">
+        <ul>
+          <li><a href="/tr/">Ana Sayfa</a></li>
+          <li><a href="/tr/duotide-guvenilir-mi/">Güvenilir mi?</a></li>
+          <li><a href="/tr/duotide-giris/">Giriş</a></li>
+          <li><a href="/tr/duotide-araci-kurum/">Aracı kurum</a></li>
+          <li><a href="/tr/duotide-guvenli-mi/">Güvenli mi?</a></li>
+          <li><a href="/tr/duotide-uygulama/">Uygulama</a></li>
+          <li><a href="/tr/en-iyi-araci-kurumlar/">En iyi aracı kurumlar</a></li>
+          <li><a href="/tr/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr"
+           target="_blank" rel="noopener sponsored nofollow">Hesap oluştur</a>
+        <a class="btn btn--outline btn--sm" href="/tr/duotide-giris/">Giriş</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Sayfa yolu">
+    <div class="container">
+      <ol>
+        <li><a href="/tr/">Ana Sayfa</a></li>
+        <li><a href="/tr/blog/">Blog</a></li>
+        <li><span aria-current="page">Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır</span></li>
+      </ol>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <section class="section">
+      <div class="container article bq-post">
+        <span class="bq__tag">Opsiyonlar</span>
+        <h1>Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır</h1>
+        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
+        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        <p>Finansal piyasaları incelemeye başlayanlar er ya da geç "dijital opsiyonlar" terimiyle karşılaşır. Ana fikir basittir: bir varlık seçersiniz, bir yön (yükseliş veya düşüş) ve bir vade saati belirlersiniz, ve işlemin sonucu, varlığın fiyatının strike adı verilen bir referans değerinin üzerinde mi altında mı bittiğine bağlıdır. Ortası yoktur — ya tahmin doğrudur ve önceden tanımlanmış bir getiri alırsınız, ya da yanlıştır ve o işleme yatırılan tutarı kaybedersiniz.</p>
+<p>Bu format, görsel olarak anlaşılması kolay olduğu için popüler hale geldi, ama anlaşılması kolay olmak, tutarlı bir şekilde işlem yapılması kolay olmakla aynı şey değildir. Gerçek parayı riske atmadan önce, fiyatın nasıl oluştuğunu, diğer opsiyon türlerine göre neyin değiştiğini ve en önemlisi, sermayeniz için hangi risk büyüklüğünün mantıklı olduğunu anlamakta fayda var.</p>
+<h2>Dijital Bir Opsiyon ile Geleneksel Bir Opsiyon Arasında Ne Değişir</h2>
+<p>Geleneksel opsiyonlarda (finans kurslarında işlenen, düzenlenmiş borsalarda işlem gören türde), alıcı bir prim öder ve vade tarihine kadar kararlaştırılan bir fiyattan bir varlığı alma veya satma hakkına sahiptir, yükümlülüğüne değil. Opsiyonun değeri, piyasa hareket ettikçe sürekli değişir ve sonuç kısmi olabilir: az kâr edebilir, çok kâr edebilir ya da ödenen primin sadece bir kısmını kaybedebilirsiniz.</p>
+<p>Dijital opsiyonlarda ise tasarım ikilidir ve vade genellikle çok daha kısadır — dakikalardan birkaç güne kadar. İşlemi açmadan önce tam olarak ne kadar kazanabileceğinizi ve ne kadar kaybedebileceğinizi bilirsiniz. Bu öngörülebilirliğin bir bedeli vardır: sonuç hep ya da hiç olduğundan, küçük zamanlama hataları, fiyatın kademeli hareket ettiği geleneksel bir opsiyona göre çok daha ağır basar.</p>
+<h2>Strike ve Vade Sonucu Nasıl Etkiler</h2>
+<p>Strike, işlemin kazanıp kazanmayacağına karar veren cetveldir. Bir varlığın yükseleceğine bahis oynayıp mevcut fiyattan çok uzak bir strike seçerseniz, isabet olasılığı düşer, ama sunulan getiri genellikle daha yüksek olur. Mevcut fiyata yakın bir strike seçerseniz, isabet şansı artar, ama getiri daha düşük olma eğilimindedir. Tek başına "iyi" bir strike yoktur — sizin için matematiksel olarak anlamlı olması gereken mesafe, vade ve getiri arasında bir ilişki vardır.</p>
+<p>R$ 100,00'den kote edilen bir varlık düşünün. 15 dakika içinde R$ 100,00'ün üzerinde kapanacağına bahis oynayarak R$ 50,00 yatırırsınız, isabet halinde %80 getiri ile. İsabet ederseniz R$ 90,00 alırsınız (yatırılan R$ 50,00 artı R$ 40,00 kâr). Hata yaparsanız R$ 50,00'yi kaybedersiniz. Bu işlemin uzun vadede başa baş kalması için, zamanların %55,5'inden fazlasında isabet etmeniz gerekir — çünkü her hata R$ 50,00'ye mal olur ve her isabet net R$ 40,00 kazandırır. Girip girmeme kararına rehberlik etmesi gereken şey "bir trend görüyorum" hissi değil, bu hesaptır.</p>
+<h2>İşlem Yapmadan Önce Bir Plan Hazırlamak</h2>
+<p>Basit bir plan, işlem sırasındaki duygusal kararları azaltır. Herhangi bir pozisyon açmadan önce belirlemekte fayda olan bazı noktalar:</p>
+<ul>
+<li>Stratejinizin en az 30 ila 50 önceki işlemde ölçülen tarihsel isabet oranı nedir.</li>
+<li>Seçilen strike ve vade için sunulan getiri nedir ve bu isabet oranını karşılıyor mu.</li>
+<li>Her işleme ayrılan toplam sermaye oranı nedir — ne kadar küçükse, hesabınız bir kayıp dizisine o kadar çok işlem boyunca dayanır.</li>
+<li>İster kazanç hedefiyle, ister kayıp limitiyle, hangi senaryoda o gün işlem yapmayı bırakacaksınız.</li>
+</ul>
+<h2>Dikkat Gerektiren Riskler</h2>
+<p>Dijital opsiyonların kısa vadesi başlıca risk faktörüdür: tepki süresini azaltır ve bir kaybı bir sonraki işlemle "telafi etmeye" çalışarak dürtüyle işlem yapma cazibesini artırır. Bu, revenge trading olarak bilinir ve genellikle tekil bir kaybı daha büyük bir kayıp dizisine dönüştürür. Dikkat edilmesi gereken bir başka nokta da, referans varlığı — para birimi, endeks veya emtia — anlamadan işlem yapmaktır, çünkü haberler ve piyasa likiditesi sonraki dakikalarda fiyatın hızını ve yönünü etkiler.</p>
+<p>Duotide gibi platformlar bu verileri görsel olarak düzenler, ama grafiğin okunması işlemi yapan kişinin sorumluluğunda kalmaya devam eder. Hiçbir araç, önceden tanımlanmış bir risk planının yerini tutmaz.</p>
+<h2>Her Şeyi Pratiğe Dökmek</h2>
+<p>Gerçek para yatırmadan önce, işlemleri kağıt üzerinde simüle etmekte fayda var: emri gerçekleştirmeden varlığı, strike'ı, vadeyi, sunulan getiriyi ve sonucu not edin. 30 simüle işlemden sonra isabet oranını hesaplayın ve R$ 100,00 örneğindeki gibi başa baş kalmak için gereken getiriyle karşılaştırın. Sayı tutmuyorsa, sorun bir sonraki turun şansında değildir — stratejidedir. Trading, gerçek bir sermaye kaybı riski içerir ve hiçbir teknik sürekli kâr garanti etmez; var olan şey, tekil bir hatanın mevcut sermayenin tamamını tehlikeye atmasını önleyen, iyi yapılmış bir risk yönetimidir.</p>
+        <div class="bq-post__cta">
+          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+        </div>
+        <aside class="bq-post__mais">
+          <h2>Bunları da okuyun</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/tr/blog/binary-opsiyonlar-pratikte-nasil-calisir/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary opsiyonlar pratikte nasıl çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/binary-opsiyonlar-adim-adim-rehber-ve-risk-yonetimi/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary Opsiyonlar: Pratik Adım Adım Rehber ve Risk Yönetimi</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/zaman-ve-sermayeyi-daha-verimli-kullanmak-icin-5-ipucu/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Zaman ve Sermayeyi Daha Verimli Kullanmak İçin 5 İpucu</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Telif hakkı © 2026 Duotide.<br>
+            Tüm hakları saklıdır.<br>
+            Malpera fermî.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Şirket</h2>
+          <ul>
+            <li><a href="/tr/">Ana Sayfa</a></li>
+            <li><a href="/tr/duotide-guvenilir-mi/">Duotide Güvenilir mi?</a></li>
+            <li><a href="/tr/duotide-giris/">Giriş Yöntemleri</a></li>
+            <li><a href="/tr/duotide-araci-kurum/">Aracı Kurumu Tanıyın</a></li>
+            <li><a href="/tr/duotide-guvenli-mi/">Aracı Kurum Güvenliği</a></li>
+            <li><a href="/tr/duotide-uygulama/">Uygulama</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>İletişim</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>7/24 hesap yöneticisi</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <p>  </p>
+        <p class="footer__links">
+          <a href="/tr/duotide-sikca-sorulan-sorular/">Sıkça sorulan sorular</a>
+          <a href="/tr/hakkinda/">Bu site hakkında</a>
+          <a href="/tr/iletisim/">İletişim</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Sayfanın başına dön">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Kapat">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bonus</span> <span class="pp__l2">%100</span></h2>
+          <p><strong>WELCOME100</strong> kuponuyla para yatırın ve yatırdığınız tutar üzerinden %100 bonus kazanın.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Kupon</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Kopyalandı!">Kopyala</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Hemen al</a>
+          <p class="pp__mini">Kampanya koşullarına tabidir. Kaldıraçlı ürünlerle işlem yapmak zarar riski taşır.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=20260927a" defer></script>
+</body>
+</html>
