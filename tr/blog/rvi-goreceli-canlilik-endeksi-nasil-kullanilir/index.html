@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/rvi-goreceli-canlilik-endeksi-nasil-kullanilir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -172,42 +172,79 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">RVI: Göreceli Canlılık Endeksi teknik analizde nasıl kullanılır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Göstergeler</span>
-        <h1>RVI: Göreceli Canlılık Endeksi teknik analizde nasıl kullanılır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>RVI kısaltmasıyla bilinen Göreceli Canlılık Endeksi (İngilizce Relative Vigor Index), basit bir soruyu yanıtlamaya çalışan bir momentum göstergesidir: fiyatı yukarı veya aşağı iten güç gerçekten sürdürülebilir mi, yoksa sadece geçici bir sarsıntı mı? Sadece fiyatın nereye gittiğine bakan hareketli ortalamalardan farklı olarak, RVI mumun <em>nasıl</em> oluştuğuna bakar; kapanışı açılışla karşılaştırır ve bu farkı dönemin toplam genişliğiyle ilişkilendirir.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indice-de-vigor-relativo-rvi-como-usar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Göstergeler</span>
+            <h1>RVI: Göreceli Canlılık Endeksi teknik analizde nasıl kullanılır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#rvi-nasıl-hesaplanır">RVI nasıl hesaplanır</a></li>
+                <li><a href="#sinyaller-nasıl-yorumlanır">Sinyaller nasıl yorumlanır</a></li>
+                <li><a href="#sayısal-bir-ornek">Sayısal bir örnek</a></li>
+                <li><a href="#rvi-kullanırken-yaygın-hatalar-ve-dikkat-edilmesi-gerekenler">RVI kullanırken yaygın hatalar ve dikkat edilmesi gerekenler</a></li>
+                <li><a href="#rvi-yi-pratige-dokmek">RVI'yi pratiğe dökmek</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>RVI kısaltmasıyla bilinen Göreceli Canlılık Endeksi (İngilizce Relative Vigor Index), basit bir soruyu yanıtlamaya çalışan bir momentum göstergesidir: fiyatı yukarı veya aşağı iten güç gerçekten sürdürülebilir mi, yoksa sadece geçici bir sarsıntı mı? Sadece fiyatın nereye gittiğine bakan hareketli ortalamalardan farklı olarak, RVI mumun <em>nasıl</em> oluştuğuna bakar; kapanışı açılışla karşılaştırır ve bu farkı dönemin toplam genişliğiyle ilişkilendirir.</p>
 <p>Bunun arkasındaki mantık, sağlıklı yükseliş trendlerinde fiyatların mumun en yükseğine yakın kapanma eğiliminde olduğu gözleminden gelir. Düşüş trendlerinde ise tersi olur: kapanış en düşüğe yakın kalır. Bu artık gerçekleşmediğinde, fiyat hâlâ yükseliyor veya düşüyor olsa bile, RVI hareketin soluğunun zayıfladığının sinyalini zaten verir.</p>
-<h2>RVI nasıl hesaplanır</h2>
+<h2 id="rvi-nasıl-hesaplanır">RVI nasıl hesaplanır</h2>
 <p>Tek bir mumun temel formülü şudur: RVI = (Kapanış − Açılış) ÷ (En Yüksek − En Düşük). Sonuç -1 ile 1 arasında değişir. 1'e yakın değerler, kapanışın en yükseğe yapışık olduğu güçlü bir alım gücü mumunu gösterir. -1'e yakın değerler tersini, baskın bir satış baskısını gösterir.</p>
 <p>Pratikte kimse tek bir mumun değerini kullanmaz, çünkü gürültü çok büyük olurdu. Bu yüzden analiz platformlarında kullanılan versiyon, bu hesabı hem payda hem paydada genellikle 10 periyotluk basit bir hareketli ortalamayla yumuşatır. Sonuç, genellikle RVI'nin kendisinin 4 periyotluk ağırlıklı bir ortalaması olan, sinyal çizgisi adı verilen ikinci bir çizgiyle birlikte daha istikrarlı bir çizgidir. Çoğu trader'ın gözlemlediği bu iki çizgi arasındaki kesişimdir.</p>
-<h2>Sinyaller nasıl yorumlanır</h2>
+<h2 id="sinyaller-nasıl-yorumlanır">Sinyaller nasıl yorumlanır</h2>
 <p>En yaygın sinyal kesişimdir: RVI sinyal çizgisini aşağıdan yukarı kestiğinde, birçok trader bunu alım gücünün alan kazandığının bir işareti olarak görür. Ters kesişim, yukarıdan aşağı, tersini öne sürer. Bu kesişimler, izole bir tetikleyici olarak değil, fiyat grafiğinde zaten var olan bir hareketi teyit ettiklerinde daha iyi işler.</p>
 <p>Zaten bir miktar deneyimi olanlar için daha değerli olan ikinci kullanım, uyumsuzluktur. Bir varlığın fiyatı yeni bir zirve yaparken RVI öncekinden daha düşük bir zirve yapıyorsa, bu bir düşüş uyumsuzluğudur: fiyat yükseldi, ama yükselişin arkasındaki canlılık azaldı. Ters akıl yürütme dipler için geçerlidir: fiyat daha düşük bir dip yaparken RVI yükseliyorsa, bu satış baskısının tükenmekte olabileceğinin bir sinyalidir.</p>
-<h2>Sayısal bir örnek</h2>
+<h2 id="sayısal-bir-ornek">Sayısal bir örnek</h2>
 <p>Seansın açılışında R$ 38,00'dan işlem gören bir hisse düşünün. Gün boyunca R$ 37,80 dip ile R$ 39,50 zirve arasında salınır ve R$ 39,20'de kapanır. Tek bir mumun formülünü uygulayarak: (39,20 − 38,00) ÷ (39,50 − 37,80) = 1,20 ÷ 1,70 = 0,70. Bu izole değer bile, kapanışın günün zirvesine oldukça yakın olduğu güçlü bir mumu gösterir. Sonraki günlerde fiyat yükselmeye devam ederse ama bu hesaplanan oran 0,50'ye, sonra 0,30'a düşerse, bu, fiyat hâlâ yükselirken bile canlılığın azaldığını gösterir — trendin grafikte dönmeden önce bile yakıtını kaybediyor olabileceğine dair bir uyarı.</p>
-<h2>RVI kullanırken yaygın hatalar ve dikkat edilmesi gerekenler</h2>
+<h2 id="rvi-kullanırken-yaygın-hatalar-ve-dikkat-edilmesi-gerekenler">RVI kullanırken yaygın hatalar ve dikkat edilmesi gerekenler</h2>
 <p>İlk hata, RVI'yi mükemmel bir öngörü göstergesi olarak ele almaktır. Yapısı gereği bir teyit ve güç göstergesidir, bir sonraki mumun tahmini değildir. İkinci hata, onu tek başına kullanmaktır: fiyata dayalı herhangi bir osilatör gibi, fiyatta önemli hiçbir şey olmadan sinyal çizgisi etrafında gidip gelerek, net bir yönü olmayan piyasalarda sahte sinyaller üretebilir. Bu yüzden birçok trader, RVI'yi daha büyük periyotlu bir hareketli ortalama gibi daha geniş bir trend okumasıyla birleştirir, osilatörü sadece zaten belirlenmiş bir yön içinde girişleri zamanlamak için kullanır.</p>
 <p>Hiçbir teknik göstergenin sonuç garanti etmediğini de hatırlamakta fayda var. RVI, bir hareketin güç ve zayıflık okumasını düzenlemeye yardımcı olur, ama piyasa herhangi bir anda herhangi bir sinyali geçersiz kılabilir ve işlem yapmak her zaman zarar riski içerir.</p>
-<h2>RVI'yi pratiğe dökmek</h2>
+<h2 id="rvi-yi-pratige-dokmek">RVI'yi pratiğe dökmek</h2>
 <p>Yeni başlayanlar için göstergeyi test etmenin basit bir yolu, zaten takip ettiğiniz bir varlığı gözlemlemek ve bir hafta boyunca RVI ile sinyal çizgisi arasındaki kesişimleri, hemen sonra fiyatta olanla karşılaştırarak not etmektir. Bu, gerçek kararlar almak için kullanmayı düşünmeden önce, göstergenin o belirli varlıkta nasıl davrandığına dair kişisel bir referans oluşturur. Duotide gibi bir platformda, RVI'yi grafiğe eklemek ve bu davranışı fiyatla yan yana görselleştirmek mümkündür; bu, herhangi bir işlemden önce bu tür bir çalışmayı büyük ölçüde kolaylaştırır.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -215,7 +252,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +316,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/como-proteger-una-cartera-usando-opciones/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "Opciones",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Cómo proteger una cartera usando opciones: el hedge en la práctica</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Opciones</span>
-        <h1>Cómo proteger una cartera usando opciones: el hedge en la práctica</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Hedge es el nombre que se le da a cualquier operación hecha con el objetivo de reducir el riesgo de otra posición ya existente, no de generar ganancia por sí sola. En el mercado de opciones, la forma más común de hedge para quien tiene acciones compradas es el uso de puts protectoras — un seguro con precio definido contra caídas del activo.</p>
-<h2>El escenario: una cartera expuesta a una caída</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-proteger-uma-carteira-usando-opcoes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">4 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-27">27 de septiembre de 2026</time></p>
+            <span class="bq__tag">Opciones</span>
+            <h1>Cómo proteger una cartera usando opciones: el hedge en la práctica</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#el-escenario-una-cartera-expuesta-a-una-caida">El escenario: una cartera expuesta a una caída</a></li>
+                <li><a href="#armando-la-proteccion-con-puts">Armando la protección con puts</a></li>
+                <li><a href="#como-se-comporta-el-resultado-en-diferentes-escenarios">Cómo se comporta el resultado en diferentes escenarios</a></li>
+                <li><a href="#lo-que-el-hedge-realmente-entrega">Lo que el hedge realmente entrega</a></li>
+                <li><a href="#cuando-tiene-sentido-considerar-este-tipo-de-proteccion">Cuándo tiene sentido considerar este tipo de protección</a></li>
+                <li><a href="#ajustando-el-tamano-de-la-proteccion-al-riesgo-que-quieres-c">Ajustando el tamaño de la protección al riesgo que quieres cubrir</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Hedge es el nombre que se le da a cualquier operación hecha con el objetivo de reducir el riesgo de otra posición ya existente, no de generar ganancia por sí sola. En el mercado de opciones, la forma más común de hedge para quien tiene acciones compradas es el uso de puts protectoras — un seguro con precio definido contra caídas del activo.</p>
+<h2 id="el-escenario-una-cartera-expuesta-a-una-caida">El escenario: una cartera expuesta a una caída</h2>
 <p>Supongamos que tienes 500 acciones de una empresa, compradas a R$ 40,00 cada una, totalizando R$ 20.000,00 invertidos. Crees en el potencial de largo plazo de la empresa, pero temes una caída fuerte en el corto plazo por causa de un evento específico — la publicación de resultados trimestrales, por ejemplo. Vender las acciones significaría renunciar a la posición de largo plazo; no hacer nada significa aceptar el riesgo total de la caída. El hedge con opciones ofrece un término medio.</p>
-<h2>Armando la protección con puts</h2>
+<h2 id="armando-la-proteccion-con-puts">Armando la protección con puts</h2>
 <p>Compras 5 contratos de put (cubriendo las 500 acciones, considerando lotes de 100 acciones cada uno), con strike de R$ 38,00 y prima de R$ 1,00 por acción, totalizando R$ 500,00 de costo (500 acciones × R$ 1,00). Esa prima es el precio del seguro: independientemente de lo que ocurra, ya gastaste esos R$ 500,00.</p>
-<h2>Cómo se comporta el resultado en diferentes escenarios</h2>
+<h2 id="como-se-comporta-el-resultado-en-diferentes-escenarios">Cómo se comporta el resultado en diferentes escenarios</h2>
 <p>Si la acción cae a R$ 30,00, tu posición en acciones pierde R$ 5.000,00 (500 × R$ 10,00). Pero las puts, con strike R$ 38,00, valen al menos R$ 8,00 cada una (38 − 30), generando una ganancia de R$ 4.000,00 (500 × R$ 8,00) que compensa buena parte de la pérdida en las acciones. Descontando la prima de R$ 500,00 pagada, la pérdida neta de la operación combinada queda en R$ 1.500,00, bastante menor que los R$ 5.000,00 que habrías perdido sin la protección.</p>
 <p>Si, por el contrario, la acción sube a R$ 46,00, tu posición en acciones gana R$ 3.000,00 (500 × R$ 6,00). Las puts expiran sin valor, y pierdes solo la prima de R$ 500,00 pagada por ellas. El resultado neto queda en R$ 2.500,00 de ganancia — menor que los R$ 3.000,00 sin la protección, pero todavía positivo. Esa diferencia de R$ 500,00 es, en la práctica, el costo del seguro, pagado independientemente de que el escenario se concrete o no.</p>
-<h2>Lo que el hedge realmente entrega</h2>
+<h2 id="lo-que-el-hedge-realmente-entrega">Lo que el hedge realmente entrega</h2>
 <p>Nota que el hedge no elimina el riesgo de pérdida — en la caída a R$ 30,00, todavía perdiste R$ 1.500,00 netos, solo que un valor bastante menor que sin la protección. Lo que hace es limitar la pérdida máxima posible a un valor conocido de antemano, cambiando parte del potencial de ganancia (el costo de la prima) por esa previsibilidad en el peor escenario. Es una decisión de gestión de riesgo, no una forma de eliminar la incertidumbre del mercado.</p>
-<h2>Cuándo tiene sentido considerar este tipo de protección</h2>
+<h2 id="cuando-tiene-sentido-considerar-este-tipo-de-proteccion">Cuándo tiene sentido considerar este tipo de protección</h2>
 <ul>
 <li>Antes de eventos con potencial de generar alta volatilidad concentrada, como la publicación de resultados.</li>
 <li>Cuando no quieres deshacerte de una posición de largo plazo, pero reconoces un riesgo elevado en el corto plazo.</li>
 <li>Cuando el costo de la prima, calculado en reales, es compatible con el tamaño de la protección que estás buscando — un hedge muy caro puede no valer la pena frente al riesgo que se está protegiendo.</li>
 </ul>
 <p>Usar opciones para proteger una cartera exige entender que esa protección tiene un costo cierto y un beneficio condicional — solo "devuelve" la prima, y más, si el escenario de caída realmente se concreta. Aun así, para quien quiere mantener una posición de largo plazo sin quedar expuesto por completo a un evento específico de corto plazo, es una herramienta concreta, con un resultado calculable incluso antes de aplicarse.</p>
-<h2>Ajustando el tamaño de la protección al riesgo que quieres cubrir</h2>
+<h2 id="ajustando-el-tamano-de-la-proteccion-al-riesgo-que-quieres-c">Ajustando el tamaño de la protección al riesgo que quieres cubrir</h2>
 <p>No siempre tiene sentido proteger el 100% de la posición. Comprar puts para solo la mitad de las 500 acciones, por ejemplo, reduce el costo de la prima a la mitad, pero también reduce a la mitad la compensación recibida en caso de caída. Esta decisión depende de cuánto riesgo estás dispuesto a mantener descubierto: una protección parcial cuesta menos y aun así reduce el impacto del peor escenario, sin eliminar la exposición por completo — un término medio que muchos inversores prefieren frente al costo de una protección total.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-27">27 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/como-funcionan-las-opciones-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo funcionan las opciones binarias, en la práctica</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/opciones-binarias-paso-a-paso-y-gestion-de-riesgo/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opciones binarias: paso a paso práctico y gestión de riesgo</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

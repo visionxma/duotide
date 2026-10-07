@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/calculadora-de-stop-loss-con-atr/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Gestión de riesgo",
       "author": {
@@ -172,30 +172,58 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Calculadora de stop loss con ATR: cómo definir la distancia</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestión de riesgo</span>
-        <h1>Calculadora de stop loss con ATR: cómo definir la distancia</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-stop-loss-com-atr" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">4 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-27">27 de septiembre de 2026</time></p>
+            <span class="bq__tag">Gestión de riesgo</span>
+            <h1>Calculadora de stop loss con ATR: cómo definir la distancia</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#que-mide-el-atr">Qué mide el ATR</a></li>
+                <li><a href="#la-formula-del-stop-basado-en-atr">La fórmula del stop basado en ATR</a></li>
+                <li><a href="#ejemplo-resuelto-en-reales">Ejemplo resuelto en reales</a></li>
+                <li><a href="#el-atr-no-sustituye-la-estructura-del-grafico">El ATR no sustituye la estructura del gráfico</a></li>
+                <li><a href="#no-existe-el-multiplicador-perfecto">No existe el multiplicador perfecto</a></li>
+                <li><a href="#cuidado-con-los-gaps-y-la-ejecucion">Cuidado con los gaps y la ejecución</a></li>
+                <li><a href="#un-recordatorio-final-antes-de-operar">Un recordatorio final antes de operar</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>Una de las dudas más comunes de quien está comenzando a operar es a qué distancia colocar el stop loss. Colocarlo demasiado cerca aumenta la probabilidad de ser detenido por una oscilación normal del activo. Colocarlo demasiado lejos aumenta la pérdida cuando la operación sale mal. Una forma práctica de responder esta pregunta es usar el ATR, el Average True Range, como referencia de volatilidad reciente para calcular la distancia del stop.</p>
-<h2>Qué mide el ATR</h2>
+<h2 id="que-mide-el-atr">Qué mide el ATR</h2>
 <p>El ATR mide el tamaño promedio del movimiento de precio en un determinado número de períodos, generalmente 14. No indica dirección, solo cuánto suele moverse el activo. Para cada vela, se calcula el True Range, que es el mayor valor entre estas tres opciones: la diferencia entre el máximo y el mínimo de la vela actual, la diferencia entre el máximo actual y el cierre anterior, y la diferencia entre el mínimo actual y el cierre anterior. El ATR es el promedio de esos valores a lo largo del período elegido.</p>
-<h2>La fórmula del stop basado en ATR</h2>
+<h2 id="la-formula-del-stop-basado-en-atr">La fórmula del stop basado en ATR</h2>
 <p><strong>Distancia del stop = ATR x multiplicador</strong></p>
 <p>Para una operación de compra: <strong>Stop = precio de entrada - distancia del stop</strong></p>
 <p>Para una operación de venta: <strong>Stop = precio de entrada + distancia del stop</strong></p>
-<h2>Ejemplo resuelto en reales</h2>
+<h2 id="ejemplo-resuelto-en-reales">Ejemplo resuelto en reales</h2>
 <p>Supongamos una operación de compra en una acción negociada a R$ 50,00, con un ATR diario de R$ 1,20 y un multiplicador de 2. La distancia del stop queda en:</p>
 <ul>
 <li>Distancia = R$ 1,20 x 2 = R$ 2,40</li>
@@ -206,21 +234,32 @@
 <li>Tamaño de la posición = R$ 200,00 / R$ 2,40 = 83 acciones, aproximadamente</li>
 </ul>
 <p>Con esta posición, si el precio cae hasta R$ 47,60, la pérdida queda cerca de los R$ 200,00 planeados, antes de costos de comisión. Un objetivo de referencia de 2R, o dos veces el riesgo asumido, quedaría alrededor de R$ 54,80, pero esto es solo una referencia matemática, y no una garantía de que el precio llegará hasta allí.</p>
-<h2>El ATR no sustituye la estructura del gráfico</h2>
+<h2 id="el-atr-no-sustituye-la-estructura-del-grafico">El ATR no sustituye la estructura del gráfico</h2>
 <p>El ATR responde a la pregunta de cuánto suele moverse ese activo. No responde a la pregunta de dónde está equivocada mi idea de entrada. Esta segunda pregunta viene del análisis gráfico, como un mínimo anterior o una zona de soporte. La secuencia recomendada es: primero marcar el nivel que invalida la operación, luego medir la distancia entre la entrada y ese nivel, y solo después comparar esa distancia con el ATR para ver si tiene sentido frente a la volatilidad reciente. Si la distancia estructural es mucho menor de lo que sugiere el ATR, el stop puede estar demasiado ajustado para el ruido normal del activo.</p>
-<h2>No existe el multiplicador perfecto</h2>
+<h2 id="no-existe-el-multiplicador-perfecto">No existe el multiplicador perfecto</h2>
 <p>Un multiplicador bajo crea un stop más cercano y una posición mayor para el mismo riesgo en reales, pero queda más expuesto a oscilaciones comunes. Un multiplicador alto crea un stop más distante y una posición menor, reduciendo las salidas por ruido, pero exigiendo que el precio recorra más distancia para alcanzar el mismo resultado en múltiplos de riesgo. El multiplicador ideal depende del activo, del timeframe operado y del tipo de setup, y vale la pena probar diferentes valores en el histórico antes de adoptar un número fijo para todas las operaciones.</p>
-<h2>Cuidado con los gaps y la ejecución</h2>
+<h2 id="cuidado-con-los-gaps-y-la-ejecucion">Cuidado con los gaps y la ejecución</h2>
 <p>El cálculo asume que la posición se cerrará exactamente en el precio del stop. En la práctica, los gaps, las noticias y los mercados con poca liquidez pueden hacer que la ejecución ocurra bastante lejos del precio planeado, principalmente en activos que cierran durante la noche o el fin de semana. El ATR ayuda a dimensionar el riesgo esperado en condiciones normales, pero no elimina el riesgo de una ejecución peor de lo planeado en momentos de estrés en el mercado.</p>
-<h2>Un recordatorio final antes de operar</h2>
+<h2 id="un-recordatorio-final-antes-de-operar">Un recordatorio final antes de operar</h2>
 <p>Define el multiplicador antes de ver el tamaño de posición resultante, y no al revés. Elegir el multiplicador solo para llegar a un tamaño de posición que parezca cómodo invierte la lógica de la gestión de riesgo: es el stop el que debería definir el tamaño de la posición, y no el tamaño deseado el que debería definir el stop.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-27">27 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en el forex</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia martingala en el trading: cómo funciona y sus riesgos</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -228,7 +267,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +331,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

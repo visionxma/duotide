@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/come-funzionano-i-cfd-dentro-il-meccanismo/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp",
       "articleSection": "Gestione del rischio",
       "author": {
@@ -172,42 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Percorso di navigazione">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/it/">Home</a></li>
         <li><a href="/it/blog/">Blog</a></li>
         <li><span aria-current="page">Come funzionano i CFD dentro: leva, margine e rischio</span></li>
       </ol>
+      <a class="ap__voltar" href="/it/blog/">Indietro</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestione del rischio</span>
-        <h1>Come funzionano i CFD dentro: leva, margine e rischio</h1>
-        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
-        <figure class="foto"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Un CFD (contratto per differenza) è un accordo tra due parti — il trader e il broker — per scambiarsi la differenza tra il valore di un asset al momento dell'apertura e al momento della chiusura della posizione. Nessuna delle due parti arriva a possedere davvero l'asset: il contratto esiste solo per riflettere questa variazione di prezzo. Capire questa meccanica dall'interno aiuta a vedere da dove viene il rischio, che tende a essere maggiore di quanto la semplicità dell'interfaccia di negoziazione suggerisca.</p>
-<h2>Da dove viene la leva</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-funcionam-os-cfds-por-dentro" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiato">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">4 min di lettura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
+            </div>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-27">27 settembre 2026</time></p>
+            <span class="bq__tag">Gestione del rischio</span>
+            <h1>Come funzionano i CFD dentro: leva, margine e rischio</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Team Duotide</strong><small>Redazione</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Indice">
+              <p class="ap__indice-tit">Indice</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#da-dove-viene-la-leva">Da dove viene la leva</a></li>
+                <li><a href="#il-conto-che-mostra-l-effetto-dall-interno-verso-l-esterno">Il conto che mostra l'effetto dall'interno verso l'esterno</a></li>
+                <li><a href="#cos-e-una-richiesta-di-margine">Cos'è una richiesta di margine</a></li>
+                <li><a href="#il-costo-di-mantenere-la-leva-aperta">Il costo di mantenere la leva aperta</a></li>
+                <li><a href="#perche-il-cfd-amplifica-ugualmente-guadagno-e-perdita">Perché il CFD amplifica ugualmente guadagno e perdita</a></li>
+                <li><a href="#perche-la-scadenza-del-contratto-conta-meno-che-in-altri-str">Perché la scadenza del contratto conta meno che in altri strumenti</a></li>
+                <li><a href="#cosa-portare-via-da-questa-meccanica">Cosa portare via da questa meccanica</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Un CFD (contratto per differenza) è un accordo tra due parti — il trader e il broker — per scambiarsi la differenza tra il valore di un asset al momento dell'apertura e al momento della chiusura della posizione. Nessuna delle due parti arriva a possedere davvero l'asset: il contratto esiste solo per riflettere questa variazione di prezzo. Capire questa meccanica dall'interno aiuta a vedere da dove viene il rischio, che tende a essere maggiore di quanto la semplicità dell'interfaccia di negoziazione suggerisca.</p>
+<h2 id="da-dove-viene-la-leva">Da dove viene la leva</h2>
 <p>La leva esiste perché il broker richiede solo una frazione del valore totale della posizione come garanzia — il margine — invece del valore integrale. Se il margine richiesto è del 10% e vuoi controllare una posizione di R$ 5.000,00, devi depositare R$ 500,00. Questo rapporto di 10 a 1 è la leva: un piccolo movimento nel prezzo dell'asset, calcolato sul valore totale della posizione, genera un risultato proporzionalmente molto maggiore sul valore depositato.</p>
-<h2>Il conto che mostra l'effetto dall'interno verso l'esterno</h2>
+<h2 id="il-conto-che-mostra-l-effetto-dall-interno-verso-l-esterno">Il conto che mostra l'effetto dall'interno verso l'esterno</h2>
 <p>Con la posizione di R$ 5.000,00 dell'esempio sopra (margine di R$ 500,00), un calo di appena l'8% nell'asset genera una perdita di R$ 400,00 — l'80% del margine depositato, anche se l'asset è caduto meno di un decimo del suo valore. Un calo del 10% consumerebbe l'intero margine. Questo effetto di moltiplicazione è il nucleo di ciò che rende il CFD uno strumento ad alto rischio: la percentuale di variazione dell'asset e la percentuale di variazione del tuo capitale smettono di essere la stessa cosa.</p>
-<h2>Cos'è una richiesta di margine</h2>
+<h2 id="cos-e-una-richiesta-di-margine">Cos'è una richiesta di margine</h2>
 <p>Quando le perdite di una posizione si avvicinano al valore depositato come margine, il broker può emettere una richiesta di margine (margin call) — una richiesta di depositare più capitale per sostenere la posizione aperta. Se ciò non avviene in tempo, la posizione viene di solito chiusa automaticamente dallo stesso broker, anche contro la volontà del trader, per evitare che la perdita superi il capitale disponibile sul conto. Questo meccanismo protegge entrambe le parti, ma significa che il trader può essere costretto a uscire da una posizione nel peggiore dei momenti possibili, senza controllo sul tempismo di questa uscita.</p>
-<h2>Il costo di mantenere la leva aperta</h2>
+<h2 id="il-costo-di-mantenere-la-leva-aperta">Il costo di mantenere la leva aperta</h2>
 <p>Oltre al rischio di prezzo, mantenere un CFD con leva aperto da un giorno all'altro tende a generare un costo di finanziamento (rollover), dato che, in pratica, parte del valore della posizione viene finanziata. In una posizione di R$ 5.000,00 con tasso giornaliero dello 0,02%, il costo è di R$ 1,00 al giorno — piccolo isolatamente, ma che si accumula in posizioni mantenute per settimane o mesi, erodendo il risultato anche se il prezzo dell'asset non si muove molto.</p>
-<h2>Perché il CFD amplifica ugualmente guadagno e perdita</h2>
+<h2 id="perche-il-cfd-amplifica-ugualmente-guadagno-e-perdita">Perché il CFD amplifica ugualmente guadagno e perdita</h2>
 <p>È comune sentire parlare del potenziale di guadagno della leva e dimenticare che funziona in modo simmetrico. Nell'esempio precedente, se l'asset fosse salito dell'8% invece di scendere, il guadagno sarebbe stato anch'esso di R$ 400,00 sui R$ 500,00 di margine — l'80% di rendimento. La leva non sceglie il lato: moltiplica il risultato di qualsiasi movimento, nella direzione in cui accade, e per questo può restituire guadagni rapidi e prelevare capitale alla stessa velocità.</p>
-<h2>Perché la scadenza del contratto conta meno che in altri strumenti</h2>
+<h2 id="perche-la-scadenza-del-contratto-conta-meno-che-in-altri-str">Perché la scadenza del contratto conta meno che in altri strumenti</h2>
 <p>A differenza di un'opzione, che ha una data di scadenza e perde valore temporale, un CFD può essere mantenuto aperto indefinitamente — ciò che cambia è il costo di rollover, addebitato ogni giorno in cui la posizione resta attiva. Questo rende il CFD, in teoria, flessibile per scadenze variabili, ma questa stessa flessibilità può portare a mantenere aperta una posizione in perdita più a lungo del previsto, accumulando costo di rollover su una perdita che forse avrebbe dovuto essere chiusa prima.</p>
-<h2>Cosa portare via da questa meccanica</h2>
+<h2 id="cosa-portare-via-da-questa-meccanica">Cosa portare via da questa meccanica</h2>
 <p>Prima di operare CFD, vale la pena simulare diversi scenari di calo nell'asset (non solo di rialzo) e calcolare quanto questo rappresenterebbe sul margine depositato — non sul valore totale della posizione. Questo semplice esercizio tende a rivelare che il rischio reale di una posizione con leva è molto maggiore di quanto sembri guardando solo il valore investito sullo schermo. Capire questa meccanica dall'interno, prima di operare, è ciò che differenzia usare la leva in modo calcolato dal semplicemente accettare il valore massimo offerto dal broker senza capire cosa rappresenti in termini di rischio.</p>
-        <div class="bq-post__cta">
-          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aggiornato il: <time datetime="2026-09-27">27 set 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Team Duotide</strong><p>La redazione di Duotide scrive le guide e le notizie di questo blog: come funzionano i mercati, gestione del rischio e uso della piattaforma. Nulla di quanto scritto qui è una raccomandazione di investimento.</p></div>
+              <a class="btn ap__equipe" href="/it/chi-siamo/">Conosci il team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leggi anche</h2>
+        <aside class="ap__rel">
+          <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/come-usare-stop-loss-e-take-profit-nel-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come usare stop loss e take profit nel forex</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/strategia-martingale-nel-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strategia martingale nel trading: come funziona e i rischi</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
@@ -215,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

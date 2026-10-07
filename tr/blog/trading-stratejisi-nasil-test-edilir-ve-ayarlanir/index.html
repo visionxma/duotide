@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/trading-stratejisi-nasil-test-edilir-ve-ayarlanir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
       "articleSection": "Stratejiler",
       "author": {
@@ -172,28 +172,64 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Trading stratejiniz nasıl test edilir ve ayarlanır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Stratejiler</span>
-        <h1>Trading stratejiniz nasıl test edilir ve ayarlanır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 6 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Size uyan trader profilini — mevcut zaman, risk toleransı, sermaye ve kişilik — belirledikten sonra, bir sonraki adım, önemli tutarlarla işlem yapmadan önce seçilen stratejiyi sınamaktır. Birçok kişinin doğrudan gerçek paraya atladığı, başlama kaygısıyla hareket ettiği ve basit bir testin maliyetsiz göstereceği dersleri öğrenmek için ödeme yaptığı adım tam da budur.</p><p>Bu, bir trading stratejisi seçme rehberinin ikinci bölümüdür. Burada odak pratiktir: bir stratejiyi geçmiş veriler üzerinde nasıl test edeceğiniz, bu teste dayanarak riski nasıl ayarlayacağınız ve strateji değiştirme zamanının ne zaman geldiğini kriterle nasıl bileceğiniz.</p><h2>Programlamaya gerek olmadan basit bir backtest</h2><p>Backtest, sadece stratejinin kurallarını zaten gerçekleşmiş verilere uygulayarak nasıl davranmış olacağını görmektir. Başlamak için pahalı bir yazılıma gerek yoktur: geçmiş bir grafik ve bir e-tablo yeterlidir. Varlığı seçin, tam giriş ve çıkış kurallarını belirleyin (örneğin, fiyat 20 periyotluk hareketli ortalamayı yukarı kesince alım yapmak ve %2 hedef veya %1 stop ile çıkmak) ve grafiğin son altı ila on iki ayını manuel olarak gözden geçirip kuralın üreteceği her sinyali not edin.</p><p>Her sinyal için, sonucun pozitif mi negatif mi olduğunu ve ne kadar olduğunu kaydedin. 30 ila 40 sinyal not edildikten sonra, iki basit metrik hesaplanabilir: isabet oranı (kaç işlemin pozitif olacağı, toplama bölünmüş) ve işlem başına ortalama sonuç. Örneğin %40'lık bir isabet oranına sahip bir strateji, kazançlar ortalama olarak zararlardan büyükse hâlâ kârlı olabilir.</p><h2>Testten sonra risk nasıl ayarlanır</h2><p>Backtest ayrıca pozisyonların büyüklüğünü kalibre etmeye de yarar. R$ 2.000'lik bir sermaye ve işlem başına R$ 20'ye denk gelen %1 risk kuralı düşünün. Test, incelenen dönemde üst üste beşe kadar zarar dizisi gösterdiyse, bu senaryoyu simüle etmekte fayda var: R$ 20'lik beş zarar toplam R$ 100 eder, sermayenin yaklaşık %5'i. Bu değer yönetilebilir görünüyorsa, işlem başına %1 risk o profil için makul sınırlar içindedir; çok ağır görünüyorsa, gerçek parayla işlem yapmadan önce işlem başına riski azaltma zamanı gelmiştir.</p><p>Bu ayarlama bir kez yapılıp bırakılmaz. Sermaye değiştikçe veya varlığın volatilitesi arttıkça ya da azaldıkça, işlem başına risk değeri yeniden hesaplanmalıdır; her zaman mevcut sermayenin sabit bir yüzdesi olarak, zamanla güncelliğini yitiren sabit bir R$ tutarı olarak değil.</p><h2>Strateji ne zaman kriterle değiştirilir</h2><p>Bir işlem yanlış gittiği her seferinde strateji değiştirmek, yeni başlayanlar arasındaki en yaygın hatalardan biridir ve sonucu kötüleştirme eğilimindedir, çünkü kişi hiçbir şeyi ciddiyetle değerlendirmek için yeterli sinyali asla biriktiremez. Strateji değiştirme kriteri duygusal değil istatistiksel olmalıdır: kuralı harfiyen izleyerek 30 veya 40 işlemden sonra birikmiş sonuç hâlâ negatifse ve piyasa koşullarında hiçbir önemli değişiklik olmadıysa, o zaman stratejiyi gözden geçirmek veya değiştirmek mantıklıdır.</p><p>Piyasa koşulları yapısal olarak değiştiğinde de değiştirmekte fayda var: örneğin trend piyasaları için tasarlanmış bir strateji, uzun yatay dönemlerde kötü sonuçlar üretme eğilimindedir ve bu senaryoda ona ısrar etmek, stratejinin basitçe yanlış olmasından farklıdır.</p><h2>Kendi geçmişinizden öğrenmek için belgeleyin</h2><p>Her işlemin kaydını tutmak — varlık, tarih, giriş nedeni, sonuç ve neyin harfiyen izlenip izlenmediğine dair bir not — aylarca süren işlemi gerçek bir öğrenmeye dönüştüren şeydir. Bu kayıt olmadan, her hata tekrarlanır çünkü kimse örüntüyü tanımlayamaz. Kayıtla, zararların belirli bir saatte mi, belirli bir varlık türünde mi, yoksa güvenin gerekenden fazla yükselme eğiliminde olduğu büyük bir kazançtan hemen sonra mı yoğunlaştığı gibi somut sorulara cevap verilebilir.</p><p>Test etmek, ayarlamak ve belgelemek bir kez yapılıp unutulan adımlar değildir: sürekli bir döngüdür. İster hisse senetlerinde, ister dövizde, ister endekslerde — Duotide gibi platformlar dahil — her işlem bloğu, riski gözden geçirmek ve bu rehberin ilk bölümünde seçilen stratejinin profiliniz için hâlâ mantıklı olup olmadığını doğrulamak için yeni veriler üretir.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-testar-e-ajustar-sua-estrategia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">6 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Stratejiler</span>
+            <h1>Trading stratejiniz nasıl test edilir ve ayarlanır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#programlamaya-gerek-olmadan-basit-bir-backtest">Programlamaya gerek olmadan basit bir backtest</a></li>
+                <li><a href="#testten-sonra-risk-nasıl-ayarlanır">Testten sonra risk nasıl ayarlanır</a></li>
+                <li><a href="#strateji-ne-zaman-kriterle-degistirilir">Strateji ne zaman kriterle değiştirilir</a></li>
+                <li><a href="#kendi-gecmisinizden-ogrenmek-icin-belgeleyin">Kendi geçmişinizden öğrenmek için belgeleyin</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Size uyan trader profilini — mevcut zaman, risk toleransı, sermaye ve kişilik — belirledikten sonra, bir sonraki adım, önemli tutarlarla işlem yapmadan önce seçilen stratejiyi sınamaktır. Birçok kişinin doğrudan gerçek paraya atladığı, başlama kaygısıyla hareket ettiği ve basit bir testin maliyetsiz göstereceği dersleri öğrenmek için ödeme yaptığı adım tam da budur.</p><p>Bu, bir trading stratejisi seçme rehberinin ikinci bölümüdür. Burada odak pratiktir: bir stratejiyi geçmiş veriler üzerinde nasıl test edeceğiniz, bu teste dayanarak riski nasıl ayarlayacağınız ve strateji değiştirme zamanının ne zaman geldiğini kriterle nasıl bileceğiniz.</p><h2 id="programlamaya-gerek-olmadan-basit-bir-backtest">Programlamaya gerek olmadan basit bir backtest</h2><p>Backtest, sadece stratejinin kurallarını zaten gerçekleşmiş verilere uygulayarak nasıl davranmış olacağını görmektir. Başlamak için pahalı bir yazılıma gerek yoktur: geçmiş bir grafik ve bir e-tablo yeterlidir. Varlığı seçin, tam giriş ve çıkış kurallarını belirleyin (örneğin, fiyat 20 periyotluk hareketli ortalamayı yukarı kesince alım yapmak ve %2 hedef veya %1 stop ile çıkmak) ve grafiğin son altı ila on iki ayını manuel olarak gözden geçirip kuralın üreteceği her sinyali not edin.</p><p>Her sinyal için, sonucun pozitif mi negatif mi olduğunu ve ne kadar olduğunu kaydedin. 30 ila 40 sinyal not edildikten sonra, iki basit metrik hesaplanabilir: isabet oranı (kaç işlemin pozitif olacağı, toplama bölünmüş) ve işlem başına ortalama sonuç. Örneğin %40'lık bir isabet oranına sahip bir strateji, kazançlar ortalama olarak zararlardan büyükse hâlâ kârlı olabilir.</p><h2 id="testten-sonra-risk-nasıl-ayarlanır">Testten sonra risk nasıl ayarlanır</h2><p>Backtest ayrıca pozisyonların büyüklüğünü kalibre etmeye de yarar. R$ 2.000'lik bir sermaye ve işlem başına R$ 20'ye denk gelen %1 risk kuralı düşünün. Test, incelenen dönemde üst üste beşe kadar zarar dizisi gösterdiyse, bu senaryoyu simüle etmekte fayda var: R$ 20'lik beş zarar toplam R$ 100 eder, sermayenin yaklaşık %5'i. Bu değer yönetilebilir görünüyorsa, işlem başına %1 risk o profil için makul sınırlar içindedir; çok ağır görünüyorsa, gerçek parayla işlem yapmadan önce işlem başına riski azaltma zamanı gelmiştir.</p><p>Bu ayarlama bir kez yapılıp bırakılmaz. Sermaye değiştikçe veya varlığın volatilitesi arttıkça ya da azaldıkça, işlem başına risk değeri yeniden hesaplanmalıdır; her zaman mevcut sermayenin sabit bir yüzdesi olarak, zamanla güncelliğini yitiren sabit bir R$ tutarı olarak değil.</p><h2 id="strateji-ne-zaman-kriterle-degistirilir">Strateji ne zaman kriterle değiştirilir</h2><p>Bir işlem yanlış gittiği her seferinde strateji değiştirmek, yeni başlayanlar arasındaki en yaygın hatalardan biridir ve sonucu kötüleştirme eğilimindedir, çünkü kişi hiçbir şeyi ciddiyetle değerlendirmek için yeterli sinyali asla biriktiremez. Strateji değiştirme kriteri duygusal değil istatistiksel olmalıdır: kuralı harfiyen izleyerek 30 veya 40 işlemden sonra birikmiş sonuç hâlâ negatifse ve piyasa koşullarında hiçbir önemli değişiklik olmadıysa, o zaman stratejiyi gözden geçirmek veya değiştirmek mantıklıdır.</p><p>Piyasa koşulları yapısal olarak değiştiğinde de değiştirmekte fayda var: örneğin trend piyasaları için tasarlanmış bir strateji, uzun yatay dönemlerde kötü sonuçlar üretme eğilimindedir ve bu senaryoda ona ısrar etmek, stratejinin basitçe yanlış olmasından farklıdır.</p><h2 id="kendi-gecmisinizden-ogrenmek-icin-belgeleyin">Kendi geçmişinizden öğrenmek için belgeleyin</h2><p>Her işlemin kaydını tutmak — varlık, tarih, giriş nedeni, sonuç ve neyin harfiyen izlenip izlenmediğine dair bir not — aylarca süren işlemi gerçek bir öğrenmeye dönüştüren şeydir. Bu kayıt olmadan, her hata tekrarlanır çünkü kimse örüntüyü tanımlayamaz. Kayıtla, zararların belirli bir saatte mi, belirli bir varlık türünde mi, yoksa güvenin gerekenden fazla yükselme eğiliminde olduğu büyük bir kazançtan hemen sonra mı yoğunlaştığı gibi somut sorulara cevap verilebilir.</p><p>Test etmek, ayarlamak ve belgelemek bir kez yapılıp unutulan adımlar değildir: sürekli bir döngüdür. İster hisse senetlerinde, ister dövizde, ister endekslerde — Duotide gibi platformlar dahil — her işlem bloğu, riski gözden geçirmek ve bu rehberin ilk bölümünde seçilen stratejinin profiliniz için hâlâ mantıklı olup olmadığını doğrulamak için yeni veriler üretir.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de üstel hareketli ortalama (EMA) kesişimi</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +237,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +301,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

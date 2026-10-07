@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/dpo-detrended-price-oscillator-nasil-kullanilir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -172,44 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">DPO: Detrended Price Oscillator Nasıl Kullanılır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Göstergeler</span>
-        <h1>DPO: Detrended Price Oscillator Nasıl Kullanılır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Trend göstergelerinin çoğu, fiyatı gerçek zamanlı olarak takip etmek üzere tasarlanmıştır. DPO kısaltmasıyla bilinen <em>Detrended Price Oscillator</em> (Trendden Arındırılmış Fiyat Osilatörü) ise kasıtlı olarak tam tersini yapar: arkasında gizli kalan kısa ve orta vadeli döngüleri ortaya çıkarmak için grafikten uzun vadeli trendi kaldırır.</p>
-<h2>DPO'nun Çözmeye Çalıştığı Sorun</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="oscilador-de-preco-destendenciado-dpo" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-28">28 Eylül 2026</time></p>
+            <span class="bq__tag">Göstergeler</span>
+            <h1>DPO: Detrended Price Oscillator Nasıl Kullanılır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#dpo-nun-cozmeye-calıstıgı-sorun">DPO'nun Çözmeye Çalıştığı Sorun</a></li>
+                <li><a href="#hesaplama-nasıl-calısır">Hesaplama Nasıl Çalışır</a></li>
+                <li><a href="#dpo-cizgisi-neyi-ortaya-cıkarır">DPO Çizgisi Neyi Ortaya Çıkarır</a></li>
+                <li><a href="#sayılarla-bir-ornek">Sayılarla Bir Örnek</a></li>
+                <li><a href="#dpo-trendi-okumak-icin-neden-ise-yaramaz">DPO Trendi Okumak İçin Neden İşe Yaramaz</a></li>
+                <li><a href="#dpo-yu-diger-araclarla-birlestirmek">DPO'yu Diğer Araçlarla Birleştirmek</a></li>
+                <li><a href="#pratik-onlemler">Pratik Önlemler</a></li>
+                <li><a href="#sonuc-olarak">Sonuç Olarak</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Trend göstergelerinin çoğu, fiyatı gerçek zamanlı olarak takip etmek üzere tasarlanmıştır. DPO kısaltmasıyla bilinen <em>Detrended Price Oscillator</em> (Trendden Arındırılmış Fiyat Osilatörü) ise kasıtlı olarak tam tersini yapar: arkasında gizli kalan kısa ve orta vadeli döngüleri ortaya çıkarmak için grafikten uzun vadeli trendi kaldırır.</p>
+<h2 id="dpo-nun-cozmeye-calıstıgı-sorun">DPO'nun Çözmeye Çalıştığı Sorun</h2>
 <p>Bir varlık güçlü bir yükseliş trendindeyken, bu genel yükseliş içinde daha küçük tepeler ve dipler oluşturması yaygındır. Sadece ham fiyata bakıldığında, bu küçük döngüleri arka plandaki hareketten görsel olarak ayırmak zordur. DPO bu sorunu, mevcut fiyatı zamanda geriye kaydırılmış bir hareketli ortalamayla karşılaştırarak ve denklemden uzun vadeli trend bileşeninin büyük kısmını çıkararak ele alır.</p>
-<h2>Hesaplama Nasıl Çalışır</h2>
+<h2 id="hesaplama-nasıl-calısır">Hesaplama Nasıl Çalışır</h2>
 <p>Formül, belirli sayıda periyodun — örneğin 20 — basit bir hareketli ortalamasını alır ve onu bu periyodun yaklaşık yarısı artı bir kadar geriye kaydırır. Sonra bu kaydırılmış ortalamayı her mumun kapanış fiyatından çıkarır. Sonuç, sıfırın üstünde ve altında salınan, genel trend eğiminin okumaya engel olmadığı, kısa vadeli döngüleri temsil eden tepeleri ve dipleri öne çıkaran bir çizgidir.</p>
-<h2>DPO Çizgisi Neyi Ortaya Çıkarır</h2>
+<h2 id="dpo-cizgisi-neyi-ortaya-cıkarır">DPO Çizgisi Neyi Ortaya Çıkarır</h2>
 <p>DPO pozitif değerlerdeyken, fiyat kaydırılmış ortalamanın üzerindedir ve gözlemlenen kısa vadeli döngü içinde bir güç anını gösterir. Negatif değerlerdeyken, fiyat bu ortalamanın altındadır ve aynı döngü içinde zayıflığı gösterir. Göstergenin pratik değeri, bu döngülerin yaklaşık süresini belirlemeye yardımcı olmasında yatar — DPO'daki bir tepeyi diğerinden kaç periyodun ayırdığını sayarak — bu da örneğin döngülere dayalı bir stratejide bir giriş ile diğeri arasındaki beklenen aralığa yön verebilir.</p>
-<h2>Sayılarla Bir Örnek</h2>
+<h2 id="sayılarla-bir-ornek">Sayılarla Bir Örnek</h2>
 <p>20 periyotluk, 11 periyot geriye kaydırılmış basit hareketli ortalaması şu anda R$ 45,00 olan bir varlık düşünün. En son mumun kapanış fiyatı R$ 47,25 ise, bu noktadaki DPO değeri 47,25 − 45,00 = 2,25'tir; bu, fiyatın kaydırılmış referans ortalamasının R$ 2,25 üzerinde olduğunu gösteren pozitif bir değerdir. Birkaç hafta sonra aynı hesaplama -1,80 sonucunu verirse, bu, kısa vadeli döngünün gözlemlenen o dönem içinde güçten zayıflığa döndüğünü gösterir — sürekli bir yükseliş trendinde sadece ham fiyata bakarak fark edilmesi çok daha zor olan bir bilgi.</p>
-<h2>DPO Trendi Okumak İçin Neden İşe Yaramaz</h2>
+<h2 id="dpo-trendi-okumak-icin-neden-ise-yaramaz">DPO Trendi Okumak İçin Neden İşe Yaramaz</h2>
 <p>Tam olarak hesaplaması trendi kasıtlı olarak kaldırdığı için, DPO bir varlığın uzun vadede yükselişte mi düşüşte mi olduğuna karar vermek için kullanılmamalıdır — bunun için geleneksel trend göstergeleri daha uygun olmaya devam eder. Dikkat edilmesi gereken bir başka nokta da zaman kaydırmasıdır: hesaplamada kullanılan ortalama geriye kaydırıldığından, DPO en son muma göre "gecikmiş" olma eğilimindedir, bu da onun bir sonraki hareketin erken sinyali değil, geçmiş döngüleri belirleme aracı olarak rolünü pekiştirir.</p>
-<h2>DPO'yu Diğer Araçlarla Birleştirmek</h2>
+<h2 id="dpo-yu-diger-araclarla-birlestirmek">DPO'yu Diğer Araçlarla Birleştirmek</h2>
 <p>Yaygın bir kullanım biçimi, DPO'yu daha uzun vadeli bir trend göstergesiyle birleştirmektir: trend göstergesi genel yönü (yükseliş, düşüş veya yatay) tanımlar ve DPO, bu yön içinde kısa vadeli döngünün ana trendle uyumlu bir giriş için ne zaman elverişli olduğunu belirlemeye yardımcı olur — örneğin, bir yükseliş trendine yalnızca DPO negatif değerlerden çıkıp yükselmeye başladığında, daha büyük trend içinde yeni bir güç döngüsünün başladığını düşündürdüğünde girmek gibi.</p>
-<h2>Pratik Önlemler</h2>
+<h2 id="pratik-onlemler">Pratik Önlemler</h2>
 <p>Kaydırılmış ortalamalara dayanan her araç gibi, DPO tarihsel olarak makul ölçüde düzenli bir döngüsel örüntü gösteren varlıklarda daha iyi çalışır. Belirlenebilir bir döngüsü olmayan, çok düzensiz piyasalarda gösterge, net bir pratik faydası olmadan çok sık işaret değiştiren okumalar üretebilir.</p>
-<h2>Sonuç Olarak</h2>
+<h2 id="sonuc-olarak">Sonuç Olarak</h2>
 <p>DPO, özellikle daha büyük bir trend içinde gizli kalan kısa ve orta vadeli döngüleri incelemek isteyenler için faydalı, niş bir araçtır ve piyasanın genel yönü hakkında karar verirken geleneksel trend göstergelerinin yerini almamalıdır. Zaten takip ettiğiniz varlıklarda tepeler ve dipler arasındaki mesafeyi gözlemleyerek onu fiyat grafiğiyle yan yana test etmek, analizinize gerçek bir değer katıp katmadığını anlamanın en iyi yoludur.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-28">28 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -217,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -281,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

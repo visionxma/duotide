@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/adx-indicator-trend-strength/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "技术指标",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">ADX：衡量趋势强度的指标</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">技术指标</span>
-        <h1>ADX：衡量趋势强度的指标</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>一个常见的错误是在横盘震荡的市场中使用趋势策略，结果一次又一次入场却没有明确方向。ADX（平均趋向指数）正是为了避免这种错误而设计的：它并不显示价格会上涨还是下跌，而是显示当前趋势有多强，帮助你判断此时是否值得使用趋势策略。</p><p>本文将解释ADX是如何构成的，如何解读最常用的数值区间，以及如何结合方向线DI+和DI-来同时获得方向感。</p><h2>ADX从何而来</h2><p>ADX来自两个辅助指标的比较：DI+（正向动向指标）和DI-（负向动向指标），它们分别衡量上涨和下跌行情的强度。ADX本身是这两条线之间差值的平滑均线，以一个0到100之间的单一数值显示，尽管在实践中很少超过60。</p><h2>如何解读ADX的数值</h2><ul><li>低于20：趋势较弱或不存在，市场很可能处于横盘状态——在这个区间，趋势策略往往会产生虚假信号。</li><li>20到25之间：可能是趋势的初期，但尚未形成稳固的力量。</li><li>高于25：被认为是强趋势，环境更有利于趋势跟随策略。</li><li>高于40：趋势非常强劲，尽管此时行情也可能更接近衰竭，而不是刚刚开始。</li></ul><h2>结合DI+和DI-使用ADX</h2><p>单独使用时，ADX并不能说明行情的方向——只能说明它的强度。要知道方向，需要观察DI+和DI-这两条线：当DI+高于DI-时，偏向看涨；当DI-高于DI+时，偏向看跌。这两条线之间的交叉，如果配合ADX上升超过20或25，被许多交易者解读为一个新趋势正在形成力量的确认信号。</p><h2>实际解读示例</h2><p>设想某资产的ADX在两周内从15上升到28，同时DI+向上穿过DI-。这种组合表明一个上升趋势正在以不断增强的力量形成，这与价格上涨但ADX停滞在20以下的情况不同——在后一种情况中，这波上涨更可能只是更大范围横盘中的一次短暂喘息。把这两种情形放在一起比较，有助于理解为什么两张价格相似的图表可能需要完全不同的决策。</p><h2>最常见的陷阱</h2><ul><li>把ADX当作直接的买入或卖出信号，而实际上它只衡量强度，不衡量方向。</li><li>忽视ADX是一个滞后指标：它是在趋势已经开始之后才确认其强度，而不是提前预示。</li><li>假设非常高的ADX意味着趋势会持续很长时间——实际上，非常高的峰值有时反而预示着行情即将进入盘整或反转。</li><li>只使用一个计算周期（默认通常是14），却不去测试它是否适合所观察的资产和图表周期。</li><li>仅凭DI+和DI-的交叉进行交易，而不考虑交叉发生时ADX的绝对水平，这可能导致在尚无真正力量的市场中入场。</li></ul><h2>如何把ADX纳入你的分析习惯</h2><p>使用ADX的一个实用方法是把它当作一个前置过滤器：在应用任何基于均线、MACD或突破的策略之前，先确认ADX是否高于20或25。如果低于这个水平，可以考虑减小仓位，或者干脆避免使用趋势策略，直到指标显示出更强的力量为止。</p><p>和任何建立在历史价格之上的指标一样，ADX并不能保证当前的力量会持续下去，在强趋势中交易依然存在剧烈反转的真实风险。在Duotide或其他图表平台的模拟账户中练习综合解读ADX、DI+和DI-，有助于在用真实资金应用这些数值之前建立信心。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="adx-o-indicador-que-mede-a-forca-da-tendencia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">技术指标</span>
+            <h1>ADX：衡量趋势强度的指标</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#adx从何而来">ADX从何而来</a></li>
+                <li><a href="#如何解读adx的数值">如何解读ADX的数值</a></li>
+                <li><a href="#结合di-和di-使用adx">结合DI+和DI-使用ADX</a></li>
+                <li><a href="#实际解读示例">实际解读示例</a></li>
+                <li><a href="#最常见的陷阱">最常见的陷阱</a></li>
+                <li><a href="#如何把adx纳入你的分析习惯">如何把ADX纳入你的分析习惯</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>一个常见的错误是在横盘震荡的市场中使用趋势策略，结果一次又一次入场却没有明确方向。ADX（平均趋向指数）正是为了避免这种错误而设计的：它并不显示价格会上涨还是下跌，而是显示当前趋势有多强，帮助你判断此时是否值得使用趋势策略。</p><p>本文将解释ADX是如何构成的，如何解读最常用的数值区间，以及如何结合方向线DI+和DI-来同时获得方向感。</p><h2 id="adx从何而来">ADX从何而来</h2><p>ADX来自两个辅助指标的比较：DI+（正向动向指标）和DI-（负向动向指标），它们分别衡量上涨和下跌行情的强度。ADX本身是这两条线之间差值的平滑均线，以一个0到100之间的单一数值显示，尽管在实践中很少超过60。</p><h2 id="如何解读adx的数值">如何解读ADX的数值</h2><ul><li>低于20：趋势较弱或不存在，市场很可能处于横盘状态——在这个区间，趋势策略往往会产生虚假信号。</li><li>20到25之间：可能是趋势的初期，但尚未形成稳固的力量。</li><li>高于25：被认为是强趋势，环境更有利于趋势跟随策略。</li><li>高于40：趋势非常强劲，尽管此时行情也可能更接近衰竭，而不是刚刚开始。</li></ul><h2 id="结合di-和di-使用adx">结合DI+和DI-使用ADX</h2><p>单独使用时，ADX并不能说明行情的方向——只能说明它的强度。要知道方向，需要观察DI+和DI-这两条线：当DI+高于DI-时，偏向看涨；当DI-高于DI+时，偏向看跌。这两条线之间的交叉，如果配合ADX上升超过20或25，被许多交易者解读为一个新趋势正在形成力量的确认信号。</p><h2 id="实际解读示例">实际解读示例</h2><p>设想某资产的ADX在两周内从15上升到28，同时DI+向上穿过DI-。这种组合表明一个上升趋势正在以不断增强的力量形成，这与价格上涨但ADX停滞在20以下的情况不同——在后一种情况中，这波上涨更可能只是更大范围横盘中的一次短暂喘息。把这两种情形放在一起比较，有助于理解为什么两张价格相似的图表可能需要完全不同的决策。</p><h2 id="最常见的陷阱">最常见的陷阱</h2><ul><li>把ADX当作直接的买入或卖出信号，而实际上它只衡量强度，不衡量方向。</li><li>忽视ADX是一个滞后指标：它是在趋势已经开始之后才确认其强度，而不是提前预示。</li><li>假设非常高的ADX意味着趋势会持续很长时间——实际上，非常高的峰值有时反而预示着行情即将进入盘整或反转。</li><li>只使用一个计算周期（默认通常是14），却不去测试它是否适合所观察的资产和图表周期。</li><li>仅凭DI+和DI-的交叉进行交易，而不考虑交叉发生时ADX的绝对水平，这可能导致在尚无真正力量的市场中入场。</li></ul><h2 id="如何把adx纳入你的分析习惯">如何把ADX纳入你的分析习惯</h2><p>使用ADX的一个实用方法是把它当作一个前置过滤器：在应用任何基于均线、MACD或突破的策略之前，先确认ADX是否高于20或25。如果低于这个水平，可以考虑减小仓位，或者干脆避免使用趋势策略，直到指标显示出更强的力量为止。</p><p>和任何建立在历史价格之上的指标一样，ADX并不能保证当前的力量会持续下去，在强趋势中交易依然存在剧烈反转的真实风险。在Duotide或其他图表平台的模拟账户中练习综合解读ADX、DI+和DI-，有助于在用真实资金应用这些数值之前建立信心。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

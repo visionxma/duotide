@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/bn/blog/bollinger-bands-touch-explained/",
       "inLanguage": "bn",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "ইন্ডিকেটর",
       "author": {
@@ -172,53 +172,93 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="নেভিগেশন পথ">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/bn/">হোম</a></li>
         <li><a href="/bn/blog/">ব্লগ</a></li>
         <li><span aria-current="page">দাম বোলিঞ্জার ব্যান্ড স্পর্শ করার অর্থ কী</span></li>
       </ol>
+      <a class="ap__voltar" href="/bn/blog/">ফিরে যান</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">ইন্ডিকেটর</span>
-        <h1>দাম বোলিঞ্জার ব্যান্ড স্পর্শ করার অর্থ কী</h1>
-        <p class="bq-post__meta">Duotide টিম · <time datetime="2026-09-24">২৪/০৯/২০২৬</time> · 4 মিনিটে পড়ুন</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>বোলিঞ্জার ব্যান্ড প্রায় যেকোনো চার্ট প্ল্যাটফর্মে দেখা যায়, এবং শুরুকারী ট্রেডারদের একটি বড় অংশ দ্রুত সরলীকৃত নিয়ম শিখে ফেলে: দাম উপরের ব্যান্ড স্পর্শ করলে, কমতে পারে; দাম নিচের ব্যান্ড স্পর্শ করলে, বাড়তে পারে। এই সরলীকৃত পাঠ নির্দেশকের কেন্দ্রীয় বিষয়টি হারিয়ে ফেলে, যা পরিসংখ্যানগত, এবং কোনো তৈরি ক্রয় বা বিক্রয় সংকেত নয়।</p>
-<h2>ব্যান্ডের পেছনের হিসাব</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-sao-as-bandas-de-bollinger" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="লিংক কপি হয়েছে">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">২৪ সেপ, ২০২৬</time><span class="ap__sep">4 মিনিটে পড়ুন</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> বার দেখা হয়েছে</span></span>
+            </div>
+            <p class="ap__atual">হালনাগাদ: <time datetime="2026-09-28">২৮ সেপ্টেম্বর, ২০২৬</time></p>
+            <span class="bq__tag">ইন্ডিকেটর</span>
+            <h1>দাম বোলিঞ্জার ব্যান্ড স্পর্শ করার অর্থ কী</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide টিম</strong><small>সম্পাদকীয় দল</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="সূচিপত্র">
+              <p class="ap__indice-tit">সূচিপত্র</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#ব-য-ন-ড-র-প-ছন-র-হ-স-ব">ব্যান্ডের পেছনের হিসাব</a></li>
+                <li><a href="#একট-স-খ-য-গত-উদ-হরণ">একটি সংখ্যাগত উদাহরণ</a></li>
+                <li><a href="#ব-য-ন-ড-স-পর-শ-কর-র-আসল-অর-থ-ক">ব্যান্ড স্পর্শ করার আসল অর্থ কী</a></li>
+                <li><a href="#স-ক-ইজ-যখন-ব-য-ন-ডগ-ল-স-ক-চ-ত-হয">স্কুইজ: যখন ব্যান্ডগুলো সংকুচিত হয়</a></li>
+                <li><a href="#শক-ত-শ-ল-প-রবণত-য-ব-য-ন-ড-ধর-চল-দ-ম">শক্তিশালী প্রবণতায় ব্যান্ড ধরে চলা দাম</a></li>
+                <li><a href="#র-ঞ-জ-ব-জ-র-এব-প-রবণত-ব-জ-র-র-মধ-য-প-র-থক-য">রেঞ্জ বাজার এবং প্রবণতা বাজারের মধ্যে পার্থক্য</a></li>
+                <li><a href="#প-র-য-ড-এব-গ-ণক-স-মঞ-জস-য-কর">পিরিয়ড এবং গুণক সামঞ্জস্য করা</a></li>
+                <li><a href="#এখ-ন-থ-ক-চ-র-ট-ক-ন-ওয-উচ-ত">এখান থেকে চার্টে কী নেওয়া উচিত</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>উপরে ফিরে যান</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>বোলিঞ্জার ব্যান্ড প্রায় যেকোনো চার্ট প্ল্যাটফর্মে দেখা যায়, এবং শুরুকারী ট্রেডারদের একটি বড় অংশ দ্রুত সরলীকৃত নিয়ম শিখে ফেলে: দাম উপরের ব্যান্ড স্পর্শ করলে, কমতে পারে; দাম নিচের ব্যান্ড স্পর্শ করলে, বাড়তে পারে। এই সরলীকৃত পাঠ নির্দেশকের কেন্দ্রীয় বিষয়টি হারিয়ে ফেলে, যা পরিসংখ্যানগত, এবং কোনো তৈরি ক্রয় বা বিক্রয় সংকেত নয়।</p>
+<h2 id="ব-য-ন-ড-র-প-ছন-র-হ-স-ব">ব্যান্ডের পেছনের হিসাব</h2>
 <p>কেন্দ্রীয় ব্যান্ডটি একটি সরল মুভিং এভারেজ, সাধারণত 20-পিরিয়ডের। উপরের এবং নিচের ব্যান্ড গণনা করা হয় সেই এভারেজের সাপেক্ষে দামের স্ট্যান্ডার্ড ডেভিয়েশনের একটি গুণিতক যোগ ও বিয়োগ করে, সাধারণত দুইবার:</p>
 <p><strong>কেন্দ্রীয় ব্যান্ড = 20-পিরিয়ডের সরল মুভিং এভারেজ</strong></p>
 <p><strong>উপরের ব্যান্ড = কেন্দ্রীয় ব্যান্ড + (2 x স্ট্যান্ডার্ড ডেভিয়েশন)</strong></p>
 <p><strong>নিচের ব্যান্ড = কেন্দ্রীয় ব্যান্ড - (2 x স্ট্যান্ডার্ড ডেভিয়েশন)</strong></p>
-<h2>একটি সংখ্যাগত উদাহরণ</h2>
+<h2 id="একট-স-খ-য-গত-উদ-হরণ">একটি সংখ্যাগত উদাহরণ</h2>
 <p>ধরুন একটি শেয়ারের 20-পিরিয়ডের মুভিং এভারেজ R$ 48,00 এবং সাম্প্রতিক স্ট্যান্ডার্ড ডেভিয়েশন R$ 1,50। ব্যান্ডগুলো এভাবে গণনা করা হয়:</p>
 <ul>
 <li>উপরের ব্যান্ড = R$ 48,00 + (2 x R$ 1,50) = R$ 51,00</li>
 <li>নিচের ব্যান্ড = R$ 48,00 - (2 x R$ 1,50) = R$ 45,00</li>
 </ul>
 <p>এটি এভারেজের চারপাশে R$ 45,00 থেকে R$ 51,00 পর্যন্ত একটি চ্যানেল তৈরি করে। যেহেতু গণনায় স্ট্যান্ডার্ড ডেভিয়েশন ব্যবহার করা হয়, এটি নিজে থেকেই মানিয়ে নেয়: সম্পদের অস্থিরতা বাড়লে, স্ট্যান্ডার্ড ডেভিয়েশন বাড়ে এবং ব্যান্ডগুলো এভারেজ থেকে দূরে সরে যায়। অস্থিরতা কমলে, ব্যান্ডগুলো কাছাকাছি আসে।</p>
-<h2>ব্যান্ড স্পর্শ করার আসল অর্থ কী</h2>
+<h2 id="ব-য-ন-ড-স-পর-শ-কর-র-আসল-অর-থ-ক">ব্যান্ড স্পর্শ করার আসল অর্থ কী</h2>
 <p>পরিসংখ্যানগত দিক থেকে, দুইবার স্ট্যান্ডার্ড ডেভিয়েশন ব্যবহার করা চ্যানেলের মধ্যে দামের বেশিরভাগ স্বাভাবিক দোলন ধরার চেষ্টা করে, একটি স্বাভাবিকের কাছাকাছি বণ্টনের অনুমান থেকে শুরু করে। বাস্তবে, দাম এই তাত্ত্বিক অনুমান যা নির্দেশ করবে তার চেয়ে বেশি ঘন ঘন ব্যান্ড স্পর্শ করে বা অতিক্রম করে, কারণ বাজার ঠিক একটি আদর্শ পরিসংখ্যানগত বণ্টনের মতো আচরণ করে না। উপরের ব্যান্ড স্পর্শ করার অর্থ দাম তার নিজের সাম্প্রতিক এভারেজের সাপেক্ষে প্রসারিত, এর অর্থ এই নয় যে পরবর্তীতে একটি পতন নিশ্চিত।</p>
-<h2>স্কুইজ: যখন ব্যান্ডগুলো সংকুচিত হয়</h2>
+<h2 id="স-ক-ইজ-যখন-ব-য-ন-ডগ-ল-স-ক-চ-ত-হয">স্কুইজ: যখন ব্যান্ডগুলো সংকুচিত হয়</h2>
 <p>যখন একটি সময়ের জন্য অস্থিরতা কমে যায়, ব্যান্ডগুলো যথেষ্ট কাছাকাছি চলে আসে, যা সাধারণত স্কুইজ নামে পরিচিত তৈরি করে। এই সংকোচন সাধারণত বেশি মুভমেন্টের একটি সময়ের আগে ঘটে, যদিও এটি সেই ভবিষ্যৎ মুভমেন্টের দিক নির্দেশ করে না। একটি স্কুইজের পরে ঊর্ধ্বমুখী বা নিম্নমুখী উভয় ব্রেকআউটই হতে পারে, এবং নির্দেশকটি নিজেই দুটির মধ্যে কোনটি ঘটবে তা পূর্বাভাস দিতে পারে না।</p>
-<h2>শক্তিশালী প্রবণতায় ব্যান্ড ধরে চলা দাম</h2>
+<h2 id="শক-ত-শ-ল-প-রবণত-য-ব-য-ন-ড-ধর-চল-দ-ম">শক্তিশালী প্রবণতায় ব্যান্ড ধরে চলা দাম</h2>
 <p>একটি শক্তিশালী ঊর্ধ্বমুখী প্রবণতায়, দাম একাধিক পরপর ক্যান্ডেলের জন্য উপরের ব্যান্ডের সাথে লেগে থাকা বা বারবার স্পর্শ করা সাধারণ, যার অর্থ আসন্ন বিপরীতমুখিতা নয়। যে ট্রেডাররা শক্তিশালী প্রবণতার সময় প্রতিবার দাম উপরের ব্যান্ড স্পর্শ করলেই বিক্রি করেন তারা সাধারণত ক্ষতি জমা করেন, কারণ তারা শক্তির প্রকৃত ক্ষয় চিহ্নিত করার পরিবর্তে প্রধান মুভমেন্টের বিরুদ্ধে লড়াই করছেন। একটি নির্ধারিত প্রবণতায় ব্যান্ডের আচরণ একটি পার্শ্বমুখী বাজারের আচরণ থেকে ভিন্ন, এবং দুটি পরিস্থিতিকে একইভাবে বিবেচনা করা একটি সাধারণ ভুল।</p>
-<h2>রেঞ্জ বাজার এবং প্রবণতা বাজারের মধ্যে পার্থক্য</h2>
+<h2 id="র-ঞ-জ-ব-জ-র-এব-প-রবণত-ব-জ-র-র-মধ-য-প-র-থক-য">রেঞ্জ বাজার এবং প্রবণতা বাজারের মধ্যে পার্থক্য</h2>
 <p>একটি স্পষ্ট দিক ছাড়া একটি বাজারে, একটি রেঞ্জের মধ্যে দুলতে থাকলে, উপরের বা নিচের ব্যান্ড স্পর্শ করা সাধারণত মুভমেন্টের সম্ভাব্য ক্লান্তির একটি বেশি উপযোগী সংকেত হয়, কারণ এই ধরনের পরিস্থিতিতে দাম ঐতিহাসিকভাবে এভারেজের কাছাকাছি ফিরে এসেছে। অন্যদিকে একটি ভালোভাবে নির্ধারিত প্রবণতাযুক্ত বাজারে, ব্যান্ড বিপরীতমুখিতার ট্রিগারের চেয়ে এভারেজ থেকে দূরত্বের রেফারেন্স হিসেবে ভালো কাজ করে। ব্যান্ডে স্পর্শ কীভাবে ব্যবহার করবেন তা সিদ্ধান্ত নেওয়ার আগে, প্রথমে সম্পদটি প্রবণতায় আছে নাকি পার্শ্বমুখী অবস্থায় আছে তা চিহ্নিত করা মূল্যবান।</p>
-<h2>পিরিয়ড এবং গুণক সামঞ্জস্য করা</h2>
+<h2 id="প-র-য-ড-এব-গ-ণক-স-মঞ-জস-য-কর">পিরিয়ড এবং গুণক সামঞ্জস্য করা</h2>
 <p>20-পিরিয়ড এবং দুইবার স্ট্যান্ডার্ড ডেভিয়েশনের স্ট্যান্ডার্ড একটি সূচনা বিন্দু হিসেবে কাজ করে, কিন্তু এটি পাথরে খোদাই করা কোনো স্থির নিয়ম নয়। একটি ছোট পিরিয়ড ব্যান্ডগুলোকে অস্থিরতার সাম্প্রতিক পরিবর্তনের প্রতি বেশি সংবেদনশীল করে তোলে, দ্রুত প্রতিক্রিয়া দেখায়, তবে চ্যানেলের নিজের নকশায় বেশি দোলন সহ। একটি দীর্ঘ পিরিয়ড এই পরিবর্তনগুলো মসৃণ করে, সম্পদের অস্থিরতায় একটি প্রকৃত পরিবর্তনে আরও ধীরে প্রতিক্রিয়া দেখানোর বিনিময়ে। একইভাবে, স্ট্যান্ডার্ড ডেভিয়েশনের গুণক বাড়ানো চ্যানেলকে প্রশস্ত করে এবং দাম কতবার ব্যান্ড স্পর্শ করে তা কমায়, যখন গুণক কমানো বিপরীতটি করে। নির্দিষ্ট সম্পদের ইতিহাসে বিভিন্ন সমন্বয় পরীক্ষা করা কোন সামঞ্জস্য উদ্দিষ্ট ধরনের অপারেশনের জন্য বেশি অর্থবহ তা বুঝতে সাহায্য করে।</p>
-<h2>এখান থেকে চার্টে কী নেওয়া উচিত</h2>
+<h2 id="এখ-ন-থ-ক-চ-র-ট-ক-ন-ওয-উচ-ত">এখান থেকে চার্টে কী নেওয়া উচিত</h2>
 <p>বোলিঞ্জার ব্যান্ড অস্থিরতা এবং একটি এভারেজের সাপেক্ষে পরিসংখ্যানগত দূরত্ব বর্ণনা করে, কোনো স্বয়ংক্রিয় বিপরীতমুখিতার পূর্বাভাস নয়। প্রবণতা, সাপোর্ট এবং রেজিস্ট্যান্সের প্রসঙ্গের সঙ্গে নির্দেশকটি একত্রে ব্যবহার করা ব্যান্ডে প্রতিটি স্পর্শকে একটি বিচ্ছিন্ন প্রবেশ সংকেত হিসেবে বিবেচনা করার চেয়ে বেশি উপযোগী পাঠ তৈরি করে।</p>
 
-        <div class="bq-post__cta">
-          <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
+            <div class="bq-post__cta">
+              <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
+            </div>
+            <div class="ap__fim">
+              <p>হালনাগাদ: <time datetime="2026-09-28">২৮ সেপ, ২০২৬</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> বার দেখা হয়েছে</span></span><button class="ap__compartilhar" type="button">শেয়ার করুন <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide টিম</strong><p>Duotide-এর সম্পাদকীয় দল এই ব্লগের গাইড ও সংবাদ লেখে: বাজার কীভাবে কাজ করে, ঝুঁকি ব্যবস্থাপনা এবং প্ল্যাটফর্মের ব্যবহার। এখানে কোনো কিছুই বিনিয়োগ পরামর্শ নয়।</p></div>
+              <a class="btn ap__equipe" href="/bn/about-this-site/">দলের সঙ্গে পরিচিত হোন</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>আরও পড়ুন</h2>
+        <aside class="ap__rel">
+          <h2>সম্পর্কিত নিবন্ধ</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
             <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
@@ -226,7 +266,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -290,6 +330,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,46 +173,87 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Padrões de continuação de tendência: como identificar e operar</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Análise técnica</span>
-        <h1>Padrões de continuação de tendência: como identificar e operar</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Nem todo padrão gráfico anuncia uma virada de mercado. Alguns padrões formam-se justamente como uma pausa dentro de um movimento que ainda vai continuar na mesma direção — são os chamados padrões de continuação. Reconhecê-los ajuda a diferenciar uma simples respirada do preço de um sinal real de reversão, evitando sair de uma posição cedo demais ou, no sentido contrário, evitar entrar contra uma tendência que só fez uma pausa.</p>
-<h2>O que caracteriza um padrão de continuação</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="padroes-de-continuacao-de-tendencia-como-identificar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Análise técnica</span>
+            <h1>Padrões de continuação de tendência: como identificar e operar</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#o-que-caracteriza-um-padrao-de-continuacao">O que caracteriza um padrão de continuação</a></li>
+                <li><a href="#bandeira-flag">Bandeira (flag)</a></li>
+                <li><a href="#flamula-pennant">Flâmula (pennant)</a></li>
+                <li><a href="#triangulos">Triângulos</a></li>
+                <li><a href="#retangulo">Retângulo</a></li>
+                <li><a href="#como-calcular-um-alvo-de-preco-com-a-tecnica-do-movimento-me">Como calcular um alvo de preço com a técnica do movimento medido</a></li>
+                <li><a href="#a-importancia-do-volume-na-confirmacao">A importância do volume na confirmação</a></li>
+                <li><a href="#riscos-e-cuidados">Riscos e cuidados</a></li>
+                <li><a href="#conclusao-pratica">Conclusão prática</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Nem todo padrão gráfico anuncia uma virada de mercado. Alguns padrões formam-se justamente como uma pausa dentro de um movimento que ainda vai continuar na mesma direção — são os chamados padrões de continuação. Reconhecê-los ajuda a diferenciar uma simples respirada do preço de um sinal real de reversão, evitando sair de uma posição cedo demais ou, no sentido contrário, evitar entrar contra uma tendência que só fez uma pausa.</p>
+<h2 id="o-que-caracteriza-um-padrao-de-continuacao">O que caracteriza um padrão de continuação</h2>
 <p>De forma geral, esses padrões surgem depois de um movimento forte e direcional, quando o mercado entra numa fase de consolidação mais curta antes de retomar o mesmo sentido anterior. A ideia central é que a "pausa" reflete uma acomodação temporária de oferta e demanda, não uma mudança de opinião generalizada dos participantes do mercado.</p>
-<h2>Bandeira (flag)</h2>
+<h2 id="bandeira-flag">Bandeira (flag)</h2>
 <p>A bandeira aparece depois de um movimento forte e rápido — o chamado mastro — seguido de uma consolidação em um canal levemente inclinado contra a direção do movimento original. Numa tendência de alta, por exemplo, a bandeira se forma com uma leve inclinação para baixo, antes do preço retomar a subida. O rompimento da bandeira na direção do movimento original, de preferência com volume mais forte, costuma ser o gatilho observado por quem opera esse padrão.</p>
-<h2>Flâmula (pennant)</h2>
+<h2 id="flamula-pennant">Flâmula (pennant)</h2>
 <p>Parecida com a bandeira na origem — surge depois de um mastro de movimento forte — mas a consolidação toma a forma de um pequeno triângulo simétrico, com máximas caindo e mínimas subindo, em vez de um canal inclinado. A leitura e o gatilho de rompimento seguem a mesma lógica da bandeira.</p>
-<h2>Triângulos</h2>
+<h2 id="triangulos">Triângulos</h2>
 <p>Os triângulos simétricos, ascendentes e descendentes se formam quando o intervalo entre máximas e mínimas vai se estreitando ao longo do tempo. No triângulo ascendente, a resistência costuma ficar horizontal enquanto as mínimas sobem, sugerindo pressão compradora crescente dentro da consolidação — geralmente lido como continuação de uma tendência de alta. O triângulo descendente espelha essa leitura para o lado da baixa. O triângulo simétrico é mais neutro, e o rompimento — para qualquer um dos lados — costuma ser o que define a direção seguinte.</p>
-<h2>Retângulo</h2>
+<h2 id="retangulo">Retângulo</h2>
 <p>O retângulo forma-se quando o preço oscila entre um suporte e uma resistência bem definidos, quase horizontais, por um período mais longo. Quando esse retângulo aparece dentro de uma tendência já estabelecida, o rompimento na direção da tendência original costuma ser interpretado como retomada do movimento.</p>
-<h2>Como calcular um alvo de preço com a técnica do movimento medido</h2>
+<h2 id="como-calcular-um-alvo-de-preco-com-a-tecnica-do-movimento-me">Como calcular um alvo de preço com a técnica do movimento medido</h2>
 <p>Uma forma comum de projetar um alvo depois do rompimento de um padrão de continuação é medir a altura do mastro (o movimento forte que antecedeu a consolidação) e projetar essa mesma distância a partir do ponto de rompimento. Suponha um mastro que levou o preço de R$ 20,00 a R$ 24,00 — uma variação de R$ 4,00 — seguido de uma bandeira que consolida entre R$ 23,00 e R$ 23,80. Se o rompimento acontece em R$ 23,80, a projeção pela técnica do movimento medido seria de R$ 23,80 + R$ 4,00 = R$ 27,80, um alvo de referência, não uma garantia de que o preço vai realmente chegar até lá.</p>
-<h2>A importância do volume na confirmação</h2>
+<h2 id="a-importancia-do-volume-na-confirmacao">A importância do volume na confirmação</h2>
 <p>Um ponto comum a todos esses padrões é que o rompimento tende a ganhar mais credibilidade quando acompanhado de volume acima da média da consolidação. Um rompimento em volume fraco tem maior chance de ser um movimento falso, com o preço voltando para dentro do padrão logo em seguida — o que reforça a importância de esperar a confirmação, e não antecipar a entrada só porque o preço tocou a borda do padrão.</p>
-<h2>Riscos e cuidados</h2>
+<h2 id="riscos-e-cuidados">Riscos e cuidados</h2>
 <p>Padrões de continuação nem sempre se confirmam: uma consolidação que parecia uma bandeira pode, em vez de continuar a tendência, se transformar no início de uma reversão real. Por isso, definir um stop lógico — normalmente do outro lado da consolidação em relação à direção esperada — é essencial para limitar a perda caso o padrão falhe.</p>
-<h2>Conclusão prática</h2>
+<h2 id="conclusao-pratica">Conclusão prática</h2>
 <p>Padrões de continuação ajudam a interpretar pausas dentro de uma tendência maior, mas funcionam como um mapa de probabilidades, não como certeza. Combinar a identificação visual do padrão com a confirmação de volume no rompimento, além de definir o risco antes da entrada, é o que transforma esse conhecimento gráfico em um processo de decisão mais estruturado.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/padrao-ombro-cabeca-ombro-como-identificar/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Padrão Ombro-Cabeça-Ombro: como identificar a reversão</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/retracao-de-fibonacci-exemplo-pratico/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Retração de Fibonacci no trading: um exemplo prático</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -220,7 +261,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +324,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

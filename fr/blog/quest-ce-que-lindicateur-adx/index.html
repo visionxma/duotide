@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/quest-ce-que-lindicateur-adx/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "Indicateurs",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Qu'est-ce que l'indicateur ADX et comment il fonctionne</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicateurs</span>
-        <h1>Qu'est-ce que l'indicateur ADX et comment il fonctionne</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Beaucoup de gens regardent l'ADX en espérant qu'il leur dise si le prix va monter ou baisser. Ce n'est pas à ça qu'il sert. L'Average Directional Index (ADX) mesure uniquement la force d'un mouvement, laissant la direction à deux autres lignes qui apparaissent généralement dans le même panneau.</p><p>Cette confusion est courante parce que l'indicateur varie de 0 à 100, comme un oscillateur classique. Mais un ADX à 30 peut apparaître aussi bien dans une forte hausse que dans une forte baisse, de la même façon. Comprendre cette différence évite des entrées erronées dès le départ.</p><h2>Les trois lignes du système</h2><p>L'ADX ne vient jamais seul. Il fait partie d'un ensemble de trois lignes créé par J. Welles Wilder :</p><ul><li><strong>+DI</strong> : mesure à quel point le mouvement haussier domine la période analysée.</li><li><strong>-DI</strong> : mesure à quel point le mouvement baissier domine la même période.</li><li><strong>ADX</strong> : montre l'ampleur de la différence entre +DI et -DI, c'est-à-dire la force de la tendance qui l'emporte.</li></ul><p>Quand le +DI est au-dessus du -DI, le marché a penché à la hausse avec plus de constance. Quand le -DI est au-dessus, la pression vendeuse a été plus persistante. L'ADX monte quand cette différence augmente et baisse quand les deux lignes se rapprochent de nouveau.</p><h2>Comment fonctionne le calcul</h2><p>Le processus commence par comparer le maximum et le minimum de chaque bougie avec la bougie précédente, au sein du fameux range véritable (qui prend aussi en compte les gaps). Cette différence génère le mouvement directionnel positif et négatif, qui, une fois lissés (généralement sur 14 périodes), forment le +DI et le -DI.</p><p>À partir de là, on calcule l'Indice Directionnel (DX) :</p><p><strong>DX = 100 × |+DI − (-DI)| ÷ (+DI + (-DI))</strong></p><p>L'ADX est la moyenne lissée du DX au fil du temps. Vous n'avez pas besoin de faire ce calcul à la main — n'importe quelle plateforme de graphiques trace l'indicateur automatiquement —, mais comprendre la formule aide à expliquer pourquoi l'ADX réagit avec retard : il ne confirme la force qu'après que le mouvement a déjà commencé.</p><h2>Comment lire l'échelle de l'ADX</h2><ul><li><strong>En dessous de 20</strong> : direction faible ou marché latéral.</li><li><strong>Entre 20 et 25</strong> : une tendance peut être en train de naître.</li><li><strong>Entre 25 et 40</strong> : tendance déjà établie.</li><li><strong>Au-dessus de 40</strong> : tendance forte ; il vaut la peine de vérifier si le prix n'est pas trop étiré.</li></ul><p>Ces fourchettes sont des repères, pas des frontières rigides. Un ADX de 24 et un de 26 ne décrivent pas des mondes différents. Ce qui compte, c'est l'inclinaison de la ligne et la relation entre +DI et -DI autour d'elle.</p><h2>Un exemple chiffré</h2><p>Imaginez une paire de devises où, un jour donné, le +DI est à 32 et le -DI à 12, avec un ADX qui monte de 18 à 27 sur deux semaines. La lecture : le mouvement haussier a gagné en force de façon constante, et l'écart entre acheteurs et vendeurs augmente — pas seulement un pic isolé.</p><p>Maintenant, changez de scénario : ADX à 26, mais le -DI à 34 et le +DI à 15. Le chiffre de l'ADX est similaire à l'exemple précédent, sauf que cette fois c'est la pression vendeuse qui domine. Cela montre pourquoi regarder uniquement la valeur de l'ADX, sans les lignes directionnelles, ne donne qu'une lecture à moitié.</p><h2>Erreurs courantes dans l'utilisation de l'ADX</h2><p>Un ADX en baisse n'est pas un signal automatique de retournement — il peut simplement indiquer que la tendance a perdu du rythme, mais que le prix continue dans la même direction plus longtemps. Une autre erreur est de trader les croisements de +DI et -DI quand l'ADX est bas : dans ces conditions, le marché est généralement latéral, et les croisements ont tendance à se répéter sans générer de mouvement réel, seulement ce qu'on appelle le bruit de range latéral.</p><p>Une façon d'utiliser l'ADX avec plus de rigueur est de le traiter comme un filtre avant d'appliquer une autre stratégie. Si vous suivez les tendances avec des moyennes mobiles, par exemple, vous pouvez exiger un ADX au-dessus de 25 avant de considérer un signal comme valide, en écartant les entrées sur des marchés sans direction claire.</p><h2>Intégrer l'ADX dans votre processus</h2><p>En pratique, l'ADX fonctionne mieux comme un filtre de contexte que comme déclencheur d'entrée. Il aide à répondre à une question qui précède la décision d'acheter ou de vendre : ce marché est-il vraiment en tendance, ou est-ce que j'essaie de faire entrer une stratégie de tendance dans un environnement latéral ? Combiné avec le +DI et le -DI pour la direction, et avec une analyse de support et de résistance pour le timing, l'indicateur gagne une réelle utilité. Seul, il ne raconte que la moitié de l'histoire — et, comme pour toute opération sur le marché financier, aucune combinaison d'indicateurs n'élimine complètement le risque.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-o-indicador-adx" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-28">28 septembre 2026</time></p>
+            <span class="bq__tag">Indicateurs</span>
+            <h1>Qu'est-ce que l'indicateur ADX et comment il fonctionne</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#les-trois-lignes-du-systeme">Les trois lignes du système</a></li>
+                <li><a href="#comment-fonctionne-le-calcul">Comment fonctionne le calcul</a></li>
+                <li><a href="#comment-lire-l-echelle-de-l-adx">Comment lire l'échelle de l'ADX</a></li>
+                <li><a href="#un-exemple-chiffre">Un exemple chiffré</a></li>
+                <li><a href="#erreurs-courantes-dans-l-utilisation-de-l-adx">Erreurs courantes dans l'utilisation de l'ADX</a></li>
+                <li><a href="#integrer-l-adx-dans-votre-processus">Intégrer l'ADX dans votre processus</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Beaucoup de gens regardent l'ADX en espérant qu'il leur dise si le prix va monter ou baisser. Ce n'est pas à ça qu'il sert. L'Average Directional Index (ADX) mesure uniquement la force d'un mouvement, laissant la direction à deux autres lignes qui apparaissent généralement dans le même panneau.</p><p>Cette confusion est courante parce que l'indicateur varie de 0 à 100, comme un oscillateur classique. Mais un ADX à 30 peut apparaître aussi bien dans une forte hausse que dans une forte baisse, de la même façon. Comprendre cette différence évite des entrées erronées dès le départ.</p><h2 id="les-trois-lignes-du-systeme">Les trois lignes du système</h2><p>L'ADX ne vient jamais seul. Il fait partie d'un ensemble de trois lignes créé par J. Welles Wilder :</p><ul><li><strong>+DI</strong> : mesure à quel point le mouvement haussier domine la période analysée.</li><li><strong>-DI</strong> : mesure à quel point le mouvement baissier domine la même période.</li><li><strong>ADX</strong> : montre l'ampleur de la différence entre +DI et -DI, c'est-à-dire la force de la tendance qui l'emporte.</li></ul><p>Quand le +DI est au-dessus du -DI, le marché a penché à la hausse avec plus de constance. Quand le -DI est au-dessus, la pression vendeuse a été plus persistante. L'ADX monte quand cette différence augmente et baisse quand les deux lignes se rapprochent de nouveau.</p><h2 id="comment-fonctionne-le-calcul">Comment fonctionne le calcul</h2><p>Le processus commence par comparer le maximum et le minimum de chaque bougie avec la bougie précédente, au sein du fameux range véritable (qui prend aussi en compte les gaps). Cette différence génère le mouvement directionnel positif et négatif, qui, une fois lissés (généralement sur 14 périodes), forment le +DI et le -DI.</p><p>À partir de là, on calcule l'Indice Directionnel (DX) :</p><p><strong>DX = 100 × |+DI − (-DI)| ÷ (+DI + (-DI))</strong></p><p>L'ADX est la moyenne lissée du DX au fil du temps. Vous n'avez pas besoin de faire ce calcul à la main — n'importe quelle plateforme de graphiques trace l'indicateur automatiquement —, mais comprendre la formule aide à expliquer pourquoi l'ADX réagit avec retard : il ne confirme la force qu'après que le mouvement a déjà commencé.</p><h2 id="comment-lire-l-echelle-de-l-adx">Comment lire l'échelle de l'ADX</h2><ul><li><strong>En dessous de 20</strong> : direction faible ou marché latéral.</li><li><strong>Entre 20 et 25</strong> : une tendance peut être en train de naître.</li><li><strong>Entre 25 et 40</strong> : tendance déjà établie.</li><li><strong>Au-dessus de 40</strong> : tendance forte ; il vaut la peine de vérifier si le prix n'est pas trop étiré.</li></ul><p>Ces fourchettes sont des repères, pas des frontières rigides. Un ADX de 24 et un de 26 ne décrivent pas des mondes différents. Ce qui compte, c'est l'inclinaison de la ligne et la relation entre +DI et -DI autour d'elle.</p><h2 id="un-exemple-chiffre">Un exemple chiffré</h2><p>Imaginez une paire de devises où, un jour donné, le +DI est à 32 et le -DI à 12, avec un ADX qui monte de 18 à 27 sur deux semaines. La lecture : le mouvement haussier a gagné en force de façon constante, et l'écart entre acheteurs et vendeurs augmente — pas seulement un pic isolé.</p><p>Maintenant, changez de scénario : ADX à 26, mais le -DI à 34 et le +DI à 15. Le chiffre de l'ADX est similaire à l'exemple précédent, sauf que cette fois c'est la pression vendeuse qui domine. Cela montre pourquoi regarder uniquement la valeur de l'ADX, sans les lignes directionnelles, ne donne qu'une lecture à moitié.</p><h2 id="erreurs-courantes-dans-l-utilisation-de-l-adx">Erreurs courantes dans l'utilisation de l'ADX</h2><p>Un ADX en baisse n'est pas un signal automatique de retournement — il peut simplement indiquer que la tendance a perdu du rythme, mais que le prix continue dans la même direction plus longtemps. Une autre erreur est de trader les croisements de +DI et -DI quand l'ADX est bas : dans ces conditions, le marché est généralement latéral, et les croisements ont tendance à se répéter sans générer de mouvement réel, seulement ce qu'on appelle le bruit de range latéral.</p><p>Une façon d'utiliser l'ADX avec plus de rigueur est de le traiter comme un filtre avant d'appliquer une autre stratégie. Si vous suivez les tendances avec des moyennes mobiles, par exemple, vous pouvez exiger un ADX au-dessus de 25 avant de considérer un signal comme valide, en écartant les entrées sur des marchés sans direction claire.</p><h2 id="integrer-l-adx-dans-votre-processus">Intégrer l'ADX dans votre processus</h2><p>En pratique, l'ADX fonctionne mieux comme un filtre de contexte que comme déclencheur d'entrée. Il aide à répondre à une question qui précède la décision d'acheter ou de vendre : ce marché est-il vraiment en tendance, ou est-ce que j'essaie de faire entrer une stratégie de tendance dans un environnement latéral ? Combiné avec le +DI et le -DI pour la direction, et avec une analyse de support et de résistance pour le timing, l'indicateur gagne une réelle utilité. Seul, il ne raconte que la moitié de l'histoire — et, comme pour toute opération sur le marché financier, aucune combinaison d'indicateurs n'élimine complètement le risque.</p>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-28">28 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/quest-ce-que-loscillateur-stochastique/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'oscillateur stochastique et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'Average True Range (ATR) et comment le calculer</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fil/blog/3-paraan-ng-paggamit-ng-bollinger-bands/",
       "inLanguage": "fil",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Mga indicator",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Breadcrumb navigation">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fil/">Home</a></li>
         <li><a href="/fil/blog/">Blog</a></li>
         <li><span aria-current="page">3 paraan ng paggamit ng Bollinger Bands sa technical analysis</span></li>
       </ol>
+      <a class="ap__voltar" href="/fil/blog/">Bumalik</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Mga indicator</span>
-        <h1>3 paraan ng paggamit ng Bollinger Bands sa technical analysis</h1>
-        <p class="bq-post__meta">Duotide Team · <time datetime="2026-09-24">09/24/2026</time> · 4 min basahin</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Ang Bollinger Bands ay isa sa mga pinakamaraming gamit na indicator sa technical analysis dahil pinagsasama nito, sa isang kasangkapan lamang, ang impormasyon tungkol sa trend at volatility. Marami ang natutong tukuyin ang hugis ng tatlong linya sa chart, ngunit kakaunti ang naghuhukay sa lahat ng maaari nitong ipahiwatig, higit pa sa halatang "tumaas ang presyo, bumaba ang presyo".</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="3-formas-de-usar-bandas-de-bollinger" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Nakopya ang link">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">Set 24, 2026</time><span class="ap__sep">4 min basahin</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span>
+            </div>
+            <p class="ap__atual">Na-update noong: <time datetime="2026-09-27">Setyembre 27, 2026</time></p>
+            <span class="bq__tag">Mga indicator</span>
+            <h1>3 paraan ng paggamit ng Bollinger Bands sa technical analysis</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Team</strong><small>Editorial team</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Nilalaman">
+              <p class="ap__indice-tit">Nilalaman</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#paano-kinakalkula-ang-mga-banda">Paano kinakalkula ang mga banda</a></li>
+                <li><a href="#paraan-1-basahin-ang-volatility-mula-sa-distansya-ng-mga-ban">Paraan 1: basahin ang volatility mula sa distansya ng mga banda</a></li>
+                <li><a href="#paraan-2-mag-trade-ng-reversal-sa-mga-gilid">Paraan 2: mag-trade ng reversal sa mga gilid</a></li>
+                <li><a href="#paraan-3-sundan-ang-breakout">Paraan 3: sundan ang breakout</a></li>
+                <li><a href="#risk-management-gamit-ang-bollinger-bands">Risk management gamit ang Bollinger Bands</a></li>
+                <li><a href="#pagsasanay-bago-mag-trade-gamit-ang-tunay-na-pera">Pagsasanay bago mag-trade gamit ang tunay na pera</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Bumalik sa itaas</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Ang Bollinger Bands ay isa sa mga pinakamaraming gamit na indicator sa technical analysis dahil pinagsasama nito, sa isang kasangkapan lamang, ang impormasyon tungkol sa trend at volatility. Marami ang natutong tukuyin ang hugis ng tatlong linya sa chart, ngunit kakaunti ang naghuhukay sa lahat ng maaari nitong ipahiwatig, higit pa sa halatang "tumaas ang presyo, bumaba ang presyo".</p>
 <p>Sa artikulong ito, makikita mo kung paano kinakalkula ang indicator at tatlong magkakaibang paraan ng pagkuha ng senyales mula rito: pagtukoy ng pagbabago sa volatility, pag-trade ng reversal sa mga gilid, at pagsunod sa breakout ng trend.</p>
-<h2>Paano kinakalkula ang mga banda</h2>
+<h2 id="paano-kinakalkula-ang-mga-banda">Paano kinakalkula ang mga banda</h2>
 <p>May tatlong linya ang indicator. Ang gitnang linya ay isang simple moving average, karaniwang 20 period. Ang dalawang iba pa, ang itaas at ibaba, ay nasa layo mula sa average na katumbas ng isang multiple ng standard deviation ng presyo sa parehong period — ang karaniwang setting sa merkado ay 2 standard deviation.</p>
 <p>Halimbawa: kung ang 20-period moving average ng EUR/USD ay nasa 1,0850 at ang standard deviation sa parehong period ay 0,0040, ang upper band ay nasa 1,0850 + (2 × 0,0040) = 1,0930, at ang lower band ay nasa 1,0850 − (2 × 0,0040) = 1,0770. Kung mas malaki ang galaw ng presyo, mas lumalayo ang mga banda sa average; kung mas tahimik ito, mas lumalapit sila.</p>
-<h2>Paraan 1: basahin ang volatility mula sa distansya ng mga banda</h2>
+<h2 id="paraan-1-basahin-ang-volatility-mula-sa-distansya-ng-mga-ban">Paraan 1: basahin ang volatility mula sa distansya ng mga banda</h2>
 <p>Kapag napakalapit sa isa't isa ng mga banda, mababa ang volatility ng merkado — kadalasang isang panahon ng pag-aalinlangan bago ang mas malakas na paggalaw. Ang pagsisikip na ito ay kilala bilang squeeze. Kapag lumaki ang agwat, aktibo ang merkado, at pagkatapos ng isang napakalaking pagbukas, karaniwan nang bumababa ulit ang volatility, kahit walang tinuturong direksyon.</p>
 <p>Hindi nagbibigay ng buy o sell signal ang paggamit na ito: nagpapaalam lamang ito na may malapit nang mangyari, para maiakma ng trader ang laki ng posisyon at layo ng stop bago dumating ang paggalaw.</p>
-<h2>Paraan 2: mag-trade ng reversal sa mga gilid</h2>
+<h2 id="paraan-2-mag-trade-ng-reversal-sa-mga-gilid">Paraan 2: mag-trade ng reversal sa mga gilid</h2>
 <p>Sa mga merkadong walang malinaw na trend (sideways), may hilig ang presyo na igalang ang mga banda na parang isang kisame at sahig. Kapag hinipo o nalagpasan ng presyo ang upper band at pagkatapos ay nagsara ang candle pabalik sa loob nito, ipinapalagay ng ilang trader na ito ay senyales ng pagkapagod ng pagtaas at posibleng pagbaba tungo sa gitnang average. Ganoon din ang lohika sa kabaligtaran sa lower band.</p>
 <p>Mas epektibo ang paggamit na ito kapag kinumpirma ng ibang momentum indicator, tulad ng RSI, dahil sa isang malakas na trend, maaaring "maglakad" ang presyo na nakadikit sa isang banda sa loob ng ilang candle nang walang reversal — at ang sinumang magbenta lamang dahil hinipo nito ang upper band sa ganitong kondisyon ay malulugi laban sa trend.</p>
-<h2>Paraan 3: sundan ang breakout</h2>
+<h2 id="paraan-3-sundan-ang-breakout">Paraan 3: sundan ang breakout</h2>
 <p>Ang ikatlong paraan ay kabaligtaran ng ikalawa: sa halip na hintayin ang reversal, sinusundan ng trader ang paggalaw. Pagkatapos ng isang squeeze (makikitid na banda), kung sisirain ng presyo ang upper band gamit ang isang candle na may malaking katawan at volume na mas mataas kaysa sa normal, maaari itong magpahiwatig ng simula ng isang uptrend — at papasok ang trader sa direksyon ng breakout, hindi laban dito. Ganoon din para sa breakout ng lower band, sa direksyon ng pagbaba.</p>
 <p>Ang pagkakaiba sa paggamit ng Bollinger Bands para sa reversal (Paraan 2) o para sa breakout (Paraan 3) ay nakadepende sa konteksto ng merkado: pabor sa reversal ang sideways na merkado, pabor naman sa breakout ang squeeze na sinundan ng lakas. Ang paghahalo ng dalawang pagbasa nang walang batayan ang pinakakaraniwang pagkakamali ng mga bagong gumagamit ng indicator na ito.</p>
-<h2>Risk management gamit ang Bollinger Bands</h2>
+<h2 id="risk-management-gamit-ang-bollinger-bands">Risk management gamit ang Bollinger Bands</h2>
 <p>Wala sa tatlong paraan ng paggamit ang pumapalit sa isang plano ng risk management. Itakda ang stop bago pumasok — halimbawa, bahagyang lampas sa bandang kasalungat ng iyong entry — at huwag kailanman irisgo ang higit sa isang maliit na bahagi ng account sa isang solong operasyon, tulad ng 1% hanggang 2% ng kapital. Tandaan din na, tulad ng anumang indicator na nakabatay sa average at standard deviation, tumutugon ang Bollinger Bands sa nakaraang presyo: inilalarawan nila ang nangyari na, hindi ginagarantiya ang susunod na mangyayari.</p>
-<h2>Pagsasanay bago mag-trade gamit ang tunay na pera</h2>
+<h2 id="pagsasanay-bago-mag-trade-gamit-ang-tunay-na-pera">Pagsasanay bago mag-trade gamit ang tunay na pera</h2>
 <p>Dahil nagbabago ang pag-uugali ng indicator depende sa asset at sa timeframe, sulit obserbahan ang parehong pares o stock sa magkakaibang period — 15 minuto, 1 oras, araw-araw — bago magpasya kung alin sa tatlong paraan ng paggamit ang pinakabagay sa iyong estilo. Sa isang platform tulad ng Duotide, posibleng sundan ang mga chart na may naka-plug na indicator at subukan ang bawat isa sa mga pagbasang ito sa iba't ibang asset bago maglapat ng tunay na halaga.</p>
 <p>Sa huli, ang Bollinger Bands ay isang lente para sa volatility, hindi isang bolang kristal. Kasama ng isang malinaw na plano ng risk at isa pang kumpirmatibong indicator, tumutulong ito na maayos ang mga desisyong kung hindi man ay isa lamang "palagay" habang nakatingin sa presyo.</p>
-        <div class="bq-post__cta">
-          <p><strong>Magsanay muna bago sumugal.</strong> Gumawa ng account sa Duotide at subukan ang iyong mga ideya sa demo account na may R$ 10,000 na virtual na pondo.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Gumawa ng libreng account</a>
+            <div class="bq-post__cta">
+              <p><strong>Magsanay muna bago sumugal.</strong> Gumawa ng account sa Duotide at subukan ang iyong mga ideya sa demo account na may R$ 10,000 na virtual na pondo.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Gumawa ng libreng account</a>
+            </div>
+            <div class="ap__fim">
+              <p>Na-update noong: <time datetime="2026-09-27">Set 27, 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span><button class="ap__compartilhar" type="button">Ibahagi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Team</strong><p>Ang editorial team ng Duotide ang sumusulat ng mga gabay at balita sa blog na ito: kung paano gumagana ang merkado, risk management at paggamit ng platform. Walang anuman dito ang payo sa pamumuhunan.</p></div>
+              <a class="btn ap__equipe" href="/fil/tungkol-sa-site/">Kilalanin ang team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Basahin din</h2>
+        <aside class="ap__rel">
+          <h2>Mga kaugnay na artikulo</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fil/blog/ano-ang-adx-indicator-at-paano-ito-gumagana/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ano ang ADX indicator at paano ito gumagana</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
             <a class="bq__card" href="/fil/blog/ano-ang-stochastic-oscillator-at-paano-ito-gumagana/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ano ang Stochastic Oscillator at paano ito gumagana</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

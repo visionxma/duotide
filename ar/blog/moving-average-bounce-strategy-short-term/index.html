@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/moving-average-bounce-strategy-short-term/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "الاستراتيجيات",
       "author": {
@@ -172,45 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">استراتيجية الارتداد من المتوسط المتحرك للمدى القصير</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">الاستراتيجيات</span>
-        <h1>استراتيجية الارتداد من المتوسط المتحرك للمدى القصير</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>من بين استراتيجيات متابعة الاتجاه، تتميز ما تُسمى «الارتداد من المتوسط المتحرك» (moving average bounce) بميزة واضحة: تستخدم مؤشرًا واحدًا فقط، وسهلة الرؤية على الرسم البياني، ولا تتطلب حفظ عدة قواعد توافق للبدء بالممارسة.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-repique-na-media-movel" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-27">27 سبتمبر 2026</time></p>
+            <span class="bq__tag">الاستراتيجيات</span>
+            <h1>استراتيجية الارتداد من المتوسط المتحرك للمدى القصير</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#اختيار-المتوسط-المتحرك">اختيار المتوسط المتحرك</a></li>
+                <li><a href="#تا-كيد-الاتجاه-قبل-التداول">تأكيد الاتجاه قبل التداول</a></li>
+                <li><a href="#ا-شارة-الدخول">إشارة الدخول</a></li>
+                <li><a href="#لماذا-يجب-حساب-المخاطرة-قبل-الدخول">لماذا يجب حساب المخاطرة قبل الدخول</a></li>
+                <li><a href="#ا-خطاء-شاي-عة-في-هذه-الاستراتيجية">أخطاء شائعة في هذه الاستراتيجية</a></li>
+                <li><a href="#التدرب-على-الارتداد-قبل-التداول-برا-س-مال-حقيقي">التدرب على الارتداد قبل التداول برأس مال حقيقي</a></li>
+                <li><a href="#مزايا-الطريقة-وحدودها">مزايا الطريقة وحدودها</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>من بين استراتيجيات متابعة الاتجاه، تتميز ما تُسمى «الارتداد من المتوسط المتحرك» (moving average bounce) بميزة واضحة: تستخدم مؤشرًا واحدًا فقط، وسهلة الرؤية على الرسم البياني، ولا تتطلب حفظ عدة قواعد توافق للبدء بالممارسة.</p>
 <p>الفكرة المحورية بسيطة: في اتجاه محدد، نادرًا ما يرتفع (أو ينخفض) السعر في خط مستقيم. يتقدم، ثم يتراجع حتى يلمس متوسطًا متحركًا أو يقترب منه، ثم يستأنف الاتجاه الأصلي — وهذا التراجع المتبوع بارتداد هو تحديدًا ما تحاول الاستراتيجية التقاطه.</p>
-<h2>اختيار المتوسط المتحرك</h2>
+<h2 id="اختيار-المتوسط-المتحرك">اختيار المتوسط المتحرك</h2>
 <p>الاختيار الأكثر شيوعًا هو متوسط متحرك أسي (EMA) لـ21 فترة، لأنه يتفاعل بشكل أسرع مع السعر الأخير من متوسط بسيط بنفس الحجم. المتوسطات الأقصر، مثل 9 فترات، تولد إشارات أكثر، لكن أيضًا ارتدادات خاطئة أكثر؛ والمتوسطات الأطول، مثل 50 فترة، تصفي الضوضاء، لكنها تتفاعل ببطء أكبر وتولد فرصًا أقل. لا يوجد فترة «صحيحة» — بل توجد فترة متوافقة مع الإطار الزمني للرسم البياني والأصل الذي تتابعه.</p>
-<h2>تأكيد الاتجاه قبل التداول</h2>
+<h2 id="تا-كيد-الاتجاه-قبل-التداول">تأكيد الاتجاه قبل التداول</h2>
 <p>قبل البحث عن الارتداد، يجب تأكيد وجود اتجاه. يمكن فعل ذلك بمراقبة ميل المتوسط المتحرك نفسه: إذا كان مائلاً للأعلى ويبقى السعر معظم الوقت فوقه، فإن اتجاه الصعود نشط وفقط دخولات الشراء منطقية في هذه الاستراتيجية. وإذا كان المتوسط مائلاً للأسفل مع بقاء السعر تحته، فالسيناريو معاكس، وتُعتبر فقط دخولات البيع.</p>
-<h2>إشارة الدخول</h2>
+<h2 id="ا-شارة-الدخول">إشارة الدخول</h2>
 <p>لنفترض سهمًا يُتداول عند R$ 5.40 في اتجاه صاعد، مع ارتفاع المتوسط الأسي لـ21 فترة أيضًا. يتراجع السعر إلى R$ 5.39، ويلمس المتوسط، ويغلق شمعة صاعدة فوقه مباشرة، عند R$ 5.41. هذا الإغلاق فوق المتوسط، بعد اللمس، هو محفز الدخول — لا اللمس نفسه، لأن السعر يمكن أن يعبر المتوسط ببساطة دون ارتداد.</p>
 <p>يقع وقف الخسارة، في هذا المثال، أسفل قاع شمعة الارتداد قليلاً، لنقل R$ 5.35 — مخاطرة قدرها R$ 0.06 لكل سهم. باستخدام نسبة مخاطرة إلى عائد 1 إلى 2، يكون الهدف R$ 0.12 فوق الدخول، أي R$ 5.53.</p>
-<h2>لماذا يجب حساب المخاطرة قبل الدخول</h2>
+<h2 id="لماذا-يجب-حساب-المخاطرة-قبل-الدخول">لماذا يجب حساب المخاطرة قبل الدخول</h2>
 <p>بتحديد المخاطرة عند R$ 0.06 لكل سهم وحد تعرض الحساب عند، مثلاً، 1% من رأس مال قدره R$ 10,000 — أي R$ 100 كحد أقصى للمخاطرة لكل صفقة — يمكن حساب حجم الصفقة قبل الدخول: R$ 100 ÷ R$ 0.06 ≈ 1,666 سهمًا. يتجنب هذا الحساب فخين شائعين: التداول بكمية كبيرة جدًا بالنسبة لوقف الخسارة المحدد، أو تحديد وقف خسارة ضيق جدًا لدرجة أن أي ضوضاء طبيعية في السوق تخرج المتداول من الصفقة.</p>
-<h2>أخطاء شائعة في هذه الاستراتيجية</h2>
+<h2 id="ا-خطاء-شاي-عة-في-هذه-الاستراتيجية">أخطاء شائعة في هذه الاستراتيجية</h2>
 <p>الخطأ الأكثر شيوعًا هو الخلط بين أي اقتراب من المتوسط وإشارة دخول — يجب انتظار إغلاق شمعة التأكيد، لا الاستباق. الخطأ الثاني هو استخدام الاستراتيجية في أسواق بلا اتجاه واضح، حيث يتقاطع السعر مع المتوسط بشكل متكرر دون اتجاه، ما يولد سلسلة من الخسائر الصغيرة. الخطأ الثالث هو تحريك وقف الخسارة «لإعطاء مساحة أكبر» للارتداد بعد أن تكون الصفقة خاسرة بالفعل، ما يحول مخاطرة محسوبة إلى مخاطرة غير محددة.</p>
-<h2>التدرب على الارتداد قبل التداول برأس مال حقيقي</h2>
+<h2 id="التدرب-على-الارتداد-قبل-التداول-برا-س-مال-حقيقي">التدرب على الارتداد قبل التداول برأس مال حقيقي</h2>
 <p>بما أن سلوك الارتداد يختلف كثيرًا بين الأصول المتقلبة والأصول الأكثر استقرارًا، يجدر مراجعة تاريخ الرسم البياني عن طريق عد المرات التي ارتد فيها السعر بشكل نظيف عند المتوسط المختار قبل تطبيق الاستراتيجية مباشرة. يساعد هذا على معايرة التوقعات: لا توجد استراتيجية قائمة على المتوسط المتحرك تنجح في كل مرة، وجزء من العمل هو تقبل خسائر صغيرة ومضبوطة كجزء من العملية، دون محاولة استرداد كل شيء دفعة واحدة بصفقات أكبر.</p>
-<h2>مزايا الطريقة وحدودها</h2>
+<h2 id="مزايا-الطريقة-وحدودها">مزايا الطريقة وحدودها</h2>
 <p>الميزة الرئيسية للارتداد من المتوسط المتحرك هي البساطة: مؤشر واحد، وقاعدة دخول واحدة، ومرشح اتجاه واحد تجعل الطريقة سهلة المتابعة دون الاعتماد على شاشات متعددة أو عدة مؤشرات متفقة في آن واحد. هذا يسهل أيضًا مراجعة الصفقات لاحقًا، لأن سبب كل دخول يكون واضحًا.</p>
 <p>الحد الرئيسي هو الوجه الآخر لنفس العملة: بما أن الاستراتيجية تعتمد على اتجاه راسخ بالفعل، فهي لا تعمل بشكل جيد في الأسواق الجانبية، حيث لا يوجد اتجاه مهيمن لـ«الارتداد لصالحه». التعرف بسرعة على متى توقف السوق عن الاتجاه ودخل في حركة جانبية — عادة عندما يتوقف المتوسط المتحرك نفسه عن الميل ويصبح أفقيًا — هو ما يمنع الإصرار على طريقة خارج السياق الذي تعمل فيه.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-27">27 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/ema-crossover-in-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">تقاطع المتوسطات المتحركة الأسية (EMA) في التداول</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">كيفية اختيار أجل (انتهاء) صفقة</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -218,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -282,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

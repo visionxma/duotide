@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/what-is-leverage-and-how-it-works/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "إدارة المخاطر",
       "author": {
@@ -172,44 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">ما هي الرافعة المالية وكيف تعمل في التداول</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">إدارة المخاطر</span>
-        <h1>ما هي الرافعة المالية وكيف تعمل في التداول</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>الرافعة المالية أحد أقوى المفاهيم في التداول، وفي الوقت نفسه، أكثرها سوء فهم. ببساطة، تتيح فتح صفقة أكبر من رأس المال المودع فعليًا، باستخدام جزء من هذا الرأس مال كهامش — نوع من الضمان — لدعم الصفقة. الجزء المتبقي من قيمة الصفقة لا يخرج من جيب المتداول، لكنه يضخّم النتيجة الإيجابية والسلبية على حد سواء بنفس النسبة.</p>
-<h2>كيف تعمل الرافعة المالية عمليًا</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-alavancagem-e-como-ela-funciona" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <span class="bq__tag">إدارة المخاطر</span>
+            <h1>ما هي الرافعة المالية وكيف تعمل في التداول</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#كيف-تعمل-الرافعة-المالية-عملي-ا">كيف تعمل الرافعة المالية عمليًا</a></li>
+                <li><a href="#مثال-رقمي-كامل">مثال رقمي كامل</a></li>
+                <li><a href="#دور-الهامش-ومخاطرة-نداء-الهامش">دور الهامش ومخاطرة نداء الهامش</a></li>
+                <li><a href="#لماذا-تتطلب-الرافعة-المالية-انضباط-ا-ا-كبر-في-المخاطرة-لا-ا-">لماذا تتطلب الرافعة المالية انضباطًا أكبر في المخاطرة، لا أقل</a></li>
+                <li><a href="#كيفية-تحديد-حجم-المخاطرة-عند-استخدام-الرافعة-المالية">كيفية تحديد حجم المخاطرة عند استخدام الرافعة المالية</a></li>
+                <li><a href="#الرافعة-المالية-ليست-جيدة-ا-و-سيي-ة-بحد-ذاتها">الرافعة المالية ليست جيدة أو سيئة بحد ذاتها</a></li>
+                <li><a href="#مستويات-مختلفة-من-الرافعة-المالية-لا-صول-مختلفة">مستويات مختلفة من الرافعة المالية لأصول مختلفة</a></li>
+                <li><a href="#خلاصة-عملية">خلاصة عملية</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>الرافعة المالية أحد أقوى المفاهيم في التداول، وفي الوقت نفسه، أكثرها سوء فهم. ببساطة، تتيح فتح صفقة أكبر من رأس المال المودع فعليًا، باستخدام جزء من هذا الرأس مال كهامش — نوع من الضمان — لدعم الصفقة. الجزء المتبقي من قيمة الصفقة لا يخرج من جيب المتداول، لكنه يضخّم النتيجة الإيجابية والسلبية على حد سواء بنفس النسبة.</p>
+<h2 id="كيف-تعمل-الرافعة-المالية-عملي-ا">كيف تعمل الرافعة المالية عمليًا</h2>
 <p>رافعة مالية 1:10، مثلاً، تعني أنه مقابل كل R$ 1 يُودع كهامش، يمكن التحكم في صفقة بقيمة R$ 10. هذا لا يغير التعرض الفعلي للسوق — تظل النتيجة المالية تُحسب على القيمة الكاملة للصفقة، لا على الهامش المودع — لكنه يقلل بشكل كبير رأس المال اللازم لفتح تلك الصفقة.</p>
-<h2>مثال رقمي كامل</h2>
+<h2 id="مثال-رقمي-كامل">مثال رقمي كامل</h2>
 <p>لنفترض أصلًا مسعّرًا عند R$ 100، ومتداولًا يودع R$ 200 كهامش لفتح صفقة برافعة مالية 1:10، متحكمًا فعليًا بتعرض R$ 2,000، أي 20 وحدة من الأصل. إذا ارتفع السعر 5%، إلى R$ 105، يكون الربح في الصفقة R$ 5 لكل وحدة × 20 وحدة = R$ 100 — ما يعادل عائدًا بنسبة 50% على الـR$ 200 المودعة كهامش، رغم أن الأصل ارتفع 5% فقط. أما إذا انخفض السعر، بدلاً من ذلك، 5%، إلى R$ 95، فستكون الخسارة R$ 100، أيضًا 50% من الهامش المودع. هذا هو جوهر الرافعة المالية: تضاعف النسبة المئوية للعائد على رأس مال الهامش، للأعلى وللأسفل، بنفس الشدة.</p>
-<h2>دور الهامش ومخاطرة نداء الهامش</h2>
+<h2 id="دور-الهامش-ومخاطرة-نداء-الهامش">دور الهامش ومخاطرة نداء الهامش</h2>
 <p>يعمل الهامش كضمان أدنى مطلوب للحفاظ على الصفقة مفتوحة. إذا تحرك السوق ضد المركز إلى درجة تجعل الخسارة المتراكمة تقترب من القيمة المودعة كهامش، يمكن لشركة الوساطة إصدار نداء هامش، طالبة إيداعًا إضافيًا، أو إغلاق الصفقة تلقائيًا لتجنب تجاوز الخسارة رأس المال المتاح في الحساب. فهم هذه الآلية يتجنب مفاجأة رؤية صفقة تُغلق تلقائيًا في حركة سوق أكثر حدة.</p>
-<h2>لماذا تتطلب الرافعة المالية انضباطًا أكبر في المخاطرة، لا أقل</h2>
+<h2 id="لماذا-تتطلب-الرافعة-المالية-انضباط-ا-ا-كبر-في-المخاطرة-لا-ا-">لماذا تتطلب الرافعة المالية انضباطًا أكبر في المخاطرة، لا أقل</h2>
 <p>من المغري النظر إلى الرافعة المالية فقط من جانب الربح المحتمل المضخم، لكن نفس الآلية تضخّم الخسارة المحتملة بنفس النسبة. لذلك، كلما زادت الرافعة المالية المستخدمة، يجب أن يكون حجم الصفقة أصغر نسبيًا بالنسبة لإجمالي رأس المال المتاح، للحفاظ على المخاطرة بالريال ضمن حد يعادل ما سيُتحمل في صفقة بلا رافعة مالية إطلاقًا.</p>
-<h2>كيفية تحديد حجم المخاطرة عند استخدام الرافعة المالية</h2>
+<h2 id="كيفية-تحديد-حجم-المخاطرة-عند-استخدام-الرافعة-المالية">كيفية تحديد حجم المخاطرة عند استخدام الرافعة المالية</h2>
 <p>طريقة عملية للتفكير في ذلك هي دائمًا حساب المخاطرة بالريال انطلاقًا من المسافة بين سعر الدخول ووقف الخسارة، مضروبة في الحجم الإجمالي للصفقة (مع مراعاة الرافعة المالية بالفعل)، لا انطلاقًا من قيمة الهامش المودع بمعزل عن غيرها. بالعودة إلى المثال السابق، بصفقة من 20 وحدة عند R$ 100، سيمثل وقف خسارة عند R$ 97 مخاطرة قدرها R$ 3 لكل وحدة × 20 وحدة = R$ 60، بغض النظر عن المبلغ المودع كهامش لتفعيل هذه الصفقة.</p>
-<h2>الرافعة المالية ليست جيدة أو سيئة بحد ذاتها</h2>
+<h2 id="الرافعة-المالية-ليست-جيدة-ا-و-سيي-ة-بحد-ذاتها">الرافعة المالية ليست جيدة أو سيئة بحد ذاتها</h2>
 <p>الأداة نفسها محايدة: فهي تضخّم فقط النتيجة، سواء كانت إيجابية أو سلبية، بالنسبة المستخدمة. ما يحدد ما إذا كان استخدامها مسؤولاً أم لا هو ما إذا كان حجم الصفقة الناتج قد احترم حد مخاطرة محددًا قبل الدخول، مع مراعاة أسوأ سيناريو ممكن، لا فقط السيناريو المرغوب.</p>
-<h2>مستويات مختلفة من الرافعة المالية لأصول مختلفة</h2>
+<h2 id="مستويات-مختلفة-من-الرافعة-المالية-لا-صول-مختلفة">مستويات مختلفة من الرافعة المالية لأصول مختلفة</h2>
 <p>من الشائع أن تقدم شركات الوساطة مستويات مختلفة من الرافعة المالية وفقًا للتقلب المعتاد لكل فئة أصول — عادة أكثر تحفظًا للأصول الأكثر تقلبًا تاريخيًا، مثل بعض العملات الرقمية، وأعلى لأزواج الصرف التقليدية، ذات الحركات اليومية الأصغر نسبيًا. فهم هذا الفرق يساعد على عدم تطبيق نفس منطق المخاطرة على أصول ذات سلوكيات مختلفة تمامًا عن بعضها.</p>
-<h2>خلاصة عملية</h2>
+<h2 id="خلاصة-عملية">خلاصة عملية</h2>
 <p>تضاعف الرافعة المالية التعرض للسوق انطلاقًا من رأس مال أصغر، ولذلك تضاعف أيضًا مخاطرة الخسارة بنفس نسبة إمكانية الربح. استخدامها يتطلب حساب المخاطرة بالريال مع مراعاة الحجم الإجمالي للصفقة المرفوعة، لا فقط القيمة المودعة كهامش، وتعديل هذا الحجم للحفاظ على المخاطرة ضمن حد محدد مسبقًا — لا يتجاوز أبدًا ما الشخص مستعد فعلاً لخسارته في تلك الصفقة.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">كيفية استخدام وقف الخسارة وجني الأرباح في الفوركس</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">استراتيجية مارتينجال في التداول: كيف تعمل ومخاطرها</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -217,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -281,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

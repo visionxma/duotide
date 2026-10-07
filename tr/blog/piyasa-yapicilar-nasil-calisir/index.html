@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/piyasa-yapicilar-nasil-calisir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Piyasa",
       "author": {
@@ -172,42 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Piyasa yapıcılar nasıl çalışır ve neden var olurlar</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Piyasa</span>
-        <h1>Piyasa yapıcılar nasıl çalışır ve neden var olurlar</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Herhangi bir alım veya satım emrinin gerçekleşmesi için, karşı tarafta o an işlem yapmaya hazır birinin olması gerekir. Birçok varlıkta, özellikle daha az işlem görenlerde, bu her zaman kendiliğinden gerçekleşmez — işte tam burada piyasa yapıcı devreye girer.</p>
-<h2>Bir piyasa yapıcının yapmayı taahhüt ettiği şey</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-funcionam-os-market-makers" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Piyasa</span>
+            <h1>Piyasa yapıcılar nasıl çalışır ve neden var olurlar</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#bir-piyasa-yapıcının-yapmayı-taahhut-ettigi-sey">Bir piyasa yapıcının yapmayı taahhüt ettiği şey</a></li>
+                <li><a href="#piyasa-yapıcının-karı-nereden-gelir">Piyasa yapıcının kârı nereden gelir</a></li>
+                <li><a href="#bu-hizmet-neden-gereklidir">Bu hizmet neden gereklidir</a></li>
+                <li><a href="#piyasa-yapıcının-riski-nasıl-yonetilir">Piyasa yapıcının riski nasıl yönetilir</a></li>
+                <li><a href="#bunun-perakende-islemcisi-icin-anlamı">Bunun perakende işlemcisi için anlamı</a></li>
+                <li><a href="#piyasa-yapıcı-ile-islem-aracı-kurumu-arasındaki-fark">Piyasa yapıcı ile işlem aracı kurumu arasındaki fark</a></li>
+                <li><a href="#yapısal-bir-parca-bir-tehdit-degil">Yapısal bir parça, bir tehdit değil</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Herhangi bir alım veya satım emrinin gerçekleşmesi için, karşı tarafta o an işlem yapmaya hazır birinin olması gerekir. Birçok varlıkta, özellikle daha az işlem görenlerde, bu her zaman kendiliğinden gerçekleşmez — işte tam burada piyasa yapıcı devreye girer.</p>
+<h2 id="bir-piyasa-yapıcının-yapmayı-taahhut-ettigi-sey">Bir piyasa yapıcının yapmayı taahhüt ettiği şey</h2>
 <p>Bir piyasa yapıcı — banka, aracı kurum veya uzmanlaşmış bir şirket — belirli bir varlık için sürekli olarak hem bir alış hem de bir satış tarafı sunmayı taahhüt eden bir kurumdur ve bu, o anda alıp satmak isteyen herkesle işlem yapmaya hazır birinin her zaman bulunmasını garanti eder. Bu taahhüt, özellikle piyasanın doğal olarak en yoğun olmadığı saatler dışında, birçok varlığın likiditesini destekleyen şeydir.</p>
-<h2>Piyasa yapıcının kârı nereden gelir</h2>
+<h2 id="piyasa-yapıcının-karı-nereden-gelir">Piyasa yapıcının kârı nereden gelir</h2>
 <p>Piyasa yapıcının asıl kazancı spread'den — kendisinin sunduğu alış ve satış fiyatı arasındaki farktan — gelir. R$ 24,98'den alıp R$ 25,02'den satarsa, gün boyunca yüksek hacimde tekrarlanan iki taraflı her işlem biriminde R$ 0,04 cebe indirir. Bu iş modeli, fiyatın yönünü doğru tahmin etmeye değil, işlem başına küçük bir marjla yüksek hacim döndürmeye dayanır — piyasa yapıcı, teoride, iki taraf arasında tarafsız kalır, sadece spread'i yakalar.</p>
-<h2>Bu hizmet neden gereklidir</h2>
+<h2 id="bu-hizmet-neden-gereklidir">Bu hizmet neden gereklidir</h2>
 <p>Sürekli olarak her iki tarafı garanti eden biri olmadan, doğal hacmi az olan varlıklar çok daha geniş ve öngörülemez spreadlere sahip olur, her büyük emirde fiyat sert şekilde dalgalanır — çünkü doğru zamanda uygun bir karşı taraf bulunmaz. Piyasa yapıcıların varlığı bu sürtünmeyi azaltır ve doğal işlem hacmi devasa olmayan varlıklarda bile hızlı alım satımı ve daha öngörülebilir bir fiyatı kolaylaştırır.</p>
-<h2>Piyasa yapıcının riski nasıl yönetilir</h2>
+<h2 id="piyasa-yapıcının-riski-nasıl-yonetilir">Piyasa yapıcının riski nasıl yönetilir</h2>
 <p>Amaç tarafsız kalmak olsa da, piyasa yapıcı geçici olarak artık pozisyonlarla — aldığı emir akışına bağlı olarak istediğinden biraz daha fazla alımda veya satımda — bulur kendini. Bu riski yönetmek için sunduğu fiyatları sürekli ayarlar: istediğinden daha fazla alım pozisyonu biriktiriyorsa, daha fazla alıcı çekmek ve pozisyonunu yeniden dengelemek için satış fiyatını hafifçe düşürme eğilimindedir, daha fazla satımda olduğunda da tam tersini yapar. Bu sürekli ayarlama, fiyatın seans boyunca bu kadar akıcı hareket etmesinin nedenlerinden biridir.</p>
-<h2>Bunun perakende işlemcisi için anlamı</h2>
+<h2 id="bunun-perakende-islemcisi-icin-anlamı">Bunun perakende işlemcisi için anlamı</h2>
 <p>Bu işlevi anlamak, önemli bir haber anında spread'in neden genişlediğini yorumlamaya yardımcı olur: fiyatın sert bir şekilde sıçrayabileceği durumlarda her iki tarafı da açık tutmanın riski artar ve piyasa yapıcı bu anlarda alış ile satış arasındaki farkı genişleterek kendini korur. Bu aynı zamanda, aktif bir piyasa yapıcısı olmayan daha az likit varlıkların neden sürekli olarak daha geniş spreadlere sahip olma eğiliminde olduğunu da açıklar — bu riski sürekli olarak üstlenen biri yoktur.</p>
-<h2>Piyasa yapıcı ile işlem aracı kurumu arasındaki fark</h2>
+<h2 id="piyasa-yapıcı-ile-islem-aracı-kurumu-arasındaki-fark">Piyasa yapıcı ile işlem aracı kurumu arasındaki fark</h2>
 <p>Piyasa yapıcının rolünü, emir göndermek için kullandığınız aracı kurumla karıştırmak yaygındır. Aracı kurum, emrinizin piyasaya ulaştığı kanaldır; piyasa yapıcı ise diğer tarafta işlem yapmak için uygun bir karşı tarafın bulunmasını garanti eden kişidir. Bazı modellerde, aracı kurumun kendisi belirli varlıklar için piyasa yapıcısı olarak da hareket edebilir, ancak bu düzenlenir ve bildirilir, ve temel ilkeyi değiştirmez: likiditenin sürekli var olabilmesi için birinin her iki tarafa da taahhüt vermesi gerekir.</p>
-<h2>Yapısal bir parça, bir tehdit değil</h2>
+<h2 id="yapısal-bir-parca-bir-tehdit-degil">Yapısal bir parça, bir tehdit değil</h2>
 <p>Piyasa yapıcıların varlığı, borsalar ve denetleyici kurumlar tarafından düzenlenen, organize her piyasanın yapısal bir özelliğidir ve fiyat manipülasyonuyla karıştırılmamalıdır. Onların rolü, emirlerin hızla gerçekleştirilmesini sağlayan likiditeyi sunmaktır — herhangi bir varlığın nihai fiyatı, tek bir tarafın münferit bir kararı değil, piyasaya katılan tüm alıcı ve satıcılar arasındaki dengenin sonucu olmaya devam eder. Bu çarkı anlamak, perakende trader'ın spread'in gün boyunca neden değiştiğini, bu değişimi keyfi bir şey olarak görmek yerine, daha iyi yorumlamasına yardımcı olur.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/anthropic-halka-arzi-simdiye-kadar-bilinenler/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Anthropic halka arzı: gerçek olan ve hâlâ söylenti olan</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/seans-disi-islem-after-hours-nedir/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Seans Dışı İşlem (After-Hours) Nedir</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -215,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

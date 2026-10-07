@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/matematiksel-beklenti-hesaplama-trading/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Risk yönetimi",
       "author": {
@@ -172,29 +172,58 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Matematiksel Beklenti Hesabı: Stratejinizin Edge'i Var mı</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Risk yönetimi</span>
-        <h1>Matematiksel Beklenti Hesabı: Stratejinizin Edge'i Var mı</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Bir strateji işlemlerin çoğunda kazanabilir ve yine de hesabı yavaş yavaş eritebilir. Tersi de doğrudur: girişlerin yarısından fazlasında yanılıp ayı kârla kapatmak mümkündür. İsabet oranı tek başına, bir stratejinin gerçek bir avantajı olup olmadığını yanıtlamaz. Bu soruyu yanıtlayan, expectancy olarak da adlandırılan matematiksel beklentidir.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-expectativa-matematica-no-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Risk yönetimi</span>
+            <h1>Matematiksel Beklenti Hesabı: Stratejinizin Edge'i Var mı</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#matematiksel-beklenti-formulu">Matematiksel beklenti formülü</a></li>
+                <li><a href="#gercek-para-biriminde-cozulmus-bir-ornek">Gerçek para biriminde çözülmüş bir örnek</a></li>
+                <li><a href="#yuzde-45-lik-bir-isabet-oranı-pozitif-olabilir">Yüzde 45'lik bir isabet oranı pozitif olabilir</a></li>
+                <li><a href="#maliyetleri-unutmayın">Maliyetleri unutmayın</a></li>
+                <li><a href="#ikinci-bir-ornek-bu-kez-negatif-beklentiyle">İkinci bir örnek, bu kez negatif beklentiyle</a></li>
+                <li><a href="#bunu-gunluk-hayatta-nasıl-kullanmalı">Bunu günlük hayatta nasıl kullanmalı</a></li>
+                <li><a href="#sayıya-guvenmek-icin-kac-islem-yeterli">Sayıya güvenmek için kaç işlem yeterli</a></li>
+                <li><a href="#beklentiyi-hesapladıktan-sonra-ne-yapmalı">Beklentiyi hesapladıktan sonra ne yapmalı</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Bir strateji işlemlerin çoğunda kazanabilir ve yine de hesabı yavaş yavaş eritebilir. Tersi de doğrudur: girişlerin yarısından fazlasında yanılıp ayı kârla kapatmak mümkündür. İsabet oranı tek başına, bir stratejinin gerçek bir avantajı olup olmadığını yanıtlamaz. Bu soruyu yanıtlayan, expectancy olarak da adlandırılan matematiksel beklentidir.</p>
 <p>Matematiksel beklenti, sonuç geçmişi göz önüne alındığında, bir stratejinin işlem başına ortalama ne kadar kazandığını veya kaybettiğini gösterir. Pozitif bir sayı, gözlemlenen örneklem içinde istatistiksel bir avantajın kanıtıdır, gelecekteki kârın garantisi değildir.</p>
-<h2>Matematiksel beklenti formülü</h2>
+<h2 id="matematiksel-beklenti-formulu">Matematiksel beklenti formülü</h2>
 <p>Formülün en bilinen versiyonu şudur:</p>
 <p><strong>Beklenti = (isabet oranı x ortalama kazanç) - (hata oranı x ortalama kayıp)</strong></p>
 <p>Bu formül, her işlem kazançla veya kayıpla sonuçlandığında ve ortalamalar zaten komisyon gibi maliyetleri içerdiğinde iyi çalışır. Hesabı daha da netleştirmek için net beklentiyi doğrudan toplamlar üzerinden de hesaplamak mümkündür:</p>
 <p><strong>Net beklenti = [(kazanç sayısı x ortalama kazanç) - (kayıp sayısı x ortalama kayıp) - toplam maliyetler] / toplam işlem sayısı</strong></p>
-<h2>Gerçek para biriminde çözülmüş bir örnek</h2>
+<h2 id="gercek-para-biriminde-cozulmus-bir-ornek">Gerçek para biriminde çözülmüş bir örnek</h2>
 <p>Bir traderın, her girişte aynı planlanan riskle aynı setup'a ait 40 işlemi incelediğini ve şu sayılara ulaştığını varsayalım:</p>
 <ul>
 <li>Kazanan işlemler: 18</li>
@@ -211,24 +240,35 @@
 <li>İşlem başına beklenti: R$ 940,00 / 40 = R$ 23,50</li>
 </ul>
 <p>Bu sonucu, işlem başına R$ 100,00 ortalama riski kullanarak risk katları (R) cinsinden ifade edersek, beklenti işlem başına <strong>+0,235R</strong> olur. Bu, bu örneklemin ortalamasında her işlemin planlanan riskin yaklaşık yüzde 23,5'ini getirdiği anlamına gelir. Aynı örneklemin kâr faktörü, toplam kazancın toplam kayba bölünmesiyle hesaplandığında, 2.700 / 1.760, yani yaklaşık <strong>1,53</strong> olur.</p>
-<h2>Yüzde 45'lik bir isabet oranı pozitif olabilir</h2>
+<h2 id="yuzde-45-lik-bir-isabet-oranı-pozitif-olabilir">Yüzde 45'lik bir isabet oranı pozitif olabilir</h2>
 <p>Yukarıdaki örnekte isabet oranının sadece yüzde 45 (40 işlemde 18) olduğuna, yani yarının altında olduğuna dikkat edin. Yine de beklenti pozitiftir, çünkü ortalama kazanç ortalama kayıptan neredeyse iki kat büyüktür. Bir stratejinin sadece isabet oranını sormanın, genellikle kalitesi hakkında yanlış sonuçlara yol açmasının nedeni budur.</p>
-<h2>Maliyetleri unutmayın</h2>
+<h2 id="maliyetleri-unutmayın">Maliyetleri unutmayın</h2>
 <p>Komisyon, broker ücretleri ve bir pozisyonu gece boyunca açık tutmanın olası maliyetleri net beklentiyi azaltır. İşlem başına R$ 6,00 brüt beklentisi olan bir strateji, işlem başına ortalama R$ 7,00 maliyet düşüldükten sonra negatife dönebilir. Sonucu yapay olarak şişirmemek için mümkün olduğunda iyimser bir tahmin yerine brokerin uyguladığı gerçek maliyetleri kullanın.</p>
-<h2>İkinci bir örnek, bu kez negatif beklentiyle</h2>
+<h2 id="ikinci-bir-ornek-bu-kez-negatif-beklentiyle">İkinci bir örnek, bu kez negatif beklentiyle</h2>
 <p>Karşıtlığı netleştirmek için, 50 işlemlik ikinci bir vakaya bakalım: ortalama R$ 90,00 kazançla 21 kazanan ve ortalama R$ 75,00 kayıpla 29 kaybeden işlem. Toplam kazanç 21 x R$ 90,00 = R$ 1.890,00, toplam kayıp ise 29 x R$ 75,00 = R$ 2.175,00 olur. Örneklemin net sonucu R$ 285,00 ile negatiftir; bu da R$ 1.890,00 eksi R$ 2.175,00'in 50 işleme bölünmesiyle, yani işlem başına R$ 5,70'lik ortalama bir kayıpla sonuçlanan bir beklenti verir. Birçok strateji için normal kabul edilen aralığa yakın bir yüzde 42'lik isabet oranına rağmen, ortalama kazanç ile ortalama kayıp arasındaki ilişki pozitif bir sonucu sürdürmek için yeterli olmadı.</p>
-<h2>Bunu günlük hayatta nasıl kullanmalı</h2>
-<h2>Sayıya güvenmek için kaç işlem yeterli</h2>
+<h2 id="bunu-gunluk-hayatta-nasıl-kullanmalı">Bunu günlük hayatta nasıl kullanmalı</h2>
+<h2 id="sayıya-guvenmek-icin-kac-islem-yeterli">Sayıya güvenmek için kaç işlem yeterli</h2>
 <p>Evrensel bir sihirli sayı yoktur. 30 işlemin altındaki bir örneklem, herhangi bir sağlam sonuç için genellikle çok küçük kabul edilir. 30 ile 100 işlem arasında, sonuç zaten ilk bir tahmin verir, ancak birkaç aşırı sonuçla hâlâ oldukça değişebilir. 100 veya 200 işlemin üzerinde, sayı daha bilgilendirici hale gelmeye başlar, ancak avantajın gelecekte de var olmaya devam edeceğinin asla kesin bir kanıtı değildir.</p>
-<h2>Beklentiyi hesapladıktan sonra ne yapmalı</h2>
+<h2 id="beklentiyi-hesapladıktan-sonra-ne-yapmalı">Beklentiyi hesapladıktan sonra ne yapmalı</h2>
 <p>Gerçek maliyetler hesaba katıldıktan sonra beklenti negatif çıkarsa, stratejiyi düzeltmeden önce pozisyon büyütmeyi tartışmanın bir anlamı yoktur. Pozitif çıkarsa, sonucun sağlamlığını test etmekte fayda var: örneklemdeki en büyük kazanan işlemi çıkarın ve yeniden hesaplayın. Beklenti sadece bu çıkarmayla negatife dönerse, sonuç tek bir aykırı işleme fazla bağımlı olabilir ve pozisyon büyüklüğünü artırmadan önce daha fazla dikkat gerektirir.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/forexte-stop-loss-ve-take-profit-nasil-kullanilir/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Forex'te Stop Loss ve Take Profit Nasıl Kullanılır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/trading-de-martingale-stratejisi-nasil-calisir-ve-riskleri/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de martingale stratejisi: nasıl çalışır ve riskleri</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -236,7 +276,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -300,6 +340,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

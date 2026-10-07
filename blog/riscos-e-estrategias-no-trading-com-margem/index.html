@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -70,7 +70,7 @@
       "url": "https://duotide.com.br/blog/riscos-e-estrategias-no-trading-com-margem/",
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-25T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Gestão de risco",
       "author": {
@@ -173,28 +173,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Riscos do trading com margem: chamada, stop out e liquidação</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestão de risco</span>
-        <h1>Riscos do trading com margem: chamada, stop out e liquidação</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 5 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Toda operação com margem carrega um risco que vai além do preço do ativo: o risco da própria estrutura da operação, capaz de encerrar uma posição antes mesmo de o mercado provar quem estava certo. Chamada de margem, stop out e liquidação são o motivo pelo qual duas contas com o mesmo capital e a mesma alavancagem "permitida" podem ter destinos completamente diferentes.</p><p>Este texto não repete o básico de como a margem funciona. O foco aqui é entender por que a alavancagem que a corretora oferece não é a alavancagem que você realmente assume, como uma chamada de margem se transforma em stop out, e quais decisões práticas reduzem esse risco antes que ele apareça na tela.</p><h2>Alavancagem efetiva: a conta que poucos fazem antes de operar</h2><p>A alavancagem que a corretora anuncia — 10:1, 20:1, 30:1 — é apenas o limite máximo permitido para aquele instrumento. A que realmente importa é a efetiva: o valor total das posições abertas dividido pelo patrimônio da conta. É essa diferença que separa uma operação arriscada de uma operação controlada.</p><p>Considere uma conta com patrimônio de R$ 10.000,00, em um ativo com alavancagem máxima de 30:1. Um trader agressivo abre uma posição de R$ 90.000,00, com margem de R$ 3.000,00 (90.000 ÷ 30). Mesmo com o limite de 30:1 disponível, a alavancagem efetiva sobre o patrimônio total é de 9:1 (90.000 ÷ 10.000). Com esse número, uma queda de apenas 3,33% no ativo já gera perda de 30% do patrimônio (9 × 3,33%) — é a alavancagem efetiva, e não o limite anunciado pela corretora, que define o tamanho real do golpe.</p><p>Compare com um segundo trader, mesmo patrimônio e mesma alavancagem disponível, que abre uma posição de apenas R$ 20.000,00. A alavancagem efetiva cai para 2:1, e a mesma queda de 3,33% no ativo representa uma perda de 6,67% do patrimônio — cinco vezes menor, com a mesma corretora e o mesmo ativo.</p><h2>Chamada de margem: o aviso antes do fim</h2><p>A chamada de margem ocorre quando o nível de margem da conta — patrimônio dividido pela margem usada, em percentual — cai abaixo de um limite definido pela corretora, normalmente perto de 100%. Abaixo desse ponto, a corretora sinaliza que a garantia está ficando curta e pode exigir depósito adicional.</p><p>No trader agressivo (posição de R$ 90.000,00, margem de R$ 3.000,00, patrimônio de R$ 10.000,00), a chamada a 100% de nível de margem dispara quando o patrimônio cai abaixo dos R$ 3.000,00 usados como margem, ou seja, após perda de R$ 7.000,00 — basta uma queda de 7,78% no ativo (7.000 ÷ 90.000). Já no trader conservador, com margem de R$ 666,67 (20.000 ÷ 30), a chamada só ocorreria após perda de R$ 9.333,33, equivalente a uma queda de 46,67% no ativo — uma folga bem maior, construída só com uma posição menor em relação ao patrimônio.</p><h2>Stop out: quando a corretora fecha a posição por você</h2><p>O stop out é o estágio seguinte, e não depende mais da vontade do trader: quando o nível de margem cai abaixo de um segundo limite, geralmente mais baixo que o da chamada — 50%, 30% ou 20%, dependendo da corretora e do instrumento —, as posições são encerradas automaticamente para impedir que o prejuízo ultrapasse o capital disponível.</p><p>No trader agressivo, um stop out a 50% do nível de margem significa patrimônio abaixo de R$ 1.500,00, o que acontece após perda de R$ 8.500,00 — uma queda de apenas 9,44% no ativo (8.500 ÷ 90.000). Em menos de 10% de variação do preço, mais de 80% do patrimônio inicial já desapareceu. Para o trader conservador, o mesmo cálculo só se cumpriria depois de uma queda de 48,33% no ativo. A diferença entre 9,44% e 48,33% é resultado só da alavancagem efetiva escolhida, não de sorte ou de uma corretora "melhor".</p><h2>Por que a liquidação pode custar mais do que o esperado</h2><p>O preço em que o stop out realmente executa nem sempre é o preço em que o nível de margem cruzou o limite. Em mercados voláteis, gaps de preço e execução mais lenta em momentos de liquidação simultânea de várias contas podem fechar a posição com prejuízo maior do que o calculado — a chamada derrapagem, ou slippage, de execução. O risco cresce ainda mais quando o trader mantém várias posições em ativos correlacionados: se eles se movem juntos contra a conta, todas perdem valor ao mesmo tempo, consumindo o nível de margem muito mais rápido do que uma operação isolada faria supor.</p><h2>Estratégias práticas para controlar o risco</h2><p>Reduzir o risco de chamada de margem e de stop out depende de decisões tomadas antes de abrir a posição:</p><ul><li><strong>Calcule a alavancagem efetiva antes de operar</strong> — posições abertas dividido pelo patrimônio da conta, não pelo valor usado como margem. É esse número, não o limite da corretora, que determina o risco real.</li><li><strong>Defina o tamanho da posição pelo stop loss, não pela margem disponível</strong> — decida quanto está disposto a perder em reais (por exemplo, 1% a 2% do patrimônio) e calcule a posição a partir da distância até o stop.</li><li><strong>Mantenha margem livre generosa</strong> — evite usar todo o patrimônio como margem de uma única operação; quanto maior a margem livre, mais alto fica o nível de margem e mais distante fica a chamada de margem.</li><li><strong>Evite reforçar posições perdedoras</strong> — adicionar margem a uma operação no vermelho para "esperar a virada" aproxima o stop out em vez de afastá-lo.</li><li><strong>Cuidado com posições correlacionadas</strong> — várias operações que se movem na mesma direção multiplicam o efeito de um único evento de mercado sobre o nível de margem da conta.</li><li><strong>Acompanhe o nível de margem, não só o preço do ativo</strong> — uma regra pessoal de saída bem acima do stop out da corretora dá tempo de reagir antes da liquidação forçada.</li></ul><h2>Controlar a alavancagem efetiva é o que fica nas suas mãos</h2><p>A corretora define o limite máximo de alavancagem e os níveis de chamada de margem e de stop out, mas a alavancagem efetiva de cada operação continua sendo escolha do trader. Testar esse comportamento em uma conta de demonstração, seja na Duotide ou em outra plataforma, antes de operar com capital real ajuda a visualizar como o nível de margem reage a diferentes tamanhos de posição, sem o custo de aprender isso durante uma perda de verdade. A margem amplia o resultado nos dois sentidos, e o risco de perder todo o capital depositado é real.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="riscos-e-estrategias-no-trading-com-margem" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">5 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-25">25 de setembro de 2026</time></p>
+            <span class="bq__tag">Gestão de risco</span>
+            <h1>Riscos do trading com margem: chamada, stop out e liquidação</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#alavancagem-efetiva-a-conta-que-poucos-fazem-antes-de-operar">Alavancagem efetiva: a conta que poucos fazem antes de operar</a></li>
+                <li><a href="#chamada-de-margem-o-aviso-antes-do-fim">Chamada de margem: o aviso antes do fim</a></li>
+                <li><a href="#stop-out-quando-a-corretora-fecha-a-posicao-por-voce">Stop out: quando a corretora fecha a posição por você</a></li>
+                <li><a href="#por-que-a-liquidacao-pode-custar-mais-do-que-o-esperado">Por que a liquidação pode custar mais do que o esperado</a></li>
+                <li><a href="#estrategias-praticas-para-controlar-o-risco">Estratégias práticas para controlar o risco</a></li>
+                <li><a href="#controlar-a-alavancagem-efetiva-e-o-que-fica-nas-suas-maos">Controlar a alavancagem efetiva é o que fica nas suas mãos</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Toda operação com margem carrega um risco que vai além do preço do ativo: o risco da própria estrutura da operação, capaz de encerrar uma posição antes mesmo de o mercado provar quem estava certo. Chamada de margem, stop out e liquidação são o motivo pelo qual duas contas com o mesmo capital e a mesma alavancagem "permitida" podem ter destinos completamente diferentes.</p><p>Este texto não repete o básico de como a margem funciona. O foco aqui é entender por que a alavancagem que a corretora oferece não é a alavancagem que você realmente assume, como uma chamada de margem se transforma em stop out, e quais decisões práticas reduzem esse risco antes que ele apareça na tela.</p><h2 id="alavancagem-efetiva-a-conta-que-poucos-fazem-antes-de-operar">Alavancagem efetiva: a conta que poucos fazem antes de operar</h2><p>A alavancagem que a corretora anuncia — 10:1, 20:1, 30:1 — é apenas o limite máximo permitido para aquele instrumento. A que realmente importa é a efetiva: o valor total das posições abertas dividido pelo patrimônio da conta. É essa diferença que separa uma operação arriscada de uma operação controlada.</p><p>Considere uma conta com patrimônio de R$ 10.000,00, em um ativo com alavancagem máxima de 30:1. Um trader agressivo abre uma posição de R$ 90.000,00, com margem de R$ 3.000,00 (90.000 ÷ 30). Mesmo com o limite de 30:1 disponível, a alavancagem efetiva sobre o patrimônio total é de 9:1 (90.000 ÷ 10.000). Com esse número, uma queda de apenas 3,33% no ativo já gera perda de 30% do patrimônio (9 × 3,33%) — é a alavancagem efetiva, e não o limite anunciado pela corretora, que define o tamanho real do golpe.</p><p>Compare com um segundo trader, mesmo patrimônio e mesma alavancagem disponível, que abre uma posição de apenas R$ 20.000,00. A alavancagem efetiva cai para 2:1, e a mesma queda de 3,33% no ativo representa uma perda de 6,67% do patrimônio — cinco vezes menor, com a mesma corretora e o mesmo ativo.</p><h2 id="chamada-de-margem-o-aviso-antes-do-fim">Chamada de margem: o aviso antes do fim</h2><p>A chamada de margem ocorre quando o nível de margem da conta — patrimônio dividido pela margem usada, em percentual — cai abaixo de um limite definido pela corretora, normalmente perto de 100%. Abaixo desse ponto, a corretora sinaliza que a garantia está ficando curta e pode exigir depósito adicional.</p><p>No trader agressivo (posição de R$ 90.000,00, margem de R$ 3.000,00, patrimônio de R$ 10.000,00), a chamada a 100% de nível de margem dispara quando o patrimônio cai abaixo dos R$ 3.000,00 usados como margem, ou seja, após perda de R$ 7.000,00 — basta uma queda de 7,78% no ativo (7.000 ÷ 90.000). Já no trader conservador, com margem de R$ 666,67 (20.000 ÷ 30), a chamada só ocorreria após perda de R$ 9.333,33, equivalente a uma queda de 46,67% no ativo — uma folga bem maior, construída só com uma posição menor em relação ao patrimônio.</p><h2 id="stop-out-quando-a-corretora-fecha-a-posicao-por-voce">Stop out: quando a corretora fecha a posição por você</h2><p>O stop out é o estágio seguinte, e não depende mais da vontade do trader: quando o nível de margem cai abaixo de um segundo limite, geralmente mais baixo que o da chamada — 50%, 30% ou 20%, dependendo da corretora e do instrumento —, as posições são encerradas automaticamente para impedir que o prejuízo ultrapasse o capital disponível.</p><p>No trader agressivo, um stop out a 50% do nível de margem significa patrimônio abaixo de R$ 1.500,00, o que acontece após perda de R$ 8.500,00 — uma queda de apenas 9,44% no ativo (8.500 ÷ 90.000). Em menos de 10% de variação do preço, mais de 80% do patrimônio inicial já desapareceu. Para o trader conservador, o mesmo cálculo só se cumpriria depois de uma queda de 48,33% no ativo. A diferença entre 9,44% e 48,33% é resultado só da alavancagem efetiva escolhida, não de sorte ou de uma corretora "melhor".</p><h2 id="por-que-a-liquidacao-pode-custar-mais-do-que-o-esperado">Por que a liquidação pode custar mais do que o esperado</h2><p>O preço em que o stop out realmente executa nem sempre é o preço em que o nível de margem cruzou o limite. Em mercados voláteis, gaps de preço e execução mais lenta em momentos de liquidação simultânea de várias contas podem fechar a posição com prejuízo maior do que o calculado — a chamada derrapagem, ou slippage, de execução. O risco cresce ainda mais quando o trader mantém várias posições em ativos correlacionados: se eles se movem juntos contra a conta, todas perdem valor ao mesmo tempo, consumindo o nível de margem muito mais rápido do que uma operação isolada faria supor.</p><h2 id="estrategias-praticas-para-controlar-o-risco">Estratégias práticas para controlar o risco</h2><p>Reduzir o risco de chamada de margem e de stop out depende de decisões tomadas antes de abrir a posição:</p><ul><li><strong>Calcule a alavancagem efetiva antes de operar</strong> — posições abertas dividido pelo patrimônio da conta, não pelo valor usado como margem. É esse número, não o limite da corretora, que determina o risco real.</li><li><strong>Defina o tamanho da posição pelo stop loss, não pela margem disponível</strong> — decida quanto está disposto a perder em reais (por exemplo, 1% a 2% do patrimônio) e calcule a posição a partir da distância até o stop.</li><li><strong>Mantenha margem livre generosa</strong> — evite usar todo o patrimônio como margem de uma única operação; quanto maior a margem livre, mais alto fica o nível de margem e mais distante fica a chamada de margem.</li><li><strong>Evite reforçar posições perdedoras</strong> — adicionar margem a uma operação no vermelho para "esperar a virada" aproxima o stop out em vez de afastá-lo.</li><li><strong>Cuidado com posições correlacionadas</strong> — várias operações que se movem na mesma direção multiplicam o efeito de um único evento de mercado sobre o nível de margem da conta.</li><li><strong>Acompanhe o nível de margem, não só o preço do ativo</strong> — uma regra pessoal de saída bem acima do stop out da corretora dá tempo de reagir antes da liquidação forçada.</li></ul><h2 id="controlar-a-alavancagem-efetiva-e-o-que-fica-nas-suas-maos">Controlar a alavancagem efetiva é o que fica nas suas mãos</h2><p>A corretora define o limite máximo de alavancagem e os níveis de chamada de margem e de stop out, mas a alavancagem efetiva de cada operação continua sendo escolha do trader. Testar esse comportamento em uma conta de demonstração, seja na Duotide ou em outra plataforma, antes de operar com capital real ajuda a visualizar como o nível de margem reage a diferentes tamanhos de posição, sem o custo de aprender isso durante uma perda de verdade. A margem amplia o resultado nos dois sentidos, e o risco de perder todo o capital depositado é real.</p>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-25">25 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/stop-loss-e-take-profit-no-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como usar stop loss e take profit no forex</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/estrategia-martingale-no-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia martingale no trading: como funciona e os riscos</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -202,7 +240,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

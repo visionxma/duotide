@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/vortex-indikatorn-installning-anvandning/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Indikatorer",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Navigeringsspår">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/sv/">Hem</a></li>
         <li><a href="/sv/blog/">Blogg</a></li>
         <li><span aria-current="page">Vortex-indikatorn: hur du ställer in och använder den</span></li>
       </ol>
+      <a class="ap__voltar" href="/sv/blog/">Tillbaka</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indikatorer</span>
-        <h1>Vortex-indikatorn: hur du ställer in och använder den</h1>
-        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Vortex-indikatorn föddes ur en ovanlig inspiration bland verktyg för teknisk analys: dess upphovsmän, Etienne Botes och Douglas Siepman, byggde på observationer av den österrikiske uppfinnaren Viktor Schaubergers om vattnets flöde, och föreslog att finansmarknadens rörelser kunde likna de virvelmönster som observeras i naturen. I praktiken är resultatet en trendindikator med två linjer, enklare att tolka än vad analogin antyder.</p><h2>Idén bakom beräkningen</h2><p>Vortex mäter avståndet mellan aktuell candles lägsta och föregående candles högsta (uppåtrörelse), och avståndet mellan aktuell candles högsta och föregående candles lägsta (nedåtrörelse). Ju större ett av de här avstånden är i förhållande till det andra, desto starkare är den motsvarande riktade rörelsen. De här två måtten, utjämnade över en period (14 som standard), bildar indikatorns två linjer: VI+ (uppåtrörelse) och VI- (nedåtrörelse).</p><p>Beräkningen tar också hänsyn till varje candles verkliga range — samma koncept som används i ATR och ADX — vilket hjälper indikatorn att fånga rörelse även när det finns gap mellan candlar.</p><h2>Hur man ställer in den</h2><p>Vortex hör till kategorin momentumindikatorer (eller trendindikatorer, beroende på plattform) och använder som standard period 14 för de två huvudlinjerna. Nivåerna för överköpt och översåld brukar vara inställda på 1,1 respektive 0,9, även om de här två nivåerna väger mindre i indikatorns avläsning än korsningen mellan själva VI+- och VI--linjerna.</p><h2>Hur man läser signalerna</h2><ul><li><strong>Uppåtsignal</strong>: VI+-linjen ligger under VI-, korsar upp över den och stannar kvar ovanför — vilket indikerar att uppåtrörelsen börjat dominera.</li><li><strong>Nedåtsignal</strong>: VI--linjen ligger under VI+, korsar upp över den och stannar kvar ovanför — vilket indikerar att nedåtrörelsen börjat dominera.</li><li><strong>Avstånd mellan linjerna</strong>: ju större avståndet mellan VI+ och VI- är efter korsningen, desto starkare anses den pågående trenden vara.</li></ul><p>Ett exempel: i ett valutapar där VI- legat över VI+ i flera veckor (nedåttrend), korsar VI+ upp över VI- och avståndet mellan de två linjerna börjar öka i de följande candlarna. Den kombinationen — korsning plus ökande avstånd — läses som bekräftelse på att trenden bytt riktning, inte bara en isolerad korsning som kan vända i nästa candle.</p><h2>Inte alla korsningar borde bli en ingång</h2><p>En korsning mellan VI+ och VI- borde inte behandlas som en automatisk köp- eller säljorder, utan som en inbjudan att titta närmare på tillgången: kontrollera prisets senaste beteende, bedöma om det finns ett relevant stöd eller motstånd i närheten, och först då överväga en ingång i den angivna riktningen. På marknader utan tydlig trend tenderar korsningarna att upprepas flera gånger på kort tid, utan att generera någon användbar rörelse — samma problem med falska signaler som drabbar praktiskt taget alla trendindikatorer i sidledes marknader.</p><h2>Att kombinera Vortex med andra indikatorer</h2><p>Eftersom den bara mäter trend gynnas Vortex av att kombineras med en indikator av annan natur, i stället för en annan trendindikator som i grunden mäter samma sak. MACD och ADX brukar nämnas som bra komplement: MACD förstärker momentumavläsningen, och ADX hjälper till att bekräfta om styrkan i trenden som signalerats av Vortex-korsningen verkligen är relevant nog för att motivera en ingång.</p><h2>Riskhantering fortfarande nödvändig</h2><p>Som alla trendindikatorer har Vortex inte alltid rätt, och en strategi byggd på den borde inkludera stop loss och, när det är meningsfullt, ett fastställt take-profit-mål innan ingången. Inget verktyg, hur genomtänkt logiken bakom det än är, ger korrekta signaler hela tiden — och att behandla Vortex på något annat sätt vore att ignorera hur alla trendstrategier verkligen beter sig över många affärer.</p><p>Det är också värt att testa indikatorn på olika tillgångar och tidsramar innan man litar på den för riktiga affärer: en period på 14 som fungerar bra i ett dagsdiagram för aktier kanske inte ger samma resultat i ett intradagsdiagram för ett valutapar, med tanke på skillnaden i volatilitet och beteende mellan de två marknaderna.</p>
-        <div class="bq-post__cta">
-          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-vortex-como-configurar-e-usar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Länken kopierad">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
+            </div>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-28">28 september 2026</time></p>
+            <span class="bq__tag">Indikatorer</span>
+            <h1>Vortex-indikatorn: hur du ställer in och använder den</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-teamet</strong><small>Redaktionen</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Innehåll">
+              <p class="ap__indice-tit">Innehåll</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#iden-bakom-berakningen">Idén bakom beräkningen</a></li>
+                <li><a href="#hur-man-staller-in-den">Hur man ställer in den</a></li>
+                <li><a href="#hur-man-laser-signalerna">Hur man läser signalerna</a></li>
+                <li><a href="#inte-alla-korsningar-borde-bli-en-ingang">Inte alla korsningar borde bli en ingång</a></li>
+                <li><a href="#att-kombinera-vortex-med-andra-indikatorer">Att kombinera Vortex med andra indikatorer</a></li>
+                <li><a href="#riskhantering-fortfarande-nodvandig">Riskhantering fortfarande nödvändig</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Till toppen</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Vortex-indikatorn föddes ur en ovanlig inspiration bland verktyg för teknisk analys: dess upphovsmän, Etienne Botes och Douglas Siepman, byggde på observationer av den österrikiske uppfinnaren Viktor Schaubergers om vattnets flöde, och föreslog att finansmarknadens rörelser kunde likna de virvelmönster som observeras i naturen. I praktiken är resultatet en trendindikator med två linjer, enklare att tolka än vad analogin antyder.</p><h2 id="iden-bakom-berakningen">Idén bakom beräkningen</h2><p>Vortex mäter avståndet mellan aktuell candles lägsta och föregående candles högsta (uppåtrörelse), och avståndet mellan aktuell candles högsta och föregående candles lägsta (nedåtrörelse). Ju större ett av de här avstånden är i förhållande till det andra, desto starkare är den motsvarande riktade rörelsen. De här två måtten, utjämnade över en period (14 som standard), bildar indikatorns två linjer: VI+ (uppåtrörelse) och VI- (nedåtrörelse).</p><p>Beräkningen tar också hänsyn till varje candles verkliga range — samma koncept som används i ATR och ADX — vilket hjälper indikatorn att fånga rörelse även när det finns gap mellan candlar.</p><h2 id="hur-man-staller-in-den">Hur man ställer in den</h2><p>Vortex hör till kategorin momentumindikatorer (eller trendindikatorer, beroende på plattform) och använder som standard period 14 för de två huvudlinjerna. Nivåerna för överköpt och översåld brukar vara inställda på 1,1 respektive 0,9, även om de här två nivåerna väger mindre i indikatorns avläsning än korsningen mellan själva VI+- och VI--linjerna.</p><h2 id="hur-man-laser-signalerna">Hur man läser signalerna</h2><ul><li><strong>Uppåtsignal</strong>: VI+-linjen ligger under VI-, korsar upp över den och stannar kvar ovanför — vilket indikerar att uppåtrörelsen börjat dominera.</li><li><strong>Nedåtsignal</strong>: VI--linjen ligger under VI+, korsar upp över den och stannar kvar ovanför — vilket indikerar att nedåtrörelsen börjat dominera.</li><li><strong>Avstånd mellan linjerna</strong>: ju större avståndet mellan VI+ och VI- är efter korsningen, desto starkare anses den pågående trenden vara.</li></ul><p>Ett exempel: i ett valutapar där VI- legat över VI+ i flera veckor (nedåttrend), korsar VI+ upp över VI- och avståndet mellan de två linjerna börjar öka i de följande candlarna. Den kombinationen — korsning plus ökande avstånd — läses som bekräftelse på att trenden bytt riktning, inte bara en isolerad korsning som kan vända i nästa candle.</p><h2 id="inte-alla-korsningar-borde-bli-en-ingang">Inte alla korsningar borde bli en ingång</h2><p>En korsning mellan VI+ och VI- borde inte behandlas som en automatisk köp- eller säljorder, utan som en inbjudan att titta närmare på tillgången: kontrollera prisets senaste beteende, bedöma om det finns ett relevant stöd eller motstånd i närheten, och först då överväga en ingång i den angivna riktningen. På marknader utan tydlig trend tenderar korsningarna att upprepas flera gånger på kort tid, utan att generera någon användbar rörelse — samma problem med falska signaler som drabbar praktiskt taget alla trendindikatorer i sidledes marknader.</p><h2 id="att-kombinera-vortex-med-andra-indikatorer">Att kombinera Vortex med andra indikatorer</h2><p>Eftersom den bara mäter trend gynnas Vortex av att kombineras med en indikator av annan natur, i stället för en annan trendindikator som i grunden mäter samma sak. MACD och ADX brukar nämnas som bra komplement: MACD förstärker momentumavläsningen, och ADX hjälper till att bekräfta om styrkan i trenden som signalerats av Vortex-korsningen verkligen är relevant nog för att motivera en ingång.</p><h2 id="riskhantering-fortfarande-nodvandig">Riskhantering fortfarande nödvändig</h2><p>Som alla trendindikatorer har Vortex inte alltid rätt, och en strategi byggd på den borde inkludera stop loss och, när det är meningsfullt, ett fastställt take-profit-mål innan ingången. Inget verktyg, hur genomtänkt logiken bakom det än är, ger korrekta signaler hela tiden — och att behandla Vortex på något annat sätt vore att ignorera hur alla trendstrategier verkligen beter sig över många affärer.</p><p>Det är också värt att testa indikatorn på olika tillgångar och tidsramar innan man litar på den för riktiga affärer: en period på 14 som fungerar bra i ett dagsdiagram för aktier kanske inte ger samma resultat i ett intradagsdiagram för ett valutapar, med tanke på skillnaden i volatilitet och beteende mellan de två marknaderna.</p>
+            <div class="bq-post__cta">
+              <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            </div>
+            <div class="ap__fim">
+              <p>Uppdaterad: <time datetime="2026-09-28">28 sep. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-teamet</strong><p>Duotides redaktion skriver guiderna och nyheterna i den här bloggen: hur marknaden fungerar, riskhantering och hur plattformen används. Inget här är investeringsrådgivning.</p></div>
+              <a class="btn ap__equipe" href="/sv/om-denna-webbplats/">Möt teamet</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Läs också</h2>
+        <aside class="ap__rel">
+          <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/vad-ar-adx-indikatorn-och-hur-fungerar-den/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är ADX-indikatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/vad-ar-stokastiska-oscillatorn-och-hur-fungerar-den/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Stokastiska Oscillatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

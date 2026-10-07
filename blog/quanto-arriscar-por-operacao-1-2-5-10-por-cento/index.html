@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,28 +173,53 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">O que acontece se você arrisca 1%, 2%, 5% ou 10% por operação</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestão de risco</span>
-        <h1>O que acontece se você arrisca 1%, 2%, 5% ou 10% por operação</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Imagine dois traders com a mesma estratégia: mesmas entradas, mesmas saídas, mesma taxa de acerto, mesma sequência de perdas ao longo do tempo. O primeiro arrisca 1% do capital por operação. Depois de uma semana ruim, a conta está machucada, mas inteira — ele revisa as operações e consegue seguir para a próxima sem sentir que está apagando um incêndio. O segundo arrisca 10% por operação. A mesma semana ruim não parece um aprendizado, parece um estrago. Cada nova operação carrega o peso emocional de "recuperar o prejuízo". A estratégia é idêntica; quem está executando é que muda.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="quanto-arriscar-por-operacao-1-2-5-10-por-cento" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Gestão de risco</span>
+            <h1>O que acontece se você arrisca 1%, 2%, 5% ou 10% por operação</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguranca.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#a-matematica-de-uma-sequencia-de-perdas">A matemática de uma sequência de perdas</a></li>
+                <li><a href="#a-tabela-que-muda-a-decisao">A tabela que muda a decisão</a></li>
+                <li><a href="#o-lado-mais-cruel-a-matematica-da-recuperacao">O lado mais cruel: a matemática da recuperação</a></li>
+                <li><a href="#como-usar-essa-tabela-na-pratica">Como usar essa tabela na prática</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Imagine dois traders com a mesma estratégia: mesmas entradas, mesmas saídas, mesma taxa de acerto, mesma sequência de perdas ao longo do tempo. O primeiro arrisca 1% do capital por operação. Depois de uma semana ruim, a conta está machucada, mas inteira — ele revisa as operações e consegue seguir para a próxima sem sentir que está apagando um incêndio. O segundo arrisca 10% por operação. A mesma semana ruim não parece um aprendizado, parece um estrago. Cada nova operação carrega o peso emocional de "recuperar o prejuízo". A estratégia é idêntica; quem está executando é que muda.</p>
 <p>Essa é a parte do risco por operação que a maioria só aprende tarde demais: o percentual escolhido não é apenas um ajuste técnico de gestão de banca. Ele muda quanto tempo você sobrevive no mercado, quanto precisa de retorno para se recuperar de uma sequência ruim, e com que clareza consegue pensar enquanto uma operação está aberta.</p>
-<h2>A matemática de uma sequência de perdas</h2>
+<h2 id="a-matematica-de-uma-sequencia-de-perdas">A matemática de uma sequência de perdas</h2>
 <p>Quando o risco é um percentual fixo do saldo atual, cada perda fica um pouco menor em valor absoluto conforme a conta encolhe. A fórmula do saldo restante depois de uma sequência de perdas é:</p>
 <p>Saldo final = saldo inicial × (1 − percentual de risco) elevado ao número de perdas</p>
 <p>Aplicando a uma conta de R$ 10.000 com risco de 5% por operação: depois de uma perda, restam R$ 9.500. Depois de cinco perdas seguidas, restam cerca de R$ 7.738. Depois de dez perdas seguidas, restam cerca de R$ 5.987 — uma queda de quase 40% no capital, mesmo o percentual de risco parecendo moderado à primeira vista.</p>
-<h2>A tabela que muda a decisão</h2>
+<h2 id="a-tabela-que-muda-a-decisao">A tabela que muda a decisão</h2>
 <p>Veja o quanto do capital desaparece depois de sequências de perdas em diferentes percentuais de risco fixo:</p>
 <ul>
 <li><strong>3 perdas seguidas</strong> — risco de 1%: −3,0%; risco de 2%: −5,9%; risco de 5%: −14,3%; risco de 10%: −27,1%.</li>
@@ -203,18 +228,29 @@
 <li><strong>15 perdas seguidas</strong> — risco de 1%: −14,0%; risco de 2%: −26,1%; risco de 5%: −53,7%; risco de 10%: −79,4%.</li>
 </ul>
 <p>A armadilha comum é julgar o risco pela dor de uma única operação. Numa conta de R$ 1.000, arriscar 5% significa arriscar R$ 50 — parece pouco, quase irrelevante. O raciocínio seguinte costuma ser "por que arriscar só 1%, que dá R$ 10? Assim a conta nunca cresce". O problema é que contas raramente quebram por causa de uma perda isolada. Elas quebram por causa de uma sequência: a primeira perda é normal, a segunda é frustrante, a terceira faz o trader duvidar do próprio método, a quarta é antecipada na tentativa de estancar o prejuízo, e a quinta é operada maior do que deveria porque a conta "precisa de uma vitória boa". O risco por operação decide o quanto essa sequência, quando ela chegar, vai custar.</p>
-<h2>O lado mais cruel: a matemática da recuperação</h2>
+<h2 id="o-lado-mais-cruel-a-matematica-da-recuperacao">O lado mais cruel: a matemática da recuperação</h2>
 <p>Perdas e ganhos não são simétricos. Uma queda de 20% exige um ganho de 25% só para voltar ao ponto de partida. Uma queda de 40% exige um ganho de 66,7%. Uma queda de 65% — o resultado de dez perdas seguidas arriscando 10% por operação — exige um ganho de cerca de 186% apenas para empatar. Não é o dobro do esforço, é muito mais que isso, porque a base de cálculo do ganho necessário já está bem menor.</p>
 <p>É por isso que um plano de risco precisa ser desenhado para sobreviver a uma sequência de perdas antes que ela aconteça — não é possível redesenhar a gestão de risco no meio do pânico, com a conta já em queda livre e o julgamento comprometido pela pressão emocional do momento.</p>
-<h2>Como usar essa tabela na prática</h2>
+<h2 id="como-usar-essa-tabela-na-pratica">Como usar essa tabela na prática</h2>
 <p>O exercício mais útil antes de definir o risco por operação é perguntar: "se eu tiver dez perdas seguidas — algo que qualquer estratégia enfrenta eventualmente —, quanto da minha conta eu aceito perder, e quanto eu preciso recuperar depois disso?" Se a resposta a 5% ou 10% de risco por operação parecer assustadora quando confrontada com a recuperação necessária, o percentual está alto demais para o seu perfil, independentemente de quanto isso "atrase" o crescimento da conta no curto prazo.</p>
 <p>Arriscar 1% ou 2% por operação pode parecer lento para quem quer resultado rápido, mas é justamente essa lentidão que permite continuar operando depois de uma sequência ruim, em vez de precisar reconstruir a conta do zero. Trading envolve risco de perda em qualquer percentual escolhido — a diferença entre os números acima não é entre arriscar e não arriscar, é entre um risco do qual dá para se recuperar com calma e um risco que compromete a capacidade de continuar operando com a cabeça no lugar.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/stop-loss-e-take-profit-no-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como usar stop loss e take profit no forex</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/estrategia-martingale-no-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia martingale no trading: como funciona e os riscos</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -222,7 +258,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

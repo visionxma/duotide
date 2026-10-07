@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,48 +173,87 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Termos do mercado de ações para iniciantes, explicados na prática</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Iniciantes</span>
-        <h1>Termos do mercado de ações para iniciantes, explicados na prática</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-login-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>O mercado de ações tem um problema de vocabulário. Ninguém desiste de aprender porque as ideias são complicadas demais — desiste porque cada frase parece exigir que você já conheça cinco outras palavras antes de entender a primeira. "A ação subiu com volume alto, perto da resistência, com spread largo depois do balanço" não é uma frase avançada. É linguagem comum de mercado. Mas para quem está começando, pode parecer entrar numa conversa que já ia na metade.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="termos-do-mercado-de-acoes-para-iniciantes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Iniciantes</span>
+            <h1>Termos do mercado de ações para iniciantes, explicados na prática</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-login-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#acao-e-quota-share">Ação e quota (share)</a></li>
+                <li><a href="#ticker">Ticker</a></li>
+                <li><a href="#bid-ask-e-spread">Bid, ask e spread</a></li>
+                <li><a href="#ordem-a-mercado-e-ordem-limitada">Ordem a mercado e ordem limitada</a></li>
+                <li><a href="#volume">Volume</a></li>
+                <li><a href="#valor-de-mercado">Valor de mercado</a></li>
+                <li><a href="#colocando-tudo-junto">Colocando tudo junto</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>O mercado de ações tem um problema de vocabulário. Ninguém desiste de aprender porque as ideias são complicadas demais — desiste porque cada frase parece exigir que você já conheça cinco outras palavras antes de entender a primeira. "A ação subiu com volume alto, perto da resistência, com spread largo depois do balanço" não é uma frase avançada. É linguagem comum de mercado. Mas para quem está começando, pode parecer entrar numa conversa que já ia na metade.</p>
 <p>Este texto não é um dicionário completo, é um ponto de partida: os termos que tornam a primeira operação mais fácil de entender antes de qualquer dinheiro entrar em jogo.</p>
-<h2>Ação e quota (share)</h2>
+<h2 id="acao-e-quota-share">Ação e quota (share)</h2>
 <p>Uma ação representa uma fatia de propriedade de uma empresa. Ao comprar uma ação, você está comprando uma pequena parte daquele negócio — não está comprando o produto da empresa nem emprestando dinheiro a ela. Se a empresa vai bem, mais investidores tendem a querer possuir aquela ação, o que pode empurrar o preço para cima. Se a empresa decepciona, ou se o mercado espera problemas à frente, o preço pode cair.</p>
 <p>A quota, ou <em>share</em> em inglês, é a unidade contável dessa propriedade: você pode ter 1, 10 ou 100 quotas de uma ação. Isso importa porque o resultado financeiro depende da quantidade. Se uma ação sobe de R$ 50 para R$ 55, o ganho é de R$ 5 por quota — com 10 quotas, o ganho é de R$ 50; com 100 quotas, R$ 500. O movimento da ação foi o mesmo; o tamanho da posição mudou o resultado em dinheiro.</p>
-<h2>Ticker</h2>
+<h2 id="ticker">Ticker</h2>
 <p>O ticker é o código curto usado para identificar uma ação em bolsa — por exemplo, PETR4 ou VALE3 na bolsa brasileira. Tickers tornam as plataformas mais rápidas de usar, mas também podem gerar confusão entre empresas de nomes parecidos ou ativos listados em bolsas diferentes. Antes de confirmar qualquer ordem, vale conferir se o ticker corresponde mesmo à empresa pretendida — um erro simples de digitação pode levar a comprar o ativo errado.</p>
-<h2>Bid, ask e spread</h2>
+<h2 id="bid-ask-e-spread">Bid, ask e spread</h2>
 <p>O bid é o maior preço que um comprador está oferecendo no momento. O ask é o menor preço que um vendedor está aceitando. O spread é a diferença entre os dois. Se uma ação mostra bid de R$ 100,00 e ask de R$ 100,05, o spread é de R$ 0,05 — ao comprar imediatamente, você tende a pagar perto do ask; ao vender imediatamente, tende a receber perto do bid.</p>
 <p>Ações muito líquidas costumam ter spread apertado; ações menos negociadas podem ter spread mais largo, o que encarece entrar e sair rapidamente de uma posição. O spread é fácil de ignorar porque não chega como uma cobrança separada — mas continua sendo um custo real a cada operação.</p>
-<h2>Ordem a mercado e ordem limitada</h2>
+<h2 id="ordem-a-mercado-e-ordem-limitada">Ordem a mercado e ordem limitada</h2>
 <p>Uma ordem a mercado pede para comprar ou vender assim que possível, pelo melhor preço disponível — ela prioriza velocidade, não precisão de preço. Uma ordem limitada define o preço máximo que você aceita pagar numa compra, ou o preço mínimo que aceita receber numa venda — ela prioriza controle, com o risco de não ser executada se o mercado não chegar até aquele preço.</p>
 <p>Nenhuma das duas é automaticamente melhor. Use ordem a mercado quando a execução rápida importa mais do que uma pequena diferença de preço; use ordem limitada quando o preço importa mais do que a certeza de ser executado.</p>
-<h2>Volume</h2>
+<h2 id="volume">Volume</h2>
 <p>Volume mostra quantas quotas foram negociadas em um período. Um movimento de preço acompanhado de volume alto costuma sugerir interesse mais forte por trás daquele movimento; um movimento com volume baixo é mais fácil de questionar. Isso não significa que volume alto garanta uma boa operação, mas indica que o movimento chamou atenção de mais participantes do mercado. Ações com volume muito baixo também podem ser mais difíceis de comprar ou vender sem afetar o próprio preço.</p>
-<h2>Valor de mercado</h2>
+<h2 id="valor-de-mercado">Valor de mercado</h2>
 <p>O valor de mercado de uma empresa é calculado assim:</p>
 <p>Valor de mercado = preço da ação × número de quotas em circulação</p>
 <p>Se uma empresa tem 1 bilhão de quotas em circulação e a ação vale R$ 50, o valor de mercado é de R$ 50 bilhões. É por isso que o preço de uma ação sozinho pode enganar: uma empresa com ação a R$ 20 pode valer muito mais do que outra com ação a R$ 200, se tiver muito mais quotas em circulação. Investidores costumam agrupar empresas por faixa de valor de mercado — as maiores e mais estabelecidas, as intermediárias e as menores, geralmente mais voláteis.</p>
-<h2>Colocando tudo junto</h2>
+<h2 id="colocando-tudo-junto">Colocando tudo junto</h2>
 <p>Imagine uma ação negociada perto de R$ 50, com bid de R$ 49,98 e ask de R$ 50,02, volume acima do normal depois de uma notícia da empresa. Você quer comprar 10 quotas, mas não sabe se deve usar ordem a mercado ou ordem limitada, e também precisa decidir em que ponto a ideia da operação estaria errada, para definir um stop. Essa pequena situação já usa quase todo o vocabulário deste texto. Aprenda os termos como palavras de decisão, não como definições de dicionário — é assim que eles realmente ajudam na primeira operação, e vale lembrar sempre que operar ações envolve risco de perda, independentemente de quão bem você conheça o vocabulário do mercado.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/como-entender-uma-cotacao-de-mercado/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como entender uma cotação de mercado</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/livros-essenciais-para-traders-iniciantes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Livros essenciais para quem está começando no trading</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -222,7 +261,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +324,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

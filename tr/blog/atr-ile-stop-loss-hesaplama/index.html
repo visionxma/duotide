@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/atr-ile-stop-loss-hesaplama/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Risk yönetimi",
       "author": {
@@ -172,29 +172,57 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">ATR ile Stop Loss Hesaplama: Mesafe Nasıl Belirlenir</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Risk yönetimi</span>
-        <h1>ATR ile Stop Loss Hesaplama: Mesafe Nasıl Belirlenir</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>İşlem yapmaya yeni başlayanların en sık sorduğu sorulardan biri, stop loss'un ne mesafeye konulacağıdır. Çok yakına koymak, varlığın normal bir dalgalanmasıyla stopa takılma olasılığını artırır. Çok uzağa koymak ise işlem ters gittiğinde kaybı artırır. Bu soruyu yanıtlamanın pratik bir yolu, stop mesafesini hesaplamak için son dönem oynaklığının referansı olarak ATR'yi, yani Average True Range'i kullanmaktır.</p>
-<h2>ATR ne ölçer</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-stop-loss-com-atr" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Risk yönetimi</span>
+            <h1>ATR ile Stop Loss Hesaplama: Mesafe Nasıl Belirlenir</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#atr-ne-olcer">ATR ne ölçer</a></li>
+                <li><a href="#atr-tabanlı-stop-formulu">ATR tabanlı stop formülü</a></li>
+                <li><a href="#gercek-para-biriminde-cozulmus-ornek">Gerçek para biriminde çözülmüş örnek</a></li>
+                <li><a href="#atr-grafigin-yapısının-yerini-tutmaz">ATR, grafiğin yapısının yerini tutmaz</a></li>
+                <li><a href="#mukemmel-carpan-diye-bir-sey-yoktur">Mükemmel çarpan diye bir şey yoktur</a></li>
+                <li><a href="#gap-lere-ve-emir-gerceklesmesine-dikkat">Gap'lere ve emir gerçekleşmesine dikkat</a></li>
+                <li><a href="#islem-yapmadan-once-son-bir-hatırlatma">İşlem yapmadan önce son bir hatırlatma</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>İşlem yapmaya yeni başlayanların en sık sorduğu sorulardan biri, stop loss'un ne mesafeye konulacağıdır. Çok yakına koymak, varlığın normal bir dalgalanmasıyla stopa takılma olasılığını artırır. Çok uzağa koymak ise işlem ters gittiğinde kaybı artırır. Bu soruyu yanıtlamanın pratik bir yolu, stop mesafesini hesaplamak için son dönem oynaklığının referansı olarak ATR'yi, yani Average True Range'i kullanmaktır.</p>
+<h2 id="atr-ne-olcer">ATR ne ölçer</h2>
 <p>ATR, genellikle 14 olan belirli sayıda periyottaki ortalama fiyat hareketi büyüklüğünü ölçer. Yön belirtmez, sadece varlığın ne kadar hareket etme eğiliminde olduğunu gösterir. Her mum için, şu üç seçenek arasındaki en büyük değer olan True Range hesaplanır: mevcut mumun en yükseği ile en düşüğü arasındaki fark, mevcut en yüksek ile önceki kapanış arasındaki fark ve mevcut en düşük ile önceki kapanış arasındaki fark. ATR, bu değerlerin seçilen periyot boyunca ortalamasıdır.</p>
-<h2>ATR tabanlı stop formülü</h2>
+<h2 id="atr-tabanlı-stop-formulu">ATR tabanlı stop formülü</h2>
 <p><strong>Stop mesafesi = ATR x çarpan</strong></p>
 <p>Alış işlemi için: <strong>Stop = giriş fiyatı - stop mesafesi</strong></p>
 <p>Satış işlemi için: <strong>Stop = giriş fiyatı + stop mesafesi</strong></p>
-<h2>Gerçek para biriminde çözülmüş örnek</h2>
+<h2 id="gercek-para-biriminde-cozulmus-ornek">Gerçek para biriminde çözülmüş örnek</h2>
 <p>R$ 50,00'den işlem gören bir hisse senedinde, günlük ATR'si R$ 1,20 ve çarpanı 2 olan bir alış işlemi düşünelim. Stop mesafesi şöyle olur:</p>
 <ul>
 <li>Mesafe = R$ 1,20 x 2 = R$ 2,40</li>
@@ -205,21 +233,32 @@
 <li>Pozisyon büyüklüğü = R$ 200,00 / R$ 2,40 = yaklaşık 83 hisse</li>
 </ul>
 <p>Bu pozisyonla, fiyat R$ 47,60'a kadar düşerse, kayıp komisyon maliyetleri öncesinde planlanan R$ 200,00'a yakın olur. 2R'lik, yani alınan riskin iki katı olan bir referans hedef R$ 54,80 civarında olurdu, ama bu sadece matematiksel bir referanstır, fiyatın oraya kadar geleceğinin garantisi değildir.</p>
-<h2>ATR, grafiğin yapısının yerini tutmaz</h2>
+<h2 id="atr-grafigin-yapısının-yerini-tutmaz">ATR, grafiğin yapısının yerini tutmaz</h2>
 <p>ATR, bu varlığın ne kadar hareket etme eğiliminde olduğu sorusunu yanıtlar. Giriş fikrimin nerede yanlış olduğu sorusunu yanıtlamaz. Bu ikinci soru, önceki bir dip veya bir destek bölgesi gibi grafik analizinden gelir. Önerilen sıra şudur: önce işlemi geçersiz kılan seviyeyi işaretlemek, sonra giriş ile bu seviye arasındaki mesafeyi ölçmek ve ancak sonra bu mesafeyi son dönem oynaklığı karşısında mantıklı olup olmadığını görmek için ATR ile karşılaştırmak. Yapısal mesafe ATR'nin önerdiğinden çok daha küçükse, stop varlığın normal gürültüsü için fazla sıkı olabilir.</p>
-<h2>Mükemmel çarpan diye bir şey yoktur</h2>
+<h2 id="mukemmel-carpan-diye-bir-sey-yoktur">Mükemmel çarpan diye bir şey yoktur</h2>
 <p>Düşük bir çarpan, aynı real cinsinden risk için daha yakın bir stop ve daha büyük bir pozisyon yaratır, ancak yaygın dalgalanmalara daha fazla maruz kalır. Yüksek bir çarpan, daha uzak bir stop ve daha küçük bir pozisyon yaratır; gürültü nedeniyle çıkışları azaltır, ancak fiyatın risk katları cinsinden aynı sonuca ulaşması için daha fazla mesafe kat etmesini gerektirir. İdeal çarpan varlığa, işlem yapılan zaman dilimine ve setup türüne bağlıdır; tüm işlemler için sabit bir sayı benimsemeden önce geçmiş verilerde farklı değerleri test etmekte fayda var.</p>
-<h2>Gap'lere ve emir gerçekleşmesine dikkat</h2>
+<h2 id="gap-lere-ve-emir-gerceklesmesine-dikkat">Gap'lere ve emir gerçekleşmesine dikkat</h2>
 <p>Bu hesap, pozisyonun tam olarak stop fiyatından kapatılacağını varsayar. Pratikte gap'ler, haberler ve düşük likiditeli piyasalar, özellikle gece veya hafta sonu kapanan varlıklarda, emrin planlanan fiyattan oldukça uzakta gerçekleşmesine neden olabilir. ATR, normal koşullarda beklenen riski ölçeklendirmeye yardımcı olur, ancak piyasada stres anlarında planlanandan daha kötü bir emir gerçekleşmesi riskini ortadan kaldırmaz.</p>
-<h2>İşlem yapmadan önce son bir hatırlatma</h2>
+<h2 id="islem-yapmadan-once-son-bir-hatırlatma">İşlem yapmadan önce son bir hatırlatma</h2>
 <p>Ortaya çıkan pozisyon büyüklüğünü görmeden önce çarpanı belirleyin, tam tersini değil. Sadece rahat görünen bir pozisyon büyüklüğüne ulaşmak için çarpanı seçmek, risk yönetiminin mantığını tersine çevirir: pozisyon büyüklüğünü belirlemesi gereken stoptur, stopu belirlemesi gereken istenen büyüklük değil.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/forexte-stop-loss-ve-take-profit-nasil-kullanilir/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Forex'te Stop Loss ve Take Profit Nasıl Kullanılır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/trading-de-martingale-stratejisi-nasil-calisir-ve-riskleri/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de martingale stratejisi: nasıl çalışır ve riskleri</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -227,7 +266,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -291,6 +330,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

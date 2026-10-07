@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/vi/blog/thoai-lui-fibonacci-trong-giao-dich-vi-du-thuc-te/",
       "inLanguage": "vi",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "Phân tích kỹ thuật",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Đường dẫn điều hướng">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/vi/">Trang chủ</a></li>
         <li><a href="/vi/blog/">Blog</a></li>
         <li><span aria-current="page">Thoái lui Fibonacci trong giao dịch: một ví dụ thực tế</span></li>
       </ol>
+      <a class="ap__voltar" href="/vi/blog/">Quay lại</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Phân tích kỹ thuật</span>
-        <h1>Thoái lui Fibonacci trong giao dịch: một ví dụ thực tế</h1>
-        <p class="bq-post__meta">Đội ngũ Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 phút đọc</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Thoái lui Fibonacci là một trong những công cụ được sử dụng nhiều nhất — và cũng là một trong những công cụ bị áp dụng sai nhiều nhất — trong phân tích kỹ thuật. Ý tưởng cốt lõi khá đơn giản: sau một biến động giá mạnh, một đợt điều chỉnh một phần thường dừng lại ở những mức cụ thể trước khi biến động ban đầu tiếp tục. Vấn đề xuất hiện khi ai đó đối xử với những mức này như những điểm vào lệnh chính xác được đảm bảo, thay vì những vùng cần chú ý.</p><p>Các mức này bắt nguồn từ dãy số được mô tả bởi nhà toán học người Ý Fibonacci, nhưng bạn không cần hiểu toán học đằng sau nó để sử dụng công cụ này. Điều quan trọng là các tỷ lệ được suy ra từ nó: 23,6%, 38,2%, 50%, 61,8% và 78,6% (mức 50% về mặt kỹ thuật không phải một số Fibonacci, nhưng được đưa vào rộng rãi vì đại diện cho một nửa của biến động).</p><h2>Cách vẽ thoái lui</h2><p>Để vẽ công cụ này, bạn chọn hai điểm: điểm bắt đầu và điểm kết thúc của một biến động giá quan trọng — một nhịp tăng hoặc giảm rõ ràng trên biểu đồ. Nền tảng sẽ tự động tính các mức trung gian giữa hai điểm này.</p><p>Trong một biến động tăng, bạn vẽ từ đáy đến đỉnh của nhịp tăng. Các mức thoái lui xuất hiện dưới đỉnh, cho thấy một đợt điều chỉnh có thể lùi đến đâu trước khi, có khả năng, biến động tăng quay trở lại.</p><h2>Một ví dụ bằng số</h2><p>Hãy tưởng tượng một tài sản đã tăng từ R$ 80,00 lên R$ 100,00 — một nhịp tăng R$ 20,00. Vẽ thoái lui của biến động này, các mức chính sẽ như sau:</p><ul><li><strong>23,6%</strong>: 100,00 − (20,00 × 0,236) = R$ 95,28</li><li><strong>38,2%</strong>: 100,00 − (20,00 × 0,382) = R$ 92,36</li><li><strong>50%</strong>: 100,00 − (20,00 × 0,50) = R$ 90,00</li><li><strong>61,8%</strong>: 100,00 − (20,00 × 0,618) = R$ 87,64</li><li><strong>78,6%</strong>: 100,00 − (20,00 × 0,786) = R$ 84,28</li></ul><p>Nếu, sau đỉnh ở R$ 100,00, giá lùi lại và tìm thấy hỗ trợ gần R$ 87,64 (mức 61,8%), hình thành một cây nến đảo chiều tại vùng đó, sự trùng hợp giữa mức Fibonacci và một tín hiệu giá này là kiểu hợp lưu mà trader thường tìm kiếm — không phải mức đó đứng một mình, mà mức đó cộng thêm một bằng chứng khác.</p><h2>Vì sao mức 61,8% nhận được nhiều sự chú ý</h2><p>Trong số các mức thoái lui, 61,8% thường được xem là quan trọng nhất đối với ai tìm kiếm sự tiếp diễn của xu hướng ban đầu, vì đại diện cho một sự điều chỉnh đáng kể mà không làm mất hiệu lực biến động trước đó. Một sự điều chỉnh vượt qua mức này và đi sâu đến 78,6% hoặc hơn đặt ra nghi vấn về việc biến động ban đầu có còn đứng vững hay không, hay điều đang diễn ra là một sự đảo chiều lớn hơn, chứ không chỉ là một khoảng dừng.</p><h2>Kết hợp Fibonacci với một xác nhận khác</h2><p>Sử dụng thoái lui đơn lẻ, không có gì khác, có xu hướng tạo ra các lần vào lệnh non — giá có thể xuyên qua một mức và tiếp tục giảm (hoặc tăng) mà không tôn trọng vùng đã đánh dấu. Các cách phổ biến để củng cố tín hiệu bao gồm:</p><ul><li>Kiểm tra xem mức Fibonacci có trùng với một mức hỗ trợ hoặc kháng cự đã có sẵn trên biểu đồ, được hình thành bởi các đỉnh hoặc đáy trước đó hay không.</li><li>Chờ một mẫu hình nến đảo chiều tại vùng của mức đó, thay vì mua hoặc bán ngay khi giá chạm đường.</li><li>Kiểm tra một chỉ báo động lượng, như Stochastic, để xem liệu nó có cũng cho thấy dấu hiệu cạn kiệt của biến động điều chỉnh hay không.</li></ul><h2>Những sai lầm phổ biến</h2><p>Một sai lầm thường gặp là vẽ công cụ này trên bất kỳ dao động nhỏ nào của biểu đồ, mà không chọn một biến động thực sự quan trọng làm cơ sở. Một sai lầm khác là bỏ qua bối cảnh lớn hơn: một thoái lui Fibonacci trong một xu hướng giảm mạnh có ít trọng lượng hơn khi đi ngược dòng chảy chủ đạo so với khi phù hợp với nó. Và, giống như bất kỳ công cụ nào dựa trên hình học giá, nó không đảm bảo rằng giá sẽ tôn trọng bất kỳ mức cụ thể nào — chỉ chỉ ra những vùng phản ứng quan trọng trong lịch sử.</p><h2>Cách sử dụng điều này trong thực tế</h2><p>Thoái lui Fibonacci hoạt động tốt nhất như một bản đồ các vùng cần chú ý hơn là một yếu tố kích hoạt vào lệnh tự động. Đánh dấu các mức, chờ giá tiến gần một trong số đó, và chỉ sau đó tìm kiếm sự xác nhận từ một yếu tố kỹ thuật khác thường tạo ra các lần vào lệnh nhất quán hơn so với chỉ giao dịch dựa trên việc giá chạm đường — luôn kèm theo một điểm dừng lỗ được xác định, vì không mức Fibonacci nào đảm bảo giá sẽ phản ứng như kỳ vọng, và cùng lập luận bằng số này cũng áp dụng, theo chiều ngược lại, cho các thoái lui trong các biến động giảm.</p>
-        <div class="bq-post__cta">
-          <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="retracao-de-fibonacci-exemplo-pratico" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Đã sao chép liên kết">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 thg 9, 2026</time><span class="ap__sep">4 phút đọc</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> lượt xem</span></span>
+            </div>
+            <p class="ap__atual">Cập nhật: <time datetime="2026-09-28">28 tháng 9, 2026</time></p>
+            <span class="bq__tag">Phân tích kỹ thuật</span>
+            <h1>Thoái lui Fibonacci trong giao dịch: một ví dụ thực tế</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Đội ngũ Duotide</strong><small>Ban biên tập</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Mục lục">
+              <p class="ap__indice-tit">Mục lục</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#cach-ve-thoai-lui">Cách vẽ thoái lui</a></li>
+                <li><a href="#mot-vi-du-bang-so">Một ví dụ bằng số</a></li>
+                <li><a href="#vi-sao-muc-61-8-nhan-đuoc-nhieu-su-chu-y">Vì sao mức 61,8% nhận được nhiều sự chú ý</a></li>
+                <li><a href="#ket-hop-fibonacci-voi-mot-xac-nhan-khac">Kết hợp Fibonacci với một xác nhận khác</a></li>
+                <li><a href="#nhung-sai-lam-pho-bien">Những sai lầm phổ biến</a></li>
+                <li><a href="#cach-su-dung-đieu-nay-trong-thuc-te">Cách sử dụng điều này trong thực tế</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Lên đầu trang</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Thoái lui Fibonacci là một trong những công cụ được sử dụng nhiều nhất — và cũng là một trong những công cụ bị áp dụng sai nhiều nhất — trong phân tích kỹ thuật. Ý tưởng cốt lõi khá đơn giản: sau một biến động giá mạnh, một đợt điều chỉnh một phần thường dừng lại ở những mức cụ thể trước khi biến động ban đầu tiếp tục. Vấn đề xuất hiện khi ai đó đối xử với những mức này như những điểm vào lệnh chính xác được đảm bảo, thay vì những vùng cần chú ý.</p><p>Các mức này bắt nguồn từ dãy số được mô tả bởi nhà toán học người Ý Fibonacci, nhưng bạn không cần hiểu toán học đằng sau nó để sử dụng công cụ này. Điều quan trọng là các tỷ lệ được suy ra từ nó: 23,6%, 38,2%, 50%, 61,8% và 78,6% (mức 50% về mặt kỹ thuật không phải một số Fibonacci, nhưng được đưa vào rộng rãi vì đại diện cho một nửa của biến động).</p><h2 id="cach-ve-thoai-lui">Cách vẽ thoái lui</h2><p>Để vẽ công cụ này, bạn chọn hai điểm: điểm bắt đầu và điểm kết thúc của một biến động giá quan trọng — một nhịp tăng hoặc giảm rõ ràng trên biểu đồ. Nền tảng sẽ tự động tính các mức trung gian giữa hai điểm này.</p><p>Trong một biến động tăng, bạn vẽ từ đáy đến đỉnh của nhịp tăng. Các mức thoái lui xuất hiện dưới đỉnh, cho thấy một đợt điều chỉnh có thể lùi đến đâu trước khi, có khả năng, biến động tăng quay trở lại.</p><h2 id="mot-vi-du-bang-so">Một ví dụ bằng số</h2><p>Hãy tưởng tượng một tài sản đã tăng từ R$ 80,00 lên R$ 100,00 — một nhịp tăng R$ 20,00. Vẽ thoái lui của biến động này, các mức chính sẽ như sau:</p><ul><li><strong>23,6%</strong>: 100,00 − (20,00 × 0,236) = R$ 95,28</li><li><strong>38,2%</strong>: 100,00 − (20,00 × 0,382) = R$ 92,36</li><li><strong>50%</strong>: 100,00 − (20,00 × 0,50) = R$ 90,00</li><li><strong>61,8%</strong>: 100,00 − (20,00 × 0,618) = R$ 87,64</li><li><strong>78,6%</strong>: 100,00 − (20,00 × 0,786) = R$ 84,28</li></ul><p>Nếu, sau đỉnh ở R$ 100,00, giá lùi lại và tìm thấy hỗ trợ gần R$ 87,64 (mức 61,8%), hình thành một cây nến đảo chiều tại vùng đó, sự trùng hợp giữa mức Fibonacci và một tín hiệu giá này là kiểu hợp lưu mà trader thường tìm kiếm — không phải mức đó đứng một mình, mà mức đó cộng thêm một bằng chứng khác.</p><h2 id="vi-sao-muc-61-8-nhan-đuoc-nhieu-su-chu-y">Vì sao mức 61,8% nhận được nhiều sự chú ý</h2><p>Trong số các mức thoái lui, 61,8% thường được xem là quan trọng nhất đối với ai tìm kiếm sự tiếp diễn của xu hướng ban đầu, vì đại diện cho một sự điều chỉnh đáng kể mà không làm mất hiệu lực biến động trước đó. Một sự điều chỉnh vượt qua mức này và đi sâu đến 78,6% hoặc hơn đặt ra nghi vấn về việc biến động ban đầu có còn đứng vững hay không, hay điều đang diễn ra là một sự đảo chiều lớn hơn, chứ không chỉ là một khoảng dừng.</p><h2 id="ket-hop-fibonacci-voi-mot-xac-nhan-khac">Kết hợp Fibonacci với một xác nhận khác</h2><p>Sử dụng thoái lui đơn lẻ, không có gì khác, có xu hướng tạo ra các lần vào lệnh non — giá có thể xuyên qua một mức và tiếp tục giảm (hoặc tăng) mà không tôn trọng vùng đã đánh dấu. Các cách phổ biến để củng cố tín hiệu bao gồm:</p><ul><li>Kiểm tra xem mức Fibonacci có trùng với một mức hỗ trợ hoặc kháng cự đã có sẵn trên biểu đồ, được hình thành bởi các đỉnh hoặc đáy trước đó hay không.</li><li>Chờ một mẫu hình nến đảo chiều tại vùng của mức đó, thay vì mua hoặc bán ngay khi giá chạm đường.</li><li>Kiểm tra một chỉ báo động lượng, như Stochastic, để xem liệu nó có cũng cho thấy dấu hiệu cạn kiệt của biến động điều chỉnh hay không.</li></ul><h2 id="nhung-sai-lam-pho-bien">Những sai lầm phổ biến</h2><p>Một sai lầm thường gặp là vẽ công cụ này trên bất kỳ dao động nhỏ nào của biểu đồ, mà không chọn một biến động thực sự quan trọng làm cơ sở. Một sai lầm khác là bỏ qua bối cảnh lớn hơn: một thoái lui Fibonacci trong một xu hướng giảm mạnh có ít trọng lượng hơn khi đi ngược dòng chảy chủ đạo so với khi phù hợp với nó. Và, giống như bất kỳ công cụ nào dựa trên hình học giá, nó không đảm bảo rằng giá sẽ tôn trọng bất kỳ mức cụ thể nào — chỉ chỉ ra những vùng phản ứng quan trọng trong lịch sử.</p><h2 id="cach-su-dung-đieu-nay-trong-thuc-te">Cách sử dụng điều này trong thực tế</h2><p>Thoái lui Fibonacci hoạt động tốt nhất như một bản đồ các vùng cần chú ý hơn là một yếu tố kích hoạt vào lệnh tự động. Đánh dấu các mức, chờ giá tiến gần một trong số đó, và chỉ sau đó tìm kiếm sự xác nhận từ một yếu tố kỹ thuật khác thường tạo ra các lần vào lệnh nhất quán hơn so với chỉ giao dịch dựa trên việc giá chạm đường — luôn kèm theo một điểm dừng lỗ được xác định, vì không mức Fibonacci nào đảm bảo giá sẽ phản ứng như kỳ vọng, và cùng lập luận bằng số này cũng áp dụng, theo chiều ngược lại, cho các thoái lui trong các biến động giảm.</p>
+            <div class="bq-post__cta">
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
+            </div>
+            <div class="ap__fim">
+              <p>Cập nhật: <time datetime="2026-09-28">28 thg 9, 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> lượt xem</span></span><button class="ap__compartilhar" type="button">Chia sẻ <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Đội ngũ Duotide</strong><p>Ban biên tập Duotide viết các hướng dẫn và tin tức trên blog này: thị trường vận hành thế nào, quản lý rủi ro và cách dùng nền tảng. Không có nội dung nào ở đây là khuyến nghị đầu tư.</p></div>
+              <a class="btn ap__equipe" href="/vi/ve-trang-nay/">Gặp gỡ đội ngũ</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Đọc thêm</h2>
+        <aside class="ap__rel">
+          <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/vi/blog/mau-hinh-vai-dau-vai-cach-nhan-dien-dao-chieu/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Mẫu hình Vai-Đầu-Vai: cách nhận diện sự đảo chiều</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
             <a class="bq__card" href="/vi/blog/3-mo-hinh-nen-thuong-that-bai/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">3 mô hình nến thường thất bại</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

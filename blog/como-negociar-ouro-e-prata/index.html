@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,42 +173,80 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Como negociar ouro e prata: guia de commodities</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Commodities</span>
-        <h1>Como negociar ouro e prata: guia de commodities</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-divida-global-passa-365-trilhoes.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Ouro e prata estão entre os ativos mais antigos negociados pela humanidade, mas continuam presentes nas carteiras modernas por um motivo prático: eles reagem a fatores diferentes das ações e das moedas, o que os torna úteis tanto para quem busca diversificação quanto para quem gosta de operar movimentos de curto prazo.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-negociar-ouro-e-prata" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Commodities</span>
+            <h1>Como negociar ouro e prata: guia de commodities</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-divida-global-passa-365-trilhoes.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#o-que-move-o-preco-do-ouro">O que move o preço do ouro</a></li>
+                <li><a href="#o-que-move-o-preco-da-prata">O que move o preço da prata</a></li>
+                <li><a href="#a-razao-ouro-prata-gold-silver-ratio">A razão ouro/prata (gold-silver ratio)</a></li>
+                <li><a href="#convertendo-para-reais">Convertendo para reais</a></li>
+                <li><a href="#como-analisar-os-graficos-desses-ativos">Como analisar os gráficos desses ativos</a></li>
+                <li><a href="#gestao-de-risco-especifica-de-commodities">Gestão de risco específica de commodities</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Ouro e prata estão entre os ativos mais antigos negociados pela humanidade, mas continuam presentes nas carteiras modernas por um motivo prático: eles reagem a fatores diferentes das ações e das moedas, o que os torna úteis tanto para quem busca diversificação quanto para quem gosta de operar movimentos de curto prazo.</p>
 <p>Antes de abrir a primeira posição nesses ativos, vale entender o que realmente move o preço de cada um, como eles se relacionam entre si e que cuidados de risco são específicos das commodities.</p>
-<h2>O que move o preço do ouro</h2>
+<h2 id="o-que-move-o-preco-do-ouro">O que move o preço do ouro</h2>
 <p>O ouro é tratado pelo mercado como reserva de valor, não como matéria-prima industrial na maior parte da sua demanda. Por isso, o preço reage fortemente a três fatores: a força do dólar americano (o ouro é cotado em dólar, então um dólar mais fraco tende a deixar o ouro mais caro em outras moedas), as taxas de juros reais nos Estados Unidos (juros reais mais baixos reduzem o custo de oportunidade de segurar um ativo que não paga renda) e a demanda por proteção em momentos de instabilidade política ou econômica, quando investidores buscam um ativo considerado mais seguro.</p>
-<h2>O que move o preço da prata</h2>
+<h2 id="o-que-move-o-preco-da-prata">O que move o preço da prata</h2>
 <p>A prata compartilha parte da narrativa de "reserva de valor" com o ouro, mas tem uma diferença importante: mais da metade da sua demanda vem de uso industrial, principalmente em eletrônicos e painéis solares. Isso faz o preço da prata reagir também a dados de atividade industrial e manufatura, não só ao humor do mercado em relação ao dólar e aos juros. Na prática, isso deixa a prata historicamente mais volátil que o ouro — ela costuma subir mais nos rallies e cair mais nas correções.</p>
-<h2>A razão ouro/prata (gold-silver ratio)</h2>
+<h2 id="a-razao-ouro-prata-gold-silver-ratio">A razão ouro/prata (gold-silver ratio)</h2>
 <p>Uma forma prática de comparar os dois metais é dividir o preço do ouro pelo preço da prata. Se o ouro está cotado a US$ 2.400 a onça e a prata a US$ 28 a onça, a razão é 2.400 ÷ 28 ≈ 85,7 — ou seja, seria preciso 85,7 onças de prata para "comprar" uma onça de ouro. Quando essa razão sobe muito acima da sua média histórica, alguns traders leem isso como sinal de que a prata está relativamente barata frente ao ouro, e vice-versa quando a razão cai bastante. É uma leitura relativa, não uma previsão de preço absoluto.</p>
-<h2>Convertendo para reais</h2>
+<h2 id="convertendo-para-reais">Convertendo para reais</h2>
 <p>Como os metais são cotados em dólar por onça-troy, um passo simples evita confusão na hora de dimensionar a operação: multiplicar pela cotação do dólar. Com o dólar a R$ 5,00, uma onça de ouro a US$ 2.400 equivale a R$ 12.000; uma onça de prata a US$ 28 equivale a R$ 140. Uma variação de 1% no preço do ouro em dólar, nesse exemplo, representa R$ 120 por onça — e essa conta muda tanto se o metal se mexer quanto se o câmbio se mexer, então os dois riscos precisam ser considerados juntos, não separadamente.</p>
-<h2>Como analisar os gráficos desses ativos</h2>
+<h2 id="como-analisar-os-graficos-desses-ativos">Como analisar os gráficos desses ativos</h2>
 <p>Ouro e prata respondem bem a análise técnica clássica: médias móveis para identificar tendência, indicadores de volatilidade para ajustar o tamanho da posição, e atenção especial a divulgações de dados econômicos americanos (inflação, emprego, decisões de juros), que costumam gerar movimentos bruscos nos dois metais no mesmo dia. Quem opera no curto prazo faz bem em conferir o calendário econômico antes de manter posições abertas durante esses eventos.</p>
-<h2>Gestão de risco específica de commodities</h2>
+<h2 id="gestao-de-risco-especifica-de-commodities">Gestão de risco específica de commodities</h2>
 <p>Além do stop e do tamanho de posição de sempre, vale lembrar que ouro e prata podem ter espaços de preço (gaps) maiores que ações ou pares de moeda comuns em dias de notícia forte, o que faz o stop, ocasionalmente, ser executado a um preço pior do que o planejado. Por isso, operar com um risco por operação ainda menor nesses ativos — e evitar abrir posição minutos antes de uma divulgação econômica de peso — é uma prática comum entre quem já apanhou desse tipo de movimento.</p>
 <p>Negociar metais preciosos numa plataforma como a Duotide permite acompanhar essas cotações e aplicar a mesma disciplina de análise técnica e gestão de risco usada em outros mercados. O que muda é o conjunto de fatores fundamentais por trás do preço — e conhecer esse pano de fundo é o que separa quem entende o motivo do movimento de quem está apenas reagindo à cor do candle.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/petroleo-brent-x-wti-diferencas-explicadas/"><img src="/assets/img/capas/noticia-petroleo-sobe-impasse-eua-ira.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Petróleo Brent x WTI: as diferenças explicadas</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/como-operar-commodities-guia-completo/"><img src="/assets/img/capas/noticia-petroleo-sobe-impasse-eua-ira.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como operar commodities: guia completo para iniciantes</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -216,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +317,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

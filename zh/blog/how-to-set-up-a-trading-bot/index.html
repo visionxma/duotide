@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/how-to-set-up-a-trading-bot/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "交易策略",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">如何一步步配置一个交易机器人</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">交易策略</span>
-        <h1>如何一步步配置一个交易机器人</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 6 分钟</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>交易机器人本质上是一组用代码写成的规则，在满足特定条件时自动买卖资产。它的承诺很诱人：不需要一直盯着屏幕操作，也不让情绪干扰决策。但搭建一个真正有效的机器人，所需的规划远比大多数人想象的要多。</p><p>本指南展示配置交易机器人的各个步骤，从策略的制定到最终测试，以及避免它变成一台自动亏钱机器的注意事项。</p><h2>第一步：把策略定义为清晰的规则</h2><p>在考虑代码之前，先用简单明确的语句写下你的策略。例如：当9周期均线向上穿过21周期均线时买入，当价格跌破入场价2%时卖出。如果你无法用文字毫不含糊地描述这个策略，机器人也不可能持续稳定地执行它。</p><p>在这一步，也要确定任何自动化系统的三大支柱：入场条件、获利离场条件，以及亏损离场条件（止损）。一个没有明确止损的机器人，不是自动化策略，而是自动化风险。</p><h2>第二步：选择平台和语言</h2><p>基本上有两条路径：使用可视化构建器，通过模块和菜单搭建逻辑，无需编写代码；或者用Python这样的语言编程，这样自由度更高，但需要技术知识。对于刚起步的人来说，可视化平台能更快地验证一个简单的想法，然后再投入时间学编程。</p><h3>在自动化之前先测试逻辑</h3><p>一个常见的错误是没有先在历史图表上手动检验这个策略在最近几周是否有效，就直接开始编写机器人程序。这种快速的手动测试，靠自己的眼睛完成，能避免把时间浪费在自动化一个在纸面上就已经失败的规则上。</p><h2>第三步：用历史数据做回测</h2><p>回测是把你的策略套用到过去的价格数据上，看它本来会表现如何的过程。一个做得好的回测会考虑交易成本、买卖之间的点差，以及一个足够长、既包含平静市场也包含高波动时期的周期。</p><p>设想一个机器人以10000.00雷亚尔的初始资金进行测试，每笔交易冒险2%（200.00雷亚尔）。在100笔模拟交易中，胜率为55%，风险回报比为1比1.5，预期结果大约是盈利交易比亏损交易多21笔，再乘以平均收益——这种数学练习只有在回测数字真实可信、而不是被所选期间的运气人为夸大时，才有意义。</p><ul><li>如果有的话，使用至少一到两年的历史数据。</li><li>在计算中纳入交易成本和点差。</li><li>对过于完美的结果保持怀疑：这可能说明测试存在错误。</li><li>预留一部分数据，用于在调整所用周期之外进行验证。</li></ul><h2>第四步：在真实资金之前先在模拟账户测试</h2><p>即使回测结果令人满意，机器人也应该在模拟账户中运行一段合理的时间，使用实时市场数据，但不涉及真实资金。正是在这个阶段，会出现回测无法捕捉到的问题，比如执行延迟、连接故障，或机器人在突发新闻面前的表现。</p><h3>持续监控</h3><p>交易机器人不是一个配置一次就可以忘掉的项目。市场行为的变化可能让一个盈利的策略变得不稳定。每周留出时间来审视结果，把实际表现与回测的预测进行比较。</p><h2>如何安全地让机器人投入运行</h2><p>转向真实账户时，先用一笔小额资金开始，足以验证实盘执行是否与测试结果一致，但又足够小，即使出现配置错误也不会造成严重损失。随着真实的历史数据不断印证测试中的结果，再逐步增加分配的资金。</p><p>无论使用什么平台执行订单，机器人都是一种自律工具，而不是盈利的保证。它消除了按下按钮那一刻的情绪犹豫，但依然像其他任何交易方式一样暴露在市场风险之下，即使系统搭建得再好，亏损依然是这个过程的一部分。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-configurar-um-robo-de-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 6 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">交易策略</span>
+            <h1>如何一步步配置一个交易机器人</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#第一步-把策略定义为清晰的规则">第一步：把策略定义为清晰的规则</a></li>
+                <li><a href="#第二步-选择平台和语言">第二步：选择平台和语言</a></li>
+                <li><a href="#第三步-用历史数据做回测">第三步：用历史数据做回测</a></li>
+                <li><a href="#第四步-在真实资金之前先在模拟账户测试">第四步：在真实资金之前先在模拟账户测试</a></li>
+                <li><a href="#如何安全地让机器人投入运行">如何安全地让机器人投入运行</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>交易机器人本质上是一组用代码写成的规则，在满足特定条件时自动买卖资产。它的承诺很诱人：不需要一直盯着屏幕操作，也不让情绪干扰决策。但搭建一个真正有效的机器人，所需的规划远比大多数人想象的要多。</p><p>本指南展示配置交易机器人的各个步骤，从策略的制定到最终测试，以及避免它变成一台自动亏钱机器的注意事项。</p><h2 id="第一步-把策略定义为清晰的规则">第一步：把策略定义为清晰的规则</h2><p>在考虑代码之前，先用简单明确的语句写下你的策略。例如：当9周期均线向上穿过21周期均线时买入，当价格跌破入场价2%时卖出。如果你无法用文字毫不含糊地描述这个策略，机器人也不可能持续稳定地执行它。</p><p>在这一步，也要确定任何自动化系统的三大支柱：入场条件、获利离场条件，以及亏损离场条件（止损）。一个没有明确止损的机器人，不是自动化策略，而是自动化风险。</p><h2 id="第二步-选择平台和语言">第二步：选择平台和语言</h2><p>基本上有两条路径：使用可视化构建器，通过模块和菜单搭建逻辑，无需编写代码；或者用Python这样的语言编程，这样自由度更高，但需要技术知识。对于刚起步的人来说，可视化平台能更快地验证一个简单的想法，然后再投入时间学编程。</p><h3>在自动化之前先测试逻辑</h3><p>一个常见的错误是没有先在历史图表上手动检验这个策略在最近几周是否有效，就直接开始编写机器人程序。这种快速的手动测试，靠自己的眼睛完成，能避免把时间浪费在自动化一个在纸面上就已经失败的规则上。</p><h2 id="第三步-用历史数据做回测">第三步：用历史数据做回测</h2><p>回测是把你的策略套用到过去的价格数据上，看它本来会表现如何的过程。一个做得好的回测会考虑交易成本、买卖之间的点差，以及一个足够长、既包含平静市场也包含高波动时期的周期。</p><p>设想一个机器人以10000.00雷亚尔的初始资金进行测试，每笔交易冒险2%（200.00雷亚尔）。在100笔模拟交易中，胜率为55%，风险回报比为1比1.5，预期结果大约是盈利交易比亏损交易多21笔，再乘以平均收益——这种数学练习只有在回测数字真实可信、而不是被所选期间的运气人为夸大时，才有意义。</p><ul><li>如果有的话，使用至少一到两年的历史数据。</li><li>在计算中纳入交易成本和点差。</li><li>对过于完美的结果保持怀疑：这可能说明测试存在错误。</li><li>预留一部分数据，用于在调整所用周期之外进行验证。</li></ul><h2 id="第四步-在真实资金之前先在模拟账户测试">第四步：在真实资金之前先在模拟账户测试</h2><p>即使回测结果令人满意，机器人也应该在模拟账户中运行一段合理的时间，使用实时市场数据，但不涉及真实资金。正是在这个阶段，会出现回测无法捕捉到的问题，比如执行延迟、连接故障，或机器人在突发新闻面前的表现。</p><h3>持续监控</h3><p>交易机器人不是一个配置一次就可以忘掉的项目。市场行为的变化可能让一个盈利的策略变得不稳定。每周留出时间来审视结果，把实际表现与回测的预测进行比较。</p><h2 id="如何安全地让机器人投入运行">如何安全地让机器人投入运行</h2><p>转向真实账户时，先用一笔小额资金开始，足以验证实盘执行是否与测试结果一致，但又足够小，即使出现配置错误也不会造成严重损失。随着真实的历史数据不断印证测试中的结果，再逐步增加分配的资金。</p><p>无论使用什么平台执行订单，机器人都是一种自律工具，而不是盈利的保证。它消除了按下按钮那一刻的情绪犹豫，但依然像其他任何交易方式一样暴露在市场风险之下，即使系统搭建得再好，亏损依然是这个过程的一部分。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

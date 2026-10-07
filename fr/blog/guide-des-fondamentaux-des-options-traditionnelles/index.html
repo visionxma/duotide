@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Options",
       "author": {
@@ -172,42 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Guide des fondamentaux des options : prime, exercice et échéance</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Options</span>
-        <h1>Guide des fondamentaux des options : prime, exercice et échéance</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Avant d'appliquer toute stratégie avec des options, il vaut la peine de bien comprendre les quatre éléments qui composent tout contrat de ce type : le droit qu'il confère, le prix d'exercice, la date d'échéance et la prime payée pour ce droit. Ce guide se concentre sur ces fondamentaux, laissant les combinaisons de stratégies spécifiques pour un autre moment.</p>
-<h2>Ce qu'une option accorde réellement</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="guia-de-fundamentos-de-opcoes-tradicionais" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-27">27 septembre 2026</time></p>
+            <span class="bq__tag">Options</span>
+            <h1>Guide des fondamentaux des options : prime, exercice et échéance</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#ce-qu-une-option-accorde-reellement">Ce qu'une option accorde réellement</a></li>
+                <li><a href="#la-prime-le-prix-du-droit-lui-meme">La prime : le prix du droit lui-même</a></li>
+                <li><a href="#dans-a-et-hors-de-la-monnaie">Dans, à et hors de la monnaie</a></li>
+                <li><a href="#ce-qui-se-passe-a-l-echeance">Ce qui se passe à l'échéance</a></li>
+                <li><a href="#le-risque-est-different-pour-l-acheteur-et-pour-le-vendeur">Le risque est différent pour l'acheteur et pour le vendeur</a></li>
+                <li><a href="#pourquoi-il-vaut-la-peine-de-comprendre-cela-avant-toute-str">Pourquoi il vaut la peine de comprendre cela avant toute stratégie</a></li>
+                <li><a href="#un-point-qui-passe-souvent-inapercu">Un point qui passe souvent inaperçu</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Avant d'appliquer toute stratégie avec des options, il vaut la peine de bien comprendre les quatre éléments qui composent tout contrat de ce type : le droit qu'il confère, le prix d'exercice, la date d'échéance et la prime payée pour ce droit. Ce guide se concentre sur ces fondamentaux, laissant les combinaisons de stratégies spécifiques pour un autre moment.</p>
+<h2 id="ce-qu-une-option-accorde-reellement">Ce qu'une option accorde réellement</h2>
 <p>Une option d'achat (call) donne à l'acheteur le droit, mais non l'obligation, d'acheter l'actif sous-jacent à un prix fixe (le strike) jusqu'à une date déterminée. Une option de vente (put) accorde le droit de vendre dans les mêmes conditions. Celui qui vend l'option (le vendeur) assume l'obligation du côté opposé : si l'acheteur de la call décide d'exercer son droit, le vendeur est obligé de vendre l'actif au strike convenu, même si le prix du marché est bien plus élevé.</p>
-<h2>La prime : le prix du droit lui-même</h2>
+<h2 id="la-prime-le-prix-du-droit-lui-meme">La prime : le prix du droit lui-même</h2>
 <p>La prime est le montant payé par l'acheteur au vendeur pour acquérir ce droit, et elle est composée de deux éléments : la valeur intrinsèque et la valeur extrinsèque (ou valeur temps). Supposons une action cotée à 48,00 R$ et une call de strike 45,00 R$ coûtant 4,50 R$. La valeur intrinsèque est de 3,00 R$ (48 − 45, ce que l'option vaut déjà si elle est exercée maintenant) ; la valeur extrinsèque est de 1,50 R$ (4,50 − 3,00), qui reflète le temps restant jusqu'à l'échéance et l'attente de variation du prix pendant cette période. Plus on se rapproche de l'échéance, plus la valeur extrinsèque tend à diminuer, dans un processus appelé érosion temporelle (theta).</p>
-<h2>Dans, à et hors de la monnaie</h2>
+<h2 id="dans-a-et-hors-de-la-monnaie">Dans, à et hors de la monnaie</h2>
 <p>Une call est considérée « dans la monnaie » quand le prix de l'actif est au-dessus du strike (comme dans l'exemple ci-dessus), « à la monnaie » quand il est égal, et « hors de la monnaie » quand il est en dessous — dans ce dernier cas, l'option n'a que de la valeur extrinsèque, sans aucune valeur intrinsèque. Pour une put, la logique s'inverse : elle est dans la monnaie quand le prix de l'actif est en dessous du strike. Cette classification change tout au long de la vie du contrat, selon l'évolution du prix de l'actif.</p>
-<h2>Ce qui se passe à l'échéance</h2>
+<h2 id="ce-qui-se-passe-a-l-echeance">Ce qui se passe à l'échéance</h2>
 <p>Si, à la date d'échéance, la call est dans la monnaie, l'acheteur exerce généralement son droit (ou l'option est automatiquement réglée par la différence, selon le marché), empochant la différence entre le prix du marché et le strike. Si elle est hors de la monnaie, l'option expire sans valeur, et l'acheteur perd la prime payée intégralement — c'est le risque maximal de celui qui achète une option : jamais plus que la prime, mais avec un risque réel de perdre ce montant entièrement.</p>
-<h2>Le risque est différent pour l'acheteur et pour le vendeur</h2>
+<h2 id="le-risque-est-different-pour-l-acheteur-et-pour-le-vendeur">Le risque est différent pour l'acheteur et pour le vendeur</h2>
 <p>Celui qui achète une option a un risque limité à la prime payée et un potentiel de gain qui peut être important, selon le mouvement de l'actif. Celui qui vend une option à découvert — sans posséder l'actif correspondant — reçoit la prime à l'avance, mais assume un risque qui peut être bien plus élevé que ce montant reçu, car il est obligé d'honorer le contrat si l'acheteur décide d'exercer. Cette asymétrie explique pourquoi vendre des options à découvert est généralement considéré plus risqué que les acheter, et exige généralement plus de capital de garantie de la part du vendeur.</p>
-<h2>Pourquoi il vaut la peine de comprendre cela avant toute stratégie</h2>
+<h2 id="pourquoi-il-vaut-la-peine-de-comprendre-cela-avant-toute-str">Pourquoi il vaut la peine de comprendre cela avant toute stratégie</h2>
 <p>Les stratégies aux noms spécifiques — spread haussier, papillon, straddle — ne sont que des combinaisons de ces éléments de base : acheter et vendre des calls et des puts avec des strikes et des échéances différents en même temps. Sans comprendre comment la prime, le strike, l'échéance et l'effet du temps se rapportent entre eux, il devient difficile d'évaluer si une stratégie combinée a du sens pour le scénario que vous anticipez, ou si vous suivez simplement une recette sans comprendre le risque intégré à chaque jambe du contrat.</p>
-<h2>Un point qui passe souvent inaperçu</h2>
+<h2 id="un-point-qui-passe-souvent-inapercu">Un point qui passe souvent inaperçu</h2>
 <p>La valeur extrinsèque d'une option ne diminue pas de façon linéaire dans le temps — elle s'accélère près de l'échéance. Une option avec 60 jours restants perd de la valeur temps plus lentement que la même option avec seulement 10 jours restants, même si le prix de l'actif ne bouge pas du tout pendant cet intervalle. Ce comportement affecte directement ceux qui achètent des options en pensant les conserver peu de temps près de l'échéance, car l'érosion accélérée joue contre la position même sans aucun mouvement défavorable de l'actif.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-27">27 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/comment-fonctionnent-les-options-binaires/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment fonctionnent les options binaires, en pratique</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/options-binaires-guide-pratique-et-gestion-du-risque/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Options binaires : guide pratique et gestion du risque</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
@@ -215,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

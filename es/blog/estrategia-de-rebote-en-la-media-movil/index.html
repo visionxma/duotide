@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/estrategia-de-rebote-en-la-media-movil/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Estrategias",
       "author": {
@@ -172,45 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Estrategia de rebote en la media móvil para el corto plazo</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Estrategias</span>
-        <h1>Estrategia de rebote en la media móvil para el corto plazo</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Entre las estrategias de seguimiento de tendencia, la llamada "rebote en la media móvil" (moving average bounce) tiene una ventaja clara: usa un único indicador, es fácil de visualizar en el gráfico y no exige memorizar varias reglas de confluencia para empezar a practicar.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-repique-na-media-movel" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">4 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-27">27 de septiembre de 2026</time></p>
+            <span class="bq__tag">Estrategias</span>
+            <h1>Estrategia de rebote en la media móvil para el corto plazo</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#eligiendo-la-media-movil">Eligiendo la media móvil</a></li>
+                <li><a href="#confirmando-la-tendencia-antes-de-operar">Confirmando la tendencia antes de operar</a></li>
+                <li><a href="#la-senal-de-entrada">La señal de entrada</a></li>
+                <li><a href="#por-que-el-riesgo-necesita-calcularse-antes-de-entrar">Por qué el riesgo necesita calcularse antes de entrar</a></li>
+                <li><a href="#errores-comunes-en-esta-estrategia">Errores comunes en esta estrategia</a></li>
+                <li><a href="#practicando-el-rebote-antes-de-operar-con-capital-real">Practicando el rebote antes de operar con capital real</a></li>
+                <li><a href="#ventajas-y-limitaciones-del-metodo">Ventajas y limitaciones del método</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Entre las estrategias de seguimiento de tendencia, la llamada "rebote en la media móvil" (moving average bounce) tiene una ventaja clara: usa un único indicador, es fácil de visualizar en el gráfico y no exige memorizar varias reglas de confluencia para empezar a practicar.</p>
 <p>La idea central es simple: en una tendencia definida, el precio rara vez sube (o baja) en línea recta. Avanza, retrocede hasta tocar o acercarse a una media móvil, y retoma la dirección original — y es justamente ese retroceso seguido de rebote lo que la estrategia intenta capturar.</p>
-<h2>Eligiendo la media móvil</h2>
+<h2 id="eligiendo-la-media-movil">Eligiendo la media móvil</h2>
 <p>La elección más común es una media móvil exponencial (EMA) de 21 períodos, porque reacciona más rápido al precio reciente que una media simple del mismo tamaño. Las medias más cortas, como 9 períodos, generan más señales, pero también más rebotes falsos; las medias más largas, como 50 períodos, filtran ruido, pero reaccionan más despacio y generan menos oportunidades. No existe un período "correcto" — existe el período compatible con el marco temporal y el activo que sigues.</p>
-<h2>Confirmando la tendencia antes de operar</h2>
+<h2 id="confirmando-la-tendencia-antes-de-operar">Confirmando la tendencia antes de operar</h2>
 <p>Antes de buscar el rebote, es necesario confirmar que existe tendencia. Esto puede hacerse observando la inclinación de la propia media móvil: si está inclinada hacia arriba y el precio, la mayor parte del tiempo, permanece por encima de ella, la tendencia alcista está activa y solo las entradas de compra tienen sentido en esta estrategia. Si la media está inclinada hacia abajo con el precio por debajo de ella, el escenario es el opuesto, y solo se consideran entradas de venta.</p>
-<h2>La señal de entrada</h2>
+<h2 id="la-senal-de-entrada">La señal de entrada</h2>
 <p>Supongamos una acción negociada a R$ 5,40 en tendencia alcista, con la EMA de 21 períodos también subiendo. El precio retrocede hasta R$ 5,39, toca la media y cierra una vela alcista justo encima de ella, en R$ 5,41. Ese cierre por encima de la media, después del toque, es el gatillo de entrada — no el toque en sí, porque el precio puede simplemente atravesar la media sin rebotar.</p>
 <p>El stop, en este ejemplo, queda un poco por debajo del mínimo de la vela de rebote, digamos R$ 5,35 — un riesgo de R$ 0,06 por acción. Usando una relación riesgo-retorno de 1 a 2, el objetivo queda R$ 0,12 por encima de la entrada, es decir, R$ 5,53.</p>
-<h2>Por qué el riesgo necesita calcularse antes de entrar</h2>
+<h2 id="por-que-el-riesgo-necesita-calcularse-antes-de-entrar">Por qué el riesgo necesita calcularse antes de entrar</h2>
 <p>Con el riesgo definido en R$ 0,06 por acción y el límite de exposición de la cuenta en, por ejemplo, 1% de un capital de R$ 10.000 — es decir, R$ 100 de riesgo máximo por operación — se puede calcular el tamaño de la posición antes de entrar: R$ 100 ÷ R$ 0,06 ≈ 1.666 acciones. Este cálculo evita dos trampas comunes: operar con un lote demasiado grande para el stop definido, o definir el stop tan ajustado que cualquier ruido normal del mercado ya saque al trader de la operación.</p>
-<h2>Errores comunes en esta estrategia</h2>
+<h2 id="errores-comunes-en-esta-estrategia">Errores comunes en esta estrategia</h2>
 <p>El error más frecuente es confundir cualquier aproximación a la media con una señal de entrada — es necesario esperar el cierre de la vela de confirmación, no anticiparse. El segundo error es usar la estrategia en mercados sin tendencia clara, donde el precio cruza la media repetidamente sin dirección, generando una secuencia de pequeñas pérdidas. El tercero es mover el stop para "darle más espacio" al rebote después de que la operación ya está perdiendo, lo que transforma un riesgo calculado en un riesgo indefinido.</p>
-<h2>Practicando el rebote antes de operar con capital real</h2>
+<h2 id="practicando-el-rebote-antes-de-operar-con-capital-real">Practicando el rebote antes de operar con capital real</h2>
 <p>Como el comportamiento del rebote varía bastante entre activos volátiles y activos más estables, vale la pena revisar el historial del gráfico contando cuántas veces el precio rebotó de forma limpia en la media elegida antes de aplicar la estrategia en vivo. Esto ayuda a calibrar la expectativa: ninguna estrategia basada en media móvil acierta todas las veces, y parte del trabajo es aceptar pérdidas pequeñas y controladas como parte del proceso, sin intentar recuperarlo todo de una vez con posiciones mayores.</p>
-<h2>Ventajas y limitaciones del método</h2>
+<h2 id="ventajas-y-limitaciones-del-metodo">Ventajas y limitaciones del método</h2>
 <p>La principal ventaja del rebote en la media móvil es la simplicidad: un único indicador, una única regla de entrada y un único filtro de tendencia hacen que el método sea fácil de seguir sin depender de varias pantallas o varios indicadores coincidiendo al mismo tiempo. Esto también facilita revisar las operaciones después, porque queda claro por qué se hizo cada entrada.</p>
 <p>La limitación principal es justamente el otro lado de la misma moneda: al depender de una tendencia ya establecida, la estrategia no funciona bien en mercados lateralizados, donde no existe una dirección dominante para que el precio "rebote a favor". Reconocer rápidamente cuándo el mercado dejó de tender y entró en lateralización — generalmente cuando la propia media móvil deja de inclinarse y se vuelve horizontal — es lo que evita insistir en un método fuera del contexto en el que funciona.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-27">27 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/cruce-de-medias-moviles-exponenciales-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cruce de medias móviles exponenciales (EMA) en el trading</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/como-elegir-el-plazo-de-una-operacion/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo elegir el plazo (expiración) de una operación</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -218,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -282,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

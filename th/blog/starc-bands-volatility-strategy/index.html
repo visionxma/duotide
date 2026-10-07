@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/th/blog/starc-bands-volatility-strategy/",
       "inLanguage": "th",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-vale-a-pena.webp",
       "articleSection": "อินดิเคเตอร์",
       "author": {
@@ -172,43 +172,82 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="เส้นทางนำทาง">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/th/">หน้าแรก</a></li>
         <li><a href="/th/blog/">บล็อก</a></li>
         <li><span aria-current="page">STARC Bands: อินดิเคเตอร์ความผันผวนนี้ทำงานอย่างไร</span></li>
       </ol>
+      <a class="ap__voltar" href="/th/blog/">ย้อนกลับ</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">อินดิเคเตอร์</span>
-        <h1>STARC Bands: อินดิเคเตอร์ความผันผวนนี้ทำงานอย่างไร</h1>
-        <p class="bq-post__meta">ทีม Duotide · <time datetime="2026-09-24">24/09/2569</time> · อ่าน 4 นาที</p>
-        <figure class="foto"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>ในบรรดาอินดิเคเตอร์ความผันผวนที่คนทั่วไปรู้จักน้อยกว่า STARC Bands ครองพื้นที่ที่น่าสนใจ มันผสมความเรียบง่ายของเส้นค่าเฉลี่ยเคลื่อนที่เข้ากับความไวของ ATR (Average True Range หรือช่วงความจริงเฉลี่ย) เพื่อวาดช่องที่ปรับตัวตามจังหวะจริงของตลาด ไม่ใช่เปอร์เซ็นต์คงที่</p>
-<h2>STARC Bands คืออะไร</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="bandas-starc-estrategia-de-volatilidade" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="คัดลอกลิงก์แล้ว">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 ก.ย. 2569</time><span class="ap__sep">อ่าน 4 นาที</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span>
+            </div>
+            <p class="ap__atual">อัปเดตเมื่อ: <time datetime="2026-09-27">27 กันยายน 2569</time></p>
+            <span class="bq__tag">อินดิเคเตอร์</span>
+            <h1>STARC Bands: อินดิเคเตอร์ความผันผวนนี้ทำงานอย่างไร</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>ทีม Duotide</strong><small>ทีมบรรณาธิการ</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="สารบัญ">
+              <p class="ap__indice-tit">สารบัญ</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#starc-bands-ค-ออะไร">STARC Bands คืออะไร</a></li>
+                <li><a href="#อ-นด-เคเตอร-ทำงานอย-างไร">อินดิเคเตอร์ทำงานอย่างไร</a></li>
+                <li><a href="#ว-ธ-ต-ความส-ญญาณ">วิธีตีความสัญญาณ</a></li>
+                <li><a href="#ต-วอย-างพร-อมต-วเลข">ตัวอย่างพร้อมตัวเลข</a></li>
+                <li><a href="#การสร-างกลย-ทธ-ง-าย-ๆ-ด-วย-starc-bands">การสร้างกลยุทธ์ง่าย ๆ ด้วย STARC Bands</a></li>
+                <li><a href="#ความเส-ยงและข-อควรระว-ง">ความเสี่ยงและข้อควรระวัง</a></li>
+                <li><a href="#สร-ปส-งท-าย">สรุปส่งท้าย</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>กลับขึ้นด้านบน</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>ในบรรดาอินดิเคเตอร์ความผันผวนที่คนทั่วไปรู้จักน้อยกว่า STARC Bands ครองพื้นที่ที่น่าสนใจ มันผสมความเรียบง่ายของเส้นค่าเฉลี่ยเคลื่อนที่เข้ากับความไวของ ATR (Average True Range หรือช่วงความจริงเฉลี่ย) เพื่อวาดช่องที่ปรับตัวตามจังหวะจริงของตลาด ไม่ใช่เปอร์เซ็นต์คงที่</p>
+<h2 id="starc-bands-ค-ออะไร">STARC Bands คืออะไร</h2>
 <p>STARC เป็นตัวย่อของ <em>Stoller Average Range Channel</em> สร้างขึ้นโดย Manning Stoller อินดิเคเตอร์นี้เริ่มจากเส้นค่าเฉลี่ยเคลื่อนที่แบบธรรมดา โดยทั่วไป 5 หรือ 6 ช่วง วาดไว้ตรงกลางช่อง แบนด์บนคำนวณโดยการบวกตัวคูณของ ATR เข้ากับค่าเฉลี่ยนี้ และแบนด์ล่างคำนวณโดยลบตัวคูณเดียวกัน ต่างจาก Bollinger Bands ที่ใช้ค่าเบี่ยงเบนมาตรฐานของราคาปิด STARC Bands ใช้ช่วงจริงของจุดสูงสุดและต่ำสุด ทำให้ไวต่อการเปลี่ยนแปลงความผันผวนภายในวันอย่างฉับพลันเป็นพิเศษ</p>
-<h2>อินดิเคเตอร์ทำงานอย่างไร</h2>
+<h2 id="อ-นด-เคเตอร-ทำงานอย-างไร">อินดิเคเตอร์ทำงานอย่างไร</h2>
 <p>เมื่อความผันผวนเพิ่มขึ้น ATR ก็เพิ่มขึ้น และแบนด์ก็ห่างออกจากเส้นกลาง เมื่อความผันผวนลดลง แบนด์ก็เข้าใกล้กันมากขึ้น สิ่งนี้สร้างช่องแบบไดนามิก แทนที่ราคาจะ "ทะลุ" ขีดจำกัดคงที่ มันต้องเคลื่อนไหวมากกว่าช่วงล่าสุดจริง ๆ จึงจะแตะแบนด์บนหรือล่าง ซึ่งช่วยกรองสัญญาณรบกวนในตลาดที่สงบกว่า</p>
-<h2>วิธีตีความสัญญาณ</h2>
+<h2 id="ว-ธ-ต-ความส-ญญาณ">วิธีตีความสัญญาณ</h2>
 <p>การอ่านที่พบบ่อยที่สุดคือการกลับสู่ค่าเฉลี่ย เมื่อราคาแตะหรือทะลุแบนด์บน จะถูกตีความว่าเป็นการเคลื่อนไหวที่ยืดตัวขึ้นมากเมื่อเทียบกับจังหวะล่าสุดของมันเอง มีแนวโน้มจะปรับฐานกลับไปที่เส้นกลาง การแตะแบนด์ล่างบ่งบอกตรรกะที่สะท้อนกลับกัน การอ่านแบบนี้ทำงานได้ดีที่สุดในตลาดที่แกว่งตัวอยู่ในกรอบ โดยไม่มีแนวโน้มที่แข็งแกร่งชัดเจน</p>
 <p>ในตลาดที่มีแนวโน้มชัดเจน พฤติกรรมจะเปลี่ยนไป ราคาอาจ "เดิน" ไปพร้อมกับแบนด์บนตลอดหลายแท่งเทียนในแนวโน้มขาขึ้นที่แข็งแกร่ง หรือไปพร้อมกับแบนด์ล่างในแนวโน้มขาลงที่แข็งแกร่ง ด้วยเหตุนี้ เทรดเดอร์หลายคนจึงผสม STARC Bands กับอินดิเคเตอร์แนวโน้ม เช่น เส้นค่าเฉลี่ยเคลื่อนที่ช่วงยาวกว่า เพื่อไม่ให้ตีความการแตะแบนด์เป็นสัญญาณกลับตัวภายในแนวโน้มที่จริง ๆ แล้วเพิ่งเริ่มต้น</p>
-<h2>ตัวอย่างพร้อมตัวเลข</h2>
+<h2 id="ต-วอย-างพร-อมต-วเลข">ตัวอย่างพร้อมตัวเลข</h2>
 <p>สมมติสินทรัพย์หนึ่งมีเส้นค่าเฉลี่ยเคลื่อนที่แบบธรรมดา 6 ช่วงอยู่ที่ R$ 50,00 และ ATR 14 ช่วงอยู่ที่ R$ 1,20 โดยใช้ตัวคูณ 2 ซึ่งพบบ่อยในกลยุทธ์นี้ แบนด์บนจะอยู่ที่ R$ 50,00 + (2 × R$ 1,20) = R$ 52,40 และแบนด์ล่างที่ R$ 50,00 − (2 × R$ 1,20) = R$ 47,60 หากราคาขึ้นไปถึง R$ 52,60 ทะลุแบนด์บนไปเล็กน้อย เทรดเดอร์ที่ยึดตรรกะการกลับสู่ค่าเฉลี่ยอาจมองว่าเป็นสัญญาณของความหมดแรงของขาขึ้นล่าสุด มองหาการปรับฐานกลับไปใกล้ R$ 50,00 โดยมีสต็อปที่กำหนดไว้เสมอในกรณีที่การเคลื่อนไหวยังดำเนินต่อไป</p>
-<h2>การสร้างกลยุทธ์ง่าย ๆ ด้วย STARC Bands</h2>
+<h2 id="การสร-างกลย-ทธ-ง-าย-ๆ-ด-วย-starc-bands">การสร้างกลยุทธ์ง่าย ๆ ด้วย STARC Bands</h2>
 <p>วิธีที่เป็นระบบในการทดสอบอินดิเคเตอร์นี้คือผสมสามองค์ประกอบ อย่างแรก ระบุว่าตลาดอยู่ในกรอบหรือมีแนวโน้มโดยดูกราฟกรอบเวลาที่ยาวกว่า อย่างที่สอง ใช้การแตะแบนด์ STARC เป็นตัวกระตุ้นความสนใจ ไม่ใช่คำสั่งอัตโนมัติ อย่างที่สาม รอการยืนยันเพิ่มเติม เช่น แท่งเทียนกลับตัวหรือการตัดกันของเส้นค่าเฉลี่ยระยะสั้น ก่อนพิจารณาเข้าเทรด ชั้นการยืนยันเพิ่มเติมนี้ช่วยลดจำนวนสัญญาณหลอกที่อินดิเคเตอร์แบนด์ใดก็ตามสร้างขึ้นเพียงลำพัง</p>
-<h2>ความเสี่ยงและข้อควรระวัง</h2>
+<h2 id="ความเส-ยงและข-อควรระว-ง">ความเสี่ยงและข้อควรระวัง</h2>
 <p>ความเสี่ยงหลักของกลยุทธ์การกลับสู่ค่าเฉลี่ยใด ๆ คือการเทรดสวนกับแนวโน้มที่แข็งแกร่งซึ่งเพิ่งเริ่มต้น ราคาที่แตะแบนด์บนอาจไม่ได้ "ยืดตัวเกินไป" อาจเป็นจุดเริ่มต้นของการเคลื่อนไหวที่มั่นคงซึ่งจะยังคงแตะแบนด์นั้นต่อไปอีกนาน ด้วยเหตุนี้ ขนาดสถานะควรกำหนดโดยพิจารณาว่าสัญญาณอาจผิดพลาดได้ และสต็อปควรวางไว้ ณ จุดที่ทำให้การอ่านการกลับตัวใช้ไม่ได้อย่างชัดเจน</p>
-<h2>สรุปส่งท้าย</h2>
+<h2 id="สร-ปส-งท-าย">สรุปส่งท้าย</h2>
 <p>STARC Bands เสนอวิธีปฏิบัติในการวัดว่าการเคลื่อนไหวหนึ่งห่างจากจังหวะความผันผวนล่าสุดของตัวมันเองมากแค่ไหน แต่เช่นเดียวกับอินดิเคเตอร์ทางเทคนิคใด ๆ มันทำงานได้ดีที่สุดในฐานะส่วนหนึ่งของชุดการยืนยัน ไม่ใช่สัญญาณโดดเดี่ยว การทดสอบอินดิเคเตอร์นี้กับสินทรัพย์และกรอบเวลาต่าง ๆ ก่อนเทรดด้วยเงินจริง ช่วยให้เข้าใจว่าในสภาพตลาดแบบใดที่มันมักทำงานได้ดีกว่า และแบบใดที่มันสร้างสัญญาณรบกวนมากกว่าสัญญาณที่มีประโยชน์</p>
-        <div class="bq-post__cta">
-          <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+            <div class="bq-post__cta">
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+            </div>
+            <div class="ap__fim">
+              <p>อัปเดตเมื่อ: <time datetime="2026-09-27">27 ก.ย. 2569</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span><button class="ap__compartilhar" type="button">แชร์ <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>ทีม Duotide</strong><p>ทีมบรรณาธิการของ Duotide เขียนคู่มือและข่าวในบล็อกนี้ ทั้งเรื่องการทำงานของตลาด การบริหารความเสี่ยง และการใช้แพลตฟอร์ม เนื้อหาทั้งหมดไม่ใช่คำแนะนำการลงทุน</p></div>
+              <a class="btn ap__equipe" href="/th/about/">รู้จักทีมงาน</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>อ่านเพิ่มเติม</h2>
+        <aside class="ap__rel">
+          <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
             <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
@@ -216,7 +255,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -280,6 +319,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

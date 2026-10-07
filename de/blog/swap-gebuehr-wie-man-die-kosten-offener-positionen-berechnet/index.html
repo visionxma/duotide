@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/de/blog/swap-gebuehr-wie-man-die-kosten-offener-positionen-berechnet/",
       "inLanguage": "de",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Forex",
       "author": {
@@ -172,36 +172,62 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/de/">Start</a></li>
         <li><a href="/de/blog/">Blog</a></li>
         <li><span aria-current="page">Swap-Gebühr: wie man die Kosten offener Positionen berechnet</span></li>
       </ol>
+      <a class="ap__voltar" href="/de/blog/">Zurück</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Forex</span>
-        <h1>Swap-Gebühr: wie man die Kosten offener Positionen berechnet</h1>
-        <p class="bq-post__meta">Duotide-Team · <time datetime="2026-09-24">24.09.2026</time> · 4 Min. Lesezeit</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Jede gehebelte Position, die nach dem täglichen Marktschluss offen gehalten wird, kann eine Kosten — oder in manchen Fällen eine Gutschrift — namens Swap-Gebühr erzeugen, auch als Overnight- oder Rollover-Gebühr bekannt. Sie tritt bei Forex, CFDs, Rohstoffen, Indizes und Margin-Positionen in Kryptowährungen auf. Wird der Trade am selben Tag eröffnet und geschlossen, vor der Rollover-Zeit, gibt es normalerweise keinen Swap zu berechnen.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-swap-taxa-overnight" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link kopiert">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24. Sept. 2026</time><span class="ap__sep">4 Min. Lesezeit</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span>
+            </div>
+            <p class="ap__atual">Aktualisiert am: <time datetime="2026-09-27">27. September 2026</time></p>
+            <span class="bq__tag">Forex</span>
+            <h1>Swap-Gebühr: wie man die Kosten offener Positionen berechnet</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-Team</strong><small>Redaktion</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Inhalt">
+              <p class="ap__indice-tit">Inhalt</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#wie-die-berechnung-funktioniert">Wie die Berechnung funktioniert</a></li>
+                <li><a href="#gelostes-beispiel-prozentualer-swap">Gelöstes Beispiel: prozentualer Swap</a></li>
+                <li><a href="#warum-kauf-und-verkauf-unterschiedlich-kosten">Warum Kauf und Verkauf unterschiedlich kosten</a></li>
+                <li><a href="#wann-der-swap-wirklich-zahlt">Wann der Swap wirklich zählt</a></li>
+                <li><a href="#die-gewohnheit-die-uberraschungen-im-konto-vermeidet">Die Gewohnheit, die Überraschungen im Konto vermeidet</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Nach oben</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Jede gehebelte Position, die nach dem täglichen Marktschluss offen gehalten wird, kann eine Kosten — oder in manchen Fällen eine Gutschrift — namens Swap-Gebühr erzeugen, auch als Overnight- oder Rollover-Gebühr bekannt. Sie tritt bei Forex, CFDs, Rohstoffen, Indizes und Margin-Positionen in Kryptowährungen auf. Wird der Trade am selben Tag eröffnet und geschlossen, vor der Rollover-Zeit, gibt es normalerweise keinen Swap zu berechnen.</p>
 <p>Das Problem beim Swap ist, dass er nicht als sichtbare Belastung beim Einstieg erscheint. Er taucht später auf, still, im Konto. Deshalb bemerken viele Trader die Auswirkung erst, wenn ein scheinbar kurzfristiger Trade ungeplant zu einer über mehrere Tage gehaltenen Position wird.</p>
-<h2>Wie die Berechnung funktioniert</h2>
+<h2 id="wie-die-berechnung-funktioniert">Wie die Berechnung funktioniert</h2>
 <p>Die Formel hängt davon ab, wie der Broker die Swap-Gebühr anzeigt. Wird sie als Prozentsatz des Positionswerts angezeigt:</p>
 <p>Swap = Positionswert × täglicher Swap-Satz × berechnete Nächte</p>
 <p>Wird sie pro Lot angezeigt:</p>
 <p>Swap = Lotgröße × Swap pro Lot × berechnete Nächte</p>
 <p>Der Ausdruck "berechnete Nächte" verdient Aufmerksamkeit. Eine über das Wochenende gehaltene Position zählt meist als mehr als eine Nacht, weil der Markt den Zeitraum, in dem er geschlossen war, ausgleichen muss. Viele Plattformen wenden an einem bestimmten Wochentag den dreifachen Rollover an, aber der genaue Tag und der Satz variieren je nach Instrument und Broker — deshalb lohnt es sich immer, die geltenden Bedingungen zu prüfen, bevor entschieden wird, eine Position über Nacht offen zu halten.</p>
-<h2>Gelöstes Beispiel: prozentualer Swap</h2>
+<h2 id="gelostes-beispiel-prozentualer-swap">Gelöstes Beispiel: prozentualer Swap</h2>
 <p>Angenommen, eine Position mit einem Exposure-Wert von R$ 7.500, einem täglichen Swap-Satz von 0,05% für Kaufpositionen, gehalten für drei berechnete Nächte (durch den dreifachen Wochenend-Rollover). Die Berechnung ist:</p>
 <p>R$ 7.500 × 0,05% × 3 = R$ 11,25 geschätzte Kosten</p>
 <p>Hat dieselbe Position, auf der Verkaufsseite, einen täglichen Satz von −0,02% (eine Gutschrift statt Kosten), wäre das Ergebnis für dieselben drei Nächte:</p>
 <p>R$ 7.500 × (−0,02%) × 3 = −R$ 4,50, also eine Gutschrift von R$ 4,50 im Konto</p>
 <p>Beachten Sie, dass das Vorzeichen des Satzes das Ergebnis von Kosten zu Gutschrift ändert — deshalb ist es entscheidend, genau das von der Plattform angezeigte Vorzeichen zu verwenden, ohne die Zahl gedanklich anzupassen.</p>
-<h2>Warum Kauf und Verkauf unterschiedlich kosten</h2>
+<h2 id="warum-kauf-und-verkauf-unterschiedlich-kosten">Warum Kauf und Verkauf unterschiedlich kosten</h2>
 <p>Der Swap ist keine zufällige Gebühr. Im Forex ist er mit dem Unterschied der Zinssätze der beiden Währungen des Paares verbunden. Bei CFDs kann er Finanzierungskosten, Liquidität und spezifische Regeln des Instruments widerspiegeln. Deshalb ist es üblich, dass:</p>
 <ul>
 <li>Kaufpositionen andere Finanzierungskosten haben als Verkaufspositionen im selben Wert.</li>
@@ -209,18 +235,29 @@
 <li>Anpassungen des Brokers und spezifische Regeln jedes Instruments den Endwert ebenfalls beeinflussen.</li>
 </ul>
 <p>Das bedeutet nicht, dass die Richtung des Trades aufgrund des Swaps gewählt werden sollte. Die Richtung muss aus der technischen Analyse oder dem Szenario kommen, das den Trade motiviert hat. Aber wenn zwei Einstiegsideen ähnlich sind und eine davon deutlich höhere Overnight-Kosten hat, wird der Swap zu einem legitimen Tiebreaker-Kriterium.</p>
-<h2>Wann der Swap wirklich zählt</h2>
+<h2 id="wann-der-swap-wirklich-zahlt">Wann der Swap wirklich zählt</h2>
 <p>Eine Kosten von R$ 2 pro Nacht ist nicht automatisch relevant. Bei einem Trade mit Ziel von R$ 150 ist dieser Wert praktisch irrelevant. Beim selben Trade, aber mit einem Ziel von nur R$ 8 — typisch für einen Scalper —, zehren diese R$ 2 pro Nacht einen enormen Teil des erwarteten Ergebnisses auf.</p>
 <p>Die praktische Berechnung, die sich lohnt, bevor eine Position über Nacht offen gehalten wird, ist einfach: den geschätzten Swap-Wert für die geplante Anzahl an Nächten nehmen und mit dem Gewinnziel des Trades vergleichen. Macht der Swap einen kleinen Anteil des Ziels aus, sind die Kosten handhabbar. Macht er einen großen Anteil aus, lohnt es sich, zu überlegen, die Position nicht offen zu halten oder die Größe zum Ausgleich zu reduzieren.</p>
-<h2>Die Gewohnheit, die Überraschungen im Konto vermeidet</h2>
+<h2 id="die-gewohnheit-die-uberraschungen-im-konto-vermeidet">Die Gewohnheit, die Überraschungen im Konto vermeidet</h2>
 <p>Der praktische Ablauf für diese Berechnung ist: erstens prüfen, wie der Broker die Swap-Gebühr anzeigt — prozentual oder pro Lot; zweitens den Positionswert oder die Lotgröße berechnen; drittens den Kauf- und den Verkaufssatz getrennt anwenden, da sie meist unterschiedlich sind; viertens mit der tatsächlichen Anzahl an Nächten multiplizieren, die die Position offen bleibt, ohne den dreifachen Rollover zu vergessen, falls zutreffend; schließlich das Ergebnis mit dem geplanten Ziel des Trades vergleichen.</p>
 <p>Der Swap wird meist als kleines Detail behandelt, weil er, anders als der Spread, nicht sofort auf dem Bildschirm erscheint. Aber eine unbemerkte Kosten bleibt eine reale Kosten. Bevor Sie sich entscheiden, eine Position über Nacht offen zu halten, sei es bei Duotide oder auf einer anderen Plattform, lohnt sich diese schnelle Rechnung — sie verhindert, dass ein positives Ergebnis im Chart zu einer negativen Überraschung im Kontoauszug wird.</p>
-        <div class="bq-post__cta">
-          <p><strong>Üben, bevor Sie etwas riskieren.</strong> Eröffnen Sie Ihr Duotide-Konto und testen Sie Ihre Ideen im Demokonto mit R$ 10.000 virtuellem Guthaben.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
+            <div class="bq-post__cta">
+              <p><strong>Üben, bevor Sie etwas riskieren.</strong> Eröffnen Sie Ihr Duotide-Konto und testen Sie Ihre Ideen im Demokonto mit R$ 10.000 virtuellem Guthaben.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aktualisiert am: <time datetime="2026-09-27">27. Sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span><button class="ap__compartilhar" type="button">Teilen <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-Team</strong><p>Die Duotide-Redaktion schreibt die Ratgeber und Nachrichten in diesem Blog: wie Märkte funktionieren, Risikomanagement und die Nutzung der Plattform. Nichts hier ist eine Anlageempfehlung.</p></div>
+              <a class="btn ap__equipe" href="/de/ueber-uns/">Das Team kennenlernen</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lesen Sie auch</h2>
+        <aside class="ap__rel">
+          <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/de/blog/beste-technische-indikatoren-fuer-forex/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Beste technische Indikatoren für den Forex-Handel</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
             <a class="bq__card" href="/de/blog/meistgehandelte-forex-paare-eigenschaften/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 meistgehandelte Forex-Paare und worauf man bei jedem achten sollte</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
@@ -228,7 +265,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +329,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

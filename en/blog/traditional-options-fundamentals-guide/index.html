@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/en/blog/traditional-options-fundamentals-guide/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Options",
       "author": {
@@ -172,28 +172,67 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/en/">Home</a></li>
         <li><a href="/en/blog/">Blog</a></li>
         <li><span aria-current="page">Options Fundamentals Guide: Premium, Exercise, and Expiration</span></li>
       </ol>
+      <a class="ap__voltar" href="/en/blog/">Back</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Options</span>
-        <h1>Options Fundamentals Guide: Premium, Exercise, and Expiration</h1>
-        <p class="bq-post__meta">Duotide Team · <time datetime="2026-09-24">09/24/2026</time> · 4 min read</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Before applying any options strategy, it's worth understanding well the four elements that make up any contract of this type: the right it grants, the strike price, the expiration date, and the premium paid for that right. This guide focuses on these fundamentals, leaving specific strategy combinations for another time.</p><h2>What an option actually grants</h2><p>A call option gives the buyer the right, but not the obligation, to buy the underlying asset at a fixed price (the strike) until a set date. A put option grants the right to sell under the same conditions. Whoever sells the option (the writer) takes on the obligation on the other side: if the call buyer decides to exercise the right, the writer is obligated to sell the asset at the agreed strike, even if the market price is much higher.</p><h2>The premium: the price of the right itself</h2><p>The premium is the amount the buyer pays the writer to acquire this right, and it's made up of two components: intrinsic value and extrinsic value (or time value). Suppose a stock trading at R$ 48.00 and a call with a R$ 45.00 strike costing R$ 4.50. The intrinsic value is R$ 3.00 (48 − 45, how much the option is already worth if exercised now); the extrinsic value is R$ 1.50 (4.50 − 3.00), which reflects the time remaining until expiration and the expected price change during that period. The closer to expiration, the smaller the extrinsic value tends to be, in a process called time decay (theta).</p><h2>In, at, and out of the money</h2><p>A call is considered "in the money" when the asset's price is above the strike (like in the example above), "at the money" when it's equal, and "out of the money" when it's below — in this last case, the option has only extrinsic value, with no intrinsic value at all. For a put, the logic flips: it's in the money when the asset's price is below the strike. This classification changes throughout the contract's life, as the asset's price moves.</p><h2>What happens at expiration</h2><p>If, on the expiration date, the call is in the money, the buyer usually exercises the right (or the option is automatically settled for the difference, depending on the market), pocketing the difference between the market price and the strike. If it's out of the money, the option expires worthless, and the buyer loses the entire premium paid — that's the maximum risk for an option buyer: never more than the premium, but with a real chance of losing that amount in full.</p><h2>The risk is different for buyers and sellers</h2><p>An option buyer has risk limited to the premium paid and gain potential that can be significant, depending on the asset's move. Someone selling an uncovered option — without owning the corresponding asset — receives the premium upfront, but takes on a risk that can be much larger than that amount received, since they're obligated to fulfill the contract if the buyer decides to exercise. This asymmetry is why selling uncovered options is usually considered riskier than buying them, and generally requires more collateral capital from the seller.</p><h2>Why it's worth understanding this before any strategy</h2><p>Strategies with specific names — bull spread, butterfly, straddle — are just combinations of these basic elements: buying and selling calls and puts with different strikes and expirations at the same time. Without understanding how premium, strike, expiration, and the effect of time relate to each other, it's hard to assess whether a combined strategy makes sense for the scenario you expect, or whether you're just following a recipe without understanding the risk built into each leg of the contract.</p><h2>A point that tends to go unnoticed</h2><p>An option's extrinsic value doesn't decay linearly over time — it accelerates near expiration. An option with 60 days remaining loses time value more slowly than the same option with only 10 days remaining, even if the asset's price doesn't move at all during that stretch. This behavior directly affects anyone buying options planning to hold them briefly near expiration, since the accelerated decay works against the position even without any unfavorable move in the asset.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="guia-de-fundamentos-de-opcoes-tradicionais" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copied">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">Sep 24, 2026</time><span class="ap__sep">4 min read</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span>
+            </div>
+            <p class="ap__atual">Updated: <time datetime="2026-09-27">September 27, 2026</time></p>
+            <span class="bq__tag">Options</span>
+            <h1>Options Fundamentals Guide: Premium, Exercise, and Expiration</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Team</strong><small>Editorial team</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contents">
+              <p class="ap__indice-tit">Contents</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#what-an-option-actually-grants">What an option actually grants</a></li>
+                <li><a href="#the-premium-the-price-of-the-right-itself">The premium: the price of the right itself</a></li>
+                <li><a href="#in-at-and-out-of-the-money">In, at, and out of the money</a></li>
+                <li><a href="#what-happens-at-expiration">What happens at expiration</a></li>
+                <li><a href="#the-risk-is-different-for-buyers-and-sellers">The risk is different for buyers and sellers</a></li>
+                <li><a href="#why-it-s-worth-understanding-this-before-any-strategy">Why it's worth understanding this before any strategy</a></li>
+                <li><a href="#a-point-that-tends-to-go-unnoticed">A point that tends to go unnoticed</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Before applying any options strategy, it's worth understanding well the four elements that make up any contract of this type: the right it grants, the strike price, the expiration date, and the premium paid for that right. This guide focuses on these fundamentals, leaving specific strategy combinations for another time.</p><h2 id="what-an-option-actually-grants">What an option actually grants</h2><p>A call option gives the buyer the right, but not the obligation, to buy the underlying asset at a fixed price (the strike) until a set date. A put option grants the right to sell under the same conditions. Whoever sells the option (the writer) takes on the obligation on the other side: if the call buyer decides to exercise the right, the writer is obligated to sell the asset at the agreed strike, even if the market price is much higher.</p><h2 id="the-premium-the-price-of-the-right-itself">The premium: the price of the right itself</h2><p>The premium is the amount the buyer pays the writer to acquire this right, and it's made up of two components: intrinsic value and extrinsic value (or time value). Suppose a stock trading at R$ 48.00 and a call with a R$ 45.00 strike costing R$ 4.50. The intrinsic value is R$ 3.00 (48 − 45, how much the option is already worth if exercised now); the extrinsic value is R$ 1.50 (4.50 − 3.00), which reflects the time remaining until expiration and the expected price change during that period. The closer to expiration, the smaller the extrinsic value tends to be, in a process called time decay (theta).</p><h2 id="in-at-and-out-of-the-money">In, at, and out of the money</h2><p>A call is considered "in the money" when the asset's price is above the strike (like in the example above), "at the money" when it's equal, and "out of the money" when it's below — in this last case, the option has only extrinsic value, with no intrinsic value at all. For a put, the logic flips: it's in the money when the asset's price is below the strike. This classification changes throughout the contract's life, as the asset's price moves.</p><h2 id="what-happens-at-expiration">What happens at expiration</h2><p>If, on the expiration date, the call is in the money, the buyer usually exercises the right (or the option is automatically settled for the difference, depending on the market), pocketing the difference between the market price and the strike. If it's out of the money, the option expires worthless, and the buyer loses the entire premium paid — that's the maximum risk for an option buyer: never more than the premium, but with a real chance of losing that amount in full.</p><h2 id="the-risk-is-different-for-buyers-and-sellers">The risk is different for buyers and sellers</h2><p>An option buyer has risk limited to the premium paid and gain potential that can be significant, depending on the asset's move. Someone selling an uncovered option — without owning the corresponding asset — receives the premium upfront, but takes on a risk that can be much larger than that amount received, since they're obligated to fulfill the contract if the buyer decides to exercise. This asymmetry is why selling uncovered options is usually considered riskier than buying them, and generally requires more collateral capital from the seller.</p><h2 id="why-it-s-worth-understanding-this-before-any-strategy">Why it's worth understanding this before any strategy</h2><p>Strategies with specific names — bull spread, butterfly, straddle — are just combinations of these basic elements: buying and selling calls and puts with different strikes and expirations at the same time. Without understanding how premium, strike, expiration, and the effect of time relate to each other, it's hard to assess whether a combined strategy makes sense for the scenario you expect, or whether you're just following a recipe without understanding the risk built into each leg of the contract.</p><h2 id="a-point-that-tends-to-go-unnoticed">A point that tends to go unnoticed</h2><p>An option's extrinsic value doesn't decay linearly over time — it accelerates near expiration. An option with 60 days remaining loses time value more slowly than the same option with only 10 days remaining, even if the asset's price doesn't move at all during that stretch. This behavior directly affects anyone buying options planning to hold them briefly near expiration, since the accelerated decay works against the position even without any unfavorable move in the asset.</p>
+            <div class="bq-post__cta">
+              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
+            </div>
+            <div class="ap__fim">
+              <p>Updated: <time datetime="2026-09-27">Sep 27, 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span><button class="ap__compartilhar" type="button">Share <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Team</strong><p>The Duotide editorial team writes the guides and news on this blog: how markets work, risk management and using the platform. Nothing here is investment advice.</p></div>
+              <a class="btn ap__equipe" href="/en/about/">Meet the team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Read also</h2>
+        <aside class="ap__rel">
+          <h2>Related articles</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/en/blog/how-binary-options-work/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">How Binary Options Work, in Practice</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
             <a class="bq__card" href="/en/blog/binary-options-step-by-step-and-risk-management/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary Options: A Practical Step-by-Step Guide and Risk Management</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
@@ -201,7 +240,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +304,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

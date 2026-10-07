@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,33 +173,61 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Como fazer o backtest de uma estratégia antes de operar de verdade</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Estratégias</span>
-        <h1>Como fazer o backtest de uma estratégia antes de operar de verdade</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Backtest é o processo de testar uma estratégia de operação usando dados históricos, antes de arriscar capital real nela. A ideia é simples: aplicar as mesmas regras de entrada e saída que você usaria ao vivo sobre um período passado do gráfico, e registrar o que teria acontecido em cada sinal gerado. É uma etapa que separa uma estratégia com evidência de funcionamento de uma ideia que apenas parece boa olhando o gráfico de forma retrospectiva.</p>
-<h2>Passo 1: defina a regra de entrada e saída por escrito</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-fazer-o-backtest-de-uma-estrategia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Estratégias</span>
+            <h1>Como fazer o backtest de uma estratégia antes de operar de verdade</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#passo-1-defina-a-regra-de-entrada-e-saida-por-escrito">Passo 1: defina a regra de entrada e saída por escrito</a></li>
+                <li><a href="#passo-2-percorra-o-historico-sinal-por-sinal">Passo 2: percorra o histórico sinal por sinal</a></li>
+                <li><a href="#passo-3-calcule-a-taxa-de-acerto-e-o-payoff-medio">Passo 3: calcule a taxa de acerto e o payoff médio</a></li>
+                <li><a href="#passo-4-calcule-a-expectativa-matematica">Passo 4: calcule a expectativa matemática</a></li>
+                <li><a href="#o-que-o-backtest-nao-garante">O que o backtest não garante</a></li>
+                <li><a href="#colocando-o-processo-em-pratica">Colocando o processo em prática</a></li>
+                <li><a href="#um-cuidado-extra-o-tamanho-da-amostra-importa-mais-do-que-pa">Um cuidado extra: o tamanho da amostra importa mais do que parece</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Backtest é o processo de testar uma estratégia de operação usando dados históricos, antes de arriscar capital real nela. A ideia é simples: aplicar as mesmas regras de entrada e saída que você usaria ao vivo sobre um período passado do gráfico, e registrar o que teria acontecido em cada sinal gerado. É uma etapa que separa uma estratégia com evidência de funcionamento de uma ideia que apenas parece boa olhando o gráfico de forma retrospectiva.</p>
+<h2 id="passo-1-defina-a-regra-de-entrada-e-saida-por-escrito">Passo 1: defina a regra de entrada e saída por escrito</h2>
 <p>Antes de olhar qualquer dado histórico, escreva a regra exata que vai testar — por exemplo: "comprar quando o preço romper a máxima dos últimos 20 candles com volume 30% acima da média; sair no lucro em 2% de alta ou no stop em 1% de queda". Regras vagas como "comprar quando parecer uma boa oportunidade" não podem ser testadas de forma consistente, porque dependem de julgamento subjetivo a cada sinal.</p>
-<h2>Passo 2: percorra o histórico sinal por sinal</h2>
+<h2 id="passo-2-percorra-o-historico-sinal-por-sinal">Passo 2: percorra o histórico sinal por sinal</h2>
 <p>Com a regra definida, percorra o gráfico histórico identificando cada vez que a condição de entrada teria sido satisfeita, e registre o resultado que a regra de saída teria gerado — lucro ou prejuízo, em pontos ou percentual. É importante manter a disciplina de aplicar a regra exatamente como escrita, sem "ajustar" o resultado depois de ver o que aconteceu, sob risco de enviesar o teste a favor da estratégia.</p>
-<h2>Passo 3: calcule a taxa de acerto e o payoff médio</h2>
+<h2 id="passo-3-calcule-a-taxa-de-acerto-e-o-payoff-medio">Passo 3: calcule a taxa de acerto e o payoff médio</h2>
 <p>Depois de reunir uma amostra razoável — 30 sinais, no mínimo, idealmente mais — calcule dois números: a taxa de acerto (percentual de operações vencedoras) e o payoff médio (o ganho médio das operações vencedoras dividido pela perda média das perdedoras). Suponha um backtest com 40 sinais, 18 vencedores e 22 perdedores, ganho médio de R$ 60,00 nas vencedoras e perda média de R$ 35,00 nas perdedoras. A taxa de acerto é 45% (18/40) e o payoff é de 1,71 (60/35).</p>
-<h2>Passo 4: calcule a expectativa matemática</h2>
+<h2 id="passo-4-calcule-a-expectativa-matematica">Passo 4: calcule a expectativa matemática</h2>
 <p>A expectativa matemática mede o resultado médio esperado por operação, e é calculada assim: (taxa de acerto × ganho médio) − (taxa de erro × perda média). Usando os números do exemplo: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positivos por operação, em média. Uma expectativa positiva indica que, mantendo a mesma proporção de acertos e o mesmo payoff ao longo do tempo, a estratégia tende a gerar resultado positivo — o que não garante que cada operação individual será lucrativa, mas indica uma vantagem estatística na amostra testada.</p>
-<h2>O que o backtest não garante</h2>
+<h2 id="o-que-o-backtest-nao-garante">O que o backtest não garante</h2>
 <p>Um resultado positivo no histórico não garante o mesmo desempenho daqui para a frente — condições de mercado mudam, e uma amostra pequena pode ter sido favorável por acaso. Além disso, backtests manuais estão sujeitos ao viés de retrospecto: é fácil, sem querer, ajustar a interpretação de um sinal sabendo o que aconteceu depois. Por isso, muitos traders seguem o backtest com um período de teste em conta simulada, aplicando a mesma regra em tempo real antes de operar com capital relevante.</p>
-<h2>Colocando o processo em prática</h2>
+<h2 id="colocando-o-processo-em-pratica">Colocando o processo em prática</h2>
 <ul>
 <li>Escreva a regra de entrada e saída antes de olhar qualquer dado histórico.</li>
 <li>Reúna uma amostra mínima de 30 sinais para que os números tenham algum peso estatístico.</li>
@@ -207,14 +235,25 @@
 <li>Teste em conta simulada por um período antes de aplicar capital real, mesmo com backtest positivo.</li>
 </ul>
 <p>Backtest é uma ferramenta de filtro, não de garantia: ele ajuda a descartar estratégias sem nenhuma vantagem estatística aparente, e a entender melhor o comportamento esperado das que sobram — mas nenhuma expectativa matemática calculada sobre o passado é uma promessa de resultado futuro.</p>
-<h2>Um cuidado extra: o tamanho da amostra importa mais do que parece</h2>
+<h2 id="um-cuidado-extra-o-tamanho-da-amostra-importa-mais-do-que-pa">Um cuidado extra: o tamanho da amostra importa mais do que parece</h2>
 <p>Uma expectativa matemática positiva calculada sobre apenas 10 ou 15 sinais tem pouco valor estatístico — pode ser resultado de sorte na amostra, não de uma vantagem real da estratégia. Quanto maior o número de sinais testados, mais confiança o resultado carrega, embora nenhuma amostra, por maior que seja, elimine completamente a incerteza sobre o futuro. Vale também testar a estratégia em períodos de mercado diferentes — de alta, de baixa e de lateralização — já que uma regra pode funcionar bem em um regime e mal em outro, e um backtest feito só sobre um período de alta forte tende a superestimar o resultado esperado.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/cruzamento-de-medias-moveis-exponenciais-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cruzamento de médias móveis exponenciais (EMA) no trading</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/como-escolher-o-prazo-de-uma-operacao/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como escolher o prazo (expiração) de uma operação</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -222,7 +261,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +324,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,24 +173,51 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Alligator e fractais: como combinar os dois indicadores na prática</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicadores</span>
-        <h1>Alligator e fractais: como combinar os dois indicadores na prática</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>O indicador Alligator, criado pelo trader Bill Williams, usa três médias móveis deslocadas para identificar se um ativo está em tendência ou "dormindo" em um mercado lateral. O nome vem da forma visual das três linhas: quando estão coladas, o jacaré está de boca fechada, sem apetite; quando se abrem e se distanciam, ele está de boca aberta, indicando uma tendência em formação. Sozinho, o Alligator já ajuda a evitar entradas em mercados sem direção definida — mas fica bem mais útil combinado com um segundo indicador: os fractais.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-alligator-e-fractais" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Indicadores</span>
+            <h1>Alligator e fractais: como combinar os dois indicadores na prática</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#como-as-tres-linhas-do-alligator-sao-calculadas">Como as três linhas do Alligator são calculadas</a></li>
+                <li><a href="#o-que-o-fractal-indica-no-grafico">O que o fractal indica no gráfico</a></li>
+                <li><a href="#combinando-os-dois-um-exemplo-de-entrada">Combinando os dois: um exemplo de entrada</a></li>
+                <li><a href="#em-quais-graficos-essa-combinacao-costuma-ser-usada">Em quais gráficos essa combinação costuma ser usada</a></li>
+                <li><a href="#limitacoes-que-vale-conhecer">Limitações que vale conhecer</a></li>
+                <li><a href="#praticando-antes-de-operar-com-valores-reais">Praticando antes de operar com valores reais</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>O indicador Alligator, criado pelo trader Bill Williams, usa três médias móveis deslocadas para identificar se um ativo está em tendência ou "dormindo" em um mercado lateral. O nome vem da forma visual das três linhas: quando estão coladas, o jacaré está de boca fechada, sem apetite; quando se abrem e se distanciam, ele está de boca aberta, indicando uma tendência em formação. Sozinho, o Alligator já ajuda a evitar entradas em mercados sem direção definida — mas fica bem mais útil combinado com um segundo indicador: os fractais.</p>
 <p>Fractais marcam pontos no gráfico onde o preço formou um topo ou um fundo local, cercado por candles de preço mais baixo (no caso do topo) ou mais alto (no caso do fundo) dos dois lados. A combinação dos dois indicadores serve para responder duas perguntas diferentes: o Alligator diz se vale a pena procurar uma entrada agora, e o fractal marca onde exatamente essa entrada poderia acontecer.</p>
-<h2>Como as três linhas do Alligator são calculadas</h2>
+<h2 id="como-as-tres-linhas-do-alligator-sao-calculadas">Como as três linhas do Alligator são calculadas</h2>
 <p>O indicador usa três médias móveis suavizadas, cada uma deslocada para frente no gráfico:</p>
 <ul>
 <li><strong>Mandíbula (linha azul):</strong> média de 13 períodos, deslocada 8 candles à frente.</li>
@@ -198,23 +225,34 @@
 <li><strong>Lábios (linha verde):</strong> média de 5 períodos, deslocada 3 candles à frente.</li>
 </ul>
 <p>Quando as três linhas estão entrelaçadas, o mercado está em consolidação — historicamente, a fase em que operações de tendência têm pior desempenho. Quando a linha verde cruza para cima das outras duas e elas se separam, o cenário favorece posições compradas; quando cruza para baixo, favorece posições vendidas.</p>
-<h2>O que o fractal indica no gráfico</h2>
+<h2 id="o-que-o-fractal-indica-no-grafico">O que o fractal indica no gráfico</h2>
 <p>Um fractal de topo aparece quando um candle tem o preço máximo mais alto que os dois candles anteriores e os dois seguintes. Um fractal de fundo é o espelho disso, com o preço mínimo mais baixo que os quatro candles ao redor. Cada fractal confirmado, ou seja, depois que os dois candles seguintes já fecharam, marca um nível que o preço precisa romper para validar a continuidade do movimento.</p>
-<h2>Combinando os dois: um exemplo de entrada</h2>
+<h2 id="combinando-os-dois-um-exemplo-de-entrada">Combinando os dois: um exemplo de entrada</h2>
 <p>Suponha que o Alligator esteja de boca aberta, com as três linhas separadas e a linha verde acima das outras, indicando tendência de alta em um ativo cotado a R$ 48,20. Um fractal de topo se forma em R$ 48,60. A entrada comprada, nessa combinação, acontece quando o preço rompe o nível do fractal — ou seja, ultrapassa R$ 48,60 — confirmando que a tendência sinalizada pelo Alligator está de fato em curso.</p>
 <p>Um stop de proteção comum nessa estratégia fica abaixo do fractal de fundo mais recente antes da entrada, suponha R$ 47,40. Nesse exemplo, o risco da operação é de R$ 1,20 por unidade (R$ 48,60 menos R$ 47,40). Se o objetivo de saída for o dobro do risco, a meta de lucro fica em R$ 51,00 (R$ 48,60 mais R$ 2,40), resultando numa relação risco-retorno de 1 para 2 — arriscando R$ 1,20 para buscar R$ 2,40 de ganho por unidade operada.</p>
-<h2>Em quais gráficos essa combinação costuma ser usada</h2>
+<h2 id="em-quais-graficos-essa-combinacao-costuma-ser-usada">Em quais gráficos essa combinação costuma ser usada</h2>
 <p>A dupla Alligator e fractal aparece com mais frequência em gráficos de prazo maior — de 15 minutos a diário — porque o atraso natural das médias móveis fica proporcionalmente menor quando cada candle representa mais tempo de mercado. Em gráficos de 1 minuto, o mesmo atraso pode custar boa parte do movimento antes mesmo de o fractal se confirmar. Isso não impede o uso em prazos curtos, mas exige um filtro adicional, como observar se o volume do ativo naquele horário sustenta o rompimento do fractal, e não apenas um pico isolado de preço.</p>
-<h2>Limitações que vale conhecer</h2>
+<h2 id="limitacoes-que-vale-conhecer">Limitações que vale conhecer</h2>
 <p>O Alligator é um indicador de médias móveis, o que significa que reage ao preço com atraso — ele confirma tendências que já começaram, não prevê o início delas. Em mercados que alternam entre lateralização e rompimentos falsos, a estratégia pode gerar sinais de entrada seguidos de reversão rápida. Por isso, a maioria dos traders que usa essa combinação exige que o fractal esteja alinhado com a direção do Alligator, e evita operar quando as três linhas ainda estão próximas umas das outras, mesmo que um fractal tenha se formado.</p>
-<h2>Praticando antes de operar com valores reais</h2>
+<h2 id="praticando-antes-de-operar-com-valores-reais">Praticando antes de operar com valores reais</h2>
 <p>Vale observar o comportamento do Alligator e dos fractais em gráficos históricos antes de aplicar a estratégia com dinheiro real, anotando quantas vezes o rompimento do fractal realmente seguiu a direção indicada pelo indicador. Como qualquer ferramenta de análise técnica, essa combinação organiza a leitura do gráfico, mas não elimina o risco da operação nem garante que o padrão se repita da mesma forma no futuro — validar com histórico próprio é o que diferencia uma estratégia testada de uma aposta baseada em aparência.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -222,7 +260,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +323,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,42 +173,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Guia de fundamentos de opções: prêmio, exercício e vencimento</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Opções</span>
-        <h1>Guia de fundamentos de opções: prêmio, exercício e vencimento</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Antes de aplicar qualquer estratégia com opções, vale entender bem os quatro elementos que formam qualquer contrato desse tipo: o direito que ele confere, o preço de exercício, a data de vencimento e o prêmio pago por esse direito. Este guia foca nesses fundamentos, deixando as combinações de estratégias específicas para outro momento.</p>
-<h2>O que uma opção realmente concede</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="guia-de-fundamentos-de-opcoes-tradicionais" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Opções</span>
+            <h1>Guia de fundamentos de opções: prêmio, exercício e vencimento</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#o-que-uma-opcao-realmente-concede">O que uma opção realmente concede</a></li>
+                <li><a href="#o-premio-o-preco-do-proprio-direito">O prêmio: o preço do próprio direito</a></li>
+                <li><a href="#dentro-no-e-fora-do-dinheiro">Dentro, no e fora do dinheiro</a></li>
+                <li><a href="#o-que-acontece-no-vencimento">O que acontece no vencimento</a></li>
+                <li><a href="#o-risco-e-diferente-para-quem-compra-e-para-quem-vende">O risco é diferente para quem compra e para quem vende</a></li>
+                <li><a href="#por-que-vale-entender-isso-antes-de-qualquer-estrategia">Por que vale entender isso antes de qualquer estratégia</a></li>
+                <li><a href="#um-ponto-que-costuma-passar-despercebido">Um ponto que costuma passar despercebido</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Antes de aplicar qualquer estratégia com opções, vale entender bem os quatro elementos que formam qualquer contrato desse tipo: o direito que ele confere, o preço de exercício, a data de vencimento e o prêmio pago por esse direito. Este guia foca nesses fundamentos, deixando as combinações de estratégias específicas para outro momento.</p>
+<h2 id="o-que-uma-opcao-realmente-concede">O que uma opção realmente concede</h2>
 <p>Uma opção de compra (call) dá ao comprador o direito, mas não a obrigação, de comprar o ativo-objeto por um preço fixo (o strike) até uma data determinada. Uma opção de venda (put) concede o direito de vender nas mesmas condições. Quem vende a opção (o lançador) assume a obrigação do outro lado: se o comprador da call decidir exercer o direito, o lançador é obrigado a vender o ativo pelo strike combinado, mesmo que o preço de mercado esteja bem mais alto.</p>
-<h2>O prêmio: o preço do próprio direito</h2>
+<h2 id="o-premio-o-preco-do-proprio-direito">O prêmio: o preço do próprio direito</h2>
 <p>O prêmio é o valor pago pelo comprador ao lançador para adquirir esse direito, e é formado por dois componentes: o valor intrínseco e o valor extrínseco (ou valor de tempo). Suponha uma ação cotada a R$ 48,00 e uma call de strike R$ 45,00 custando R$ 4,50. O valor intrínseco é R$ 3,00 (48 − 45, o quanto a opção já vale se exercida agora); o valor extrínseco é R$ 1,50 (4,50 − 3,00), que reflete o tempo restante até o vencimento e a expectativa de variação do preço nesse período. Quanto mais próximo do vencimento, menor tende a ser o valor extrínseco, em um processo chamado de decaimento temporal (theta).</p>
-<h2>Dentro, no e fora do dinheiro</h2>
+<h2 id="dentro-no-e-fora-do-dinheiro">Dentro, no e fora do dinheiro</h2>
 <p>Uma call é considerada "dentro do dinheiro" quando o preço do ativo está acima do strike (como no exemplo acima), "no dinheiro" quando está igual, e "fora do dinheiro" quando está abaixo — nesse último caso, a opção tem apenas valor extrínseco, sem valor intrínseco algum. Para uma put, a lógica se inverte: está dentro do dinheiro quando o preço do ativo está abaixo do strike. Essa classificação muda ao longo da vida do contrato, conforme o preço do ativo se movimenta.</p>
-<h2>O que acontece no vencimento</h2>
+<h2 id="o-que-acontece-no-vencimento">O que acontece no vencimento</h2>
 <p>Se, na data de vencimento, a call estiver dentro do dinheiro, o comprador normalmente exerce o direito (ou a opção é liquidada automaticamente pela diferença, dependendo do mercado), embolsando a diferença entre o preço de mercado e o strike. Se estiver fora do dinheiro, a opção expira sem valor, e o comprador perde o prêmio pago integralmente — esse é o risco máximo de quem compra uma opção: nunca mais do que o prêmio, mas com chance real de perder esse valor por completo.</p>
-<h2>O risco é diferente para quem compra e para quem vende</h2>
+<h2 id="o-risco-e-diferente-para-quem-compra-e-para-quem-vende">O risco é diferente para quem compra e para quem vende</h2>
 <p>Quem compra uma opção tem risco limitado ao prêmio pago e potencial de ganho que pode ser expressivo, dependendo do movimento do ativo. Quem vende uma opção a descoberto — sem possuir o ativo correspondente — recebe o prêmio antecipadamente, mas assume um risco que pode ser bem maior que esse valor recebido, já que é obrigado a cumprir o contrato se o comprador decidir exercer. Essa assimetria é a razão pela qual vender opções a descoberto costuma ser considerado mais arriscado do que comprá-las, e geralmente exige mais capital de garantia por parte de quem vende.</p>
-<h2>Por que vale entender isso antes de qualquer estratégia</h2>
+<h2 id="por-que-vale-entender-isso-antes-de-qualquer-estrategia">Por que vale entender isso antes de qualquer estratégia</h2>
 <p>Estratégias com nomes específicos — trava de alta, borboleta, straddle — são apenas combinações desses elementos básicos: comprar e vender calls e puts de strikes e vencimentos diferentes ao mesmo tempo. Sem entender como prêmio, strike, vencimento e o efeito do tempo se relacionam, fica difícil avaliar se uma estratégia combinada faz sentido para o cenário que você espera, ou se está apenas seguindo uma receita sem entender o risco embutido em cada perna do contrato.</p>
-<h2>Um ponto que costuma passar despercebido</h2>
+<h2 id="um-ponto-que-costuma-passar-despercebido">Um ponto que costuma passar despercebido</h2>
 <p>O valor extrínseco de uma opção não decai de forma linear ao longo do tempo — ele acelera perto do vencimento. Uma opção com 60 dias restantes perde valor de tempo mais devagar do que a mesma opção com apenas 10 dias restantes, mesmo que o preço do ativo não se mova nada nesse intervalo. Esse comportamento afeta diretamente quem compra opções pensando em mantê-las por pouco tempo perto do vencimento, já que o decaimento acelerado trabalha contra a posição mesmo sem nenhum movimento desfavorável do ativo.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/como-funcionam-as-opcoes-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como funcionam as opções binárias, na prática</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/opcoes-binarias-passo-a-passo-e-gestao-de-risco/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opções binárias: passo a passo prático e gestão de risco</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
@@ -216,7 +255,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

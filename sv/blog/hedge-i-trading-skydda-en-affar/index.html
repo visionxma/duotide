@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/hedge-i-trading-skydda-en-affar/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Strategier",
       "author": {
@@ -172,45 +172,82 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Navigeringsspår">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/sv/">Hem</a></li>
         <li><a href="/sv/blog/">Blogg</a></li>
         <li><span aria-current="page">Hedge i trading: så skyddar du en affär med en annan position</span></li>
       </ol>
+      <a class="ap__voltar" href="/sv/blog/">Tillbaka</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Strategier</span>
-        <h1>Hedge i trading: så skyddar du en affär med en annan position</h1>
-        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Hedge är ett ord som dyker upp överallt inom finans och brukar behandlas som något komplicerat, förbehållet stora fonder. I praktiken är logiken enkel: i stället för att satsa allt i en enda riktning öppnar du en andra position som skyddar en del av resultatet om marknaden rör sig mot den första. Målet är inte att tjäna dubbelt — det är att minska skadans storlek när marknadsavläsningen visar sig fel.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-de-hedge-para-operacoes-de-opcoes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Länken kopierad">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
+            </div>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-28">28 september 2026</time></p>
+            <span class="bq__tag">Strategier</span>
+            <h1>Hedge i trading: så skyddar du en affär med en annan position</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-teamet</strong><small>Redaktionen</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Innehåll">
+              <p class="ap__indice-tit">Innehåll</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#principen-bakom-hedge">Principen bakom hedge</a></li>
+                <li><a href="#ett-exempel-med-runda-tal">Ett exempel med runda tal</a></li>
+                <li><a href="#nar-det-ar-meningsfullt-att-anvanda-hedge">När det är meningsfullt att använda hedge</a></li>
+                <li><a href="#nar-hedge-stjalper-mer-an-den-hjalper">När hedge stjälper mer än den hjälper</a></li>
+                <li><a href="#hur-man-testar-innan-man-tillampar-det-i-vardagen">Hur man testar innan man tillämpar det i vardagen</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Till toppen</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Hedge är ett ord som dyker upp överallt inom finans och brukar behandlas som något komplicerat, förbehållet stora fonder. I praktiken är logiken enkel: i stället för att satsa allt i en enda riktning öppnar du en andra position som skyddar en del av resultatet om marknaden rör sig mot den första. Målet är inte att tjäna dubbelt — det är att minska skadans storlek när marknadsavläsningen visar sig fel.</p>
 <p>Den här idén gäller för aktier, valutor, råvaror och även mycket kortsiktiga affärer. Den gemensamma punkten är alltid densamma: köpa någon form av försäkring, även om det kostar en del av den ursprungliga affärens potentiella vinst.</p>
-<h2>Principen bakom hedge</h2>
+<h2 id="principen-bakom-hedge">Principen bakom hedge</h2>
 <p>En klassisk hedge kombinerar två positioner med motsatta resultat i samma tillgång, eller i tillgångar som rör sig på liknande sätt. Om den första positionen satsar på uppgång i en valuta och den andra satsar på nedgång i samma valuta, beror slutresultatet på hur mycket priset rörde sig och den relativa storleken på varje position — inte helt enkelt på vem som vann och vem som förlorade.</p>
 <p>Det finns två vanliga sätt att bygga det här skyddet. Det första är den samtidiga hedgen: att öppna båda sidorna nästan samtidigt, oftast eftersom marknadsavläsningen är delad mellan två troliga scenarier. Det andra är justeringshedgen: att öppna den andra positionen efter att den första redan går med förlust, för att låsa en maximal förlust och förhindra att resultatet försämras ytterligare om priset fortsätter i motsatt riktning.</p>
-<h2>Ett exempel med runda tal</h2>
+<h2 id="ett-exempel-med-runda-tal">Ett exempel med runda tal</h2>
 <p>Anta en affär på R$ 200,00 som satsar på att dollarn stiger mot realen, med en avkastning på 85% vid rätt utfall och förfall om 30 minuter. Med 10 minuter kvar förändrar en ekonomisk nyhet scenariot och priset börjar röra sig mot positionen. I stället för att bara vänta på resultatet öppnar du en andra affär på R$ 100,00 som satsar på att dollarn faller, med samma avkastning på 85%.</p>
 <p>Det finns två möjliga utfall. Om dollarn stänger i uppgång betalar den första affären R$ 170,00 i vinst (85% av R$ 200,00) och den andra förlorar de investerade R$ 100,00 — nettoresultat en vinst på R$ 70,00. Om dollarn stänger i nedgång förlorar den första affären R$ 200,00 och den andra betalar R$ 85,00 i vinst (85% av R$ 100,00) — nettoresultat en förlust på R$ 115,00. Jämfört med att inte göra något — förlora hela R$ 200,00 om dollarn föll — minskade hedgen förlusten med R$ 85,00 i det dåliga scenariot, till priset av en minskad vinst i det goda scenariot.</p>
-<h2>När det är meningsfullt att använda hedge</h2>
+<h2 id="nar-det-ar-meningsfullt-att-anvanda-hedge">När det är meningsfullt att använda hedge</h2>
 <ul>
 <li>När en relevant nyhet dyker upp mitt i en redan öppen affär och den återstående tiden inte tillåter att positionen stängs säkert.</li>
 <li>När den tekniska avläsningen är delad mellan två scenarier och att minska den totala exponeringen väger tyngre än att försöka träffa den exakta riktningen.</li>
 <li>När målet är att skydda en dagens vinstföljd, och acceptera ett mindre resultat i stället för att riskera att ge tillbaka allt i en enda affär.</li>
 </ul>
-<h2>När hedge stjälper mer än den hjälper</h2>
+<h2 id="nar-hedge-stjalper-mer-an-den-hjalper">När hedge stjälper mer än den hjälper</h2>
 <p>Hedge har en kostnad — den minskar normalt den möjliga vinsten, eftersom de två positionerna oftast inte delar samma procentuella avkastning i varje scenario. Att använda hedge varje gång en affär börjar gå dåligt, som en reflex, skiljer sig från att använda hedge som en del av en plan fastställd innan man går in på marknaden. I det första fallet blir hedgen ett sätt att förneka förlusten; i det andra är den ett riskhanteringsverktyg. Skillnaden ligger i att bestämma användningskriterierna innan man handlar, inte i stundens hetta.</p>
-<h2>Hur man testar innan man tillämpar det i vardagen</h2>
+<h2 id="hur-man-testar-innan-man-tillampar-det-i-vardagen">Hur man testar innan man tillämpar det i vardagen</h2>
 <p>Innan du använder hedge med riktiga pengar är det värt att simulera de fyra möjliga scenarierna för en affär — liten uppgång, stor uppgång, liten nedgång, stor nedgång — och beräkna nettoresultatet för var och en, med och utan den andra positionen. Verktyg som Duotide visar avkastningen för varje tillgång innan affären öppnas, vilket gör det lättare att göra den här uträkningen i förväg, i stället för att bestämma sig mitt i affären under press. Hedge eliminerar inte risk: den omfördelar risken mellan scenarier, och det är upp till den som handlar att avgöra om det bytet är meningsfullt för kapitalet och planen.</p>
-        <div class="bq-post__cta">
-          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            <div class="bq-post__cta">
+              <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            </div>
+            <div class="ap__fim">
+              <p>Uppdaterad: <time datetime="2026-09-28">28 sep. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-teamet</strong><p>Duotides redaktion skriver guiderna och nyheterna i den här bloggen: hur marknaden fungerar, riskhantering och hur plattformen används. Inget här är investeringsrådgivning.</p></div>
+              <a class="btn ap__equipe" href="/sv/om-denna-webbplats/">Möt teamet</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Läs också</h2>
+        <aside class="ap__rel">
+          <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/korsning-av-ema-i-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Korsning av exponentiella glidande medelvärden (EMA) i trading</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/sa-valjer-du-loptiden-for-en-affar/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du löptiden (expiration) för en affär</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
@@ -218,7 +255,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -282,6 +319,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

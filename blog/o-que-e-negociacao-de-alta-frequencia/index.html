@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,42 +173,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">O que é negociação de alta frequência e por que ela é diferente</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Mercado</span>
-        <h1>O que é negociação de alta frequência e por que ela é diferente</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Negociação de alta frequência, ou HFT (high-frequency trading), é um estilo de operação executado por sistemas automatizados que enviam um volume enorme de ordens em frações de segundo, buscando capturar diferenças de preço minúsculas que existem por períodos extremamente curtos. É um universo completamente diferente do trading manual praticado por investidores individuais, tanto em escala quanto em infraestrutura.</p>
-<h2>A escala de tempo é outra categoria</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-negociacao-de-alta-frequencia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Mercado</span>
+            <h1>O que é negociação de alta frequência e por que ela é diferente</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#a-escala-de-tempo-e-outra-categoria">A escala de tempo é outra categoria</a></li>
+                <li><a href="#por-que-exige-infraestrutura-fora-do-alcance-do-trader-comum">Por que exige infraestrutura fora do alcance do trader comum</a></li>
+                <li><a href="#o-que-esses-sistemas-realmente-buscam-capturar">O que esses sistemas realmente buscam capturar</a></li>
+                <li><a href="#o-efeito-do-hft-na-liquidez-do-mercado">O efeito do HFT na liquidez do mercado</a></li>
+                <li><a href="#por-que-o-trader-de-varejo-nao-deve-tentar-competir-nesse-jo">Por que o trader de varejo não deve tentar competir nesse jogo</a></li>
+                <li><a href="#o-que-fica-desse-entendimento">O que fica desse entendimento</a></li>
+                <li><a href="#o-que-muda-na-leitura-do-grafico-com-isso-em-mente">O que muda na leitura do gráfico com isso em mente</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Negociação de alta frequência, ou HFT (high-frequency trading), é um estilo de operação executado por sistemas automatizados que enviam um volume enorme de ordens em frações de segundo, buscando capturar diferenças de preço minúsculas que existem por períodos extremamente curtos. É um universo completamente diferente do trading manual praticado por investidores individuais, tanto em escala quanto em infraestrutura.</p>
+<h2 id="a-escala-de-tempo-e-outra-categoria">A escala de tempo é outra categoria</h2>
 <p>Enquanto um trader manual reage a um movimento de preço em segundos, um sistema de HFT opera em milissegundos e microssegundos — frações de tempo tão pequenas que só fazem sentido para um computador, nunca para uma decisão humana em tempo real. A vantagem competitiva nesse espaço vem justamente da velocidade: quem processa a informação e envia a ordem primeiro consegue capturar a oportunidade antes que ela desapareça, muitas vezes antes mesmo de qualquer humano perceber que ela existiu.</p>
-<h2>Por que exige infraestrutura fora do alcance do trader comum</h2>
+<h2 id="por-que-exige-infraestrutura-fora-do-alcance-do-trader-comum">Por que exige infraestrutura fora do alcance do trader comum</h2>
 <p>Empresas de HFT investem em conexões físicas mais curtas até os servidores das bolsas (às vezes literalmente alugando espaço no mesmo data center, prática chamada de colocation), além de hardware e software otimizados para reduzir cada microssegundo de atraso possível. Essa infraestrutura custa milhões e é mantida por equipes dedicadas exclusivamente a isso — um investidor individual, mesmo com uma conexão de internet rápida, simplesmente não compete nessa velocidade.</p>
-<h2>O que esses sistemas realmente buscam capturar</h2>
+<h2 id="o-que-esses-sistemas-realmente-buscam-capturar">O que esses sistemas realmente buscam capturar</h2>
 <p>Estratégias de HFT comuns incluem arbitragem entre pequenas diferenças de preço do mesmo ativo em bolsas diferentes, provisão de liquidez capturando o spread em altíssimo volume, e identificação de padrões estatísticos de curtíssimo prazo no fluxo de ordens. O lucro por operação individual costuma ser minúsculo — uma fração de centavo — mas se torna relevante multiplicado por milhões de operações ao longo do dia.</p>
-<h2>O efeito do HFT na liquidez do mercado</h2>
+<h2 id="o-efeito-do-hft-na-liquidez-do-mercado">O efeito do HFT na liquidez do mercado</h2>
 <p>Por um lado, a presença de operadores de alta frequência aumenta a liquidez disponível na maior parte do tempo, reduzindo spreads para todos os participantes. Por outro, em momentos de estresse extremo do mercado, alguns desses sistemas podem se retirar rapidamente para evitar risco, reduzindo a liquidez disponível justamente quando ela é mais necessária — um fenômeno observado em episódios pontuais de volatilidade extrema nos últimos anos.</p>
-<h2>Por que o trader de varejo não deve tentar competir nesse jogo</h2>
+<h2 id="por-que-o-trader-de-varejo-nao-deve-tentar-competir-nesse-jo">Por que o trader de varejo não deve tentar competir nesse jogo</h2>
 <p>Tentar replicar manualmente uma lógica de alta frequência é uma armadilha comum: sem a infraestrutura de baixa latência, qualquer vantagem teórica identificada já terá sido capturada por sistemas automatizados muito mais rápidos antes que uma ordem manual seja sequer enviada. O trader individual compete de forma mais eficaz em horizontes de tempo onde a velocidade de execução em microssegundos não é o fator decisivo — minutos, horas, dias — onde análise, contexto e gestão de risco pesam mais do que velocidade pura.</p>
-<h2>O que fica desse entendimento</h2>
+<h2 id="o-que-fica-desse-entendimento">O que fica desse entendimento</h2>
 <p>Saber que o HFT existe e como ele opera ajuda a entender por que certos movimentos minúsculos de preço acontecem sem razão aparente e por que competir nesse espaço específico não é uma opção realista para quem opera manualmente. O caminho mais produtivo para o trader individual é focar em prazos e estratégias onde julgamento humano, disciplina e gestão de risco continuam sendo a vantagem competitiva real.</p>
-<h2>O que muda na leitura do gráfico com isso em mente</h2>
+<h2 id="o-que-muda-na-leitura-do-grafico-com-isso-em-mente">O que muda na leitura do gráfico com isso em mente</h2>
 <p>Ao ver um preço variar por uma fração de centavo repetidas vezes em curtíssimo prazo, sem nenhuma notícia ou evento aparente por trás, vale lembrar que boa parte desse ruído de altíssima frequência é produzido por sistemas automatizados negociando entre si, não necessariamente por uma mudança de opinião do mercado sobre o ativo. Diferenciar esse ruído de curtíssimo prazo de um movimento real de tendência é parte do que separa uma leitura de gráfico mais madura de uma reação a cada oscilação mínima da tela. Da mesma forma, operar em prazos gráficos muito curtos — de segundos a poucos minutos — significa competir justamente no território onde esse ruído automatizado é mais presente, o que ajuda a explicar por que prazos maiores tendem a produzir sinais mais limpos para quem analisa manualmente. Isso não significa que gráficos de curto prazo sejam inúteis, mas que interpretar cada micro-oscilação como um sinal com significado próprio tende a gerar mais entradas equivocadas do que entradas bem fundamentadas.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/ipo-da-anthropic-o-que-se-sabe-ate-agora/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">IPO da Anthropic: o que é fato e o que ainda é rumor</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/negociacao-fora-do-horario-de-pregao/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é negociação fora do horário de pregão (after-hours)</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -216,7 +255,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

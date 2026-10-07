@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/historical-volatility-indicator/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "技术指标",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">历史波动率：如何设置与解读</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">技术指标</span>
-        <h1>历史波动率：如何设置与解读</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>与大多数试图预测价格方向的指标不同，历史波动率指标并不判断市场会涨还是会跌——它衡量的是价格在特定时期内上下波动的幅度。这项信息虽然不像买卖信号那样引人注目，但对于校准止损、仓位大小，甚至选择哪些时刻更值得操作，都至关重要。</p><p>在这篇文章中，你将了解历史波动率是如何计算的，如何设置该指标，以及如何在实践中解读它的变化。</p><h2>历史波动率衡量的是什么</h2><p>历史波动率计算的是某资产在特定数量的K线内，其每日（或所选周期）收益率的标准差，通常以年化的形式表示，以方便在不同资产之间进行比较。简单来说：收盘价在各根K线之间的变化越大，历史波动率就越高；价格越稳定，历史波动率就越低。</p><p>重要的是不要把波动率和方向混为一谈。无论是在急剧下跌还是急剧上涨期间，一种资产都可能表现出很高的历史波动率——该指标并不区分这一点，它只衡量变化的幅度，与方向无关。</p><h2>计算方式的简化说明</h2><p>假设某资产连续五根K线的每日收益率分别为+2%、−1%、+3%、−2%和+1%。历史波动率计算的是这些收益率相对于该周期平均收益率的平均偏离程度——这种离散程度越大，指标的最终数值就越高。一种每日收益率通常在−0.5%到+0.5%之间的资产，其历史波动率会明显低于一种每日收益率通常在−3%到+3%之间波动的资产，即使两者在该周期结束时的累计结果相同。</p><h2>设置指标的周期</h2><p>计算历史波动率最常用的周期是10、20或30根K线，具体取决于分析的时间跨度。像10这样较短的周期，反映的是最近的波动情况，对资产行为变化的反应更快——这对操作短周期、希望根据最新环境调整止损的人很有用。像30这样较长的周期，会平滑这些变化，展示出该资产更具结构性的波动水平，适合操作长周期的人。</p><p>一个常见的做法是，将该指标当前的读数与同一资产自身的历史平均值进行比较：对于一个通常在10%到15%之间波动的资产来说，25%的历史波动率可能被视为偏高；但对于一个通常在35%到45%之间波动的资产来说，同样的数值却可能被视为偏低。</p><h2>用历史波动率校准止损</h2><p>当历史波动率较高时，按固定的雷亚尔距离或点数计算的止损，更容易仅仅因为市场正常的噪音波动就被触发，而与操作最初的理由毫无关系。在这些时期，按比例设置更大的止损更合理，这反过来又要求缩小仓位规模，以将以雷亚尔计的风险控制在合理范围内。</p><p>当历史波动率较低时，情况正好相反：更接近入场价的止损往往更合理，因为该资产此时的波动幅度小于平时。</p><h2>历史波动率与操作时机</h2><p>一些交易者还会用历史波动率来判断当下是否值得操作某种资产。极低的波动率可能意味着一个筹码积累的阶段，行情幅度小，对追求较大波幅操作的人吸引力不高。而极高的波动率，则可能意味着一个不确定性很高的时刻，双向出现剧烈且难以预测行情的风险更大。</p><h2>付诸实践</h2><p>在Duotide上，可以跟踪不同资产的历史波动率，并将当前数值与各自的历史平均值进行比较，根据每个时刻的环境调整止损和仓位大小。波动率高本身并不是停止操作的理由，但需要在风险规模的设定上更加谨慎——而风险，就像任何操作一样，始终存在，不会消失。</p><p>同样值得关注的是波动率本身的趋势，而不只是某一根K线上的绝对数值。即使仍处于该资产被认为正常的区间内，持续上升的历史波动率也可能是一个信号，说明环境正在发生变化，此前使用的止损和仓位参数或许需要在波动进一步扩大之前进行调整。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-de-volatilidade-historica" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+            <span class="bq__tag">技术指标</span>
+            <h1>历史波动率：如何设置与解读</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#历史波动率衡量的是什么">历史波动率衡量的是什么</a></li>
+                <li><a href="#计算方式的简化说明">计算方式的简化说明</a></li>
+                <li><a href="#设置指标的周期">设置指标的周期</a></li>
+                <li><a href="#用历史波动率校准止损">用历史波动率校准止损</a></li>
+                <li><a href="#历史波动率与操作时机">历史波动率与操作时机</a></li>
+                <li><a href="#付诸实践">付诸实践</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>与大多数试图预测价格方向的指标不同，历史波动率指标并不判断市场会涨还是会跌——它衡量的是价格在特定时期内上下波动的幅度。这项信息虽然不像买卖信号那样引人注目，但对于校准止损、仓位大小，甚至选择哪些时刻更值得操作，都至关重要。</p><p>在这篇文章中，你将了解历史波动率是如何计算的，如何设置该指标，以及如何在实践中解读它的变化。</p><h2 id="历史波动率衡量的是什么">历史波动率衡量的是什么</h2><p>历史波动率计算的是某资产在特定数量的K线内，其每日（或所选周期）收益率的标准差，通常以年化的形式表示，以方便在不同资产之间进行比较。简单来说：收盘价在各根K线之间的变化越大，历史波动率就越高；价格越稳定，历史波动率就越低。</p><p>重要的是不要把波动率和方向混为一谈。无论是在急剧下跌还是急剧上涨期间，一种资产都可能表现出很高的历史波动率——该指标并不区分这一点，它只衡量变化的幅度，与方向无关。</p><h2 id="计算方式的简化说明">计算方式的简化说明</h2><p>假设某资产连续五根K线的每日收益率分别为+2%、−1%、+3%、−2%和+1%。历史波动率计算的是这些收益率相对于该周期平均收益率的平均偏离程度——这种离散程度越大，指标的最终数值就越高。一种每日收益率通常在−0.5%到+0.5%之间的资产，其历史波动率会明显低于一种每日收益率通常在−3%到+3%之间波动的资产，即使两者在该周期结束时的累计结果相同。</p><h2 id="设置指标的周期">设置指标的周期</h2><p>计算历史波动率最常用的周期是10、20或30根K线，具体取决于分析的时间跨度。像10这样较短的周期，反映的是最近的波动情况，对资产行为变化的反应更快——这对操作短周期、希望根据最新环境调整止损的人很有用。像30这样较长的周期，会平滑这些变化，展示出该资产更具结构性的波动水平，适合操作长周期的人。</p><p>一个常见的做法是，将该指标当前的读数与同一资产自身的历史平均值进行比较：对于一个通常在10%到15%之间波动的资产来说，25%的历史波动率可能被视为偏高；但对于一个通常在35%到45%之间波动的资产来说，同样的数值却可能被视为偏低。</p><h2 id="用历史波动率校准止损">用历史波动率校准止损</h2><p>当历史波动率较高时，按固定的雷亚尔距离或点数计算的止损，更容易仅仅因为市场正常的噪音波动就被触发，而与操作最初的理由毫无关系。在这些时期，按比例设置更大的止损更合理，这反过来又要求缩小仓位规模，以将以雷亚尔计的风险控制在合理范围内。</p><p>当历史波动率较低时，情况正好相反：更接近入场价的止损往往更合理，因为该资产此时的波动幅度小于平时。</p><h2 id="历史波动率与操作时机">历史波动率与操作时机</h2><p>一些交易者还会用历史波动率来判断当下是否值得操作某种资产。极低的波动率可能意味着一个筹码积累的阶段，行情幅度小，对追求较大波幅操作的人吸引力不高。而极高的波动率，则可能意味着一个不确定性很高的时刻，双向出现剧烈且难以预测行情的风险更大。</p><h2 id="付诸实践">付诸实践</h2><p>在Duotide上，可以跟踪不同资产的历史波动率，并将当前数值与各自的历史平均值进行比较，根据每个时刻的环境调整止损和仓位大小。波动率高本身并不是停止操作的理由，但需要在风险规模的设定上更加谨慎——而风险，就像任何操作一样，始终存在，不会消失。</p><p>同样值得关注的是波动率本身的趋势，而不只是某一根K线上的绝对数值。即使仍处于该资产被认为正常的区间内，持续上升的历史波动率也可能是一个信号，说明环境正在发生变化，此前使用的止损和仓位参数或许需要在波动进一步扩大之前进行调整。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

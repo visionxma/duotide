@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/gamma-squeeze-vs-short-squeeze-differences/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp",
       "articleSection": "الأسهم",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">Gamma squeeze مقابل short squeeze: الفرق الحقيقي</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">الأسهم</span>
-        <h1>Gamma squeeze مقابل short squeeze: الفرق الحقيقي</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>الشورت سكويز (short squeeze) والجاما سكويز (gamma squeeze) مصطلحان يظهران عادة معًا في كل مرة يقفز فيها سهم فجأة، لكنهما يصفان آليتين مختلفتين، بمشترين مختلفين وراء قوة الشراء. الخلط بينهما يمكن أن يقود إلى الرهان على استمرار حركة لا تملك في الواقع نفس الوقود وراءها.</p>
-<h2>Short squeeze: من باع مقترضًا يُجبر على إعادة الشراء</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="gamma-squeeze-vs-short-squeeze-diferencas" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-27">27 سبتمبر 2026</time></p>
+            <span class="bq__tag">الأسهم</span>
+            <h1>Gamma squeeze مقابل short squeeze: الفرق الحقيقي</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#short-squeeze-من-باع-مقترض-ا-ي-جبر-على-ا-عادة-الشراء">Short squeeze: من باع مقترضًا يُجبر على إعادة الشراء</a></li>
+                <li><a href="#gamma-squeeze-من-باع-خيارات-شراء-يعد-ل-الحماية">Gamma squeeze: من باع خيارات شراء يعدّل الحماية</a></li>
+                <li><a href="#يمكن-ا-ن-يحدث-كلاهما-في-الوقت-نفسه">يمكن أن يحدث كلاهما في الوقت نفسه</a></li>
+                <li><a href="#ما-الذي-يمكن-وما-لا-يمكن-للبيانات-العامة-ا-ثباته">ما الذي يمكن وما لا يمكن للبيانات العامة إثباته</a></li>
+                <li><a href="#قضية-gamestop-عام-2021-لماذا-لم-تكف-تسمية-واحدة">قضية GameStop عام 2021: لماذا لم تكفِ تسمية واحدة</a></li>
+                <li><a href="#مخاطرة-محاولة-الدخول-بعد-ا-ن-يكون-الرسم-البياني-قد-انطلق-بال">مخاطرة محاولة الدخول بعد أن يكون الرسم البياني قد انطلق بالفعل</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>الشورت سكويز (short squeeze) والجاما سكويز (gamma squeeze) مصطلحان يظهران عادة معًا في كل مرة يقفز فيها سهم فجأة، لكنهما يصفان آليتين مختلفتين، بمشترين مختلفين وراء قوة الشراء. الخلط بينهما يمكن أن يقود إلى الرهان على استمرار حركة لا تملك في الواقع نفس الوقود وراءها.</p>
+<h2 id="short-squeeze-من-باع-مقترض-ا-ي-جبر-على-ا-عادة-الشراء">Short squeeze: من باع مقترضًا يُجبر على إعادة الشراء</h2>
 <p>يبدأ الشورت سكويز مع متداولين باعوا أسهمًا مقترضة، مراهنين على انخفاض السعر. إذا ارتفع السعر بدلاً من الانخفاض، تبدأ هذه المراكز بتراكم الخسائر. يمكن أن تجبر نداءات الهامش، أو تكلفة استئجار الأسهم المتزايدة، أو حدود المخاطرة الداخلية هؤلاء البائعين على إعادة شراء الأسهم لإغلاق المركز. وإذا حاول كثير من البائعين إعادة الشراء في الوقت نفسه، يمكن أن يدفع هذا الطلب الإضافي السعر إلى الأعلى أكثر، ما يضغط على بائعين آخرين لفعل الشيء نفسه.</p>
-<h2>Gamma squeeze: من باع خيارات شراء يعدّل الحماية</h2>
+<h2 id="gamma-squeeze-من-باع-خيارات-شراء-يعد-ل-الحماية">Gamma squeeze: من باع خيارات شراء يعدّل الحماية</h2>
 <p>للجاما سكويز أصل مختلف، مرتبط بسوق الخيارات. عندما يشتري كثير من المستثمرين خيارات شراء لسهم ما، قد ينتهي الأمر ببائع هذه الخيارات، عادة صانع سوق، بتعرض يحتاج إلى حماية. إذا كان لدى هذا البائع مركز صافٍ سلبي في الجاما، فقد يحتاج إلى شراء أسهم الأصل للحماية مع ارتفاع السعر. وبما أن ارتفاع السعر يغير هذا التعرض مرة أخرى، قد يصبح من الضروري شراء المزيد من الأسهم، ما يخلق دورة تعزز الصعود نفسه.</p>
-<h2>يمكن أن يحدث كلاهما في الوقت نفسه</h2>
+<h2 id="يمكن-ا-ن-يحدث-كلاهما-في-الوقت-نفسه">يمكن أن يحدث كلاهما في الوقت نفسه</h2>
 <p>يمكن لصعود عادي أو خبر مهم أن يجذب مشتري الأسهم وخيارات الشراء في الوقت نفسه. إذا ترك جزء من شراء الخيارات هذا صانعي السوق بمركز بيع في الجاما، يمكن أن تضيف حماية هؤلاء الصانعين طلبًا إضافيًا. وقد يضغط السعر الأعلى بعد ذلك على البائعين على المكشوف لإعادة شراء مراكزهم. يمكن أن تتغذى القوتان ضمن الحركة نفسها، ما يجعل من الصعب فصل مقدار الصعود الذي جاء من كل منهما.</p>
-<h2>ما الذي يمكن وما لا يمكن للبيانات العامة إثباته</h2>
+<h2 id="ما-الذي-يمكن-وما-لا-يمكن-للبيانات-العامة-ا-ثباته">ما الذي يمكن وما لا يمكن للبيانات العامة إثباته</h2>
 <ul>
 <li><strong>حجم خيارات الشراء:</strong> يُظهر عدد العقود المتداولة، لكنه لا يثبت أن صانعي السوق أصبحوا في مركز بيع بالجاما، لأن جزءًا من هذه الخيارات قد يكون بيع من مستثمرين آخرين أو تداوله ضمن هياكل بمراكز معاكسة.</li>
 <li><strong>العقود المفتوحة:</strong> تُظهر عدد العقود التي لا تزال نشطة، لكنها لا تكشف من يقف في كل جانب من الصفقة.</li>
 <li><strong>المركز البيعي المكشوف (short interest):</strong> عادة ما يُنشر مرتين فقط في الشهر، لذا فإن رقمًا مرتفعًا لا يثبت أن البائعين يعيدون الشراء الآن، بل فقط أن المركز كان موجودًا في آخر تاريخ مرجعي.</li>
 </ul>
 <p>ارتفاع السعر والحجم معًا يتوافق مع أي من الروايتين، أو مع لا واحدة منهما، بما أن مشترين عاديين يمكن أيضًا أن يكونوا وراء الحركة.</p>
-<h2>قضية GameStop عام 2021: لماذا لم تكفِ تسمية واحدة</h2>
+<h2 id="قضية-gamestop-عام-2021-لماذا-لم-تكف-تسمية-واحدة">قضية GameStop عام 2021: لماذا لم تكفِ تسمية واحدة</h2>
 <p>وجد تحليل هيئة الأوراق المالية الأمريكية (SEC) لقضية GameStop، في يناير 2021، أدلة على أن بائعين معروفين على المكشوف اشتروا أسهمًا خلال فترات محددة من الصعود، ما يشير إلى أن جزءًا من الحركة جاء من إعادة شراء مراكز بيعية. لكن هذا التحليل نفسه حدد أن إعادة الشراء هذه مثلت جزءًا صغيرًا فقط من إجمالي حجم الشراء، وأن السعر ظل مرتفعًا لأسابيع بعد أن كان من المفترض أن يتراجع الأثر المباشر لإعادة الشراء. لاحظ التحليل أيضًا نشاطًا مرتفعًا في الخيارات، لكن جزءًا كبيرًا منه جاء من شراء خيارات بيع، وكان صانعو السوق يشترون، لا يبيعون، خيارات الشراء، ما لا يتطابق مع النمط المتوقع لجاما سكويز كلاسيكي. وكان الاستنتاج أن المزاج الإيجابي المستمر، أكثر من أي من الآليتين بمفردها، ساعد في إبقاء السعر مرتفعًا لهذه المدة الطويلة.</p>
-<h2>مخاطرة محاولة الدخول بعد أن يكون الرسم البياني قد انطلق بالفعل</h2>
+<h2 id="مخاطرة-محاولة-الدخول-بعد-ا-ن-يكون-الرسم-البياني-قد-انطلق-بال">مخاطرة محاولة الدخول بعد أن يكون الرسم البياني قد انطلق بالفعل</h2>
 <p>مطاردة سكويز بعد أن تصبح الحركة مرئية بالفعل يعني عادة الشراء في أسوأ لحظة ممكنة. يمكن أن تتسع فروق الأسعار، ويمكن أن تصبح الخيارات باهظة الثمن بسبب التقلب الضمني المرتفع، ويمكن تنفيذ أمر السوق بعيدًا جدًا عن آخر سعر معروض على الشاشة. لا تضمن أي من هاتين الآليتين حركة تالية، ويمكن أن ينعكس صعود قوي بمجرد أن تفقد إعادة الشراء أو حماية الخيارات قوتها. تحديد المخاطرة قبل الدخول يبقى أهم من محاولة تخمين أي تسمية تفسر بشكل أفضل حركة حدثت بالفعل.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-27">27 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/why-nike-stock-fell-sp-100-removal-explained/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">لماذا انخفض سهم Nike؟ خروجها من S&amp;P 100 موضحًا</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/short-term-stock-trading-guide-4-steps/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">دليل التداول قصير الأجل في الأسهم: 4 خطوات</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

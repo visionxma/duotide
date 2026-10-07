@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/spread-nedir-ve-neden-karinizin-bir-kismini-yer/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-como-escolher-uma-corretora.webp",
       "articleSection": "Yeni başlayanlar",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Trading'de Spread Nedir ve Neden Kârınızın Bir Kısmını Yer</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Yeni başlayanlar</span>
-        <h1>Trading'de Spread Nedir ve Neden Kârınızın Bir Kısmını Yer</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Borsada veya tezgah üstü piyasada işlem gören her varlığın aynı anda iki fiyatı vardır: birinin almaya razı olduğu fiyat (bid) ve birinin satmaya razı olduğu fiyat (ask veya offer). İkisi arasındaki fark spread olarak adlandırılır ve piyasa lehinize hareket etmeden önce bile her işlemin taşıdığı, yeni başlayanlar için genellikle görünmez olan ilk maliyettir.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-spread-e-como-ele-afeta-suas-operacoes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-28">28 Eylül 2026</time></p>
+            <span class="bq__tag">Yeni başlayanlar</span>
+            <h1>Trading'de Spread Nedir ve Neden Kârınızın Bir Kısmını Yer</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#spread-pratikte-nasıl-ortaya-cıkar">Spread Pratikte Nasıl Ortaya Çıkar</a></li>
+                <li><a href="#bu-fiyatı-kim-belirler-ve-neden">Bu Fiyatı Kim Belirler ve Neden</a></li>
+                <li><a href="#sabit-spread-ve-degisken-spread">Sabit Spread ve Değişken Spread</a></li>
+                <li><a href="#spreadin-sonucunuz-uzerindeki-birikimli-etkisi">Spreadin Sonucunuz Üzerindeki Birikimli Etkisi</a></li>
+                <li><a href="#islemlerinizde-spreadin-etkisi-nasıl-azaltılır">İşlemlerinizde Spreadin Etkisi Nasıl Azaltılır</a></li>
+                <li><a href="#bunu-gunluk-hayata-tasımak">Bunu Günlük Hayata Taşımak</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Borsada veya tezgah üstü piyasada işlem gören her varlığın aynı anda iki fiyatı vardır: birinin almaya razı olduğu fiyat (bid) ve birinin satmaya razı olduğu fiyat (ask veya offer). İkisi arasındaki fark spread olarak adlandırılır ve piyasa lehinize hareket etmeden önce bile her işlemin taşıdığı, yeni başlayanlar için genellikle görünmez olan ilk maliyettir.</p>
 <p>Spreadi anlamak, özellikle daha az likit varlıklarda veya bu maliyetin orantılı olarak daha ağır bastığı çok kısa vadeli işlemlerde, bir işlemin değip değmeyeceğini nasıl değerlendirdiğinizi değiştirir.</p>
-<h2>Spread Pratikte Nasıl Ortaya Çıkar</h2>
+<h2 id="spread-pratikte-nasıl-ortaya-cıkar">Spread Pratikte Nasıl Ortaya Çıkar</h2>
 <p>EUR/USD paritesinin şöyle kote edildiğini düşünün: alış (bid) 1,0850 ve satış (ask) 1,0852. Bu, şimdi euro almak isterseniz euro başına 1,0852 dolar ödeyeceğiniz, satmak isterseniz sadece 1,0850 alacağınız anlamına gelir. Buradaki spread 0,0002, yani 2 pip'tir. Bir pozisyon açtığınızda, bu farkla aleyhinize başlarsınız: başa baş gelmek için fiyatın, herhangi bir kâr ortaya çıkmadan önce en az spread kadar, yani 2 pip hareket etmesi gerekir.</p>
-<h2>Bu Fiyatı Kim Belirler ve Neden</h2>
+<h2 id="bu-fiyatı-kim-belirler-ve-neden">Bu Fiyatı Kim Belirler ve Neden</h2>
 <p>Spread, piyasaya likidite sağlayan katılımcılar tarafından belirlenir — her zaman bir alış ve bir satış tarafı bulundurmayı taahhüt eden aracı kurumlar, bankalar ve piyasa yapıcılar. Tam olarak bu farktan kazanç sağlarlar ve spreadin büyüklüğü, bu sürekli teklifi sürdürürken üstlendikleri riski yansıtır. Bir varlık ne kadar çok işlem görürse, sürekli olarak alıp satan insan sayısı ne kadar fazlaysa, spread o kadar dar olma eğilimindedir — bu yüzden dolar/real paritesi genellikle borsadaki çok düşük hacimli bir hisseye göre çok daha dar bir spreade sahiptir.</p>
-<h2>Sabit Spread ve Değişken Spread</h2>
+<h2 id="sabit-spread-ve-degisken-spread">Sabit Spread ve Değişken Spread</h2>
 <p>Bazı enstrümanlar, saatten veya volatiliteden bağımsız olarak değişmeyen sabit bir spreadle işlem görür. Diğerlerinde, önemli bir haber ya da düşük likidite anlarında genişleyen değişken bir spread vardır — örneğin Amerika Birleşik Devletleri'nde bir istihdam verisi açıklanırken dolar spreadi saniyeler içinde 2'den 8 veya 10 pip'e sıçrayabilir. Buna dikkat etmeden haber üzerine işlem yapanlar, genellikle beklenenden çok daha kötü bir giriş fiyatıyla karşılaşıp şaşırır.</p>
-<h2>Spreadin Sonucunuz Üzerindeki Birikimli Etkisi</h2>
+<h2 id="spreadin-sonucunuz-uzerindeki-birikimli-etkisi">Spreadin Sonucunuz Üzerindeki Birikimli Etkisi</h2>
 <p>İşlem gören lota bağlı olarak işlem başına R$ 0,50'ye eşdeğer spreadi olan bir varlıkta ayda 20 işlem yaptığınızı varsayalım. Bu, tahsil edilen diğer her ücrete ek olarak zaten aylık R$ 10,00 sabit maliyet demektir. Çok sık işlem yapanlar için — çok kısa vadeli day trade gibi — spread, vergiler ve komisyonlardan bile önce brüt kârın önemli bir dilimini tüketebilir. Sayısal bir örnek: stratejinizin işlem başına ortalama R$ 0,80 kazanç beklentisi varsa ama spread her giriş ve çıkışta R$ 0,50'ye mal oluyorsa, geriye sadece R$ 0,30 gerçek marj kalır — gerçekleştirmedeki herhangi bir hassasiyet eksikliği bu sonucu sıfırlayabilir.</p>
-<h2>İşlemlerinizde Spreadin Etkisi Nasıl Azaltılır</h2>
+<h2 id="islemlerinizde-spreadin-etkisi-nasıl-azaltılır">İşlemlerinizde Spreadin Etkisi Nasıl Azaltılır</h2>
 <ul>
 <li>Spreadin genellikle daha dar olduğu, varlığın likiditesinin en yüksek olduğu saatlerde işlem yapmayı tercih edin.</li>
 <li>Spreadin genişlediği önemli ekonomik açıklamalardan hemen önceki veya sonraki saniyelerde pozisyon açmaktan kaçının.</li>
 <li>İşlem penceresine karar vermeden önce aynı varlığın spreadini farklı saatler arasında karşılaştırın — Duotide gibi platformlar spreadi kotasyonun yanında gerçek zamanlı gösterir, bu da emri onaylamadan önce bu maliyeti görmeye yardımcı olur.</li>
 <li>Daha uzun vadeli işlemlerde spread, orantılı olarak çok kısa işlemlere göre daha az ağırlık taşır, çünkü beklenen fiyat hareketi genellikle spreadin kendisinden daha büyük olma eğilimindedir.</li>
 </ul>
-<h2>Bunu Günlük Hayata Taşımak</h2>
+<h2 id="bunu-gunluk-hayata-tasımak">Bunu Günlük Hayata Taşımak</h2>
 <p>Spread, gizli bir ücret ya da bir tuzak değildir — her zaman karşı tarafta işlem yapmaya hazır birinin bulunduğu likit bir piyasanın var olmasının doğal maliyetidir. Ama bir stratejinin kârlı olup olmadığını hesaplarken onu göz ardı etmek, yeni başlayanların yaptığı yaygın bir hatadır. Herhangi bir işlemi ölçekte tekrarlamadan önce, spreadi diğer maliyetlere eklemekte ve beklenen sonucun üstlenilen riski hâlâ karşılayıp karşılamadığını kontrol etmekte fayda var.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-28">28 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/piyasa-kotasyonu-nasil-anlasilir/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Piyasa Kotasyonu Nasıl Anlaşılır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/trading-e-yeni-baslayanlar-icin-temel-kitaplar/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'e Yeni Başlayanlar İçin Temel Kitaplar</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

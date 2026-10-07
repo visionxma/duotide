@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/4-candlemonster-som-signalerar-vandning/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "Teknisk analys",
       "author": {
@@ -172,48 +172,86 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Navigeringsspår">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/sv/">Hem</a></li>
         <li><a href="/sv/blog/">Blogg</a></li>
         <li><span aria-current="page">4 candlemönster som brukar signalera vändning</span></li>
       </ol>
+      <a class="ap__voltar" href="/sv/blog/">Tillbaka</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Teknisk analys</span>
-        <h1>4 candlemönster som brukar signalera vändning</h1>
-        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>En enskild candle berättar lite om vad som kommer att hända härnäst, men vissa former återkommer tillräckligt ofta vid en trends vändpunkter för att förtjäna särskild uppmärksamhet. Fyra av dem dyker upp hela tiden i diagram för vilken tillgång som helst: hammer, engulfing, shooting star och harami.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="4-padroes-de-candle-de-reversao" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Länken kopierad">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
+            </div>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-27">27 september 2026</time></p>
+            <span class="bq__tag">Teknisk analys</span>
+            <h1>4 candlemönster som brukar signalera vändning</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-teamet</strong><small>Redaktionen</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Innehåll">
+              <p class="ap__indice-tit">Innehåll</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#hammer-saljtryck-som-inte-lyckades">Hammer: säljtryck som inte lyckades</a></li>
+                <li><a href="#engulfing-nar-en-candle-dominerar-den-foregaende">Engulfing: när en candle dominerar den föregående</a></li>
+                <li><a href="#shooting-star-hammerns-spegelbild-i-toppen">Shooting star: hammerns spegelbild, i toppen</a></li>
+                <li><a href="#harami-pausen-fore-beslutet">Harami: pausen före beslutet</a></li>
+                <li><a href="#hur-du-anvander-dessa-monster-utan-att-forlita-dig-bara-pa-d">Hur du använder dessa mönster utan att förlita dig bara på dem</a></li>
+                <li><a href="#vanliga-misstag-vid-tolkning-av-candlar">Vanliga misstag vid tolkning av candlar</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Till toppen</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>En enskild candle berättar lite om vad som kommer att hända härnäst, men vissa former återkommer tillräckligt ofta vid en trends vändpunkter för att förtjäna särskild uppmärksamhet. Fyra av dem dyker upp hela tiden i diagram för vilken tillgång som helst: hammer, engulfing, shooting star och harami.</p>
 <p>Innan varje mönster listas är en viktig varning på sin plats: ingen enskild candle garanterar en vändning. De är ledtrådar, och de får styrka när de dyker upp i en relevant region av diagrammet — nära ett stöd, ett motstånd eller efter en lång och utdragen rörelse.</p>
-<h2>Hammer: säljtryck som inte lyckades</h2>
+<h2 id="hammer-saljtryck-som-inte-lyckades">Hammer: säljtryck som inte lyckades</h2>
 <p>Hammer har en liten kropp i den övre delen av candlen och en lång undre veke, minst dubbelt så stor som kroppen. Den dyker upp i slutet av en nedgång och visar att säljarna pressade ner priset under perioden, men att köparna reagerade och tog tillbaka en stor del av förlusten innan stängningen.</p>
 <p>Föreställ dig en aktie som handlas för R$ 24,00 och faller till R$ 22,80 under handelsdagen, men stänger på R$ 23,70. Den undre veken på R$ 1,20 visar avvisandet av lägstanoteringen, medan den lilla kroppen nära candlens topp förstärker att säljtrycket tappade kraft under dagens lopp.</p>
-<h2>Engulfing: när en candle dominerar den föregående</h2>
+<h2 id="engulfing-nar-en-candle-dominerar-den-foregaende">Engulfing: när en candle dominerar den föregående</h2>
 <p>Engulfing-mönstret bildas av två candlar: den första, liten, och den andra, av motsatt färg, med en kropp tillräckligt stor för att helt täcka den föregående candlens kropp. I bullish engulfing följs en fallande candle av en stigande candle som öppnar under och stänger över den föregående candlens intervall — en signal om att köparna abrupt tog kontrollen.</p>
 <p>Det här mönstret brukar anses mer pålitligt ju större den andra candlen är i förhållande till den första, och ännu mer när det dyker upp efter en sekvens av flera candlar i samma riktning, vilket antyder att den föregående rörelsen är uttömd.</p>
-<h2>Shooting star: hammerns spegelbild, i toppen</h2>
+<h2 id="shooting-star-hammerns-spegelbild-i-toppen">Shooting star: hammerns spegelbild, i toppen</h2>
 <p>Shooting star har samma struktur som hammer — liten kropp och lång veke — men dyker upp i toppen av en uppgång, med den långa veken uppåt i stället för nedåt. Den visar att köparna försökte pressa priset ännu högre under perioden, men att säljarna reagerade och förde tillbaka stängningen nära öppningen.</p>
 <p>Ett exempel: ett valutapar stiger till 5,15 under dagen efter att ha öppnat på 5,08, men stänger på 5,09. Den övre veken på sju cent, mot en kropp på bara en cent, är det som kännetecknar avvisandet av högstanoteringen och slår larm om en möjlig paus eller vändning i uppgången.</p>
-<h2>Harami: pausen före beslutet</h2>
+<h2 id="harami-pausen-fore-beslutet">Harami: pausen före beslutet</h2>
 <p>Harami använder också två candlar, men till skillnad från engulfing är den andra candlen liten och ryms inom kroppen på den första, som är stor. Namnet kommer från japanskan och betyder gravid — den lilla candlen ligger liksom inuti den föregående. Den här formen tyder på ett plötsligt kraftfall i rörelsen: efter en stark candle tvekar marknaden och bildar en liten kropp, vilket signalerar obeslutsamhet.</p>
 <p>En bearish harami, till exempel, dyker upp efter en sekvens av uppgång, med en liten candle vars kropp ryms inom den föregående candlen — en varning om att köpkraften tappat andan, även om vändningen ännu inte bekräftats.</p>
-<h2>Hur du använder dessa mönster utan att förlita dig bara på dem</h2>
+<h2 id="hur-du-anvander-dessa-monster-utan-att-forlita-dig-bara-pa-d">Hur du använder dessa mönster utan att förlita dig bara på dem</h2>
 <p>De fyra mönstren väger tyngre när de dyker upp nära en teknisk nivå som redan observerats tidigare, som ett stöd som testats flera gånger eller ett historiskt motstånd. Det hjälper också att vänta på nästa candle som bekräftelse: en hammer blir bara en starkare signal om nästa candle faktiskt stänger högre, inte bara för att formen dök upp i diagrammet.</p>
 <p>Handlad volym vid tidpunkten för mönstret är ett annat användbart filter, när det finns tillgängligt för den analyserade tillgången. En bullish engulfing åtföljd av volym klart över genomsnittet för de senaste sessionerna väger tyngre än samma form under en dag med svag handel, eftersom det visar att ett större antal marknadsaktörer faktiskt ändrade position under den perioden.</p>
-<h2>Vanliga misstag vid tolkning av candlar</h2>
+<h2 id="vanliga-misstag-vid-tolkning-av-candlar">Vanliga misstag vid tolkning av candlar</h2>
 <p>Ett vanligt misstag är att leta efter dessa fyra mönster var som helst i diagrammet, även mitt i en redan etablerad trend, där de förlorar en stor del av sin betydelse. En hammer som dyker upp mitt i en lång uppgång, till exempel, signalerar inte en vändning från nedgång till uppgång — eftersom uppgången redan pågick. Sammanhanget där mönstret uppstår spelar lika stor roll som candlens egen form.</p>
 <p>Ett annat misstag är att handla mönstret så fort det bildas, utan att vänta på candlens stängning. En lång veke som liknar en hammer under handelsdagen kan förvandlas till något annat fram till stängningen, om priset faller tillbaka innan den perioden i diagrammet är slut.</p>
 <p>Det är värt att betona att candlar bara är en av flera möjliga tolkningar, och även mönster som anses starka misslyckas ofta — ingen grafisk läsning eliminerar förlustrisken. Att öva på att identifiera dessa former i historiska diagram, utan brådska och utan pengar i spel, är det säkraste sättet att lära sig känna igen dem innan de används i ett verkligt beslut.</p>
-        <div class="bq-post__cta">
-          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            <div class="bq-post__cta">
+              <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            </div>
+            <div class="ap__fim">
+              <p>Uppdaterad: <time datetime="2026-09-27">27 sep. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-teamet</strong><p>Duotides redaktion skriver guiderna och nyheterna i den här bloggen: hur marknaden fungerar, riskhantering och hur plattformen används. Inget här är investeringsrådgivning.</p></div>
+              <a class="btn ap__equipe" href="/sv/om-denna-webbplats/">Möt teamet</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Läs också</h2>
+        <aside class="ap__rel">
+          <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/huvud-skuldra-monstret-sa-identifierar-du-vandningen/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Huvud-skuldra-mönstret: så identifierar du vändningen</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/fibonacci-retracement-i-trading-ett-praktiskt-exempel/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Fibonacci-retracement i trading: ett praktiskt exempel</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
@@ -221,7 +259,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +323,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

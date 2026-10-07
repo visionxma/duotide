@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/bollinger-bantlari-nasil-calisir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Bollinger Bantları: Nedir ve Nasıl Çalışır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Göstergeler</span>
-        <h1>Bollinger Bantları: Nedir ve Nasıl Çalışır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>1980'lerde John Bollinger tarafından geliştirilen Bollinger Bantları, sabit bir fiyat mesafesi kullanmak yerine varlığın oynaklığına kendiliğinden uyum sağlayan küçük bir gösterge grubunun parçasıdır. Bu özellik, gerçekte neyi ölçtükleri anlaşıldığı sürece, hem sakin hem de hareketli piyasalarda kullanışlı olmalarını sağlar.</p><p>Gösterge üç çizgiden oluşur: merkezi bir hareketli ortalama ve bu ortalama etrafındaki fiyatın standart sapmasından oluşturulan iki bant — üst ve alt. Bantlar arasındaki mesafe oynaklık arttığında genişler, azaldığında daralır.</p><h2>Hesaplama nasıl çalışır</h2><p>Standart ayar, merkez çizgi olarak 20 periyotluk basit hareketli ortalamayı kullanır ve bantlar bu ortalamadan iki standart sapma uzaklıkta konumlandırılır:</p><ul><li><strong>Merkez bant</strong>: 20 periyotluk basit hareketli ortalama.</li><li><strong>Üst bant</strong>: 20 periyotluk ortalama + (2 × son 20 periyodun standart sapması).</li><li><strong>Alt bant</strong>: 20 periyotluk ortalama − (2 × son 20 periyodun standart sapması).</li></ul><p>Bir varlığın 20 periyotluk ortalamasının R$ 60,00 ve aynı dönemin standart sapmasının R$ 3,00 olduğunu varsayalım. Üst bant R$ 66,00 (60,00 + 2 × 3,00), alt bant ise R$ 54,00 (60,00 − 2 × 3,00) olur. Daha oynak bir dönemde standart sapma R$ 5,00'a yükselirse, merkez ortalama aynı yerde kalsa bile bantlar R$ 70,00 ve R$ 50,00'a doğru açılır.</p><h2>Standart sapma tam olarak neyi yakalıyor</h2><p>Standart sapma bir dağılım istatistiğidir: son dönemdeki fiyatlar ortalama etrafında ne kadar çok değişmişse, değer o kadar büyük olur. Bantların nefes almasının nedeni budur — hareketin arttığı dönemlerde açılır, fiyat az dalgalanmaya başladığında daralır.</p><h2>Banda değmek neden otomatik bir sinyal değil</h2><p>Yaygın bir hata, üst banda değmeyi satış sinyali, alt banda değmeyi ise alım sinyali olarak ele almaktır; sanki bantlar sabit bir tavan ve tabanmış gibi. Oysa değiller. Güçlü bir yükseliş trendinde fiyat, herhangi bir dönüş anlamına gelmeden art arda birçok mum boyunca üst banda yapışık şekilde ilerleyebilir — Bollinger'ın kendisi bu davranışı yorgunluk değil, trend gücü sinyali olarak nitelendiriyordu.</p><p>Daha sağlam bir okuma, tek bir izole dokunuşa değil, fiyatın zaman içinde bantlara göre nasıl davrandığına bakar. Üst banda dokunup hemen ardından tekrar bandın içine kapanarak bir dönüş mumu oluşturan bir fiyat, bandı kırıp mum mum ondan uzaklaşmaya devam eden bir fiyattan farklı bir sinyal taşır.</p><h2>Squeeze: bantlar sıkıştığında</h2><p>Göstergenin en bilinen kullanımlarından biri, bantların oldukça daraldığı ve tarihsel olarak düşük oynaklığa işaret ettiği an olan squeeze'i tespit etmektir. Squeeze dönemleri genellikle daha güçlü hareketlerden önce gelir, ancak gösterge bu hareketin hangi yöne eğileceğini söylemez.</p><p>Bir örnek: bir varlığın bantları arasındaki mesafe son üç ayın en düşük seviyesine düşerse, bu genellikle bir oynaklık genişlemesinden önce piyasanın sıkıştığını gösterir. Bu düzeni işleyen traderlar, kırılma gerçekleşmeden önce hangi tarafa geçileceğini tahmin etmeye çalışmak yerine, giriş yönünü belirlemek için genellikle hacimle birlikte aralığın bir tarafının kırılmasını beklerler.</p><h2>Parametreleri ayarlamak</h2><p>20 periyot ve 2 standart sapma çarpanı piyasa standardıdır, ancak sabit bir kural değildir. Daha kısa periyotlar (10 gibi) bantları son hareketlere daha duyarlı hale getirir ve daha kısa vadeli işlemler için kullanışlıdır. Daha küçük çarpanlar (1,5 gibi) bantları daraltır ve daha fazla yanlış sinyal pahasına daha fazla dokunuş üretir.</p><h2>Bantları isabetli kullanmak</h2><p>Bollinger Bantları, izole bir alım ya da satım tetikleyicisi olmaktan çok, göreceli oynaklık ve trend bağlamı okuması olarak daha iyi çalışır. RSI veya Stokastik gibi bir momentum göstergesiyle birleştirildiğinde ve sadece çizgiye dokunmaya değil fiyatın davranışına da dikkat edildiğinde, piyasanın daha eksiksiz bir okumasını oluşturmaya yardımcı olurlar; hiçbir bandın fiyatın beklenen noktada döneceğini garanti etmediğini her zaman akılda tutarak.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="bandas-de-bollinger-como-funcionam" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Göstergeler</span>
+            <h1>Bollinger Bantları: Nedir ve Nasıl Çalışır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#hesaplama-nasıl-calısır">Hesaplama nasıl çalışır</a></li>
+                <li><a href="#standart-sapma-tam-olarak-neyi-yakalıyor">Standart sapma tam olarak neyi yakalıyor</a></li>
+                <li><a href="#banda-degmek-neden-otomatik-bir-sinyal-degil">Banda değmek neden otomatik bir sinyal değil</a></li>
+                <li><a href="#squeeze-bantlar-sıkıstıgında">Squeeze: bantlar sıkıştığında</a></li>
+                <li><a href="#parametreleri-ayarlamak">Parametreleri ayarlamak</a></li>
+                <li><a href="#bantları-isabetli-kullanmak">Bantları isabetli kullanmak</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>1980'lerde John Bollinger tarafından geliştirilen Bollinger Bantları, sabit bir fiyat mesafesi kullanmak yerine varlığın oynaklığına kendiliğinden uyum sağlayan küçük bir gösterge grubunun parçasıdır. Bu özellik, gerçekte neyi ölçtükleri anlaşıldığı sürece, hem sakin hem de hareketli piyasalarda kullanışlı olmalarını sağlar.</p><p>Gösterge üç çizgiden oluşur: merkezi bir hareketli ortalama ve bu ortalama etrafındaki fiyatın standart sapmasından oluşturulan iki bant — üst ve alt. Bantlar arasındaki mesafe oynaklık arttığında genişler, azaldığında daralır.</p><h2 id="hesaplama-nasıl-calısır">Hesaplama nasıl çalışır</h2><p>Standart ayar, merkez çizgi olarak 20 periyotluk basit hareketli ortalamayı kullanır ve bantlar bu ortalamadan iki standart sapma uzaklıkta konumlandırılır:</p><ul><li><strong>Merkez bant</strong>: 20 periyotluk basit hareketli ortalama.</li><li><strong>Üst bant</strong>: 20 periyotluk ortalama + (2 × son 20 periyodun standart sapması).</li><li><strong>Alt bant</strong>: 20 periyotluk ortalama − (2 × son 20 periyodun standart sapması).</li></ul><p>Bir varlığın 20 periyotluk ortalamasının R$ 60,00 ve aynı dönemin standart sapmasının R$ 3,00 olduğunu varsayalım. Üst bant R$ 66,00 (60,00 + 2 × 3,00), alt bant ise R$ 54,00 (60,00 − 2 × 3,00) olur. Daha oynak bir dönemde standart sapma R$ 5,00'a yükselirse, merkez ortalama aynı yerde kalsa bile bantlar R$ 70,00 ve R$ 50,00'a doğru açılır.</p><h2 id="standart-sapma-tam-olarak-neyi-yakalıyor">Standart sapma tam olarak neyi yakalıyor</h2><p>Standart sapma bir dağılım istatistiğidir: son dönemdeki fiyatlar ortalama etrafında ne kadar çok değişmişse, değer o kadar büyük olur. Bantların nefes almasının nedeni budur — hareketin arttığı dönemlerde açılır, fiyat az dalgalanmaya başladığında daralır.</p><h2 id="banda-degmek-neden-otomatik-bir-sinyal-degil">Banda değmek neden otomatik bir sinyal değil</h2><p>Yaygın bir hata, üst banda değmeyi satış sinyali, alt banda değmeyi ise alım sinyali olarak ele almaktır; sanki bantlar sabit bir tavan ve tabanmış gibi. Oysa değiller. Güçlü bir yükseliş trendinde fiyat, herhangi bir dönüş anlamına gelmeden art arda birçok mum boyunca üst banda yapışık şekilde ilerleyebilir — Bollinger'ın kendisi bu davranışı yorgunluk değil, trend gücü sinyali olarak nitelendiriyordu.</p><p>Daha sağlam bir okuma, tek bir izole dokunuşa değil, fiyatın zaman içinde bantlara göre nasıl davrandığına bakar. Üst banda dokunup hemen ardından tekrar bandın içine kapanarak bir dönüş mumu oluşturan bir fiyat, bandı kırıp mum mum ondan uzaklaşmaya devam eden bir fiyattan farklı bir sinyal taşır.</p><h2 id="squeeze-bantlar-sıkıstıgında">Squeeze: bantlar sıkıştığında</h2><p>Göstergenin en bilinen kullanımlarından biri, bantların oldukça daraldığı ve tarihsel olarak düşük oynaklığa işaret ettiği an olan squeeze'i tespit etmektir. Squeeze dönemleri genellikle daha güçlü hareketlerden önce gelir, ancak gösterge bu hareketin hangi yöne eğileceğini söylemez.</p><p>Bir örnek: bir varlığın bantları arasındaki mesafe son üç ayın en düşük seviyesine düşerse, bu genellikle bir oynaklık genişlemesinden önce piyasanın sıkıştığını gösterir. Bu düzeni işleyen traderlar, kırılma gerçekleşmeden önce hangi tarafa geçileceğini tahmin etmeye çalışmak yerine, giriş yönünü belirlemek için genellikle hacimle birlikte aralığın bir tarafının kırılmasını beklerler.</p><h2 id="parametreleri-ayarlamak">Parametreleri ayarlamak</h2><p>20 periyot ve 2 standart sapma çarpanı piyasa standardıdır, ancak sabit bir kural değildir. Daha kısa periyotlar (10 gibi) bantları son hareketlere daha duyarlı hale getirir ve daha kısa vadeli işlemler için kullanışlıdır. Daha küçük çarpanlar (1,5 gibi) bantları daraltır ve daha fazla yanlış sinyal pahasına daha fazla dokunuş üretir.</p><h2 id="bantları-isabetli-kullanmak">Bantları isabetli kullanmak</h2><p>Bollinger Bantları, izole bir alım ya da satım tetikleyicisi olmaktan çok, göreceli oynaklık ve trend bağlamı okuması olarak daha iyi çalışır. RSI veya Stokastik gibi bir momentum göstergesiyle birleştirildiğinde ve sadece çizgiye dokunmaya değil fiyatın davranışına da dikkat edildiğinde, piyasanın daha eksiksiz bir okumasını oluşturmaya yardımcı olurlar; hiçbir bandın fiyatın beklenen noktada döneceğini garanti etmediğini her zaman akılda tutarak.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/5-populara-tekniska-indikatorer-hur-tolka/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Indikatorer",
       "author": {
@@ -172,42 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Navigeringsspår">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/sv/">Hem</a></li>
         <li><a href="/sv/blog/">Blogg</a></li>
         <li><span aria-current="page">5 populära tekniska indikatorer och hur du tolkar dem</span></li>
       </ol>
+      <a class="ap__voltar" href="/sv/blog/">Tillbaka</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indikatorer</span>
-        <h1>5 populära tekniska indikatorer och hur du tolkar dem</h1>
-        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Tekniska indikatorer är beräkningar tillämpade på pris och volym, visade ovanpå diagrammet för att hjälpa till att visualisera trend, rörelsestyrka och möjliga vändpunkter. Ingen indikator förutspår framtiden — alla härleds från tidigare pris — men använda med kriterier hjälper de till att organisera diagramavläsningen i stället för att bara besluta utifrån det visuella intrycket. Se fem av de mest använda och hur var och en tolkas i praktiken.</p>
-<h2>1. Glidande medelvärden: jämnar ut prisbruset</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicadores-tecnicos-populares-e-como-interpretar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Länken kopierad">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
+            </div>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-28">28 september 2026</time></p>
+            <span class="bq__tag">Indikatorer</span>
+            <h1>5 populära tekniska indikatorer och hur du tolkar dem</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-teamet</strong><small>Redaktionen</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Innehåll">
+              <p class="ap__indice-tit">Innehåll</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#1-glidande-medelvarden-jamnar-ut-prisbruset">1. Glidande medelvärden: jämnar ut prisbruset</a></li>
+                <li><a href="#2-rsi-mater-rorelsens-relativa-styrka">2. RSI: mäter rörelsens relativa styrka</a></li>
+                <li><a href="#3-macd-medelvardeskorsning-med-en-momentumkomponent">3. MACD: medelvärdeskorsning med en momentumkomponent</a></li>
+                <li><a href="#4-bollingerbanden-mater-volatiliteten">4. Bollingerbanden: mäter volatiliteten</a></li>
+                <li><a href="#5-volym-branslet-bakom-rorelsen">5. Volym: bränslet bakom rörelsen</a></li>
+                <li><a href="#hur-man-anvander-de-har-indikatorerna-utan-att-bli-for-beroe">Hur man använder de här indikatorerna utan att bli för beroende av dem</a></li>
+                <li><a href="#ett-exempel-pa-kombinerad-avlasning">Ett exempel på kombinerad avläsning</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Till toppen</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Tekniska indikatorer är beräkningar tillämpade på pris och volym, visade ovanpå diagrammet för att hjälpa till att visualisera trend, rörelsestyrka och möjliga vändpunkter. Ingen indikator förutspår framtiden — alla härleds från tidigare pris — men använda med kriterier hjälper de till att organisera diagramavläsningen i stället för att bara besluta utifrån det visuella intrycket. Se fem av de mest använda och hur var och en tolkas i praktiken.</p>
+<h2 id="1-glidande-medelvarden-jamnar-ut-prisbruset">1. Glidande medelvärden: jämnar ut prisbruset</h2>
 <p>Det enkla glidande medelvärdet på 20 perioder, till exempel, summerar stängningspriset för de senaste 20 candlarna och delar med 20, och uppdaterar den beräkningen vid varje ny candle. Det jämnar ut kortsiktiga svängningar och hjälper till att visualisera rörelsens övergripande riktning. När priset konsekvent ligger över medelvärdet brukar avläsningen vara uppåttrend; under det, nedåttrend. Korsningen mellan två medelvärden med olika perioder — ett på 9 och ett på 21, till exempel — används av många traders som en trendförändringssignal.</p>
-<h2>2. RSI: mäter rörelsens relativa styrka</h2>
+<h2 id="2-rsi-mater-rorelsens-relativa-styrka">2. RSI: mäter rörelsens relativa styrka</h2>
 <p>Relative Strength Index (RSI) varierar mellan 0 och 100 och mäter hastigheten och intensiteten hos de senaste prisförändringarna. Värden över 70 brukar indikera ett överköpt tillstånd — tillgången har stigit snabbt och kan vara mogen för en paus eller korrigering; värden under 30 indikerar översåld, det motsatta. Om en aktie stiger från R$ 40,00 till R$ 55,00 på några dagar och RSI når 78 betyder det inte nödvändigtvis att den kommer att falla — det betyder att uppgångstakten är historiskt utsträckt, en uppgift att beakta tillsammans med andra, inte isolerat.</p>
-<h2>3. MACD: medelvärdeskorsning med en momentumkomponent</h2>
+<h2 id="3-macd-medelvardeskorsning-med-en-momentumkomponent">3. MACD: medelvärdeskorsning med en momentumkomponent</h2>
 <p>MACD (Moving Average Convergence Divergence) består av två linjer härledda från exponentiella glidande medelvärden och ett histogram som visar skillnaden mellan dem. När MACD-linjen korsar över signallinjen läses det som ett tecken på växande köpkraft; korsningen nedåt, det motsatta. Histogrammets storlek anger intensiteten i det momentumet — ett växande histogram antyder att rörelsen vinner kraft, medan ett krympande histogram, även om trenden ännu inte vänt, antyder att den tappar fart.</p>
-<h2>4. Bollingerbanden: mäter volatiliteten</h2>
+<h2 id="4-bollingerbanden-mater-volatiliteten">4. Bollingerbanden: mäter volatiliteten</h2>
 <p>Bollingerbanden består av ett centralt glidande medelvärde och två band, ovanför och under, beräknade utifrån prisets standardavvikelse under de senaste perioderna. När volatiliteten ökar vidgas banden; när den minskar närmar de sig varandra. Ett pris som upprepade gånger rör det övre bandet kan indikera fortsatt köpkraft, inte nödvändigtvis en vändning — det vanliga misstaget hos den som börjar använda den här indikatorn är att anta att en beröring av bandet automatiskt betyder "för dyrt" eller "dags att sälja".</p>
-<h2>5. Volym: bränslet bakom rörelsen</h2>
+<h2 id="5-volym-branslet-bakom-rorelsen">5. Volym: bränslet bakom rörelsen</h2>
 <p>Volym visar hur många enheter av tillgången som handlats under en viss period. Ett motståndsgenombrott åtföljt av volym långt över genomsnittet tenderar att vara mer pålitligt än samma genombrott med svag volym, eftersom det indikerar fler deltagare som bekräftar den rörelsen. Ett praktiskt exempel: om en aktie bryter ett motstånd på R$ 30,00 och handlas med 3 gånger den genomsnittliga dagliga volymen, antyder det starkare övertygelse bakom rörelsen än ett genombrott med normal eller lägre volym.</p>
-<h2>Hur man använder de här indikatorerna utan att bli för beroende av dem</h2>
+<h2 id="hur-man-anvander-de-har-indikatorerna-utan-att-bli-for-beroe">Hur man använder de här indikatorerna utan att bli för beroende av dem</h2>
 <p>Ingen indikator fungerar bra isolerat — alla härleds från samma historiska pris, och tenderar därför att hålla med eller inte hålla med varandra tillsammans. Många traders kombinerar en trendindikator (glidande medelvärde), en styrkeindikator (RSI eller MACD) och volym, och söker bekräftelse mellan dem innan de bestämmer sig för en ingång. Att använda fem eller sex olika indikatorer samtidigt, i jakt på enhälligt samförstånd, brukar låsa beslutet mer än det hjälper — målet är att organisera diagramavläsningen, inte att ersätta omdömet med överlappad information.</p>
-<h2>Ett exempel på kombinerad avläsning</h2>
+<h2 id="ett-exempel-pa-kombinerad-avlasning">Ett exempel på kombinerad avläsning</h2>
 <p>Föreställ dig en aktie i uppåttrend, som handlas över det 20-periodiga glidande medelvärdet, med MACD som korsar uppåt och volymen för den senaste uppgångscandlen 50% över genomsnittet — men med RSI redan på 74. Den samlade avläsningen antyder en uppåttrend bekräftad av volym och momentum, men med en varningssignal: den senaste takten kan vara mogen för en paus. Ingen av de fyra signalerna skulle isolerat berätta den fullständiga historien — det är kombinationen som ger sammanhang åt beslutet, utan att garantera dess resultat.</p>
-        <div class="bq-post__cta">
-          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            <div class="bq-post__cta">
+              <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            </div>
+            <div class="ap__fim">
+              <p>Uppdaterad: <time datetime="2026-09-28">28 sep. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-teamet</strong><p>Duotides redaktion skriver guiderna och nyheterna i den här bloggen: hur marknaden fungerar, riskhantering och hur plattformen används. Inget här är investeringsrådgivning.</p></div>
+              <a class="btn ap__equipe" href="/sv/om-denna-webbplats/">Möt teamet</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Läs också</h2>
+        <aside class="ap__rel">
+          <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/vad-ar-adx-indikatorn-och-hur-fungerar-den/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är ADX-indikatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/vad-ar-stokastiska-oscillatorn-och-hur-fungerar-den/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Stokastiska Oscillatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
@@ -215,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

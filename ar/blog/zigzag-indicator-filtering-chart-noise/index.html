@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/zigzag-indicator-filtering-chart-noise/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "المؤشرات",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">مؤشر ZigZag: كيفية تصفية ضوضاء الرسم البياني</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">المؤشرات</span>
-        <h1>مؤشر ZigZag: كيفية تصفية ضوضاء الرسم البياني</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>النظر إلى رسم بياني للسعر دون أي تصفية يمكن أن يكون مرهقًا: عشرات الارتفاعات والانخفاضات الصغيرة تتنافس على الانتباه، ما يصعّب رؤية الحركة المهمة فعليًا وراء كل هذه الضوضاء. يوجد ZigZag تحديدًا لحل هذه المشكلة البصرية، برسم خطوط مستقيمة تربط فقط القمم والقيعان المهمة في الرسم البياني، متجاهلة ما يقع في المنتصف.</p><p>يشرح هذا المقال كيف يقرر ZigZag ما هو ضوضاء وما هو حركة مهمة، وما فائدته عمليًا، ولماذا لا ينبغي الخلط بينه وبين مولد إشارات دخول.</p><h2>كيف يقرر ZigZag ما يعرضه</h2><p>يُضبط المؤشر بحد أدنى للتغير، محدد كنسبة مئوية من السعر أو كعدد من النقاط. تُتجاهل أي حركة أصغر من هذا الحد، ولا يرسم ZigZag خطًا جديدًا إلا عندما يتحرك السعر بما يكفي لتجاوز هذا العتبة انطلاقًا من آخر قمة أو قاع محدد. مثلاً، بحد 5%، لا يظهر تذبذب بنسبة 2% في منتصف اتجاه في المؤشر إطلاقًا — لا يدخل في الرسم إلا عندما تتجاوز الحركة المتراكمة نسبة 5% المحددة.</p><h2>لماذا ZigZag مفيد فعلاً</h2><h3>تحديد القمم والقيعان المهمة</h3><p>بإزالة ضوضاء المدى القصير، يصبح أسهل رؤية أين توجد نقاط الانعكاس التي كانت مهمة فعلاً في تاريخ الأصل — معلومة مفيدة لرسم خطوط الدعم والمقاومة بثقة أكبر من محاولة تخمين ذلك في رسم بياني مليء بتذبذبات صغيرة.</p><h3>دعم قراءة الأنماط البيانية</h3><p>تصبح أنماط مثل القمة المزدوجة، أو الرأس والكتفين، أو قنوات الاتجاه أكثر وضوحًا عندما يكون ZigZag قد أزال الضوضاء الصغيرة بالفعل، عاملاً كهيكل بصري يمكن من خلاله تحديد هذه الأنماط بوضوح أكبر، بما في ذلك لمن يدرس عد الموجات في التحليل الفني. دون هذا المرشح، سيكون أصعب بكثير الفصل بصريًا بين الجزء من الرسم البياني الذي يمثل الحركة الرئيسية والجزء الذي هو مجرد تصحيح ضمنها.</p><h3>قياس مدى الحركات السابقة</h3><p>بما أن كل خط في ZigZag يربط قمة بقاع (أو العكس)، فإنه يسهل قياس عدد النقاط أو النسبة المئوية التي تحرك بها الأصل بسرعة في كل جزء من الرسم البياني، ما يساعد على معايرة توقعات الهدف بناءً على حركات سابقة بحجم مشابه.</p><h2>الحد الأهم لـ ZigZag</h2><p>ZigZag مؤشر ينظر إلى الوراء: لا يؤكد قمة أو قاعًا إلا بعد أن يكون السعر قد تحرك بما يكفي في الاتجاه المعاكس لإثبات أن تلك النقطة كانت فعلاً انعكاسًا. هذا يعني أن الخط الأخير للمؤشر يمكن أن يتغير، أو يُعاد رسمه، مع تشكل شموع جديدة — القمة التي بدت نهائية قبل قليل قد تختفي إذا استمر السعر بالارتفاع. لهذا السبب، استخدام ZigZag كمحفز دخول مباشر أمر خطير: لحظة ظهور الإشارة بوضوح، تكون الحركة التي يصفها قد حدثت بالفعل. هذا يجعل ZigZag أشبه بأداة استعادية منه بمؤشر استباقي.</p><h2>كيفية ضبط معيار الحساسية</h2><ul><li>حد صغير (مثلاً، 1% أو 2%) يُظهر تفاصيل أكثر، لكنه يعيد تضمين قدر كبير من ضوضاء المدى القصير.</li><li>حد أكبر (مثلاً، 8% أو 10%) يبسط الرسم البياني كثيرًا، لكنه قد يتجاهل انعكاسات مهمة للصفقات ذات المدى الأقصر.</li><li>يعتمد الضبط المثالي على الأصل والإطار الزمني للرسم البياني: الأصول الأكثر تقلبًا تتطلب عادة حدًا أكبر لتجنب توليد ضوضاء مفرطة، والعكس صحيح للأصول الأكثر استقرارًا.</li></ul><h2>كيفية استخدام ZigZag بمسؤولية</h2><p>أفضل طريقة للاستفادة من ZigZag هي كأداة تحليل بصري ودراسة تاريخية، لا كمحفز دخول. اجمع قراءة القمم والقيعان التي يبرزها مع مؤشر زخم، مثل RSI، أو مع قراءة الحجم، لتحديد اللحظة الفعلية للدخول في صفقة. مثل أي أداة قائمة على بيانات حدثت بالفعل، لا يتنبأ ZigZag بالحركة التالية، ومخاطرة الخسارة تظل قائمة حتى مع رسم بياني أكثر تنظيمًا بصريًا — يجدر دراسة سلوكه في حساب تجريبي قبل إدماجه في روتين تحليلك.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-zigzag-como-filtrar-o-ruido-do-grafico" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <span class="bq__tag">المؤشرات</span>
+            <h1>مؤشر ZigZag: كيفية تصفية ضوضاء الرسم البياني</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#كيف-يقرر-zigzag-ما-يعرضه">كيف يقرر ZigZag ما يعرضه</a></li>
+                <li><a href="#لماذا-zigzag-مفيد-فعلا">لماذا ZigZag مفيد فعلاً</a></li>
+                <li><a href="#الحد-الا-هم-لـ-zigzag">الحد الأهم لـ ZigZag</a></li>
+                <li><a href="#كيفية-ضبط-معيار-الحساسية">كيفية ضبط معيار الحساسية</a></li>
+                <li><a href="#كيفية-استخدام-zigzag-بمسو-ولية">كيفية استخدام ZigZag بمسؤولية</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>النظر إلى رسم بياني للسعر دون أي تصفية يمكن أن يكون مرهقًا: عشرات الارتفاعات والانخفاضات الصغيرة تتنافس على الانتباه، ما يصعّب رؤية الحركة المهمة فعليًا وراء كل هذه الضوضاء. يوجد ZigZag تحديدًا لحل هذه المشكلة البصرية، برسم خطوط مستقيمة تربط فقط القمم والقيعان المهمة في الرسم البياني، متجاهلة ما يقع في المنتصف.</p><p>يشرح هذا المقال كيف يقرر ZigZag ما هو ضوضاء وما هو حركة مهمة، وما فائدته عمليًا، ولماذا لا ينبغي الخلط بينه وبين مولد إشارات دخول.</p><h2 id="كيف-يقرر-zigzag-ما-يعرضه">كيف يقرر ZigZag ما يعرضه</h2><p>يُضبط المؤشر بحد أدنى للتغير، محدد كنسبة مئوية من السعر أو كعدد من النقاط. تُتجاهل أي حركة أصغر من هذا الحد، ولا يرسم ZigZag خطًا جديدًا إلا عندما يتحرك السعر بما يكفي لتجاوز هذا العتبة انطلاقًا من آخر قمة أو قاع محدد. مثلاً، بحد 5%، لا يظهر تذبذب بنسبة 2% في منتصف اتجاه في المؤشر إطلاقًا — لا يدخل في الرسم إلا عندما تتجاوز الحركة المتراكمة نسبة 5% المحددة.</p><h2 id="لماذا-zigzag-مفيد-فعلا">لماذا ZigZag مفيد فعلاً</h2><h3>تحديد القمم والقيعان المهمة</h3><p>بإزالة ضوضاء المدى القصير، يصبح أسهل رؤية أين توجد نقاط الانعكاس التي كانت مهمة فعلاً في تاريخ الأصل — معلومة مفيدة لرسم خطوط الدعم والمقاومة بثقة أكبر من محاولة تخمين ذلك في رسم بياني مليء بتذبذبات صغيرة.</p><h3>دعم قراءة الأنماط البيانية</h3><p>تصبح أنماط مثل القمة المزدوجة، أو الرأس والكتفين، أو قنوات الاتجاه أكثر وضوحًا عندما يكون ZigZag قد أزال الضوضاء الصغيرة بالفعل، عاملاً كهيكل بصري يمكن من خلاله تحديد هذه الأنماط بوضوح أكبر، بما في ذلك لمن يدرس عد الموجات في التحليل الفني. دون هذا المرشح، سيكون أصعب بكثير الفصل بصريًا بين الجزء من الرسم البياني الذي يمثل الحركة الرئيسية والجزء الذي هو مجرد تصحيح ضمنها.</p><h3>قياس مدى الحركات السابقة</h3><p>بما أن كل خط في ZigZag يربط قمة بقاع (أو العكس)، فإنه يسهل قياس عدد النقاط أو النسبة المئوية التي تحرك بها الأصل بسرعة في كل جزء من الرسم البياني، ما يساعد على معايرة توقعات الهدف بناءً على حركات سابقة بحجم مشابه.</p><h2 id="الحد-الا-هم-لـ-zigzag">الحد الأهم لـ ZigZag</h2><p>ZigZag مؤشر ينظر إلى الوراء: لا يؤكد قمة أو قاعًا إلا بعد أن يكون السعر قد تحرك بما يكفي في الاتجاه المعاكس لإثبات أن تلك النقطة كانت فعلاً انعكاسًا. هذا يعني أن الخط الأخير للمؤشر يمكن أن يتغير، أو يُعاد رسمه، مع تشكل شموع جديدة — القمة التي بدت نهائية قبل قليل قد تختفي إذا استمر السعر بالارتفاع. لهذا السبب، استخدام ZigZag كمحفز دخول مباشر أمر خطير: لحظة ظهور الإشارة بوضوح، تكون الحركة التي يصفها قد حدثت بالفعل. هذا يجعل ZigZag أشبه بأداة استعادية منه بمؤشر استباقي.</p><h2 id="كيفية-ضبط-معيار-الحساسية">كيفية ضبط معيار الحساسية</h2><ul><li>حد صغير (مثلاً، 1% أو 2%) يُظهر تفاصيل أكثر، لكنه يعيد تضمين قدر كبير من ضوضاء المدى القصير.</li><li>حد أكبر (مثلاً، 8% أو 10%) يبسط الرسم البياني كثيرًا، لكنه قد يتجاهل انعكاسات مهمة للصفقات ذات المدى الأقصر.</li><li>يعتمد الضبط المثالي على الأصل والإطار الزمني للرسم البياني: الأصول الأكثر تقلبًا تتطلب عادة حدًا أكبر لتجنب توليد ضوضاء مفرطة، والعكس صحيح للأصول الأكثر استقرارًا.</li></ul><h2 id="كيفية-استخدام-zigzag-بمسو-ولية">كيفية استخدام ZigZag بمسؤولية</h2><p>أفضل طريقة للاستفادة من ZigZag هي كأداة تحليل بصري ودراسة تاريخية، لا كمحفز دخول. اجمع قراءة القمم والقيعان التي يبرزها مع مؤشر زخم، مثل RSI، أو مع قراءة الحجم، لتحديد اللحظة الفعلية للدخول في صفقة. مثل أي أداة قائمة على بيانات حدثت بالفعل، لا يتنبأ ZigZag بالحركة التالية، ومخاطرة الخسارة تظل قائمة حتى مع رسم بياني أكثر تنظيمًا بصريًا — يجدر دراسة سلوكه في حساب تجريبي قبل إدماجه في روتين تحليلك.</p>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

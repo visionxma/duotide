@@ -44,6 +44,34 @@ function capa(a, i) {
   const k = contagem[a.categoria] = (contagem[a.categoria] || 0) + 1;
   return lista[(k - 1) % lista.length];
 }
+// Textos da página de artigo (layout no molde do blog da IQ Option), por idioma.
+const TXT = JSON.parse(fs.readFileSync(path.join(__dirname, 'textos-artigo.json'), 'utf8'));
+const VISITAS = 'https://duotide-visitas.visionxma.workers.dev';
+const fmtCurta = (d, codigo) => { try { return new Intl.DateTimeFormat(codigo, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
+const fmtLonga = (d, codigo) => { try { return new Intl.DateTimeFormat(codigo, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
+// "atualizado em": a data mais recente entre publicação, JSON em pt e tradução (dia no calendário de São Paulo)
+const diaSP = ms => new Date(ms).toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+function atualizado(a, pasta) {
+  const datas = [a.data];
+  if (a.atualizado) datas.push(a.atualizado);
+  for (const p of [path.join(PASTA, a.slugPt + '.json'), pasta ? path.join(TRAD, pasta, a.slugPt + '.json') : null]) {
+    if (p && fs.existsSync(p)) datas.push(diaSP(fs.statSync(p).mtimeMs));
+  }
+  return datas.sort().pop();
+}
+// dá id aos <h2> do corpo e devolve o sumário
+const ancora = t => t.replace(/<[^>]+>/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 's';
+function sumario(corpo) {
+  const itens = [], usados = new Set();
+  const html = corpo.replace(/<h2(\s[^>]*)?>([\s\S]*?)<\/h2>/g, (m, at = '', t) => {
+    let id = ancora(t), k = id, n = 2; while (usados.has(k)) k = id + '-' + n++; usados.add(k);
+    itens.push({ id: k, t: t.replace(/<[^>]+>/g, '').trim() });
+    return `<h2 id="${k}"${at.replace(/\sid="[^"]*"/, '')}>${t}</h2>`;
+  });
+  return { html, itens };
+}
+const slugSobre = pasta => { try { return (fs.readFileSync(path.join(RAIZ, '.i18n', pasta, 'sobre.html'), 'utf8').match(/<!--slug-->([^<]*)/) || [, 'sobre'])[1].trim(); } catch (e) { return 'sobre'; } };
+const OLHO = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const dataBR = d => d.split('-').reverse().join('/');
 
@@ -124,7 +152,7 @@ function gerar(pasta = '') {
     const home = pasta ? `/${pasta}/` : '/';
     const ld = { '@context': 'https://schema.org', '@graph': [
       { '@type': 'BlogPosting', '@id': url + '#artigo', headline: a.titulo, description: a.descricao, url, inLanguage: idioma.codigo,
-        datePublished: iso, dateModified: iso, image: SITE + a.img, articleSection: a.categoria,
+        datePublished: iso, dateModified: atualizado(a, pasta) + 'T09:00:00-03:00', image: SITE + a.img, articleSection: a.categoria,
         author: { '@type': 'Organization', name: B.equipe || 'Duotide', url: SITE + home }, publisher: { '@id': SITE + '/#organization' },
         mainEntityOfPage: url, isPartOf: { '@id': SITE + base(pasta) + '#blog' } },
       { '@type': 'BreadcrumbList', itemListElement: [
@@ -133,36 +161,75 @@ function gerar(pasta = '') {
         { '@type': 'ListItem', position: 3, name: a.titulo, item: url }] }] };
     const mesma = arts.filter(o => o.slug !== a.slug && o.categoria === a.categoria);
     const outros = [...mesma, ...arts.filter(o => o.slug !== a.slug && o.categoria !== a.categoria)].slice(0, 3);
+    const T = TXT[pasta] || TXT[''];
+    const sm = sumario(a.corpo);
+    const atual = atualizado(a, pasta);
+    const autor = esc(B.equipe || 'Duotide');
+    const avatar = '<img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async">';
+    const vis = cls => `<span class="ap__vis${cls}" data-visitas hidden>${OLHO}<b></b><span class="sr-only"> ${esc(T.visitas)}</span></span>`;
     const main = `<nav class="breadcrumb" aria-label="${esc(aria)}">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="${home}">${esc(C.nav.home)}</a></li>
         <li><a href="${base(pasta)}">${esc(C.nav.blog)}</a></li>
         <li><span aria-current="page">${esc(a.titulo)}</span></li>
       </ol>
+      <a class="ap__voltar" href="${base(pasta)}">${esc(T.voltar)}</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">${esc(a.categoria || 'Blog')}</span>
-        <h1>${esc(a.titulo)}</h1>
-        <p class="bq-post__meta">${esc(B.equipe || 'Duotide')} · <time datetime="${a.data}">${fmtData(a.data, idioma.codigo)}</time> · ${leitura(a.leitura)}</p>
-        <figure class="foto"><img src="${a.img}" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        ${a.corpo}
-${a.fonte ? `        <p class="artigo__fonte">${esc(B.fonte || '')} <a href="${esc(a.fonte)}" target="_blank" rel="noopener nofollow">Traders Union</a>.</p>
-` : ''}        <div class="bq-post__cta">
-          <p><strong>${esc(B.cta_titulo)}</strong> ${esc(B.cta_texto)}</p>
-          <a class="btn btn--primary" href="${AFF}" target="_blank" rel="noopener sponsored nofollow">${esc(B.cta_botao)}</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="${a.slugPt}" data-api="${VISITAS}" data-copiado="${esc(T.copiado)}">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="${a.data}">${fmtCurta(a.data, idioma.codigo)}</time><span class="ap__sep">${leitura(a.leitura)}</span></span>
+              ${vis('')}
+            </div>
+            <p class="ap__atual">${esc(T.atualizado)}: <time datetime="${atual}">${fmtLonga(atual, idioma.codigo)}</time></p>
+            <span class="bq__tag">${esc(a.categoria || 'Blog')}</span>
+            <h1>${esc(a.titulo)}</h1>
+            <div class="ap__autor">${avatar}<span><strong>${autor}</strong><small>${esc(T.funcao)}</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="${a.img}" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="${esc(T.conteudo)}">
+${sm.itens.length ? `              <p class="ap__indice-tit">${esc(T.conteudo)}</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+${sm.itens.map(i => `                <li><a href="#${i.id}">${esc(i.t)}</a></li>`).join('\n')}
+              </ol></div>
+` : '              <div class="ap__trilho ap__trilho--so"><span class="ap__barra"></span></div>\n'}              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>${esc(T.topo)}</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            ${sm.html}
+${a.fonte ? `            <p class="artigo__fonte">${esc(B.fonte || '')} <a href="${esc(a.fonte)}" target="_blank" rel="noopener nofollow">Traders Union</a>.</p>
+` : ''}            <div class="bq-post__cta">
+              <p><strong>${esc(B.cta_titulo)}</strong> ${esc(B.cta_texto)}</p>
+              <a class="btn btn--primary" href="${AFF}" target="_blank" rel="noopener sponsored nofollow">${esc(B.cta_botao)}</a>
+            </div>
+            <div class="ap__fim">
+              <p>${esc(T.atualizado)}: <time datetime="${atual}">${fmtCurta(atual, idioma.codigo)}</time></p>
+              <div class="ap__acoes">${vis(' ap__vis--pilula')}<button class="ap__compartilhar" type="button">${esc(T.compartilhar)} <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>${autor}</strong><p>${esc(T.bio)}</p></div>
+              <a class="btn ap__equipe" href="${home}${slugSobre(pasta)}/">${esc(T.equipe_btn)}</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>${esc(B.leia)}</h2>
+        <aside class="ap__rel">
+          <h2>${esc(T.relacionados)}</h2>
           <div class="bq__grade bq__grade--3">
 ${outros.map(o => `            <a class="bq__card" href="${o.href}"><img src="${o.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${esc(o.titulo)}</span><span class="bq__meta">${fmtData(o.data, idioma.codigo)} · ${leitura(o.leitura)}</span></a>`).join('\n')}
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>`;
     let h = casca;
     h = h.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${esc(a.titulo)} | Blog Duotide</title>`);

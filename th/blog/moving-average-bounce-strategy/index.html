@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/th/blog/moving-average-bounce-strategy/",
       "inLanguage": "th",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "กลยุทธ์",
       "author": {
@@ -172,45 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="เส้นทางนำทาง">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/th/">หน้าแรก</a></li>
         <li><a href="/th/blog/">บล็อก</a></li>
         <li><span aria-current="page">กลยุทธ์เด้งกลับที่ค่าเฉลี่ยเคลื่อนที่สำหรับระยะสั้น</span></li>
       </ol>
+      <a class="ap__voltar" href="/th/blog/">ย้อนกลับ</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">กลยุทธ์</span>
-        <h1>กลยุทธ์เด้งกลับที่ค่าเฉลี่ยเคลื่อนที่สำหรับระยะสั้น</h1>
-        <p class="bq-post__meta">ทีม Duotide · <time datetime="2026-09-24">24/09/2569</time> · อ่าน 4 นาที</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>ในบรรดากลยุทธ์ตามแนวโน้ม กลยุทธ์ที่เรียกว่า “เด้งกลับที่ค่าเฉลี่ยเคลื่อนที่” (moving average bounce) มีข้อได้เปรียบที่ชัดเจน คือใช้อินดิเคเตอร์ตัวเดียว มองเห็นได้ง่ายบนกราฟ และไม่ต้องท่องจำกฎความสอดคล้องหลายข้อเพื่อเริ่มฝึกฝน</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-repique-na-media-movel" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="คัดลอกลิงก์แล้ว">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 ก.ย. 2569</time><span class="ap__sep">อ่าน 4 นาที</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span>
+            </div>
+            <p class="ap__atual">อัปเดตเมื่อ: <time datetime="2026-09-28">28 กันยายน 2569</time></p>
+            <span class="bq__tag">กลยุทธ์</span>
+            <h1>กลยุทธ์เด้งกลับที่ค่าเฉลี่ยเคลื่อนที่สำหรับระยะสั้น</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>ทีม Duotide</strong><small>ทีมบรรณาธิการ</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="สารบัญ">
+              <p class="ap__indice-tit">สารบัญ</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#การเล-อกค-าเฉล-ยเคล-อนท">การเลือกค่าเฉลี่ยเคลื่อนที่</a></li>
+                <li><a href="#ย-นย-นแนวโน-มก-อนเทรด">ยืนยันแนวโน้มก่อนเทรด</a></li>
+                <li><a href="#ส-ญญาณเข-าเทรด">สัญญาณเข้าเทรด</a></li>
+                <li><a href="#ทำไมต-องคำนวณความเส-ยงก-อนเข-าเทรด">ทำไมต้องคำนวณความเสี่ยงก่อนเข้าเทรด</a></li>
+                <li><a href="#ข-อผ-ดพลาดท-พบบ-อยในกลย-ทธ-น">ข้อผิดพลาดที่พบบ่อยในกลยุทธ์นี้</a></li>
+                <li><a href="#ฝ-กฝนการเด-งกล-บก-อนเทรดด-วยเง-นท-นจร-ง">ฝึกฝนการเด้งกลับก่อนเทรดด้วยเงินทุนจริง</a></li>
+                <li><a href="#ข-อด-และข-อจำก-ดของว-ธ-น">ข้อดีและข้อจำกัดของวิธีนี้</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>กลับขึ้นด้านบน</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>ในบรรดากลยุทธ์ตามแนวโน้ม กลยุทธ์ที่เรียกว่า “เด้งกลับที่ค่าเฉลี่ยเคลื่อนที่” (moving average bounce) มีข้อได้เปรียบที่ชัดเจน คือใช้อินดิเคเตอร์ตัวเดียว มองเห็นได้ง่ายบนกราฟ และไม่ต้องท่องจำกฎความสอดคล้องหลายข้อเพื่อเริ่มฝึกฝน</p>
 <p>แนวคิดหลักนั้นง่าย ในแนวโน้มที่ชัดเจน ราคาแทบจะไม่เคยขึ้น (หรือลง) เป็นเส้นตรง มันเคลื่อนไปข้างหน้า ย่อตัวกลับจนแตะหรือเข้าใกล้ค่าเฉลี่ยเคลื่อนที่ แล้วกลับไปในทิศทางเดิม และการย่อตัวตามด้วยการเด้งกลับนี้เองที่กลยุทธ์นี้พยายามจับ</p>
-<h2>การเลือกค่าเฉลี่ยเคลื่อนที่</h2>
+<h2 id="การเล-อกค-าเฉล-ยเคล-อนท">การเลือกค่าเฉลี่ยเคลื่อนที่</h2>
 <p>ตัวเลือกที่นิยมที่สุดคือค่าเฉลี่ยเคลื่อนที่แบบเอ็กซ์โพเนนเชียล (EMA) 21 ช่วง เพราะตอบสนองต่อราคาล่าสุดได้เร็วกว่าค่าเฉลี่ยแบบธรรมดาขนาดเดียวกัน ค่าเฉลี่ยที่สั้นกว่า เช่น 9 ช่วง สร้างสัญญาณมากกว่าแต่ก็สร้างการเด้งกลับหลอกมากกว่าด้วย ค่าเฉลี่ยที่ยาวกว่า เช่น 50 ช่วง กรองสัญญาณรบกวนได้ดีแต่ตอบสนองช้ากว่าและสร้างโอกาสน้อยกว่า ไม่มีช่วงเวลาที่ “ถูกต้อง” ตายตัว มีเพียงช่วงเวลาที่เหมาะสมกับไทม์เฟรมและสินทรัพย์ที่คุณติดตาม</p>
-<h2>ยืนยันแนวโน้มก่อนเทรด</h2>
+<h2 id="ย-นย-นแนวโน-มก-อนเทรด">ยืนยันแนวโน้มก่อนเทรด</h2>
 <p>ก่อนมองหาการเด้งกลับ ต้องยืนยันก่อนว่ามีแนวโน้มอยู่จริง ทำได้โดยดูความชันของค่าเฉลี่ยเคลื่อนที่เอง หากมันเอียงขึ้นและราคาส่วนใหญ่ยังคงอยู่เหนือมัน แนวโน้มขาขึ้นกำลังทำงานอยู่ และมีเพียงการเข้าซื้อเท่านั้นที่สมเหตุสมผลในกลยุทธ์นี้ หากค่าเฉลี่ยเอียงลงและราคาอยู่ต่ำกว่ามัน สถานการณ์จะตรงข้าม และมีเพียงการเข้าขายเท่านั้นที่ควรพิจารณา</p>
-<h2>สัญญาณเข้าเทรด</h2>
+<h2 id="ส-ญญาณเข-าเทรด">สัญญาณเข้าเทรด</h2>
 <p>สมมติว่ามีหุ้นเทรดอยู่ที่ R$ 5,40 ในแนวโน้มขาขึ้น โดย EMA 21 ช่วงก็ปรับตัวขึ้นเช่นกัน ราคาย่อตัวลงไปที่ R$ 5,39 แตะค่าเฉลี่ย และปิดแท่งเทียนขาขึ้นเหนือค่าเฉลี่ยเล็กน้อยที่ R$ 5,41 การปิดเหนือค่าเฉลี่ยนี้หลังจากแตะ คือตัวกระตุ้นการเข้าเทรด ไม่ใช่การแตะเพียงอย่างเดียว เพราะราคาอาจแค่ทะลุผ่านค่าเฉลี่ยโดยไม่เด้งกลับ</p>
 <p>จุดตัดขาดทุนในตัวอย่างนี้จะอยู่ต่ำกว่าจุดต่ำสุดของแท่งเทียนเด้งกลับเล็กน้อย สมมติที่ R$ 5,35 ซึ่งเป็นความเสี่ยง R$ 0,06 ต่อหุ้น เมื่อใช้อัตราส่วนความเสี่ยงต่อผลตอบแทน 1 ต่อ 2 เป้าหมายจะอยู่ที่ R$ 0,12 เหนือราคาเข้า นั่นคือ R$ 5,53</p>
-<h2>ทำไมต้องคำนวณความเสี่ยงก่อนเข้าเทรด</h2>
+<h2 id="ทำไมต-องคำนวณความเส-ยงก-อนเข-าเทรด">ทำไมต้องคำนวณความเสี่ยงก่อนเข้าเทรด</h2>
 <p>เมื่อกำหนดความเสี่ยงไว้ที่ R$ 0,06 ต่อหุ้น และขีดจำกัดความเสี่ยงของบัญชีอยู่ที่ เช่น 1% ของเงินทุน R$ 10.000 นั่นคือความเสี่ยงสูงสุด R$ 100 ต่อการเทรด ก็สามารถคำนวณขนาดสถานะก่อนเข้าเทรดได้ คือ R$ 100 ÷ R$ 0,06 ≈ 1.666 หุ้น การคำนวณนี้ช่วยหลีกเลี่ยงกับดักที่พบบ่อยสองอย่าง คือการเทรดด้วยลอตที่ใหญ่เกินไปสำหรับจุดตัดขาดทุนที่กำหนดไว้ หรือกำหนดจุดตัดขาดทุนแคบเกินไปจนสัญญาณรบกวนปกติของตลาดทำให้เทรดเดอร์ออกจากการเทรดไปแล้ว</p>
-<h2>ข้อผิดพลาดที่พบบ่อยในกลยุทธ์นี้</h2>
+<h2 id="ข-อผ-ดพลาดท-พบบ-อยในกลย-ทธ-น">ข้อผิดพลาดที่พบบ่อยในกลยุทธ์นี้</h2>
 <p>ข้อผิดพลาดที่พบบ่อยที่สุดคือการสับสนระหว่างการเข้าใกล้ค่าเฉลี่ยใด ๆ กับสัญญาณเข้าเทรด ต้องรอการปิดของแท่งเทียนยืนยันก่อน ไม่ใช่รีบเข้าก่อน ข้อผิดพลาดที่สองคือการใช้กลยุทธ์นี้ในตลาดที่ไม่มีแนวโน้มชัดเจน ซึ่งราคาตัดผ่านค่าเฉลี่ยซ้ำ ๆ โดยไม่มีทิศทาง สร้างการขาดทุนเล็ก ๆ ต่อเนื่อง ข้อผิดพลาดที่สามคือการย้ายจุดตัดขาดทุนเพื่อ “ให้พื้นที่มากขึ้น” แก่การเด้งกลับหลังจากการเทรดกำลังขาดทุนอยู่แล้ว ซึ่งเปลี่ยนความเสี่ยงที่คำนวณไว้ให้กลายเป็นความเสี่ยงที่ไม่มีขอบเขต</p>
-<h2>ฝึกฝนการเด้งกลับก่อนเทรดด้วยเงินทุนจริง</h2>
+<h2 id="ฝ-กฝนการเด-งกล-บก-อนเทรดด-วยเง-นท-นจร-ง">ฝึกฝนการเด้งกลับก่อนเทรดด้วยเงินทุนจริง</h2>
 <p>เนื่องจากพฤติกรรมการเด้งกลับแตกต่างกันมากระหว่างสินทรัพย์ที่ผันผวนและสินทรัพย์ที่มั่นคงกว่า ควรทบทวนประวัติของกราฟโดยนับว่าราคาเด้งกลับที่ค่าเฉลี่ยที่เลือกอย่างชัดเจนกี่ครั้ง ก่อนนำกลยุทธ์ไปใช้จริง สิ่งนี้ช่วยปรับความคาดหวังให้เหมาะสม ไม่มีกลยุทธ์ที่อิงค่าเฉลี่ยเคลื่อนที่ใดที่ทายถูกทุกครั้ง และส่วนหนึ่งของงานคือการยอมรับผลขาดทุนเล็ก ๆ ที่ควบคุมได้เป็นส่วนหนึ่งของกระบวนการ โดยไม่พยายามเอาคืนทั้งหมดในครั้งเดียวด้วยสถานะที่ใหญ่ขึ้น</p>
-<h2>ข้อดีและข้อจำกัดของวิธีนี้</h2>
+<h2 id="ข-อด-และข-อจำก-ดของว-ธ-น">ข้อดีและข้อจำกัดของวิธีนี้</h2>
 <p>ข้อดีหลักของการเด้งกลับที่ค่าเฉลี่ยเคลื่อนที่คือความเรียบง่าย อินดิเคเตอร์ตัวเดียว กฎการเข้าเพียงข้อเดียว และตัวกรองแนวโน้มเพียงตัวเดียว ทำให้วิธีนี้ทำตามได้ง่ายโดยไม่ต้องพึ่งพาหลายหน้าจอหรืออินดิเคเตอร์หลายตัวที่ต้องเห็นตรงกันพร้อมกัน สิ่งนี้ยังช่วยให้ทบทวนการเทรดในภายหลังได้ง่ายขึ้น เพราะชัดเจนว่าทำไมแต่ละการเข้าเทรดจึงเกิดขึ้น</p>
 <p>ข้อจำกัดหลักคืออีกด้านหนึ่งของเหรียญเดียวกัน เนื่องจากต้องพึ่งพาแนวโน้มที่มีอยู่แล้ว กลยุทธ์นี้จึงทำงานได้ไม่ดีในตลาดไซด์เวย์ ที่ไม่มีทิศทางหลักให้ราคา “เด้งกลับไปตาม” การรู้จักสังเกตอย่างรวดเร็วว่าเมื่อไหร่ที่ตลาดหยุดมีแนวโน้มและเข้าสู่ไซด์เวย์ ซึ่งมักเป็นตอนที่ค่าเฉลี่ยเคลื่อนที่เองหยุดเอียงและกลายเป็นแนวนอน คือสิ่งที่ช่วยป้องกันไม่ให้ยืนกรานใช้วิธีนี้นอกบริบทที่มันได้ผล</p>
-        <div class="bq-post__cta">
-          <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+            <div class="bq-post__cta">
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+            </div>
+            <div class="ap__fim">
+              <p>อัปเดตเมื่อ: <time datetime="2026-09-28">28 ก.ย. 2569</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span><button class="ap__compartilhar" type="button">แชร์ <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>ทีม Duotide</strong><p>ทีมบรรณาธิการของ Duotide เขียนคู่มือและข่าวในบล็อกนี้ ทั้งเรื่องการทำงานของตลาด การบริหารความเสี่ยง และการใช้แพลตฟอร์ม เนื้อหาทั้งหมดไม่ใช่คำแนะนำการลงทุน</p></div>
+              <a class="btn ap__equipe" href="/th/about/">รู้จักทีมงาน</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>อ่านเพิ่มเติม</h2>
+        <aside class="ap__rel">
+          <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/th/blog/ema-crossover-trading-strategy/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">การตัดกันของค่าเฉลี่ยเคลื่อนที่แบบเอ็กซ์โพเนนเชียล (EMA) ในการเทรด</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
             <a class="bq__card" href="/th/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีเลือกระยะเวลา (วันหมดอายุ) ของการเทรด</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
@@ -218,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -282,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/gamma-squeeze-vs-short-squeeze-diferencias/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp",
       "articleSection": "Acciones",
       "author": {
@@ -172,47 +172,85 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Gamma squeeze vs short squeeze: cuál es la diferencia real</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Acciones</span>
-        <h1>Gamma squeeze vs short squeeze: cuál es la diferencia real</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="gamma-squeeze-vs-short-squeeze-diferencas" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">4 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-27">27 de septiembre de 2026</time></p>
+            <span class="bq__tag">Acciones</span>
+            <h1>Gamma squeeze vs short squeeze: cuál es la diferencia real</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#short-squeeze-quien-vendio-prestado-siendo-forzado-a-recompr">Short squeeze: quien vendió prestado siendo forzado a recomprar</a></li>
+                <li><a href="#gamma-squeeze-quien-vendio-opciones-de-compra-ajustando-la-p">Gamma squeeze: quien vendió opciones de compra ajustando la protección</a></li>
+                <li><a href="#los-dos-pueden-ocurrir-al-mismo-tiempo">Los dos pueden ocurrir al mismo tiempo</a></li>
+                <li><a href="#lo-que-los-datos-publicos-pueden-y-no-pueden-probar">Lo que los datos públicos pueden y no pueden probar</a></li>
+                <li><a href="#el-caso-gamestop-en-2021-por-que-una-unica-etiqueta-no-basto">El caso GameStop en 2021: por qué una única etiqueta no bastó</a></li>
+                <li><a href="#el-riesgo-de-intentar-entrar-despues-de-que-el-grafico-ya-se">El riesgo de intentar entrar después de que el gráfico ya se disparó</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>Short squeeze y gamma squeeze son dos términos que suelen aparecer juntos cada vez que una acción se dispara de forma repentina, pero describen mecanismos diferentes, con compradores diferentes detrás de la fuerza compradora. Confundir los dos puede llevar a apostar por una continuación del movimiento que en realidad no tiene el mismo combustible detrás.</p>
-<h2>Short squeeze: quien vendió prestado siendo forzado a recomprar</h2>
+<h2 id="short-squeeze-quien-vendio-prestado-siendo-forzado-a-recompr">Short squeeze: quien vendió prestado siendo forzado a recomprar</h2>
 <p>Un short squeeze empieza con traders que vendieron acciones prestadas, apostando por una caída de precio. Si el precio sube en vez de caer, esas posiciones empiezan a acumular pérdidas. Llamadas de margen, un costo creciente para mantener el alquiler de las acciones o límites de riesgo internos pueden forzar a esos vendedores a recomprar las acciones para cerrar la posición. Si muchos vendedores intentan recomprar al mismo tiempo, esa demanda extra puede empujar el precio aún más hacia arriba, presionando a otros vendedores a hacer lo mismo.</p>
-<h2>Gamma squeeze: quien vendió opciones de compra ajustando la protección</h2>
+<h2 id="gamma-squeeze-quien-vendio-opciones-de-compra-ajustando-la-p">Gamma squeeze: quien vendió opciones de compra ajustando la protección</h2>
 <p>Un gamma squeeze tiene un origen diferente, ligado al mercado de opciones. Cuando muchos inversores compran opciones de compra de una acción, el vendedor de esas opciones, generalmente un formador de mercado, puede quedar con una exposición que necesita protegerse. Si ese vendedor tiene una posición neta negativa en gamma, puede necesitar comprar acciones del activo para protegerse a medida que el precio sube. Como el precio al subir vuelve a cambiar esa exposición, puede ser necesario comprar aún más acciones, creando un ciclo que refuerza la propia alza.</p>
-<h2>Los dos pueden ocurrir al mismo tiempo</h2>
+<h2 id="los-dos-pueden-ocurrir-al-mismo-tiempo">Los dos pueden ocurrir al mismo tiempo</h2>
 <p>Un alza común o una noticia relevante puede atraer compradores de acciones y de opciones de compra al mismo tiempo. Si parte de esa compra de opciones deja a los formadores de mercado con posición vendida en gamma, la protección de esos formadores puede añadir demanda extra. El precio más alto puede entonces presionar a los vendedores en corto a recomprar sus posiciones. Las dos fuerzas pueden alimentarse dentro del mismo movimiento, lo que hace difícil separar cuánto del alza vino de cada una.</p>
-<h2>Lo que los datos públicos pueden y no pueden probar</h2>
+<h2 id="lo-que-los-datos-publicos-pueden-y-no-pueden-probar">Lo que los datos públicos pueden y no pueden probar</h2>
 <ul>
 <li><strong>Volumen de opciones de compra:</strong> muestra cuántos contratos se negociaron, pero no prueba que los formadores de mercado quedaron vendidos en gamma, porque parte de esas opciones pudo haber sido vendida por otros inversores o negociada dentro de estructuras con posiciones opuestas.</li>
 <li><strong>Contratos abiertos:</strong> muestra cuántos contratos siguen activos, pero no revela quién está de cada lado de la operación.</li>
 <li><strong>Posición vendida en corto (short interest):</strong> suele publicarse solo dos veces al mes, así que un número alto no prueba que los vendedores estén recomprando ahora, solo que la posición existía en la última fecha de referencia.</li>
 </ul>
 <p>El precio y el volumen subiendo juntos son consistentes con cualquiera de las dos historias, o con ninguna de ellas, ya que compradores comunes también pueden estar detrás del movimiento.</p>
-<h2>El caso GameStop en 2021: por qué una única etiqueta no bastó</h2>
+<h2 id="el-caso-gamestop-en-2021-por-que-una-unica-etiqueta-no-basto">El caso GameStop en 2021: por qué una única etiqueta no bastó</h2>
 <p>El análisis de la SEC sobre el caso GameStop, en enero de 2021, encontró evidencias de que vendedores en corto conocidos compraron acciones durante períodos específicos del alza, lo que sugiere que parte del movimiento vino de la recompra de posiciones vendidas. Pero ese mismo análisis identificó que esa recompra representó solo una fracción pequeña del volumen total de compra, y que el precio siguió elevado durante semanas después de que el efecto directo de la recompra debería haber disminuido. El análisis también observó actividad elevada en opciones, pero gran parte vino de la compra de opciones de venta, y los formadores de mercado estaban comprando, y no vendiendo opciones de compra, lo que no coincide con el patrón esperado de un gamma squeeze clásico. La conclusión fue que el sentimiento positivo sostenido, más que cualquiera de los dos mecanismos de forma aislada, ayudó a mantener el precio elevado durante tanto tiempo.</p>
-<h2>El riesgo de intentar entrar después de que el gráfico ya se disparó</h2>
+<h2 id="el-riesgo-de-intentar-entrar-despues-de-que-el-grafico-ya-se">El riesgo de intentar entrar después de que el gráfico ya se disparó</h2>
 <p>Perseguir un squeeze después de que el movimiento ya se volvió visible suele significar comprar en el peor momento posible. Los spreads pueden ampliarse, las opciones pueden encarecerse por la volatilidad implícita elevada, y una orden a mercado puede ejecutarse bastante lejos del último precio mostrado en pantalla. Ninguno de estos mecanismos garantiza un próximo movimiento, y un alza fuerte puede revertirse en cuanto la recompra o la protección de opciones pierda fuerza. Definir el riesgo antes de entrar sigue siendo más importante que intentar adivinar qué etiqueta explica mejor un movimiento que ya ocurrió.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-27">27 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/por-que-cayo-la-accion-de-nike-salida-del-sp-100/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">¿Por qué cayó la acción de Nike? La salida del S&amp;P 100 explicada</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/guia-de-operaciones-de-corto-plazo-en-acciones/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Guía de operaciones de corto plazo en acciones: 4 etapas</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -220,7 +258,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -284,6 +322,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

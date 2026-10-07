@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/trading-algoritmasi-nedir-ve-nasil-calisir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Stratejiler",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Trading Algoritması Nedir ve Nasıl Çalışır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Stratejiler</span>
-        <h1>Trading Algoritması Nedir ve Nasıl Çalışır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 6 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Trading algoritması terimi genelde gerçekte olduğundan daha karmaşık gelir. Aslında bir algoritma, anlık sezgiye bağlı kalmadan ne zaman alınacağına, ne zaman satılacağına ve ne kadar riske girileceğine karar veren bir dizi mantıksal kuraldır. Basit bir hareketli ortalama kesişim kuralı kadar basit veya onlarca değişkenli bir istatistiksel model kadar karmaşık olabilir.</p><p>Bu makalede, trading algoritmasının ne olduğunu, bireysel traderlar tarafından kullanılan ana türleri ve birini kurmaya veya kullanmaya değip değmeyeceğini nasıl değerlendireceğinizi öğreneceksiniz.</p><h2>Algoritma, strateji ve robot arasındaki fark</h2><p>Bu üç terimi karıştırmak yaygındır, ama eş anlamlı değildirler. Strateji genel fikirdir, örneğin yükseliş trendinde olan ve bir direnci kıran varlıkları almak. Algoritma, bu fikrin kesin sayılarla test edilebilir kurallara dönüştürülmüş halidir: hangi hareketli ortalama periyodu, hangi kırılım yüzdesi, hangi stop büyüklüğü. Robot ise bu algoritmayı manuel müdahale olmadan otomatik olarak yürüten bilgisayar programıdır.</p><p>Bir stratejiniz olabilir ve hiçbir zaman robot programlamadan, algoritmayı her işlemde kafanızdan uygulayarak manuel olarak yürütebilirsiniz. Birçok deneyimli trader tam olarak bunu yapar: bir algoritmanın mantığını kullanırlar, ama alım ve satım düğmesine kendi elleriyle basarlar.</p><h2>Trading algoritmasının yaygın türleri</h2><h3>Trend takipçileri</h3><p>Fiyat tutarlı bir şekilde yükseldiğinde alır ve yükseliş trendi güç kaybettiğinde satarlar, genelde referans olarak hareketli ortalamaları veya trend gücü göstergelerini kullanırlar.</p><h3>Ortalamaya dönüş</h3><p>Fiyatın aşırı bir hareketten sonra tarihsel bir ortalamaya dönme eğiliminde olduğu ilkesinden yola çıkarlar; varlık çok hızlı düştüğünde alır, algoritmanın makul saydığından daha fazla yükseldiğinde satarlar.</p><h3>Arbitraj</h3><p>Farklı aracı kurumlar veya piyasalar arasında aynı varlığın küçük fiyat farklarını ararlar, daha ucuz olan yerden alıp neredeyse aynı anda daha pahalı olan yerde satarlar. Bu tür bir algoritma genelde uygulanabilir olmak için daha büyük sermaye ve çok hızlı yürütme gerektirir.</p><h2>Kullanmadan önce bir algoritma nasıl değerlendirilir</h2><p>İlk kriter kuralların netliğidir: iyi bir algoritma, öznel yoruma yer bırakmadan birkaç cümleyle tarif edilebilir. İkincisi, iyi ve kötü piyasa dönemlerini içerecek kadar uzun bir periyoda ait verilerle yapılan test geçmişidir.</p><p>Sayısal bir örnek, bir algoritmanın risk-getiri ilişkisinin önemini anlamaya yardımcı olur. Yüzde 45 başarı oranına sahip, kaybeden işlem başına R$ 100 riske giren ve kazanan işlem başına ortalama R$ 180 kazanan bir algoritma düşünün. İşlem başına beklenen sonuç (0,45 x R$ 180) − (0,55 x R$ 100) = R$ 81 − R$ 55 = pozitif R$ 26 olurdu; yarıdan fazlasını kaybetmesine rağmen. Bu, tek başına başarı oranının bir algoritmanın kalitesi hakkında hiçbir şey söylemediğini gösterir: ortalama kazanç ve kayıplar arasındaki ilişki de aynı derecede önemlidir.</p><ul><li>Girişte ve çıkışta belirsizlik içermeyen net kurallar.</li><li>Yükseliş ve düşüş piyasalarını içeren uzun bir test geçmişi.</li><li>Sadece başarı oranı değil, tanımlanmış bir risk-getiri ilişkisi.</li><li>Beklenen sonuç hesabına dahil edilmiş işlem maliyetleri.</li></ul><h2>Hazır algoritmaları benimserken dikkat edilmesi gerekenler</h2><p>Tutarlı sonuçlar vaadiyle hazır satılan algoritmalar vardır. Herhangi birini benimsemeden önce, sadece kazançlı ayların bir özetini değil, tam işlem geçmişini isteyin ve test döneminin ani düşüşler veya yüksek volatilite gibi zor piyasa dönemlerini içerip içermediğini kontrol edin.</p><p>Algoritmanın manuel olarak mı yoksa bir robot tarafından mı yürütüldüğünden bağımsız olarak, Duotide gibi emirleri uygulamak için kullanılan platform, stratejinin arkasındaki kuralların kalitesine müdahale etmez. Kötü tasarlanmış bir algoritma her platformda zarar üretir.</p><h2>Kendi algoritmanızı nasıl kurmaya başlarsınız</h2><p>Trading fikrinizi basit sayısal kurallara yazın, herhangi bir şey programlamadan önce tarihsel bir grafikte manuel olarak test edin ve mantığın gerçek verilerle mantıklı olduğunu doğruladıktan sonra otomatikleştirmeyi düşünün. Algoritmayı periyodik olarak gözden geçirmekte de fayda var: altı ay önce iyi çalışan bir kural seti, piyasa davranışı değişirse etkinliğini kaybedebilir; bu yüzden gerçek sonuçları beklenenle karşılaştırmak işin isteğe bağlı bir aşaması değil, parçasıdır.</p><p>Ne kadar iyi kurulmuş olursa olsun, hiçbir algoritmanın kayıp riskini ortadan kaldırmadığını unutmayın — sadece bu riskin nasıl üstlenildiğini düzenler. İstatistiksel olarak beklenen kayıp dizilerinde bile kurallara uyma disiplini, genelde algoritmanın kendi teknik sofistikasyonundan daha fazla sonuca ağırlık verir.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-algoritmo-de-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">6 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-28">28 Eylül 2026</time></p>
+            <span class="bq__tag">Stratejiler</span>
+            <h1>Trading Algoritması Nedir ve Nasıl Çalışır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#algoritma-strateji-ve-robot-arasındaki-fark">Algoritma, strateji ve robot arasındaki fark</a></li>
+                <li><a href="#trading-algoritmasının-yaygın-turleri">Trading algoritmasının yaygın türleri</a></li>
+                <li><a href="#kullanmadan-once-bir-algoritma-nasıl-degerlendirilir">Kullanmadan önce bir algoritma nasıl değerlendirilir</a></li>
+                <li><a href="#hazır-algoritmaları-benimserken-dikkat-edilmesi-gerekenler">Hazır algoritmaları benimserken dikkat edilmesi gerekenler</a></li>
+                <li><a href="#kendi-algoritmanızı-nasıl-kurmaya-baslarsınız">Kendi algoritmanızı nasıl kurmaya başlarsınız</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Trading algoritması terimi genelde gerçekte olduğundan daha karmaşık gelir. Aslında bir algoritma, anlık sezgiye bağlı kalmadan ne zaman alınacağına, ne zaman satılacağına ve ne kadar riske girileceğine karar veren bir dizi mantıksal kuraldır. Basit bir hareketli ortalama kesişim kuralı kadar basit veya onlarca değişkenli bir istatistiksel model kadar karmaşık olabilir.</p><p>Bu makalede, trading algoritmasının ne olduğunu, bireysel traderlar tarafından kullanılan ana türleri ve birini kurmaya veya kullanmaya değip değmeyeceğini nasıl değerlendireceğinizi öğreneceksiniz.</p><h2 id="algoritma-strateji-ve-robot-arasındaki-fark">Algoritma, strateji ve robot arasındaki fark</h2><p>Bu üç terimi karıştırmak yaygındır, ama eş anlamlı değildirler. Strateji genel fikirdir, örneğin yükseliş trendinde olan ve bir direnci kıran varlıkları almak. Algoritma, bu fikrin kesin sayılarla test edilebilir kurallara dönüştürülmüş halidir: hangi hareketli ortalama periyodu, hangi kırılım yüzdesi, hangi stop büyüklüğü. Robot ise bu algoritmayı manuel müdahale olmadan otomatik olarak yürüten bilgisayar programıdır.</p><p>Bir stratejiniz olabilir ve hiçbir zaman robot programlamadan, algoritmayı her işlemde kafanızdan uygulayarak manuel olarak yürütebilirsiniz. Birçok deneyimli trader tam olarak bunu yapar: bir algoritmanın mantığını kullanırlar, ama alım ve satım düğmesine kendi elleriyle basarlar.</p><h2 id="trading-algoritmasının-yaygın-turleri">Trading algoritmasının yaygın türleri</h2><h3>Trend takipçileri</h3><p>Fiyat tutarlı bir şekilde yükseldiğinde alır ve yükseliş trendi güç kaybettiğinde satarlar, genelde referans olarak hareketli ortalamaları veya trend gücü göstergelerini kullanırlar.</p><h3>Ortalamaya dönüş</h3><p>Fiyatın aşırı bir hareketten sonra tarihsel bir ortalamaya dönme eğiliminde olduğu ilkesinden yola çıkarlar; varlık çok hızlı düştüğünde alır, algoritmanın makul saydığından daha fazla yükseldiğinde satarlar.</p><h3>Arbitraj</h3><p>Farklı aracı kurumlar veya piyasalar arasında aynı varlığın küçük fiyat farklarını ararlar, daha ucuz olan yerden alıp neredeyse aynı anda daha pahalı olan yerde satarlar. Bu tür bir algoritma genelde uygulanabilir olmak için daha büyük sermaye ve çok hızlı yürütme gerektirir.</p><h2 id="kullanmadan-once-bir-algoritma-nasıl-degerlendirilir">Kullanmadan önce bir algoritma nasıl değerlendirilir</h2><p>İlk kriter kuralların netliğidir: iyi bir algoritma, öznel yoruma yer bırakmadan birkaç cümleyle tarif edilebilir. İkincisi, iyi ve kötü piyasa dönemlerini içerecek kadar uzun bir periyoda ait verilerle yapılan test geçmişidir.</p><p>Sayısal bir örnek, bir algoritmanın risk-getiri ilişkisinin önemini anlamaya yardımcı olur. Yüzde 45 başarı oranına sahip, kaybeden işlem başına R$ 100 riske giren ve kazanan işlem başına ortalama R$ 180 kazanan bir algoritma düşünün. İşlem başına beklenen sonuç (0,45 x R$ 180) − (0,55 x R$ 100) = R$ 81 − R$ 55 = pozitif R$ 26 olurdu; yarıdan fazlasını kaybetmesine rağmen. Bu, tek başına başarı oranının bir algoritmanın kalitesi hakkında hiçbir şey söylemediğini gösterir: ortalama kazanç ve kayıplar arasındaki ilişki de aynı derecede önemlidir.</p><ul><li>Girişte ve çıkışta belirsizlik içermeyen net kurallar.</li><li>Yükseliş ve düşüş piyasalarını içeren uzun bir test geçmişi.</li><li>Sadece başarı oranı değil, tanımlanmış bir risk-getiri ilişkisi.</li><li>Beklenen sonuç hesabına dahil edilmiş işlem maliyetleri.</li></ul><h2 id="hazır-algoritmaları-benimserken-dikkat-edilmesi-gerekenler">Hazır algoritmaları benimserken dikkat edilmesi gerekenler</h2><p>Tutarlı sonuçlar vaadiyle hazır satılan algoritmalar vardır. Herhangi birini benimsemeden önce, sadece kazançlı ayların bir özetini değil, tam işlem geçmişini isteyin ve test döneminin ani düşüşler veya yüksek volatilite gibi zor piyasa dönemlerini içerip içermediğini kontrol edin.</p><p>Algoritmanın manuel olarak mı yoksa bir robot tarafından mı yürütüldüğünden bağımsız olarak, Duotide gibi emirleri uygulamak için kullanılan platform, stratejinin arkasındaki kuralların kalitesine müdahale etmez. Kötü tasarlanmış bir algoritma her platformda zarar üretir.</p><h2 id="kendi-algoritmanızı-nasıl-kurmaya-baslarsınız">Kendi algoritmanızı nasıl kurmaya başlarsınız</h2><p>Trading fikrinizi basit sayısal kurallara yazın, herhangi bir şey programlamadan önce tarihsel bir grafikte manuel olarak test edin ve mantığın gerçek verilerle mantıklı olduğunu doğruladıktan sonra otomatikleştirmeyi düşünün. Algoritmayı periyodik olarak gözden geçirmekte de fayda var: altı ay önce iyi çalışan bir kural seti, piyasa davranışı değişirse etkinliğini kaybedebilir; bu yüzden gerçek sonuçları beklenenle karşılaştırmak işin isteğe bağlı bir aşaması değil, parçasıdır.</p><p>Ne kadar iyi kurulmuş olursa olsun, hiçbir algoritmanın kayıp riskini ortadan kaldırmadığını unutmayın — sadece bu riskin nasıl üstlenildiğini düzenler. İstatistiksel olarak beklenen kayıp dizilerinde bile kurallara uyma disiplini, genelde algoritmanın kendi teknik sofistikasyonundan daha fazla sonuca ağırlık verir.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-28">28 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de üstel hareketli ortalama (EMA) kesişimi</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

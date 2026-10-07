@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/how-to-calculate-leverage-and-margin/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp",
       "articleSection": "风险管理",
       "author": {
@@ -172,31 +172,57 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">如何计算交易中的杠杆和所需保证金</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">风险管理</span>
-        <h1>如何计算交易中的杠杆和所需保证金</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>杠杆是一种机制，让你可以用存入券商账户的一小部分资金作为保证金，来控制市场上一笔更大规模的仓位。它存在于外汇、加密货币、差价合约、大宗商品和指数交易中，在所有这些情况下，核心公式都是一样的。</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-alavancagem-como-calcular" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">风险管理</span>
+            <h1>如何计算交易中的杠杆和所需保证金</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#通用公式">通用公式</a></li>
+                <li><a href="#真正重要的数字-有效杠杆">真正重要的数字：有效杠杆</a></li>
+                <li><a href="#外汇示例-同一笔仓位-不同的杠杆">外汇示例：同一笔仓位，不同的杠杆</a></li>
+                <li><a href="#加密货币示例">加密货币示例</a></li>
+                <li><a href="#如何在实践中运用这个计算">如何在实践中运用这个计算</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>杠杆是一种机制，让你可以用存入券商账户的一小部分资金作为保证金，来控制市场上一笔更大规模的仓位。它存在于外汇、加密货币、差价合约、大宗商品和指数交易中，在所有这些情况下，核心公式都是一样的。</p>
 <p>最容易引起误解的一点，是以为杠杆本身就决定了交易的风险。事实并非如此。杠杆改变的是开仓所需的资金量——它并不会改变该仓位所代表的市场波动幅度。</p>
-<h2>通用公式</h2>
+<h2 id="通用公式">通用公式</h2>
 <p>开仓所需的保证金计算方式如下：</p>
 <p>所需保证金 = 仓位价值 ÷ 杠杆倍数</p>
 <p>如果一笔仓位价值50000雷亚尔，杠杆为1:20，所需保证金就是2500雷亚尔。如果杠杆是1:100，同样价值50000雷亚尔的仓位只需要500雷亚尔的保证金。但无论哪种情况，这笔仓位的表现依然和一笔50000雷亚尔的仓位一样——决定该资产每次百分比波动带来多少盈亏的，是这个价值，而不是所存入的保证金。</p>
-<h2>真正重要的数字：有效杠杆</h2>
+<h2 id="真正重要的数字-有效杠杆">真正重要的数字：有效杠杆</h2>
 <p>大多数关于杠杆的解释就到此为止，但还缺少一个关键部分：有效杠杆，计算方式是仓位总价值除以账户余额。一位交易者可能有权使用1:500的杠杆，却依然保持保守操作，只用很小的仓位。另一位交易者可能只用1:10的杠杆，却因为开出的仓位相对自己账户规模来说过大，而承担了过高的风险。</p>
 <p>在进行任何杠杆交易之前，有四个问题值得回答：这笔仓位的总价值是多少、将占用多少保证金、由此产生的有效杠杆是多少，以及如果价格到达计划中的止损点，预计的损失会是多少。</p>
-<h2>外汇示例：同一笔仓位，不同的杠杆</h2>
+<h2 id="外汇示例-同一笔仓位-不同的杠杆">外汇示例：同一笔仓位，不同的杠杆</h2>
 <p>一位账户资金为5000雷亚尔的交易者，在EUR/USD接近1.0850的价位开出0.10手的仓位，止损设在30个点。该仓位价值约为54250雷亚尔（按示例汇率换算的1万欧元），这笔仓位中每个点的价值约为5雷亚尔。因此，无论选择哪种杠杆，止损时的风险都是150雷亚尔。</p>
 <ul>
 <li><strong>杠杆1:10</strong>——所需保证金约为5425雷亚尔；有效杠杆为10.85倍；止损风险为150雷亚尔。</li>
@@ -204,7 +230,7 @@
 <li><strong>杠杆1:100</strong>——所需保证金约为543雷亚尔；有效杠杆相同；风险同样为150雷亚尔。</li>
 </ul>
 <p>三种情境下被占用的保证金差别很大。但这笔交易的财务风险完全没有变化，因为仓位大小和止损距离始终保持一致。这正是核心的教训：杠杆决定的是开仓需要预留多少资金；真正决定实际风险敞口的，是仓位的大小。</p>
-<h2>加密货币示例</h2>
+<h2 id="加密货币示例">加密货币示例</h2>
 <p>同样的逻辑也适用于外汇之外的市场。假设比特币报价350000雷亚尔，一位交易者以1:10的杠杆开出0.02 BTC的仓位。该仓位的价值为：</p>
 <p>0.02 × 350000雷亚尔 = 7000雷亚尔</p>
 <p>所需保证金为：</p>
@@ -212,15 +238,26 @@
 <p>如果比特币价格朝不利方向下跌5%，扣除成本前的大致损失为：</p>
 <p>7000雷亚尔 × 5% = 350雷亚尔</p>
 <p>再一次说明，杠杆本身并没有单独决定亏损的大小。真正决定结果的是所交易的比特币数量和价格变动的幅度。更少的BTC数量会降低敞口；更紧或更宽的止损会改变亏损兑现的位置——但这些变量都不是杠杆本身。</p>
-<h2>如何在实践中运用这个计算</h2>
+<h2 id="如何在实践中运用这个计算">如何在实践中运用这个计算</h2>
 <p>在任何交易中选择杠杆之前，最稳妥的做法是把问题的顺序倒过来：不要问“我能用的最大杠杆是多少”，而要问“考虑到我的资金和我愿意承担的风险，我真正想要的仓位价值是多少”。从这个仓位价值出发，所需的保证金只是公式的结果，而不是出发点。</p>
 <p>高杠杆会放大潜在收益，但同样也会成比例地放大潜在亏损，并且当市场快速朝不利方向变动时，可能引发追加保证金的要求。杠杆是一种工具，不是稳赚不赔的捷径——无论杠杆倍数是多少，交易都存在亏损风险，在操作前，无论是在Duotide还是在任何其他交易平台上，都应该始终确认每种工具具体的保证金条件。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何在外汇交易中使用止损和止盈</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -228,7 +265,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +329,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

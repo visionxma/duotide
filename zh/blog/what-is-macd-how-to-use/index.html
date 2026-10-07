@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/what-is-macd-how-to-use/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "技术指标",
       "author": {
@@ -172,28 +172,68 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">什么是MACD，如何在实践中使用这个指标</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">技术指标</span>
-        <h1>什么是MACD，如何在实践中使用这个指标</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>MACD，即Moving Average Convergence Divergence（指数平滑异同移动平均线）的缩写，是一个基于指数移动平均线构建的趋势和动量指标。它有助于直观地看出短期行情相对于稍长期行情，力量是在增强还是在减弱。</p><h2>MACD是如何计算的</h2><p>该指标由三部分组成。MACD线是两条指数移动平均线之间的差值，通常为12周期和26周期：</p><p><strong>MACD线 = EMA(12) − EMA(26)</strong></p><p>信号线是在MACD线本身基础上计算出的9周期指数移动平均线：</p><p><strong>信号线 = MACD线的EMA(9)</strong></p><p>柱状图显示的是这两条线之间的差值：</p><p><strong>柱状图 = MACD线 − 信号线</strong></p><h2>一个简化的数值示例</h2><p>假设在某一时刻，某股票12周期的指数移动平均线为R$ 25,40，26周期的指数移动平均线为R$ 24,80。MACD线为：</p><p>MACD线 = R$ 25,40 − R$ 24,80 = <strong>0,60</strong></p><p>如果根据MACD线本身近期数值计算出的信号线为0,45，那么柱状图为：</p><p>柱状图 = 0,60 − 0,45 = <strong>0,15</strong></p><p>像这个例子中这样，一个为正且不断增大的柱状图，表明MACD线正在向上远离信号线，这通常被解读为短期上涨动能的增强。</p><h2>两条线之间的交叉</h2><p>当MACD线向上穿越信号线时，通常被解读为短期买方力量可能增强的信号。当它向下穿越时，解读通常相反。这些交叉在与图表更大的趋势方向一致时往往更可靠，而在市场横盘运行时则不太可靠，因为在这种情况下MACD可能连续产生多次假交叉。</p><h2>零轴的穿越</h2><p>除了两条线之间的交叉之外，还值得关注MACD线本身何时穿越零轴上方或下方。这种情况发生在12周期均线超过26周期均线，或反过来的时候，标志着这两条均线关系发生了更广泛的变化，通常与一个比MACD线和信号线简单交叉更长一些的中期趋势变化相关联。</p><h2>MACD的背离</h2><p>与RSI一样，MACD也可能与价格形成背离。如果价格创出新高，但MACD的柱状图却形成了比前一个更低的峰值，这表明上涨行情正在失去力量，即使价格尚未反转。底背离的情况则相反。背离是对行情力度的一种警示信号，而不是对反转确切时间的精确预测。</p><h2>使用MACD操作时常见的错误</h2><ul><li>仅仅因为出现交叉就进行每一笔操作，而不考虑更大周期图表的趋势。</li><li>忽视MACD是一个基于移动平均线构建的滞后指标，这意味着它是在部分行情已经发生之后才确认的。</li><li>只使用MACD，而不结合支撑、阻力或成交量的解读。</li><li>在没有事先测试的情况下，就改变12、26、9这组默认参数，而不验证这种改动是否真的能改善所操作资产和时间周期上的结果。</li></ul><h2>趋势市场与横盘市场中的MACD</h2><p>MACD通常在已经处于明确趋势的市场中给出最好的信号，因为在这种情境下，交叉往往能跟随更持久的行情。在没有明确方向、横向运行的市场中，构成该指标的两条均线会频繁相互交叉，产生一连串迅速相互抵消的信号，如果有人试图把每一次交叉都当作一轮新趋势的开始去操作，就可能因此亏损。因此，在信任一个MACD信号之前，值得确认更大周期的图表是否真的显示出一轮正在进行的趋势，还是该资产只是在一个区间内波动。</p><h2>如何把MACD融入更完整的分析</h2><p>MACD最适合在已经考虑了更大趋势和重要价格水平的分析中，作为动量的确认工具，而不是作为唯一的入场触发条件。在真实操作中信任它之前，先在该特定资产的历史数据上测试这个指标的表现，有助于理解它通常在什么市场条件下效果更好、在什么条件下更容易产生假信号。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-o-macd-e-como-usar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+            <span class="bq__tag">技术指标</span>
+            <h1>什么是MACD，如何在实践中使用这个指标</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#macd是如何计算的">MACD是如何计算的</a></li>
+                <li><a href="#一个简化的数值示例">一个简化的数值示例</a></li>
+                <li><a href="#两条线之间的交叉">两条线之间的交叉</a></li>
+                <li><a href="#零轴的穿越">零轴的穿越</a></li>
+                <li><a href="#macd的背离">MACD的背离</a></li>
+                <li><a href="#使用macd操作时常见的错误">使用MACD操作时常见的错误</a></li>
+                <li><a href="#趋势市场与横盘市场中的macd">趋势市场与横盘市场中的MACD</a></li>
+                <li><a href="#如何把macd融入更完整的分析">如何把MACD融入更完整的分析</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>MACD，即Moving Average Convergence Divergence（指数平滑异同移动平均线）的缩写，是一个基于指数移动平均线构建的趋势和动量指标。它有助于直观地看出短期行情相对于稍长期行情，力量是在增强还是在减弱。</p><h2 id="macd是如何计算的">MACD是如何计算的</h2><p>该指标由三部分组成。MACD线是两条指数移动平均线之间的差值，通常为12周期和26周期：</p><p><strong>MACD线 = EMA(12) − EMA(26)</strong></p><p>信号线是在MACD线本身基础上计算出的9周期指数移动平均线：</p><p><strong>信号线 = MACD线的EMA(9)</strong></p><p>柱状图显示的是这两条线之间的差值：</p><p><strong>柱状图 = MACD线 − 信号线</strong></p><h2 id="一个简化的数值示例">一个简化的数值示例</h2><p>假设在某一时刻，某股票12周期的指数移动平均线为R$ 25,40，26周期的指数移动平均线为R$ 24,80。MACD线为：</p><p>MACD线 = R$ 25,40 − R$ 24,80 = <strong>0,60</strong></p><p>如果根据MACD线本身近期数值计算出的信号线为0,45，那么柱状图为：</p><p>柱状图 = 0,60 − 0,45 = <strong>0,15</strong></p><p>像这个例子中这样，一个为正且不断增大的柱状图，表明MACD线正在向上远离信号线，这通常被解读为短期上涨动能的增强。</p><h2 id="两条线之间的交叉">两条线之间的交叉</h2><p>当MACD线向上穿越信号线时，通常被解读为短期买方力量可能增强的信号。当它向下穿越时，解读通常相反。这些交叉在与图表更大的趋势方向一致时往往更可靠，而在市场横盘运行时则不太可靠，因为在这种情况下MACD可能连续产生多次假交叉。</p><h2 id="零轴的穿越">零轴的穿越</h2><p>除了两条线之间的交叉之外，还值得关注MACD线本身何时穿越零轴上方或下方。这种情况发生在12周期均线超过26周期均线，或反过来的时候，标志着这两条均线关系发生了更广泛的变化，通常与一个比MACD线和信号线简单交叉更长一些的中期趋势变化相关联。</p><h2 id="macd的背离">MACD的背离</h2><p>与RSI一样，MACD也可能与价格形成背离。如果价格创出新高，但MACD的柱状图却形成了比前一个更低的峰值，这表明上涨行情正在失去力量，即使价格尚未反转。底背离的情况则相反。背离是对行情力度的一种警示信号，而不是对反转确切时间的精确预测。</p><h2 id="使用macd操作时常见的错误">使用MACD操作时常见的错误</h2><ul><li>仅仅因为出现交叉就进行每一笔操作，而不考虑更大周期图表的趋势。</li><li>忽视MACD是一个基于移动平均线构建的滞后指标，这意味着它是在部分行情已经发生之后才确认的。</li><li>只使用MACD，而不结合支撑、阻力或成交量的解读。</li><li>在没有事先测试的情况下，就改变12、26、9这组默认参数，而不验证这种改动是否真的能改善所操作资产和时间周期上的结果。</li></ul><h2 id="趋势市场与横盘市场中的macd">趋势市场与横盘市场中的MACD</h2><p>MACD通常在已经处于明确趋势的市场中给出最好的信号，因为在这种情境下，交叉往往能跟随更持久的行情。在没有明确方向、横向运行的市场中，构成该指标的两条均线会频繁相互交叉，产生一连串迅速相互抵消的信号，如果有人试图把每一次交叉都当作一轮新趋势的开始去操作，就可能因此亏损。因此，在信任一个MACD信号之前，值得确认更大周期的图表是否真的显示出一轮正在进行的趋势，还是该资产只是在一个区间内波动。</p><h2 id="如何把macd融入更完整的分析">如何把MACD融入更完整的分析</h2><p>MACD最适合在已经考虑了更大趋势和重要价格水平的分析中，作为动量的确认工具，而不是作为唯一的入场触发条件。在真实操作中信任它之前，先在该特定资产的历史数据上测试这个指标的表现，有助于理解它通常在什么市场条件下效果更好、在什么条件下更容易产生假信号。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +241,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +305,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

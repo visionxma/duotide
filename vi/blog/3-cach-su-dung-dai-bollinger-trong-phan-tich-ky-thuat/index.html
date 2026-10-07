@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/vi/blog/3-cach-su-dung-dai-bollinger-trong-phan-tich-ky-thuat/",
       "inLanguage": "vi",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Chỉ báo",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Đường dẫn điều hướng">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/vi/">Trang chủ</a></li>
         <li><a href="/vi/blog/">Blog</a></li>
         <li><span aria-current="page">3 cách sử dụng Dải Bollinger</span></li>
       </ol>
+      <a class="ap__voltar" href="/vi/blog/">Quay lại</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Chỉ báo</span>
-        <h1>3 cách sử dụng Dải Bollinger</h1>
-        <p class="bq-post__meta">Đội ngũ Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 phút đọc</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Dải Bollinger là một trong những chỉ báo linh hoạt nhất của phân tích kỹ thuật vì nó kết hợp, trong một công cụ duy nhất, thông tin về xu hướng và về biến động. Nhiều người học cách nhận ra hình dạng của ba đường trên biểu đồ, nhưng ít ai khai thác hết những gì nó có thể chỉ ra ngoài điều hiển nhiên "giá tăng, giá giảm".</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="3-formas-de-usar-bandas-de-bollinger" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Đã sao chép liên kết">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 thg 9, 2026</time><span class="ap__sep">4 phút đọc</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> lượt xem</span></span>
+            </div>
+            <p class="ap__atual">Cập nhật: <time datetime="2026-09-27">27 tháng 9, 2026</time></p>
+            <span class="bq__tag">Chỉ báo</span>
+            <h1>3 cách sử dụng Dải Bollinger</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Đội ngũ Duotide</strong><small>Ban biên tập</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Mục lục">
+              <p class="ap__indice-tit">Mục lục</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#cach-cac-dai-đuoc-tinh-toan">Cách các dải được tính toán</a></li>
+                <li><a href="#cach-1-đoc-bien-đong-qua-khoang-cach-giua-cac-dai">Cách 1: đọc biến động qua khoảng cách giữa các dải</a></li>
+                <li><a href="#cach-2-giao-dich-đao-chieu-tai-cac-canh">Cách 2: giao dịch đảo chiều tại các cạnh</a></li>
+                <li><a href="#cach-3-theo-cu-pha-vo">Cách 3: theo cú phá vỡ</a></li>
+                <li><a href="#quan-ly-rui-ro-voi-dai-bollinger">Quản lý rủi ro với Dải Bollinger</a></li>
+                <li><a href="#luyen-tap-truoc-khi-giao-dich-bang-tien-that">Luyện tập trước khi giao dịch bằng tiền thật</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Lên đầu trang</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Dải Bollinger là một trong những chỉ báo linh hoạt nhất của phân tích kỹ thuật vì nó kết hợp, trong một công cụ duy nhất, thông tin về xu hướng và về biến động. Nhiều người học cách nhận ra hình dạng của ba đường trên biểu đồ, nhưng ít ai khai thác hết những gì nó có thể chỉ ra ngoài điều hiển nhiên "giá tăng, giá giảm".</p>
 <p>Trong bài viết này, bạn sẽ thấy cách chỉ báo được tính toán và ba cách khác nhau để rút ra tín hiệu từ nó: nhận biết sự thay đổi biến động, giao dịch đảo chiều tại các cạnh và theo các cú phá vỡ xu hướng.</p>
-<h2>Cách các dải được tính toán</h2>
+<h2 id="cach-cac-dai-đuoc-tinh-toan">Cách các dải được tính toán</h2>
 <p>Chỉ báo này có ba đường. Đường giữa là một đường trung bình động đơn giản, thường là 20 phiên. Hai đường còn lại, trên và dưới, cách đường trung bình này một khoảng bằng một bội số của độ lệch chuẩn của giá trong cùng khoảng thời gian — chuẩn thị trường là 2 độ lệch chuẩn.</p>
 <p>Ví dụ: nếu đường trung bình động 20 phiên của cặp EUR/USD ở mức 1,0850 và độ lệch chuẩn của khoảng thời gian đó là 0,0040, dải trên sẽ ở mức 1,0850 + (2 × 0,0040) = 1,0930, và dải dưới ở mức 1,0850 − (2 × 0,0040) = 1,0770. Giá dao động càng nhiều, các dải càng cách xa đường trung bình; giá càng đứng yên, chúng càng xích lại gần nhau.</p>
-<h2>Cách 1: đọc biến động qua khoảng cách giữa các dải</h2>
+<h2 id="cach-1-đoc-bien-đong-qua-khoang-cach-giua-cac-dai">Cách 1: đọc biến động qua khoảng cách giữa các dải</h2>
 <p>Khi các dải nằm rất gần nhau, thị trường đang có biến động thấp — thường là giai đoạn do dự trước một chuyển động mạnh hơn. Sự thu hẹp này được gọi là squeeze. Khi chúng mở rộng ra nhiều, thị trường đang biến động mạnh, và sau một lần mở rộng rất lớn, biến động thường giảm trở lại, ngay cả khi không chỉ ra hướng đi.</p>
 <p>Cách dùng này không đưa ra tín hiệu mua hay bán: nó cảnh báo rằng điều gì đó sắp xảy ra, để trader điều chỉnh quy mô vị thế và khoảng cách điểm cắt lỗ trước khi chuyển động đến.</p>
-<h2>Cách 2: giao dịch đảo chiều tại các cạnh</h2>
+<h2 id="cach-2-giao-dich-đao-chieu-tai-cac-canh">Cách 2: giao dịch đảo chiều tại các cạnh</h2>
 <p>Trong các thị trường không có xu hướng rõ ràng (đi ngang), giá có xu hướng tôn trọng các dải như thể chúng là trần và sàn. Khi giá chạm hoặc vượt qua dải trên rồi đóng một cây nến quay trở lại bên trong, một số trader xem đó là tín hiệu kiệt sức của đà tăng và khả năng giảm về đường trung bình giữa. Lập luận tương tự áp dụng ngược lại ở dải dưới.</p>
 <p>Cách dùng này hoạt động tốt hơn khi được xác nhận bởi một chỉ báo động lượng khác, như RSI, vì trong một xu hướng mạnh, giá có thể "đi dọc theo" một dải trong nhiều cây nến mà không đảo chiều — và ai bán chỉ vì giá chạm dải trên trong điều kiện đó sẽ mất tiền khi đi ngược xu hướng.</p>
-<h2>Cách 3: theo cú phá vỡ</h2>
+<h2 id="cach-3-theo-cu-pha-vo">Cách 3: theo cú phá vỡ</h2>
 <p>Cách thứ ba là ngược lại với cách thứ hai: thay vì chờ đảo chiều, trader theo chuyển động. Sau một đợt squeeze (dải hẹp), nếu giá phá vỡ dải trên bằng một cây nến có thân lớn và khối lượng cao hơn bình thường, điều đó có thể cho thấy sự khởi đầu của một xu hướng tăng — và trader vào lệnh theo hướng phá vỡ, không đi ngược lại nó. Điều tương tự áp dụng cho các cú phá vỡ dải dưới, theo hướng giảm.</p>
 <p>Sự khác biệt giữa việc dùng Dải Bollinger để đảo chiều (Cách 2) hay để phá vỡ (Cách 3) phụ thuộc vào bối cảnh thị trường: đi ngang thuận lợi cho đảo chiều, squeeze theo sau bởi sức mạnh thuận lợi cho phá vỡ. Trộn lẫn hai cách đọc mà không có tiêu chí là sai lầm phổ biến nhất của người mới bắt đầu sử dụng chỉ báo này.</p>
-<h2>Quản lý rủi ro với Dải Bollinger</h2>
+<h2 id="quan-ly-rui-ro-voi-dai-bollinger">Quản lý rủi ro với Dải Bollinger</h2>
 <p>Không cách nào trong ba cách sử dụng thay thế được một kế hoạch quản lý rủi ro. Hãy đặt điểm cắt lỗ trước khi vào lệnh — ví dụ, hơi vượt ra ngoài dải đối diện với điểm vào lệnh của bạn — và không bao giờ mạo hiểm nhiều hơn một phần nhỏ của tài khoản trong một giao dịch duy nhất, khoảng 1% đến 2% vốn. Cũng cần nhớ rằng, giống như bất kỳ chỉ báo nào dựa trên trung bình và độ lệch chuẩn, Dải Bollinger phản ứng với giá trong quá khứ: chúng mô tả những gì đã xảy ra, không đảm bảo điều gì sẽ xảy ra tiếp theo.</p>
-<h2>Luyện tập trước khi giao dịch bằng tiền thật</h2>
+<h2 id="luyen-tap-truoc-khi-giao-dich-bang-tien-that">Luyện tập trước khi giao dịch bằng tiền thật</h2>
 <p>Vì chỉ báo này thay đổi hành vi tùy theo tài sản và khung thời gian, nên việc quan sát cùng một cặp tiền hoặc cổ phiếu trong các khoảng thời gian khác nhau — 15 phút, 1 giờ, hằng ngày — trước khi quyết định cách sử dụng nào trong ba cách phù hợp nhất với phong cách của bạn là điều đáng làm. Trên một nền tảng như Duotide, bạn có thể theo dõi biểu đồ với chỉ báo được gắn vào và thử nghiệm từng cách đọc này trên các tài sản khác nhau trước khi áp dụng số tiền thật.</p>
 <p>Cuối cùng, Dải Bollinger là một lăng kính nhìn vào biến động, không phải quả cầu pha lê. Kết hợp với một kế hoạch rủi ro rõ ràng và một chỉ báo xác nhận khác, chúng giúp tổ chức các quyết định mà nếu không có, chỉ là một "phỏng đoán" nhìn vào giá.</p>
-        <div class="bq-post__cta">
-          <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
+            <div class="bq-post__cta">
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
+            </div>
+            <div class="ap__fim">
+              <p>Cập nhật: <time datetime="2026-09-27">27 thg 9, 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> lượt xem</span></span><button class="ap__compartilhar" type="button">Chia sẻ <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Đội ngũ Duotide</strong><p>Ban biên tập Duotide viết các hướng dẫn và tin tức trên blog này: thị trường vận hành thế nào, quản lý rủi ro và cách dùng nền tảng. Không có nội dung nào ở đây là khuyến nghị đầu tư.</p></div>
+              <a class="btn ap__equipe" href="/vi/ve-trang-nay/">Gặp gỡ đội ngũ</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Đọc thêm</h2>
+        <aside class="ap__rel">
+          <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
             <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

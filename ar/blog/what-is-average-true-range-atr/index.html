@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/what-is-average-true-range-atr/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "المؤشرات",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">ما هو Average True Range (ATR) وكيفية حسابه</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">المؤشرات</span>
-        <h1>ما هو Average True Range (ATR) وكيفية حسابه</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>على عكس معظم المؤشرات، لا يحاول Average True Range (ATR) التنبؤ بأي اتجاه. يقيس شيئًا واحدًا فقط: مدى تحرك الأصل عادة، بالقيمة المطلقة، خلال فترة. إنه مسطرة للتقلب، لا إشارة شراء أو بيع.</p><p>ابتكره جي ويلز وايلدر، نفس مؤلف ADX وRSI، ويظهر ATR في كل استراتيجية تقريبًا تحتاج إلى تحديد حجم وقف خسارة أو حجم صفقة بناءً على السلوك الحقيقي للأصل، بدلاً من قيمة ثابتة تُختار عشوائيًا.</p><h2>لماذا لا يكفي متوسط بسيط لأعلى ناقص أدنى سعر</h2><p>لو طرحت فقط أدنى سعر من أعلى سعر لكل شمعة، لفقدت تفصيلاً مهمًا: الفجوات. تخيل أصلًا أغلق الجلسة السابقة عند R$ 50.00 وافتتح الجلسة التالية عند R$ 46.00 بالفعل، وتداول بعد ذلك بين R$ 45.50 وR$ 46.80. كان التغير داخل الشمعة (أعلى ناقص أدنى) R$ 1.30 فقط. لكن الحركة الحقيقية منذ الإغلاق السابق كانت R$ 4.50. تجاهل ذلك يقلل من تقدير التقلب الحقيقي للأصل.</p><h2>كيفية حساب المدى الحقيقي</h2><p>لتصحيح هذه المشكلة، المدى الحقيقي (TR) لكل شمعة هو أكبر قيمة بين ثلاثة حسابات:</p><ul><li>أعلى سعر للشمعة الحالية ناقص أدنى سعر للشمعة الحالية؛</li><li>أعلى سعر للشمعة الحالية ناقص إغلاق الشمعة السابقة (بالقيمة المطلقة)؛</li><li>أدنى سعر للشمعة الحالية ناقص إغلاق الشمعة السابقة (بالقيمة المطلقة).</li></ul><p>في المثال أعلاه، سيكون TR أكبر قيمة بين 1.30 (46.80 − 45.50)، و3.20 (|46.80 − 50.00|)، و4.50 (|45.50 − 50.00|). أي أن TR = R$ 4.50 — الرقم الذي يلتقط فعليًا حجم الحركة، بما فيها الفجوة.</p><h2>من المدى الحقيقي إلى ATR</h2><p>ATR هو متوسط منعّم للمدى الحقيقي على مدى فترة، عادة 14 شمعة. عادة ما تكون القيمة الأولى المتوسط البسيط لأول 14 قيمة TR. بعد ذلك، يُطبق تنعيم وايلدر:</p><p><strong>ATR اليوم = ((ATR السابق × 13) + TR اليوم) ÷ 14</strong></p><p>لنفترض أن ATR أمس كان عند R$ 2.00 وTR اليوم كان R$ 4.50، باتباع المثال السابق:</p><p><strong>ATR اليوم = ((2.00 × 13) + 4.50) ÷ 14 = (26.00 + 4.50) ÷ 14 = 30.50 ÷ 14 ≈ R$ 2.18</strong></p><p>لاحظ كيف لا تجعل شمعة واحدة بحركة قوية ATR يقفز دفعة واحدة — بل يرتفع تدريجيًا، لأنه يحمل وزن الـ13 فترة السابقة. هذا مقصود: يقيس ATR التقلب المتكرر، لا ذروة معزولة.</p><h2>ما فائدته عمليًا</h2><p>الاستخدام الأكثر شيوعًا لـATR هو تحديد حجم وقف الخسارة وحجم الصفقة بشكل متناسب مع سلوك الأصل نفسه، بدلاً من استخدام رقم ثابت من النقاط أو الريالات لأي سوق.</p><p>مثال: إذا كان ATR لأصل ما عند R$ 2.18، فإن وقف خسارة موضوعًا على مسافة 1.5 ATR من الدخول سيكون على بعد R$ 3.27 من سعر الدخول (2.18 × 1.5). في أصل أكثر تقلبًا، بـATR قدره R$ 8.00، سينتج نفس المضاعف 1.5 ATR وقف خسارة قدره R$ 12.00 — أوسع بكثير، لأن الأصل نفسه يتحرك أكثر يوميًا. استخدام نفس مسافة وقف الخسارة الثابتة في الحالتين قليل المنطق: في الأصل الأكثر هدوءًا، سيكون وقف الخسارة واسعًا جدًا؛ وفي الأكثر تقلبًا، ضيقًا جدًا وعرضة للتفعيل بمجرد ضوضاء السوق.</p><h2>ATR لا يقول إلى أين يتجه السعر</h2><p>خطأ شائع هو محاولة استخدام ATR كإشارة دخول — لا يشير ATR المرتفع إلى صعود ولا هبوط، بل إلى حركة أكبر فقط. يمكن لانخفاض قوي بنسبة 10% وارتفاع قوي بنسبة 10% أن يولدا قراءات مدى حقيقي متشابهة، بما أن الحساب يستخدم قيمًا مطلقة. لذلك يظهر ATR عادة إلى جانب مؤشر آخر أو قراءة اتجاه، أبدًا بمفرده كمحفز صفقة.</p><h2>تطبيق ATR في الحياة اليومية</h2><p>يعمل ATR بشكل أفضل كأداة إدارة مخاطر منه كإشارة دخول. يساعد على الإجابة عن أسئلة عملية: هل وقف الخسارة هذا متناسب مع التقلب الحالي للأصل؟ هل حجم الصفقة هذا منطقي بالنظر إلى مدى تذبذب السعر عادة؟ عند استخدامه بهذه الطريقة، يقلل المؤشر فرصة تفعيل وقف الخسارة بمجرد ضوضاء عادية للأصل، رغم أنه لا توجد تقنية إدارة تلغي المخاطرة بالكامل — بل تساعد فقط على تحديد حجمها بشكل أكثر اتساقًا.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-o-average-true-range-atr" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <span class="bq__tag">المؤشرات</span>
+            <h1>ما هو Average True Range (ATR) وكيفية حسابه</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#لماذا-لا-يكفي-متوسط-بسيط-لا-على-ناقص-ا-دنى-سعر">لماذا لا يكفي متوسط بسيط لأعلى ناقص أدنى سعر</a></li>
+                <li><a href="#كيفية-حساب-المدى-الحقيقي">كيفية حساب المدى الحقيقي</a></li>
+                <li><a href="#من-المدى-الحقيقي-ا-لى-atr">من المدى الحقيقي إلى ATR</a></li>
+                <li><a href="#ما-فاي-دته-عملي-ا">ما فائدته عمليًا</a></li>
+                <li><a href="#atr-لا-يقول-ا-لى-ا-ين-يتجه-السعر">ATR لا يقول إلى أين يتجه السعر</a></li>
+                <li><a href="#تطبيق-atr-في-الحياة-اليومية">تطبيق ATR في الحياة اليومية</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>على عكس معظم المؤشرات، لا يحاول Average True Range (ATR) التنبؤ بأي اتجاه. يقيس شيئًا واحدًا فقط: مدى تحرك الأصل عادة، بالقيمة المطلقة، خلال فترة. إنه مسطرة للتقلب، لا إشارة شراء أو بيع.</p><p>ابتكره جي ويلز وايلدر، نفس مؤلف ADX وRSI، ويظهر ATR في كل استراتيجية تقريبًا تحتاج إلى تحديد حجم وقف خسارة أو حجم صفقة بناءً على السلوك الحقيقي للأصل، بدلاً من قيمة ثابتة تُختار عشوائيًا.</p><h2 id="لماذا-لا-يكفي-متوسط-بسيط-لا-على-ناقص-ا-دنى-سعر">لماذا لا يكفي متوسط بسيط لأعلى ناقص أدنى سعر</h2><p>لو طرحت فقط أدنى سعر من أعلى سعر لكل شمعة، لفقدت تفصيلاً مهمًا: الفجوات. تخيل أصلًا أغلق الجلسة السابقة عند R$ 50.00 وافتتح الجلسة التالية عند R$ 46.00 بالفعل، وتداول بعد ذلك بين R$ 45.50 وR$ 46.80. كان التغير داخل الشمعة (أعلى ناقص أدنى) R$ 1.30 فقط. لكن الحركة الحقيقية منذ الإغلاق السابق كانت R$ 4.50. تجاهل ذلك يقلل من تقدير التقلب الحقيقي للأصل.</p><h2 id="كيفية-حساب-المدى-الحقيقي">كيفية حساب المدى الحقيقي</h2><p>لتصحيح هذه المشكلة، المدى الحقيقي (TR) لكل شمعة هو أكبر قيمة بين ثلاثة حسابات:</p><ul><li>أعلى سعر للشمعة الحالية ناقص أدنى سعر للشمعة الحالية؛</li><li>أعلى سعر للشمعة الحالية ناقص إغلاق الشمعة السابقة (بالقيمة المطلقة)؛</li><li>أدنى سعر للشمعة الحالية ناقص إغلاق الشمعة السابقة (بالقيمة المطلقة).</li></ul><p>في المثال أعلاه، سيكون TR أكبر قيمة بين 1.30 (46.80 − 45.50)، و3.20 (|46.80 − 50.00|)، و4.50 (|45.50 − 50.00|). أي أن TR = R$ 4.50 — الرقم الذي يلتقط فعليًا حجم الحركة، بما فيها الفجوة.</p><h2 id="من-المدى-الحقيقي-ا-لى-atr">من المدى الحقيقي إلى ATR</h2><p>ATR هو متوسط منعّم للمدى الحقيقي على مدى فترة، عادة 14 شمعة. عادة ما تكون القيمة الأولى المتوسط البسيط لأول 14 قيمة TR. بعد ذلك، يُطبق تنعيم وايلدر:</p><p><strong>ATR اليوم = ((ATR السابق × 13) + TR اليوم) ÷ 14</strong></p><p>لنفترض أن ATR أمس كان عند R$ 2.00 وTR اليوم كان R$ 4.50، باتباع المثال السابق:</p><p><strong>ATR اليوم = ((2.00 × 13) + 4.50) ÷ 14 = (26.00 + 4.50) ÷ 14 = 30.50 ÷ 14 ≈ R$ 2.18</strong></p><p>لاحظ كيف لا تجعل شمعة واحدة بحركة قوية ATR يقفز دفعة واحدة — بل يرتفع تدريجيًا، لأنه يحمل وزن الـ13 فترة السابقة. هذا مقصود: يقيس ATR التقلب المتكرر، لا ذروة معزولة.</p><h2 id="ما-فاي-دته-عملي-ا">ما فائدته عمليًا</h2><p>الاستخدام الأكثر شيوعًا لـATR هو تحديد حجم وقف الخسارة وحجم الصفقة بشكل متناسب مع سلوك الأصل نفسه، بدلاً من استخدام رقم ثابت من النقاط أو الريالات لأي سوق.</p><p>مثال: إذا كان ATR لأصل ما عند R$ 2.18، فإن وقف خسارة موضوعًا على مسافة 1.5 ATR من الدخول سيكون على بعد R$ 3.27 من سعر الدخول (2.18 × 1.5). في أصل أكثر تقلبًا، بـATR قدره R$ 8.00، سينتج نفس المضاعف 1.5 ATR وقف خسارة قدره R$ 12.00 — أوسع بكثير، لأن الأصل نفسه يتحرك أكثر يوميًا. استخدام نفس مسافة وقف الخسارة الثابتة في الحالتين قليل المنطق: في الأصل الأكثر هدوءًا، سيكون وقف الخسارة واسعًا جدًا؛ وفي الأكثر تقلبًا، ضيقًا جدًا وعرضة للتفعيل بمجرد ضوضاء السوق.</p><h2 id="atr-لا-يقول-ا-لى-ا-ين-يتجه-السعر">ATR لا يقول إلى أين يتجه السعر</h2><p>خطأ شائع هو محاولة استخدام ATR كإشارة دخول — لا يشير ATR المرتفع إلى صعود ولا هبوط، بل إلى حركة أكبر فقط. يمكن لانخفاض قوي بنسبة 10% وارتفاع قوي بنسبة 10% أن يولدا قراءات مدى حقيقي متشابهة، بما أن الحساب يستخدم قيمًا مطلقة. لذلك يظهر ATR عادة إلى جانب مؤشر آخر أو قراءة اتجاه، أبدًا بمفرده كمحفز صفقة.</p><h2 id="تطبيق-atr-في-الحياة-اليومية">تطبيق ATR في الحياة اليومية</h2><p>يعمل ATR بشكل أفضل كأداة إدارة مخاطر منه كإشارة دخول. يساعد على الإجابة عن أسئلة عملية: هل وقف الخسارة هذا متناسب مع التقلب الحالي للأصل؟ هل حجم الصفقة هذا منطقي بالنظر إلى مدى تذبذب السعر عادة؟ عند استخدامه بهذه الطريقة، يقلل المؤشر فرصة تفعيل وقف الخسارة بمجرد ضوضاء عادية للأصل، رغم أنه لا توجد تقنية إدارة تلغي المخاطرة بالكامل — بل تساعد فقط على تحديد حجمها بشكل أكثر اتساقًا.</p>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

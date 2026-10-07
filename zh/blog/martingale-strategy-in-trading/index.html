@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/martingale-strategy-in-trading/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "风险管理",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">交易中的马丁格尔策略：如何运作及其风险</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">风险管理</span>
-        <h1>交易中的马丁格尔策略：如何运作及其风险</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>很少有策略像马丁格尔一样引发如此多的讨论。其背后的理念很容易理解，也许正是这种简单性，让它对新手格外有吸引力：在亏损之后把下一笔交易的金额翻倍，期待当盈利最终到来时，能够挽回之前的全部亏损，还能留下一点小利润。</p><p>在本文中，你将了解马丁格尔在实践中是如何运作的、它的来源，以及为什么大多数认真的风险管理者建议对这种方法在交易中的应用极度谨慎——甚至完全避免使用。</p><h2>马丁格尔是如何运作的</h2><p>马丁格尔最初是一种博彩系统，最初应用于胜率大约为50%的游戏，比如抛硬币猜正反面。规则是：先押一个初始金额；如果输了，就把下一次押注的金额翻倍；如果赢了，就回到初始金额。由于理论上每一次新的盈利都能覆盖之前的所有亏损、还能留下一点利润，只要有足够的资金持续翻倍，这个策略看起来就能保证正收益。</p><p>应用到交易中，马丁格尔的运作方式类似：在一笔亏损交易之后，交易者会把下一笔头寸的规模翻倍（或大幅增加），期待一旦下一笔交易盈利，就能挽回之前的亏损。</p><h2>为什么马丁格尔的数学在实践中会失效</h2><p>核心问题在于，马丁格尔依赖于两个很少同时存在的条件：无限的资金和不受限制的仓位规模。假设初始交易为100雷亚尔。连续四次亏损之后，第五笔交易就需要达到1,600雷亚尔，才能仅仅挽回之前的亏损。连续七次亏损之后，这个数字就超过了12,800雷亚尔。这种规模的连续亏损，即使在胜率为50%的游戏中也并不罕见，而在交易中，一笔交易的胜率很少恰好是50%，根据策略和市场条件的不同，甚至可能低得多。</p><p>此外，经纪商和交易平台通常会对仓位规模设置限制，并要求不断增加的保证金，这可能在资金完全耗尽之前，就已经阻止了马丁格尔在一连串亏损中继续下去。</p><h2>破产风险</h2><p>这种情景——在一连串亏损中资金耗尽，或无法再开出下一笔交易——被称为破产风险，在马丁格尔策略中，这一风险明显高于固定仓位规模的策略。仅仅一次比预期更长的连续亏损，就足以在短短几笔交易内，把此前数月的盈利，甚至整个账户清零。</p><p>需要明确的是：马丁格尔并不能降低一笔亏损交易的风险，它恰恰是在最糟糕的时刻——也就是一连串亏损之后、最不确定下一笔交易是否会盈利的时刻——增加了敞口。</p><h2>更安全的仓位管理替代方案</h2><p>大多数风险管理方法建议的做法恰恰相反：不要在亏损后加大仓位，而是让每笔交易的风险始终保持为总资金一个固定且较小的百分比，无论之前的交易结果如何。如果设定的风险是每笔交易占账户的1%，那么无论亏损还是盈利之后，它都应该继续保持在1%，而不会危险地逐步扩大。</p><p>这种管理方式承认，无论策略多么优秀，连续亏损都是其中不可避免的一部分，并且恰恰在这些时刻保护资金，而不是把一切都押在立即挽回损失上。</p><h2>一个需要极度谨慎的决定</h2><p>如果仍然有人决定尝试某种马丁格尔的变体，最起码应该设定一个严格的限制：金额最多可以增加几次，之后就中断这一连串加倍，接受亏损，从初始金额重新开始。即便设有这样的限制，这个策略仍然需要与原始交易规模不成比例的资金，不应被当作一种安全或有保障的挽回损失方法。</p><p>在Duotide上，和在任何平台上一样，每笔头寸的规模都是交易者自己的选择，与其依赖一个在数学上恰恰在结果已经不利时增加敞口的系统，不如建立一套基于固定、可持续百分比的风险管理方式，这样做要划算得多。交易的每一笔操作都涉及真实的亏损风险，没有任何仓位管理策略能够消除这种可能性。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-martingale-no-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">风险管理</span>
+            <h1>交易中的马丁格尔策略：如何运作及其风险</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#马丁格尔是如何运作的">马丁格尔是如何运作的</a></li>
+                <li><a href="#为什么马丁格尔的数学在实践中会失效">为什么马丁格尔的数学在实践中会失效</a></li>
+                <li><a href="#破产风险">破产风险</a></li>
+                <li><a href="#更安全的仓位管理替代方案">更安全的仓位管理替代方案</a></li>
+                <li><a href="#一个需要极度谨慎的决定">一个需要极度谨慎的决定</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>很少有策略像马丁格尔一样引发如此多的讨论。其背后的理念很容易理解，也许正是这种简单性，让它对新手格外有吸引力：在亏损之后把下一笔交易的金额翻倍，期待当盈利最终到来时，能够挽回之前的全部亏损，还能留下一点小利润。</p><p>在本文中，你将了解马丁格尔在实践中是如何运作的、它的来源，以及为什么大多数认真的风险管理者建议对这种方法在交易中的应用极度谨慎——甚至完全避免使用。</p><h2 id="马丁格尔是如何运作的">马丁格尔是如何运作的</h2><p>马丁格尔最初是一种博彩系统，最初应用于胜率大约为50%的游戏，比如抛硬币猜正反面。规则是：先押一个初始金额；如果输了，就把下一次押注的金额翻倍；如果赢了，就回到初始金额。由于理论上每一次新的盈利都能覆盖之前的所有亏损、还能留下一点利润，只要有足够的资金持续翻倍，这个策略看起来就能保证正收益。</p><p>应用到交易中，马丁格尔的运作方式类似：在一笔亏损交易之后，交易者会把下一笔头寸的规模翻倍（或大幅增加），期待一旦下一笔交易盈利，就能挽回之前的亏损。</p><h2 id="为什么马丁格尔的数学在实践中会失效">为什么马丁格尔的数学在实践中会失效</h2><p>核心问题在于，马丁格尔依赖于两个很少同时存在的条件：无限的资金和不受限制的仓位规模。假设初始交易为100雷亚尔。连续四次亏损之后，第五笔交易就需要达到1,600雷亚尔，才能仅仅挽回之前的亏损。连续七次亏损之后，这个数字就超过了12,800雷亚尔。这种规模的连续亏损，即使在胜率为50%的游戏中也并不罕见，而在交易中，一笔交易的胜率很少恰好是50%，根据策略和市场条件的不同，甚至可能低得多。</p><p>此外，经纪商和交易平台通常会对仓位规模设置限制，并要求不断增加的保证金，这可能在资金完全耗尽之前，就已经阻止了马丁格尔在一连串亏损中继续下去。</p><h2 id="破产风险">破产风险</h2><p>这种情景——在一连串亏损中资金耗尽，或无法再开出下一笔交易——被称为破产风险，在马丁格尔策略中，这一风险明显高于固定仓位规模的策略。仅仅一次比预期更长的连续亏损，就足以在短短几笔交易内，把此前数月的盈利，甚至整个账户清零。</p><p>需要明确的是：马丁格尔并不能降低一笔亏损交易的风险，它恰恰是在最糟糕的时刻——也就是一连串亏损之后、最不确定下一笔交易是否会盈利的时刻——增加了敞口。</p><h2 id="更安全的仓位管理替代方案">更安全的仓位管理替代方案</h2><p>大多数风险管理方法建议的做法恰恰相反：不要在亏损后加大仓位，而是让每笔交易的风险始终保持为总资金一个固定且较小的百分比，无论之前的交易结果如何。如果设定的风险是每笔交易占账户的1%，那么无论亏损还是盈利之后，它都应该继续保持在1%，而不会危险地逐步扩大。</p><p>这种管理方式承认，无论策略多么优秀，连续亏损都是其中不可避免的一部分，并且恰恰在这些时刻保护资金，而不是把一切都押在立即挽回损失上。</p><h2 id="一个需要极度谨慎的决定">一个需要极度谨慎的决定</h2><p>如果仍然有人决定尝试某种马丁格尔的变体，最起码应该设定一个严格的限制：金额最多可以增加几次，之后就中断这一连串加倍，接受亏损，从初始金额重新开始。即便设有这样的限制，这个策略仍然需要与原始交易规模不成比例的资金，不应被当作一种安全或有保障的挽回损失方法。</p><p>在Duotide上，和在任何平台上一样，每笔头寸的规模都是交易者自己的选择，与其依赖一个在数学上恰恰在结果已经不利时增加敞口的系统，不如建立一套基于固定、可持续百分比的风险管理方式，这样做要划算得多。交易的每一笔操作都涉及真实的亏损风险，没有任何仓位管理策略能够消除这种可能性。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何在外汇交易中使用止损和止盈</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/when-to-close-a-trade-exit-signals/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">何时结束一笔操作：出场信号</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/rsi-goreceli-guc-endeksi-nasil-yapilandirilir-ve-kullanilir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">RSI: göreceli güç endeksi nasıl yapılandırılır ve kullanılır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Göstergeler</span>
-        <h1>RSI: göreceli güç endeksi nasıl yapılandırılır ve kullanılır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Çok az gösterge RSI, yani göreceli güç endeksi kadar popülerdir. Çoğu grafik platformunda bulunur, yapılandırması kolaydır ve temel okuması — aşırı alım ve aşırı satım — genellikle yeni başlayan bir trader'ın öğrendiği ilk şeylerden biridir. Ama RSI'de sadece 70'in üzerinde mi yoksa 30'un altında mı olduğunu gözlemlemekten daha fazlası var.</p><p>Bu makalede RSI'nin nasıl hesaplandığını, nasıl doğru yapılandırılacağını ve gösterge ile fiyat arasındaki uyumsuzluk dahil, başlıca okumalarının nasıl kullanılacağını anlayacaksınız.</p><h2>RSI nedir ve nasıl hesaplanır</h2><p>RSI, genellikle 14 mum olmak üzere belirli bir dönemdeki fiyat değişimlerinin hızını ve yoğunluğunu ölçer ve 0 ile 100 arasında değişen bir değer üretir. Hesaplama, o dönemdeki ortalama kazançları ortalama zararlarla karşılaştırır: kazançların zararlara oranı ne kadar büyükse, RSI 100'e o kadar yakın olur; zararların oranı ne kadar büyükse, 0'a o kadar yakın olur.</p><p>Basitleştirilmiş şekilde, formül RSI = 100 − [100 / (1 + GG)]'dir; burada GG göreceli güçtür ve seçilen dönemdeki ortalama kazancın ortalama zarara bölünmesiyle hesaplanır. Son 14 mumda, yükseliş mumu başına ortalama kazanç R$ 0,80 ve düşüş mumu başına ortalama zarar R$ 0,40 ise, göreceli güç 2 olurdu (0,80'in 0,40'a bölünmesi), bu da yaklaşık 67'lik bir RSI verirdi — hâlâ aşırı alım bölgesinin altında, ama zaten alıcı baskınlığını gösteriyor.</p><h2>RSI'nin periyodunu yapılandırmak</h2><p>Standart 14 mumluk periyot başlangıç noktası olarak iyi işler, ama sabit bir kural değildir. 7 gibi daha kısa periyotlar RSI'yi daha duyarlı hale getirir, aşırı alım ve aşırı satım sinyallerini daha sık üretir — bu, daha kısa vadeli işlemlerde faydalı olabilir, ama daha fazla sahte sinyal de üretir. 21 gibi daha uzun periyotlar göstergeyi yumuşatır ve sinyal miktarını azaltır, bunları potansiyel olarak daha güvenilir ama daha gecikmeli hale getirir.</p><p>Periyot seçimi, zaman dilimini ve işlem stilini izlemelidir: dakikalık grafiklerde işlem yapanlar daha kısa periyotları tercih etme eğilimindedir, günlük veya haftalık grafiklerde işlem yapanlar ise genellikle 14 standardını korur veya bu sayıyı artırır.</p><h2>Aşırı alım ve aşırı satım</h2><p>RSI'nin en bilinen okuması, referans olarak 70 ve 30 çizgilerini kullanır: 70'in üzerindeki değerler aşırı alım durumuna işaret eder, yükseliş hareketinin esnemiş olabileceğini öne sürer; 30'un altındaki değerler aşırı satıma işaret eder, düşüşün abartılmış olabileceğini öne sürer. Bu okumalar fiyatın hemen döneceği anlamına gelmez — güçlü bir trendde, RSI herhangi bir düzeltmeden önce uzun süre 70'in üzerinde (veya 30'un altında) kalabilir.</p><p>Bu yüzden bu bölgeler, özellikle güçlü ve uzun süreli trendleri olan varlıklarda, trende karşı otomatik bir giriş tetikleyicisinden çok bir dikkat uyarısı olarak daha iyi işler.</p><h2>Uyumsuzluklar: RSI'nin daha gelişmiş okuması</h2><p>Bir uyumsuzluk, fiyat ve RSI zıt yönlerde ilerlediğinde gerçekleşir. Fiyat yeni bir zirve yaparken RSI öncekinden daha düşük bir zirve yapıyorsa, bu bir düşüş uyumsuzluğudur: fiyat yükselmesine rağmen, bu yükselişin arkasındaki momentum zayıflıyordur; bu, bir dönüşten veya en azından trendde bir duraklamadan önce gelebilir.</p><p>Tersi de geçerlidir: fiyat daha düşük dipler yaparken RSI daha yüksek dipler yapıyorsa, bu bir yükseliş uyumsuzluğudur; fiyat hâlâ düşse bile satış baskısının güç kaybettiğini öne sürer. Uyumsuzluklar genellikle sade aşırı alım ve aşırı satım okumasından daha sağlam sinyallerdir, ama yine de bir işlemi haklı çıkarmadan önce fiyatın kendisinden teyit gerektirir.</p><h2>RSI'yi pratikte kullanmak</h2><p>RSI, bir trend okumasıyla birleştirildiğinde daha iyi işler: aşırı alım ve aşırı satım okumalarını daha büyük trende karşı değil, lehine kullanmak daha tutarlı sonuçlar üretme eğilimindedir. Duotide'de, RSI'nin periyodunu ayarlamak ve o piyasanın davranışını en iyi yansıtanı bulana kadar farklı varlıklarda farklı yapılandırmaları test etmek mümkündür. Geçmiş fiyatlara dayanan herhangi bir gösterge gibi, RSI isabeti garanti etmez ve her işlem gerçek bir zarar riski taşır.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indice-de-forca-relativa-rsi-guia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Göstergeler</span>
+            <h1>RSI: göreceli güç endeksi nasıl yapılandırılır ve kullanılır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#rsi-nedir-ve-nasıl-hesaplanır">RSI nedir ve nasıl hesaplanır</a></li>
+                <li><a href="#rsi-nin-periyodunu-yapılandırmak">RSI'nin periyodunu yapılandırmak</a></li>
+                <li><a href="#asırı-alım-ve-asırı-satım">Aşırı alım ve aşırı satım</a></li>
+                <li><a href="#uyumsuzluklar-rsi-nin-daha-gelismis-okuması">Uyumsuzluklar: RSI'nin daha gelişmiş okuması</a></li>
+                <li><a href="#rsi-yi-pratikte-kullanmak">RSI'yi pratikte kullanmak</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Çok az gösterge RSI, yani göreceli güç endeksi kadar popülerdir. Çoğu grafik platformunda bulunur, yapılandırması kolaydır ve temel okuması — aşırı alım ve aşırı satım — genellikle yeni başlayan bir trader'ın öğrendiği ilk şeylerden biridir. Ama RSI'de sadece 70'in üzerinde mi yoksa 30'un altında mı olduğunu gözlemlemekten daha fazlası var.</p><p>Bu makalede RSI'nin nasıl hesaplandığını, nasıl doğru yapılandırılacağını ve gösterge ile fiyat arasındaki uyumsuzluk dahil, başlıca okumalarının nasıl kullanılacağını anlayacaksınız.</p><h2 id="rsi-nedir-ve-nasıl-hesaplanır">RSI nedir ve nasıl hesaplanır</h2><p>RSI, genellikle 14 mum olmak üzere belirli bir dönemdeki fiyat değişimlerinin hızını ve yoğunluğunu ölçer ve 0 ile 100 arasında değişen bir değer üretir. Hesaplama, o dönemdeki ortalama kazançları ortalama zararlarla karşılaştırır: kazançların zararlara oranı ne kadar büyükse, RSI 100'e o kadar yakın olur; zararların oranı ne kadar büyükse, 0'a o kadar yakın olur.</p><p>Basitleştirilmiş şekilde, formül RSI = 100 − [100 / (1 + GG)]'dir; burada GG göreceli güçtür ve seçilen dönemdeki ortalama kazancın ortalama zarara bölünmesiyle hesaplanır. Son 14 mumda, yükseliş mumu başına ortalama kazanç R$ 0,80 ve düşüş mumu başına ortalama zarar R$ 0,40 ise, göreceli güç 2 olurdu (0,80'in 0,40'a bölünmesi), bu da yaklaşık 67'lik bir RSI verirdi — hâlâ aşırı alım bölgesinin altında, ama zaten alıcı baskınlığını gösteriyor.</p><h2 id="rsi-nin-periyodunu-yapılandırmak">RSI'nin periyodunu yapılandırmak</h2><p>Standart 14 mumluk periyot başlangıç noktası olarak iyi işler, ama sabit bir kural değildir. 7 gibi daha kısa periyotlar RSI'yi daha duyarlı hale getirir, aşırı alım ve aşırı satım sinyallerini daha sık üretir — bu, daha kısa vadeli işlemlerde faydalı olabilir, ama daha fazla sahte sinyal de üretir. 21 gibi daha uzun periyotlar göstergeyi yumuşatır ve sinyal miktarını azaltır, bunları potansiyel olarak daha güvenilir ama daha gecikmeli hale getirir.</p><p>Periyot seçimi, zaman dilimini ve işlem stilini izlemelidir: dakikalık grafiklerde işlem yapanlar daha kısa periyotları tercih etme eğilimindedir, günlük veya haftalık grafiklerde işlem yapanlar ise genellikle 14 standardını korur veya bu sayıyı artırır.</p><h2 id="asırı-alım-ve-asırı-satım">Aşırı alım ve aşırı satım</h2><p>RSI'nin en bilinen okuması, referans olarak 70 ve 30 çizgilerini kullanır: 70'in üzerindeki değerler aşırı alım durumuna işaret eder, yükseliş hareketinin esnemiş olabileceğini öne sürer; 30'un altındaki değerler aşırı satıma işaret eder, düşüşün abartılmış olabileceğini öne sürer. Bu okumalar fiyatın hemen döneceği anlamına gelmez — güçlü bir trendde, RSI herhangi bir düzeltmeden önce uzun süre 70'in üzerinde (veya 30'un altında) kalabilir.</p><p>Bu yüzden bu bölgeler, özellikle güçlü ve uzun süreli trendleri olan varlıklarda, trende karşı otomatik bir giriş tetikleyicisinden çok bir dikkat uyarısı olarak daha iyi işler.</p><h2 id="uyumsuzluklar-rsi-nin-daha-gelismis-okuması">Uyumsuzluklar: RSI'nin daha gelişmiş okuması</h2><p>Bir uyumsuzluk, fiyat ve RSI zıt yönlerde ilerlediğinde gerçekleşir. Fiyat yeni bir zirve yaparken RSI öncekinden daha düşük bir zirve yapıyorsa, bu bir düşüş uyumsuzluğudur: fiyat yükselmesine rağmen, bu yükselişin arkasındaki momentum zayıflıyordur; bu, bir dönüşten veya en azından trendde bir duraklamadan önce gelebilir.</p><p>Tersi de geçerlidir: fiyat daha düşük dipler yaparken RSI daha yüksek dipler yapıyorsa, bu bir yükseliş uyumsuzluğudur; fiyat hâlâ düşse bile satış baskısının güç kaybettiğini öne sürer. Uyumsuzluklar genellikle sade aşırı alım ve aşırı satım okumasından daha sağlam sinyallerdir, ama yine de bir işlemi haklı çıkarmadan önce fiyatın kendisinden teyit gerektirir.</p><h2 id="rsi-yi-pratikte-kullanmak">RSI'yi pratikte kullanmak</h2><p>RSI, bir trend okumasıyla birleştirildiğinde daha iyi işler: aşırı alım ve aşırı satım okumalarını daha büyük trende karşı değil, lehine kullanmak daha tutarlı sonuçlar üretme eğilimindedir. Duotide'de, RSI'nin periyodunu ayarlamak ve o piyasanın davranışını en iyi yansıtanı bulana kadar farklı varlıklarda farklı yapılandırmaları test etmek mümkündür. Geçmiş fiyatlara dayanan herhangi bir gösterge gibi, RSI isabeti garanti etmez ve her işlem gerçek bir zarar riski taşır.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

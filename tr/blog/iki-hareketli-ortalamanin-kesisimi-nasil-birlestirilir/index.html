@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/iki-hareketli-ortalamanin-kesisimi-nasil-birlestirilir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Stratejiler",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">İki hareketli ortalamanın kesişimi: nasıl birleştirilir</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Stratejiler</span>
-        <h1>İki hareketli ortalamanın kesişimi: nasıl birleştirilir</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Grafikte tek bir hareketli ortalama kullanmak fiyatın yönünü görmeye zaten yardımcı olur, ama yanıtsız bir soru bırakır: tam olarak ne zaman girmeli? Fiyatın ortalamayı tek başına kesmesini beklemek, genellikle geç sinyaller, ya da daha kötüsü, fiyat trend belirlemeden ortalamaya yakın her salındığında sahte sinyaller üretir.</p><p>Trend trader'larının en çok kullandığı çözüm, aynı grafiğe biri hızlı biri yavaş iki hareketli ortalama koymak ve fiyat ile ortalama arasındaki kesişim yerine bu ikisi arasındaki kesişimi işlem yapmaktır. Bu basit ayarlama, sahte sinyal sayısını büyük ölçüde azaltır ve trendin gücü hakkında anında görsel bir fikir de verir.</p><h2>İki ortalamanın kesişimi nasıl çalışır</h2><p>Mantık, örneğin biri 9 periyot (hızlı), diğeri 21 periyot (yavaş) olmak üzere farklı periyotlardaki iki ortalamayı kullanır. Hızlı ortalama yavaşın üzerine çıktığında, altın kesişim veya golden cross olarak adlandırılır ve olası bir yükseliş başlangıcının sinyalidir. Hızlı ortalama yavaşın altına indiğinde, death cross olarak adlandırılır ve olası bir düşüş başlangıcının sinyalidir. İki ortalama arasındaki mesafe de önemlidir: iyice açıldıklarında trend güçlüdür; birbirine yapışık gittiklerinde piyasa kararsızdır.</p><h2>İki ortalamanın periyotlarını seçmek</h2><p>Evrensel olarak doğru bir kombinasyon yoktur — seçim, grafik vadesine ve işlem stiline bağlıdır. Yaygın kombinasyonlar arasında daha kısa vadeli işlemler için 9 ve 21 periyot, orta vadeli pozisyonlar için 20 ve 50, ve yatırımcılar tarafından bir varlığın genel senaryosunu belirlemek için sıkça kullanılan uzun vadeli trend analizi için 50 ve 200 bulunur. Daha kısa ortalamalar daha hızlı tepki verir ama daha fazla sahte sinyal üretir; daha uzun ortalamalar teyit için daha uzun sürer, ama gürültüyü daha iyi filtreler.</p><h2>Rakamlarla pratik örnek</h2><p>R$ 15,00 civarında işlem gören, 20 periyotluk ortalaması R$ 14,60'ta ve 50 periyotluk ortalaması R$ 14,80'de olan — ikisi de birbirine yakın, kararsızlığa işaret eden — bir hisse düşünün. İki hafta boyunca fiyat yükselir ve 20 periyotluk ortalama, fiyat R$ 15,40'tayken 50 periyotluğun üzerine çıkar. Bu giriş sinyalidir.</p><p>Trader R$ 15,40'tan alır, stop loss'u R$ 14,70'e (artık destek gibi işlev gören 50 periyotluk ortalamanın biraz altına) belirler ve önceki bir dirence dayanarak R$ 17,00'de bir hedef projelendirir. Risk hisse başına R$ 0,70'dir ve potansiyel kazanç R$ 1,60'tır — yaklaşık 2,3'e 1'lik bir oran, yani hedef alınan riskin iki katından fazladır.</p><h2>Trendsiz piyasaların sorunu</h2><p>Herhangi bir ortalama kesişimi stratejisinin en büyük riski, belirlenmiş bir trendi olmayan, yatay bir piyasada işlem yapmaktır. Bu koşullarda, iki ortalama kısa zaman aralıklarında tekrar tekrar kesişir ve whipsaw olarak bilinen bir sahte sinyaller dizisi üretir — her giriş, hızla ters bir sinyal tarafından takip edilir ve küçük, tekrarlayan zararlarla sonuçlanır.</p><h2>Sahte sinyaller nasıl filtrelenir</h2><ul><li>Kesişimi geçerli saymadan önce minimum bir değer talep ederek, ADX gibi bir trend gücü göstergesi kullanın.</li><li>Kesişim anında iki ortalama arasında minimum bir mesafe talep edin, neredeyse yapışık oldukları kesişimleri göz ardı edin.</li><li>Kesişimi daha büyük bir zaman dilimi grafiğinin bağlamıyla birleştirin: günlük grafik yatay seyir gösteriyorsa, 15 dakikalık grafikteki kesişimler daha az güvenilir olma eğilimindedir.</li><li>Hiçbir filtrenin sahte sinyalleri %100 ortadan kaldırmadığını kabul edin — amaç sıklığı azaltmaktır, riski ortadan kaldırmak değil.</li></ul><h2>Her şeyi basit bir rutinde bir araya getirmek</h2><p>Bu stratejiyi uygulamanın pratik bir yolu, günün kapanışında günlük grafiği gözden geçirmek, iki ortalamanın bir kesişime yakın olup olmadığını gözlemlemek ve ancak o zaman varlığı takip eden günlerde daha yakından izlemektir. Bu, henüz oluşmamış bir sinyal ararken grafiği sürekli kontrol etmekten kaçınmayı sağlar.</p><p>Hareketli ortalamalara dayanan herhangi bir sistem gibi, iki ortalamanın kesişimi de ne olacağına değil, fiyatta zaten olana tepki verir — bu yüzden iyi filtrelenmiş sinyallerde bile her zaman zarar riski vardır. İster Duotide'de ister başka bir platformda olsun, gerçek sermaye uygulamadan önce farklı periyot kombinasyonlarını bir demo hesapta test etmek, takip ettiğiniz varlığa ve grafik vadesine en uygun kombinasyonu bulmaya yardımcı olur.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="cruzamento-de-duas-medias-moveis-como-combinar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Stratejiler</span>
+            <h1>İki hareketli ortalamanın kesişimi: nasıl birleştirilir</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#iki-ortalamanın-kesisimi-nasıl-calısır">İki ortalamanın kesişimi nasıl çalışır</a></li>
+                <li><a href="#iki-ortalamanın-periyotlarını-secmek">İki ortalamanın periyotlarını seçmek</a></li>
+                <li><a href="#rakamlarla-pratik-ornek">Rakamlarla pratik örnek</a></li>
+                <li><a href="#trendsiz-piyasaların-sorunu">Trendsiz piyasaların sorunu</a></li>
+                <li><a href="#sahte-sinyaller-nasıl-filtrelenir">Sahte sinyaller nasıl filtrelenir</a></li>
+                <li><a href="#her-seyi-basit-bir-rutinde-bir-araya-getirmek">Her şeyi basit bir rutinde bir araya getirmek</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Grafikte tek bir hareketli ortalama kullanmak fiyatın yönünü görmeye zaten yardımcı olur, ama yanıtsız bir soru bırakır: tam olarak ne zaman girmeli? Fiyatın ortalamayı tek başına kesmesini beklemek, genellikle geç sinyaller, ya da daha kötüsü, fiyat trend belirlemeden ortalamaya yakın her salındığında sahte sinyaller üretir.</p><p>Trend trader'larının en çok kullandığı çözüm, aynı grafiğe biri hızlı biri yavaş iki hareketli ortalama koymak ve fiyat ile ortalama arasındaki kesişim yerine bu ikisi arasındaki kesişimi işlem yapmaktır. Bu basit ayarlama, sahte sinyal sayısını büyük ölçüde azaltır ve trendin gücü hakkında anında görsel bir fikir de verir.</p><h2 id="iki-ortalamanın-kesisimi-nasıl-calısır">İki ortalamanın kesişimi nasıl çalışır</h2><p>Mantık, örneğin biri 9 periyot (hızlı), diğeri 21 periyot (yavaş) olmak üzere farklı periyotlardaki iki ortalamayı kullanır. Hızlı ortalama yavaşın üzerine çıktığında, altın kesişim veya golden cross olarak adlandırılır ve olası bir yükseliş başlangıcının sinyalidir. Hızlı ortalama yavaşın altına indiğinde, death cross olarak adlandırılır ve olası bir düşüş başlangıcının sinyalidir. İki ortalama arasındaki mesafe de önemlidir: iyice açıldıklarında trend güçlüdür; birbirine yapışık gittiklerinde piyasa kararsızdır.</p><h2 id="iki-ortalamanın-periyotlarını-secmek">İki ortalamanın periyotlarını seçmek</h2><p>Evrensel olarak doğru bir kombinasyon yoktur — seçim, grafik vadesine ve işlem stiline bağlıdır. Yaygın kombinasyonlar arasında daha kısa vadeli işlemler için 9 ve 21 periyot, orta vadeli pozisyonlar için 20 ve 50, ve yatırımcılar tarafından bir varlığın genel senaryosunu belirlemek için sıkça kullanılan uzun vadeli trend analizi için 50 ve 200 bulunur. Daha kısa ortalamalar daha hızlı tepki verir ama daha fazla sahte sinyal üretir; daha uzun ortalamalar teyit için daha uzun sürer, ama gürültüyü daha iyi filtreler.</p><h2 id="rakamlarla-pratik-ornek">Rakamlarla pratik örnek</h2><p>R$ 15,00 civarında işlem gören, 20 periyotluk ortalaması R$ 14,60'ta ve 50 periyotluk ortalaması R$ 14,80'de olan — ikisi de birbirine yakın, kararsızlığa işaret eden — bir hisse düşünün. İki hafta boyunca fiyat yükselir ve 20 periyotluk ortalama, fiyat R$ 15,40'tayken 50 periyotluğun üzerine çıkar. Bu giriş sinyalidir.</p><p>Trader R$ 15,40'tan alır, stop loss'u R$ 14,70'e (artık destek gibi işlev gören 50 periyotluk ortalamanın biraz altına) belirler ve önceki bir dirence dayanarak R$ 17,00'de bir hedef projelendirir. Risk hisse başına R$ 0,70'dir ve potansiyel kazanç R$ 1,60'tır — yaklaşık 2,3'e 1'lik bir oran, yani hedef alınan riskin iki katından fazladır.</p><h2 id="trendsiz-piyasaların-sorunu">Trendsiz piyasaların sorunu</h2><p>Herhangi bir ortalama kesişimi stratejisinin en büyük riski, belirlenmiş bir trendi olmayan, yatay bir piyasada işlem yapmaktır. Bu koşullarda, iki ortalama kısa zaman aralıklarında tekrar tekrar kesişir ve whipsaw olarak bilinen bir sahte sinyaller dizisi üretir — her giriş, hızla ters bir sinyal tarafından takip edilir ve küçük, tekrarlayan zararlarla sonuçlanır.</p><h2 id="sahte-sinyaller-nasıl-filtrelenir">Sahte sinyaller nasıl filtrelenir</h2><ul><li>Kesişimi geçerli saymadan önce minimum bir değer talep ederek, ADX gibi bir trend gücü göstergesi kullanın.</li><li>Kesişim anında iki ortalama arasında minimum bir mesafe talep edin, neredeyse yapışık oldukları kesişimleri göz ardı edin.</li><li>Kesişimi daha büyük bir zaman dilimi grafiğinin bağlamıyla birleştirin: günlük grafik yatay seyir gösteriyorsa, 15 dakikalık grafikteki kesişimler daha az güvenilir olma eğilimindedir.</li><li>Hiçbir filtrenin sahte sinyalleri %100 ortadan kaldırmadığını kabul edin — amaç sıklığı azaltmaktır, riski ortadan kaldırmak değil.</li></ul><h2 id="her-seyi-basit-bir-rutinde-bir-araya-getirmek">Her şeyi basit bir rutinde bir araya getirmek</h2><p>Bu stratejiyi uygulamanın pratik bir yolu, günün kapanışında günlük grafiği gözden geçirmek, iki ortalamanın bir kesişime yakın olup olmadığını gözlemlemek ve ancak o zaman varlığı takip eden günlerde daha yakından izlemektir. Bu, henüz oluşmamış bir sinyal ararken grafiği sürekli kontrol etmekten kaçınmayı sağlar.</p><p>Hareketli ortalamalara dayanan herhangi bir sistem gibi, iki ortalamanın kesişimi de ne olacağına değil, fiyatta zaten olana tepki verir — bu yüzden iyi filtrelenmiş sinyallerde bile her zaman zarar riski vardır. İster Duotide'de ister başka bir platformda olsun, gerçek sermaye uygulamadan önce farklı periyot kombinasyonlarını bir demo hesapta test etmek, takip ettiğiniz varlığa ve grafik vadesine en uygun kombinasyonu bulmaya yardımcı olur.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de üstel hareketli ortalama (EMA) kesişimi</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

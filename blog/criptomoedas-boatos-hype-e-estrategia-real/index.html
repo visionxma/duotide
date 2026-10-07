@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,42 +173,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Criptomoedas: como separar boato de fato para operar com estratégia</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Criptomoedas</span>
-        <h1>Criptomoedas: como separar boato de fato para operar com estratégia</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-cripto-corretora-ou-exchange.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Poucos mercados produzem tanto boato por minuto quanto o de criptomoedas. Um tuíte de uma figura pública, um rumor de listagem numa exchange grande, uma notícia mal traduzida sobre regulação — qualquer um desses gatilhos pode mover o preço de um ativo digital em minutos, muito antes de qualquer confirmação oficial. Para quem quer operar esse mercado com alguma estrutura, aprender a separar boato de fato é tão importante quanto entender qualquer indicador técnico.</p>
-<h2>Por que boatos pesam tanto no preço de criptoativos</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="criptomoedas-boatos-hype-e-estrategia-real" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Criptomoedas</span>
+            <h1>Criptomoedas: como separar boato de fato para operar com estratégia</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-cripto-corretora-ou-exchange.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#por-que-boatos-pesam-tanto-no-preco-de-criptoativos">Por que boatos pesam tanto no preço de criptoativos</a></li>
+                <li><a href="#os-tipos-mais-comuns-de-boato">Os tipos mais comuns de boato</a></li>
+                <li><a href="#como-verificar-antes-de-reagir">Como verificar antes de reagir</a></li>
+                <li><a href="#um-exemplo-com-numeros">Um exemplo com números</a></li>
+                <li><a href="#construindo-uma-estrategia-menos-dependente-de-boato">Construindo uma estratégia menos dependente de boato</a></li>
+                <li><a href="#usando-analise-tecnica-como-contrapeso-ao-ruido">Usando análise técnica como contrapeso ao ruído</a></li>
+                <li><a href="#conclusao-pratica">Conclusão prática</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Poucos mercados produzem tanto boato por minuto quanto o de criptomoedas. Um tuíte de uma figura pública, um rumor de listagem numa exchange grande, uma notícia mal traduzida sobre regulação — qualquer um desses gatilhos pode mover o preço de um ativo digital em minutos, muito antes de qualquer confirmação oficial. Para quem quer operar esse mercado com alguma estrutura, aprender a separar boato de fato é tão importante quanto entender qualquer indicador técnico.</p>
+<h2 id="por-que-boatos-pesam-tanto-no-preco-de-criptoativos">Por que boatos pesam tanto no preço de criptoativos</h2>
 <p>Diferente de ações de empresas consolidadas, com décadas de histórico e reguladores acompanhando cada divulgação, boa parte do mercado cripto ainda tem liquidez concentrada em poucos grandes participantes e uma base de investidores muito ativa em redes sociais. Isso cria um ambiente onde a narrativa se espalha mais rápido do que a verificação, e o preço reage à narrativa antes de qualquer fato confirmado.</p>
-<h2>Os tipos mais comuns de boato</h2>
+<h2 id="os-tipos-mais-comuns-de-boato">Os tipos mais comuns de boato</h2>
 <p>Um padrão recorrente é o anúncio não confirmado de parceria ou listagem — alguém posta uma imagem ou print que parece indicar que um token vai ser listado numa grande exchange, o preço dispara, e horas depois a exchange nega qualquer plano nesse sentido. Outro padrão é o hype em torno de moedas de meme, movidas quase inteiramente por atenção nas redes sociais, sem nenhum uso prático por trás, sujeitas a subidas e quedas de dezenas de pontos percentuais no mesmo dia. Um terceiro padrão são rumores regulatórios, onde uma notícia solta sobre um país "banindo" ou "liberando" criptomoedas — muitas vezes tirada de contexto — provoca reação imediata antes de qualquer verificação da fonte original.</p>
-<h2>Como verificar antes de reagir</h2>
+<h2 id="como-verificar-antes-de-reagir">Como verificar antes de reagir</h2>
 <p>O primeiro filtro é a fonte: comunicados oficiais de exchanges e de projetos geralmente saem em canais próprios verificados, não apenas em capturas de tela compartilhadas por terceiros. O segundo filtro é o volume de negociação: um movimento de preço real, sustentado por muitos participantes, normalmente vem acompanhado de volume bem acima da média; um pico de preço com volume fraco é mais compatível com um movimento especulativo de curta duração. O terceiro filtro é simplesmente esperar: dar alguns minutos para que a notícia seja confirmada ou desmentida custa pouco perto do risco de entrar numa posição baseada só num boato.</p>
-<h2>Um exemplo com números</h2>
+<h2 id="um-exemplo-com-numeros">Um exemplo com números</h2>
 <p>Imagine um token negociado a R$ 2,00, que sobe para R$ 2,60 (alta de 30%) em vinte minutos após um boato de listagem numa grande exchange, sem confirmação oficial. Um trader que decide entrar nesse pico, com uma posição de R$ 500, e o boato se confirma falso duas horas depois, pode ver o preço voltar para R$ 2,05, quase o patamar original — uma perda de aproximadamente R$ 471 sobre a posição, mesmo sem nenhum erro de análise técnica: o problema foi operar em cima de uma informação não verificada.</p>
-<h2>Construindo uma estratégia menos dependente de boato</h2>
+<h2 id="construindo-uma-estrategia-menos-dependente-de-boato">Construindo uma estratégia menos dependente de boato</h2>
 <p>Uma forma de reduzir essa exposição é separar claramente o "acompanhamento de notícias" da "decisão de entrada". Isso significa manter uma lista de fontes oficiais para verificar antes de qualquer operação motivada por notícia, e aplicar as mesmas regras de gestão de risco usadas em qualquer outro mercado: definir o tamanho da posição antes de entrar, considerando que a volatilidade de criptoativos costuma ser bem maior que a de ações ou pares de câmbio tradicionais, e por isso pede posições proporcionalmente menores para manter o mesmo nível de risco em reais.</p>
-<h2>Usando análise técnica como contrapeso ao ruído</h2>
+<h2 id="usando-analise-tecnica-como-contrapeso-ao-ruido">Usando análise técnica como contrapeso ao ruído</h2>
 <p>Enquanto boatos afetam o curtíssimo prazo, o comportamento do preço em prazos um pouco mais longos — suporte, resistência, volume médio — ajuda a filtrar o que é ruído passageiro do que é uma mudança real de tendência. Combinar essa leitura técnica com o hábito de verificar fontes antes de agir reduz bastante a chance de operar reagindo apenas à última manchete.</p>
-<h2>Conclusão prática</h2>
+<h2 id="conclusao-pratica">Conclusão prática</h2>
 <p>O mercado de criptomoedas provavelmente vai continuar sendo terreno fértil para boatos, exatamente pela velocidade com que a informação — verdadeira ou não — circula nele. Quem consegue separar fonte confiável de especulação, confirmar antes de agir e dimensionar a posição considerando a volatilidade típica desse mercado tende a operar de forma mais consistente do que quem simplesmente reage a cada notícia que aparece na tela. Como em qualquer mercado, existe risco real de perda, e nenhuma estratégia de verificação elimina esse risco por completo — apenas reduz a chance de errar por informação falsa.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/labubu-coin-o-que-e-o-fenomeno-das-moedas-meme/"><img src="/assets/img/capas/noticia-mercado-cripto-sem-indice-de-referencia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Labubu Coin e o fenômeno das moedas-meme: como entender o hype</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/quando-todo-bitcoin-sera-minerado/"><img src="/assets/img/capas/noticia-near-dispara-parceria-ondo-acoes-tokenizadas.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Quando todo o bitcoin será minerado?</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
@@ -216,7 +255,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

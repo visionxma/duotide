@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/calcolatrice-aspettativa-matematica-nel-trading/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Gestione del rischio",
       "author": {
@@ -172,30 +172,59 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Percorso di navigazione">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/it/">Home</a></li>
         <li><a href="/it/blog/">Blog</a></li>
         <li><span aria-current="page">Calcolatrice dell'aspettativa: la tua strategia ha un edge?</span></li>
       </ol>
+      <a class="ap__voltar" href="/it/blog/">Indietro</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestione del rischio</span>
-        <h1>Calcolatrice dell'aspettativa: la tua strategia ha un edge?</h1>
-        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-expectativa-matematica-no-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiato">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">4 min di lettura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
+            </div>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-27">27 settembre 2026</time></p>
+            <span class="bq__tag">Gestione del rischio</span>
+            <h1>Calcolatrice dell'aspettativa: la tua strategia ha un edge?</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Team Duotide</strong><small>Redazione</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Indice">
+              <p class="ap__indice-tit">Indice</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#la-formula-dell-aspettativa-matematica">La formula dell'aspettativa matematica</a></li>
+                <li><a href="#un-esempio-risolto-in-reais">Un esempio risolto in reais</a></li>
+                <li><a href="#un-tasso-di-successo-del-45-puo-essere-positivo">Un tasso di successo del 45% può essere positivo</a></li>
+                <li><a href="#non-dimenticare-i-costi">Non dimenticare i costi</a></li>
+                <li><a href="#un-secondo-esempio-ora-con-aspettativa-negativa">Un secondo esempio, ora con aspettativa negativa</a></li>
+                <li><a href="#come-usarlo-nel-quotidiano">Come usarlo nel quotidiano</a></li>
+                <li><a href="#quante-operazioni-bastano-per-fidarsi-del-numero">Quante operazioni bastano per fidarsi del numero</a></li>
+                <li><a href="#cosa-fare-dopo-aver-calcolato-l-aspettativa">Cosa fare dopo aver calcolato l'aspettativa</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>Una strategia può avere ragione nella maggior parte delle operazioni e comunque prosciugare il conto poco a poco. Anche il contrario è vero: è possibile sbagliare più della metà degli ingressi e chiudere il mese in profitto. Il tasso di successo da solo non risponde alla domanda se una strategia ha un vantaggio reale. A rispondere a questa domanda è l'aspettativa matematica, chiamata anche expectancy.</p>
 <p>L'aspettativa matematica mostra, in media, quanto una strategia guadagna o perde per operazione, considerando lo storico dei risultati. Un numero positivo è un'evidenza di vantaggio statistico all'interno del campione osservato, non una garanzia di profitto futuro.</p>
-<h2>La formula dell'aspettativa matematica</h2>
+<h2 id="la-formula-dell-aspettativa-matematica">La formula dell'aspettativa matematica</h2>
 <p>La versione più conosciuta della formula è:</p>
 <p><strong>Aspettativa = (tasso di successo x guadagno medio) - (tasso di errore x perdita media)</strong></p>
 <p>Questa formula funziona bene quando ogni operazione termina in guadagno o perdita, e quando le medie includono già i costi come la commissione. Per rendere il calcolo ancora più chiaro, è anche possibile calcolare l'aspettativa netta direttamente dai totali:</p>
 <p><strong>Aspettativa netta = [(numero di operazioni vincenti x guadagno medio) - (numero di operazioni perdenti x perdita media) - costi totali] / totale delle operazioni</strong></p>
-<h2>Un esempio risolto in reais</h2>
+<h2 id="un-esempio-risolto-in-reais">Un esempio risolto in reais</h2>
 <p>Supponiamo che un trader abbia rivisto 40 operazioni dello stesso setup, tutte con lo stesso rischio pianificato per ingresso, e sia arrivato ai seguenti numeri:</p>
 <ul>
 <li>Operazioni vincenti: 18</li>
@@ -212,24 +241,35 @@
 <li>Aspettativa per operazione: R$ 940,00 / 40 = R$ 23,50</li>
 </ul>
 <p>Esprimendo questo risultato in multipli del rischio (R), usando il rischio medio di R$ 100,00 per operazione, l'aspettativa risulta in <strong>+0,235R per operazione</strong>. Questo significa che, in media in questo campione, ogni operazione ha reso circa il 23,5% del rischio pianificato. Il profit factor di questo stesso campione, calcolato come guadagno totale diviso per la perdita totale, risulta in 2.700 / 1.760, ovvero circa <strong>1,53</strong>.</p>
-<h2>Un tasso di successo del 45% può essere positivo</h2>
+<h2 id="un-tasso-di-successo-del-45-puo-essere-positivo">Un tasso di successo del 45% può essere positivo</h2>
 <p>Nota che il tasso di successo dell'esempio sopra è di appena il 45% (18 su 40 operazioni), sotto la metà. Ciononostante, l'aspettativa è positiva, perché il guadagno medio è quasi due volte maggiore della perdita media. Questo è il motivo per cui chiedere solo qual è il tasso di successo di una strategia porta spesso a conclusioni sbagliate sulla sua qualità.</p>
-<h2>Non dimenticare i costi</h2>
+<h2 id="non-dimenticare-i-costi">Non dimenticare i costi</h2>
 <p>Commissioni, tariffe del broker ed eventuali costi di mantenere una posizione aperta durante la notte riducono l'aspettativa netta. Una strategia con aspettativa lorda di R$ 6,00 per operazione può diventare negativa dopo aver detratto R$ 7,00 di costi medi per operazione. Quando possibile, usa i costi reali addebitati dal broker, e non una stima ottimistica, per non gonfiare artificialmente il risultato.</p>
-<h2>Un secondo esempio, ora con aspettativa negativa</h2>
+<h2 id="un-secondo-esempio-ora-con-aspettativa-negativa">Un secondo esempio, ora con aspettativa negativa</h2>
 <p>Per rendere chiaro il contrasto, ecco un secondo caso con 50 operazioni: 21 vincenti con guadagno medio di R$ 90,00 e 29 perdenti con perdita media di R$ 75,00. Il guadagno totale risulta in 21 x R$ 90,00 = R$ 1.890,00, e la perdita totale in 29 x R$ 75,00 = R$ 2.175,00. Il risultato netto del campione è negativo, di R$ 285,00, il che dà un'aspettativa di R$ 1.890,00 meno R$ 2.175,00, diviso per 50 operazioni, ovvero una perdita media di R$ 5,70 per operazione. Anche con un tasso di successo del 42%, vicino alla fascia considerata normale per molte strategie, il rapporto tra guadagno medio e perdita media non è stato sufficiente a sostenere un risultato positivo.</p>
-<h2>Come usarlo nel quotidiano</h2>
-<h2>Quante operazioni bastano per fidarsi del numero</h2>
+<h2 id="come-usarlo-nel-quotidiano">Come usarlo nel quotidiano</h2>
+<h2 id="quante-operazioni-bastano-per-fidarsi-del-numero">Quante operazioni bastano per fidarsi del numero</h2>
 <p>Non esiste un numero magico universale. Un campione sotto le 30 operazioni è solitamente considerato troppo piccolo per qualsiasi conclusione solida. Tra 30 e 100 operazioni, il risultato dà già una prima stima, ma può ancora cambiare molto con pochi risultati estremi. Sopra le 100 o 200 operazioni, il numero inizia a essere più informativo, anche se non è mai una prova definitiva che il vantaggio continuerà a esistere in futuro.</p>
-<h2>Cosa fare dopo aver calcolato l'aspettativa</h2>
+<h2 id="cosa-fare-dopo-aver-calcolato-l-aspettativa">Cosa fare dopo aver calcolato l'aspettativa</h2>
 <p>Se l'aspettativa risulta negativa dopo aver contato i costi reali, non ha senso discutere di aumentare la posizione prima di correggere la strategia. Se risulta positiva, vale la pena testare la robustezza del risultato: rimuovi l'operazione vincente più grande dal campione e calcola di nuovo. Se l'aspettativa diventa negativa solo con questa rimozione, il risultato potrebbe dipendere troppo da un'unica operazione fuori curva, e merita più cautela prima di aumentare la dimensione delle posizioni.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aggiornato il: <time datetime="2026-09-27">27 set 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Team Duotide</strong><p>La redazione di Duotide scrive le guide e le notizie di questo blog: come funzionano i mercati, gestione del rischio e uso della piattaforma. Nulla di quanto scritto qui è una raccomandazione di investimento.</p></div>
+              <a class="btn ap__equipe" href="/it/chi-siamo/">Conosci il team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leggi anche</h2>
+        <aside class="ap__rel">
+          <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/come-usare-stop-loss-e-take-profit-nel-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come usare stop loss e take profit nel forex</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/strategia-martingale-nel-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strategia martingale nel trading: come funziona e i rischi</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
@@ -237,7 +277,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -301,6 +341,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,46 +173,83 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Parabolic SAR: como usar o indicador para seguir tendências</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicadores</span>
-        <h1>Parabolic SAR: como usar o indicador para seguir tendências</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Entre os indicadores de tendência mais visuais da análise técnica está o Parabolic SAR, criado pelo engenheiro J. Welles Wilder — o mesmo autor do RSI e do ATR. No gráfico, ele aparece como uma sequência de pontos acima ou abaixo dos candles, e essa posição por si só já entrega boa parte da informação: pontos abaixo do preço indicam tendência de alta, pontos acima indicam tendência de baixa.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="parabolic-sar-como-usar-indicador" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Indicadores</span>
+            <h1>Parabolic SAR: como usar o indicador para seguir tendências</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#como-o-indicador-e-calculado">Como o indicador é calculado</a></li>
+                <li><a href="#um-exemplo-numerico">Um exemplo numérico</a></li>
+                <li><a href="#quando-o-indicador-sinaliza-reversao">Quando o indicador sinaliza reversão</a></li>
+                <li><a href="#pontos-fortes-e-limitacoes">Pontos fortes e limitações</a></li>
+                <li><a href="#ajustando-o-fator-de-aceleracao">Ajustando o Fator de Aceleração</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Entre os indicadores de tendência mais visuais da análise técnica está o Parabolic SAR, criado pelo engenheiro J. Welles Wilder — o mesmo autor do RSI e do ATR. No gráfico, ele aparece como uma sequência de pontos acima ou abaixo dos candles, e essa posição por si só já entrega boa parte da informação: pontos abaixo do preço indicam tendência de alta, pontos acima indicam tendência de baixa.</p>
 <p>A sigla SAR vem de "Stop and Reverse" (pare e reverta), o que já entrega a proposta original do indicador: sinalizar o momento de fechar uma posição e considerar abrir a operação contrária.</p>
-<h2>Como o indicador é calculado</h2>
+<h2 id="como-o-indicador-e-calculado">Como o indicador é calculado</h2>
 <p>O cálculo do Parabolic SAR usa três elementos: o valor do SAR do período anterior, o Ponto Extremo (EP, a máxima ou mínima mais recente durante a tendência) e o Fator de Aceleração (AF), que começa em 0,02 e aumenta em 0,02 a cada vez que um novo Ponto Extremo é atingido, até um teto padrão de 0,20.</p>
 <p>A fórmula é: novo SAR = SAR anterior + AF × (EP − SAR anterior). Isso significa que, no início de uma tendência, o SAR se move devagar, e conforme o Fator de Aceleração cresce, os pontos passam a se aproximar do preço mais rapidamente — daí o formato "parabólico" que dá nome ao indicador.</p>
-<h2>Um exemplo numérico</h2>
+<h2 id="um-exemplo-numerico">Um exemplo numérico</h2>
 <p>Suponha uma ação em tendência de alta, com o SAR do dia anterior em R$ 41,00, o Ponto Extremo (a maior máxima da tendência até agora) em R$ 45,00 e o Fator de Aceleração em 0,04 depois de dois avanços de máxima. O novo SAR fica em:</p>
 <p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16.</p>
 <p>No dia seguinte, se a ação fizer uma nova máxima de R$ 46,00, o Ponto Extremo sobe para esse valor e o Fator de Aceleração avança para 0,06. O SAR seguinte seria R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45. Note como o ponto vai subindo mais rápido a cada novo avanço, "perseguindo" o preço.</p>
-<h2>Quando o indicador sinaliza reversão</h2>
+<h2 id="quando-o-indicador-sinaliza-reversao">Quando o indicador sinaliza reversão</h2>
 <p>Enquanto o preço se mantém acima da linha de pontos, o SAR continua subindo junto com a tendência. No momento em que o preço fecha abaixo do valor do SAR, o indicador inverte: os pontos passam a aparecer acima dos candles, o Fator de Aceleração volta para 0,02 e o Ponto Extremo passa a ser recalculado com base na mínima mais recente, agora para uma tendência de baixa.</p>
 <p>É essa inversão — o "stop and reverse" do nome — que muitos traders usam tanto como sinal de saída de uma posição comprada quanto como possível sinal de entrada vendida, dependendo da estratégia adotada.</p>
-<h2>Pontos fortes e limitações</h2>
+<h2 id="pontos-fortes-e-limitacoes">Pontos fortes e limitações</h2>
 <p>O Parabolic SAR funciona bem em mercados com tendência definida e de longa duração, onde os pontos acompanham o movimento sem gerar muitos sinais falsos. O problema aparece em mercados sem direção clara: como o indicador está sempre "ligado", alternando de posição a cada oscilação, ele pode gerar vários sinais de reversão em sequência que não se confirmam, um comportamento conhecido como whipsaw.</p>
 <p>Por isso, boa parte dos traders usa o SAR em conjunto com um indicador de tendência, como uma média móvel de prazo mais longo, aplicando os sinais do SAR apenas quando estão alinhados com a direção maior do mercado. A plataforma da Duotide permite plotar o Parabolic SAR junto com outros indicadores no mesmo gráfico, o que facilita esse tipo de comparação antes de qualquer decisão.</p>
-<h2>Ajustando o Fator de Aceleração</h2>
+<h2 id="ajustando-o-fator-de-aceleracao">Ajustando o Fator de Aceleração</h2>
 <p>A maioria das plataformas permite alterar os valores padrão de 0,02 (passo) e 0,20 (teto) do Fator de Aceleração. Reduzir o passo para 0,01 deixa o indicador mais lento para reagir, gerando menos sinais de reversão, mas também atrasando a saída em caso de mudança real de tendência. Aumentar o passo para 0,03 ou mais faz o oposto: o SAR reage mais rápido ao preço, correndo mais perto dos candles, ao custo de mais sinais falsos em mercados agitados.</p>
 <p>Não existe um ajuste universalmente melhor — a escolha depende do ativo e do prazo gráfico usado. Um ativo historicamente mais volátil tende a se beneficiar de um passo menor, que filtra parte do ruído; um ativo com tendências mais suaves e constantes pode funcionar bem com os valores padrão. Testar diferentes configurações em dados históricos, antes de aplicar qualquer ajuste em uma operação real, ajuda a entender como o indicador se comporta no ativo específico que está sendo analisado.</p>
 <p>Como em qualquer indicador técnico, o Parabolic SAR trabalha com dados de preços passados e não garante o comportamento futuro do mercado. Defina sempre o tamanho da posição e o stop loss antes de entrar em uma operação, e trate os sinais do indicador como um ponto de partida para análise, não como uma ordem automática de compra ou venda.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -220,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +320,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

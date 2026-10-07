@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/options-greeks-for-beginners/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "期权",
       "author": {
@@ -172,46 +172,86 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">期权希腊字母入门：delta、gamma、theta和vega</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">期权</span>
-        <h1>期权希腊字母入门：delta、gamma、theta和vega</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="gregas-das-opcoes-para-iniciantes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">期权</span>
+            <h1>期权希腊字母入门：delta、gamma、theta和vega</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#delta-期权跟随资产变动的幅度">Delta：期权跟随资产变动的幅度</a></li>
+                <li><a href="#gamma-delta变化的速度">Gamma：delta变化的速度</a></li>
+                <li><a href="#theta-持有期权随时间产生的成本">Theta：持有期权随时间产生的成本</a></li>
+                <li><a href="#vega-对波动率变化的敏感度">Vega：对波动率变化的敏感度</a></li>
+                <li><a href="#一个把delta和gamma结合起来的数字示例">一个把delta和gamma结合起来的数字示例</a></li>
+                <li><a href="#rho-很少有新手注意到的希腊字母">Rho：很少有新手注意到的希腊字母</a></li>
+                <li><a href="#希腊字母是如何协同作用的">希腊字母是如何协同作用的</a></li>
+                <li><a href="#这对新手为什么重要">这对新手为什么重要</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>开始学习期权的人，很快就会遇到四个看起来像天书一样的词：delta（德尔塔）、gamma（伽马）、theta（西塔）和vega（维加）。实际上，这些都是衡量期权价格如何对不同因素做出反应的指标，例如标的资产的走势、时间的流逝以及波动率的变化。理解每一个指标衡量的是什么，有助于在入场之前就评估一笔期权交易，而不是事后才发现为什么合约价格出现了意外的波动。</p>
-<h2>Delta：期权跟随资产变动的幅度</h2>
+<h2 id="delta-期权跟随资产变动的幅度">Delta：期权跟随资产变动的幅度</h2>
 <p>delta衡量期权价格对标的资产价格变动的敏感程度。例如，一份delta为0.60的看涨期权，在其他因素保持不变的情况下，标的资产每上涨1.00雷亚尔，该期权往往会上涨约0.60雷亚尔。看涨期权的delta为正值，介于0和1之间。看跌期权的delta为负值，介于-1和0之间。期权越处于价内，delta就越接近1或-1；越处于价外，delta就越接近零。</p>
-<h2>Gamma：delta变化的速度</h2>
+<h2 id="gamma-delta变化的速度">Gamma：delta变化的速度</h2>
 <p>如果说delta显示的是方向，那么gamma显示的就是当资产价格变动时，这个方向能变化得多快。高gamma意味着期权的delta可能会随着标的资产的小幅变动而大幅变化，这种情况通常出现在接近行权价、临近到期的期权上。这一点很重要，因为一个高gamma的头寸，其风险特征可能会迅速改变，需要比低gamma头寸更多的关注。</p>
-<h2>Theta：持有期权随时间产生的成本</h2>
+<h2 id="theta-持有期权随时间产生的成本">Theta：持有期权随时间产生的成本</h2>
 <p>theta衡量的是，在其他因素不变的情况下，期权仅仅因为时间流逝，每天往往会损失多少价值。这种效应被称为时间衰减。对于买入期权的人来说，theta对头寸不利：每过一天，只要资产没有出现足够的变动，合约的价值就会减少。对于卖出期权的人来说，theta则对其有利，这也解释了为什么卖出期权的策略常常被描述为对时间的押注，而不仅仅是对价格方向的押注。</p>
-<h2>Vega：对波动率变化的敏感度</h2>
+<h2 id="vega-对波动率变化的敏感度">Vega：对波动率变化的敏感度</h2>
 <p>vega衡量的是，当市场隐含波动率上升或下降时，期权价格会发生多大变化，而这不需要标的资产的价格发生任何变动。在不确定时期，比如公司财报公布或利率决议之前，隐含波动率往往会上升，这可能使期权变得更贵，即便资产价格没有立即出现变动。事件发生之后，波动率通常会急剧下降，这种效应被称为波动率坍塌，即使资产按预期方向变动，也可能因此降低期权的价值。</p>
-<h2>一个把delta和gamma结合起来的数字示例</h2>
+<h2 id="一个把delta和gamma结合起来的数字示例">一个把delta和gamma结合起来的数字示例</h2>
 <p>假设一份看涨期权交易价格为2.00雷亚尔，delta为0.40，gamma为0.05，标的资产报价为50.00雷亚尔。如果资产上涨1.00雷亚尔，达到51.00雷亚尔，仅凭delta估算，期权的新价格约为2.40雷亚尔。但0.05的gamma表明，delta本身也会上升，在这次变动之后从0.40升至约0.45。这意味着，如果资产之后再上涨1.00雷亚尔，期权的反应会比第一次上涨时略强一些。这种累积效应，正是为什么高gamma的头寸可能看起来平静，却会突然开始以远超预期的力度波动的原因。</p>
-<h2>Rho：很少有新手注意到的希腊字母</h2>
+<h2 id="rho-很少有新手注意到的希腊字母">Rho：很少有新手注意到的希腊字母</h2>
 <p>还有第五个希腊字母，叫做rho，衡量的是期权价格对利率变化的敏感度。在大多数短期交易中，与其他因素相比，rho的影响很小，但在期限较长的期权，或利率快速变化的时期，它的重要性会上升。即使日常关注点通常集中在delta、gamma、theta和vega上，值得知道它的存在。</p>
-<h2>希腊字母是如何协同作用的</h2>
+<h2 id="希腊字母是如何协同作用的">希腊字母是如何协同作用的</h2>
 <p>没有一个希腊字母是孤立起作用的。一份期权可能拥有有利于资产上涨的delta，但如果theta侵蚀收益的速度比价格上涨更快，或者波动率在入场后不久就下降，它仍然可能贬值。在构建一笔期权交易之前，不仅要问资产会涨还是会跌，还要问这需要多长时间，以及在这段时间内隐含波动率会如何变化。</p>
-<h2>这对新手为什么重要</h2>
+<h2 id="这对新手为什么重要">这对新手为什么重要</h2>
 <p>忽视希腊字母并不会让交易变得更简单，只是掩盖了本来就一直存在的风险。理解theta的期权买方知道，自己需要一个相对较快的走势来弥补时间的损耗。理解gamma的期权卖方知道，自己的头寸在临近到期时可能会变得风险大得多。期权交易涉及风险，包括合约投入价值全部损失的可能性，而理解希腊字母是在入场前评估这种风险的实用一步，而不是对结果的保证。</p>
 
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/how-binary-options-work/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">二元期权实际上是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
             <a class="bq__card" href="/zh/blog/binary-options-step-by-step-risk-management/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">二元期权：实用操作步骤与风险管理</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
@@ -219,7 +259,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +323,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

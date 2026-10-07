@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,30 +173,56 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Opções digitais: como funcionam e como calcular o risco real</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Opções</span>
-        <h1>Opções digitais: como funcionam e como calcular o risco real</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Quem começa a estudar mercado financeiro esbarra cedo ou tarde no termo "opções digitais". A ideia central é simples: você escolhe um ativo, define uma direção (alta ou baixa) e um horário de vencimento, e o resultado da operação depende de o preço do ativo terminar acima ou abaixo de um valor de referência, chamado strike. Não existe meio-termo — ou a previsão está certa e você recebe um retorno pré-definido, ou está errada e perde o valor investido naquela operação.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="opcoes-digitais-como-funcionam" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Opções</span>
+            <h1>Opções digitais: como funcionam e como calcular o risco real</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#o-que-muda-entre-uma-opcao-digital-e-uma-opcao-tradicional">O que muda entre uma opção digital e uma opção tradicional</a></li>
+                <li><a href="#como-o-strike-e-o-prazo-afetam-o-resultado">Como o strike e o prazo afetam o resultado</a></li>
+                <li><a href="#montando-um-plano-antes-de-operar">Montando um plano antes de operar</a></li>
+                <li><a href="#riscos-que-merecem-atencao">Riscos que merecem atenção</a></li>
+                <li><a href="#colocando-tudo-em-pratica">Colocando tudo em prática</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Quem começa a estudar mercado financeiro esbarra cedo ou tarde no termo "opções digitais". A ideia central é simples: você escolhe um ativo, define uma direção (alta ou baixa) e um horário de vencimento, e o resultado da operação depende de o preço do ativo terminar acima ou abaixo de um valor de referência, chamado strike. Não existe meio-termo — ou a previsão está certa e você recebe um retorno pré-definido, ou está errada e perde o valor investido naquela operação.</p>
 <p>Esse formato ficou popular por ser fácil de entender visualmente, mas fácil de entender não é o mesmo que fácil de operar com consistência. Antes de arriscar dinheiro real, vale entender como o preço se forma, o que muda em relação a outros tipos de opção e, principalmente, que tamanho de risco faz sentido para o seu capital.</p>
-<h2>O que muda entre uma opção digital e uma opção tradicional</h2>
+<h2 id="o-que-muda-entre-uma-opcao-digital-e-uma-opcao-tradicional">O que muda entre uma opção digital e uma opção tradicional</h2>
 <p>Nas opções tradicionais (as tratadas em cursos de finanças, negociadas em bolsas regulamentadas), o comprador paga um prêmio e tem o direito, não a obrigação, de comprar ou vender um ativo a um preço combinado até uma data de vencimento. O valor da opção varia continuamente conforme o mercado se move, e o resultado pode ser parcial: você pode lucrar pouco, lucrar muito, ou perder só uma fração do prêmio pago.</p>
 <p>Já nas opções digitais o desenho é binário e o prazo costuma ser bem mais curto — de minutos a poucos dias. Você sabe, antes de abrir a operação, exatamente quanto pode ganhar e quanto pode perder. Essa previsibilidade tem um preço: como o resultado é tudo ou nada, pequenos erros de timing pesam muito mais do que em uma opção tradicional, onde o preço se move de forma gradual.</p>
-<h2>Como o strike e o prazo afetam o resultado</h2>
+<h2 id="como-o-strike-e-o-prazo-afetam-o-resultado">Como o strike e o prazo afetam o resultado</h2>
 <p>O strike é a régua que decide se a operação vence ou perde. Se você aposta que um ativo vai subir e escolhe um strike muito distante do preço atual, a probabilidade de acertar cai, mas normalmente o retorno oferecido é maior. Se escolhe um strike próximo do preço atual, a chance de acerto sobe, mas o retorno tende a ser menor. Não existe strike "bom" isolado — existe uma relação entre distância, prazo e retorno que precisa fazer sentido matemático para você.</p>
 <p>Imagine um ativo cotado a R$ 100,00. Você aplica R$ 50,00 apostando que ele vai fechar acima de R$ 100,00 em 15 minutos, com retorno de 80% em caso de acerto. Se acertar, recebe R$ 90,00 (os R$ 50,00 aplicados mais R$ 40,00 de lucro). Se errar, perde os R$ 50,00. Para essa operação empatar no longo prazo, você precisaria acertar mais de 55,5% das vezes — porque cada erro custa R$ 50,00 e cada acerto rende R$ 40,00 líquidos. É essa conta, e não a sensação de "estou vendo uma tendência", que deveria guiar a decisão de entrar ou não.</p>
-<h2>Montando um plano antes de operar</h2>
+<h2 id="montando-um-plano-antes-de-operar">Montando um plano antes de operar</h2>
 <p>Um plano simples reduz decisões emocionais no meio da operação. Alguns pontos que vale fixar antes de abrir qualquer posição:</p>
 <ul>
 <li>Qual a taxa de acerto histórica da sua estratégia, medida em pelo menos 30 a 50 operações anteriores.</li>
@@ -204,17 +230,28 @@
 <li>Qual a fração do capital total destinada a cada operação — quanto menor, mais operações sua conta resiste a uma sequência de perdas.</li>
 <li>Em que cenário você para de operar no dia, seja por meta de ganho, seja por limite de perda.</li>
 </ul>
-<h2>Riscos que merecem atenção</h2>
+<h2 id="riscos-que-merecem-atencao">Riscos que merecem atenção</h2>
 <p>O prazo curto das opções digitais é o principal fator de risco: ele reduz o tempo de reação e aumenta a tentação de operar por impulso, tentando "recuperar" uma perda com a operação seguinte. Isso é conhecido como revenge trading e costuma transformar uma perda pontual em uma sequência de perdas maiores. Outro ponto de atenção é operar sem entender o ativo de referência — moeda, índice ou commodity —, já que notícias e liquidez do mercado afetam a velocidade e a direção do preço nos minutos seguintes.</p>
 <p>Plataformas como a Duotide organizam esses dados de forma visual, mas a leitura do gráfico continua sendo responsabilidade de quem opera. Nenhuma ferramenta substitui um plano de risco definido com antecedência.</p>
-<h2>Colocando tudo em prática</h2>
+<h2 id="colocando-tudo-em-pratica">Colocando tudo em prática</h2>
 <p>Antes de aplicar dinheiro de verdade, vale simular operações no papel: anote o ativo, o strike, o prazo, o retorno oferecido e o resultado, sem executar a ordem. Depois de 30 operações simuladas, calcule a taxa de acerto e compare com o retorno necessário para empatar, como no exemplo dos R$ 100,00. Se o número não fechar, o problema não está na sorte da rodada seguinte — está na estratégia. Trading envolve risco real de perda de capital, e nenhuma técnica garante lucro constante; o que existe é gestão de risco bem-feita, que evita que um erro isolado comprometa todo o capital disponível.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/como-funcionam-as-opcoes-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como funcionam as opções binárias, na prática</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/opcoes-binarias-passo-a-passo-e-gestao-de-risco/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opções binárias: passo a passo prático e gestão de risco</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
@@ -222,7 +259,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +322,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

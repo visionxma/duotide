@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/hogsta-och-lagsta-highest-high-lowest-low/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-vale-a-pena.webp",
       "articleSection": "Teknisk analys",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Navigeringsspår">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/sv/">Hem</a></li>
         <li><a href="/sv/blog/">Blogg</a></li>
         <li><span aria-current="page">Högsta och lägsta: så använder du highest high och lowest low</span></li>
       </ol>
+      <a class="ap__voltar" href="/sv/blog/">Tillbaka</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Teknisk analys</span>
-        <h1>Högsta och lägsta: så använder du highest high och lowest low</h1>
-        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
-        <figure class="foto"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Bland de enklaste indikatorerna att förstå, och just därför flitigt använda, finns den högsta högsta (highest high) och den lägsta lägsta (lowest low) för ett visst antal perioder. Trots enkelheten är de grunden för genombrottssystem (breakout) som använts i decennier av traders på olika marknader.</p><p>I den här artikeln kommer du att förstå hur de här två indikatorerna beräknas, varför de brukar användas tillsammans och hur man tillämpar dem i praktiken för att identifiera möjliga prisgenombrott.</p><h2>Vad highest high och lowest low är</h2><p>Den högsta högsta för en period är, bokstavligen, det högsta maxpriset som nåtts under de senaste N candlarna. Om du ställer in indikatorn på 20 perioder visar den, vid varje ny candle, vad den högsta högsta var bland de senaste 20. Den lägsta lägsta fungerar på samma sätt, fast den tittar på det lägsta minpriset under samma intervall.</p><p>Till skillnad från ett glidande medelvärde, som jämnar ut priset, markerar de här två indikatorerna verkliga extremgränser som marknaden redan testat under den perioden. Därför brukar de visas i diagrammet som två horisontella (eller lätt lutande) linjer som stiger när nya toppar bildas och sjunker när nya bottnar dyker upp.</p><h2>Hur beräkningen fungerar i praktiken</h2><p>Anta att, under de senaste 20 dagscandlarna för en tillgång, den högsta högsta var R$ 34,80 och den lägsta lägsta var R$ 29,50. Så länge priset håller sig inom det intervallet förblir de två linjerna på samma nivå. I det ögonblick priset stänger en candle över R$ 34,80 stiger den högsta linjen för att återspegla det nya taket; om priset stänger under R$ 29,50 sjunker den lägsta linjen till det nya golvet.</p><p>Den egenskapen är det som gör de här indikatorerna användbara för att identifiera genombrott: varje stängning bortom intervallet för de senaste N perioderna representerar, per definition, ett pris som marknaden inte nått på ganska länge.</p><h2>Att använda de två indikatorerna tillsammans: genombrottskanalen</h2><p>När de plottas tillsammans bildar högsta- och lägstalinjerna en slags kanal runt priset, liknande den kända Donchian-kanalen. Den kanalen avgränsar visuellt det senaste handelsintervallet och gör det lättare att se när priset är "instängt" sidledes, mellan de två linjerna, eller när det håller på att bryta igenom.</p><p>Ett klassiskt genombrottssystem använder exakt den här logiken: köp när priset stänger över den högsta högsta för N perioder, och sälj (eller nollställ den köpta positionen) när priset stänger under den lägsta lägsta för samma period. Den typen av system blev känt för att ha använts av grupper av traders som följde mekaniska genombrottsregler på olika marknader under 1980- och 1990-talen.</p><h2>Försiktighetsåtgärder vid handel med högsta- och lägstagenombrott</h2><p>Den största risken med den här typen av signal är det så kallade "falska genombrottet": priset stänger bortom intervallet, lockar köpare eller säljare, men återgår sedan in i kanalen, vilket lämnar den som gick in vid genombrottet med en snabb förlust. Därför kräver många traders en ytterligare bekräftelse, som volym över genomsnittet i genombrottscandlen, innan de betraktar signalen som giltig.</p><p>Den valda perioden (N) förändrar också indikatorns beteende avsevärt. Korta perioder, som 10, genererar genombrott oftare, men också fler falska signaler. Långa perioder, som 55, genererar mer sällsynta signaler, men historiskt mer konsekventa, till priset av att reagera långsammare på nya förändringar i tillgångens beteende.</p><h2>Att tillämpa det i din analys</h2><p>Innan du använder högsta- och lägstagenombrott som ingångsutlösare är det värt att observera hur den valda tillgången historiskt betett sig vid den typen av signal, och testa olika perioder hos Duotide för att förstå frekvensen och kvaliteten på genombrotten för just den tillgången. Att i förväg fastställa stoppens storlek, baserat på avståndet till kanalens motsatta linje, hjälper till att hålla affärens risk under kontroll, eftersom inget genombrottssystem träffar rätt varje gång, och möjligheten till förlust är en del av alla affärer på marknaden.</p><p>Det är också värt att jämföra högsta- och lägstabeteendet i olika tidsramar för samma tillgång. Ett genombrott i dagsdiagrammet tenderar att väga tyngre än samma genombrott i ett diagram på några minuter, helt enkelt för att det återspeglar ett handelsintervall testat under längre tid och av fler marknadsdeltagare. Att kombinera den längre avläsningen med en kortare tidsram för att justera den exakta ingångspunkten brukar minska risken för att handla genombrott som inte har något stöd bakom sig alls.</p>
-        <div class="bq-post__cta">
-          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="maxima-e-minima-highest-high-lowest-low" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Länken kopierad">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
+            </div>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-28">28 september 2026</time></p>
+            <span class="bq__tag">Teknisk analys</span>
+            <h1>Högsta och lägsta: så använder du highest high och lowest low</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-teamet</strong><small>Redaktionen</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Innehåll">
+              <p class="ap__indice-tit">Innehåll</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#vad-highest-high-och-lowest-low-ar">Vad highest high och lowest low är</a></li>
+                <li><a href="#hur-berakningen-fungerar-i-praktiken">Hur beräkningen fungerar i praktiken</a></li>
+                <li><a href="#att-anvanda-de-tva-indikatorerna-tillsammans-genombrottskana">Att använda de två indikatorerna tillsammans: genombrottskanalen</a></li>
+                <li><a href="#forsiktighetsatgarder-vid-handel-med-hogsta-och-lagstagenomb">Försiktighetsåtgärder vid handel med högsta- och lägstagenombrott</a></li>
+                <li><a href="#att-tillampa-det-i-din-analys">Att tillämpa det i din analys</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Till toppen</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Bland de enklaste indikatorerna att förstå, och just därför flitigt använda, finns den högsta högsta (highest high) och den lägsta lägsta (lowest low) för ett visst antal perioder. Trots enkelheten är de grunden för genombrottssystem (breakout) som använts i decennier av traders på olika marknader.</p><p>I den här artikeln kommer du att förstå hur de här två indikatorerna beräknas, varför de brukar användas tillsammans och hur man tillämpar dem i praktiken för att identifiera möjliga prisgenombrott.</p><h2 id="vad-highest-high-och-lowest-low-ar">Vad highest high och lowest low är</h2><p>Den högsta högsta för en period är, bokstavligen, det högsta maxpriset som nåtts under de senaste N candlarna. Om du ställer in indikatorn på 20 perioder visar den, vid varje ny candle, vad den högsta högsta var bland de senaste 20. Den lägsta lägsta fungerar på samma sätt, fast den tittar på det lägsta minpriset under samma intervall.</p><p>Till skillnad från ett glidande medelvärde, som jämnar ut priset, markerar de här två indikatorerna verkliga extremgränser som marknaden redan testat under den perioden. Därför brukar de visas i diagrammet som två horisontella (eller lätt lutande) linjer som stiger när nya toppar bildas och sjunker när nya bottnar dyker upp.</p><h2 id="hur-berakningen-fungerar-i-praktiken">Hur beräkningen fungerar i praktiken</h2><p>Anta att, under de senaste 20 dagscandlarna för en tillgång, den högsta högsta var R$ 34,80 och den lägsta lägsta var R$ 29,50. Så länge priset håller sig inom det intervallet förblir de två linjerna på samma nivå. I det ögonblick priset stänger en candle över R$ 34,80 stiger den högsta linjen för att återspegla det nya taket; om priset stänger under R$ 29,50 sjunker den lägsta linjen till det nya golvet.</p><p>Den egenskapen är det som gör de här indikatorerna användbara för att identifiera genombrott: varje stängning bortom intervallet för de senaste N perioderna representerar, per definition, ett pris som marknaden inte nått på ganska länge.</p><h2 id="att-anvanda-de-tva-indikatorerna-tillsammans-genombrottskana">Att använda de två indikatorerna tillsammans: genombrottskanalen</h2><p>När de plottas tillsammans bildar högsta- och lägstalinjerna en slags kanal runt priset, liknande den kända Donchian-kanalen. Den kanalen avgränsar visuellt det senaste handelsintervallet och gör det lättare att se när priset är "instängt" sidledes, mellan de två linjerna, eller när det håller på att bryta igenom.</p><p>Ett klassiskt genombrottssystem använder exakt den här logiken: köp när priset stänger över den högsta högsta för N perioder, och sälj (eller nollställ den köpta positionen) när priset stänger under den lägsta lägsta för samma period. Den typen av system blev känt för att ha använts av grupper av traders som följde mekaniska genombrottsregler på olika marknader under 1980- och 1990-talen.</p><h2 id="forsiktighetsatgarder-vid-handel-med-hogsta-och-lagstagenomb">Försiktighetsåtgärder vid handel med högsta- och lägstagenombrott</h2><p>Den största risken med den här typen av signal är det så kallade "falska genombrottet": priset stänger bortom intervallet, lockar köpare eller säljare, men återgår sedan in i kanalen, vilket lämnar den som gick in vid genombrottet med en snabb förlust. Därför kräver många traders en ytterligare bekräftelse, som volym över genomsnittet i genombrottscandlen, innan de betraktar signalen som giltig.</p><p>Den valda perioden (N) förändrar också indikatorns beteende avsevärt. Korta perioder, som 10, genererar genombrott oftare, men också fler falska signaler. Långa perioder, som 55, genererar mer sällsynta signaler, men historiskt mer konsekventa, till priset av att reagera långsammare på nya förändringar i tillgångens beteende.</p><h2 id="att-tillampa-det-i-din-analys">Att tillämpa det i din analys</h2><p>Innan du använder högsta- och lägstagenombrott som ingångsutlösare är det värt att observera hur den valda tillgången historiskt betett sig vid den typen av signal, och testa olika perioder hos Duotide för att förstå frekvensen och kvaliteten på genombrotten för just den tillgången. Att i förväg fastställa stoppens storlek, baserat på avståndet till kanalens motsatta linje, hjälper till att hålla affärens risk under kontroll, eftersom inget genombrottssystem träffar rätt varje gång, och möjligheten till förlust är en del av alla affärer på marknaden.</p><p>Det är också värt att jämföra högsta- och lägstabeteendet i olika tidsramar för samma tillgång. Ett genombrott i dagsdiagrammet tenderar att väga tyngre än samma genombrott i ett diagram på några minuter, helt enkelt för att det återspeglar ett handelsintervall testat under längre tid och av fler marknadsdeltagare. Att kombinera den längre avläsningen med en kortare tidsram för att justera den exakta ingångspunkten brukar minska risken för att handla genombrott som inte har något stöd bakom sig alls.</p>
+            <div class="bq-post__cta">
+              <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            </div>
+            <div class="ap__fim">
+              <p>Uppdaterad: <time datetime="2026-09-28">28 sep. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-teamet</strong><p>Duotides redaktion skriver guiderna och nyheterna i den här bloggen: hur marknaden fungerar, riskhantering och hur plattformen används. Inget här är investeringsrådgivning.</p></div>
+              <a class="btn ap__equipe" href="/sv/om-denna-webbplats/">Möt teamet</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Läs också</h2>
+        <aside class="ap__rel">
+          <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/huvud-skuldra-monstret-sa-identifierar-du-vandningen/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Huvud-skuldra-mönstret: så identifierar du vändningen</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/fibonacci-retracement-i-trading-ett-praktiskt-exempel/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Fibonacci-retracement i trading: ett praktiskt exempel</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

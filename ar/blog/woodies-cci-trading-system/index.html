@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/woodies-cci-trading-system/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "الاستراتيجيات",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">نظام Woodies CCI: المؤشر الكامل، وليس فقط CCI الأساسي</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">الاستراتيجيات</span>
-        <h1>نظام Woodies CCI: المؤشر الكامل، وليس فقط CCI الأساسي</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>يعرف كثير من الناس CCI فقط كمذبذب يقيس ما إذا كان السعر ممتدًا للأعلى أو للأسفل بشكل مفرط. النسخة التي أشهرها كين وود، المعروفة باسم Woodies CCI، تتجاوز ذلك: بدلًا من استخدام خط واحد، تجمع حسابين للمؤشر نفسه وقواعد دخول محددة، مشكّلة نظام قرار كاملًا، وليس مجرد فلتر تشبع شرائي وبيعي.</p><p>يشرح هذا المقال كيف تتلاءم أجزاء هذا النظام معًا وكيفية بناء قائمة تحقق للدخول باستخدامها، دون الاعتماد على حفظ عبور خط واحد فقط.</p><h2>ما الذي يميز Woodies CCI عن استخدام CCI بمفرده</h2><p>يميل CCI التقليدي، بمفرده، إلى توليد إشارات كاذبة كثيرة عند استخدامه فقط مع قاعدة الشراء عند التشبع البيعي والبيع عند التشبع الشرائي. يحل نظام Woodies جزءًا من هذه المشكلة بإضافة خط ثانٍ أسرع، ومعاملة عبور الخطين، وليس فقط المستوى المطلق للمؤشر، كمحفّز للانتباه.</p><h2>الخطان: CCI القياسي وCCI السريع</h2><p>في النظام الكامل، يظهر جنبًا إلى جنب نسختان من الحساب نفسه:</p><ul><li><strong>CCI القياسي</strong>، محسوب على فترة أطول (تقليديًا 14 فترة)، ممثلًا كهيستوغرام.</li><li><strong>CCI السريع</strong>، محسوب على فترة قصيرة (تقليديًا 6 فترات)، ممثلًا كخط أكثر تفاعلية فوق الهيستوغرام نفسه.</li></ul><p>عندما يعبر الخط السريع الهيستوغرام من الأسفل إلى الأعلى، يشير ذلك إلى تسارع شرائي قصير المدى ضمن الحركة الأكبر التي يقيسها CCI القياسي؛ ويشير العبور المعاكس إلى العكس. بمفرده، هذا العبور ليس بعد إشارة دخول — إنه الفلتر الأول للنظام.</p><h2>القراءة عبر الهيستوغرام ورفض خط الصفر</h2><p>أحد أكثر الأنماط استخدامًا ضمن النظام هو ما يُعرف برفض خط الصفر: يقترب الهيستوغرام من خط الصفر بعد حركة ثابتة في اتجاه واحد، لكن بدلًا من عبوره، يُرفض ويستأنف الاتجاه السابق. يُفسَّر هذا كتصحيح مؤقت ضمن الاتجاه الذي كان CCI نفسه يرسمه بالفعل، وليس كانعكاس.</p><p>لاعتبار هذا النمط صالحًا، يتطلب النظام سياق اتجاه محدد بالفعل في الهيستوغرام قبل الاقتراب من خط الصفر — يفقد النمط قوته عندما يكون CCI مجرد يتذبذب أفقيًا حول الصفر، دون اتجاه سابق واضح.</p><h2>كسر خط الاتجاه داخل المؤشر نفسه</h2><p>أداة أخرى من النظام الكامل هي رسم خط اتجاه فوق قمم وقيعان هيستوغرام CCI نفسه، بنفس طريقة رسم خط اتجاه على الرسم البياني للسعر. عندما يكسر الهيستوغرام هذا الخط، يفهم النظام ذلك كإشارة إلى أن الزخم يتغير حتى قبل أن يؤكد السعر هذا التغيير بوضوح. يكتسب هذا الكسر عادة وزنًا أكبر عندما يحدث قرب منطقة رفض خط صفر أو عبور بين خطي CCI.</p><h2>كيفية بناء قائمة تحقق للدخول بالنظام الكامل</h2><ul><li>يُظهر الهيستوغرام اتجاهًا محددًا في الفترات الأخيرة، وليس مجرد ضجيج حول الصفر.</li><li>يعبر الخط السريع الهيستوغرام في اتجاه الاتجاه المحدد بالفعل.</li><li>يوجد رفض خط صفر أو كسر خط اتجاه للمؤشر نفسه يعزز الإشارة نفسها.</li><li>لا يتناقض السعر، في الرسم البياني العادي، بشكل صريح مع ما يظهره CCI.</li></ul><p>كلما اصطفت هذه النقاط أكثر في الاتجاه نفسه، اقتربت الإشارة أكثر من منطق النظام الأصلي — استخدام عبور واحد معزول يميل إلى تكرار الإشارات الكاذبة نفسها لـCCI التقليدي.</p><h2>إدارة المخاطر داخل النظام</h2><p>لا يستغني أي نظام مبني على CCI عن الإيقاف والحساب المسبق للمخاطرة. لنفترض أصلًا مسعّرًا بـ120 ريالًا، مع إشارة نظام Woodies إلى رفض خط صفر صاعد مؤكَّد بعبور الخطين. دخول عند 120.50 ريال، مع إيقاف عند القاع الأخير البالغ 118.00 ريال (مخاطرة 2.50 ريال لكل وحدة) وهدف عند 126.00 ريال، قرب المقاومة التالية (عائد 5.50 ريال لكل وحدة)، ينتج عنه علاقة مخاطرة-عائد تقارب 1 إلى 2.2 — محسوبة قبل تأكيد الدخول، وليس بعده.</p><p>ينظم نظام Woodies CCI قراءة المؤشر بشكل أفضل، لكنه يبقى أداة احتمالية، وليس ضمانًا للإصابة. اختبر القواعد على رسوم بيانية تاريخية أو على منصة مثل Duotide قبل تطبيقها برأس مال لا يمكنك تحمل خسارته، وحافظ دائمًا على تحديد الإيقاف كجزء من الإشارة نفسها، لا كتفصيل لاحق.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="sistema-completo-woodies-cci-estrategia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <span class="bq__tag">الاستراتيجيات</span>
+            <h1>نظام Woodies CCI: المؤشر الكامل، وليس فقط CCI الأساسي</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#ما-الذي-يميز-woodies-cci-عن-استخدام-cci-بمفرده">ما الذي يميز Woodies CCI عن استخدام CCI بمفرده</a></li>
+                <li><a href="#الخطان-cci-القياسي-وcci-السريع">الخطان: CCI القياسي وCCI السريع</a></li>
+                <li><a href="#القراءة-عبر-الهيستوغرام-ورفض-خط-الصفر">القراءة عبر الهيستوغرام ورفض خط الصفر</a></li>
+                <li><a href="#كسر-خط-الاتجاه-داخل-المو-شر-نفسه">كسر خط الاتجاه داخل المؤشر نفسه</a></li>
+                <li><a href="#كيفية-بناء-قاي-مة-تحقق-للدخول-بالنظام-الكامل">كيفية بناء قائمة تحقق للدخول بالنظام الكامل</a></li>
+                <li><a href="#ا-دارة-المخاطر-داخل-النظام">إدارة المخاطر داخل النظام</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>يعرف كثير من الناس CCI فقط كمذبذب يقيس ما إذا كان السعر ممتدًا للأعلى أو للأسفل بشكل مفرط. النسخة التي أشهرها كين وود، المعروفة باسم Woodies CCI، تتجاوز ذلك: بدلًا من استخدام خط واحد، تجمع حسابين للمؤشر نفسه وقواعد دخول محددة، مشكّلة نظام قرار كاملًا، وليس مجرد فلتر تشبع شرائي وبيعي.</p><p>يشرح هذا المقال كيف تتلاءم أجزاء هذا النظام معًا وكيفية بناء قائمة تحقق للدخول باستخدامها، دون الاعتماد على حفظ عبور خط واحد فقط.</p><h2 id="ما-الذي-يميز-woodies-cci-عن-استخدام-cci-بمفرده">ما الذي يميز Woodies CCI عن استخدام CCI بمفرده</h2><p>يميل CCI التقليدي، بمفرده، إلى توليد إشارات كاذبة كثيرة عند استخدامه فقط مع قاعدة الشراء عند التشبع البيعي والبيع عند التشبع الشرائي. يحل نظام Woodies جزءًا من هذه المشكلة بإضافة خط ثانٍ أسرع، ومعاملة عبور الخطين، وليس فقط المستوى المطلق للمؤشر، كمحفّز للانتباه.</p><h2 id="الخطان-cci-القياسي-وcci-السريع">الخطان: CCI القياسي وCCI السريع</h2><p>في النظام الكامل، يظهر جنبًا إلى جنب نسختان من الحساب نفسه:</p><ul><li><strong>CCI القياسي</strong>، محسوب على فترة أطول (تقليديًا 14 فترة)، ممثلًا كهيستوغرام.</li><li><strong>CCI السريع</strong>، محسوب على فترة قصيرة (تقليديًا 6 فترات)، ممثلًا كخط أكثر تفاعلية فوق الهيستوغرام نفسه.</li></ul><p>عندما يعبر الخط السريع الهيستوغرام من الأسفل إلى الأعلى، يشير ذلك إلى تسارع شرائي قصير المدى ضمن الحركة الأكبر التي يقيسها CCI القياسي؛ ويشير العبور المعاكس إلى العكس. بمفرده، هذا العبور ليس بعد إشارة دخول — إنه الفلتر الأول للنظام.</p><h2 id="القراءة-عبر-الهيستوغرام-ورفض-خط-الصفر">القراءة عبر الهيستوغرام ورفض خط الصفر</h2><p>أحد أكثر الأنماط استخدامًا ضمن النظام هو ما يُعرف برفض خط الصفر: يقترب الهيستوغرام من خط الصفر بعد حركة ثابتة في اتجاه واحد، لكن بدلًا من عبوره، يُرفض ويستأنف الاتجاه السابق. يُفسَّر هذا كتصحيح مؤقت ضمن الاتجاه الذي كان CCI نفسه يرسمه بالفعل، وليس كانعكاس.</p><p>لاعتبار هذا النمط صالحًا، يتطلب النظام سياق اتجاه محدد بالفعل في الهيستوغرام قبل الاقتراب من خط الصفر — يفقد النمط قوته عندما يكون CCI مجرد يتذبذب أفقيًا حول الصفر، دون اتجاه سابق واضح.</p><h2 id="كسر-خط-الاتجاه-داخل-المو-شر-نفسه">كسر خط الاتجاه داخل المؤشر نفسه</h2><p>أداة أخرى من النظام الكامل هي رسم خط اتجاه فوق قمم وقيعان هيستوغرام CCI نفسه، بنفس طريقة رسم خط اتجاه على الرسم البياني للسعر. عندما يكسر الهيستوغرام هذا الخط، يفهم النظام ذلك كإشارة إلى أن الزخم يتغير حتى قبل أن يؤكد السعر هذا التغيير بوضوح. يكتسب هذا الكسر عادة وزنًا أكبر عندما يحدث قرب منطقة رفض خط صفر أو عبور بين خطي CCI.</p><h2 id="كيفية-بناء-قاي-مة-تحقق-للدخول-بالنظام-الكامل">كيفية بناء قائمة تحقق للدخول بالنظام الكامل</h2><ul><li>يُظهر الهيستوغرام اتجاهًا محددًا في الفترات الأخيرة، وليس مجرد ضجيج حول الصفر.</li><li>يعبر الخط السريع الهيستوغرام في اتجاه الاتجاه المحدد بالفعل.</li><li>يوجد رفض خط صفر أو كسر خط اتجاه للمؤشر نفسه يعزز الإشارة نفسها.</li><li>لا يتناقض السعر، في الرسم البياني العادي، بشكل صريح مع ما يظهره CCI.</li></ul><p>كلما اصطفت هذه النقاط أكثر في الاتجاه نفسه، اقتربت الإشارة أكثر من منطق النظام الأصلي — استخدام عبور واحد معزول يميل إلى تكرار الإشارات الكاذبة نفسها لـCCI التقليدي.</p><h2 id="ا-دارة-المخاطر-داخل-النظام">إدارة المخاطر داخل النظام</h2><p>لا يستغني أي نظام مبني على CCI عن الإيقاف والحساب المسبق للمخاطرة. لنفترض أصلًا مسعّرًا بـ120 ريالًا، مع إشارة نظام Woodies إلى رفض خط صفر صاعد مؤكَّد بعبور الخطين. دخول عند 120.50 ريال، مع إيقاف عند القاع الأخير البالغ 118.00 ريال (مخاطرة 2.50 ريال لكل وحدة) وهدف عند 126.00 ريال، قرب المقاومة التالية (عائد 5.50 ريال لكل وحدة)، ينتج عنه علاقة مخاطرة-عائد تقارب 1 إلى 2.2 — محسوبة قبل تأكيد الدخول، وليس بعده.</p><p>ينظم نظام Woodies CCI قراءة المؤشر بشكل أفضل، لكنه يبقى أداة احتمالية، وليس ضمانًا للإصابة. اختبر القواعد على رسوم بيانية تاريخية أو على منصة مثل Duotide قبل تطبيقها برأس مال لا يمكنك تحمل خسارته، وحافظ دائمًا على تحديد الإيقاف كجزء من الإشارة نفسها، لا كتفصيل لاحق.</p>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/ema-crossover-in-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">تقاطع المتوسطات المتحركة الأسية (EMA) في التداول</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">كيفية اختيار أجل (انتهاء) صفقة</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

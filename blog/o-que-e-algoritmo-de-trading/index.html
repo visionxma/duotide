@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,28 +173,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">O que é um algoritmo de trading e como funciona</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Estratégias</span>
-        <h1>O que é um algoritmo de trading e como funciona</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 6 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>O termo algoritmo de trading costuma soar mais complicado do que realmente é. No fundo, um algoritmo é apenas uma sequência de regras lógicas que decide quando comprar, quando vender e quanto arriscar, sem depender da intuição do momento. Ele pode ser tão simples quanto uma regra de cruzamento de médias móveis ou tão complexo quanto um modelo estatístico com dezenas de variáveis.</p><p>Neste artigo, você vai entender o que é um algoritmo de trading, os principais tipos usados por traders individuais, e como avaliar se vale a pena construir ou usar um.</p><h2>A diferença entre algoritmo, estratégia e robô</h2><p>É comum confundir esses três termos, mas eles não são sinônimos. A estratégia é a ideia geral, por exemplo, comprar ativos que estão em tendência de alta e romperam uma resistência. O algoritmo é essa ideia transformada em regras precisas e testáveis, com números exatos: qual período de média móvel, qual percentual de rompimento, qual tamanho de stop. Já o robô é o programa de computador que executa esse algoritmo automaticamente, sem intervenção manual.</p><p>Você pode ter uma estratégia e executá-la manualmente, aplicando o algoritmo de cabeça a cada operação, sem nunca programar um robô. Muitos traders experientes fazem exatamente isso: usam a lógica de um algoritmo, mas apertam o botão de compra e venda com a própria mão.</p><h2>Tipos comuns de algoritmo de trading</h2><h3>Seguidores de tendência</h3><p>Compram quando o preço está subindo de forma consistente e vendem quando a tendência de alta perde força, geralmente usando médias móveis ou indicadores de força de tendência como referência.</p><h3>Reversão à média</h3><p>Partem do princípio de que o preço tende a voltar para uma média histórica depois de um movimento exagerado, comprando quando o ativo cai muito rápido e vendendo quando sobe além do que o algoritmo considera razoável.</p><h3>Arbitragem</h3><p>Buscam pequenas diferenças de preço do mesmo ativo entre corretoras ou mercados diferentes, comprando onde está mais barato e vendendo onde está mais caro quase simultaneamente. Esse tipo de algoritmo costuma exigir capital maior e execução muito rápida para ser viável.</p><h2>Como avaliar um algoritmo antes de usá-lo</h2><p>O primeiro critério é a clareza das regras: um bom algoritmo consegue ser descrito em poucas frases, sem espaço para interpretação subjetiva. O segundo é o histórico de testes, feito com dados de um período longo o suficiente para incluir momentos bons e ruins de mercado.</p><p>Um exemplo numérico ajuda a entender a importância da relação risco-retorno de um algoritmo. Suponha um algoritmo com 45% de acerto, arriscando R$ 100 por operação perdedora e ganhando, em média, R$ 180 por operação vencedora. O resultado esperado por operação seria (0,45 x R$ 180) − (0,55 x R$ 100) = R$ 81 − R$ 55 = R$ 26 positivos, mesmo errando mais da metade das vezes. Isso mostra por que a taxa de acerto sozinha não diz nada sobre a qualidade de um algoritmo: a relação entre ganhos e perdas médias é igualmente importante.</p><ul><li>Regras claras, sem ambiguidade na entrada e na saída.</li><li>Histórico de teste em período longo, com mercado em alta e em baixa.</li><li>Relação risco-retorno definida, não apenas taxa de acerto.</li><li>Custos de operação incluídos no cálculo de resultado esperado.</li></ul><h2>Cuidados ao adotar algoritmos prontos</h2><p>Existem algoritmos vendidos prontos, com a promessa de resultados consistentes. Antes de adotar qualquer um, peça o histórico completo de operações, não apenas um resumo de meses vencedores, e verifique se o período de teste inclui momentos difíceis de mercado, como quedas bruscas ou alta volatilidade.</p><p>Independentemente de o algoritmo ser executado manualmente ou por um robô, a plataforma usada para colocar as ordens em prática, como a Duotide, não interfere na qualidade das regras por trás da estratégia. Um algoritmo mal desenhado gera prejuízo em qualquer plataforma.</p><h2>Como começar a construir o seu próprio algoritmo</h2><p>Escreva sua ideia de trading em regras numéricas simples, teste manualmente em um gráfico histórico antes de programar qualquer coisa e só considere automatizar depois de confirmar, com dados reais, que a lógica faz sentido. Vale também revisar o algoritmo periodicamente: um conjunto de regras que funcionava bem há seis meses pode perder eficácia se o comportamento do mercado mudar, então acompanhar os resultados reais frente ao esperado é parte do trabalho, não uma etapa opcional.</p><p>Lembre-se de que nenhum algoritmo, por mais bem construído, elimina o risco de perda — ele apenas organiza a forma como esse risco é assumido. Disciplina para seguir as regras, mesmo em sequências de perdas dentro do esperado estatisticamente, costuma pesar mais no resultado final do que a sofisticação técnica do algoritmo em si.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-algoritmo-de-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">6 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Estratégias</span>
+            <h1>O que é um algoritmo de trading e como funciona</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#a-diferenca-entre-algoritmo-estrategia-e-robo">A diferença entre algoritmo, estratégia e robô</a></li>
+                <li><a href="#tipos-comuns-de-algoritmo-de-trading">Tipos comuns de algoritmo de trading</a></li>
+                <li><a href="#como-avaliar-um-algoritmo-antes-de-usa-lo">Como avaliar um algoritmo antes de usá-lo</a></li>
+                <li><a href="#cuidados-ao-adotar-algoritmos-prontos">Cuidados ao adotar algoritmos prontos</a></li>
+                <li><a href="#como-comecar-a-construir-o-seu-proprio-algoritmo">Como começar a construir o seu próprio algoritmo</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>O termo algoritmo de trading costuma soar mais complicado do que realmente é. No fundo, um algoritmo é apenas uma sequência de regras lógicas que decide quando comprar, quando vender e quanto arriscar, sem depender da intuição do momento. Ele pode ser tão simples quanto uma regra de cruzamento de médias móveis ou tão complexo quanto um modelo estatístico com dezenas de variáveis.</p><p>Neste artigo, você vai entender o que é um algoritmo de trading, os principais tipos usados por traders individuais, e como avaliar se vale a pena construir ou usar um.</p><h2 id="a-diferenca-entre-algoritmo-estrategia-e-robo">A diferença entre algoritmo, estratégia e robô</h2><p>É comum confundir esses três termos, mas eles não são sinônimos. A estratégia é a ideia geral, por exemplo, comprar ativos que estão em tendência de alta e romperam uma resistência. O algoritmo é essa ideia transformada em regras precisas e testáveis, com números exatos: qual período de média móvel, qual percentual de rompimento, qual tamanho de stop. Já o robô é o programa de computador que executa esse algoritmo automaticamente, sem intervenção manual.</p><p>Você pode ter uma estratégia e executá-la manualmente, aplicando o algoritmo de cabeça a cada operação, sem nunca programar um robô. Muitos traders experientes fazem exatamente isso: usam a lógica de um algoritmo, mas apertam o botão de compra e venda com a própria mão.</p><h2 id="tipos-comuns-de-algoritmo-de-trading">Tipos comuns de algoritmo de trading</h2><h3>Seguidores de tendência</h3><p>Compram quando o preço está subindo de forma consistente e vendem quando a tendência de alta perde força, geralmente usando médias móveis ou indicadores de força de tendência como referência.</p><h3>Reversão à média</h3><p>Partem do princípio de que o preço tende a voltar para uma média histórica depois de um movimento exagerado, comprando quando o ativo cai muito rápido e vendendo quando sobe além do que o algoritmo considera razoável.</p><h3>Arbitragem</h3><p>Buscam pequenas diferenças de preço do mesmo ativo entre corretoras ou mercados diferentes, comprando onde está mais barato e vendendo onde está mais caro quase simultaneamente. Esse tipo de algoritmo costuma exigir capital maior e execução muito rápida para ser viável.</p><h2 id="como-avaliar-um-algoritmo-antes-de-usa-lo">Como avaliar um algoritmo antes de usá-lo</h2><p>O primeiro critério é a clareza das regras: um bom algoritmo consegue ser descrito em poucas frases, sem espaço para interpretação subjetiva. O segundo é o histórico de testes, feito com dados de um período longo o suficiente para incluir momentos bons e ruins de mercado.</p><p>Um exemplo numérico ajuda a entender a importância da relação risco-retorno de um algoritmo. Suponha um algoritmo com 45% de acerto, arriscando R$ 100 por operação perdedora e ganhando, em média, R$ 180 por operação vencedora. O resultado esperado por operação seria (0,45 x R$ 180) − (0,55 x R$ 100) = R$ 81 − R$ 55 = R$ 26 positivos, mesmo errando mais da metade das vezes. Isso mostra por que a taxa de acerto sozinha não diz nada sobre a qualidade de um algoritmo: a relação entre ganhos e perdas médias é igualmente importante.</p><ul><li>Regras claras, sem ambiguidade na entrada e na saída.</li><li>Histórico de teste em período longo, com mercado em alta e em baixa.</li><li>Relação risco-retorno definida, não apenas taxa de acerto.</li><li>Custos de operação incluídos no cálculo de resultado esperado.</li></ul><h2 id="cuidados-ao-adotar-algoritmos-prontos">Cuidados ao adotar algoritmos prontos</h2><p>Existem algoritmos vendidos prontos, com a promessa de resultados consistentes. Antes de adotar qualquer um, peça o histórico completo de operações, não apenas um resumo de meses vencedores, e verifique se o período de teste inclui momentos difíceis de mercado, como quedas bruscas ou alta volatilidade.</p><p>Independentemente de o algoritmo ser executado manualmente ou por um robô, a plataforma usada para colocar as ordens em prática, como a Duotide, não interfere na qualidade das regras por trás da estratégia. Um algoritmo mal desenhado gera prejuízo em qualquer plataforma.</p><h2 id="como-comecar-a-construir-o-seu-proprio-algoritmo">Como começar a construir o seu próprio algoritmo</h2><p>Escreva sua ideia de trading em regras numéricas simples, teste manualmente em um gráfico histórico antes de programar qualquer coisa e só considere automatizar depois de confirmar, com dados reais, que a lógica faz sentido. Vale também revisar o algoritmo periodicamente: um conjunto de regras que funcionava bem há seis meses pode perder eficácia se o comportamento do mercado mudar, então acompanhar os resultados reais frente ao esperado é parte do trabalho, não uma etapa opcional.</p><p>Lembre-se de que nenhum algoritmo, por mais bem construído, elimina o risco de perda — ele apenas organiza a forma como esse risco é assumido. Disciplina para seguir as regras, mesmo em sequências de perdas dentro do esperado estatisticamente, costuma pesar mais no resultado final do que a sofisticação técnica do algoritmo em si.</p>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/cruzamento-de-medias-moveis-exponenciais-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cruzamento de médias móveis exponenciais (EMA) no trading</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/como-escolher-o-prazo-de-uma-operacao/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como escolher o prazo (expiração) de uma operação</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -202,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

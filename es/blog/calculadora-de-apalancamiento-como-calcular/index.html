@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/calculadora-de-apalancamiento-como-calcular/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp",
       "articleSection": "Gestión de riesgo",
       "author": {
@@ -172,31 +172,57 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Cómo calcular el apalancamiento y el margen necesario en el trading</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestión de riesgo</span>
-        <h1>Cómo calcular el apalancamiento y el margen necesario en el trading</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>El apalancamiento es el mecanismo que permite controlar una posición mayor en el mercado usando una fracción de ese valor como margen, depositada en el bróker. Existe en forex, criptomonedas, CFD, materias primas e índices, y en todos esos casos la fórmula central es la misma.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-alavancagem-como-calcular" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">4 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-27">27 de septiembre de 2026</time></p>
+            <span class="bq__tag">Gestión de riesgo</span>
+            <h1>Cómo calcular el apalancamiento y el margen necesario en el trading</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#la-formula-universal">La fórmula universal</a></li>
+                <li><a href="#el-numero-que-realmente-importa-el-apalancamiento-efectivo">El número que realmente importa: el apalancamiento efectivo</a></li>
+                <li><a href="#ejemplo-en-forex-misma-posicion-apalancamientos-diferentes">Ejemplo en forex: misma posición, apalancamientos diferentes</a></li>
+                <li><a href="#ejemplo-en-criptomonedas">Ejemplo en criptomonedas</a></li>
+                <li><a href="#como-usar-este-calculo-en-la-practica">Cómo usar este cálculo en la práctica</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>El apalancamiento es el mecanismo que permite controlar una posición mayor en el mercado usando una fracción de ese valor como margen, depositada en el bróker. Existe en forex, criptomonedas, CFD, materias primas e índices, y en todos esos casos la fórmula central es la misma.</p>
 <p>El punto que más genera confusión es pensar que el apalancamiento, por sí solo, define el riesgo de la operación. No lo define. El apalancamiento cambia cuánto capital se exige para abrir la posición — no cambia el tamaño del movimiento de mercado que la posición representa.</p>
-<h2>La fórmula universal</h2>
+<h2 id="la-formula-universal">La fórmula universal</h2>
 <p>El margen necesario para abrir una posición se calcula así:</p>
 <p>Margen necesario = valor de la posición ÷ apalancamiento</p>
 <p>Si una posición vale R$ 50.000 y el apalancamiento es 1:20, el margen necesario es R$ 2.500. Con apalancamiento 1:100, la misma posición de R$ 50.000 exige apenas R$ 500 de margen. En ambos casos, sin embargo, la posición sigue comportándose como una posición de R$ 50.000 — es ese valor el que determina cuánto se gana o se pierde con cada variación porcentual del activo, no el margen depositado.</p>
-<h2>El número que realmente importa: el apalancamiento efectivo</h2>
+<h2 id="el-numero-que-realmente-importa-el-apalancamiento-efectivo">El número que realmente importa: el apalancamiento efectivo</h2>
 <p>La mayoría de las explicaciones sobre apalancamiento se detienen ahí, pero falta una pieza: el apalancamiento efectivo, calculado como el valor total de la posición dividido entre el saldo de la cuenta. Un trader puede tener acceso a un apalancamiento de 1:500 y aun así operar de forma conservadora, usando posiciones pequeñas. Otro trader puede usar apenas 1:10 y correr un riesgo excesivo, simplemente por abrir una posición demasiado grande para el tamaño de su propia cuenta.</p>
 <p>Antes de cualquier operación apalancada, cuatro preguntas merecen respuesta: cuál es el valor total de la posición, cuánto margen será bloqueado, cuál es el apalancamiento efectivo resultante, y cuál sería la pérdida estimada si el precio llegara al stop planeado.</p>
-<h2>Ejemplo en forex: misma posición, apalancamientos diferentes</h2>
+<h2 id="ejemplo-en-forex-misma-posicion-apalancamientos-diferentes">Ejemplo en forex: misma posición, apalancamientos diferentes</h2>
 <p>Un trader con una cuenta de R$ 5.000 abre 0,10 lote de EUR/USD cerca de 1,0850, con un stop de 30 pips. El valor de la posición es de aproximadamente R$ 54.250 (10.000 euros convertidos a la cotización de ejemplo), y el valor del pip en esa posición es de cerca de R$ 5. El riesgo en el stop, por lo tanto, es de R$ 150, independientemente del apalancamiento elegido.</p>
 <ul>
 <li><strong>Apalancamiento 1:10</strong> — margen necesario de cerca de R$ 5.425; apalancamiento efectivo de 10,85x; riesgo en el stop de R$ 150.</li>
@@ -204,7 +230,7 @@
 <li><strong>Apalancamiento 1:100</strong> — margen necesario de cerca de R$ 543; mismo apalancamiento efectivo; mismo riesgo de R$ 150.</li>
 </ul>
 <p>El margen bloqueado cambia bastante entre los tres escenarios. El riesgo financiero de la operación no cambia en nada, porque el tamaño de la posición y la distancia del stop permanecieron idénticos. Esa es la lección central: el apalancamiento define cuánto capital se reserva para abrir la posición; el tamaño de la posición es lo que define la exposición real al riesgo.</p>
-<h2>Ejemplo en criptomonedas</h2>
+<h2 id="ejemplo-en-criptomonedas">Ejemplo en criptomonedas</h2>
 <p>El mismo razonamiento vale fuera del forex. Supongamos que el bitcoin está cotizado a R$ 350.000 y un trader abre una posición de 0,02 BTC con apalancamiento 1:10. El valor de la posición es:</p>
 <p>0,02 × R$ 350.000 = R$ 7.000</p>
 <p>El margen necesario es:</p>
@@ -212,15 +238,26 @@
 <p>Si el precio del bitcoin cae 5% en contra de la posición, la pérdida aproximada, antes de costos, es:</p>
 <p>R$ 7.000 × 5% = R$ 350</p>
 <p>De nuevo, el apalancamiento no decidió por sí solo el tamaño de la pérdida. Fueron la cantidad de bitcoin negociada y el tamaño del movimiento de precio los que determinaron el resultado. Una cantidad menor de BTC reduciría la exposición; un stop más ajustado o más amplio cambiaría el punto en que la pérdida se concreta — pero ninguna de esas variables es el apalancamiento en sí.</p>
-<h2>Cómo usar este cálculo en la práctica</h2>
+<h2 id="como-usar-este-calculo-en-la-practica">Cómo usar este cálculo en la práctica</h2>
 <p>Antes de elegir el apalancamiento en cualquier operación, el camino más seguro es invertir el orden de las preguntas: en vez de preguntar "cuál es el mayor apalancamiento disponible", pregunta "a qué valor de posición realmente quiero tener exposición, dado mi capital y el riesgo que estoy dispuesto a asumir". A partir de ese valor de posición, el margen necesario surge como consecuencia de la fórmula, no como punto de partida.</p>
 <p>Un apalancamiento alto aumenta el potencial de ganancia, pero en la misma proporción aumenta el potencial de pérdida, y puede llevar a llamadas de margen cuando el mercado se mueve rápidamente en contra de la posición. Es una herramienta, no un atajo hacia una ganancia garantizada — el trading implica riesgo de pérdida en cualquier nivel de apalancamiento, y siempre vale la pena confirmar las condiciones de margen específicas de cada instrumento en la plataforma antes de operar, ya sea en Duotide o en cualquier otro entorno de negociación.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-27">27 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en el forex</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia martingala en el trading: cómo funciona y sus riesgos</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -228,7 +265,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +329,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

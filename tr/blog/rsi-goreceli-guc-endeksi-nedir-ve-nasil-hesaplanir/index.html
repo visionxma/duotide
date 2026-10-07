@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/rsi-goreceli-guc-endeksi-nedir-ve-nasil-hesaplanir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -172,29 +172,57 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">RSI, Göreceli Güç Endeksi Nedir ve Nasıl Hesaplanır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Göstergeler</span>
-        <h1>RSI, Göreceli Güç Endeksi Nedir ve Nasıl Hesaplanır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-o-rsi-indice-de-forca-relativa" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-28">28 Eylül 2026</time></p>
+            <span class="bq__tag">Göstergeler</span>
+            <h1>RSI, Göreceli Güç Endeksi Nedir ve Nasıl Hesaplanır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#rsi-formulu">RSI formülü</a></li>
+                <li><a href="#elle-cozulmus-bir-ornek">Elle çözülmüş bir örnek</a></li>
+                <li><a href="#asırı-alım-ve-asırı-satım-seviyeleri-nasıl-yorumlanır">Aşırı alım ve aşırı satım seviyeleri nasıl yorumlanır</a></li>
+                <li><a href="#uyumsuzluk-fiyat-ve-rsi-anlasamadıgında">Uyumsuzluk: fiyat ve RSI anlaşamadığında</a></li>
+                <li><a href="#rsi-kullanırken-yapılan-yaygın-hatalar">RSI kullanırken yapılan yaygın hatalar</a></li>
+                <li><a href="#farklı-zaman-dilimlerinde-rsi">Farklı zaman dilimlerinde RSI</a></li>
+                <li><a href="#rsi-daha-sorumlu-bir-sekilde-nasıl-kullanılır">RSI daha sorumlu bir şekilde nasıl kullanılır</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>RSI, ya da göreceli güç endeksi, teknik analizde en çok kullanılan momentum göstergelerinden biridir. Bir varlığın son kazançlarının gücünü son kayıplarının gücüyle karşılaştırır ve bir hareketin ne zaman çok fazla gerilmiş olabileceğini belirlemeye yardımcı olan 0 ile 100 arasında bir sayı üretir.</p>
-<h2>RSI formülü</h2>
+<h2 id="rsi-formulu">RSI formülü</h2>
 <p>Hesaplama, genelde 14 olmak üzere tanımlanmış sayıda periyot boyunca kazançların ortalaması ve kayıpların ortalamasıyla başlar. Bu ortalamalardan, RS denen göreceli güç hesaplanır:</p>
 <p><strong>RS = kazançların ortalaması / kayıpların ortalaması</strong></p>
 <p>Sonra, RS şu formül kullanılarak 0-100 ölçeğine dönüştürülür:</p>
 <p><strong>RSI = 100 - [100 / (1 + RS)]</strong></p>
-<h2>Elle çözülmüş bir örnek</h2>
+<h2 id="elle-cozulmus-bir-ornek">Elle çözülmüş bir örnek</h2>
 <p>Hesabı basitleştirmek için, sadece hesaplamayı göstermek amacıyla, normalde kullanılan 14 yerine sadece 5 fiyat değişimiyle bir örneğe bakalım. Bir hissenin şu günlük kapanışlarını varsayalım: R$ 10,00; R$ 10,20; R$ 10,15; R$ 10,40; R$ 10,30; R$ 10,50.</p>
 <p>Bir kapanış ile bir sonraki arasındaki değişimler şöyleydi:</p>
 <ul>
@@ -206,28 +234,39 @@
 </ul>
 <p>Üç kazancı toplayıp 5 değişime bölerek elde edilen kazanç ortalaması (0,20 + 0,25 + 0,20) / 5 = 0,13 olur. İki kaybı toplayıp 5 değişime bölerek elde edilen kayıp ortalaması (0,05 + 0,10) / 5 = 0,03 olur. Göreceli güç RS = 0,13 / 0,03 = 4,33 olur. Son formülü uygulayarak: RSI = 100 - [100 / (1 + 4,33)] = 100 - 18,76 = <strong>81,24</strong>.</p>
 <p>81'e yakın bir RSI, bu basitleştirilmiş periyotta son kazançların kayıplara açıkça hakim olduğunu gösterir ve göstergeyi bir aşırı alım okumasına yerleştirir.</p>
-<h2>Aşırı alım ve aşırı satım seviyeleri nasıl yorumlanır</h2>
+<h2 id="asırı-alım-ve-asırı-satım-seviyeleri-nasıl-yorumlanır">Aşırı alım ve aşırı satım seviyeleri nasıl yorumlanır</h2>
 <p>Geleneksel okuma, 70'in üzerindeki değerleri aşırı alım olarak kabul eder ve yükseliş hareketinin gerilmiş olabileceğini önerir; 30'un altındaki değerleri ise aşırı satım olarak kabul eder ve bir düşüş hareketi için aynısını önerir. Bu sayılar otomatik bir alım veya satım sinyali değildir. Güçlü bir yükseliş trendinde, RSI uzun süre 70'in üzerinde kalabilir ve o seviyeyi her kestiğinde satmak, hala devam etmek için çok fazla alanı olan bir trendden çıkmak anlamına gelebilir.</p>
-<h2>Uyumsuzluk: fiyat ve RSI anlaşamadığında</h2>
+<h2 id="uyumsuzluk-fiyat-ve-rsi-anlasamadıgında">Uyumsuzluk: fiyat ve RSI anlaşamadığında</h2>
 <p>Bir uyumsuzluk, fiyat yeni bir zirve yaparken RSI öncekinden daha düşük bir zirve yaptığında gerçekleşir; bu, fiyat hala yükseliyor olsa bile yükseliş hareketinin perde arkasında güç kaybettiğini düşündürür. Aynısı tersi için de geçerlidir: fiyat daha düşük bir dip yaparken RSI daha yüksek bir dip yapar. Uyumsuzluk, hareketin olası bir güç kaybının uyarısıdır, anlık bir dönüşün garantisi değildir.</p>
-<h2>RSI kullanırken yapılan yaygın hatalar</h2>
+<h2 id="rsi-kullanırken-yapılan-yaygın-hatalar">RSI kullanırken yapılan yaygın hatalar</h2>
 <ul>
 <li>Daha büyük trendin bağlamını göz ardı ederek, 70 veya 30'un her kesişimini otomatik bir giriş sinyali olarak ele almak.</li>
 <li>Destek, direnç veya grafiğin genel yapısını kontrol etmeden RSI'ı tek başına kullanmak.</li>
 <li>Farklı varlıkların RSI'ını, sanki aynı sayı her volatilite bağlamında aynı şeyi ifade ediyormuş gibi karşılaştırmak.</li>
 <li>Zaman dilimini göz ardı etmek: 5 dakikalık grafikte hesaplanan bir RSI, günlük grafikteki aynı göstergeden çok farklı bir şeyi ölçer.</li>
 </ul>
-<h2>Farklı zaman dilimlerinde RSI</h2>
+<h2 id="farklı-zaman-dilimlerinde-rsi">Farklı zaman dilimlerinde RSI</h2>
 <p>Aynı varlık, kullanılan grafiğe bağlı olarak oldukça farklı RSI okumaları gösterebilir. 5 dakikalık mumlar üzerinden hesaplanan bir RSI, çok kısa vadeli dalgalanmalara tepki verir ve tek bir gün içinde birçok kez aşırı alım ile aşırı satım arasında geçiş yapabilir. Günlük veya haftalık mumlar üzerinden hesaplanan bir RSI ise daha yavaş hareket etme eğilimindedir ve genelde daha uzun vadeli hareketleri yansıtır. RSI okumasını sabit bir kuralla karşılaştırmadan önce, seçilen zaman diliminin planlanan işlem türü için mantıklı olup olmadığını doğrulamakta fayda var; ister hızlı bir day trade olsun, ister birkaç günlük bir pozisyon.</p>
-<h2>RSI daha sorumlu bir şekilde nasıl kullanılır</h2>
+<h2 id="rsi-daha-sorumlu-bir-sekilde-nasıl-kullanılır">RSI daha sorumlu bir şekilde nasıl kullanılır</h2>
 <p>RSI, tek başına bir giriş tetiği olmaktan çok, daha geniş bir analizin bir parçası olarak daha iyi çalışır. RSI okumasını daha büyük zaman diliminin trendiyle, destek ve direnç seviyeleriyle ve fiyatın bu seviyelere yakın tepkisiyle birleştirmek, sadece sabit bir sayının kesişimini kullanmaktan genelde daha güvenilir okumalar üretir. Herhangi bir teknik gösterge gibi, RSI fiyatın geçmiş davranışını tanımlar ve sonrasında ne olacağını garanti etmez.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-28">28 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -235,7 +274,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -299,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/sa-beraknar-du-spreaden-i-forex/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-corretora-offshore-o-que-e.webp",
       "articleSection": "Forex",
       "author": {
@@ -172,35 +172,62 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Navigeringsspår">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/sv/">Hem</a></li>
         <li><a href="/sv/blog/">Blogg</a></li>
         <li><span aria-current="page">Så beräknar du spreaden i forex: formel och exempel</span></li>
       </ol>
+      <a class="ap__voltar" href="/sv/blog/">Tillbaka</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Forex</span>
-        <h1>Så beräknar du spreaden i forex: formel och exempel</h1>
-        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>För att beräkna spreaden i forex behöver du bara subtrahera köppriset (bid) från säljpriset (ask) och omvandla den skillnaden till pip. Om EUR/USD är noterat till 1,08500 på sälj och 1,08512 på köp, är spreaden 0,00012, eller 1,2 pip. Om pip-värdet i den affären är R$ 10, kostar den spreaden cirka R$ 12 bara för att gå in och ut ur affären.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-calcular-o-spread-no-forex" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Länken kopierad">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
+            </div>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-27">27 september 2026</time></p>
+            <span class="bq__tag">Forex</span>
+            <h1>Så beräknar du spreaden i forex: formel och exempel</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-teamet</strong><small>Redaktionen</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Innehåll">
+              <p class="ap__indice-tit">Innehåll</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#forsta-steget-berakna-spreaden-i-pip">Första steget: beräkna spreaden i pip</a></li>
+                <li><a href="#andra-steget-omvandla-spreaden-till-pengar">Andra steget: omvandla spreaden till pengar</a></li>
+                <li><a href="#varfor-positionsstorleken-forandrar-allt">Varför positionsstorleken förändrar allt</a></li>
+                <li><a href="#spreadkostnaden-som-andel-av-malet">Spreadkostnaden som andel av målet</a></li>
+                <li><a href="#ett-fullstandigt-exempel-fran-borjan-till-slut">Ett fullständigt exempel, från början till slut</a></li>
+                <li><a href="#vanan-som-forhindrar-overraskningar-i-resultatet">Vanan som förhindrar överraskningar i resultatet</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Till toppen</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>För att beräkna spreaden i forex behöver du bara subtrahera köppriset (bid) från säljpriset (ask) och omvandla den skillnaden till pip. Om EUR/USD är noterat till 1,08500 på sälj och 1,08512 på köp, är spreaden 0,00012, eller 1,2 pip. Om pip-värdet i den affären är R$ 10, kostar den spreaden cirka R$ 12 bara för att gå in och ut ur affären.</p>
 <p>Det är den enkla delen av uträkningen. Den del som tradern känner av efteråt är vad spreaden gör med ett litet mål, en snäv stopp eller en strategi som handlar för ofta.</p>
-<h2>Första steget: beräkna spreaden i pip</h2>
+<h2 id="forsta-steget-berakna-spreaden-i-pip">Första steget: beräkna spreaden i pip</h2>
 <p>Spreaden är skillnaden mellan säljpriset (bid) och köppriset (ask):</p>
 <p>Spread = köppris − säljpris</p>
 <p>För de flesta huvudpar motsvarar ett pip 0,0001. För par med japansk yen motsvarar ett pip 0,01. Exempel med EUR/USD: säljpris på 1,08500, köppris på 1,08512. Skillnaden är 0,00012, vilket motsvarar 1,2 pip.</p>
 <p>En köpaffär öppnas normalt till köppriset och stängs till säljpriset; en säljaffär går motsatt väg. Den skillnaden mellan de två priserna är ett av de tysta sätten som kostnaden för att handla visar sig på — affären börjar redan lätt negativ, och det är lätt att vänja sig vid att se det utan att inse att det fortfarande är en verklig kostnad vid varje ingång.</p>
-<h2>Andra steget: omvandla spreaden till pengar</h2>
+<h2 id="andra-steget-omvandla-spreaden-till-pengar">Andra steget: omvandla spreaden till pengar</h2>
 <p>Efter att ha fått spreaden i pip är beräkningen av kostnaden i pengar direkt:</p>
 <p>Spreadkostnad = spread i pip × pip-värde</p>
 <p>Om spreaden är 1,5 pip och pip-värdet är R$ 10, är den uppskattade kostnaden:</p>
 <p>1,5 × R$ 10 = R$ 15 per affär</p>
 <p>I tjugo liknande affärer under en månad stiger den kostnaden till R$ 300. Uträkningen är enkel — det svåra är att komma ihåg att göra den innan man fastnar för en strategi som är beroende av små mål.</p>
-<h2>Varför positionsstorleken förändrar allt</h2>
+<h2 id="varfor-positionsstorleken-forandrar-allt">Varför positionsstorleken förändrar allt</h2>
 <p>Spreaden mäts i pip, men betalas i pengar — och det betyder att samma spread på 1,5 pip kan vara obetydlig eller dyr, beroende på positionsstorleken:</p>
 <ul>
 <li><strong>0,01 lot</strong> (pip-värde på cirka R$ 0,50) — en spread på 0,8 pip kostar R$ 0,40; en spread på 1,5 pip kostar R$ 0,75; en spread på 2,5 pip kostar R$ 1,25.</li>
@@ -208,21 +235,32 @@
 <li><strong>1 standardlot</strong> (pip-värde på cirka R$ 50,00) — samma spreadar kostar R$ 40,00, R$ 75,00 och R$ 125,00.</li>
 </ul>
 <p>Att bara säga "spreaden är 1 pip" är ofullständig information. Ett pip i 0,01 lot EUR/USD är värt cirka R$ 0,50; samma pip i 1 standardlot är värt cirka R$ 50. Den som handlar stora positioner eller med hög frekvens kan inte behandla spreaden som bakgrundsbrus.</p>
-<h2>Spreadkostnaden som andel av målet</h2>
+<h2 id="spreadkostnaden-som-andel-av-malet">Spreadkostnaden som andel av målet</h2>
 <p>Den mest användbara jämförelsen är inte "hur många pip är spreaden", utan "hur stor del av mitt planerade mål spreaden representerar". Om målet för en affär är 5 pip och spreaden är 1 pip, förbrukar spreaden redan 20% av bruttomålet innan priset ens rör sig till affärens fördel.</p>
 <p>Det här problemet syns tydligast för den som handlar på mycket korta tidsramar, men är inte begränsat till dem. En trader som går in flera gånger under samma handelsdag kan se en liten spread i en enskild affär bli betydande över en hel veckas handel. Den som handlar med större mål, swingtrading, känner mindre av spreaden per affär, men behöver ändå jämföra kostnaden mellan olika par — ett exotiskt par med bred spread kan göra en tekniskt bra uppställning mycket mindre attraktiv i praktiken.</p>
-<h2>Ett fullständigt exempel, från början till slut</h2>
+<h2 id="ett-fullstandigt-exempel-fran-borjan-till-slut">Ett fullständigt exempel, från början till slut</h2>
 <p>En trader med ett konto på R$ 5.000 handlar 0,20 lot EUR/USD (pip-värde på cirka R$ 2), med en spread på 1,4 pip och ett mål på 40 pip. Spreadkostnaden är:</p>
 <p>1,4 × R$ 2 = R$ 2,80 per affär</p>
 <p>Jämfört med bruttomålet på 40 pip, motsvarande R$ 80, representerar spreaden 3,5% av målet — en hanterbar kostnad. Samma trader, som söker ett scalpingmål på bara 6 pip (R$ 12), skulle se spreaden förbruka cirka 23% av bruttomålet — en betydligt större andel, som kräver en högre träffsäkerhet bara för att kompensera för kostnaden att handla.</p>
-<h2>Vanan som förhindrar överraskningar i resultatet</h2>
+<h2 id="vanan-som-forhindrar-overraskningar-i-resultatet">Vanan som förhindrar överraskningar i resultatet</h2>
 <p>Innan du antar någon strategi baserad på små mål är det värt att beräkna spreaden i pip för det valda paret, omvandla till pengar för den planerade positionsstorleken, och jämföra det värdet med affärens mål. Om spreaden förbrukar en liten del av målet är kostnaden rimlig. Om den förbrukar en stor del kan strategin konkurrera mot själva kostnaden för att handla innan man ens tar hänsyn till marknadsrisken. Den här enkla beräkningen, gjord hos Duotide eller på någon annan plattform innan ordern bekräftas, hjälper till att förstå om en strategi verkligen är genomförbar eller om spreaden ensam redan omöjliggör det förväntade resultatet.</p>
-        <div class="bq-post__cta">
-          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            <div class="bq-post__cta">
+              <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            </div>
+            <div class="ap__fim">
+              <p>Uppdaterad: <time datetime="2026-09-27">27 sep. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-teamet</strong><p>Duotides redaktion skriver guiderna och nyheterna i den här bloggen: hur marknaden fungerar, riskhantering och hur plattformen används. Inget här är investeringsrådgivning.</p></div>
+              <a class="btn ap__equipe" href="/sv/om-denna-webbplats/">Möt teamet</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Läs också</h2>
+        <aside class="ap__rel">
+          <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/basta-tekniska-indikatorerna-for-forex/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bästa tekniska indikatorerna för att handla forex</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/5-mest-handlade-forexpar-och-vad-du-ska-observera-i-varje/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 mest handlade forexparen och vad du ska observera i varje</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
@@ -230,7 +268,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -294,6 +332,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

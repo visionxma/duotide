@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/tarihsel-volatilite-nasil-yapilandirilir-ve-yorumlanir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Tarihsel volatilite: nasıl yapılandırılır ve yorumlanır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Göstergeler</span>
-        <h1>Tarihsel volatilite: nasıl yapılandırılır ve yorumlanır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Fiyatın yönünü tahmin etmeye çalışan çoğu göstergeden farklı olarak, tarihsel volatilite göstergesi piyasanın yükselip düşeceği konusunda görüş bildirmez — belirli bir dönemde fiyatın yukarı veya aşağı ne kadar salındığını ölçer. Bir alım veya satım sinyalinden daha az dikkat çekici olsa da bu bilgi, stopları, pozisyon büyüklüğünü kalibre etmek ve hangi anların işlem yapmaya daha değer olduğunu seçmek için bile temeldir.</p><p>Bu makalede tarihsel volatilitenin nasıl hesaplandığını, göstergenin nasıl yapılandırılacağını ve değişimlerinin pratikte nasıl yorumlanacağını anlayacaksınız.</p><h2>Tarihsel volatilite neyi ölçer</h2><p>Tarihsel volatilite, bir varlığın günlük (veya seçilen dönemin) getirilerinin, belirli sayıda mumda, genellikle farklı varlıklar arasında karşılaştırmayı kolaylaştırmak için yıllıklandırılmış terimlerle ifade edilen standart sapmasını hesaplar. Basit terimlerle: kapanış fiyatları bir mumdan diğerine ne kadar çok değişirse, tarihsel volatilite o kadar yüksektir; fiyatlar ne kadar istikrarlıysa, o kadar düşüktür.</p><p>Volatiliteyi yönle karıştırmamak önemlidir. Bir varlık, hem keskin bir düşüş sırasında hem de keskin bir yükseliş sırasında yüksek tarihsel volatiliteye sahip olabilir — gösterge bunu ayırt etmez, sadece yönden bağımsız olarak değişimlerin genişliğini ölçer.</p><h2>Hesaplama basitleştirilmiş şekilde nasıl işler</h2><p>Beş mum boyunca +%2, −%1, +%3, −%2 ve +%1 günlük getirileri olan bir varlık düşünün. Tarihsel volatilite, bu getirilerin dönemin ortalama getirisinden ortalama olarak ne kadar uzaklaştığını hesaplar — bu dağılım ne kadar büyükse, göstergenin nihai değeri o kadar yüksektir. Günlük getirileri genellikle −%0,5 ile +%0,5 arasında kalan bir varlık, günlük getirileri genellikle −%3 ile +%3 arasında değişen bir varlıktan çok daha düşük bir tarihsel volatilite gösterir, ikisi de dönemi aynı birikmiş sonuçla bitirmiş olsa bile.</p><h2>Göstergenin periyodunu yapılandırmak</h2><p>Tarihsel volatiliteyi hesaplamak için en yaygın periyot, analiz ufkuna bağlı olarak 10, 20 veya 30 mumdur. 10 gibi daha kısa periyotlar en son volatiliteyi yansıtır, varlığın davranışındaki değişimlere hızlı tepki verir — kısa vadede işlem yapan ve stopu en güncel ortama göre ayarlamak isteyenler için faydalıdır. 30 gibi daha uzun periyotlar bu değişimleri yumuşatır ve varlığın daha yapısal bir volatilitesini gösterir, daha uzun vadelerde işlem yapanlar için faydalıdır.</p><p>Yaygın bir uygulama, göstergenin mevcut okumasını aynı varlığın kendi tarihsel ortalamasıyla karşılaştırmaktır: %25'lik bir tarihsel volatilite, normalde %10 ile %15 arasında işlem gören bir varlık için yüksek sayılabilirken, genellikle %35 ile %45 arasında değişen bir varlık için düşük sayılır.</p><h2>Stopları kalibre etmek için tarihsel volatiliteyi kullanmak</h2><p>Tarihsel volatilite yüksek olduğunda, R$ veya puan cinsinden sabit bir mesafeye dayanan bir stop, işlemin orijinal nedeniyle hiçbir ilgisi olmayan, sadece normal piyasa gürültüsüyle daha sık tetiklenme eğilimindedir. Bu dönemlerde, orantılı olarak daha büyük stoplar kullanmak mantıklıdır; bu da R$ cinsinden riski kontrol altında tutmak için pozisyon büyüklüğünü azaltmayı gerektirir.</p><p>Tarihsel volatilite düşük olduğunda ise tersi geçerlidir: varlık o anda her zamankinden daha az salındığından, giriş fiyatına daha yakın stoplar daha mantıklı olma eğilimindedir.</p><h2>Tarihsel volatilite ve işlem yapma zamanı</h2><p>Bazı trader'lar, o anda belirli bir varlıkla işlem yapmaya değip değmeyeceğine karar vermek için de tarihsel volatiliteyi kullanır. Aşırı düşük volatilite, daha büyük genişlikte işlemler arayanlar için küçük ve az çekici hareketlerle bir birikim dönemine işaret edebilir. Aşırı yüksek volatilite ise, her iki yönde de ani ve öngörülemez hareketlerin daha yüksek riski ile yüksek belirsizlik anına işaret edebilir.</p><h2>Pratiğe dökmek</h2><p>Duotide'de, farklı varlıkların tarihsel volatilitesini takip etmek ve her birinin mevcut değerini kendi tarihsel ortalamasıyla karşılaştırarak, her anın ortamına göre stopları ve pozisyon büyüklüğünü ayarlamak mümkündür. Yüksek volatilite, tek başına, işlem yapmayı durdurmak için bir neden değildir, ama risk boyutlandırmasında daha fazla dikkat gerektirir — bu, herhangi bir işlemde olduğu gibi, hiçbir zaman ortadan kalkmaz.</p><p>Sadece tek bir mumdaki mutlak değeri değil, volatilitenin kendi trendini de takip etmekte fayda var. Varlık için normal sayılan aralık içinde kalsa bile, sürekli olarak yükselen bir tarihsel volatilite, ortamın değiştiğinin ve o zamana kadar kullanılan stop ve pozisyon büyüklüğü parametrelerinin, değişim daha da büyümeden önce ayarlanması gerekebileceğinin bir sinyali olabilir.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-de-volatilidade-historica" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Göstergeler</span>
+            <h1>Tarihsel volatilite: nasıl yapılandırılır ve yorumlanır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#tarihsel-volatilite-neyi-olcer">Tarihsel volatilite neyi ölçer</a></li>
+                <li><a href="#hesaplama-basitlestirilmis-sekilde-nasıl-isler">Hesaplama basitleştirilmiş şekilde nasıl işler</a></li>
+                <li><a href="#gostergenin-periyodunu-yapılandırmak">Göstergenin periyodunu yapılandırmak</a></li>
+                <li><a href="#stopları-kalibre-etmek-icin-tarihsel-volatiliteyi-kullanmak">Stopları kalibre etmek için tarihsel volatiliteyi kullanmak</a></li>
+                <li><a href="#tarihsel-volatilite-ve-islem-yapma-zamanı">Tarihsel volatilite ve işlem yapma zamanı</a></li>
+                <li><a href="#pratige-dokmek">Pratiğe dökmek</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Fiyatın yönünü tahmin etmeye çalışan çoğu göstergeden farklı olarak, tarihsel volatilite göstergesi piyasanın yükselip düşeceği konusunda görüş bildirmez — belirli bir dönemde fiyatın yukarı veya aşağı ne kadar salındığını ölçer. Bir alım veya satım sinyalinden daha az dikkat çekici olsa da bu bilgi, stopları, pozisyon büyüklüğünü kalibre etmek ve hangi anların işlem yapmaya daha değer olduğunu seçmek için bile temeldir.</p><p>Bu makalede tarihsel volatilitenin nasıl hesaplandığını, göstergenin nasıl yapılandırılacağını ve değişimlerinin pratikte nasıl yorumlanacağını anlayacaksınız.</p><h2 id="tarihsel-volatilite-neyi-olcer">Tarihsel volatilite neyi ölçer</h2><p>Tarihsel volatilite, bir varlığın günlük (veya seçilen dönemin) getirilerinin, belirli sayıda mumda, genellikle farklı varlıklar arasında karşılaştırmayı kolaylaştırmak için yıllıklandırılmış terimlerle ifade edilen standart sapmasını hesaplar. Basit terimlerle: kapanış fiyatları bir mumdan diğerine ne kadar çok değişirse, tarihsel volatilite o kadar yüksektir; fiyatlar ne kadar istikrarlıysa, o kadar düşüktür.</p><p>Volatiliteyi yönle karıştırmamak önemlidir. Bir varlık, hem keskin bir düşüş sırasında hem de keskin bir yükseliş sırasında yüksek tarihsel volatiliteye sahip olabilir — gösterge bunu ayırt etmez, sadece yönden bağımsız olarak değişimlerin genişliğini ölçer.</p><h2 id="hesaplama-basitlestirilmis-sekilde-nasıl-isler">Hesaplama basitleştirilmiş şekilde nasıl işler</h2><p>Beş mum boyunca +%2, −%1, +%3, −%2 ve +%1 günlük getirileri olan bir varlık düşünün. Tarihsel volatilite, bu getirilerin dönemin ortalama getirisinden ortalama olarak ne kadar uzaklaştığını hesaplar — bu dağılım ne kadar büyükse, göstergenin nihai değeri o kadar yüksektir. Günlük getirileri genellikle −%0,5 ile +%0,5 arasında kalan bir varlık, günlük getirileri genellikle −%3 ile +%3 arasında değişen bir varlıktan çok daha düşük bir tarihsel volatilite gösterir, ikisi de dönemi aynı birikmiş sonuçla bitirmiş olsa bile.</p><h2 id="gostergenin-periyodunu-yapılandırmak">Göstergenin periyodunu yapılandırmak</h2><p>Tarihsel volatiliteyi hesaplamak için en yaygın periyot, analiz ufkuna bağlı olarak 10, 20 veya 30 mumdur. 10 gibi daha kısa periyotlar en son volatiliteyi yansıtır, varlığın davranışındaki değişimlere hızlı tepki verir — kısa vadede işlem yapan ve stopu en güncel ortama göre ayarlamak isteyenler için faydalıdır. 30 gibi daha uzun periyotlar bu değişimleri yumuşatır ve varlığın daha yapısal bir volatilitesini gösterir, daha uzun vadelerde işlem yapanlar için faydalıdır.</p><p>Yaygın bir uygulama, göstergenin mevcut okumasını aynı varlığın kendi tarihsel ortalamasıyla karşılaştırmaktır: %25'lik bir tarihsel volatilite, normalde %10 ile %15 arasında işlem gören bir varlık için yüksek sayılabilirken, genellikle %35 ile %45 arasında değişen bir varlık için düşük sayılır.</p><h2 id="stopları-kalibre-etmek-icin-tarihsel-volatiliteyi-kullanmak">Stopları kalibre etmek için tarihsel volatiliteyi kullanmak</h2><p>Tarihsel volatilite yüksek olduğunda, R$ veya puan cinsinden sabit bir mesafeye dayanan bir stop, işlemin orijinal nedeniyle hiçbir ilgisi olmayan, sadece normal piyasa gürültüsüyle daha sık tetiklenme eğilimindedir. Bu dönemlerde, orantılı olarak daha büyük stoplar kullanmak mantıklıdır; bu da R$ cinsinden riski kontrol altında tutmak için pozisyon büyüklüğünü azaltmayı gerektirir.</p><p>Tarihsel volatilite düşük olduğunda ise tersi geçerlidir: varlık o anda her zamankinden daha az salındığından, giriş fiyatına daha yakın stoplar daha mantıklı olma eğilimindedir.</p><h2 id="tarihsel-volatilite-ve-islem-yapma-zamanı">Tarihsel volatilite ve işlem yapma zamanı</h2><p>Bazı trader'lar, o anda belirli bir varlıkla işlem yapmaya değip değmeyeceğine karar vermek için de tarihsel volatiliteyi kullanır. Aşırı düşük volatilite, daha büyük genişlikte işlemler arayanlar için küçük ve az çekici hareketlerle bir birikim dönemine işaret edebilir. Aşırı yüksek volatilite ise, her iki yönde de ani ve öngörülemez hareketlerin daha yüksek riski ile yüksek belirsizlik anına işaret edebilir.</p><h2 id="pratige-dokmek">Pratiğe dökmek</h2><p>Duotide'de, farklı varlıkların tarihsel volatilitesini takip etmek ve her birinin mevcut değerini kendi tarihsel ortalamasıyla karşılaştırarak, her anın ortamına göre stopları ve pozisyon büyüklüğünü ayarlamak mümkündür. Yüksek volatilite, tek başına, işlem yapmayı durdurmak için bir neden değildir, ama risk boyutlandırmasında daha fazla dikkat gerektirir — bu, herhangi bir işlemde olduğu gibi, hiçbir zaman ortadan kalkmaz.</p><p>Sadece tek bir mumdaki mutlak değeri değil, volatilitenin kendi trendini de takip etmekte fayda var. Varlık için normal sayılan aralık içinde kalsa bile, sürekli olarak yükselen bir tarihsel volatilite, ortamın değiştiğinin ve o zamana kadar kullanılan stop ve pozisyon büyüklüğü parametrelerinin, değişim daha da büyümeden önce ayarlanması gerekebileceğinin bir sinyali olabilir.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

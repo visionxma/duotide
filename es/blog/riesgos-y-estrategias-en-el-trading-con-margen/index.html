@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/riesgos-y-estrategias-en-el-trading-con-margen/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Gestión de riesgo",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Riesgos del trading con margen: llamada, stop out y liquidación</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestión de riesgo</span>
-        <h1>Riesgos del trading con margen: llamada, stop out y liquidación</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 5 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Toda operación con margen carga un riesgo que va más allá del precio del activo: el riesgo de la propia estructura de la operación, capaz de cerrar una posición incluso antes de que el mercado demuestre quién tenía razón. La llamada de margen, el stop out y la liquidación son el motivo por el cual dos cuentas con el mismo capital y el mismo apalancamiento "permitido" pueden tener destinos completamente distintos.</p><p>Este texto no repite lo básico de cómo funciona el margen. El foco aquí es entender por qué el apalancamiento que ofrece el bróker no es el apalancamiento que realmente asumes, cómo una llamada de margen se convierte en stop out, y qué decisiones prácticas reducen ese riesgo antes de que aparezca en la pantalla.</p><h2>Apalancamiento efectivo: la cuenta que pocos hacen antes de operar</h2><p>El apalancamiento que anuncia el bróker —10:1, 20:1, 30:1— es solo el límite máximo permitido para ese instrumento. El que realmente importa es el efectivo: el valor total de las posiciones abiertas dividido entre el patrimonio de la cuenta. Esa diferencia es lo que separa una operación arriesgada de una operación controlada.</p><p>Considera una cuenta con un patrimonio de R$ 10.000,00, en un activo con apalancamiento máximo de 30:1. Un trader agresivo abre una posición de R$ 90.000,00, con un margen de R$ 3.000,00 (90.000 ÷ 30). Aunque el límite de 30:1 esté disponible, el apalancamiento efectivo sobre el patrimonio total es de 9:1 (90.000 ÷ 10.000). Con ese número, una caída de apenas 3,33% en el activo ya genera una pérdida del 30% del patrimonio (9 × 3,33%): es el apalancamiento efectivo, y no el límite anunciado por el bróker, lo que define el tamaño real del golpe.</p><p>Compara con un segundo trader, mismo patrimonio y mismo apalancamiento disponible, que abre una posición de solo R$ 20.000,00. El apalancamiento efectivo cae a 2:1, y la misma caída de 3,33% en el activo representa una pérdida del 6,67% del patrimonio, cinco veces menor, con el mismo bróker y el mismo activo.</p><h2>Llamada de margen: el aviso antes del final</h2><p>La llamada de margen ocurre cuando el nivel de margen de la cuenta —patrimonio dividido entre el margen usado, en porcentaje— cae por debajo de un límite definido por el bróker, normalmente cerca del 100%. Por debajo de ese punto, el bróker señala que la garantía se está quedando corta y puede exigir un depósito adicional.</p><p>En el trader agresivo (posición de R$ 90.000,00, margen de R$ 3.000,00, patrimonio de R$ 10.000,00), la llamada al 100% de nivel de margen se dispara cuando el patrimonio cae por debajo de los R$ 3.000,00 usados como margen, es decir, tras una pérdida de R$ 7.000,00: basta una caída del 7,78% en el activo (7.000 ÷ 90.000). En el trader conservador, con un margen de R$ 666,67 (20.000 ÷ 30), la llamada solo ocurriría tras una pérdida de R$ 9.333,33, equivalente a una caída del 46,67% en el activo, un margen de maniobra mucho mayor, construido solo con una posición menor en relación con el patrimonio.</p><h2>Stop out: cuando el bróker cierra la posición por ti</h2><p>El stop out es la etapa siguiente, y ya no depende de la voluntad del trader: cuando el nivel de margen cae por debajo de un segundo límite, generalmente más bajo que el de la llamada —50%, 30% o 20%, según el bróker y el instrumento—, las posiciones se cierran automáticamente para impedir que la pérdida supere el capital disponible.</p><p>En el trader agresivo, un stop out al 50% del nivel de margen significa un patrimonio por debajo de R$ 1.500,00, lo que ocurre tras una pérdida de R$ 8.500,00: una caída de apenas 9,44% en el activo (8.500 ÷ 90.000). En menos de un 10% de variación del precio, ya desapareció más del 80% del patrimonio inicial. Para el trader conservador, el mismo cálculo solo se cumpliría tras una caída del 48,33% en el activo. La diferencia entre 9,44% y 48,33% es resultado solo del apalancamiento efectivo elegido, no de suerte ni de un bróker "mejor".</p><h2>Por qué la liquidación puede costar más de lo esperado</h2><p>El precio en el que el stop out realmente se ejecuta no siempre es el precio en el que el nivel de margen cruzó el límite. En mercados volátiles, los saltos de precio (gaps) y la ejecución más lenta en momentos de liquidación simultánea de varias cuentas pueden cerrar la posición con una pérdida mayor a la calculada, el llamado deslizamiento, o slippage, de ejecución. El riesgo crece todavía más cuando el trader mantiene varias posiciones en activos correlacionados: si se mueven juntos en contra de la cuenta, todos pierden valor al mismo tiempo, consumiendo el nivel de margen mucho más rápido de lo que una operación aislada haría suponer.</p><h2>Estrategias prácticas para controlar el riesgo</h2><p>Reducir el riesgo de llamada de margen y de stop out depende de decisiones tomadas antes de abrir la posición:</p><ul><li><strong>Calcula el apalancamiento efectivo antes de operar</strong>: posiciones abiertas divididas entre el patrimonio de la cuenta, no entre el valor usado como margen. Es ese número, no el límite del bróker, el que determina el riesgo real.</li><li><strong>Define el tamaño de la posición por el stop loss, no por el margen disponible</strong>: decide cuánto estás dispuesto a perder en dinero (por ejemplo, 1% a 2% del patrimonio) y calcula la posición a partir de la distancia hasta el stop.</li><li><strong>Mantén un margen libre generoso</strong>: evita usar todo el patrimonio como margen de una sola operación; cuanto mayor el margen libre, más alto queda el nivel de margen y más lejos queda la llamada de margen.</li><li><strong>Evita reforzar posiciones perdedoras</strong>: agregar margen a una operación en rojo para "esperar el giro" acerca el stop out en lugar de alejarlo.</li><li><strong>Cuidado con las posiciones correlacionadas</strong>: varias operaciones que se mueven en la misma dirección multiplican el efecto de un único evento de mercado sobre el nivel de margen de la cuenta.</li><li><strong>Sigue el nivel de margen, no solo el precio del activo</strong>: una regla personal de salida bien por encima del stop out del bróker da tiempo de reaccionar antes de la liquidación forzada.</li></ul><h2>Controlar el apalancamiento efectivo es lo que queda en tus manos</h2><p>El bróker define el límite máximo de apalancamiento y los niveles de llamada de margen y de stop out, pero el apalancamiento efectivo de cada operación sigue siendo elección del trader. Probar ese comportamiento en una cuenta de demostración, ya sea en Duotide o en otra plataforma, antes de operar con capital real ayuda a visualizar cómo reacciona el nivel de margen a distintos tamaños de posición, sin el costo de aprender eso durante una pérdida real. El margen amplía el resultado en los dos sentidos, y el riesgo de perder todo el capital depositado es real.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="riscos-e-estrategias-no-trading-com-margem" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">5 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-28">28 de septiembre de 2026</time></p>
+            <span class="bq__tag">Gestión de riesgo</span>
+            <h1>Riesgos del trading con margen: llamada, stop out y liquidación</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#apalancamiento-efectivo-la-cuenta-que-pocos-hacen-antes-de-o">Apalancamiento efectivo: la cuenta que pocos hacen antes de operar</a></li>
+                <li><a href="#llamada-de-margen-el-aviso-antes-del-final">Llamada de margen: el aviso antes del final</a></li>
+                <li><a href="#stop-out-cuando-el-broker-cierra-la-posicion-por-ti">Stop out: cuando el bróker cierra la posición por ti</a></li>
+                <li><a href="#por-que-la-liquidacion-puede-costar-mas-de-lo-esperado">Por qué la liquidación puede costar más de lo esperado</a></li>
+                <li><a href="#estrategias-practicas-para-controlar-el-riesgo">Estrategias prácticas para controlar el riesgo</a></li>
+                <li><a href="#controlar-el-apalancamiento-efectivo-es-lo-que-queda-en-tus-">Controlar el apalancamiento efectivo es lo que queda en tus manos</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Toda operación con margen carga un riesgo que va más allá del precio del activo: el riesgo de la propia estructura de la operación, capaz de cerrar una posición incluso antes de que el mercado demuestre quién tenía razón. La llamada de margen, el stop out y la liquidación son el motivo por el cual dos cuentas con el mismo capital y el mismo apalancamiento "permitido" pueden tener destinos completamente distintos.</p><p>Este texto no repite lo básico de cómo funciona el margen. El foco aquí es entender por qué el apalancamiento que ofrece el bróker no es el apalancamiento que realmente asumes, cómo una llamada de margen se convierte en stop out, y qué decisiones prácticas reducen ese riesgo antes de que aparezca en la pantalla.</p><h2 id="apalancamiento-efectivo-la-cuenta-que-pocos-hacen-antes-de-o">Apalancamiento efectivo: la cuenta que pocos hacen antes de operar</h2><p>El apalancamiento que anuncia el bróker —10:1, 20:1, 30:1— es solo el límite máximo permitido para ese instrumento. El que realmente importa es el efectivo: el valor total de las posiciones abiertas dividido entre el patrimonio de la cuenta. Esa diferencia es lo que separa una operación arriesgada de una operación controlada.</p><p>Considera una cuenta con un patrimonio de R$ 10.000,00, en un activo con apalancamiento máximo de 30:1. Un trader agresivo abre una posición de R$ 90.000,00, con un margen de R$ 3.000,00 (90.000 ÷ 30). Aunque el límite de 30:1 esté disponible, el apalancamiento efectivo sobre el patrimonio total es de 9:1 (90.000 ÷ 10.000). Con ese número, una caída de apenas 3,33% en el activo ya genera una pérdida del 30% del patrimonio (9 × 3,33%): es el apalancamiento efectivo, y no el límite anunciado por el bróker, lo que define el tamaño real del golpe.</p><p>Compara con un segundo trader, mismo patrimonio y mismo apalancamiento disponible, que abre una posición de solo R$ 20.000,00. El apalancamiento efectivo cae a 2:1, y la misma caída de 3,33% en el activo representa una pérdida del 6,67% del patrimonio, cinco veces menor, con el mismo bróker y el mismo activo.</p><h2 id="llamada-de-margen-el-aviso-antes-del-final">Llamada de margen: el aviso antes del final</h2><p>La llamada de margen ocurre cuando el nivel de margen de la cuenta —patrimonio dividido entre el margen usado, en porcentaje— cae por debajo de un límite definido por el bróker, normalmente cerca del 100%. Por debajo de ese punto, el bróker señala que la garantía se está quedando corta y puede exigir un depósito adicional.</p><p>En el trader agresivo (posición de R$ 90.000,00, margen de R$ 3.000,00, patrimonio de R$ 10.000,00), la llamada al 100% de nivel de margen se dispara cuando el patrimonio cae por debajo de los R$ 3.000,00 usados como margen, es decir, tras una pérdida de R$ 7.000,00: basta una caída del 7,78% en el activo (7.000 ÷ 90.000). En el trader conservador, con un margen de R$ 666,67 (20.000 ÷ 30), la llamada solo ocurriría tras una pérdida de R$ 9.333,33, equivalente a una caída del 46,67% en el activo, un margen de maniobra mucho mayor, construido solo con una posición menor en relación con el patrimonio.</p><h2 id="stop-out-cuando-el-broker-cierra-la-posicion-por-ti">Stop out: cuando el bróker cierra la posición por ti</h2><p>El stop out es la etapa siguiente, y ya no depende de la voluntad del trader: cuando el nivel de margen cae por debajo de un segundo límite, generalmente más bajo que el de la llamada —50%, 30% o 20%, según el bróker y el instrumento—, las posiciones se cierran automáticamente para impedir que la pérdida supere el capital disponible.</p><p>En el trader agresivo, un stop out al 50% del nivel de margen significa un patrimonio por debajo de R$ 1.500,00, lo que ocurre tras una pérdida de R$ 8.500,00: una caída de apenas 9,44% en el activo (8.500 ÷ 90.000). En menos de un 10% de variación del precio, ya desapareció más del 80% del patrimonio inicial. Para el trader conservador, el mismo cálculo solo se cumpliría tras una caída del 48,33% en el activo. La diferencia entre 9,44% y 48,33% es resultado solo del apalancamiento efectivo elegido, no de suerte ni de un bróker "mejor".</p><h2 id="por-que-la-liquidacion-puede-costar-mas-de-lo-esperado">Por qué la liquidación puede costar más de lo esperado</h2><p>El precio en el que el stop out realmente se ejecuta no siempre es el precio en el que el nivel de margen cruzó el límite. En mercados volátiles, los saltos de precio (gaps) y la ejecución más lenta en momentos de liquidación simultánea de varias cuentas pueden cerrar la posición con una pérdida mayor a la calculada, el llamado deslizamiento, o slippage, de ejecución. El riesgo crece todavía más cuando el trader mantiene varias posiciones en activos correlacionados: si se mueven juntos en contra de la cuenta, todos pierden valor al mismo tiempo, consumiendo el nivel de margen mucho más rápido de lo que una operación aislada haría suponer.</p><h2 id="estrategias-practicas-para-controlar-el-riesgo">Estrategias prácticas para controlar el riesgo</h2><p>Reducir el riesgo de llamada de margen y de stop out depende de decisiones tomadas antes de abrir la posición:</p><ul><li><strong>Calcula el apalancamiento efectivo antes de operar</strong>: posiciones abiertas divididas entre el patrimonio de la cuenta, no entre el valor usado como margen. Es ese número, no el límite del bróker, el que determina el riesgo real.</li><li><strong>Define el tamaño de la posición por el stop loss, no por el margen disponible</strong>: decide cuánto estás dispuesto a perder en dinero (por ejemplo, 1% a 2% del patrimonio) y calcula la posición a partir de la distancia hasta el stop.</li><li><strong>Mantén un margen libre generoso</strong>: evita usar todo el patrimonio como margen de una sola operación; cuanto mayor el margen libre, más alto queda el nivel de margen y más lejos queda la llamada de margen.</li><li><strong>Evita reforzar posiciones perdedoras</strong>: agregar margen a una operación en rojo para "esperar el giro" acerca el stop out en lugar de alejarlo.</li><li><strong>Cuidado con las posiciones correlacionadas</strong>: varias operaciones que se mueven en la misma dirección multiplican el efecto de un único evento de mercado sobre el nivel de margen de la cuenta.</li><li><strong>Sigue el nivel de margen, no solo el precio del activo</strong>: una regla personal de salida bien por encima del stop out del bróker da tiempo de reaccionar antes de la liquidación forzada.</li></ul><h2 id="controlar-el-apalancamiento-efectivo-es-lo-que-queda-en-tus-">Controlar el apalancamiento efectivo es lo que queda en tus manos</h2><p>El bróker define el límite máximo de apalancamiento y los niveles de llamada de margen y de stop out, pero el apalancamiento efectivo de cada operación sigue siendo elección del trader. Probar ese comportamiento en una cuenta de demostración, ya sea en Duotide o en otra plataforma, antes de operar con capital real ayuda a visualizar cómo reacciona el nivel de margen a distintos tamaños de posición, sin el costo de aprender eso durante una pérdida real. El margen amplía el resultado en los dos sentidos, y el riesgo de perder todo el capital depositado es real.</p>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-28">28 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en el forex</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia martingala en el trading: cómo funciona y sus riesgos</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

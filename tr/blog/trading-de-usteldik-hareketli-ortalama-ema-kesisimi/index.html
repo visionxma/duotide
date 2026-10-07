@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Stratejiler",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Trading'de üstel hareketli ortalama (EMA) kesişimi</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Stratejiler</span>
-        <h1>Trading'de üstel hareketli ortalama (EMA) kesişimi</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Üstel hareketli ortalamaların kesişimi, teknik analize yeni başlayanlara en çok öğretilen stratejilerden biridir ve bunun iyi bir nedeni vardır: görselleştirmesi kolay, otomatikleştirmesi kolaydır ve grafik örüntüsünün öznel yorumuna bağlı değildir. Ana fikir, farklı periyotlarda iki EMA kullanmak ve birinin diğerini kestiği anı gözlemlemektir.</p><p>Basit hareketli ortalama yerine EMA seçimi tesadüfi değildir. EMA son fiyatlara daha fazla ağırlık verdiğinden, yön değişikliklerine daha hızlı tepki verir — tam olarak iki çizgi arasındaki kesişim anına bağlı olan bir stratejide özellikle önemli bir özellik.</p><h2>Strateji nasıl işler</h2><p>En yaygın biçim, biri daha kısa diğeri daha uzun olan iki EMA kullanır — örneğin 9 ve 21 periyot:</p><ul><li><strong>Yükseliş kesişimi</strong>: kısa EMA, uzun EMA'nın altından üstüne çıkar, bu da son momentumun altta yatan ortalamadan daha güçlü hale geldiğini öne sürer.</li><li><strong>Düşüş kesişimi</strong>: kısa EMA, uzun EMA'nın üstünden altına iner, bu da önceki yükseliş momentumunun zayıfladığını öne sürer.</li></ul><p>Bunun arkasındaki mantık, kısa vadeli ortalama uzun vadelinin üzerine çıktığında, son fiyatların ortalamayı daha uzak geçmişten daha güçlü şekilde yukarı çektiğidir — trendin yön değiştiriyor olabileceğine dair dolaylı bir sinyal.</p><h2>Rakamlarla bir örnek</h2><p>9 periyotluk EMA'nın R$ 74,20'de ve 21 periyotluk EMA'nın R$ 74,80'de olduğu, fiyatın son mumlarda yükseldiği bir varlık düşünün. İki mum sonra, 9 periyotluk EMA R$ 75,10'a yükselirse ve 21 periyotluk R$ 74,90'daysa, yükseliş kesişimi gerçekleşmiştir: kısa ortalama uzun ortalamanın üzerine geçmiştir. Strateji bunu alım giriş sinyali olarak ele alır.</p><p>Ters yol — 9 periyotluk EMA'nın 21 periyotluğun altına inmesi — stratejinin nasıl kurulduğuna bağlı olarak çıkış veya satış sinyali üretirdi.</p><h2>Gecikme ödenmesi gereken bedeldir</h2><p>Herhangi bir hareketli ortalama gibi, EMA da ne olacağına değil, zaten olana tepki verir. Kesişim, ancak fiyat iki çizgi arasındaki göreceli konumu tersine çevirmeye yetecek kadar hareket ettikten sonra teyit edilir. Bu, sinyal göründüğünde hareketin bir kısmının zaten geride kaldığı anlamına gelir — strateji tahmini teyitle değiştirir ve bunun her girişin potansiyel kâr büyüklüğü üzerinde doğrudan bir maliyeti vardır.</p><h2>Yöntemin sıkça başarısız olduğu yer</h2><p>Net bir trendi olmayan, dar bir aralıkta yanlara salınan piyasalarda, iki EMA iç içe geçer ve kısa zaman aralıklarında tekrar tekrar kesişir. Her kesişim bir sinyal üretir, ama fiyat, ters kesişimi üretecek şekilde tersine dönmeden önce belirtilen yönde yeterince ilerlemez. Sonuç, ek bir filtre olmadan her kesişimi işlem yapan hesapları genellikle aşındıran tesourada etkisinin (whipsaw) yarattığı bir dizi küçük zarardır.</p><p>Bu sorunu azaltmanın bir yolu, kesişimi ADX gibi bir trend gücü filtresiyle birleştirmektir: bir kesişimi geçerli saymadan önce ADX'in belirli bir seviyenin üzerinde olmasını şart koşmak, yönü belirlenmemiş piyasalarda üretilen sinyallerin büyük bir kısmını elemeye yardımcı olur.</p><h2>Ortalamaların periyotlarını ayarlamak</h2><p>5 ve 13 gibi daha kısa kombinasyonlar daha erken sinyaller üretir, ama daha fazla sahte sinyal de üretir. 21 ve 55 gibi daha uzun kombinasyonlar teyit için daha uzun sürer, ama kısa vadeli gürültüyü daha iyi filtreleme eğilimindedir. Evrensel olarak üstün bir kombinasyon yoktur — ideal olan, işlemi ne kadar süre tutmayı planladığınıza ve daha az sahte sinyal karşılığında ne kadar teyit gecikmesini kabul etmeye razı olduğunuza bağlıdır.</p><h2>Kesişimi kriterle kullanmak</h2><p>EMA kesişimi, istisnasız uygulanan izole bir kural olmaktan çok, trend gücü, hacim veya destek ve direnç bağlamı gibi ek filtreleri olan bir sistemin parçası olarak daha iyi işler. Kararın bir kısmını otomatikleştirir, ama risk yönetimi ihtiyacının yerini almaz: en iyi periyot kombinasyonu bile, özellikle yatay piyasalarda, hâlâ bir miktar sıklıkla sahte sinyaller üretecektir.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="cruzamento-de-medias-moveis-exponenciais-ema" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Stratejiler</span>
+            <h1>Trading'de üstel hareketli ortalama (EMA) kesişimi</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#strateji-nasıl-isler">Strateji nasıl işler</a></li>
+                <li><a href="#rakamlarla-bir-ornek">Rakamlarla bir örnek</a></li>
+                <li><a href="#gecikme-odenmesi-gereken-bedeldir">Gecikme ödenmesi gereken bedeldir</a></li>
+                <li><a href="#yontemin-sıkca-basarısız-oldugu-yer">Yöntemin sıkça başarısız olduğu yer</a></li>
+                <li><a href="#ortalamaların-periyotlarını-ayarlamak">Ortalamaların periyotlarını ayarlamak</a></li>
+                <li><a href="#kesisimi-kriterle-kullanmak">Kesişimi kriterle kullanmak</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Üstel hareketli ortalamaların kesişimi, teknik analize yeni başlayanlara en çok öğretilen stratejilerden biridir ve bunun iyi bir nedeni vardır: görselleştirmesi kolay, otomatikleştirmesi kolaydır ve grafik örüntüsünün öznel yorumuna bağlı değildir. Ana fikir, farklı periyotlarda iki EMA kullanmak ve birinin diğerini kestiği anı gözlemlemektir.</p><p>Basit hareketli ortalama yerine EMA seçimi tesadüfi değildir. EMA son fiyatlara daha fazla ağırlık verdiğinden, yön değişikliklerine daha hızlı tepki verir — tam olarak iki çizgi arasındaki kesişim anına bağlı olan bir stratejide özellikle önemli bir özellik.</p><h2 id="strateji-nasıl-isler">Strateji nasıl işler</h2><p>En yaygın biçim, biri daha kısa diğeri daha uzun olan iki EMA kullanır — örneğin 9 ve 21 periyot:</p><ul><li><strong>Yükseliş kesişimi</strong>: kısa EMA, uzun EMA'nın altından üstüne çıkar, bu da son momentumun altta yatan ortalamadan daha güçlü hale geldiğini öne sürer.</li><li><strong>Düşüş kesişimi</strong>: kısa EMA, uzun EMA'nın üstünden altına iner, bu da önceki yükseliş momentumunun zayıfladığını öne sürer.</li></ul><p>Bunun arkasındaki mantık, kısa vadeli ortalama uzun vadelinin üzerine çıktığında, son fiyatların ortalamayı daha uzak geçmişten daha güçlü şekilde yukarı çektiğidir — trendin yön değiştiriyor olabileceğine dair dolaylı bir sinyal.</p><h2 id="rakamlarla-bir-ornek">Rakamlarla bir örnek</h2><p>9 periyotluk EMA'nın R$ 74,20'de ve 21 periyotluk EMA'nın R$ 74,80'de olduğu, fiyatın son mumlarda yükseldiği bir varlık düşünün. İki mum sonra, 9 periyotluk EMA R$ 75,10'a yükselirse ve 21 periyotluk R$ 74,90'daysa, yükseliş kesişimi gerçekleşmiştir: kısa ortalama uzun ortalamanın üzerine geçmiştir. Strateji bunu alım giriş sinyali olarak ele alır.</p><p>Ters yol — 9 periyotluk EMA'nın 21 periyotluğun altına inmesi — stratejinin nasıl kurulduğuna bağlı olarak çıkış veya satış sinyali üretirdi.</p><h2 id="gecikme-odenmesi-gereken-bedeldir">Gecikme ödenmesi gereken bedeldir</h2><p>Herhangi bir hareketli ortalama gibi, EMA da ne olacağına değil, zaten olana tepki verir. Kesişim, ancak fiyat iki çizgi arasındaki göreceli konumu tersine çevirmeye yetecek kadar hareket ettikten sonra teyit edilir. Bu, sinyal göründüğünde hareketin bir kısmının zaten geride kaldığı anlamına gelir — strateji tahmini teyitle değiştirir ve bunun her girişin potansiyel kâr büyüklüğü üzerinde doğrudan bir maliyeti vardır.</p><h2 id="yontemin-sıkca-basarısız-oldugu-yer">Yöntemin sıkça başarısız olduğu yer</h2><p>Net bir trendi olmayan, dar bir aralıkta yanlara salınan piyasalarda, iki EMA iç içe geçer ve kısa zaman aralıklarında tekrar tekrar kesişir. Her kesişim bir sinyal üretir, ama fiyat, ters kesişimi üretecek şekilde tersine dönmeden önce belirtilen yönde yeterince ilerlemez. Sonuç, ek bir filtre olmadan her kesişimi işlem yapan hesapları genellikle aşındıran tesourada etkisinin (whipsaw) yarattığı bir dizi küçük zarardır.</p><p>Bu sorunu azaltmanın bir yolu, kesişimi ADX gibi bir trend gücü filtresiyle birleştirmektir: bir kesişimi geçerli saymadan önce ADX'in belirli bir seviyenin üzerinde olmasını şart koşmak, yönü belirlenmemiş piyasalarda üretilen sinyallerin büyük bir kısmını elemeye yardımcı olur.</p><h2 id="ortalamaların-periyotlarını-ayarlamak">Ortalamaların periyotlarını ayarlamak</h2><p>5 ve 13 gibi daha kısa kombinasyonlar daha erken sinyaller üretir, ama daha fazla sahte sinyal de üretir. 21 ve 55 gibi daha uzun kombinasyonlar teyit için daha uzun sürer, ama kısa vadeli gürültüyü daha iyi filtreleme eğilimindedir. Evrensel olarak üstün bir kombinasyon yoktur — ideal olan, işlemi ne kadar süre tutmayı planladığınıza ve daha az sahte sinyal karşılığında ne kadar teyit gecikmesini kabul etmeye razı olduğunuza bağlıdır.</p><h2 id="kesisimi-kriterle-kullanmak">Kesişimi kriterle kullanmak</h2><p>EMA kesişimi, istisnasız uygulanan izole bir kural olmaktan çok, trend gücü, hacim veya destek ve direnç bağlamı gibi ek filtreleri olan bir sistemin parçası olarak daha iyi işler. Kararın bir kısmını otomatikleştirir, ama risk yönetimi ihtiyacının yerini almaz: en iyi periyot kombinasyonu bile, özellikle yatay piyasalarda, hâlâ bir miktar sıklıkla sahte sinyaller üretecektir.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/day-trade-icin-en-iyi-gostergeler/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Day Trade Yapanlar İçin En İyi Göstergeler</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

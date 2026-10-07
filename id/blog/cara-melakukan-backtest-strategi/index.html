@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/id/blog/cara-melakukan-backtest-strategi/",
       "inLanguage": "id",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
       "articleSection": "Strategi",
       "author": {
@@ -172,28 +172,67 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Jejak navigasi">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/id/">Beranda</a></li>
         <li><a href="/id/blog/">Blog</a></li>
         <li><span aria-current="page">Cara Melakukan Backtest Strategi Sebelum Bertransaksi Sungguhan</span></li>
       </ol>
+      <a class="ap__voltar" href="/id/blog/">Kembali</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Strategi</span>
-        <h1>Cara Melakukan Backtest Strategi Sebelum Bertransaksi Sungguhan</h1>
-        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 menit baca</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Backtest adalah proses menguji strategi transaksi menggunakan data historis, sebelum mempertaruhkan modal sungguhan padanya. Idenya sederhana: menerapkan aturan entri dan keluar yang sama seperti yang akan digunakan secara langsung pada periode grafik masa lalu, dan mencatat apa yang akan terjadi pada setiap sinyal yang dihasilkan. Ini adalah tahap yang membedakan strategi dengan bukti keberhasilan dari ide yang hanya terlihat bagus saat melihat grafik secara retrospektif.</p><h2>Langkah 1: Tentukan Aturan Entri dan Keluar Secara Tertulis</h2><p>Sebelum melihat data historis apa pun, tulis aturan pasti yang akan Anda uji — misalnya: "beli ketika harga menembus tertinggi 20 candle terakhir dengan volume 30% di atas rata-rata; keluar untung pada kenaikan 2% atau stop pada penurunan 1%". Aturan yang samar seperti "beli ketika terlihat seperti peluang bagus" tidak dapat diuji secara konsisten, karena bergantung pada penilaian subjektif pada setiap sinyal.</p><h2>Langkah 2: Telusuri Riwayat Sinyal demi Sinyal</h2><p>Dengan aturan yang telah ditentukan, telusuri grafik historis untuk mengidentifikasi setiap kali kondisi entri terpenuhi, dan catat hasil yang akan dihasilkan aturan keluar — untung atau rugi, dalam poin atau persentase. Penting untuk menjaga disiplin menerapkan aturan persis seperti yang tertulis, tanpa "menyesuaikan" hasil setelah melihat apa yang terjadi, agar tidak membiaskan pengujian demi strategi tersebut.</p><h2>Langkah 3: Hitung Tingkat Keberhasilan dan Payoff Rata-rata</h2><p>Setelah mengumpulkan sampel yang cukup — minimal 30 sinyal, idealnya lebih — hitung dua angka: tingkat keberhasilan (persentase transaksi menang) dan payoff rata-rata (keuntungan rata-rata transaksi menang dibagi kerugian rata-rata transaksi kalah). Anggaplah backtest dengan 40 sinyal, 18 menang dan 22 kalah, keuntungan rata-rata R$ 60,00 pada yang menang dan kerugian rata-rata R$ 35,00 pada yang kalah. Tingkat keberhasilannya 45% (18/40) dan payoff-nya 1,71 (60/35).</p><h2>Langkah 4: Hitung Ekspektasi Matematis</h2><p>Ekspektasi matematis mengukur hasil rata-rata yang diharapkan per transaksi, dan dihitung sebagai berikut: (tingkat keberhasilan × keuntungan rata-rata) − (tingkat kegagalan × kerugian rata-rata). Menggunakan angka dari contoh: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positif per transaksi, rata-rata. Ekspektasi positif menunjukkan bahwa, dengan mempertahankan proporsi keberhasilan dan payoff yang sama seiring waktu, strategi tersebut cenderung menghasilkan hasil positif — yang tidak menjamin setiap transaksi individual akan menguntungkan, tetapi menunjukkan keunggulan statistik dalam sampel yang diuji.</p><h2>Apa yang Tidak Dijamin Backtest</h2><p>Hasil positif dalam riwayat tidak menjamin kinerja yang sama ke depannya — kondisi pasar berubah, dan sampel kecil bisa saja menguntungkan secara kebetulan. Selain itu, backtest manual rentan terhadap bias retrospektif: mudah, tanpa disadari, menyesuaikan interpretasi sinyal karena mengetahui apa yang terjadi setelahnya. Karena itu, banyak trader melanjutkan backtest dengan periode pengujian di akun simulasi, menerapkan aturan yang sama secara real-time sebelum bertransaksi dengan modal signifikan.</p><h2>Menerapkan Proses ini dalam Praktik</h2><ul><li>Tulis aturan entri dan keluar sebelum melihat data historis apa pun.</li><li>Kumpulkan sampel minimal 30 sinyal agar angkanya memiliki bobot statistik.</li><li>Hitung tingkat keberhasilan, payoff rata-rata, dan ekspektasi matematis sebelum menganggap strategi tervalidasi.</li><li>Uji di akun simulasi selama suatu periode sebelum menerapkan modal sungguhan, bahkan dengan backtest positif.</li></ul><p>Backtest adalah alat penyaring, bukan jaminan: ia membantu menyingkirkan strategi tanpa keunggulan statistik yang tampak, dan memahami lebih baik perilaku yang diharapkan dari yang tersisa — tetapi tidak ada ekspektasi matematis yang dihitung berdasarkan masa lalu yang merupakan janji hasil masa depan.</p><h2>Kehati-hatian Tambahan: Ukuran Sampel Lebih Penting dari yang Terlihat</h2><p>Ekspektasi matematis positif yang dihitung hanya dari 10 atau 15 sinyal memiliki nilai statistik yang kecil — bisa jadi hasil keberuntungan dalam sampel, bukan keunggulan nyata dari strategi tersebut. Semakin besar jumlah sinyal yang diuji, semakin besar kepercayaan yang dibawa hasilnya, meskipun tidak ada sampel, sebesar apa pun, yang sepenuhnya menghilangkan ketidakpastian tentang masa depan. Ada baiknya juga menguji strategi pada periode pasar yang berbeda — naik, turun, dan sideways — karena sebuah aturan bisa bekerja baik dalam satu rezim dan buruk di rezim lain, dan backtest yang hanya dilakukan pada periode kenaikan kuat cenderung melebih-lebihkan hasil yang diharapkan.</p>
-        <div class="bq-post__cta">
-          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-fazer-o-backtest-de-uma-estrategia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Tautan disalin">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Sep 2026</time><span class="ap__sep">4 menit baca</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> kali dilihat</span></span>
+            </div>
+            <p class="ap__atual">Diperbarui: <time datetime="2026-09-27">27 September 2026</time></p>
+            <span class="bq__tag">Strategi</span>
+            <h1>Cara Melakukan Backtest Strategi Sebelum Bertransaksi Sungguhan</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Tim Duotide</strong><small>Tim editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Daftar isi">
+              <p class="ap__indice-tit">Daftar isi</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#langkah-1-tentukan-aturan-entri-dan-keluar-secara-tertulis">Langkah 1: Tentukan Aturan Entri dan Keluar Secara Tertulis</a></li>
+                <li><a href="#langkah-2-telusuri-riwayat-sinyal-demi-sinyal">Langkah 2: Telusuri Riwayat Sinyal demi Sinyal</a></li>
+                <li><a href="#langkah-3-hitung-tingkat-keberhasilan-dan-payoff-rata-rata">Langkah 3: Hitung Tingkat Keberhasilan dan Payoff Rata-rata</a></li>
+                <li><a href="#langkah-4-hitung-ekspektasi-matematis">Langkah 4: Hitung Ekspektasi Matematis</a></li>
+                <li><a href="#apa-yang-tidak-dijamin-backtest">Apa yang Tidak Dijamin Backtest</a></li>
+                <li><a href="#menerapkan-proses-ini-dalam-praktik">Menerapkan Proses ini dalam Praktik</a></li>
+                <li><a href="#kehati-hatian-tambahan-ukuran-sampel-lebih-penting-dari-yang">Kehati-hatian Tambahan: Ukuran Sampel Lebih Penting dari yang Terlihat</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Kembali ke atas</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Backtest adalah proses menguji strategi transaksi menggunakan data historis, sebelum mempertaruhkan modal sungguhan padanya. Idenya sederhana: menerapkan aturan entri dan keluar yang sama seperti yang akan digunakan secara langsung pada periode grafik masa lalu, dan mencatat apa yang akan terjadi pada setiap sinyal yang dihasilkan. Ini adalah tahap yang membedakan strategi dengan bukti keberhasilan dari ide yang hanya terlihat bagus saat melihat grafik secara retrospektif.</p><h2 id="langkah-1-tentukan-aturan-entri-dan-keluar-secara-tertulis">Langkah 1: Tentukan Aturan Entri dan Keluar Secara Tertulis</h2><p>Sebelum melihat data historis apa pun, tulis aturan pasti yang akan Anda uji — misalnya: "beli ketika harga menembus tertinggi 20 candle terakhir dengan volume 30% di atas rata-rata; keluar untung pada kenaikan 2% atau stop pada penurunan 1%". Aturan yang samar seperti "beli ketika terlihat seperti peluang bagus" tidak dapat diuji secara konsisten, karena bergantung pada penilaian subjektif pada setiap sinyal.</p><h2 id="langkah-2-telusuri-riwayat-sinyal-demi-sinyal">Langkah 2: Telusuri Riwayat Sinyal demi Sinyal</h2><p>Dengan aturan yang telah ditentukan, telusuri grafik historis untuk mengidentifikasi setiap kali kondisi entri terpenuhi, dan catat hasil yang akan dihasilkan aturan keluar — untung atau rugi, dalam poin atau persentase. Penting untuk menjaga disiplin menerapkan aturan persis seperti yang tertulis, tanpa "menyesuaikan" hasil setelah melihat apa yang terjadi, agar tidak membiaskan pengujian demi strategi tersebut.</p><h2 id="langkah-3-hitung-tingkat-keberhasilan-dan-payoff-rata-rata">Langkah 3: Hitung Tingkat Keberhasilan dan Payoff Rata-rata</h2><p>Setelah mengumpulkan sampel yang cukup — minimal 30 sinyal, idealnya lebih — hitung dua angka: tingkat keberhasilan (persentase transaksi menang) dan payoff rata-rata (keuntungan rata-rata transaksi menang dibagi kerugian rata-rata transaksi kalah). Anggaplah backtest dengan 40 sinyal, 18 menang dan 22 kalah, keuntungan rata-rata R$ 60,00 pada yang menang dan kerugian rata-rata R$ 35,00 pada yang kalah. Tingkat keberhasilannya 45% (18/40) dan payoff-nya 1,71 (60/35).</p><h2 id="langkah-4-hitung-ekspektasi-matematis">Langkah 4: Hitung Ekspektasi Matematis</h2><p>Ekspektasi matematis mengukur hasil rata-rata yang diharapkan per transaksi, dan dihitung sebagai berikut: (tingkat keberhasilan × keuntungan rata-rata) − (tingkat kegagalan × kerugian rata-rata). Menggunakan angka dari contoh: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positif per transaksi, rata-rata. Ekspektasi positif menunjukkan bahwa, dengan mempertahankan proporsi keberhasilan dan payoff yang sama seiring waktu, strategi tersebut cenderung menghasilkan hasil positif — yang tidak menjamin setiap transaksi individual akan menguntungkan, tetapi menunjukkan keunggulan statistik dalam sampel yang diuji.</p><h2 id="apa-yang-tidak-dijamin-backtest">Apa yang Tidak Dijamin Backtest</h2><p>Hasil positif dalam riwayat tidak menjamin kinerja yang sama ke depannya — kondisi pasar berubah, dan sampel kecil bisa saja menguntungkan secara kebetulan. Selain itu, backtest manual rentan terhadap bias retrospektif: mudah, tanpa disadari, menyesuaikan interpretasi sinyal karena mengetahui apa yang terjadi setelahnya. Karena itu, banyak trader melanjutkan backtest dengan periode pengujian di akun simulasi, menerapkan aturan yang sama secara real-time sebelum bertransaksi dengan modal signifikan.</p><h2 id="menerapkan-proses-ini-dalam-praktik">Menerapkan Proses ini dalam Praktik</h2><ul><li>Tulis aturan entri dan keluar sebelum melihat data historis apa pun.</li><li>Kumpulkan sampel minimal 30 sinyal agar angkanya memiliki bobot statistik.</li><li>Hitung tingkat keberhasilan, payoff rata-rata, dan ekspektasi matematis sebelum menganggap strategi tervalidasi.</li><li>Uji di akun simulasi selama suatu periode sebelum menerapkan modal sungguhan, bahkan dengan backtest positif.</li></ul><p>Backtest adalah alat penyaring, bukan jaminan: ia membantu menyingkirkan strategi tanpa keunggulan statistik yang tampak, dan memahami lebih baik perilaku yang diharapkan dari yang tersisa — tetapi tidak ada ekspektasi matematis yang dihitung berdasarkan masa lalu yang merupakan janji hasil masa depan.</p><h2 id="kehati-hatian-tambahan-ukuran-sampel-lebih-penting-dari-yang">Kehati-hatian Tambahan: Ukuran Sampel Lebih Penting dari yang Terlihat</h2><p>Ekspektasi matematis positif yang dihitung hanya dari 10 atau 15 sinyal memiliki nilai statistik yang kecil — bisa jadi hasil keberuntungan dalam sampel, bukan keunggulan nyata dari strategi tersebut. Semakin besar jumlah sinyal yang diuji, semakin besar kepercayaan yang dibawa hasilnya, meskipun tidak ada sampel, sebesar apa pun, yang sepenuhnya menghilangkan ketidakpastian tentang masa depan. Ada baiknya juga menguji strategi pada periode pasar yang berbeda — naik, turun, dan sideways — karena sebuah aturan bisa bekerja baik dalam satu rezim dan buruk di rezim lain, dan backtest yang hanya dilakukan pada periode kenaikan kuat cenderung melebih-lebihkan hasil yang diharapkan.</p>
+            <div class="bq-post__cta">
+              <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Diperbarui: <time datetime="2026-09-27">27 Sep 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> kali dilihat</span></span><button class="ap__compartilhar" type="button">Bagikan <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Tim Duotide</strong><p>Tim editorial Duotide menulis panduan dan berita di blog ini: cara kerja pasar, manajemen risiko, dan penggunaan platform. Tidak ada isi di sini yang merupakan saran investasi.</p></div>
+              <a class="btn ap__equipe" href="/id/tentang/">Kenali tim kami</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Baca juga</h2>
+        <aside class="ap__rel">
+          <h2>Artikel terkait</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/id/blog/persilangan-exponential-moving-average-ema-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Persilangan Exponential Moving Average (EMA) dalam Trading</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
             <a class="bq__card" href="/id/blog/cara-memilih-jangka-waktu-transaksi/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cara Memilih Jangka Waktu (Kedaluwarsa) Transaksi</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
@@ -201,7 +240,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +304,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

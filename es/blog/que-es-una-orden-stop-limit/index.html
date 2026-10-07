@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/que-es-una-orden-stop-limit/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-04.webp",
       "articleSection": "Principiantes",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Qué es una orden stop-limit y cuándo usarla</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Principiantes</span>
-        <h1>Qué es una orden stop-limit y cuándo usarla</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 6 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Entre los tipos de orden disponibles en una plataforma de negociación, la orden stop-limit suele generar dudas por combinar dos conceptos en uno solo: un gatillo de activación (el stop) y un precio límite para la ejecución (el limit). Entender la diferencia entre este tipo de orden y una orden stop común evita sorpresas, sobre todo en momentos de mercado más agitado.</p><p>Este artículo explica qué es una orden stop-limit, cómo funciona en la práctica y por qué, en algunos escenarios, puede simplemente no ejecutarse.</p><h2>Qué es una orden stop-limit</h2><p>Una orden stop-limit tiene dos precios definidos: el precio de disparo (stop), que activa la orden cuando el mercado lo alcanza, y el precio límite (limit), que define el valor máximo (en una compra) o mínimo (en una venta) aceptable para la ejecución. Cuando el precio de mercado toca el stop, la orden se convierte en una orden limitada con el precio definido, en lugar de ejecutarse al precio disponible en ese momento, sea cual sea.</p><p>Esto es distinto de una orden stop simple (también llamada stop de mercado), que, al activarse, se ejecuta al mejor precio disponible en el momento, sea cual sea, sin ningún límite de protección respecto al valor final de la ejecución.</p><h2>Un ejemplo práctico de funcionamiento</h2><p>Imagina una acción que se negocia a R$ 60, y quieres protegerte de una caída, pero tampoco quieres vender a un precio muy por debajo del esperado, en caso de que el mercado caiga bruscamente. Defines una orden stop-limit con stop en R$ 57 y límite en R$ 56,50. Si el precio cae hasta R$ 57, la orden se activa y se convierte en una orden de venta con precio mínimo de R$ 56,50.</p><p>Si el mercado está líquido, la orden probablemente se ejecutará cerca de R$ 56,50 o R$ 57. Pero si el precio se desploma rápidamente, saltando de R$ 57 a R$ 54 sin pasar por precios intermedios con liquidez suficiente, la orden stop-limit puede no ejecutarse, ya que se niega a vender por debajo de R$ 56,50, aunque el mercado ya esté en R$ 54.</p><h2>La diferencia crucial respecto a la orden stop de mercado</h2><p>Una orden stop de mercado, en el mismo escenario, se ejecutaría incluso si el precio hubiera saltado directo a R$ 54, porque no tiene límite de precio, solo el gatillo de activación. Esto garantiza la ejecución, pero al costo de aceptar cualquier precio disponible en el momento, que puede ser bastante peor de lo esperado en mercados muy volátiles.</p><ul><li>El stop-limit garantiza un precio mínimo (o máximo) de ejecución, pero puede no ejecutarse.</li><li>El stop de mercado garantiza la ejecución, pero sin control sobre el precio final.</li><li>La distancia entre el stop y el límite debe considerar la volatilidad normal del activo.</li><li>En mercados de baja liquidez, el riesgo de no ejecución es mayor.</li></ul><h2>Cómo definir la distancia entre el stop y el límite</h2><p>No existe una distancia única correcta entre el precio de stop y el precio límite: depende de la volatilidad del activo operado. Un activo que suele variar 0,5% en segundos de alta volatilidad puede necesitar un margen mayor entre el stop y el límite, comparado con un activo más estable, para reducir la probabilidad de que la orden no se ejecute.</p><h3>Cuándo suele ser más adecuado el stop-limit</h3><p>Las órdenes stop-limit tienden a funcionar mejor en activos líquidos y en mercados sin grandes saltos de precio (gaps). En activos históricamente sujetos a movimientos bruscos y repentinos, el riesgo de que la orden simplemente no se ejecute, dejando la posición abierta sin protección, debe tenerse en cuenta al decidir qué tipo de orden usar.</p><h2>Cómo elegir entre stop-limit y stop de mercado en la práctica</h2><p>Si la prioridad es garantizar la ejecución de la protección, incluso aceptando un precio peor en un escenario extremo, la orden stop de mercado suele ser más indicada. Si la prioridad es controlar exactamente el precio mínimo o máximo aceptado, incluso con el riesgo de que la orden no se ejecute en un movimiento muy rápido, la orden stop-limit tiene más sentido. En cualquiera de los dos casos, definir la protección antes de abrir la posición sigue siendo esencial para una gestión de riesgo responsable.</p><p>Vale la pena revisar periódicamente la distancia usada entre el stop y el límite a medida que cambia la volatilidad del activo con el tiempo. Un margen que tenía sentido en un período más tranquilo puede volverse insuficiente en momentos de noticias relevantes, aumentando el riesgo de que la orden quede sin ejecutar justo cuando la protección era más necesaria.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-ordem-stop-limit" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">6 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-28">28 de septiembre de 2026</time></p>
+            <span class="bq__tag">Principiantes</span>
+            <h1>Qué es una orden stop-limit y cuándo usarla</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#que-es-una-orden-stop-limit">Qué es una orden stop-limit</a></li>
+                <li><a href="#un-ejemplo-practico-de-funcionamiento">Un ejemplo práctico de funcionamiento</a></li>
+                <li><a href="#la-diferencia-crucial-respecto-a-la-orden-stop-de-mercado">La diferencia crucial respecto a la orden stop de mercado</a></li>
+                <li><a href="#como-definir-la-distancia-entre-el-stop-y-el-limite">Cómo definir la distancia entre el stop y el límite</a></li>
+                <li><a href="#como-elegir-entre-stop-limit-y-stop-de-mercado-en-la-practic">Cómo elegir entre stop-limit y stop de mercado en la práctica</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Entre los tipos de orden disponibles en una plataforma de negociación, la orden stop-limit suele generar dudas por combinar dos conceptos en uno solo: un gatillo de activación (el stop) y un precio límite para la ejecución (el limit). Entender la diferencia entre este tipo de orden y una orden stop común evita sorpresas, sobre todo en momentos de mercado más agitado.</p><p>Este artículo explica qué es una orden stop-limit, cómo funciona en la práctica y por qué, en algunos escenarios, puede simplemente no ejecutarse.</p><h2 id="que-es-una-orden-stop-limit">Qué es una orden stop-limit</h2><p>Una orden stop-limit tiene dos precios definidos: el precio de disparo (stop), que activa la orden cuando el mercado lo alcanza, y el precio límite (limit), que define el valor máximo (en una compra) o mínimo (en una venta) aceptable para la ejecución. Cuando el precio de mercado toca el stop, la orden se convierte en una orden limitada con el precio definido, en lugar de ejecutarse al precio disponible en ese momento, sea cual sea.</p><p>Esto es distinto de una orden stop simple (también llamada stop de mercado), que, al activarse, se ejecuta al mejor precio disponible en el momento, sea cual sea, sin ningún límite de protección respecto al valor final de la ejecución.</p><h2 id="un-ejemplo-practico-de-funcionamiento">Un ejemplo práctico de funcionamiento</h2><p>Imagina una acción que se negocia a R$ 60, y quieres protegerte de una caída, pero tampoco quieres vender a un precio muy por debajo del esperado, en caso de que el mercado caiga bruscamente. Defines una orden stop-limit con stop en R$ 57 y límite en R$ 56,50. Si el precio cae hasta R$ 57, la orden se activa y se convierte en una orden de venta con precio mínimo de R$ 56,50.</p><p>Si el mercado está líquido, la orden probablemente se ejecutará cerca de R$ 56,50 o R$ 57. Pero si el precio se desploma rápidamente, saltando de R$ 57 a R$ 54 sin pasar por precios intermedios con liquidez suficiente, la orden stop-limit puede no ejecutarse, ya que se niega a vender por debajo de R$ 56,50, aunque el mercado ya esté en R$ 54.</p><h2 id="la-diferencia-crucial-respecto-a-la-orden-stop-de-mercado">La diferencia crucial respecto a la orden stop de mercado</h2><p>Una orden stop de mercado, en el mismo escenario, se ejecutaría incluso si el precio hubiera saltado directo a R$ 54, porque no tiene límite de precio, solo el gatillo de activación. Esto garantiza la ejecución, pero al costo de aceptar cualquier precio disponible en el momento, que puede ser bastante peor de lo esperado en mercados muy volátiles.</p><ul><li>El stop-limit garantiza un precio mínimo (o máximo) de ejecución, pero puede no ejecutarse.</li><li>El stop de mercado garantiza la ejecución, pero sin control sobre el precio final.</li><li>La distancia entre el stop y el límite debe considerar la volatilidad normal del activo.</li><li>En mercados de baja liquidez, el riesgo de no ejecución es mayor.</li></ul><h2 id="como-definir-la-distancia-entre-el-stop-y-el-limite">Cómo definir la distancia entre el stop y el límite</h2><p>No existe una distancia única correcta entre el precio de stop y el precio límite: depende de la volatilidad del activo operado. Un activo que suele variar 0,5% en segundos de alta volatilidad puede necesitar un margen mayor entre el stop y el límite, comparado con un activo más estable, para reducir la probabilidad de que la orden no se ejecute.</p><h3>Cuándo suele ser más adecuado el stop-limit</h3><p>Las órdenes stop-limit tienden a funcionar mejor en activos líquidos y en mercados sin grandes saltos de precio (gaps). En activos históricamente sujetos a movimientos bruscos y repentinos, el riesgo de que la orden simplemente no se ejecute, dejando la posición abierta sin protección, debe tenerse en cuenta al decidir qué tipo de orden usar.</p><h2 id="como-elegir-entre-stop-limit-y-stop-de-mercado-en-la-practic">Cómo elegir entre stop-limit y stop de mercado en la práctica</h2><p>Si la prioridad es garantizar la ejecución de la protección, incluso aceptando un precio peor en un escenario extremo, la orden stop de mercado suele ser más indicada. Si la prioridad es controlar exactamente el precio mínimo o máximo aceptado, incluso con el riesgo de que la orden no se ejecute en un movimiento muy rápido, la orden stop-limit tiene más sentido. En cualquiera de los dos casos, definir la protección antes de abrir la posición sigue siendo esencial para una gestión de riesgo responsable.</p><p>Vale la pena revisar periódicamente la distancia usada entre el stop y el límite a medida que cambia la volatilidad del activo con el tiempo. Un margen que tenía sentido en un período más tranquilo puede volverse insuficiente en momentos de noticias relevantes, aumentando el riesgo de que la orden quede sin ejecutar justo cuando la protección era más necesaria.</p>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-28">28 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/como-entender-una-cotizacion-de-mercado/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo entender una cotización de mercado</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/libros-esenciales-para-traders-principiantes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Libros esenciales para quien está empezando en el trading</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/comment-configurer-un-robot-de-trading/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Stratégies",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Comment configurer un robot de trading étape par étape</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Stratégies</span>
-        <h1>Comment configurer un robot de trading étape par étape</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 6 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Un robot de trading est, au fond, un ensemble de règles écrites en code qui achète et vend des actifs automatiquement quand certaines conditions sont remplies. La promesse est tentante : trader sans avoir besoin de rester devant l'écran et sans laisser l'émotion interférer dans la décision. Mais construire un robot qui fonctionne vraiment exige plus de planification que la plupart des gens l'imaginent.</p><p>Ce guide présente les étapes pour configurer un robot de trading, de la définition de la stratégie aux tests finaux, ainsi que les précautions qui évitent qu'il ne devienne une machine à perdre de l'argent en pilote automatique.</p><h2>Étape 1 : définissez la stratégie en règles claires</h2><p>Avant de penser au code, écrivez votre stratégie en phrases simples et objectives. Par exemple : acheter quand la moyenne mobile de 9 périodes croise au-dessus de la moyenne de 21 périodes, et vendre quand le prix baisse de 2% en dessous du prix d'entrée. Si vous ne pouvez pas décrire la stratégie sans ambiguïté par écrit, le robot non plus ne pourra pas l'exécuter de façon cohérente.</p><p>À cette étape, définissez aussi les trois piliers de tout système automatisé : la condition d'entrée, la condition de sortie avec profit et la condition de sortie avec perte (le stop). Un robot sans stop défini n'est pas une stratégie automatisée, c'est un risque automatisé.</p><h2>Étape 2 : choisissez la plateforme et le langage</h2><p>Il existe essentiellement deux chemins : utiliser un constructeur visuel, où vous construisez la logique avec des blocs et des menus, sans écrire de code, ou programmer le robot dans un langage comme Python, qui donne plus de liberté, mais exige des connaissances techniques. Pour les débutants, les plateformes visuelles sont plus rapides pour valider une idée simple avant d'investir du temps dans la programmation.</p><h3>Tester la logique avant d'automatiser</h3><p>Une erreur courante est de se lancer directement dans la programmation du robot sans d'abord vérifier manuellement, sur un graphique historique, si la stratégie aurait fonctionné ces dernières semaines. Ce test manuel, rapide et fait à l'œil nu, évite de perdre du temps à automatiser une règle qui échouait déjà sur le papier.</p><h2>Étape 3 : faites le backtest avec des données historiques</h2><p>Le backtest est le processus consistant à faire tourner votre stratégie sur des données de prix passées pour voir comment elle se serait comportée. Un backtest bien fait prend en compte les coûts de transaction, le spread entre achat et vente, et une période assez longue pour inclure des moments de marché calme et des moments de forte volatilité.</p><p>Imaginez un robot testé avec R$ 10.000 de capital initial, risquant 2% par opération (R$ 200). Sur 100 opérations simulées, avec 55% de réussite et un ratio risque-rendement de 1 pour 1,5, le résultat attendu serait d'environ 21 opérations gagnantes de plus que perdantes, multipliées par le gain moyen — un exercice de mathématiques qui n'a de sens que lorsque les chiffres du backtest sont réalistes, et non gonflés par la chance sur la période choisie.</p><ul><li>Utilisez au moins un ou deux ans de données historiques, si disponibles.</li><li>Incluez les coûts de transaction et le spread dans le calcul.</li><li>Méfiez-vous des résultats trop parfaits : ils peuvent indiquer une erreur dans le test.</li><li>Réservez une partie des données pour valider en dehors de la période utilisée pour l'ajustement.</li></ul><h2>Étape 4 : testez sur un compte démo avant le capital réel</h2><p>Même après un backtest satisfaisant, le robot doit tourner sur un compte démo, avec des données de marché en direct, mais sans argent réel, pendant une période raisonnable. C'est à cette étape qu'apparaissent des problèmes que le backtest ne capture pas, comme des retards d'exécution, des pannes de connexion ou le comportement du robot face à des actualités de dernière minute.</p><h3>Surveillance continue</h3><p>Un robot de trading n'est pas un projet qu'on configure une fois et qu'on oublie. Des changements dans le comportement du marché peuvent rendre une stratégie rentable incohérente. Réservez du temps chaque semaine pour revoir les résultats, en comparant la performance réelle avec ce que le backtest prévoyait.</p><h2>Comment mettre le robot en fonctionnement en toute sécurité</h2><p>En passant à un compte réel, commencez avec un petit capital, suffisant pour valider que l'exécution en direct correspond à ce qui a été testé, mais assez petit pour qu'une erreur de configuration ne cause pas de préjudice grave. Augmentez le capital alloué progressivement, à mesure que l'historique réel confirme ce qui a été observé dans les tests.</p><p>Quelle que soit la plateforme utilisée pour exécuter les ordres, le robot est un outil de discipline, pas une garantie de profit. Il élimine l'hésitation émotionnelle au moment d'appuyer sur le bouton, mais reste exposé au risque de marché comme toute autre forme d'opération, et les pertes font partie du processus même avec un système bien construit.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-configurar-um-robo-de-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">6 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-27">27 septembre 2026</time></p>
+            <span class="bq__tag">Stratégies</span>
+            <h1>Comment configurer un robot de trading étape par étape</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#etape-1-definissez-la-strategie-en-regles-claires">Étape 1 : définissez la stratégie en règles claires</a></li>
+                <li><a href="#etape-2-choisissez-la-plateforme-et-le-langage">Étape 2 : choisissez la plateforme et le langage</a></li>
+                <li><a href="#etape-3-faites-le-backtest-avec-des-donnees-historiques">Étape 3 : faites le backtest avec des données historiques</a></li>
+                <li><a href="#etape-4-testez-sur-un-compte-demo-avant-le-capital-reel">Étape 4 : testez sur un compte démo avant le capital réel</a></li>
+                <li><a href="#comment-mettre-le-robot-en-fonctionnement-en-toute-securite">Comment mettre le robot en fonctionnement en toute sécurité</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Un robot de trading est, au fond, un ensemble de règles écrites en code qui achète et vend des actifs automatiquement quand certaines conditions sont remplies. La promesse est tentante : trader sans avoir besoin de rester devant l'écran et sans laisser l'émotion interférer dans la décision. Mais construire un robot qui fonctionne vraiment exige plus de planification que la plupart des gens l'imaginent.</p><p>Ce guide présente les étapes pour configurer un robot de trading, de la définition de la stratégie aux tests finaux, ainsi que les précautions qui évitent qu'il ne devienne une machine à perdre de l'argent en pilote automatique.</p><h2 id="etape-1-definissez-la-strategie-en-regles-claires">Étape 1 : définissez la stratégie en règles claires</h2><p>Avant de penser au code, écrivez votre stratégie en phrases simples et objectives. Par exemple : acheter quand la moyenne mobile de 9 périodes croise au-dessus de la moyenne de 21 périodes, et vendre quand le prix baisse de 2% en dessous du prix d'entrée. Si vous ne pouvez pas décrire la stratégie sans ambiguïté par écrit, le robot non plus ne pourra pas l'exécuter de façon cohérente.</p><p>À cette étape, définissez aussi les trois piliers de tout système automatisé : la condition d'entrée, la condition de sortie avec profit et la condition de sortie avec perte (le stop). Un robot sans stop défini n'est pas une stratégie automatisée, c'est un risque automatisé.</p><h2 id="etape-2-choisissez-la-plateforme-et-le-langage">Étape 2 : choisissez la plateforme et le langage</h2><p>Il existe essentiellement deux chemins : utiliser un constructeur visuel, où vous construisez la logique avec des blocs et des menus, sans écrire de code, ou programmer le robot dans un langage comme Python, qui donne plus de liberté, mais exige des connaissances techniques. Pour les débutants, les plateformes visuelles sont plus rapides pour valider une idée simple avant d'investir du temps dans la programmation.</p><h3>Tester la logique avant d'automatiser</h3><p>Une erreur courante est de se lancer directement dans la programmation du robot sans d'abord vérifier manuellement, sur un graphique historique, si la stratégie aurait fonctionné ces dernières semaines. Ce test manuel, rapide et fait à l'œil nu, évite de perdre du temps à automatiser une règle qui échouait déjà sur le papier.</p><h2 id="etape-3-faites-le-backtest-avec-des-donnees-historiques">Étape 3 : faites le backtest avec des données historiques</h2><p>Le backtest est le processus consistant à faire tourner votre stratégie sur des données de prix passées pour voir comment elle se serait comportée. Un backtest bien fait prend en compte les coûts de transaction, le spread entre achat et vente, et une période assez longue pour inclure des moments de marché calme et des moments de forte volatilité.</p><p>Imaginez un robot testé avec R$ 10.000 de capital initial, risquant 2% par opération (R$ 200). Sur 100 opérations simulées, avec 55% de réussite et un ratio risque-rendement de 1 pour 1,5, le résultat attendu serait d'environ 21 opérations gagnantes de plus que perdantes, multipliées par le gain moyen — un exercice de mathématiques qui n'a de sens que lorsque les chiffres du backtest sont réalistes, et non gonflés par la chance sur la période choisie.</p><ul><li>Utilisez au moins un ou deux ans de données historiques, si disponibles.</li><li>Incluez les coûts de transaction et le spread dans le calcul.</li><li>Méfiez-vous des résultats trop parfaits : ils peuvent indiquer une erreur dans le test.</li><li>Réservez une partie des données pour valider en dehors de la période utilisée pour l'ajustement.</li></ul><h2 id="etape-4-testez-sur-un-compte-demo-avant-le-capital-reel">Étape 4 : testez sur un compte démo avant le capital réel</h2><p>Même après un backtest satisfaisant, le robot doit tourner sur un compte démo, avec des données de marché en direct, mais sans argent réel, pendant une période raisonnable. C'est à cette étape qu'apparaissent des problèmes que le backtest ne capture pas, comme des retards d'exécution, des pannes de connexion ou le comportement du robot face à des actualités de dernière minute.</p><h3>Surveillance continue</h3><p>Un robot de trading n'est pas un projet qu'on configure une fois et qu'on oublie. Des changements dans le comportement du marché peuvent rendre une stratégie rentable incohérente. Réservez du temps chaque semaine pour revoir les résultats, en comparant la performance réelle avec ce que le backtest prévoyait.</p><h2 id="comment-mettre-le-robot-en-fonctionnement-en-toute-securite">Comment mettre le robot en fonctionnement en toute sécurité</h2><p>En passant à un compte réel, commencez avec un petit capital, suffisant pour valider que l'exécution en direct correspond à ce qui a été testé, mais assez petit pour qu'une erreur de configuration ne cause pas de préjudice grave. Augmentez le capital alloué progressivement, à mesure que l'historique réel confirme ce qui a été observé dans les tests.</p><p>Quelle que soit la plateforme utilisée pour exécuter les ordres, le robot est un outil de discipline, pas une garantie de profit. Il élimine l'hésitation émotionnelle au moment d'appuyer sur le bouton, mais reste exposé au risque de marché comme toute autre forme d'opération, et les pertes font partie du processus même avec un système bien construit.</p>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-27">27 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/croisement-de-moyennes-mobiles-exponentielles-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Croisement de moyennes mobiles exponentielles (EMA) en trading</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/comment-choisir-lecheance-dune-operation/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment choisir l'échéance d'une opération</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

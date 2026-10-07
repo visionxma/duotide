@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/3-modi-di-usare-le-bande-di-bollinger-nellanalisi-tecnica/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Indicatori",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Percorso di navigazione">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/it/">Home</a></li>
         <li><a href="/it/blog/">Blog</a></li>
         <li><span aria-current="page">3 modi di usare le Bande di Bollinger nell'analisi tecnica</span></li>
       </ol>
+      <a class="ap__voltar" href="/it/blog/">Indietro</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicatori</span>
-        <h1>3 modi di usare le Bande di Bollinger nell'analisi tecnica</h1>
-        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Le Bande di Bollinger sono uno degli indicatori più versatili dell'analisi tecnica perché riuniscono, in un unico strumento, informazioni su trend e volatilità. Molte persone imparano a riconoscere il disegno delle tre linee sul grafico, ma pochi esplorano tutto ciò che può indicare oltre all'ovvio prezzo sale, prezzo scende.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="3-formas-de-usar-bandas-de-bollinger" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiato">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">4 min di lettura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
+            </div>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-27">27 settembre 2026</time></p>
+            <span class="bq__tag">Indicatori</span>
+            <h1>3 modi di usare le Bande di Bollinger nell'analisi tecnica</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Team Duotide</strong><small>Redazione</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Indice">
+              <p class="ap__indice-tit">Indice</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#come-vengono-calcolate-le-bande">Come vengono calcolate le bande</a></li>
+                <li><a href="#modo-1-leggere-la-volatilita-dalla-distanza-tra-le-bande">Modo 1: leggere la volatilità dalla distanza tra le bande</a></li>
+                <li><a href="#modo-2-operare-l-inversione-ai-bordi">Modo 2: operare l'inversione ai bordi</a></li>
+                <li><a href="#modo-3-seguire-la-rottura">Modo 3: seguire la rottura</a></li>
+                <li><a href="#gestione-del-rischio-con-le-bande-di-bollinger">Gestione del rischio con le Bande di Bollinger</a></li>
+                <li><a href="#fare-pratica-prima-di-operare-con-denaro-reale">Fare pratica prima di operare con denaro reale</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Le Bande di Bollinger sono uno degli indicatori più versatili dell'analisi tecnica perché riuniscono, in un unico strumento, informazioni su trend e volatilità. Molte persone imparano a riconoscere il disegno delle tre linee sul grafico, ma pochi esplorano tutto ciò che può indicare oltre all'ovvio prezzo sale, prezzo scende.</p>
 <p>In questo articolo vedrai come viene calcolato l'indicatore e tre modi diversi di estrarne segnali: identificare cambiamenti di volatilità, operare inversioni ai bordi e seguire rotture di trend.</p>
-<h2>Come vengono calcolate le bande</h2>
+<h2 id="come-vengono-calcolate-le-bande">Come vengono calcolate le bande</h2>
 <p>L'indicatore ha tre linee. Quella centrale è una media mobile semplice, normalmente di 20 periodi. Le altre due, superiore e inferiore, si trovano a una distanza da questa media pari a un multiplo della deviazione standard del prezzo nello stesso periodo — lo standard di mercato è 2 deviazioni standard.</p>
 <p>Esempio: se la media mobile di 20 periodi della coppia EUR/USD è a 1,0850 e la deviazione standard di questo periodo è 0,0040, la banda superiore si trova a 1,0850 + (2 × 0,0040) = 1,0930, e la banda inferiore a 1,0850 − (2 × 0,0040) = 1,0770. Più il prezzo oscilla, più le bande si allontanano dalla media; più resta fermo, più esse si avvicinano.</p>
-<h2>Modo 1: leggere la volatilità dalla distanza tra le bande</h2>
+<h2 id="modo-1-leggere-la-volatilita-dalla-distanza-tra-le-bande">Modo 1: leggere la volatilità dalla distanza tra le bande</h2>
 <p>Quando le bande diventano molto vicine tra loro, il mercato ha bassa volatilità — di solito un periodo di indecisione che precede un movimento più forte. Questo restringimento è noto come squeeze. Quando si aprono molto, il mercato è agitato, e dopo un'apertura molto ampia è comune che la volatilità torni a scendere, anche senza indicare una direzione.</p>
 <p>Questo uso non dà un segnale di acquisto o vendita: avvisa che sta per succedere qualcosa, così il trader può regolare la dimensione della posizione e la distanza dello stop prima che arrivi il movimento.</p>
-<h2>Modo 2: operare l'inversione ai bordi</h2>
+<h2 id="modo-2-operare-l-inversione-ai-bordi">Modo 2: operare l'inversione ai bordi</h2>
 <p>Nei mercati senza un trend definito (laterali), il prezzo tende a rispettare le bande come se fossero un soffitto e un pavimento. Quando il prezzo tocca o supera la banda superiore e poi chiude una candela di ritorno al suo interno, alcuni trader lo vedono come segnale di esaurimento del rialzo e possibile discesa fino alla media centrale. Lo stesso ragionamento vale al contrario per la banda inferiore.</p>
 <p>Questo uso funziona meglio quando confermato da un altro indicatore di momentum, come l'RSI, perché in un trend forte il prezzo può camminare incollato a una banda per diverse candele senza invertirsi — e chi vende solo perché ha toccato la banda superiore in queste condizioni perde denaro contro il trend.</p>
-<h2>Modo 3: seguire la rottura</h2>
+<h2 id="modo-3-seguire-la-rottura">Modo 3: seguire la rottura</h2>
 <p>Il terzo modo è l'opposto del secondo: invece di aspettare l'inversione, il trader segue il movimento. Dopo uno squeeze (bande strette), se il prezzo rompe la banda superiore con una candela dal corpo grande e un volume più alto del normale, questo può indicare l'inizio di un trend rialzista — e il trader entra nella direzione della rottura, non contro di essa. Lo stesso vale per le rotture della banda inferiore, in direzione ribassista.</p>
 <p>La differenza tra usare le Bande di Bollinger per l'inversione (Modo 2) o per la rottura (Modo 3) dipende dal contesto del mercato: un mercato laterale favorisce l'inversione, uno squeeze seguito da forza favorisce la rottura. Mescolare le due letture senza criterio è l'errore più comune di chi inizia a usare l'indicatore.</p>
-<h2>Gestione del rischio con le Bande di Bollinger</h2>
+<h2 id="gestione-del-rischio-con-le-bande-di-bollinger">Gestione del rischio con le Bande di Bollinger</h2>
 <p>Nessuno dei tre modi di utilizzo sostituisce un piano di gestione del rischio. Definisci lo stop prima di entrare — per esempio, un po' oltre la banda opposta al tuo ingresso — e non rischiare mai più di una piccola fetta del conto in una singola operazione, qualcosa come l'1%-2% del capitale. Ricorda anche che, come qualsiasi indicatore basato su media e deviazione standard, le Bande di Bollinger reagiscono al prezzo passato: descrivono ciò che è già successo, non garantiscono ciò che accadrà in seguito.</p>
-<h2>Fare pratica prima di operare con denaro reale</h2>
+<h2 id="fare-pratica-prima-di-operare-con-denaro-reale">Fare pratica prima di operare con denaro reale</h2>
 <p>Poiché l'indicatore cambia comportamento a seconda dell'asset e dell'intervallo grafico, vale la pena osservare la stessa coppia o azione in periodi diversi — 15 minuti, 1 ora, giornaliero — prima di decidere quale dei tre modi di utilizzo si adatta meglio al tuo stile. Su una piattaforma come Duotide, è possibile seguire i grafici con l'indicatore attivo e testare ciascuna di queste letture su asset diversi prima di applicare valori reali.</p>
 <p>Alla fine, le Bande di Bollinger sono una lente per la volatilità, non una sfera di cristallo. Combinate con un piano di rischio chiaro e un altro indicatore di conferma, aiutano a organizzare decisioni che, altrimenti, sarebbero solo una supposizione basata sull'osservazione del prezzo.</p>
-        <div class="bq-post__cta">
-          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aggiornato il: <time datetime="2026-09-27">27 set 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Team Duotide</strong><p>La redazione di Duotide scrive le guide e le notizie di questo blog: come funzionano i mercati, gestione del rischio e uso della piattaforma. Nulla di quanto scritto qui è una raccomandazione di investimento.</p></div>
+              <a class="btn ap__equipe" href="/it/chi-siamo/">Conosci il team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leggi anche</h2>
+        <aside class="ap__rel">
+          <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/cose-loscillatore-stocastico-e-come-funziona/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Oscillatore Stocastico e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

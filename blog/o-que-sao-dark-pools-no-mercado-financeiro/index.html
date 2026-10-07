@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,42 +173,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">O que são dark pools e como afetam a liquidez visível do mercado</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Mercado</span>
-        <h1>O que são dark pools e como afetam a liquidez visível do mercado</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Nem toda negociação de ações e outros ativos acontece nas bolsas abertas que qualquer investidor consegue observar em tempo real. Uma parte significativa do volume negociado globalmente passa por ambientes privados de negociação, conhecidos como dark pools, ou "piscinas escuras" — chamados assim porque as ordens ali não aparecem publicamente antes de serem executadas.</p>
-<h2>O que exatamente é um dark pool</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-sao-dark-pools-no-mercado-financeiro" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Mercado</span>
+            <h1>O que são dark pools e como afetam a liquidez visível do mercado</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#o-que-exatamente-e-um-dark-pool">O que exatamente é um dark pool</a></li>
+                <li><a href="#por-que-uma-instituicao-prefere-negociar-assim">Por que uma instituição prefere negociar assim</a></li>
+                <li><a href="#o-efeito-na-transparencia-para-o-pequeno-investidor">O efeito na transparência para o pequeno investidor</a></li>
+                <li><a href="#regulacao-e-limites-desse-tipo-de-negociacao">Regulação e limites desse tipo de negociação</a></li>
+                <li><a href="#nao-e-uma-teoria-da-conspiracao-e-uma-peca-do-sistema">Não é uma teoria da conspiração, é uma peça do sistema</a></li>
+                <li><a href="#o-que-isso-muda-na-pratica-de-quem-opera-no-varejo">O que isso muda na prática de quem opera no varejo</a></li>
+                <li><a href="#o-que-observar-quando-o-volume-parece-nao-bater-com-o-movime">O que observar quando o volume parece não bater com o movimento</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Nem toda negociação de ações e outros ativos acontece nas bolsas abertas que qualquer investidor consegue observar em tempo real. Uma parte significativa do volume negociado globalmente passa por ambientes privados de negociação, conhecidos como dark pools, ou "piscinas escuras" — chamados assim porque as ordens ali não aparecem publicamente antes de serem executadas.</p>
+<h2 id="o-que-exatamente-e-um-dark-pool">O que exatamente é um dark pool</h2>
 <p>Um dark pool é uma plataforma de negociação privada, operada por bancos, corretoras ou empresas especializadas, onde investidores institucionais — fundos de pensão, gestoras, grandes fundos de investimento — podem negociar grandes lotes de ações sem expor a ordem ao mercado público antes da execução. A negociação só se torna pública depois de concluída, geralmente com um pequeno atraso de reporte.</p>
-<h2>Por que uma instituição prefere negociar assim</h2>
+<h2 id="por-que-uma-instituicao-prefere-negociar-assim">Por que uma instituição prefere negociar assim</h2>
 <p>Imagine um fundo que precisa vender um lote de 2 milhões de ações de uma empresa. Se essa ordem inteira aparecesse de uma vez no livro de ofertas público de uma bolsa, o mercado provavelmente reagiria antes mesmo da execução completa, derrubando o preço à medida que outros participantes percebessem a pressão vendedora — um efeito chamado de impacto de mercado. Negociando em um dark pool, o fundo consegue executar esse volume grande com contrapartes também institucionais, sem revelar a intenção com antecedência e sem mover o preço contra si mesmo antes de terminar a operação.</p>
-<h2>O efeito na transparência para o pequeno investidor</h2>
+<h2 id="o-efeito-na-transparencia-para-o-pequeno-investidor">O efeito na transparência para o pequeno investidor</h2>
 <p>Como uma parcela do volume negociado não aparece no livro de ofertas público antes da execução, o preço e o volume visíveis nas bolsas abertas representam apenas uma fatia da atividade real do mercado naquele ativo. Isso significa que um pequeno investidor, olhando apenas o volume da bolsa aberta, pode estar vendo um retrato incompleto da oferta e demanda real por aquele papel em determinado momento — sem que isso represente, por si só, qualquer irregularidade.</p>
-<h2>Regulação e limites desse tipo de negociação</h2>
+<h2 id="regulacao-e-limites-desse-tipo-de-negociacao">Regulação e limites desse tipo de negociação</h2>
 <p>Dark pools operam sob regulação dos órgãos supervisores de cada mercado, com regras específicas sobre reporte de operações, tamanho mínimo de lote e prazo para tornar a negociação pública depois de concluída. Essas regras existem justamente para equilibrar o benefício de reduzir o impacto de mercado em ordens grandes com a necessidade de manter um nível mínimo de transparência para o mercado como um todo.</p>
-<h2>Não é uma teoria da conspiração, é uma peça do sistema</h2>
+<h2 id="nao-e-uma-teoria-da-conspiracao-e-uma-peca-do-sistema">Não é uma teoria da conspiração, é uma peça do sistema</h2>
 <p>É comum encontrar a ideia de que dark pools existem para "esconder" movimentos de grandes players contra o pequeno investidor. Na prática, o mecanismo existe para resolver um problema real e reconhecido — o impacto de mercado de ordens muito grandes — dentro de um arcabouço regulado e reportado, não para operar à margem da lei. O pequeno investidor não tem acesso direto a esses ambientes porque eles são desenhados para negociação institucional de grande porte, não porque exista uma intenção de prejudicá-lo especificamente.</p>
-<h2>O que isso muda na prática de quem opera no varejo</h2>
+<h2 id="o-que-isso-muda-na-pratica-de-quem-opera-no-varejo">O que isso muda na prática de quem opera no varejo</h2>
 <p>Saber que dark pools existem ajuda a explicar certos movimentos de preço aparentemente desproporcionais ao volume visível na bolsa aberta — parte da atividade real simplesmente não estava visível até a operação ser reportada. Isso reforça a importância de não tirar conclusões definitivas só a partir do volume de uma única bolsa, especialmente em ativos de grande capitalização onde a negociação institucional é mais intensa, e de tratar leituras de volume e fluxo de ordens como um dado parcial, não como o quadro completo do mercado.</p>
-<h2>O que observar quando o volume parece não bater com o movimento</h2>
+<h2 id="o-que-observar-quando-o-volume-parece-nao-bater-com-o-movime">O que observar quando o volume parece não bater com o movimento</h2>
 <p>Quando um ativo se move de forma expressiva sem um volume correspondente visível na bolsa aberta, vale considerar a possibilidade de negociação relevante ter ocorrido fora do ambiente público antes de ser reportada. Isso não muda a decisão de operar ou não, mas evita a conclusão apressada de que "o mercado se moveu sem motivo" — muitas vezes o motivo existiu, apenas não estava visível no momento em que o movimento aconteceu. Acompanhar relatórios periódicos de volume agregado, quando disponíveis, ajuda a ter uma visão um pouco mais completa do que apenas o book de ofertas em tempo real. Esse hábito é especialmente útil para quem baseia decisões em análise de volume: entender que o número exibido é parcial, e não o total negociado no mercado, evita conclusões equivocadas tiradas de um dado incompleto.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/ipo-da-anthropic-o-que-se-sabe-ate-agora/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">IPO da Anthropic: o que é fato e o que ainda é rumor</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/negociacao-fora-do-horario-de-pregao/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é negociação fora do horário de pregão (after-hours)</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -216,7 +255,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

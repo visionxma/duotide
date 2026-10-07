@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/binary-opsiyon-nedir-ve-nasil-calisir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Opsiyonlar",
       "author": {
@@ -172,44 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Binary Opsiyon Nedir ve Bu Sözleşme Türü Nasıl Çalışır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Opsiyonlar</span>
-        <h1>Binary Opsiyon Nedir ve Bu Sözleşme Türü Nasıl Çalışır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Binary opsiyon, belirli bir sürenin sonunda yalnızca iki olası sonucu olan bir finansal sözleşmedir: ya kararlaştırılan tutar tamamen ödenir ya da yatırılan tutar tamamen kaybedilir. Ortası, kısmi bir sonuç ya da fiyat hareketinin büyüklüğüyle orantılı bir değişim yoktur — "binary" (ikili) adı da buradan, sadece iki çıkış olmasından gelir.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-sao-opcoes-binarias-e-como-funcionam" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-28">28 Eylül 2026</time></p>
+            <span class="bq__tag">Opsiyonlar</span>
+            <h1>Binary Opsiyon Nedir ve Bu Sözleşme Türü Nasıl Çalışır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#sozlesme-pratikte-nasıl-calısır">Sözleşme Pratikte Nasıl Çalışır</a></li>
+                <li><a href="#getiri-neden-asla-simetrik-degildir">Getiri Neden Asla Simetrik Değildir</a></li>
+                <li><a href="#kısa-vadenin-rolu">Kısa Vadenin Rolü</a></li>
+                <li><a href="#geleneksel-bir-opsiyondan-farkı">Geleneksel Bir Opsiyondan Farkı</a></li>
+                <li><a href="#islem-yapmadan-once-dikkate-alınması-gerekenler">İşlem Yapmadan Önce Dikkate Alınması Gerekenler</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Binary opsiyon, belirli bir sürenin sonunda yalnızca iki olası sonucu olan bir finansal sözleşmedir: ya kararlaştırılan tutar tamamen ödenir ya da yatırılan tutar tamamen kaybedilir. Ortası, kısmi bir sonuç ya da fiyat hareketinin büyüklüğüyle orantılı bir değişim yoktur — "binary" (ikili) adı da buradan, sadece iki çıkış olmasından gelir.</p>
 <p>Bu basitleştirilmiş biçim, tam olarak anlaşılması kolay göründüğü için yeni başlayanları cezbeder: bir varlık seçersiniz, fiyatın belirli bir saate kadar yükseleceğine ya da düşeceğine bahis oynarsınız ve işlemi onaylamadan önce bile kazancın ya da kaybın tam olarak ne olacağını bilirsiniz. Ama bu görünürdeki basitlik, işlem yapmadan önce ayrıntılı olarak anlaşılması gereken bir risk mekaniğini gizler.</p>
-<h2>Sözleşme Pratikte Nasıl Çalışır</h2>
+<h2 id="sozlesme-pratikte-nasıl-calısır">Sözleşme Pratikte Nasıl Çalışır</h2>
 <p>EUR/USD paritesinin 1,0850'den kote edildiğini ve fiyatın beş dakika içinde bu seviyenin üzerinde olacağına inandığınızı varsayalım. Bu tahmine R$ 100,00 yatırırsınız, isabet durumunda %80 ilan edilmiş bir getiri ile. Beş dakika sonunda fiyat 1,0855'te ise — sadece 5 puan yukarıda bile olsa — R$ 180,00 alırsınız (yatırılan R$ 100,00 artı R$ 80,00 getiri). Fiyat 1,0849'da kapanırsa, giriş değerinin sadece 1 puan altında bile olsa, R$ 100,00'ün tamamını kaybedersiniz. Hareketin büyüklüğü önemli değildir: önemli olan tek şey, piyasanın giriş fiyatının hangi tarafında kapandığıdır.</p>
-<h2>Getiri Neden Asla Simetrik Değildir</h2>
+<h2 id="getiri-neden-asla-simetrik-degildir">Getiri Neden Asla Simetrik Değildir</h2>
 <p>Yukarıdaki örnekte, isabet durumundaki kazancın (yatırılan tutarın %80'i) hata durumundaki kayıptan (yatırılan tutarın %100'ü) daha düşük olduğuna dikkat edin. Bu asimetri yapısaldır: ürünün onu sunan taraf için sürdürülebilir olması için, isabet halinde ödenen getirinin ortalama olarak hatada kaybedilen tutardan daha düşük olması gerekir. Pratikte bu, yazı tura atmakla aynı şansa sahip olan %50'lik bir isabet oranının, birçok işlem boyunca başa baş kalmak için artık yeterli olmadığı anlamına gelir. Hesabı tekrar yapalım: R$ 100,00'lük 10 işlemde 5 isabet ve 5 hata ile, 5 × R$ 80,00 = R$ 400,00 kazanır ve 5 × R$ 100,00 = R$ 500,00 kaybederdiniz; yarısında isabet etmenize rağmen R$ 100,00 zararla sonuçlanırdı.</p>
-<h2>Kısa Vadenin Rolü</h2>
+<h2 id="kısa-vadenin-rolu">Kısa Vadenin Rolü</h2>
 <p>Binary opsiyonlar genellikle saniyelerden dakikalara kadar çok kısa vadelerde sunulur, bu da her bir işlemin sonucu üzerinde şansın etkisini artırır. Vade ne kadar kısaysa, herhangi bir teknik ya da temel analizin doğrulanması için o kadar az zaman kalır ve sonuç, gerçek bir trend yerine fiyatın çok kısa vadeli gürültüsü üzerine bir bahise o kadar çok yaklaşır.</p>
-<h2>Geleneksel Bir Opsiyondan Farkı</h2>
+<h2 id="geleneksel-bir-opsiyondan-farkı">Geleneksel Bir Opsiyondan Farkı</h2>
 <p>Geleneksel bir opsiyonun (call veya put türünde) değeri, varlığın hareketiyle ve vadeye kalan süreyle orantılı olarak değişir — fiyat pozisyon lehine ne kadar hareket ederse opsiyon o kadar değerlenir ve pozisyonu vadeden önce o anki piyasa değerinden kapatmak mümkündür. Binary opsiyonda bu orantılı değişim ve genellikle vadeden önce ara bir değerle çıkma imkanı yoktur: sonuç yalnızca sözleşme kapandığında belirlenir ve her zaman hep ya da hiçtir.</p>
-<h2>İşlem Yapmadan Önce Dikkate Alınması Gerekenler</h2>
+<h2 id="islem-yapmadan-once-dikkate-alınması-gerekenler">İşlem Yapmadan Önce Dikkate Alınması Gerekenler</h2>
 <ul>
 <li>Her işlemi bir yatırım olarak değil, her zaman çok kısa vadeli bir bahis olarak ele alın — her sözleşmede yatırılan tutarın tamamını kaybetme riski gerçek ve sıktır.</li>
 <li>Tutarlı kazanç vaadinden şüphelenin: kazanç ve kayıp arasındaki asimetri, %50'nin çok üzerinde bir isabet oranı olmadan uzun vadede kâr sürdürmeyi neredeyse imkânsız hale getirir.</li>
 <li>Başlamadan önce, seansta kaybetmeyi kabul ettiğiniz maksimum bir tutar belirleyin — ve son işlemlerin sonucundan bağımsız olarak, bu tutara ulaştığınızda durun.</li>
 </ul>
 <p>Bu mekaniği anlamak, ürünü tamamen kaçınmak için değil, onu işletecekseniz — her sözleşmede tam kayıp riskinin istisna değil kural olduğunun ve kazanç-kayıp asimetrisinin uzun vadede işlem yapanların aleyhine çalıştığının tam bilinciyle işletmek için bir nedendir. Önemli tutarlar yatırmadan önce, yukarıdaki 10 işlem örneğindeki gibi kağıt üzerinde çeşitli isabet ve hata dizilerini simüle etmekte fayda var; bu, ulaşabileceğinizi düşündüğünüz isabet oranının bu asimetriyi gerçekten karşılayıp karşılamayacağını kontrol etmenizi sağlar — çoğu insan bu hesabı yaparak, sayının ilk bakışta göründüğünden çok daha yüksek olması gerektiğini keşfeder.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-28">28 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/binary-opsiyonlar-pratikte-nasil-calisir/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary opsiyonlar pratikte nasıl çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/binary-opsiyonlar-adim-adim-rehber-ve-risk-yonetimi/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary Opsiyonlar: Pratik Adım Adım Rehber ve Risk Yönetimi</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
@@ -217,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -281,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

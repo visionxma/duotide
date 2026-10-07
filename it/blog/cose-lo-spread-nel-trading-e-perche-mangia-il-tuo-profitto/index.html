@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/cose-lo-spread-nel-trading-e-perche-mangia-il-tuo-profitto/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-como-escolher-uma-corretora.webp",
       "articleSection": "Principianti",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Percorso di navigazione">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/it/">Home</a></li>
         <li><a href="/it/blog/">Blog</a></li>
         <li><span aria-current="page">Cos'è lo spread nel trading e perché mangia parte del tuo profitto</span></li>
       </ol>
+      <a class="ap__voltar" href="/it/blog/">Indietro</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Principianti</span>
-        <h1>Cos'è lo spread nel trading e perché mangia parte del tuo profitto</h1>
-        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Ogni asset negoziato in borsa o nel mercato over-the-counter ha due prezzi allo stesso tempo: il prezzo al quale qualcuno è disposto a comprare (bid) e il prezzo al quale qualcuno è disposto a vendere (ask o offer). La differenza tra i due si chiama spread, ed è il primo costo — di solito invisibile per chi sta iniziando — che qualsiasi operazione porta ancora prima che il mercato si muova a tuo favore.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-spread-e-como-ele-afeta-suas-operacoes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiato">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">4 min di lettura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
+            </div>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-28">28 settembre 2026</time></p>
+            <span class="bq__tag">Principianti</span>
+            <h1>Cos'è lo spread nel trading e perché mangia parte del tuo profitto</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Team Duotide</strong><small>Redazione</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Indice">
+              <p class="ap__indice-tit">Indice</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#come-appare-lo-spread-nella-pratica">Come appare lo spread nella pratica</a></li>
+                <li><a href="#chi-definisce-questo-prezzo-e-perche">Chi definisce questo prezzo, e perché</a></li>
+                <li><a href="#spread-fisso-e-spread-variabile">Spread fisso e spread variabile</a></li>
+                <li><a href="#l-effetto-accumulato-dello-spread-sul-tuo-risultato">L'effetto accumulato dello spread sul tuo risultato</a></li>
+                <li><a href="#come-ridurre-l-impatto-dello-spread-sulle-tue-operazioni">Come ridurre l'impatto dello spread sulle tue operazioni</a></li>
+                <li><a href="#portando-questo-alla-routine-quotidiana">Portando questo alla routine quotidiana</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Ogni asset negoziato in borsa o nel mercato over-the-counter ha due prezzi allo stesso tempo: il prezzo al quale qualcuno è disposto a comprare (bid) e il prezzo al quale qualcuno è disposto a vendere (ask o offer). La differenza tra i due si chiama spread, ed è il primo costo — di solito invisibile per chi sta iniziando — che qualsiasi operazione porta ancora prima che il mercato si muova a tuo favore.</p>
 <p>Capire lo spread cambia il modo in cui valuti se un'operazione vale la pena, soprattutto in asset meno liquidi o in operazioni brevissime, dove questo costo pesa proporzionalmente di più.</p>
-<h2>Come appare lo spread nella pratica</h2>
+<h2 id="come-appare-lo-spread-nella-pratica">Come appare lo spread nella pratica</h2>
 <p>Immagina la coppia EUR/USD quotata così: acquisto (bid) a 1,0850 e vendita (ask) a 1,0852. Questo significa che, se vuoi comprare euro ora, paghi 1,0852 dollari per euro; se vuoi vendere, ricevi solo 1,0850. Lo spread qui è di 0,0002, ovvero 2 pip. Aprendo una posizione, entri già con questa differenza contro di te: per pareggiare, il prezzo deve muoversi almeno i 2 pip dello spread prima che appaia qualsiasi profitto.</p>
-<h2>Chi definisce questo prezzo, e perché</h2>
+<h2 id="chi-definisce-questo-prezzo-e-perche">Chi definisce questo prezzo, e perché</h2>
 <p>Lo spread viene definito dai partecipanti che forniscono liquidità al mercato — broker, banche e market maker che si impegnano ad avere sempre un lato di acquisto e uno di vendita disponibili. Guadagnano esattamente su questa differenza, e la dimensione dello spread riflette il rischio che assumono nel mantenere questa offerta costante. Quanto più un asset viene negoziato, con più persone che comprano e vendono continuamente, tanto minore tende a essere lo spread — per questo il dollaro contro il real tende ad avere uno spread molto più stretto di un'azione a bassissimo volume in borsa.</p>
-<h2>Spread fisso e spread variabile</h2>
+<h2 id="spread-fisso-e-spread-variabile">Spread fisso e spread variabile</h2>
 <p>Alcuni strumenti operano con spread fisso, che non cambia indipendentemente dall'orario o dalla volatilità. Altri hanno spread variabile, che si allarga nei momenti di notizie importanti o bassa liquidità — per esempio, durante la pubblicazione di un dato sull'occupazione negli Stati Uniti, lo spread del dollaro può saltare da 2 a 8 o 10 pip in pochi secondi. Chi opera sulle notizie senza prestarci attenzione tende a sorprendersi con un prezzo di ingresso molto peggiore dell'atteso.</p>
-<h2>L'effetto accumulato dello spread sul tuo risultato</h2>
+<h2 id="l-effetto-accumulato-dello-spread-sul-tuo-risultato">L'effetto accumulato dello spread sul tuo risultato</h2>
 <p>Supponi di fare 20 operazioni al mese su un asset con spread equivalente a R$ 0,50 per operazione (considerando il lotto negoziato). Questo rappresenta già R$ 10,00 di costo fisso mensile, sommato a qualsiasi altra commissione addebitata. Per chi opera con molta frequenza — come nel day trade brevissimo — lo spread può consumare una fetta rilevante del profitto lordo, ancora prima di tasse e commissioni. Un esempio numerico: se la tua strategia ha un'aspettativa di guadagno medio di R$ 0,80 per operazione, ma lo spread costa R$ 0,50 in ogni ingresso e uscita, resta solo R$ 0,30 di margine reale — qualsiasi imprecisione nell'esecuzione può azzerare questo risultato.</p>
-<h2>Come ridurre l'impatto dello spread sulle tue operazioni</h2>
+<h2 id="come-ridurre-l-impatto-dello-spread-sulle-tue-operazioni">Come ridurre l'impatto dello spread sulle tue operazioni</h2>
 <ul>
 <li>Preferisci operare negli orari di maggiore liquidità dell'asset, quando lo spread tende a essere più stretto.</li>
 <li>Evita di aprire posizioni nei secondi che precedono o seguono pubblicazioni economiche importanti, quando lo spread si allarga.</li>
 <li>Confronta lo spread dello stesso asset tra orari diversi prima di decidere la tua finestra di operazione — piattaforme come Duotide mostrano lo spread in tempo reale accanto alla quotazione, il che aiuta a visualizzare questo costo prima di confermare l'ordine.</li>
 <li>Per operazioni a periodo più lungo, lo spread pesa proporzionalmente meno che in operazioni molto brevi, dato che il movimento atteso del prezzo tende a essere maggiore dello stesso spread.</li>
 </ul>
-<h2>Portando questo alla routine quotidiana</h2>
+<h2 id="portando-questo-alla-routine-quotidiana">Portando questo alla routine quotidiana</h2>
 <p>Lo spread non è una tassa nascosta né una trappola — è il costo naturale dell'esistenza di un mercato liquido, dove c'è sempre qualcuno dall'altro lato pronto a negoziare. Ma ignorarlo al momento di calcolare se una strategia è redditizia è un errore comune di chi sta iniziando. Prima di ripetere qualsiasi operazione su scala, vale la pena sommare lo spread al resto dei costi e controllare se il risultato atteso compensa ancora il rischio assunto.</p>
-        <div class="bq-post__cta">
-          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aggiornato il: <time datetime="2026-09-28">28 set 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Team Duotide</strong><p>La redazione di Duotide scrive le guide e le notizie di questo blog: come funzionano i mercati, gestione del rischio e uso della piattaforma. Nulla di quanto scritto qui è una raccomandazione di investimento.</p></div>
+              <a class="btn ap__equipe" href="/it/chi-siamo/">Conosci il team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leggi anche</h2>
+        <aside class="ap__rel">
+          <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/come-capire-una-quotazione-di-mercato/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come capire una quotazione di mercato</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/libri-essenziali-per-chi-inizia-nel-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Libri essenziali per chi sta iniziando nel trading</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

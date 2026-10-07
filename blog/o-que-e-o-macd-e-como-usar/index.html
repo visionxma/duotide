@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,60 +173,100 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">O que e o MACD e como usar esse indicador na pratica</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicadores</span>
-        <h1>O que e o MACD e como usar esse indicador na pratica</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-o-macd-e-como-usar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Indicadores</span>
+            <h1>O que e o MACD e como usar esse indicador na pratica</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#como-o-macd-e-calculado">Como o MACD e calculado</a></li>
+                <li><a href="#um-exemplo-numerico-simplificado">Um exemplo numerico simplificado</a></li>
+                <li><a href="#cruzamento-entre-as-linhas">Cruzamento entre as linhas</a></li>
+                <li><a href="#o-cruzamento-da-linha-zero">O cruzamento da linha zero</a></li>
+                <li><a href="#divergencia-no-macd">Divergencia no MACD</a></li>
+                <li><a href="#erros-comuns-ao-operar-com-macd">Erros comuns ao operar com MACD</a></li>
+                <li><a href="#macd-em-mercado-de-tendencia-versus-mercado-lateral">MACD em mercado de tendencia versus mercado lateral</a></li>
+                <li><a href="#como-encaixar-o-macd-em-uma-analise-mais-completa">Como encaixar o MACD em uma analise mais completa</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>O MACD, sigla para Moving Average Convergence Divergence, e um indicador de tendencia e momentum construido a partir de medias moveis exponenciais. Ele ajuda a visualizar quando o movimento de curto prazo esta ganhando ou perdendo forca em relacao ao movimento de prazo um pouco mais longo.</p>
-<h2>Como o MACD e calculado</h2>
+<h2 id="como-o-macd-e-calculado">Como o MACD e calculado</h2>
 <p>O indicador tem tres partes. A linha MACD e a diferenca entre duas medias moveis exponenciais, normalmente de 12 e 26 periodos:</p>
 <p><strong>Linha MACD = MME(12) - MME(26)</strong></p>
 <p>A linha de sinal e uma media movel exponencial de 9 periodos calculada sobre a propria linha MACD:</p>
 <p><strong>Linha de sinal = MME(9) da linha MACD</strong></p>
 <p>O histograma mostra a diferenca entre as duas linhas:</p>
 <p><strong>Histograma = Linha MACD - Linha de sinal</strong></p>
-<h2>Um exemplo numerico simplificado</h2>
+<h2 id="um-exemplo-numerico-simplificado">Um exemplo numerico simplificado</h2>
 <p>Suponha que, em um determinado momento, a media movel exponencial de 12 periodos de uma acao esteja em R$ 25,40 e a media movel exponencial de 26 periodos esteja em R$ 24,80. A linha MACD fica em:</p>
 <p>Linha MACD = R$ 25,40 - R$ 24,80 = <strong>0,60</strong></p>
 <p>Se a linha de sinal, calculada sobre os valores recentes da propria linha MACD, estiver em 0,45, o histograma fica em:</p>
 <p>Histograma = 0,60 - 0,45 = <strong>0,15</strong></p>
 <p>Um histograma positivo e crescente, como nesse exemplo, indica que a linha MACD esta se afastando da linha de sinal para cima, o que costuma ser lido como reforco do momentum de alta no curto prazo.</p>
-<h2>Cruzamento entre as linhas</h2>
+<h2 id="cruzamento-entre-as-linhas">Cruzamento entre as linhas</h2>
 <p>Quando a linha MACD cruza para cima da linha de sinal, isso costuma ser interpretado como um sinal de possivel forca compradora de curto prazo. Quando cruza para baixo, a leitura costuma ser oposta. Esses cruzamentos tendem a ser mais confiaveis quando ocorrem alinhados com a tendencia maior do grafico, e menos confiaveis quando o mercado esta andando de lado, situacao em que o MACD pode gerar varios cruzamentos falsos seguidos.</p>
-<h2>O cruzamento da linha zero</h2>
+<h2 id="o-cruzamento-da-linha-zero">O cruzamento da linha zero</h2>
 <p>Alem do cruzamento entre as duas linhas, tambem vale observar quando a propria linha MACD cruza acima ou abaixo do zero. Isso acontece quando a media de 12 periodos ultrapassa a de 26 periodos, ou vice-versa, sinalizando uma mudanca mais ampla na relacao entre as duas medias, geralmente associada a uma mudanca de tendencia de prazo um pouco mais longo do que um simples cruzamento entre a linha MACD e a linha de sinal.</p>
-<h2>Divergencia no MACD</h2>
+<h2 id="divergencia-no-macd">Divergencia no MACD</h2>
 <p>Assim como o RSI, o MACD tambem pode formar divergencia com o preco. Se o preco forma uma nova maxima, mas o histograma do MACD forma um pico mais baixo do que o anterior, isso sugere que o movimento de alta esta perdendo forca, mesmo que o preco ainda nao tenha revertido. O oposto vale para uma divergencia de baixa. Divergencia e um sinal de alerta sobre a forca do movimento, nao uma previsao exata de quando a reversao vai acontecer.</p>
-<h2>Erros comuns ao operar com MACD</h2>
+<h2 id="erros-comuns-ao-operar-com-macd">Erros comuns ao operar com MACD</h2>
 <ul>
 <li>Entrar em toda operacao so por causa de um cruzamento, sem considerar a tendencia do grafico maior.</li>
 <li>Ignorar que o MACD e um indicador atrasado, construido sobre medias moveis, o que significa que ele confirma movimentos depois que uma parte do movimento ja aconteceu.</li>
 <li>Usar apenas o MACD, sem cruzar a leitura com suporte, resistencia ou volume.</li>
 <li>Trocar os parametros padrao de 12, 26 e 9 sem testar previamente se a mudanca realmente melhora os resultados no ativo e timeframe operados.</li>
 </ul>
-<h2>MACD em mercado de tendencia versus mercado lateral</h2>
+<h2 id="macd-em-mercado-de-tendencia-versus-mercado-lateral">MACD em mercado de tendencia versus mercado lateral</h2>
 <p>O MACD costuma entregar seus melhores sinais em mercados que ja estao em tendencia definida, porque nesse cenario os cruzamentos tendem a acompanhar movimentos mais duradouros. Em um mercado andando de lado, sem direcao clara, as duas medias moveis que formam o indicador ficam se cruzando com frequencia, gerando uma sequencia de sinais que se cancelam rapido e podem gerar prejuizo para quem tenta operar cada cruzamento como se fosse uma nova tendencia comecando. Por isso, antes de confiar em um sinal do MACD, vale conferir se o grafico maior realmente mostra uma tendencia em andamento ou se o ativo esta apenas oscilando dentro de uma faixa.</p>
-<h2>Como encaixar o MACD em uma analise mais completa</h2>
+<h2 id="como-encaixar-o-macd-em-uma-analise-mais-completa">Como encaixar o MACD em uma analise mais completa</h2>
 <p>O MACD funciona melhor como uma confirmacao de momentum dentro de uma analise que ja considera a tendencia maior e os niveis de preco relevantes, em vez de funcionar como unico gatilho de entrada. Testar o comportamento do indicador no historico do ativo especifico antes de confiar nele em operacoes reais ajuda a entender em quais condicoes de mercado ele costuma funcionar melhor e em quais costuma gerar mais sinais falsos.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -234,7 +274,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -297,6 +337,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

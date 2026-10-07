@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/swap-orani-overnight-maliyeti-hesaplama/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Forex",
       "author": {
@@ -172,36 +172,62 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Swap Oranı: Pozisyon Açık Tutma Maliyeti Nasıl Hesaplanır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Forex</span>
-        <h1>Swap Oranı: Pozisyon Açık Tutma Maliyeti Nasıl Hesaplanır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Piyasanın günlük kapanış saatinden sonra açık tutulan her kaldıraçlı pozisyon, swap oranı olarak adlandırılan ve overnight ya da rollover oranı olarak da bilinen bir maliyet — bazı durumlarda ise bir kredi — doğurabilir. Bu, forex, CFD, emtia, endeksler ve kripto para marj pozisyonlarında görülür. İşlem aynı gün içinde, rollover saatinden önce açılıp kapatılırsa, genellikle hesaplanacak bir swap yoktur.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-swap-taxa-overnight" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Forex</span>
+            <h1>Swap Oranı: Pozisyon Açık Tutma Maliyeti Nasıl Hesaplanır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#hesaplama-nasıl-calısır">Hesaplama nasıl çalışır</a></li>
+                <li><a href="#cozulmus-ornek-yuzdelik-swap">Çözülmüş örnek: yüzdelik swap</a></li>
+                <li><a href="#alıs-ve-satıs-neden-farklı-maliyete-sahip">Alış ve satış neden farklı maliyete sahip</a></li>
+                <li><a href="#swap-gercekten-ne-zaman-onemli">Swap gerçekten ne zaman önemli</a></li>
+                <li><a href="#hesapta-surprizi-onleyen-alıskanlık">Hesapta sürprizi önleyen alışkanlık</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Piyasanın günlük kapanış saatinden sonra açık tutulan her kaldıraçlı pozisyon, swap oranı olarak adlandırılan ve overnight ya da rollover oranı olarak da bilinen bir maliyet — bazı durumlarda ise bir kredi — doğurabilir. Bu, forex, CFD, emtia, endeksler ve kripto para marj pozisyonlarında görülür. İşlem aynı gün içinde, rollover saatinden önce açılıp kapatılırsa, genellikle hesaplanacak bir swap yoktur.</p>
 <p>Swap'in sorunu, girişte görünür bir ücret olarak gelmemesidir. Daha sonra, sessizce hesapta ortaya çıkar. Bu, kısa vadeli görünen bir işlemin plansız bir şekilde birkaç gün açık tutulan bir pozisyona dönüşmesi durumunda birçok traderın etkiyi ancak o zaman fark etmesine neden olur.</p>
-<h2>Hesaplama nasıl çalışır</h2>
+<h2 id="hesaplama-nasıl-calısır">Hesaplama nasıl çalışır</h2>
 <p>Formül, brokerin swap oranını nasıl gösterdiğine bağlıdır. Pozisyon değerinin yüzdesi olarak gösterildiğinde:</p>
 <p>Swap = pozisyon değeri × günlük swap oranı × ücretlendirilen gece sayısı</p>
 <p>Lot başına gösterildiğinde:</p>
 <p>Swap = lot büyüklüğü × lot başına swap × ücretlendirilen gece sayısı</p>
 <p>Ücretlendirilen gece ifadesi dikkat gerektirir. Hafta sonu boyunca açık tutulan bir pozisyon genellikle birden fazla gece olarak sayılır, çünkü piyasanın kapalı kaldığı dönemi tasfiye etmesi gerekir. Birçok platform haftanın belirli bir gününde üçlü rollover uygular, ancak tam gün ve oran enstrümana ve brokere göre değişir — bu yüzden bir pozisyonu gece boyunca açık tutmaya karar vermeden önce geçerli koşulları her zaman kontrol etmekte fayda var.</p>
-<h2>Çözülmüş örnek: yüzdelik swap</h2>
+<h2 id="cozulmus-ornek-yuzdelik-swap">Çözülmüş örnek: yüzdelik swap</h2>
 <p>R$ 7.500 maruziyet değeri olan, alış işlemleri için günlük swap oranı yüzde 0,05 olan ve üç ücretlendirilen gece boyunca (hafta sonu üçlü rollover'ını içerdiği için) açık tutulan bir pozisyon düşünelim. Hesap şöyledir:</p>
 <p>R$ 7.500 × %0,05 × 3 = R$ 11,25 tahmini maliyet</p>
 <p>Aynı pozisyonun satış tarafında günlük oranı −%0,02 (maliyet yerine bir kredi) ise, aynı üç gecedeki sonuç şöyle olurdu:</p>
 <p>R$ 7.500 × (−%0,02) × 3 = −R$ 4,50, yani hesaba R$ 4,50'lik bir kredi</p>
 <p>Oranın işaretinin sonucu maliyetten krediye çevirdiğine dikkat edin — bu yüzden sayıyı zihinsel olarak uyarlamadan platformun gösterdiği işareti tam olarak kullanmak esastır.</p>
-<h2>Alış ve satış neden farklı maliyete sahip</h2>
+<h2 id="alıs-ve-satıs-neden-farklı-maliyete-sahip">Alış ve satış neden farklı maliyete sahip</h2>
 <p>Swap rastgele bir ücret değildir. Forex'te, paritenin iki para biriminin faiz oranları arasındaki farka bağlıdır. CFD'lerde finansman maliyetini, likiditeyi ve enstrümana özgü kuralları yansıtabilir. Bu yüzden şu durumlar yaygındır:</p>
 <ul>
 <li>Aynı varlıkta alış işlemlerinin finansman maliyeti satış işlemlerinden farklı olabilir.</li>
@@ -209,18 +235,29 @@
 <li>Brokerin ayarlamaları ve her enstrümana özgü kurallar da nihai değeri etkiler.</li>
 </ul>
 <p>Bu, işlemin yönünün swap'e göre seçilmesi gerektiği anlamına gelmez. Yön, teknik analizden veya işlemi motive eden senaryodan gelmelidir. Ancak iki giriş fikri benzer olduğunda ve bunlardan birinin overnight maliyeti çok daha yüksekse, swap meşru bir ayırt edici kriter haline gelir.</p>
-<h2>Swap gerçekten ne zaman önemli</h2>
+<h2 id="swap-gercekten-ne-zaman-onemli">Swap gerçekten ne zaman önemli</h2>
 <p>Gece başına R$ 2'lik bir maliyet otomatik olarak önemli değildir. R$ 150'lik bir hedefi olan bir işlemde bu değer neredeyse önemsizdir. Aynı işlemde, ama bir scalper'a tipik olan sadece R$ 8'lik bir hedefte, gece başına bu R$ 2, beklenen sonucun çok büyük bir dilimini eritir.</p>
 <p>Bir pozisyonu gece boyunca açık tutmadan önce yapmaya değer olan pratik hesap basittir: planlanan gece sayısı için tahmini swap değerini alın ve işlemin kâr hedefiyle karşılaştırın. Swap, hedefin küçük bir kısmını temsil ediyorsa, maliyet yönetilebilir. Büyük bir dilimi temsil ediyorsa, pozisyonu açık tutmayı yeniden düşünmekte veya telafi etmek için büyüklüğü azaltmakta fayda var.</p>
-<h2>Hesapta sürprizi önleyen alışkanlık</h2>
+<h2 id="hesapta-surprizi-onleyen-alıskanlık">Hesapta sürprizi önleyen alışkanlık</h2>
 <p>Bu hesabı kullanmanın pratik akışı şöyledir: birincisi, brokerin swap oranını nasıl gösterdiğini kontrol edin — yüzdelik mi yoksa lot başına mı; ikincisi, pozisyon değerini veya lot büyüklüğünü hesaplayın; üçüncüsü, genellikle farklı oldukları için alış ve satış oranını ayrı ayrı uygulayın; dördüncüsü, uygulanabildiğinde üçlü rollover'ı unutmadan pozisyonun açık kalacağı gerçek gece sayısıyla çarpın; son olarak, sonucu işlemin planlanan hedefiyle karşılaştırın.</p>
 <p>Swap, spread'in aksine ekranda anında görünmediği için genellikle küçük bir detay olarak ele alınır. Ama fark edilmeden geçen bir maliyet, yine de bir maliyettir. İster Duotide'da ister başka bir platformda olsun, herhangi bir pozisyonu bir günden diğerine açık tutmaya karar vermeden önce bu hızlı hesabı yapmaya değer — bu, grafikteki olumlu bir sonucun ekstrede olumsuz bir sürprize dönüşmesini engeller.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/forex-islemi-icin-en-iyi-teknik-gostergeler/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Forex İşlemi İçin En İyi Teknik Göstergeler</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/en-cok-islem-goren-5-forex-paritesi-ve-ozellikleri/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">En Çok İşlem Gören 5 Forex Paritesi ve Her Birinde Dikkat Edilecekler</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
@@ -228,7 +265,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +329,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

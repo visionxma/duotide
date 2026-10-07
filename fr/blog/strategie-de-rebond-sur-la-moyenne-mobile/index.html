@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/strategie-de-rebond-sur-la-moyenne-mobile/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Stratégies",
       "author": {
@@ -172,45 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Stratégie de rebond sur la moyenne mobile pour le court terme</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Stratégies</span>
-        <h1>Stratégie de rebond sur la moyenne mobile pour le court terme</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Parmi les stratégies de suivi de tendance, celle appelée « rebond sur la moyenne mobile » (moving average bounce) a un avantage clair : elle utilise un seul indicateur, est facile à visualiser sur le graphique et n'exige pas de mémoriser plusieurs règles de confluence pour commencer à la pratiquer.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-repique-na-media-movel" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-27">27 septembre 2026</time></p>
+            <span class="bq__tag">Stratégies</span>
+            <h1>Stratégie de rebond sur la moyenne mobile pour le court terme</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#choisir-la-moyenne-mobile">Choisir la moyenne mobile</a></li>
+                <li><a href="#confirmer-la-tendance-avant-d-operer">Confirmer la tendance avant d'opérer</a></li>
+                <li><a href="#le-signal-d-entree">Le signal d'entrée</a></li>
+                <li><a href="#pourquoi-le-risque-doit-etre-calcule-avant-d-entrer">Pourquoi le risque doit être calculé avant d'entrer</a></li>
+                <li><a href="#erreurs-courantes-dans-cette-strategie">Erreurs courantes dans cette stratégie</a></li>
+                <li><a href="#pratiquer-le-rebond-avant-d-operer-avec-du-capital-reel">Pratiquer le rebond avant d'opérer avec du capital réel</a></li>
+                <li><a href="#avantages-et-limites-de-la-methode">Avantages et limites de la méthode</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Parmi les stratégies de suivi de tendance, celle appelée « rebond sur la moyenne mobile » (moving average bounce) a un avantage clair : elle utilise un seul indicateur, est facile à visualiser sur le graphique et n'exige pas de mémoriser plusieurs règles de confluence pour commencer à la pratiquer.</p>
 <p>L'idée centrale est simple : dans une tendance définie, le prix monte (ou descend) rarement en ligne droite. Il avance, recule jusqu'à toucher ou s'approcher d'une moyenne mobile, et reprend la direction d'origine — et c'est précisément ce recul suivi d'un rebond que la stratégie tente de capturer.</p>
-<h2>Choisir la moyenne mobile</h2>
+<h2 id="choisir-la-moyenne-mobile">Choisir la moyenne mobile</h2>
 <p>Le choix le plus courant est une moyenne mobile exponentielle (EMA) de 21 périodes, car elle réagit plus vite au prix récent qu'une moyenne simple de la même taille. Des moyennes plus courtes, comme 9 périodes, génèrent plus de signaux, mais aussi plus de faux rebonds ; des moyennes plus longues, comme 50 périodes, filtrent le bruit, mais réagissent plus lentement et génèrent moins d'opportunités. Il n'existe pas de période « correcte » — il existe la période compatible avec l'échéance graphique et l'actif que vous suivez.</p>
-<h2>Confirmer la tendance avant d'opérer</h2>
+<h2 id="confirmer-la-tendance-avant-d-operer">Confirmer la tendance avant d'opérer</h2>
 <p>Avant de chercher le rebond, il faut confirmer qu'une tendance existe. Cela peut se faire en observant l'inclinaison de la moyenne mobile elle-même : si elle est inclinée vers le haut et que le prix, la plupart du temps, reste au-dessus d'elle, la tendance haussière est active et seules les entrées à l'achat ont du sens dans cette stratégie. Si la moyenne est inclinée vers le bas avec le prix en dessous d'elle, le scénario est l'inverse, et seules les entrées à la vente sont envisagées.</p>
-<h2>Le signal d'entrée</h2>
+<h2 id="le-signal-d-entree">Le signal d'entrée</h2>
 <p>Supposons une action négociée à 5,40 R$ en tendance haussière, avec l'EMA de 21 périodes également en hausse. Le prix recule jusqu'à 5,39 R$, touche la moyenne et clôture une bougie haussière juste au-dessus, à 5,41 R$. Cette clôture au-dessus de la moyenne, après le contact, est le déclencheur d'entrée — pas le contact lui-même, car le prix peut simplement traverser la moyenne sans rebondir.</p>
 <p>Le stop, dans cet exemple, se situe un peu en dessous du plus bas de la bougie de rebond, disons 5,35 R$ — un risque de 0,06 R$ par action. En utilisant un ratio risque-rendement de 1 pour 2, l'objectif se situe 0,12 R$ au-dessus de l'entrée, soit 5,53 R$.</p>
-<h2>Pourquoi le risque doit être calculé avant d'entrer</h2>
+<h2 id="pourquoi-le-risque-doit-etre-calcule-avant-d-entrer">Pourquoi le risque doit être calculé avant d'entrer</h2>
 <p>Avec le risque défini à 0,06 R$ par action et la limite d'exposition du compte fixée, par exemple, à 1 % d'un capital de 10 000 R$ — soit 100 R$ de risque maximal par opération — il devient possible de calculer la taille de la position avant d'entrer : 100 R$ ÷ 0,06 R$ ≈ 1 666 actions. Ce calcul évite deux pièges courants : opérer avec un lot trop important pour le stop défini, ou définir le stop si serré que le moindre bruit normal du marché sort déjà le trader de l'opération.</p>
-<h2>Erreurs courantes dans cette stratégie</h2>
+<h2 id="erreurs-courantes-dans-cette-strategie">Erreurs courantes dans cette stratégie</h2>
 <p>L'erreur la plus fréquente est de confondre toute approche de la moyenne avec un signal d'entrée — il faut attendre la clôture de la bougie de confirmation, pas anticiper. La deuxième erreur est d'utiliser la stratégie sur des marchés sans tendance claire, où le prix croise la moyenne à répétition sans direction, générant une séquence de petites pertes. La troisième est de déplacer le stop pour « donner plus d'espace » au rebond après que l'opération est déjà en perte, ce qui transforme un risque calculé en un risque indéfini.</p>
-<h2>Pratiquer le rebond avant d'opérer avec du capital réel</h2>
+<h2 id="pratiquer-le-rebond-avant-d-operer-avec-du-capital-reel">Pratiquer le rebond avant d'opérer avec du capital réel</h2>
 <p>Comme le comportement du rebond varie beaucoup entre les actifs volatils et les actifs plus stables, il vaut la peine de revoir l'historique du graphique en comptant combien de fois le prix a rebondi proprement sur la moyenne choisie avant d'appliquer la stratégie en direct. Cela aide à calibrer les attentes : aucune stratégie basée sur une moyenne mobile ne réussit à chaque fois, et une partie du travail consiste à accepter de petites pertes contrôlées comme faisant partie du processus, sans essayer de tout récupérer d'un coup avec des positions plus importantes.</p>
-<h2>Avantages et limites de la méthode</h2>
+<h2 id="avantages-et-limites-de-la-methode">Avantages et limites de la méthode</h2>
 <p>Le principal avantage du rebond sur la moyenne mobile est la simplicité : un seul indicateur, une seule règle d'entrée et un seul filtre de tendance rendent la méthode facile à suivre sans dépendre de plusieurs écrans ou de plusieurs indicateurs en accord en même temps. Cela facilite aussi la révision des opérations après coup, car on comprend clairement pourquoi chaque entrée a été faite.</p>
 <p>La limite principale est justement l'autre face de la même pièce : comme elle dépend d'une tendance déjà établie, la stratégie ne fonctionne pas bien sur des marchés latéraux, où il n'existe pas de direction dominante pour que le prix « rebondisse en faveur ». Reconnaître rapidement quand le marché a cessé de tendre et est entré en mouvement latéral — généralement quand la moyenne mobile elle-même cesse de s'incliner et devient horizontale — est ce qui évite de persister dans une méthode hors du contexte où elle fonctionne.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-27">27 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/croisement-de-moyennes-mobiles-exponentielles-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Croisement de moyennes mobiles exponentielles (EMA) en trading</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/comment-choisir-lecheance-dune-operation/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment choisir l'échéance d'une opération</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -218,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -282,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

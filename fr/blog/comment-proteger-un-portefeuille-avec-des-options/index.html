@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/comment-proteger-un-portefeuille-avec-des-options/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "Options",
       "author": {
@@ -172,46 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Comment protéger un portefeuille avec des options : le hedge en pratique</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Options</span>
-        <h1>Comment protéger un portefeuille avec des options : le hedge en pratique</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Le hedge est le nom donné à toute opération réalisée dans le but de réduire le risque d'une autre position déjà existante, et non de générer un profit en soi. Sur le marché des options, la forme de hedge la plus courante pour ceux qui détiennent des actions est l'utilisation de puts protectrices — une assurance à prix fixe contre les baisses de l'actif.</p>
-<h2>Le scénario : un portefeuille exposé à une baisse</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-proteger-uma-carteira-usando-opcoes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-27">27 septembre 2026</time></p>
+            <span class="bq__tag">Options</span>
+            <h1>Comment protéger un portefeuille avec des options : le hedge en pratique</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#le-scenario-un-portefeuille-expose-a-une-baisse">Le scénario : un portefeuille exposé à une baisse</a></li>
+                <li><a href="#construire-la-protection-avec-des-puts">Construire la protection avec des puts</a></li>
+                <li><a href="#comment-le-resultat-se-comporte-selon-differents-scenarios">Comment le résultat se comporte selon différents scénarios</a></li>
+                <li><a href="#ce-que-le-hedge-apporte-vraiment">Ce que le hedge apporte vraiment</a></li>
+                <li><a href="#quand-il-est-judicieux-d-envisager-ce-type-de-protection">Quand il est judicieux d'envisager ce type de protection</a></li>
+                <li><a href="#ajuster-l-ampleur-de-la-protection-au-risque-que-vous-voulez">Ajuster l'ampleur de la protection au risque que vous voulez couvrir</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Le hedge est le nom donné à toute opération réalisée dans le but de réduire le risque d'une autre position déjà existante, et non de générer un profit en soi. Sur le marché des options, la forme de hedge la plus courante pour ceux qui détiennent des actions est l'utilisation de puts protectrices — une assurance à prix fixe contre les baisses de l'actif.</p>
+<h2 id="le-scenario-un-portefeuille-expose-a-une-baisse">Le scénario : un portefeuille exposé à une baisse</h2>
 <p>Supposons que vous déteniez 500 actions d'une entreprise, achetées à 40,00 R$ chacune, totalisant 20 000,00 R$ investis. Vous croyez au potentiel de long terme de l'entreprise, mais craignez une forte baisse à court terme à cause d'un événement précis — la publication des résultats trimestriels, par exemple. Vendre les actions signifierait renoncer à la position de long terme ; ne rien faire signifie accepter le risque total de la baisse. Le hedge avec des options offre un moyen terme.</p>
-<h2>Construire la protection avec des puts</h2>
+<h2 id="construire-la-protection-avec-des-puts">Construire la protection avec des puts</h2>
 <p>Vous achetez 5 contrats de put (couvrant les 500 actions, en considérant des lots de 100 actions chacun), avec un prix d'exercice de 38,00 R$ et une prime de 1,00 R$ par action, totalisant 500,00 R$ de coût (500 actions × 1,00 R$). Cette prime est le prix de l'assurance : quoi qu'il arrive, vous avez déjà dépensé ces 500,00 R$.</p>
-<h2>Comment le résultat se comporte selon différents scénarios</h2>
+<h2 id="comment-le-resultat-se-comporte-selon-differents-scenarios">Comment le résultat se comporte selon différents scénarios</h2>
 <p>Si l'action tombe à 30,00 R$, votre position en actions perd 5 000,00 R$ (500 × 10,00 R$). Mais les puts, avec un prix d'exercice de 38,00 R$, valent au moins 8,00 R$ chacune (38 − 30), générant un gain de 4 000,00 R$ (500 × 8,00 R$) qui compense une bonne partie de la perte sur les actions. En déduisant la prime de 500,00 R$ payée, la perte nette de l'opération combinée s'élève à 1 500,00 R$, bien moins que les 5 000,00 R$ que vous auriez perdus sans la protection.</p>
 <p>Si, au contraire, l'action monte à 46,00 R$, votre position en actions gagne 3 000,00 R$ (500 × 6,00 R$). Les puts expirent sans valeur, et vous ne perdez que la prime de 500,00 R$ payée pour elles. Le résultat net est un gain de 2 500,00 R$ — moins que les 3 000,00 R$ sans la protection, mais toujours positif. Cette différence de 500,00 R$ est, en pratique, le coût de l'assurance, payé indépendamment du scénario qui se réalise ou non.</p>
-<h2>Ce que le hedge apporte vraiment</h2>
+<h2 id="ce-que-le-hedge-apporte-vraiment">Ce que le hedge apporte vraiment</h2>
 <p>Remarquez que le hedge n'élimine pas le risque de perte — dans la baisse à 30,00 R$, vous avez quand même perdu 1 500,00 R$ nets, seulement un montant bien plus faible que sans la protection. Ce qu'il fait, c'est limiter la perte maximale possible à un montant connu à l'avance, échangeant une partie du potentiel de gain (le coût de la prime) contre cette prévisibilité dans le pire scénario. C'est une décision de gestion du risque, pas une façon d'éliminer l'incertitude du marché.</p>
-<h2>Quand il est judicieux d'envisager ce type de protection</h2>
+<h2 id="quand-il-est-judicieux-d-envisager-ce-type-de-protection">Quand il est judicieux d'envisager ce type de protection</h2>
 <ul>
 <li>Avant des événements susceptibles de générer une volatilité élevée et concentrée, comme la publication de résultats.</li>
 <li>Quand vous ne voulez pas vous défaire d'une position de long terme, mais reconnaissez un risque élevé à court terme.</li>
 <li>Quand le coût de la prime, calculé en réal, est compatible avec l'ampleur de la protection que vous recherchez — un hedge trop cher peut ne pas en valoir la peine face au risque protégé.</li>
 </ul>
 <p>Utiliser des options pour protéger un portefeuille exige de comprendre que cette protection a un coût certain et un bénéfice conditionnel — elle ne « rembourse » la prime, et plus encore, que si le scénario de baisse se concrétise réellement. Malgré tout, pour ceux qui veulent maintenir une position de long terme sans être exposés intégralement à un événement précis de court terme, c'est un outil concret, avec un résultat calculable avant même d'être appliqué.</p>
-<h2>Ajuster l'ampleur de la protection au risque que vous voulez couvrir</h2>
+<h2 id="ajuster-l-ampleur-de-la-protection-au-risque-que-vous-voulez">Ajuster l'ampleur de la protection au risque que vous voulez couvrir</h2>
 <p>Il n'est pas toujours judicieux de protéger 100 % de la position. Acheter des puts pour seulement la moitié des 500 actions, par exemple, réduit de moitié le coût de la prime, mais réduit aussi de moitié la compensation reçue en cas de baisse. Cette décision dépend du niveau de risque que vous êtes prêt à laisser découvert : une protection partielle coûte moins cher et réduit quand même l'impact du pire scénario, sans éliminer complètement l'exposition — un moyen terme que beaucoup d'investisseurs préfèrent au coût d'une protection totale.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-27">27 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/comment-fonctionnent-les-options-binaires/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment fonctionnent les options binaires, en pratique</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/options-binaires-guide-pratique-et-gestion-du-risque/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Options binaires : guide pratique et gestion du risque</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
@@ -219,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

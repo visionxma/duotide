@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/awesome-oscillator-indicator-guide/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-vale-a-pena.webp",
       "articleSection": "المؤشرات",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">مذبذب Awesome Oscillator: ما هو و3 تقنيات لاستخدامه</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">المؤشرات</span>
-        <h1>مذبذب Awesome Oscillator: ما هو و3 تقنيات لاستخدامه</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Awesome Oscillator (AO) هو أحد أكثر مؤشرات الزخم شعبية بين المتداولين الذين يتعاملون مع رسوم بيانية قصيرة ومتوسطة الأجل. ابتكره المتداول بيل ويليامز، ويساعد على رؤية ما إذا كانت القوة وراء الحركة السعرية الحالية تتزايد أو تتناقص، وهو أمر مختلف عن مجرد النظر إلى ما إذا كان السعر يرتفع أو ينخفض.</p><p>في هذا المقال ستفهم كيفية حساب AO، وكيف يظهر في الرسم البياني، وثلاث تقنيات شائعة لتفسيره عمليًا، مع مثال رقمي لترسيخ الفكرة.</p><h2>ما هو Awesome Oscillator وكيف يُحسب</h2><p>AO هو رسم بياني شريطي يقع أسفل رسم الأسعار، يتكون من أعمدة خضراء وحمراء تتذبذب فوق وتحت خط الصفر. المعادلة بسيطة: يطرح متوسطًا متحركًا بسيطًا لـ34 فترة من نقطة منتصف الشمعة (أعلى سعر زائد أدنى سعر، مقسومًا على اثنين) من متوسط متحرك بسيط لـ5 فترات من نفس نقطة المنتصف.</p><p>عمليًا: AO = MM5(نقطة المنتصف) − MM34(نقطة المنتصف). إذا كان المتوسط القصير فوق المتوسط الطويل، تكون النتيجة موجبة ويظهر العمود أخضر؛ وإذا كان تحته، تكون النتيجة سالبة ويظهر العمود أحمر. لنفترض أن متوسط 5 فترات لنقطة المنتصف عند R$ 27.40 ومتوسط 34 فترة عند R$ 26.90. تكون قيمة AO في تلك الشمعة R$ 0.50 موجبة — إشارة إلى أن زخم المدى القصير أقوى من زخم المدى الطويل.</p><p>لاحظ أن AO لا ينظر إلى سعر الإغلاق بمعزل عن غيره: بل يقارن سرعتين مختلفتين للسوق. هذه المقارنة هي ما يتيح التعرف، غالبًا قبل أن يؤكد السعر، على تغير في قوة الحركة.</p><h2>التقنية 1 — تقاطع خط الصفر</h2><p>أبسط قراءة لـ AO هي ملاحظة متى يتقاطع الرسم البياني من سالب إلى موجب (تتحول الأعمدة من حمراء إلى خضراء) أو العكس. التقاطع فوق خط الصفر يشير إلى أن قوة الشراء قصيرة الأجل تجاوزت قوة البيع طويلة الأجل، ويُفسر عادة كإشارة إلى احتمال صعود. التقاطع تحت الخط له قراءة معاكسة.</p><p>تعمل هذه التقنية بشكل أفضل عند دمجها مع الاتجاه الأكبر للأصل: التقاطع للأعلى ضمن اتجاه صاعد راسخ بالفعل يميل إلى أن يكون أكثر موثوقية من نفس الإشارة في سوق بلا اتجاه محدد، يتحرك جانبيًا.</p><h2>التقنية 2 — الصحن (saucer)</h2><p>يظهر نمط الصحن عندما يشكل الرسم البياني، وهو في جانب واحد من خط الصفر (موجب، مثلاً)، ثلاثة أعمدة متتالية: الأول أعلى، والثاني أصغر (انخفاض مؤقت في القوة)، والثالث يعود للارتفاع متجاوزًا الثاني. يشبه هذا الشكل صحنًا ويشير إلى أن توقفًا صغيرًا في الزخم قد تم تجاوزه بالفعل، دون الحاجة لأن يتقاطع الرسم البياني مع خط الصفر.</p><p>هذه تقنية يستخدمها من يبحث عن دخولات أسرع، لصالح الاتجاه الذي كان AO يُظهره بالفعل، دون انتظار التقاطع الكامل — لكن لكونها إشارة أكثر استباقًا، فإنها تحمل أيضًا مخاطرة أكبر لإشارة خاطئة.</p><h2>التقنية 3 — القمتان (twin peaks)</h2><p>نمط القمتين قراءة لاحتمال انعكاس. في الجانب الموجب من الرسم البياني، يحدث عندما تتشكل قمتان صاعدتان، الثانية أقل من الأولى، مع واد بينهما لا ينزل تحت خط الصفر. فقدان القوة هذا بين القمتين، حتى دون أن يتحول الرسم البياني إلى سالب، يُقرأ كتحذير من ضعف اتجاه الصعود. والصورة المعاكسة، في الجانب السالب، تحذر من احتمال انتهاء اتجاه هبوطي.</p><p>لأنها تقارن شدة حركتين في الاتجاه نفسه، تميل هذه التقنية إلى الظهور بتأخير طفيف مقارنة بالصحن، لكنها تولد عادة إشارات خاطئة أقل.</p><h2>كيفية استخدام Awesome Oscillator يوميًا</h2><p>لا ينبغي استخدام أي من التقنيات الثلاث بمفردها كمحفز دخول تلقائي. يعمل AO بشكل أفضل كتأكيد: أولاً يُلاحظ سياق الرسم البياني — الاتجاه، وأقرب مستويات الدعم والمقاومة — وعندها فقط يُنظر إلى الرسم البياني للتأكد مما إذا كان الزخم يدعم تلك القراءة أو يعارضها.</p><p>يجدر التذكير بأنه، لكونه محسوبًا بالمتوسطات المتحركة، يتفاعل AO مع الماضي القريب للسعر ولا يتنبأ أبدًا بالمستقبل بيقين. على Duotide، يمكن رسم Awesome Oscillator إلى جانب رسم السعر واختبار هذه التقنيات الثلاث في أصول وأطر زمنية مختلفة قبل تطبيق أي قيمة حقيقية.</p><p>حدد دائمًا، قبل الدخول في صفقة، إلى أي حد أنت مستعد للخسارة في حال لم تتأكد إشارة AO. التداول ينطوي على مخاطرة، ولا يلغي أي مؤشر — ولا حتى Awesome Oscillator — احتمال الخسارة.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-awesome-oscillator-guia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <span class="bq__tag">المؤشرات</span>
+            <h1>مذبذب Awesome Oscillator: ما هو و3 تقنيات لاستخدامه</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#ما-هو-awesome-oscillator-وكيف-ي-حسب">ما هو Awesome Oscillator وكيف يُحسب</a></li>
+                <li><a href="#التقنية-1-تقاطع-خط-الصفر">التقنية 1 — تقاطع خط الصفر</a></li>
+                <li><a href="#التقنية-2-الصحن-saucer">التقنية 2 — الصحن (saucer)</a></li>
+                <li><a href="#التقنية-3-القمتان-twin-peaks">التقنية 3 — القمتان (twin peaks)</a></li>
+                <li><a href="#كيفية-استخدام-awesome-oscillator-يومي-ا">كيفية استخدام Awesome Oscillator يوميًا</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Awesome Oscillator (AO) هو أحد أكثر مؤشرات الزخم شعبية بين المتداولين الذين يتعاملون مع رسوم بيانية قصيرة ومتوسطة الأجل. ابتكره المتداول بيل ويليامز، ويساعد على رؤية ما إذا كانت القوة وراء الحركة السعرية الحالية تتزايد أو تتناقص، وهو أمر مختلف عن مجرد النظر إلى ما إذا كان السعر يرتفع أو ينخفض.</p><p>في هذا المقال ستفهم كيفية حساب AO، وكيف يظهر في الرسم البياني، وثلاث تقنيات شائعة لتفسيره عمليًا، مع مثال رقمي لترسيخ الفكرة.</p><h2 id="ما-هو-awesome-oscillator-وكيف-ي-حسب">ما هو Awesome Oscillator وكيف يُحسب</h2><p>AO هو رسم بياني شريطي يقع أسفل رسم الأسعار، يتكون من أعمدة خضراء وحمراء تتذبذب فوق وتحت خط الصفر. المعادلة بسيطة: يطرح متوسطًا متحركًا بسيطًا لـ34 فترة من نقطة منتصف الشمعة (أعلى سعر زائد أدنى سعر، مقسومًا على اثنين) من متوسط متحرك بسيط لـ5 فترات من نفس نقطة المنتصف.</p><p>عمليًا: AO = MM5(نقطة المنتصف) − MM34(نقطة المنتصف). إذا كان المتوسط القصير فوق المتوسط الطويل، تكون النتيجة موجبة ويظهر العمود أخضر؛ وإذا كان تحته، تكون النتيجة سالبة ويظهر العمود أحمر. لنفترض أن متوسط 5 فترات لنقطة المنتصف عند R$ 27.40 ومتوسط 34 فترة عند R$ 26.90. تكون قيمة AO في تلك الشمعة R$ 0.50 موجبة — إشارة إلى أن زخم المدى القصير أقوى من زخم المدى الطويل.</p><p>لاحظ أن AO لا ينظر إلى سعر الإغلاق بمعزل عن غيره: بل يقارن سرعتين مختلفتين للسوق. هذه المقارنة هي ما يتيح التعرف، غالبًا قبل أن يؤكد السعر، على تغير في قوة الحركة.</p><h2 id="التقنية-1-تقاطع-خط-الصفر">التقنية 1 — تقاطع خط الصفر</h2><p>أبسط قراءة لـ AO هي ملاحظة متى يتقاطع الرسم البياني من سالب إلى موجب (تتحول الأعمدة من حمراء إلى خضراء) أو العكس. التقاطع فوق خط الصفر يشير إلى أن قوة الشراء قصيرة الأجل تجاوزت قوة البيع طويلة الأجل، ويُفسر عادة كإشارة إلى احتمال صعود. التقاطع تحت الخط له قراءة معاكسة.</p><p>تعمل هذه التقنية بشكل أفضل عند دمجها مع الاتجاه الأكبر للأصل: التقاطع للأعلى ضمن اتجاه صاعد راسخ بالفعل يميل إلى أن يكون أكثر موثوقية من نفس الإشارة في سوق بلا اتجاه محدد، يتحرك جانبيًا.</p><h2 id="التقنية-2-الصحن-saucer">التقنية 2 — الصحن (saucer)</h2><p>يظهر نمط الصحن عندما يشكل الرسم البياني، وهو في جانب واحد من خط الصفر (موجب، مثلاً)، ثلاثة أعمدة متتالية: الأول أعلى، والثاني أصغر (انخفاض مؤقت في القوة)، والثالث يعود للارتفاع متجاوزًا الثاني. يشبه هذا الشكل صحنًا ويشير إلى أن توقفًا صغيرًا في الزخم قد تم تجاوزه بالفعل، دون الحاجة لأن يتقاطع الرسم البياني مع خط الصفر.</p><p>هذه تقنية يستخدمها من يبحث عن دخولات أسرع، لصالح الاتجاه الذي كان AO يُظهره بالفعل، دون انتظار التقاطع الكامل — لكن لكونها إشارة أكثر استباقًا، فإنها تحمل أيضًا مخاطرة أكبر لإشارة خاطئة.</p><h2 id="التقنية-3-القمتان-twin-peaks">التقنية 3 — القمتان (twin peaks)</h2><p>نمط القمتين قراءة لاحتمال انعكاس. في الجانب الموجب من الرسم البياني، يحدث عندما تتشكل قمتان صاعدتان، الثانية أقل من الأولى، مع واد بينهما لا ينزل تحت خط الصفر. فقدان القوة هذا بين القمتين، حتى دون أن يتحول الرسم البياني إلى سالب، يُقرأ كتحذير من ضعف اتجاه الصعود. والصورة المعاكسة، في الجانب السالب، تحذر من احتمال انتهاء اتجاه هبوطي.</p><p>لأنها تقارن شدة حركتين في الاتجاه نفسه، تميل هذه التقنية إلى الظهور بتأخير طفيف مقارنة بالصحن، لكنها تولد عادة إشارات خاطئة أقل.</p><h2 id="كيفية-استخدام-awesome-oscillator-يومي-ا">كيفية استخدام Awesome Oscillator يوميًا</h2><p>لا ينبغي استخدام أي من التقنيات الثلاث بمفردها كمحفز دخول تلقائي. يعمل AO بشكل أفضل كتأكيد: أولاً يُلاحظ سياق الرسم البياني — الاتجاه، وأقرب مستويات الدعم والمقاومة — وعندها فقط يُنظر إلى الرسم البياني للتأكد مما إذا كان الزخم يدعم تلك القراءة أو يعارضها.</p><p>يجدر التذكير بأنه، لكونه محسوبًا بالمتوسطات المتحركة، يتفاعل AO مع الماضي القريب للسعر ولا يتنبأ أبدًا بالمستقبل بيقين. على Duotide، يمكن رسم Awesome Oscillator إلى جانب رسم السعر واختبار هذه التقنيات الثلاث في أصول وأطر زمنية مختلفة قبل تطبيق أي قيمة حقيقية.</p><p>حدد دائمًا، قبل الدخول في صفقة، إلى أي حد أنت مستعد للخسارة في حال لم تتأكد إشارة AO. التداول ينطوي على مخاطرة، ولا يلغي أي مؤشر — ولا حتى Awesome Oscillator — احتمال الخسارة.</p>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

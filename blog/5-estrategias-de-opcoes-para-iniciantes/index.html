@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,43 +173,82 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">5 estratégias de opções para quem está começando agora</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Opções</span>
-        <h1>5 estratégias de opções para quem está começando agora</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Opções são contratos: quem compra uma opção de compra (call) adquire o direito, mas não a obrigação, de comprar um ativo por um preço combinado até uma data futura. Quem compra uma opção de venda (put) adquire o direito de vender. Por esse direito, o comprador paga um valor chamado prêmio, e é justamente o tamanho pequeno desse prêmio, perto do valor do ativo, que atrai tanta gente para o mercado de opções.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="5-estrategias-de-opcoes-para-iniciantes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Opções</span>
+            <h1>5 estratégias de opções para quem está começando agora</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#antes-das-estrategias-os-numeros-que-toda-opcao-tem">Antes das estratégias: os números que toda opção tem</a></li>
+                <li><a href="#1-compra-de-call-apostar-na-alta-com-perda-limitada">1. Compra de call: apostar na alta com perda limitada</a></li>
+                <li><a href="#2-compra-de-put-apostar-na-queda-ou-se-proteger">2. Compra de put: apostar na queda ou se proteger</a></li>
+                <li><a href="#3-venda-coberta-gerar-renda-sobre-acoes-que-voce-ja-tem">3. Venda coberta: gerar renda sobre ações que você já tem</a></li>
+                <li><a href="#4-put-protetora-um-seguro-com-preco-definido">4. Put protetora: um seguro com preço definido</a></li>
+                <li><a href="#5-straddle-apostar-na-volatilidade-nao-na-direcao">5. Straddle: apostar na volatilidade, não na direção</a></li>
+                <li><a href="#o-que-levar-para-a-pratica">O que levar para a prática</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Opções são contratos: quem compra uma opção de compra (call) adquire o direito, mas não a obrigação, de comprar um ativo por um preço combinado até uma data futura. Quem compra uma opção de venda (put) adquire o direito de vender. Por esse direito, o comprador paga um valor chamado prêmio, e é justamente o tamanho pequeno desse prêmio, perto do valor do ativo, que atrai tanta gente para o mercado de opções.</p>
 <p>O problema é que a maioria dos iniciantes entra comprando e vendendo opções soltas, sem estratégia, e descobre na prática que perder 100% do prêmio é mais comum do que parece. Este artigo apresenta cinco estruturas básicas, do risco mais limitado ao mais avançado, com contas resolvidas para você entender o raciocínio antes de arriscar dinheiro de verdade.</p>
-<h2>Antes das estratégias: os números que toda opção tem</h2>
+<h2 id="antes-das-estrategias-os-numeros-que-toda-opcao-tem">Antes das estratégias: os números que toda opção tem</h2>
 <p>Toda opção tem um ativo-objeto (a ação ou índice de referência), um preço de exercício (strike) e uma data de vencimento. Suponha uma ação XPTO3 cotada a R$ 50,00. Uma call com strike R$ 52,00 e vencimento em 30 dias custando R$ 1,50 significa: você paga R$ 1,50 por ação (normalmente o lote é de 100 ações, então R$ 150,00 no total) pelo direito de comprar XPTO3 a R$ 52,00 até o vencimento, mesmo que ela suba para R$ 60,00.</p>
-<h2>1. Compra de call: apostar na alta com perda limitada</h2>
+<h2 id="1-compra-de-call-apostar-na-alta-com-perda-limitada">1. Compra de call: apostar na alta com perda limitada</h2>
 <p>Se XPTO3 subir para R$ 58,00 antes do vencimento, sua call de strike R$ 52,00 vale pelo menos R$ 6,00 (58 − 52). Você pagou R$ 1,50, então o lucro é de R$ 4,50 por ação, ou 300% sobre o prêmio. Se a ação não passar de R$ 52,00, a opção vira pó e você perde os R$ 1,50 investidos — nada além disso. Essa é a atração da estratégia: o prejuízo máximo é conhecido no momento da compra.</p>
-<h2>2. Compra de put: apostar na queda ou se proteger</h2>
+<h2 id="2-compra-de-put-apostar-na-queda-ou-se-proteger">2. Compra de put: apostar na queda ou se proteger</h2>
 <p>A lógica é o espelho da anterior. Com XPTO3 a R$ 50,00, uma put com strike R$ 48,00 custando R$ 1,20 dá o direito de vender a R$ 48,00. Se a ação cair para R$ 40,00, a put vale pelo menos R$ 8,00, um lucro de R$ 6,80 sobre o prêmio pago. Muita gente usa a put não para especular na baixa, mas como seguro de uma posição comprada — voltamos a isso na estratégia 4.</p>
-<h2>3. Venda coberta: gerar renda sobre ações que você já tem</h2>
+<h2 id="3-venda-coberta-gerar-renda-sobre-acoes-que-voce-ja-tem">3. Venda coberta: gerar renda sobre ações que você já tem</h2>
 <p>Se você já possui 100 ações de XPTO3 compradas a R$ 50,00, pode vender uma call de strike R$ 55,00 e embolsar o prêmio, digamos R$ 1,00 por ação (R$ 100,00 no lote). Se a ação ficar abaixo de R$ 55,00 até o vencimento, a call não é exercida e você fica com o prêmio inteiro, além das ações. Se ela subir acima de R$ 55,00, você é obrigado a vender suas ações por esse preço — ainda com lucro, só que limitado. É uma estratégia de renda, não de especulação, e por isso costuma ser a porta de entrada de quem já tem uma carteira de ações.</p>
-<h2>4. Put protetora: um seguro com preço definido</h2>
+<h2 id="4-put-protetora-um-seguro-com-preco-definido">4. Put protetora: um seguro com preço definido</h2>
 <p>Se você tem as mesmas 100 ações a R$ 50,00 e teme uma queda forte antes de um evento (um resultado trimestral, por exemplo), pode comprar uma put de strike R$ 47,00 por R$ 1,00. Se a ação despencar para R$ 35,00, sua perda nas ações é parcialmente compensada pelo ganho na put, que passa a valer pelo menos R$ 12,00. Na prática, você travou o pior cenário em torno de R$ 47,00 menos o prêmio pago, abrindo mão de parte do potencial de alta apenas pelo custo do seguro.</p>
-<h2>5. Straddle: apostar na volatilidade, não na direção</h2>
+<h2 id="5-straddle-apostar-na-volatilidade-nao-na-direcao">5. Straddle: apostar na volatilidade, não na direção</h2>
 <p>Comprando simultaneamente uma call e uma put do mesmo strike e vencimento, você ganha se o ativo se mover bastante — para cima ou para baixo. Com XPTO3 a R$ 50,00, uma call e uma put de strike R$ 50,00 custando R$ 1,50 cada somam R$ 3,00 de investimento. Você só lucra se a ação sair da faixa entre R$ 47,00 e R$ 53,00 antes do vencimento; dentro dela, as duas opções perdem valor e o prejuízo pode chegar aos R$ 3,00 inteiros. É uma estratégia usada perto de eventos que costumam gerar movimentos bruscos, mas custa o dobro de uma posição direcional simples.</p>
-<h2>O que levar para a prática</h2>
+<h2 id="o-que-levar-para-a-pratica">O que levar para a prática</h2>
 <p>Nenhuma dessas estruturas garante lucro — todas envolvem risco real de perda, incluindo a perda total do prêmio pago. Antes de operar com dinheiro que você não pode perder, vale simular cada estratégia com valores pequenos e acompanhar como o preço da opção reage ao tempo e à variação do ativo; plataformas como a Duotide permitem esse tipo de prática antes de aumentar o tamanho das posições. O ponto comum entre iniciantes que sobrevivem no mercado de opções não é acertar a direção do preço, mas nunca arriscar mais do que estão dispostos a perder em cada operação.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/como-funcionam-as-opcoes-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como funcionam as opções binárias, na prática</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/opcoes-binarias-passo-a-passo-e-gestao-de-risco/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opções binárias: passo a passo prático e gestão de risco</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
@@ -217,7 +256,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -280,6 +319,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

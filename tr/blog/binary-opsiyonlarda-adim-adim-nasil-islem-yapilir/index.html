@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/binary-opsiyonlarda-adim-adim-nasil-islem-yapilir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Risk yönetimi",
       "author": {
@@ -172,35 +172,63 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Binary opsiyonlarda pratikte adım adım nasıl işlem yapılır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Risk yönetimi</span>
-        <h1>Binary opsiyonlarda pratikte adım adım nasıl işlem yapılır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Bir binary opsiyonun ne olduğunu bilmek, onu düzenli bir şekilde işlem yapmayı bilmekten farklıdır. Birçok kişi ya hep ya hiç mekanizmasını anlar ve yine de hızla para kaybeder, çünkü bir yol haritası olmadan girer — varlığı, vadeyi ve giriş tutarını dürtüsel olarak, tekrarlanabilir hiçbir kriter olmadan belirler. Bu rehber pratik tarafa odaklanır: her işlemden önce, sırasında ve sonrasında izlenmeye değer adımlar.</p>
-<h2>Adım 1: varlığı "patlayan" bir şey olduğu için değil, anladığınız için seçin</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-operar-opcoes-binarias-passo-a-passo" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Risk yönetimi</span>
+            <h1>Binary opsiyonlarda pratikte adım adım nasıl işlem yapılır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#adım-1-varlıgı-patlayan-bir-sey-oldugu-icin-degil-anladıgını">Adım 1: varlığı &quot;patlayan&quot; bir şey olduğu için değil, anladığınız için seçin</a></li>
+                <li><a href="#adım-2-fiyata-bakmadan-once-vadeyi-belirleyin">Adım 2: fiyata bakmadan önce vadeyi belirleyin</a></li>
+                <li><a href="#adım-3-giris-tutarını-sermayenin-sabit-bir-yuzdesi-olarak-be">Adım 3: giriş tutarını sermayenin sabit bir yüzdesi olarak belirleyin</a></li>
+                <li><a href="#adım-4-seans-basına-bir-zarar-ve-islem-limiti-belirleyin">Adım 4: seans başına bir zarar ve işlem limiti belirleyin</a></li>
+                <li><a href="#adım-5-sadece-nihai-sonucu-degil-her-islemi-kaydedin">Adım 5: sadece nihai sonucu değil, her işlemi kaydedin</a></li>
+                <li><a href="#adım-6-saati-varlıgın-likiditesine-gore-secin">Adım 6: saati varlığın likiditesine göre seçin</a></li>
+                <li><a href="#kacınılması-gereken-yaygın-hatalar">Kaçınılması gereken yaygın hatalar</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Bir binary opsiyonun ne olduğunu bilmek, onu düzenli bir şekilde işlem yapmayı bilmekten farklıdır. Birçok kişi ya hep ya hiç mekanizmasını anlar ve yine de hızla para kaybeder, çünkü bir yol haritası olmadan girer — varlığı, vadeyi ve giriş tutarını dürtüsel olarak, tekrarlanabilir hiçbir kriter olmadan belirler. Bu rehber pratik tarafa odaklanır: her işlemden önce, sırasında ve sonrasında izlenmeye değer adımlar.</p>
+<h2 id="adım-1-varlıgı-patlayan-bir-sey-oldugu-icin-degil-anladıgını">Adım 1: varlığı "patlayan" bir şey olduğu için değil, anladığınız için seçin</h2>
 <p>Takip ettiğiniz bir varlıkla — bir döviz çifti, bir endeks veya belirli bir hisse senedi — işlem yapmak, davranış kalıplarını ve en yoğun hareket saatlerini tanımanızı sağlar. Son bir saatte sert yükselen veya düşen şeyin peşinden koşarak her işlemde varlık değiştirmek, daha kötü kararlar üretme eğilimindedir, çünkü her zaman bilmediğiniz bir bağlamda işlem yapıyorsunuzdur.</p>
-<h2>Adım 2: fiyata bakmadan önce vadeyi belirleyin</h2>
+<h2 id="adım-2-fiyata-bakmadan-once-vadeyi-belirleyin">Adım 2: fiyata bakmadan önce vadeyi belirleyin</h2>
 <p>Daha kısa vadeler (birkaç dakika) daha çok kısa vadeli dalgalanmaya, daha az güvenilir herhangi bir teknik okumaya bağlıdır. Analiziniz orta vadeli bir harekete — saatler boyunca oluşmuş bir trende — dayanıyorsa, çok kısa bir vade seçmek, yön konusunda haklı olsanız bile kapanıştan hemen önce fiyatın yanlış yöne salınması nedeniyle kaybetmenize neden olabilir. İşlemin vadesini analizinizin ufkuyla hizalamak, göründüğünden daha önemlidir.</p>
-<h2>Adım 3: giriş tutarını sermayenin sabit bir yüzdesi olarak belirleyin</h2>
+<h2 id="adım-3-giris-tutarını-sermayenin-sabit-bir-yuzdesi-olarak-be">Adım 3: giriş tutarını sermayenin sabit bir yüzdesi olarak belirleyin</h2>
 <p>Yaygın bir kriter, tek bir girişte işlem yapmak için mevcut toplam sermayenin %1 ila %2'sinden fazlasını asla riske atmamaktır. Bu etkinlik için ayrılmış R$ 2.000,00 ile bu, R$ 20,00 ile R$ 40,00 arasında girişler anlamına gelir — "kanaat bahsi" olarak R$ 500,00 değil. Bu limit, sonuç ya hep ya hiç olduğundan, bir dizi kaybın istatistiksel olarak normal olması ve giriş büyüklüğünün kalan sermayeyi riske atmadan bu diziye dayanmayı sağlaması gerektiği için vardır.</p>
-<h2>Adım 4: seans başına bir zarar ve işlem limiti belirleyin</h2>
+<h2 id="adım-4-seans-basına-bir-zarar-ve-islem-limiti-belirleyin">Adım 4: seans başına bir zarar ve işlem limiti belirleyin</h2>
 <p>Platformu açmadan önce, en fazla kaç işlem yapacağınıza ve hangi birikmiş zararın seansı tam orada sonlandıracağına karar verin. Örneğin: en fazla R$ 30,00'lık 10 giriş, birikmiş zarar R$ 150,00'a ulaşırsa durmak. Bu limit önceden belirlenmeden, sadece zararı büyüten bir "zararı telafi etme" dizisine girmek yaygındır — deneyimli her trader'ın tanıdığı ve önlemeye çalıştığı bir davranış kalıbı.</p>
-<h2>Adım 5: sadece nihai sonucu değil, her işlemi kaydedin</h2>
+<h2 id="adım-5-sadece-nihai-sonucu-degil-her-islemi-kaydedin">Adım 5: sadece nihai sonucu değil, her işlemi kaydedin</h2>
 <p>Varlığı, saati, seçilen vadeyi, uygulanan tutarı, giriş nedenini ve sonucu not edin. 50 veya 100 işlem kaydedildikten sonra, bu geçmiş, tek başına hafızanın saklamadığı örüntüleri gösterir — örneğin, zararların çoğunun belirli bir saatte mi yoksa belirli bir varlıkta mı gerçekleştiği. Kayıt olmadan, her işlem izole bir olaya dönüşür ve yöntemin gerçekten işleyip işlemediğini, yoksa son başarıların şans mı olduğunu bilmek imkânsız hale gelir.</p>
-<h2>Adım 6: saati varlığın likiditesine göre seçin</h2>
+<h2 id="adım-6-saati-varlıgın-likiditesine-gore-secin">Adım 6: saati varlığın likiditesine göre seçin</h2>
 <p>Her varlığın daha fazla hacimle ve daha az rastgele gürültüyle hareket ettiği bir pencere vardır — döviz çiftleri için bu genellikle Londra ve New York saatlerinin çakıştığı zamandır; hisse senetleri için seansın ilk ve son saatleridir. Bu pencerenin dışında, düşük likidite saatinde işlem yapmak, herhangi bir analizle daha az bağlantılı, daha düzensiz hareketler üretme eğilimindedir, bu da tam olarak bir yöntem izlemeye çalışan kişiye zarar verir.</p>
-<h2>Kaçınılması gereken yaygın hatalar</h2>
+<h2 id="kacınılması-gereken-yaygın-hatalar">Kaçınılması gereken yaygın hatalar</h2>
 <ul>
 <li>"Daha hızlı toparlanmak" için bir zarardan sonra giriş tutarını artırmak — bu, riski tam olarak en kötü anda büyütür.</li>
 <li>Hiçbir tanımlı giriş kriteri olmadan, sadece gerçek zamanlı grafiğe tepki vererek işlem yapmak.</li>
@@ -208,12 +236,23 @@
 <li>Sadece biri "beklendiği gibi gitmiyor" diye seans ortasında varlık değiştirmek.</li>
 </ul>
 <p>Hiçbir yol haritası zarar riskini ortadan kaldırmaz — binary opsiyonlar, her sözleşmede ya hep ya hiç sonucuyla yüksek riskli bir ürün olmaya devam eder. Yukarıdaki düzenlemenin sağladığı sadece şudur: normal bir zarar dizisinin orantısız bir soruna dönüşmesini önlemek ve zaman içinde verilerle, bu şekilde işlem yapmaya devam etmenin mi değdiğini yoksa yöntemin daha fazla sermaye riske atılmadan önce ayarlanması mı gerektiğini değerlendirmeyi sağlamak.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/forexte-stop-loss-ve-take-profit-nasil-kullanilir/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Forex'te Stop Loss ve Take Profit Nasıl Kullanılır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/trading-de-martingale-stratejisi-nasil-calisir-ve-riskleri/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de martingale stratejisi: nasıl çalışır ve riskleri</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -221,7 +260,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +324,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

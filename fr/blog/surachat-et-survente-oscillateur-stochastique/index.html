@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/surachat-et-survente-oscillateur-stochastique/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Indicateurs",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Surachat et survente avec l'oscillateur stochastique</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicateurs</span>
-        <h1>Surachat et survente avec l'oscillateur stochastique</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Identifier si un actif est « cher » ou « bon marché » à court terme est l'une des tâches les plus fréquentes de l'analyse technique, et l'oscillateur stochastique est l'un des outils les plus utilisés pour cela. Contrairement à ne regarder que le prix, le stochastique compare la clôture actuelle à la fourchette de variation des dernières périodes, ce qui aide à voir quand un mouvement a déjà bien avancé au sein de sa propre fourchette récente.</p><p>Dans cet article, l'accent est mis justement là-dessus : comment interpréter correctement les zones de surachat et de survente du stochastique, et pourquoi cette lecture change selon le type de marché.</p><h2>Ce que le stochastique mesure réellement</h2><p>Le stochastique calcule où se situe le prix de clôture actuel à l'intérieur de la fourchette entre le maximum et le minimum d'un certain nombre de périodes, généralement 14. Le résultat s'exprime sur une échelle de 0 à 100 : des valeurs proches de 100 indiquent que la clôture est proche du maximum récent ; des valeurs proches de 0 indiquent qu'elle est proche du minimum récent.</p><p>Les zones de référence les plus utilisées sont au-dessus de 80, considérée comme du surachat, et en dessous de 20, considérée comme de la survente. Cela signifie, en pratique, que le prix a clôturé très près du plafond ou du plancher de sa propre fourchette de variation récente — pas nécessairement qu'il va inverser à partir de là.</p><h2>Surachat et survente en marché latéral</h2><p>C'est sur des marchés sans tendance définie, oscillant à l'intérieur d'une fourchette, que les zones de surachat et de survente du stochastique fonctionnent le mieux. Dans ce scénario, un actif qui monte de façon répétée jusqu'au plafond de la fourchette et descend jusqu'au plancher tend à générer des signaux de surachat et de survente qui précèdent réellement un retournement de court terme au sein de cette fourchette.</p><p>Un exemple pratique : si un actif oscille entre R$ 18,00 et R$ 21,00 depuis des semaines, sans casser aucun des deux côtés, un stochastique au-dessus de 80 près de R$ 20,80 a de bonnes chances de précéder une baisse de retour vers le centre de la fourchette, et l'inverse vaut près de R$ 18,20 avec le stochastique en dessous de 20.</p><h2>Pourquoi la même lecture échoue dans les fortes tendances</h2><p>L'erreur la plus courante chez ceux qui commencent à utiliser le stochastique est d'appliquer cette même logique à un actif avec une tendance forte et définie. Dans une hausse constante, le prix peut clôturer de façon répétée près du maximum récent, maintenant le stochastique au-dessus de 80 pendant plusieurs bougies consécutives, sans que cela signifie un retournement — cela signifie simplement que la tendance haussière reste forte.</p><p>Vendre juste parce que le stochastique est en surachat, au sein d'une tendance haussière claire, est l'une des erreurs les plus coûteuses et les plus répétées par ceux qui apprennent à utiliser cet indicateur. La même chose vaut, en miroir, pour acheter juste parce que le stochastique est en survente pendant une forte tendance baissière.</p><h2>Comment différencier les deux scénarios avant d'agir</h2><p>Avant d'utiliser le surachat ou la survente comme signal, il vaut la peine d'identifier le contexte plus large du graphique : l'actif est-il en tendance claire ou latéral ? Une façon simple de vérifier cela est d'observer un timeframe plus grand que celui utilisé pour l'entrée, ou d'utiliser un indicateur de tendance, comme une moyenne mobile de plus longue période, comme référence de contexte.</p><p>Dans les tendances fortes, les zones de surachat et de survente du stochastique fonctionnent mieux comme avertissement d'une possible pause temporaire, pas comme signal de retournement complet. Sur les marchés latéraux, en revanche, elles peuvent être utilisées de façon plus directe comme déclencheur d'entrée à contre-courant, toujours avec un stop défini au cas où la fourchette finirait par être cassée.</p><h2>Application pratique</h2><p>Sur Duotide, il est possible d'ajuster les périodes du stochastique et d'observer, sur des actifs que vous suivez déjà, comment les zones de 80 et 20 se sont comportées historiquement en périodes de tendance et de latéralisation. Combiner cette lecture avec le contexte du graphique, plutôt que d'utiliser le stochastique isolément, réduit considérablement le nombre de signaux erronés. Malgré tout, aucune lecture de surachat ou de survente ne garantit le résultat d'une opération, et le risque de perte doit toujours être calculé avant d'entrer.</p><p>Il vaut aussi la peine d'observer la vitesse avec laquelle le stochastique entre et sort des zones extrêmes. Un stochastique qui monte rapidement jusqu'à 90 et redescend tout aussi vite à 50 reflète généralement un mouvement ponctuel, de courte durée. Un stochastique qui reste « collé » au-dessus de 80 pendant de nombreuses bougies consécutives est, en général, un signal plus fort de tendance que de retournement imminent — ce qui renforce l'importance de regarder le contexte avant de décider ce que cette lecture signifie pour l'opération.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="oscilador-estocastico-sobrecompra-sobrevenda" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-28">28 septembre 2026</time></p>
+            <span class="bq__tag">Indicateurs</span>
+            <h1>Surachat et survente avec l'oscillateur stochastique</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#ce-que-le-stochastique-mesure-reellement">Ce que le stochastique mesure réellement</a></li>
+                <li><a href="#surachat-et-survente-en-marche-lateral">Surachat et survente en marché latéral</a></li>
+                <li><a href="#pourquoi-la-meme-lecture-echoue-dans-les-fortes-tendances">Pourquoi la même lecture échoue dans les fortes tendances</a></li>
+                <li><a href="#comment-differencier-les-deux-scenarios-avant-d-agir">Comment différencier les deux scénarios avant d'agir</a></li>
+                <li><a href="#application-pratique">Application pratique</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Identifier si un actif est « cher » ou « bon marché » à court terme est l'une des tâches les plus fréquentes de l'analyse technique, et l'oscillateur stochastique est l'un des outils les plus utilisés pour cela. Contrairement à ne regarder que le prix, le stochastique compare la clôture actuelle à la fourchette de variation des dernières périodes, ce qui aide à voir quand un mouvement a déjà bien avancé au sein de sa propre fourchette récente.</p><p>Dans cet article, l'accent est mis justement là-dessus : comment interpréter correctement les zones de surachat et de survente du stochastique, et pourquoi cette lecture change selon le type de marché.</p><h2 id="ce-que-le-stochastique-mesure-reellement">Ce que le stochastique mesure réellement</h2><p>Le stochastique calcule où se situe le prix de clôture actuel à l'intérieur de la fourchette entre le maximum et le minimum d'un certain nombre de périodes, généralement 14. Le résultat s'exprime sur une échelle de 0 à 100 : des valeurs proches de 100 indiquent que la clôture est proche du maximum récent ; des valeurs proches de 0 indiquent qu'elle est proche du minimum récent.</p><p>Les zones de référence les plus utilisées sont au-dessus de 80, considérée comme du surachat, et en dessous de 20, considérée comme de la survente. Cela signifie, en pratique, que le prix a clôturé très près du plafond ou du plancher de sa propre fourchette de variation récente — pas nécessairement qu'il va inverser à partir de là.</p><h2 id="surachat-et-survente-en-marche-lateral">Surachat et survente en marché latéral</h2><p>C'est sur des marchés sans tendance définie, oscillant à l'intérieur d'une fourchette, que les zones de surachat et de survente du stochastique fonctionnent le mieux. Dans ce scénario, un actif qui monte de façon répétée jusqu'au plafond de la fourchette et descend jusqu'au plancher tend à générer des signaux de surachat et de survente qui précèdent réellement un retournement de court terme au sein de cette fourchette.</p><p>Un exemple pratique : si un actif oscille entre R$ 18,00 et R$ 21,00 depuis des semaines, sans casser aucun des deux côtés, un stochastique au-dessus de 80 près de R$ 20,80 a de bonnes chances de précéder une baisse de retour vers le centre de la fourchette, et l'inverse vaut près de R$ 18,20 avec le stochastique en dessous de 20.</p><h2 id="pourquoi-la-meme-lecture-echoue-dans-les-fortes-tendances">Pourquoi la même lecture échoue dans les fortes tendances</h2><p>L'erreur la plus courante chez ceux qui commencent à utiliser le stochastique est d'appliquer cette même logique à un actif avec une tendance forte et définie. Dans une hausse constante, le prix peut clôturer de façon répétée près du maximum récent, maintenant le stochastique au-dessus de 80 pendant plusieurs bougies consécutives, sans que cela signifie un retournement — cela signifie simplement que la tendance haussière reste forte.</p><p>Vendre juste parce que le stochastique est en surachat, au sein d'une tendance haussière claire, est l'une des erreurs les plus coûteuses et les plus répétées par ceux qui apprennent à utiliser cet indicateur. La même chose vaut, en miroir, pour acheter juste parce que le stochastique est en survente pendant une forte tendance baissière.</p><h2 id="comment-differencier-les-deux-scenarios-avant-d-agir">Comment différencier les deux scénarios avant d'agir</h2><p>Avant d'utiliser le surachat ou la survente comme signal, il vaut la peine d'identifier le contexte plus large du graphique : l'actif est-il en tendance claire ou latéral ? Une façon simple de vérifier cela est d'observer un timeframe plus grand que celui utilisé pour l'entrée, ou d'utiliser un indicateur de tendance, comme une moyenne mobile de plus longue période, comme référence de contexte.</p><p>Dans les tendances fortes, les zones de surachat et de survente du stochastique fonctionnent mieux comme avertissement d'une possible pause temporaire, pas comme signal de retournement complet. Sur les marchés latéraux, en revanche, elles peuvent être utilisées de façon plus directe comme déclencheur d'entrée à contre-courant, toujours avec un stop défini au cas où la fourchette finirait par être cassée.</p><h2 id="application-pratique">Application pratique</h2><p>Sur Duotide, il est possible d'ajuster les périodes du stochastique et d'observer, sur des actifs que vous suivez déjà, comment les zones de 80 et 20 se sont comportées historiquement en périodes de tendance et de latéralisation. Combiner cette lecture avec le contexte du graphique, plutôt que d'utiliser le stochastique isolément, réduit considérablement le nombre de signaux erronés. Malgré tout, aucune lecture de surachat ou de survente ne garantit le résultat d'une opération, et le risque de perte doit toujours être calculé avant d'entrer.</p><p>Il vaut aussi la peine d'observer la vitesse avec laquelle le stochastique entre et sort des zones extrêmes. Un stochastique qui monte rapidement jusqu'à 90 et redescend tout aussi vite à 50 reflète généralement un mouvement ponctuel, de courte durée. Un stochastique qui reste « collé » au-dessus de 80 pendant de nombreuses bougies consécutives est, en général, un signal plus fort de tendance que de retournement imminent — ce qui renforce l'importance de regarder le contexte avant de décider ce que cette lecture signifie pour l'opération.</p>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-28">28 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/quest-ce-que-lindicateur-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'indicateur ADX et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/quest-ce-que-loscillateur-stochastique/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'oscillateur stochastique et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

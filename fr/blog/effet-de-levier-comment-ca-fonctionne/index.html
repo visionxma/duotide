@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/effet-de-levier-comment-ca-fonctionne/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Gestion du risque",
       "author": {
@@ -172,28 +172,68 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Qu'est-ce que l'effet de levier et comment il fonctionne</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestion du risque</span>
-        <h1>Qu'est-ce que l'effet de levier et comment il fonctionne</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>L'effet de levier est l'un des concepts les plus puissants et, en même temps, les plus mal compris du trading. En termes simples, il permet d'ouvrir une position plus grande que le capital effectivement déposé, en utilisant une fraction de ce capital comme marge — une sorte de garantie — pour soutenir l'opération. Le reste de la valeur de la position ne sort pas de la poche du trader, mais amplifie aussi bien le résultat positif que négatif, dans la même proportion.</p><h2>Comment l'effet de levier fonctionne en pratique</h2><p>Un effet de levier de 1:10, par exemple, signifie que, pour chaque R$ 1 déposé en marge, il est possible de contrôler une position de R$ 10. Cela ne change pas l'exposition réelle au marché — le résultat financier continue d'être calculé sur la valeur totale de la position, pas sur la marge déposée — mais cela réduit drastiquement le capital nécessaire pour ouvrir cette position.</p><h2>Un exemple numérique complet</h2><p>Supposons un actif coté à R$ 100, et un trader qui dépose R$ 200 de marge pour ouvrir une position à effet de levier de 1:10, contrôlant effectivement R$ 2 000 d'exposition, soit 20 unités de l'actif. Si le prix monte de 5 %, à R$ 105, le gain sur la position est de R$ 5 par unité × 20 unités = R$ 100 — l'équivalent d'un retour de 50 % sur les R$ 200 déposés en marge, alors que l'actif n'a monté que de 5 %. Si, au contraire, le prix baisse de 5 %, à R$ 95, la perte serait de R$ 100, soit aussi 50 % de la marge déposée. C'est le cœur de l'effet de levier : il multiplie le pourcentage de retour sur le capital de marge, à la hausse comme à la baisse, avec la même intensité.</p><h2>Le rôle de la marge et le risque d'appel de marge</h2><p>La marge fonctionne comme une garantie minimale exigée pour maintenir la position ouverte. Si le marché évolue contre la position au point que la perte accumulée se rapproche du montant déposé en marge, le courtier peut émettre un appel de marge, demandant un dépôt supplémentaire, ou clôturer la position automatiquement pour éviter que la perte ne dépasse le capital disponible sur le compte. Comprendre ce mécanisme évite la surprise de voir une position clôturée automatiquement lors d'un mouvement de marché plus brusque.</p><h2>Pourquoi l'effet de levier exige plus de discipline de risque, pas moins</h2><p>Il est tentant de ne voir l'effet de levier que du côté du gain potentiel amplifié, mais le même mécanisme amplifie la perte potentielle dans la même proportion. C'est pourquoi, plus l'effet de levier utilisé est élevé, plus petite devrait être, proportionnellement, la taille de la position par rapport au capital total disponible, afin de maintenir le risque en reais dans une limite équivalente à celle qui serait assumée dans une opération sans aucun effet de levier.</p><h2>Comment dimensionner le risque en utilisant l'effet de levier</h2><p>Une façon pratique d'aborder cela est de toujours calculer le risque en reais à partir de la distance entre le prix d'entrée et le stop, multipliée par la taille totale de la position (en tenant déjà compte de l'effet de levier), et non à partir de la valeur de la marge déposée isolément. En reprenant l'exemple précédent, avec la position de 20 unités à R$ 100, un stop à R$ 97 représenterait un risque de R$ 3 par unité × 20 unités = R$ 60, indépendamment du montant déposé en marge pour rendre cette position possible.</p><h2>L'effet de levier n'est, en soi, ni bon ni mauvais</h2><p>L'outil en lui-même est neutre : il ne fait qu'amplifier le résultat, positif ou négatif, dans la proportion utilisée. Ce qui détermine si son usage a été responsable ou non, c'est de savoir si la taille de la position résultante a respecté une limite de risque définie avant l'entrée, en tenant compte du pire scénario possible, et pas seulement du scénario souhaité.</p><h2>Différents niveaux d'effet de levier pour différents actifs</h2><p>Il est courant que les courtiers proposent des niveaux différents d'effet de levier selon la volatilité typique de chaque classe d'actif — généralement plus conservateurs pour les actifs historiquement plus volatils, comme certaines cryptomonnaies, et plus élevés pour les paires de change traditionnelles, dont les mouvements quotidiens sont proportionnellement plus faibles. Comprendre cette différence aide à ne pas appliquer le même raisonnement de risque à des actifs aux comportements bien distincts entre eux.</p><h2>Conclusion pratique</h2><p>L'effet de levier multiplie l'exposition au marché à partir d'un capital plus faible, et multiplie donc aussi le risque de perte dans la même proportion que le potentiel de gain. L'utiliser exige de calculer le risque en reais en tenant compte de la taille totale de la position avec effet de levier, pas seulement du montant déposé en marge, et d'ajuster cette taille pour maintenir le risque dans une limite définie au préalable — jamais supérieure à ce que la personne est réellement disposée à perdre dans cette opération.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-alavancagem-e-como-ela-funciona" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-28">28 septembre 2026</time></p>
+            <span class="bq__tag">Gestion du risque</span>
+            <h1>Qu'est-ce que l'effet de levier et comment il fonctionne</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#comment-l-effet-de-levier-fonctionne-en-pratique">Comment l'effet de levier fonctionne en pratique</a></li>
+                <li><a href="#un-exemple-numerique-complet">Un exemple numérique complet</a></li>
+                <li><a href="#le-role-de-la-marge-et-le-risque-d-appel-de-marge">Le rôle de la marge et le risque d'appel de marge</a></li>
+                <li><a href="#pourquoi-l-effet-de-levier-exige-plus-de-discipline-de-risqu">Pourquoi l'effet de levier exige plus de discipline de risque, pas moins</a></li>
+                <li><a href="#comment-dimensionner-le-risque-en-utilisant-l-effet-de-levie">Comment dimensionner le risque en utilisant l'effet de levier</a></li>
+                <li><a href="#l-effet-de-levier-n-est-en-soi-ni-bon-ni-mauvais">L'effet de levier n'est, en soi, ni bon ni mauvais</a></li>
+                <li><a href="#differents-niveaux-d-effet-de-levier-pour-differents-actifs">Différents niveaux d'effet de levier pour différents actifs</a></li>
+                <li><a href="#conclusion-pratique">Conclusion pratique</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>L'effet de levier est l'un des concepts les plus puissants et, en même temps, les plus mal compris du trading. En termes simples, il permet d'ouvrir une position plus grande que le capital effectivement déposé, en utilisant une fraction de ce capital comme marge — une sorte de garantie — pour soutenir l'opération. Le reste de la valeur de la position ne sort pas de la poche du trader, mais amplifie aussi bien le résultat positif que négatif, dans la même proportion.</p><h2 id="comment-l-effet-de-levier-fonctionne-en-pratique">Comment l'effet de levier fonctionne en pratique</h2><p>Un effet de levier de 1:10, par exemple, signifie que, pour chaque R$ 1 déposé en marge, il est possible de contrôler une position de R$ 10. Cela ne change pas l'exposition réelle au marché — le résultat financier continue d'être calculé sur la valeur totale de la position, pas sur la marge déposée — mais cela réduit drastiquement le capital nécessaire pour ouvrir cette position.</p><h2 id="un-exemple-numerique-complet">Un exemple numérique complet</h2><p>Supposons un actif coté à R$ 100, et un trader qui dépose R$ 200 de marge pour ouvrir une position à effet de levier de 1:10, contrôlant effectivement R$ 2 000 d'exposition, soit 20 unités de l'actif. Si le prix monte de 5 %, à R$ 105, le gain sur la position est de R$ 5 par unité × 20 unités = R$ 100 — l'équivalent d'un retour de 50 % sur les R$ 200 déposés en marge, alors que l'actif n'a monté que de 5 %. Si, au contraire, le prix baisse de 5 %, à R$ 95, la perte serait de R$ 100, soit aussi 50 % de la marge déposée. C'est le cœur de l'effet de levier : il multiplie le pourcentage de retour sur le capital de marge, à la hausse comme à la baisse, avec la même intensité.</p><h2 id="le-role-de-la-marge-et-le-risque-d-appel-de-marge">Le rôle de la marge et le risque d'appel de marge</h2><p>La marge fonctionne comme une garantie minimale exigée pour maintenir la position ouverte. Si le marché évolue contre la position au point que la perte accumulée se rapproche du montant déposé en marge, le courtier peut émettre un appel de marge, demandant un dépôt supplémentaire, ou clôturer la position automatiquement pour éviter que la perte ne dépasse le capital disponible sur le compte. Comprendre ce mécanisme évite la surprise de voir une position clôturée automatiquement lors d'un mouvement de marché plus brusque.</p><h2 id="pourquoi-l-effet-de-levier-exige-plus-de-discipline-de-risqu">Pourquoi l'effet de levier exige plus de discipline de risque, pas moins</h2><p>Il est tentant de ne voir l'effet de levier que du côté du gain potentiel amplifié, mais le même mécanisme amplifie la perte potentielle dans la même proportion. C'est pourquoi, plus l'effet de levier utilisé est élevé, plus petite devrait être, proportionnellement, la taille de la position par rapport au capital total disponible, afin de maintenir le risque en reais dans une limite équivalente à celle qui serait assumée dans une opération sans aucun effet de levier.</p><h2 id="comment-dimensionner-le-risque-en-utilisant-l-effet-de-levie">Comment dimensionner le risque en utilisant l'effet de levier</h2><p>Une façon pratique d'aborder cela est de toujours calculer le risque en reais à partir de la distance entre le prix d'entrée et le stop, multipliée par la taille totale de la position (en tenant déjà compte de l'effet de levier), et non à partir de la valeur de la marge déposée isolément. En reprenant l'exemple précédent, avec la position de 20 unités à R$ 100, un stop à R$ 97 représenterait un risque de R$ 3 par unité × 20 unités = R$ 60, indépendamment du montant déposé en marge pour rendre cette position possible.</p><h2 id="l-effet-de-levier-n-est-en-soi-ni-bon-ni-mauvais">L'effet de levier n'est, en soi, ni bon ni mauvais</h2><p>L'outil en lui-même est neutre : il ne fait qu'amplifier le résultat, positif ou négatif, dans la proportion utilisée. Ce qui détermine si son usage a été responsable ou non, c'est de savoir si la taille de la position résultante a respecté une limite de risque définie avant l'entrée, en tenant compte du pire scénario possible, et pas seulement du scénario souhaité.</p><h2 id="differents-niveaux-d-effet-de-levier-pour-differents-actifs">Différents niveaux d'effet de levier pour différents actifs</h2><p>Il est courant que les courtiers proposent des niveaux différents d'effet de levier selon la volatilité typique de chaque classe d'actif — généralement plus conservateurs pour les actifs historiquement plus volatils, comme certaines cryptomonnaies, et plus élevés pour les paires de change traditionnelles, dont les mouvements quotidiens sont proportionnellement plus faibles. Comprendre cette différence aide à ne pas appliquer le même raisonnement de risque à des actifs aux comportements bien distincts entre eux.</p><h2 id="conclusion-pratique">Conclusion pratique</h2><p>L'effet de levier multiplie l'exposition au marché à partir d'un capital plus faible, et multiplie donc aussi le risque de perte dans la même proportion que le potentiel de gain. L'utiliser exige de calculer le risque en reais en tenant compte de la taille totale de la position avec effet de levier, pas seulement du montant déposé en marge, et d'ajuster cette taille pour maintenir le risque dans une limite définie au préalable — jamais supérieure à ce que la personne est réellement disposée à perdre dans cette opération.</p>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-28">28 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/comment-utiliser-stop-loss-et-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment utiliser stop loss et take profit en forex</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/strategie-martingale-en-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stratégie martingale en trading : fonctionnement et risques</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -201,7 +241,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +305,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

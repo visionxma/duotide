@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/vortex-indicator-how-to-set-up-and-use/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "المؤشرات",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">مؤشر Vortex: كيفية إعداده واستخدامه</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">المؤشرات</span>
-        <h1>مؤشر Vortex: كيفية إعداده واستخدامه</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>وُلد مؤشر Vortex من إلهام غير مألوف بين أدوات التحليل الفني: استند مبتكراه، إتيان بوتس ودوغلاس سيبمان، إلى ملاحظات المخترع النمساوي فيكتور شاوبرغر حول تدفق الماء، مقترحين أن تحركات السوق المالي يمكن أن تشبه أنماط الدوامات الملاحظة في الطبيعة. عمليًا، النتيجة هي مؤشر اتجاه بخطين، أبسط في التفسير مما توحي به المقارنة.</p><h2>الفكرة وراء الحساب</h2><p>يقيس Vortex المسافة بين أدنى سعر للشمعة الحالية وأعلى سعر للشمعة السابقة (حركة صعودية)، والمسافة بين أعلى سعر للشمعة الحالية وأدنى سعر للشمعة السابقة (حركة هبوطية). كلما كانت إحدى هاتين المسافتين أكبر بالنسبة للأخرى، كانت الحركة الاتجاهية المقابلة أقوى. هذان القياسان، بعد تنعيمهما على مدى فترة (14 افتراضيًا)، يشكلان خطي المؤشر: VI+ (حركة صعودية) وVI- (حركة هبوطية).</p><p>يراعي الحساب أيضًا المدى الحقيقي لكل شمعة — نفس المفهوم المستخدم في ATR وADX — ما يساعد المؤشر على التقاط الحركة حتى عند وجود فجوات بين الشموع.</p><h2>كيفية الإعداد</h2><p>يقع Vortex ضمن فئة مؤشرات الزخم (أو الاتجاه، حسب المنصة) ويستخدم، افتراضيًا، فترة 14 للخطين الرئيسيين. عادة ما تأتي مستويات التشبع الشرائي والبيعي مضبوطة عند 1.1 و0.9 على التوالي، رغم أن لهذين المستويين وزنًا أقل في قراءة المؤشر من تقاطع خطي VI+ وVI- نفسيهما.</p><h2>كيفية قراءة الإشارات</h2><ul><li><strong>إشارة صعود</strong>: يكون خط VI+ تحت VI-، ثم يتقاطع فوقه ويبقى فوقه — ما يشير إلى أن الحركة الصعودية أصبحت مهيمنة.</li><li><strong>إشارة هبوط</strong>: يكون خط VI- تحت VI+، ثم يتقاطع فوقه ويبقى فوقه — ما يشير إلى أن الحركة الهبوطية أصبحت مهيمنة.</li><li><strong>المسافة بين الخطين</strong>: كلما كانت المساحة بين VI+ وVI- أكبر بعد التقاطع، اعتُبر الاتجاه الجاري أقوى.</li></ul><p>مثال: في زوج عملات كان فيه VI- فوق VI+ لعدة أسابيع (اتجاه هبوطي)، يتقاطع VI+ فوق VI-، وتبدأ المسافة بين الخطين بالازدياد في الشموع التالية. يُقرأ هذا المزيج — التقاطع مع اتساع المسافة — كتأكيد على أن الاتجاه غيّر وجهته، لا مجرد تقاطع معزول يمكن أن ينعكس في الشمعة التالية.</p><h2>ليس كل تقاطع يجب أن يتحول إلى دخول</h2><p>لا ينبغي التعامل مع تقاطع بين VI+ وVI- كأمر شراء أو بيع تلقائي، بل كدعوة لإيلاء اهتمام أكبر للأصل: التحقق من سلوك السعر الأخير، وتقييم وجود دعم أو مقاومة مهمة قريبة، وعندها فقط النظر في دخول باتجاه الإشارة. في الأسواق بلا اتجاه واضح، تميل التقاطعات إلى التكرار عدة مرات خلال وقت قصير، دون توليد حركة يمكن الاستفادة منها — نفس مشكلة الإشارات الخاطئة التي تؤثر على كل مؤشر اتجاه تقريبًا في سوق جانبي.</p><h2>الجمع بين Vortex ومؤشرات أخرى</h2><p>لكونه يقيس الاتجاه فقط، يستفيد Vortex من دمجه مع مؤشر ذي طبيعة مختلفة، بدلاً من مؤشر اتجاه آخر يقيس أساسًا نفس الشيء. غالبًا ما يُذكر MACD وADX كمكملين جيدين: يعزز MACD قراءة الزخم، ويساعد ADX على تأكيد ما إذا كانت قوة الاتجاه التي يشير إليها تقاطع Vortex مهمة بما يكفي فعلاً لتبرير الدخول.</p><h2>إدارة المخاطر تظل ضرورية</h2><p>مثل أي مؤشر اتجاه، لا يصيب Vortex دائمًا، ويجب أن تتضمن استراتيجية مبنية عليه وقف خسارة، وعند الاقتضاء، هدف جني ربح محدد قبل الدخول. لا تقدم أي أداة، مهما كان منطقها متطورًا، إشارات صحيحة طوال الوقت — ومعاملة Vortex بطريقة أخرى يعني تجاهل كيف تتصرف أي استراتيجية اتجاه فعليًا عبر صفقات كثيرة.</p><p>يجدر أيضًا اختبار المؤشر على أصول وآجال مختلفة قبل الوثوق به لصفقات حقيقية: فترة 14 التي تعمل جيدًا في رسم بياني يومي للأسهم قد لا تنتج نفس النتائج في رسم بياني داخل اليوم لزوج عملات، نظرًا لاختلاف التقلب والسلوك بين السوقين.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-vortex-como-configurar-e-usar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <span class="bq__tag">المؤشرات</span>
+            <h1>مؤشر Vortex: كيفية إعداده واستخدامه</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#الفكرة-وراء-الحساب">الفكرة وراء الحساب</a></li>
+                <li><a href="#كيفية-الا-عداد">كيفية الإعداد</a></li>
+                <li><a href="#كيفية-قراءة-الا-شارات">كيفية قراءة الإشارات</a></li>
+                <li><a href="#ليس-كل-تقاطع-يجب-ا-ن-يتحول-ا-لى-دخول">ليس كل تقاطع يجب أن يتحول إلى دخول</a></li>
+                <li><a href="#الجمع-بين-vortex-ومو-شرات-ا-خرى">الجمع بين Vortex ومؤشرات أخرى</a></li>
+                <li><a href="#ا-دارة-المخاطر-تظل-ضرورية">إدارة المخاطر تظل ضرورية</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>وُلد مؤشر Vortex من إلهام غير مألوف بين أدوات التحليل الفني: استند مبتكراه، إتيان بوتس ودوغلاس سيبمان، إلى ملاحظات المخترع النمساوي فيكتور شاوبرغر حول تدفق الماء، مقترحين أن تحركات السوق المالي يمكن أن تشبه أنماط الدوامات الملاحظة في الطبيعة. عمليًا، النتيجة هي مؤشر اتجاه بخطين، أبسط في التفسير مما توحي به المقارنة.</p><h2 id="الفكرة-وراء-الحساب">الفكرة وراء الحساب</h2><p>يقيس Vortex المسافة بين أدنى سعر للشمعة الحالية وأعلى سعر للشمعة السابقة (حركة صعودية)، والمسافة بين أعلى سعر للشمعة الحالية وأدنى سعر للشمعة السابقة (حركة هبوطية). كلما كانت إحدى هاتين المسافتين أكبر بالنسبة للأخرى، كانت الحركة الاتجاهية المقابلة أقوى. هذان القياسان، بعد تنعيمهما على مدى فترة (14 افتراضيًا)، يشكلان خطي المؤشر: VI+ (حركة صعودية) وVI- (حركة هبوطية).</p><p>يراعي الحساب أيضًا المدى الحقيقي لكل شمعة — نفس المفهوم المستخدم في ATR وADX — ما يساعد المؤشر على التقاط الحركة حتى عند وجود فجوات بين الشموع.</p><h2 id="كيفية-الا-عداد">كيفية الإعداد</h2><p>يقع Vortex ضمن فئة مؤشرات الزخم (أو الاتجاه، حسب المنصة) ويستخدم، افتراضيًا، فترة 14 للخطين الرئيسيين. عادة ما تأتي مستويات التشبع الشرائي والبيعي مضبوطة عند 1.1 و0.9 على التوالي، رغم أن لهذين المستويين وزنًا أقل في قراءة المؤشر من تقاطع خطي VI+ وVI- نفسيهما.</p><h2 id="كيفية-قراءة-الا-شارات">كيفية قراءة الإشارات</h2><ul><li><strong>إشارة صعود</strong>: يكون خط VI+ تحت VI-، ثم يتقاطع فوقه ويبقى فوقه — ما يشير إلى أن الحركة الصعودية أصبحت مهيمنة.</li><li><strong>إشارة هبوط</strong>: يكون خط VI- تحت VI+، ثم يتقاطع فوقه ويبقى فوقه — ما يشير إلى أن الحركة الهبوطية أصبحت مهيمنة.</li><li><strong>المسافة بين الخطين</strong>: كلما كانت المساحة بين VI+ وVI- أكبر بعد التقاطع، اعتُبر الاتجاه الجاري أقوى.</li></ul><p>مثال: في زوج عملات كان فيه VI- فوق VI+ لعدة أسابيع (اتجاه هبوطي)، يتقاطع VI+ فوق VI-، وتبدأ المسافة بين الخطين بالازدياد في الشموع التالية. يُقرأ هذا المزيج — التقاطع مع اتساع المسافة — كتأكيد على أن الاتجاه غيّر وجهته، لا مجرد تقاطع معزول يمكن أن ينعكس في الشمعة التالية.</p><h2 id="ليس-كل-تقاطع-يجب-ا-ن-يتحول-ا-لى-دخول">ليس كل تقاطع يجب أن يتحول إلى دخول</h2><p>لا ينبغي التعامل مع تقاطع بين VI+ وVI- كأمر شراء أو بيع تلقائي، بل كدعوة لإيلاء اهتمام أكبر للأصل: التحقق من سلوك السعر الأخير، وتقييم وجود دعم أو مقاومة مهمة قريبة، وعندها فقط النظر في دخول باتجاه الإشارة. في الأسواق بلا اتجاه واضح، تميل التقاطعات إلى التكرار عدة مرات خلال وقت قصير، دون توليد حركة يمكن الاستفادة منها — نفس مشكلة الإشارات الخاطئة التي تؤثر على كل مؤشر اتجاه تقريبًا في سوق جانبي.</p><h2 id="الجمع-بين-vortex-ومو-شرات-ا-خرى">الجمع بين Vortex ومؤشرات أخرى</h2><p>لكونه يقيس الاتجاه فقط، يستفيد Vortex من دمجه مع مؤشر ذي طبيعة مختلفة، بدلاً من مؤشر اتجاه آخر يقيس أساسًا نفس الشيء. غالبًا ما يُذكر MACD وADX كمكملين جيدين: يعزز MACD قراءة الزخم، ويساعد ADX على تأكيد ما إذا كانت قوة الاتجاه التي يشير إليها تقاطع Vortex مهمة بما يكفي فعلاً لتبرير الدخول.</p><h2 id="ا-دارة-المخاطر-تظل-ضرورية">إدارة المخاطر تظل ضرورية</h2><p>مثل أي مؤشر اتجاه، لا يصيب Vortex دائمًا، ويجب أن تتضمن استراتيجية مبنية عليه وقف خسارة، وعند الاقتضاء، هدف جني ربح محدد قبل الدخول. لا تقدم أي أداة، مهما كان منطقها متطورًا، إشارات صحيحة طوال الوقت — ومعاملة Vortex بطريقة أخرى يعني تجاهل كيف تتصرف أي استراتيجية اتجاه فعليًا عبر صفقات كثيرة.</p><p>يجدر أيضًا اختبار المؤشر على أصول وآجال مختلفة قبل الوثوق به لصفقات حقيقية: فترة 14 التي تعمل جيدًا في رسم بياني يومي للأسهم قد لا تنتج نفس النتائج في رسم بياني داخل اليوم لزوج عملات، نظرًا لاختلاف التقلب والسلوك بين السوقين.</p>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

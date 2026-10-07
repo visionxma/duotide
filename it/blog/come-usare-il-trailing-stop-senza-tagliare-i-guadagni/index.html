@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/come-usare-il-trailing-stop-senza-tagliare-i-guadagni/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Gestione del rischio",
       "author": {
@@ -172,28 +172,67 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Percorso di navigazione">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/it/">Home</a></li>
         <li><a href="/it/blog/">Blog</a></li>
         <li><span aria-current="page">Come usare il trailing stop senza tagliare i tuoi guadagni troppo presto</span></li>
       </ol>
+      <a class="ap__voltar" href="/it/blog/">Indietro</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestione del rischio</span>
-        <h1>Come usare il trailing stop senza tagliare i tuoi guadagni troppo presto</h1>
-        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 6 min di lettura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Il trailing stop è uno degli strumenti più utili per chi cerca di proteggere i profitti senza dover seguire il grafico continuamente. L'idea è semplice: invece di uno stop loss fisso, il trailing stop si muove insieme al prezzo a favore dell'operazione, bloccando parte del guadagno man mano che il movimento avanza. Il problema è che, mal calibrato, può chiudere operazioni vincenti troppo presto, tirando fuori il trader da un movimento che aveva ancora spazio per continuare.</p><p>Questo testo spiega come funziona il trailing stop, come calibrarlo e gli errori più comuni che fanno sì che questo strumento danneggi, invece di aiutare, il risultato finale di una strategia.</p><h2>Come funziona un trailing stop, nella pratica</h2><p>Un trailing stop viene definito da una distanza fissa (in punti, percentuale o valore monetario) rispetto al prezzo più favorevole raggiunto dall'operazione. Se il prezzo avanza a favore della posizione, lo stop si muove insieme, mantenendo la stessa distanza. Se il prezzo si inverte, lo stop resta fermo all'ultimo livello adattato, venendo attivato se il prezzo lo raggiunge.</p><h2>Un esempio numerico di funzionamento</h2><p>Supponi un acquisto a R$ 50,00 con un trailing stop di R$ 2,00 di distanza. Inizialmente, lo stop sta a R$ 48,00. Se il prezzo sale a R$ 55,00, lo stop si adatta a R$ 53,00, mantenendo la stessa distanza di R$ 2,00. Se poi il prezzo scende a R$ 53,00, l'operazione viene chiusa con un profitto di R$ 3,00 per unità (R$ 53,00 meno i R$ 50,00 di ingresso), anche se il prezzo massimo raggiunto è stato R$ 55,00. Il trailing stop, in questo caso, ha garantito parte del profitto senza richiedere una decisione manuale al momento dell'inversione.</p><h2>L'errore più comune: distanza troppo corta</h2><p>Quando la distanza del trailing stop viene definita senza considerare la volatilità normale dell'asset, è comune che oscillazioni naturali di breve periodo — che fanno parte di qualsiasi movimento, anche dentro un trend sano — attivino lo stop prima del tempo, chiudendo l'operazione prematuramente. Un asset che tende a oscillare R$ 3,00 in correzioni normali dentro un trend, ma è configurato con un trailing stop di R$ 1,00, sarà probabilmente tirato fuori dall'operazione alla prima correzione comune, anche se il trend principale continua dopo.</p><h2>Come calibrare la distanza in modo più equilibrato</h2><ul><li><strong>Basa la distanza sulla volatilità recente dell'asset</strong>, usando, per esempio, l'ampiezza media delle ultime settimane come riferimento, invece di scegliere un valore arbitrario.</li><li><strong>Adatta la distanza al tipo di operazione</strong>: le operazioni a periodo più breve tendono a richiedere distanze più corte; le operazioni a periodo più lungo, distanze più ampie, compatibili con correzioni maggiori dentro il trend.</li><li><strong>Evita di adattare lo stop manualmente contro la logica originale</strong> solo perché il prezzo è vicino a esso — cambiare la regola a metà percorso tende a generare decisioni più emotive che tecniche.</li><li><strong>Considera di attivare il trailing stop solo dopo un profitto minimo</strong>, lasciando all'operazione più spazio per svilupparsi subito dopo l'ingresso, quando il rumore naturale tende a essere maggiore in proporzione al movimento totale atteso.</li></ul><h2>Il trailing stop non è l'unico strumento necessario</h2><p>È importante ricordare che il trailing stop non sostituisce lo stop loss iniziale, che resta essenziale per limitare la perdita nel caso l'operazione vada contro le attese fin dall'inizio. Il trailing stop entra in azione per proteggere un profitto già ottenuto, non per definire il rischio massimo assunto all'ingresso dell'operazione — queste sono due funzioni diverse, anche se a volte vengono confuse da chi sta iniziando.</p><h2>Conclusione pratica</h2><p>Usare un trailing stop ben calibrato richiede di capire la volatilità normale dell'asset operato e resistere alla tentazione di stringere troppo la distanza per ansia di proteggere ogni centesimo di profitto. Un trailing stop ben adattato protegge i guadagni senza soffocare operazioni che hanno ancora spazio per svilupparsi, ma, come qualsiasi strumento di gestione del rischio, non garantisce che un'operazione sarà redditizia — aiuta solo a gestire meglio il risultato dopo che il profitto ha già iniziato ad apparire.</p><h2>Trailing stop percentuale vs. trailing stop basato sulla volatilità</h2><p>Esistono modi diversi di calcolare la distanza di un trailing stop. Il più semplice è una distanza percentuale fissa, come il 3% sotto il prezzo più alto raggiunto dall'operazione. Il problema è che questa distanza percentuale può essere troppo ampia per asset a bassa volatilità e troppo corta per asset più volatili, dato che non si adatta al comportamento reale di ogni mercato.</p><p>Un'alternativa più raffinata è calcolare la distanza basandosi su una misura di volatilità dello stesso asset, adattando il trailing stop per essere proporzionale a quanto quell'asset tende a oscillare in condizioni normali. In questo modo, gli asset più volatili ricevono un trailing stop con più spazio, riducendo la probabilità di uscite premature per rumore naturale, mentre gli asset meno volatili ricevono un trailing stop più vicino, adeguato al comportamento più contenuto del prezzo. Questo aggiustamento manuale richiede più lavoro che usare una percentuale fissa, ma tende a produrre risultati più coerenti nel corso di asset e condizioni di mercato diversi.</p>
-        <div class="bq-post__cta">
-          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="trailing-stop-sem-cortar-ganhos" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiato">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">6 min di lettura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
+            </div>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-28">28 settembre 2026</time></p>
+            <span class="bq__tag">Gestione del rischio</span>
+            <h1>Come usare il trailing stop senza tagliare i tuoi guadagni troppo presto</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Team Duotide</strong><small>Redazione</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Indice">
+              <p class="ap__indice-tit">Indice</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#come-funziona-un-trailing-stop-nella-pratica">Come funziona un trailing stop, nella pratica</a></li>
+                <li><a href="#un-esempio-numerico-di-funzionamento">Un esempio numerico di funzionamento</a></li>
+                <li><a href="#l-errore-piu-comune-distanza-troppo-corta">L'errore più comune: distanza troppo corta</a></li>
+                <li><a href="#come-calibrare-la-distanza-in-modo-piu-equilibrato">Come calibrare la distanza in modo più equilibrato</a></li>
+                <li><a href="#il-trailing-stop-non-e-l-unico-strumento-necessario">Il trailing stop non è l'unico strumento necessario</a></li>
+                <li><a href="#conclusione-pratica">Conclusione pratica</a></li>
+                <li><a href="#trailing-stop-percentuale-vs-trailing-stop-basato-sulla-vola">Trailing stop percentuale vs. trailing stop basato sulla volatilità</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Il trailing stop è uno degli strumenti più utili per chi cerca di proteggere i profitti senza dover seguire il grafico continuamente. L'idea è semplice: invece di uno stop loss fisso, il trailing stop si muove insieme al prezzo a favore dell'operazione, bloccando parte del guadagno man mano che il movimento avanza. Il problema è che, mal calibrato, può chiudere operazioni vincenti troppo presto, tirando fuori il trader da un movimento che aveva ancora spazio per continuare.</p><p>Questo testo spiega come funziona il trailing stop, come calibrarlo e gli errori più comuni che fanno sì che questo strumento danneggi, invece di aiutare, il risultato finale di una strategia.</p><h2 id="come-funziona-un-trailing-stop-nella-pratica">Come funziona un trailing stop, nella pratica</h2><p>Un trailing stop viene definito da una distanza fissa (in punti, percentuale o valore monetario) rispetto al prezzo più favorevole raggiunto dall'operazione. Se il prezzo avanza a favore della posizione, lo stop si muove insieme, mantenendo la stessa distanza. Se il prezzo si inverte, lo stop resta fermo all'ultimo livello adattato, venendo attivato se il prezzo lo raggiunge.</p><h2 id="un-esempio-numerico-di-funzionamento">Un esempio numerico di funzionamento</h2><p>Supponi un acquisto a R$ 50,00 con un trailing stop di R$ 2,00 di distanza. Inizialmente, lo stop sta a R$ 48,00. Se il prezzo sale a R$ 55,00, lo stop si adatta a R$ 53,00, mantenendo la stessa distanza di R$ 2,00. Se poi il prezzo scende a R$ 53,00, l'operazione viene chiusa con un profitto di R$ 3,00 per unità (R$ 53,00 meno i R$ 50,00 di ingresso), anche se il prezzo massimo raggiunto è stato R$ 55,00. Il trailing stop, in questo caso, ha garantito parte del profitto senza richiedere una decisione manuale al momento dell'inversione.</p><h2 id="l-errore-piu-comune-distanza-troppo-corta">L'errore più comune: distanza troppo corta</h2><p>Quando la distanza del trailing stop viene definita senza considerare la volatilità normale dell'asset, è comune che oscillazioni naturali di breve periodo — che fanno parte di qualsiasi movimento, anche dentro un trend sano — attivino lo stop prima del tempo, chiudendo l'operazione prematuramente. Un asset che tende a oscillare R$ 3,00 in correzioni normali dentro un trend, ma è configurato con un trailing stop di R$ 1,00, sarà probabilmente tirato fuori dall'operazione alla prima correzione comune, anche se il trend principale continua dopo.</p><h2 id="come-calibrare-la-distanza-in-modo-piu-equilibrato">Come calibrare la distanza in modo più equilibrato</h2><ul><li><strong>Basa la distanza sulla volatilità recente dell'asset</strong>, usando, per esempio, l'ampiezza media delle ultime settimane come riferimento, invece di scegliere un valore arbitrario.</li><li><strong>Adatta la distanza al tipo di operazione</strong>: le operazioni a periodo più breve tendono a richiedere distanze più corte; le operazioni a periodo più lungo, distanze più ampie, compatibili con correzioni maggiori dentro il trend.</li><li><strong>Evita di adattare lo stop manualmente contro la logica originale</strong> solo perché il prezzo è vicino a esso — cambiare la regola a metà percorso tende a generare decisioni più emotive che tecniche.</li><li><strong>Considera di attivare il trailing stop solo dopo un profitto minimo</strong>, lasciando all'operazione più spazio per svilupparsi subito dopo l'ingresso, quando il rumore naturale tende a essere maggiore in proporzione al movimento totale atteso.</li></ul><h2 id="il-trailing-stop-non-e-l-unico-strumento-necessario">Il trailing stop non è l'unico strumento necessario</h2><p>È importante ricordare che il trailing stop non sostituisce lo stop loss iniziale, che resta essenziale per limitare la perdita nel caso l'operazione vada contro le attese fin dall'inizio. Il trailing stop entra in azione per proteggere un profitto già ottenuto, non per definire il rischio massimo assunto all'ingresso dell'operazione — queste sono due funzioni diverse, anche se a volte vengono confuse da chi sta iniziando.</p><h2 id="conclusione-pratica">Conclusione pratica</h2><p>Usare un trailing stop ben calibrato richiede di capire la volatilità normale dell'asset operato e resistere alla tentazione di stringere troppo la distanza per ansia di proteggere ogni centesimo di profitto. Un trailing stop ben adattato protegge i guadagni senza soffocare operazioni che hanno ancora spazio per svilupparsi, ma, come qualsiasi strumento di gestione del rischio, non garantisce che un'operazione sarà redditizia — aiuta solo a gestire meglio il risultato dopo che il profitto ha già iniziato ad apparire.</p><h2 id="trailing-stop-percentuale-vs-trailing-stop-basato-sulla-vola">Trailing stop percentuale vs. trailing stop basato sulla volatilità</h2><p>Esistono modi diversi di calcolare la distanza di un trailing stop. Il più semplice è una distanza percentuale fissa, come il 3% sotto il prezzo più alto raggiunto dall'operazione. Il problema è che questa distanza percentuale può essere troppo ampia per asset a bassa volatilità e troppo corta per asset più volatili, dato che non si adatta al comportamento reale di ogni mercato.</p><p>Un'alternativa più raffinata è calcolare la distanza basandosi su una misura di volatilità dello stesso asset, adattando il trailing stop per essere proporzionale a quanto quell'asset tende a oscillare in condizioni normali. In questo modo, gli asset più volatili ricevono un trailing stop con più spazio, riducendo la probabilità di uscite premature per rumore naturale, mentre gli asset meno volatili ricevono un trailing stop più vicino, adeguato al comportamento più contenuto del prezzo. Questo aggiustamento manuale richiede più lavoro che usare una percentuale fissa, ma tende a produrre risultati più coerenti nel corso di asset e condizioni di mercato diversi.</p>
+            <div class="bq-post__cta">
+              <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aggiornato il: <time datetime="2026-09-28">28 set 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Team Duotide</strong><p>La redazione di Duotide scrive le guide e le notizie di questo blog: come funzionano i mercati, gestione del rischio e uso della piattaforma. Nulla di quanto scritto qui è una raccomandazione di investimento.</p></div>
+              <a class="btn ap__equipe" href="/it/chi-siamo/">Conosci il team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leggi anche</h2>
+        <aside class="ap__rel">
+          <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/come-usare-stop-loss-e-take-profit-nel-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come usare stop loss e take profit nel forex</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/strategia-martingale-nel-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strategia martingale nel trading: come funziona e i rischi</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
@@ -201,7 +240,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +304,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

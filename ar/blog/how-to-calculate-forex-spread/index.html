@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/how-to-calculate-forex-spread/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-corretora-offshore-o-que-e.webp",
       "articleSection": "الفوركس",
       "author": {
@@ -172,35 +172,62 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">كيفية حساب السبريد في الفوركس: المعادلة والأمثلة</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">الفوركس</span>
-        <h1>كيفية حساب السبريد في الفوركس: المعادلة والأمثلة</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>لحساب السبريد في الفوركس، يكفي طرح سعر الشراء (bid) من سعر البيع (ask) وتحويل هذا الفرق إلى نقاط. إذا كان EUR/USD مسعّرًا عند 1,08500 للبيع و1,08512 للشراء، فإن السبريد هو 0,00012، أو 1,2 نقطة. إذا كانت قيمة النقطة في هذه الصفقة R$ 10، فإن هذا السبريد يكلف نحو R$ 12 فقط للدخول والخروج من الصفقة.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-calcular-o-spread-no-forex" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-27">27 سبتمبر 2026</time></p>
+            <span class="bq__tag">الفوركس</span>
+            <h1>كيفية حساب السبريد في الفوركس: المعادلة والأمثلة</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#الخطوة-الا-ولى-حساب-السبريد-بالنقاط">الخطوة الأولى: حساب السبريد بالنقاط</a></li>
+                <li><a href="#الخطوة-الثانية-تحويل-السبريد-ا-لى-مال">الخطوة الثانية: تحويل السبريد إلى مال</a></li>
+                <li><a href="#لماذا-يغي-ر-حجم-المركز-كل-شيء">لماذا يغيّر حجم المركز كل شيء</a></li>
+                <li><a href="#تكلفة-السبريد-كنسبة-من-الهدف">تكلفة السبريد كنسبة من الهدف</a></li>
+                <li><a href="#مثال-كامل-من-البداية-ا-لى-النهاية">مثال كامل، من البداية إلى النهاية</a></li>
+                <li><a href="#العادة-التي-تتجنب-المفاجا-ة-في-النتيجة">العادة التي تتجنب المفاجأة في النتيجة</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>لحساب السبريد في الفوركس، يكفي طرح سعر الشراء (bid) من سعر البيع (ask) وتحويل هذا الفرق إلى نقاط. إذا كان EUR/USD مسعّرًا عند 1,08500 للبيع و1,08512 للشراء، فإن السبريد هو 0,00012، أو 1,2 نقطة. إذا كانت قيمة النقطة في هذه الصفقة R$ 10، فإن هذا السبريد يكلف نحو R$ 12 فقط للدخول والخروج من الصفقة.</p>
 <p>هذا هو الجزء البسيط من الحساب. الجزء الذي يشعر به المتداول لاحقًا هو ما يفعله السبريد بهدف صغير، أو وقف خسارة ضيق، أو استراتيجية تتداول بتكرار عالٍ جدًا.</p>
-<h2>الخطوة الأولى: حساب السبريد بالنقاط</h2>
+<h2 id="الخطوة-الا-ولى-حساب-السبريد-بالنقاط">الخطوة الأولى: حساب السبريد بالنقاط</h2>
 <p>السبريد هو الفرق بين سعر البيع (bid) وسعر الشراء (ask):</p>
 <p>السبريد = سعر الشراء − سعر البيع</p>
 <p>بالنسبة لمعظم الأزواج الرئيسية، تعادل النقطة 0,0001. بالنسبة للأزواج التي تشمل الين الياباني، تعادل النقطة 0,01. مثال بـEUR/USD: سعر البيع عند 1,08500، سعر الشراء عند 1,08512. الفرق هو 0,00012، ما يعادل 1,2 نقطة.</p>
 <p>عادة ما تفتح صفقة الشراء بسعر الشراء وتُغلق بسعر البيع؛ وتسلك صفقة البيع المسار المعاكس. هذا الفرق بين السعرين هو أحد الأشكال الصامتة التي تظهر بها تكلفة التداول — تبدأ الصفقة سلبية قليلاً بالفعل، ومن السهل الاعتياد على رؤية ذلك دون إدراك أنه لا يزال تكلفة حقيقية في كل دخول.</p>
-<h2>الخطوة الثانية: تحويل السبريد إلى مال</h2>
+<h2 id="الخطوة-الثانية-تحويل-السبريد-ا-لى-مال">الخطوة الثانية: تحويل السبريد إلى مال</h2>
 <p>بعد معرفة السبريد بالنقاط، يكون حساب التكلفة بالمال مباشرًا:</p>
 <p>تكلفة السبريد = السبريد بالنقاط × قيمة النقطة</p>
 <p>إذا كان السبريد 1,5 نقطة وقيمة النقطة R$ 10، فإن التكلفة المقدرة هي:</p>
 <p>1,5 × R$ 10 = R$ 15 لكل صفقة</p>
 <p>في عشرين صفقة مشابهة خلال الشهر، ترتفع هذه التكلفة إلى R$ 300. الحساب بسيط — الصعب هو تذكر إجرائه قبل التعلق باستراتيجية تعتمد على أهداف صغيرة.</p>
-<h2>لماذا يغيّر حجم المركز كل شيء</h2>
+<h2 id="لماذا-يغي-ر-حجم-المركز-كل-شيء">لماذا يغيّر حجم المركز كل شيء</h2>
 <p>يُقاس السبريد بالنقاط، لكن يُدفع بالمال — وهذا يعني أن نفس سبريد الـ1,5 نقطة يمكن أن يكون غير مهم أو مكلفًا، حسب حجم المركز:</p>
 <ul>
 <li><strong>0,01 لوت</strong> (قيمة نقطة نحو R$ 0,50) — سبريد 0,8 نقطة يكلف R$ 0,40؛ سبريد 1,5 نقطة يكلف R$ 0,75؛ سبريد 2,5 نقطة يكلف R$ 1,25.</li>
@@ -208,21 +235,32 @@
 <li><strong>لوت قياسي واحد</strong> (قيمة نقطة نحو R$ 50,00) — نفس السبريدات تكلف R$ 40,00 وR$ 75,00 وR$ 125,00.</li>
 </ul>
 <p>قول فقط "السبريد نقطة واحدة" معلومة ناقصة. تساوي النقطة الواحدة في 0,01 لوت من EUR/USD نحو R$ 0,50؛ وتساوي نفس النقطة في لوت قياسي واحد نحو R$ 50. من يتداول مراكز كبيرة أو بتكرار عالٍ لا يمكنه معاملة السبريد كضجيج خلفي.</p>
-<h2>تكلفة السبريد كنسبة من الهدف</h2>
+<h2 id="تكلفة-السبريد-كنسبة-من-الهدف">تكلفة السبريد كنسبة من الهدف</h2>
 <p>المقارنة الأكثر فائدة ليست "كم نقطة السبريد"، بل "كم يمثل السبريد من هدفي المخطط". إذا كان هدف صفقة 5 نقاط والسبريد نقطة واحدة، فإن السبريد يستهلك بالفعل 20% من الهدف الإجمالي حتى قبل أن يتحرك السعر لصالح الصفقة.</p>
 <p>هذه المشكلة أكثر وضوحًا لمن يتداول بآجال قصيرة جدًا، لكنها لا تقتصر عليهم. يمكن لمتداول يدخل عدة مرات في نفس الجلسة أن يرى سبريدًا صغيرًا في صفقة واحدة يصبح مهمًا على مدى أسبوع كامل من الصفقات. أما من يتداول بأهداف أكبر، للتداول المتأرجح، فيشعر أقل بالسبريد لكل صفقة، لكنه لا يزال بحاجة لمقارنة التكلفة بين أزواج مختلفة — يمكن لزوج غريب بسبريد واسع أن يجعل إعدادًا جيدًا فنيًا أقل جاذبية بكثير عمليًا.</p>
-<h2>مثال كامل، من البداية إلى النهاية</h2>
+<h2 id="مثال-كامل-من-البداية-ا-لى-النهاية">مثال كامل، من البداية إلى النهاية</h2>
 <p>يتداول متداول بحساب R$ 5.000 مركزًا بـ0,20 لوت من EUR/USD (قيمة نقطة نحو R$ 2)، بسبريد 1,4 نقطة وهدف 40 نقطة. تكلفة السبريد هي:</p>
 <p>1,4 × R$ 2 = R$ 2,80 لكل صفقة</p>
 <p>مقارنة بالهدف الإجمالي البالغ 40 نقطة، أي ما يعادل R$ 80، يمثل السبريد 3,5% من الهدف — تكلفة قابلة للإدارة. نفس المتداول، بالسعي لهدف سكالبينج قدره 6 نقاط فقط (R$ 12)، سيرى السبريد يستهلك نحو 23% من الهدف الإجمالي — جزء أكبر بكثير أهمية، يتطلب معدل نجاح أعلى فقط للتعويض عن تكلفة التداول.</p>
-<h2>العادة التي تتجنب المفاجأة في النتيجة</h2>
+<h2 id="العادة-التي-تتجنب-المفاجا-ة-في-النتيجة">العادة التي تتجنب المفاجأة في النتيجة</h2>
 <p>قبل اعتماد أي استراتيجية مبنية على أهداف صغيرة، يستحق الأمر حساب السبريد بالنقاط للزوج المختار، وتحويله إلى مال بحجم المركز المخطط، ومقارنة هذه القيمة بهدف الصفقة. إذا كان السبريد يستهلك جزءًا صغيرًا من الهدف، فالتكلفة معقولة. إذا كان يستهلك جزءًا كبيرًا، فقد تكون الاستراتيجية تنافس تكلفة التداول نفسها حتى قبل اعتبار مخاطرة السوق. هذا الحساب البسيط، المُجرى في Duotide أو في أي منصة أخرى قبل تأكيد الأمر، يساعد على فهم ما إذا كانت استراتيجية ما قابلة للتطبيق فعلاً أو ما إذا كان السبريد وحده يبطل النتيجة المتوقعة بالفعل.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-27">27 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/best-technical-indicators-for-forex-trading/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">أفضل المؤشرات الفنية للتداول في سوق الفوركس</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/5-most-traded-forex-pairs-and-characteristics/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 أزواج الفوركس الأكثر تداولًا وما يجب ملاحظته في كل منها</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
@@ -230,7 +268,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -294,6 +332,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

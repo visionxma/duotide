@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/relative-strength-index-rsi-guide/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "技术指标",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">RSI：相对强弱指数的设置与使用</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">技术指标</span>
-        <h1>RSI：相对强弱指数的设置与使用</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>很少有指标像RSI（相对强弱指数）这样受欢迎。它出现在绝大多数图表平台上，设置简单，其基本解读——超买和超卖——通常是新手交易者最先学到的内容之一。但RSI的内容远不止观察它是否高于70或低于30。</p><p>在这篇文章中，你将了解RSI的计算方式、如何正确设置它，以及如何使用它的主要解读方式，包括指标与价格之间的背离。</p><h2>什么是RSI，它是如何计算的</h2><p>RSI衡量某段特定周期（通常为14根K线）内价格变化的速度和强度，得出一个在0到100之间变化的数值。计算方法是比较该周期内平均涨幅与平均跌幅：涨幅相对于跌幅的比例越大，RSI越接近100；跌幅比例越大，RSI越接近0。</p><p>简化来说，公式为RSI = 100 − [100 / (1 + FR)]，其中FR是相对强度，通过所选周期内平均涨幅除以平均跌幅计算得出。如果在最近14根K线中，上涨K线的平均涨幅为每根R$ 0,80，下跌K线的平均跌幅为每根R$ 0,40，那么相对强度就是2（0,80除以0,40），由此得到的RSI约为67——仍低于超买区，但已显示出买方占据优势。</p><h2>设置RSI的周期</h2><p>默认的14根K线周期作为起点效果不错，但并非固定规则。像7这样更短的周期，会让RSI更加敏感，更频繁地产生超买和超卖信号——这在短线操作中可能有用，但也会产生更多假信号。像21这样更长的周期，会让指标更平滑，减少信号数量，使其可能更可靠，但也更滞后。</p><p>周期的选择应与所用的时间周期和操作风格相匹配：操作分钟图的人往往更偏好较短的周期，而操作日线图或周线图的人通常保持14的默认值，甚至进一步增大这个数字。</p><h2>超买与超卖</h2><p>RSI最广为人知的解读方式，是以70和30这两条线作为参考：数值高于70表示超买状态，暗示上涨行情可能已经拉伸过度；数值低于30表示超卖，暗示下跌可能被夸大了。这些解读并不意味着价格会立即反转——在强劲的趋势中，RSI可能在很长一段时间内保持在70以上（或30以下），之后才出现任何回调。</p><p>因此，这些区域更适合作为需要留意的警示信号，而不是逆势入场的自动触发条件，尤其是在趋势强劲且持久的资产上。</p><h2>背离：RSI更进阶的解读方式</h2><p>当价格和RSI朝相反方向运行时，就出现了背离。如果价格创出新高，但RSI的高点却低于前一个高点，这就是顶背离：尽管价格在上涨，但支撑这次上涨的动能正在减弱，这可能预示着一次反转，或者至少是趋势的一次暂停。</p><p>反过来也成立：价格创出更低的低点，而RSI的低点却更高，这是底背离，表明尽管价格仍在下跌，卖压却正在减弱。背离信号通常比单纯的超买超卖解读更为可靠，但仍需要价格本身的确认，才能作为操作的依据。</p><h2>在实践中使用RSI</h2><p>RSI最好与趋势判断结合使用：顺着大趋势方向使用超买超卖的解读，而不是逆势使用，往往能带来更稳定的结果。在Duotide上，可以调整RSI的周期，在不同资产上测试不同的设置，直到找到最能反映该市场行为的参数。与任何基于历史价格的指标一样，RSI并不保证判断正确，任何操作都带有真实的亏损风险。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indice-de-forca-relativa-rsi-guia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+            <span class="bq__tag">技术指标</span>
+            <h1>RSI：相对强弱指数的设置与使用</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#什么是rsi-它是如何计算的">什么是RSI，它是如何计算的</a></li>
+                <li><a href="#设置rsi的周期">设置RSI的周期</a></li>
+                <li><a href="#超买与超卖">超买与超卖</a></li>
+                <li><a href="#背离-rsi更进阶的解读方式">背离：RSI更进阶的解读方式</a></li>
+                <li><a href="#在实践中使用rsi">在实践中使用RSI</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>很少有指标像RSI（相对强弱指数）这样受欢迎。它出现在绝大多数图表平台上，设置简单，其基本解读——超买和超卖——通常是新手交易者最先学到的内容之一。但RSI的内容远不止观察它是否高于70或低于30。</p><p>在这篇文章中，你将了解RSI的计算方式、如何正确设置它，以及如何使用它的主要解读方式，包括指标与价格之间的背离。</p><h2 id="什么是rsi-它是如何计算的">什么是RSI，它是如何计算的</h2><p>RSI衡量某段特定周期（通常为14根K线）内价格变化的速度和强度，得出一个在0到100之间变化的数值。计算方法是比较该周期内平均涨幅与平均跌幅：涨幅相对于跌幅的比例越大，RSI越接近100；跌幅比例越大，RSI越接近0。</p><p>简化来说，公式为RSI = 100 − [100 / (1 + FR)]，其中FR是相对强度，通过所选周期内平均涨幅除以平均跌幅计算得出。如果在最近14根K线中，上涨K线的平均涨幅为每根R$ 0,80，下跌K线的平均跌幅为每根R$ 0,40，那么相对强度就是2（0,80除以0,40），由此得到的RSI约为67——仍低于超买区，但已显示出买方占据优势。</p><h2 id="设置rsi的周期">设置RSI的周期</h2><p>默认的14根K线周期作为起点效果不错，但并非固定规则。像7这样更短的周期，会让RSI更加敏感，更频繁地产生超买和超卖信号——这在短线操作中可能有用，但也会产生更多假信号。像21这样更长的周期，会让指标更平滑，减少信号数量，使其可能更可靠，但也更滞后。</p><p>周期的选择应与所用的时间周期和操作风格相匹配：操作分钟图的人往往更偏好较短的周期，而操作日线图或周线图的人通常保持14的默认值，甚至进一步增大这个数字。</p><h2 id="超买与超卖">超买与超卖</h2><p>RSI最广为人知的解读方式，是以70和30这两条线作为参考：数值高于70表示超买状态，暗示上涨行情可能已经拉伸过度；数值低于30表示超卖，暗示下跌可能被夸大了。这些解读并不意味着价格会立即反转——在强劲的趋势中，RSI可能在很长一段时间内保持在70以上（或30以下），之后才出现任何回调。</p><p>因此，这些区域更适合作为需要留意的警示信号，而不是逆势入场的自动触发条件，尤其是在趋势强劲且持久的资产上。</p><h2 id="背离-rsi更进阶的解读方式">背离：RSI更进阶的解读方式</h2><p>当价格和RSI朝相反方向运行时，就出现了背离。如果价格创出新高，但RSI的高点却低于前一个高点，这就是顶背离：尽管价格在上涨，但支撑这次上涨的动能正在减弱，这可能预示着一次反转，或者至少是趋势的一次暂停。</p><p>反过来也成立：价格创出更低的低点，而RSI的低点却更高，这是底背离，表明尽管价格仍在下跌，卖压却正在减弱。背离信号通常比单纯的超买超卖解读更为可靠，但仍需要价格本身的确认，才能作为操作的依据。</p><h2 id="在实践中使用rsi">在实践中使用RSI</h2><p>RSI最好与趋势判断结合使用：顺着大趋势方向使用超买超卖的解读，而不是逆势使用，往往能带来更稳定的结果。在Duotide上，可以调整RSI的周期，在不同资产上测试不同的设置，直到找到最能反映该市场行为的参数。与任何基于历史价格的指标一样，RSI并不保证判断正确，任何操作都带有真实的亏损风险。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

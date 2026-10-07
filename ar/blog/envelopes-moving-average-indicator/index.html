@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/envelopes-moving-average-indicator/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "المؤشرات",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="مسار التنقل">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
         <li><span aria-current="page">مؤشر Envelopes: نطاقات المتوسط المتحرك عمليًا</span></li>
       </ol>
+      <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">المؤشرات</span>
-        <h1>مؤشر Envelopes: نطاقات المتوسط المتحرك عمليًا</h1>
-        <p class="bq-post__meta">فريق Duotide · <time datetime="2026-09-24">24‏/09‏/2026</time> · 4 دقائق قراءة</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>يتبع مؤشر Envelopes منطقًا مشابهًا لنطاقات بولينجر، لكن بشكل أبسط: بدلاً من حساب مسافة النطاقات بناءً على الانحراف المعياري للسعر، يستخدم نسبة مئوية ثابتة أعلى وأسفل متوسط متحرك. النتيجة هي قناة تتبع المتوسط، يتحرك السعر داخلها عادة معظم الوقت.</p><p>في هذا المقال ستفهم كيفية حساب Envelopes، وكيفية إعداده، وكيفية استخدام لمساته للنطاقات لتحديد تجاوزات سعرية محتملة.</p><h2>كيفية حساب Envelopes</h2><p>يبدأ الحساب بمتوسط متحرك بسيط أو أسي، عادة بفترة متوسطة، مثل 20. انطلاقًا منه، يُحسب النطاق العلوي بإضافة نسبة مئوية ثابتة إلى قيمة المتوسط، ويُحسب النطاق السفلي بطرح نفس النسبة. إذا كان المتوسط المتحرك لـ20 فترة لأصل ما عند R$ 40.00 وكانت النسبة المضبوطة 2.5%، يكون النطاق العلوي عند R$ 41.00 والنطاق السفلي عند R$ 39.00.</p><p>على عكس نطاقات بولينجر، التي تتسع أو تضيق تلقائيًا مع تغير تقلب الأصل، تحافظ نطاقات Envelopes دائمًا على نفس المسافة المئوية من المتوسط، ما لم يعدّل المتداول نفسه هذه النسبة يدويًا.</p><h2>ما الذي تشير إليه عادة لمسات النطاقات</h2><p>عندما يلمس السعر النطاق العلوي أو يتجاوزه، يُفسر كإشارة إلى أن الأصل ابتعد كثيرًا عن متوسطه الأخير، نحو الأعلى — تجاوز شرائي محتمل قصير الأجل. وعندما يلمس النطاق السفلي أو يتجاوزه، الإشارة معاكسة: تجاوز بيعي محتمل.</p><p>أشيع قراءة هي الانعكاس إلى المتوسط: بعد لمس أحد النطاقين، يميل السعر إلى العودة نحو المتوسط المتحرك المركزي، وهذه حركة العودة التي يسعى كثير من المتداولين لالتقاطها. يعمل هذا النوع من القراءة بشكل أفضل في الأسواق بلا اتجاه قوي، المتذبذبة ضمن نطاق مستقر نسبيًا.</p><h2>ضبط نسبة النطاقات</h2><p>تختلف النسبة المثالية كثيرًا من أصل لآخر، وتعتمد مباشرة على التقلب المعتاد لكل منها. أصل أكثر تقلبًا تاريخيًا قد يحتاج نسبة أكبر، مثل 5%، حتى تمثل لمسات النطاقات فعلاً تجاوزًا في الحركة، لا مجرد التذبذب اليومي العادي. أصل أكثر استقرارًا قد يعمل بشكل أفضل بنسبة أصغر، مثل 1.5% أو 2%.</p><p>ضبط نسبة صغيرة جدًا لأصل متقلب يجعل السعر يلمس النطاقات بتكرار مفرط، ما يقلل قيمة هذه الإشارات كدليل على تجاوز حقيقي في الحركة.</p><h2>الحذر من الاتجاهات القوية</h2><p>مثل أي مؤشر قائم على الانعكاس إلى المتوسط، يمكن أن يولد Envelopes إشارات مضللة خلال اتجاهات قوية. في ارتفاع متماسك، يمكن أن يسير السعر ملاصقًا للنطاق العلوي لعدة شموع متتالية، دون العودة إلى المتوسط — ومن يفسر كل لمسة كإشارة بيع في هذه الحالة يخاطر بالتداول بشكل متكرر ضد اتجاه لا يزال قويًا.</p><p>لذلك، يجدر التحقق من سياق الاتجاه قبل استخدام لمسات النطاقات كمحفز دخول: في الأسواق الجانبية، تميل قراءة الانعكاس إلى العمل بشكل أفضل؛ وفي الاتجاهات القوية، تعمل اللمسات كتحذير من توقف محتمل أكثر من كونها إشارة انعكاس كامل.</p><h2>الجمع بين Envelopes والحجم أو الزخم</h2><p>إحدى طرق تصفية إشارات Envelopes هي ملاحظة الحجم لحظة لمس النطاق. لمسة للنطاق العلوي مصحوبة بحجم متناقص تشير إلى أن قوة الشراء بدأت تفقد زخمها، ما يعزز قراءة احتمال العودة إلى المتوسط. أما لمسة النطاق بحجم متزايد فقد تشير إلى أن الحركة لا تزال تملك قوة للاستمرار، حتى وهي بعيدة عن المتوسط.</p><p>يمكن لمذبذب زخم، مثل RSI، أن يكون أيضًا تأكيدًا إضافيًا: لمسة للنطاق العلوي مع RSI في تشبع شرائي تعزز فرضية التجاوز، بينما نفس اللمسة مع RSI في مستويات محايدة تتطلب حذرًا أكبر قبل افتراض أن الحركة ستنعكس.</p><h2>استخدام Envelopes عمليًا</h2><p>على Duotide، يمكن تعديل كل من فترة المتوسط المتحرك ونسبة النطاقات، مع اختبار مزيجات مختلفة على أصول محددة حتى إيجاد الإعداد الذي يعكس بشكل أفضل السلوك التاريخي لذلك السوق. مثل أي مؤشر انعكاس إلى المتوسط، يعمل Envelopes بشكل أفضل عند دمجه مع قراءة سياق الرسم البياني، ولا ينبغي استخدامه بمعزل كمعيار وحيد للدخول، بما أن كل صفقة تحمل مخاطرة حقيقية للخسارة.</p>
-        <div class="bq-post__cta">
-          <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-envelopes-moving-average" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="تم نسخ الرابط">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
+            </div>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <span class="bq__tag">المؤشرات</span>
+            <h1>مؤشر Envelopes: نطاقات المتوسط المتحرك عمليًا</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>فريق Duotide</strong><small>فريق التحرير</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="المحتويات">
+              <p class="ap__indice-tit">المحتويات</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#كيفية-حساب-envelopes">كيفية حساب Envelopes</a></li>
+                <li><a href="#ما-الذي-تشير-ا-ليه-عادة-لمسات-النطاقات">ما الذي تشير إليه عادة لمسات النطاقات</a></li>
+                <li><a href="#ضبط-نسبة-النطاقات">ضبط نسبة النطاقات</a></li>
+                <li><a href="#الحذر-من-الاتجاهات-القوية">الحذر من الاتجاهات القوية</a></li>
+                <li><a href="#الجمع-بين-envelopes-والحجم-ا-و-الزخم">الجمع بين Envelopes والحجم أو الزخم</a></li>
+                <li><a href="#استخدام-envelopes-عملي-ا">استخدام Envelopes عمليًا</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>يتبع مؤشر Envelopes منطقًا مشابهًا لنطاقات بولينجر، لكن بشكل أبسط: بدلاً من حساب مسافة النطاقات بناءً على الانحراف المعياري للسعر، يستخدم نسبة مئوية ثابتة أعلى وأسفل متوسط متحرك. النتيجة هي قناة تتبع المتوسط، يتحرك السعر داخلها عادة معظم الوقت.</p><p>في هذا المقال ستفهم كيفية حساب Envelopes، وكيفية إعداده، وكيفية استخدام لمساته للنطاقات لتحديد تجاوزات سعرية محتملة.</p><h2 id="كيفية-حساب-envelopes">كيفية حساب Envelopes</h2><p>يبدأ الحساب بمتوسط متحرك بسيط أو أسي، عادة بفترة متوسطة، مثل 20. انطلاقًا منه، يُحسب النطاق العلوي بإضافة نسبة مئوية ثابتة إلى قيمة المتوسط، ويُحسب النطاق السفلي بطرح نفس النسبة. إذا كان المتوسط المتحرك لـ20 فترة لأصل ما عند R$ 40.00 وكانت النسبة المضبوطة 2.5%، يكون النطاق العلوي عند R$ 41.00 والنطاق السفلي عند R$ 39.00.</p><p>على عكس نطاقات بولينجر، التي تتسع أو تضيق تلقائيًا مع تغير تقلب الأصل، تحافظ نطاقات Envelopes دائمًا على نفس المسافة المئوية من المتوسط، ما لم يعدّل المتداول نفسه هذه النسبة يدويًا.</p><h2 id="ما-الذي-تشير-ا-ليه-عادة-لمسات-النطاقات">ما الذي تشير إليه عادة لمسات النطاقات</h2><p>عندما يلمس السعر النطاق العلوي أو يتجاوزه، يُفسر كإشارة إلى أن الأصل ابتعد كثيرًا عن متوسطه الأخير، نحو الأعلى — تجاوز شرائي محتمل قصير الأجل. وعندما يلمس النطاق السفلي أو يتجاوزه، الإشارة معاكسة: تجاوز بيعي محتمل.</p><p>أشيع قراءة هي الانعكاس إلى المتوسط: بعد لمس أحد النطاقين، يميل السعر إلى العودة نحو المتوسط المتحرك المركزي، وهذه حركة العودة التي يسعى كثير من المتداولين لالتقاطها. يعمل هذا النوع من القراءة بشكل أفضل في الأسواق بلا اتجاه قوي، المتذبذبة ضمن نطاق مستقر نسبيًا.</p><h2 id="ضبط-نسبة-النطاقات">ضبط نسبة النطاقات</h2><p>تختلف النسبة المثالية كثيرًا من أصل لآخر، وتعتمد مباشرة على التقلب المعتاد لكل منها. أصل أكثر تقلبًا تاريخيًا قد يحتاج نسبة أكبر، مثل 5%، حتى تمثل لمسات النطاقات فعلاً تجاوزًا في الحركة، لا مجرد التذبذب اليومي العادي. أصل أكثر استقرارًا قد يعمل بشكل أفضل بنسبة أصغر، مثل 1.5% أو 2%.</p><p>ضبط نسبة صغيرة جدًا لأصل متقلب يجعل السعر يلمس النطاقات بتكرار مفرط، ما يقلل قيمة هذه الإشارات كدليل على تجاوز حقيقي في الحركة.</p><h2 id="الحذر-من-الاتجاهات-القوية">الحذر من الاتجاهات القوية</h2><p>مثل أي مؤشر قائم على الانعكاس إلى المتوسط، يمكن أن يولد Envelopes إشارات مضللة خلال اتجاهات قوية. في ارتفاع متماسك، يمكن أن يسير السعر ملاصقًا للنطاق العلوي لعدة شموع متتالية، دون العودة إلى المتوسط — ومن يفسر كل لمسة كإشارة بيع في هذه الحالة يخاطر بالتداول بشكل متكرر ضد اتجاه لا يزال قويًا.</p><p>لذلك، يجدر التحقق من سياق الاتجاه قبل استخدام لمسات النطاقات كمحفز دخول: في الأسواق الجانبية، تميل قراءة الانعكاس إلى العمل بشكل أفضل؛ وفي الاتجاهات القوية، تعمل اللمسات كتحذير من توقف محتمل أكثر من كونها إشارة انعكاس كامل.</p><h2 id="الجمع-بين-envelopes-والحجم-ا-و-الزخم">الجمع بين Envelopes والحجم أو الزخم</h2><p>إحدى طرق تصفية إشارات Envelopes هي ملاحظة الحجم لحظة لمس النطاق. لمسة للنطاق العلوي مصحوبة بحجم متناقص تشير إلى أن قوة الشراء بدأت تفقد زخمها، ما يعزز قراءة احتمال العودة إلى المتوسط. أما لمسة النطاق بحجم متزايد فقد تشير إلى أن الحركة لا تزال تملك قوة للاستمرار، حتى وهي بعيدة عن المتوسط.</p><p>يمكن لمذبذب زخم، مثل RSI، أن يكون أيضًا تأكيدًا إضافيًا: لمسة للنطاق العلوي مع RSI في تشبع شرائي تعزز فرضية التجاوز، بينما نفس اللمسة مع RSI في مستويات محايدة تتطلب حذرًا أكبر قبل افتراض أن الحركة ستنعكس.</p><h2 id="استخدام-envelopes-عملي-ا">استخدام Envelopes عمليًا</h2><p>على Duotide، يمكن تعديل كل من فترة المتوسط المتحرك ونسبة النطاقات، مع اختبار مزيجات مختلفة على أصول محددة حتى إيجاد الإعداد الذي يعكس بشكل أفضل السلوك التاريخي لذلك السوق. مثل أي مؤشر انعكاس إلى المتوسط، يعمل Envelopes بشكل أفضل عند دمجه مع قراءة سياق الرسم البياني، ولا ينبغي استخدامه بمعزل كمعيار وحيد للدخول، بما أن كل صفقة تحمل مخاطرة حقيقية للخسارة.</p>
+            <div class="bq-post__cta">
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
+            </div>
+            <div class="ap__fim">
+              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>فريق Duotide</strong><p>يكتب فريق التحرير في Duotide الأدلة والأخبار في هذه المدونة: كيف تعمل الأسواق، وإدارة المخاطر، واستخدام المنصة. لا شيء هنا يُعد توصية استثمارية.</p></div>
+              <a class="btn ap__equipe" href="/ar/about/">تعرّف على الفريق</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>اقرأ أيضًا</h2>
+        <aside class="ap__rel">
+          <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

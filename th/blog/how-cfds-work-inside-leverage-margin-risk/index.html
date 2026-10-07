@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/th/blog/how-cfds-work-inside-leverage-margin-risk/",
       "inLanguage": "th",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-e-confiavel-02.webp",
       "articleSection": "การบริหารความเสี่ยง",
       "author": {
@@ -172,42 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="เส้นทางนำทาง">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/th/">หน้าแรก</a></li>
         <li><a href="/th/blog/">บล็อก</a></li>
         <li><span aria-current="page">กลไกภายในของ CFD: เลเวอเรจ มาร์จิ้น และความเสี่ยง</span></li>
       </ol>
+      <a class="ap__voltar" href="/th/blog/">ย้อนกลับ</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">การบริหารความเสี่ยง</span>
-        <h1>กลไกภายในของ CFD: เลเวอเรจ มาร์จิ้น และความเสี่ยง</h1>
-        <p class="bq-post__meta">ทีม Duotide · <time datetime="2026-09-24">24/09/2569</time> · อ่าน 4 นาที</p>
-        <figure class="foto"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>CFD (สัญญาซื้อขายส่วนต่าง) คือข้อตกลงระหว่างสองฝ่าย คือเทรดเดอร์และโบรกเกอร์ เพื่อแลกเปลี่ยนส่วนต่างระหว่างมูลค่าของสินทรัพย์ ณ เวลาที่เปิดสถานะและเวลาที่ปิดสถานะ ไม่มีฝ่ายใดเป็นเจ้าของสินทรัพย์จริง ๆ สัญญานี้มีอยู่เพียงเพื่อสะท้อนการเปลี่ยนแปลงราคานั้น การเข้าใจกลไกภายในนี้ช่วยให้เห็นว่าความเสี่ยงมาจากไหน ซึ่งมักมากกว่าที่ความเรียบง่ายของหน้าจอเทรดจะบ่งบอก</p>
-<h2>เลเวอเรจมาจากไหน</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-funcionam-os-cfds-por-dentro" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="คัดลอกลิงก์แล้ว">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 ก.ย. 2569</time><span class="ap__sep">อ่าน 4 นาที</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span>
+            </div>
+            <p class="ap__atual">อัปเดตเมื่อ: <time datetime="2026-09-27">27 กันยายน 2569</time></p>
+            <span class="bq__tag">การบริหารความเสี่ยง</span>
+            <h1>กลไกภายในของ CFD: เลเวอเรจ มาร์จิ้น และความเสี่ยง</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>ทีม Duotide</strong><small>ทีมบรรณาธิการ</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="สารบัญ">
+              <p class="ap__indice-tit">สารบัญ</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#เลเวอเรจมาจากไหน">เลเวอเรจมาจากไหน</a></li>
+                <li><a href="#การคำนวณท-แสดงผลกระทบจากภายในส-ภายนอก">การคำนวณที่แสดงผลกระทบจากภายในสู่ภายนอก</a></li>
+                <li><a href="#การเร-ยกหล-กประก-นเพ-ม-margin-call-ค-ออะไร">การเรียกหลักประกันเพิ่ม (Margin Call) คืออะไร</a></li>
+                <li><a href="#ต-นท-นของการถ-อเลเวอเรจไว-ข-ามค-น">ต้นทุนของการถือเลเวอเรจไว้ข้ามคืน</a></li>
+                <li><a href="#ทำไม-cfd-จ-งขยายท-งกำไรและขาดท-นเท-าก-น">ทำไม CFD จึงขยายทั้งกำไรและขาดทุนเท่ากัน</a></li>
+                <li><a href="#ทำไมระยะเวลาของส-ญญาจ-งสำค-ญน-อยกว-าตราสารอ-น">ทำไมระยะเวลาของสัญญาจึงสำคัญน้อยกว่าตราสารอื่น</a></li>
+                <li><a href="#ส-งท-ควรนำไปใช-จากกลไกน">สิ่งที่ควรนำไปใช้จากกลไกนี้</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>กลับขึ้นด้านบน</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>CFD (สัญญาซื้อขายส่วนต่าง) คือข้อตกลงระหว่างสองฝ่าย คือเทรดเดอร์และโบรกเกอร์ เพื่อแลกเปลี่ยนส่วนต่างระหว่างมูลค่าของสินทรัพย์ ณ เวลาที่เปิดสถานะและเวลาที่ปิดสถานะ ไม่มีฝ่ายใดเป็นเจ้าของสินทรัพย์จริง ๆ สัญญานี้มีอยู่เพียงเพื่อสะท้อนการเปลี่ยนแปลงราคานั้น การเข้าใจกลไกภายในนี้ช่วยให้เห็นว่าความเสี่ยงมาจากไหน ซึ่งมักมากกว่าที่ความเรียบง่ายของหน้าจอเทรดจะบ่งบอก</p>
+<h2 id="เลเวอเรจมาจากไหน">เลเวอเรจมาจากไหน</h2>
 <p>เลเวอเรจเกิดขึ้นเพราะโบรกเกอร์เรียกเก็บเพียงส่วนหนึ่งของมูลค่ารวมของสถานะเป็นหลักประกัน คือมาร์จิ้น แทนที่จะเป็นมูลค่าเต็มจำนวน หากมาร์จิ้นที่กำหนดคือ 10% และคุณต้องการควบคุมสถานะมูลค่า R$ 5.000,00 คุณต้องวางเงิน R$ 500,00 อัตราส่วน 10 ต่อ 1 นี้คือเลเวอเรจ การเคลื่อนไหวเล็กน้อยของราคาสินทรัพย์ ที่คำนวณจากมูลค่ารวมของสถานะ จะสร้างผลลัพธ์ที่ใหญ่กว่ามากตามสัดส่วนเมื่อเทียบกับมูลค่าที่วางไว้</p>
-<h2>การคำนวณที่แสดงผลกระทบจากภายในสู่ภายนอก</h2>
+<h2 id="การคำนวณท-แสดงผลกระทบจากภายในส-ภายนอก">การคำนวณที่แสดงผลกระทบจากภายในสู่ภายนอก</h2>
 <p>ด้วยสถานะมูลค่า R$ 5.000,00 จากตัวอย่างข้างต้น (มาร์จิ้น R$ 500,00) การร่วงลงของสินทรัพย์เพียง 8% จะก่อให้เกิดการขาดทุน R$ 400,00 หรือ 80% ของมาร์จิ้นที่วางไว้ แม้ว่าสินทรัพย์จะร่วงลงไม่ถึงหนึ่งในสิบของมูลค่าก็ตาม การร่วงลง 10% จะกินมาร์จิ้นทั้งหมด ผลของการขยายนี้คือแก่นของสิ่งที่ทำให้ CFD เป็นตราสารที่มีความเสี่ยงสูง คือเปอร์เซ็นต์การเปลี่ยนแปลงของสินทรัพย์และเปอร์เซ็นต์การเปลี่ยนแปลงของเงินทุนของคุณไม่ใช่สิ่งเดียวกันอีกต่อไป</p>
-<h2>การเรียกหลักประกันเพิ่ม (Margin Call) คืออะไร</h2>
+<h2 id="การเร-ยกหล-กประก-นเพ-ม-margin-call-ค-ออะไร">การเรียกหลักประกันเพิ่ม (Margin Call) คืออะไร</h2>
 <p>เมื่อผลขาดทุนของสถานะเข้าใกล้มูลค่าที่วางเป็นมาร์จิ้น โบรกเกอร์อาจออกคำเรียกหลักประกันเพิ่ม ซึ่งเป็นการขอให้วางเงินเพิ่มเพื่อรักษาสถานะที่เปิดอยู่ หากไม่ทำตามทันเวลา สถานะนั้นมักจะถูกปิดโดยอัตโนมัติโดยโบรกเกอร์เอง แม้จะขัดกับความต้องการของเทรดเดอร์ก็ตาม เพื่อป้องกันไม่ให้ผลขาดทุนเกินเงินทุนที่มีอยู่ในบัญชี กลไกนี้ปกป้องทั้งสองฝ่าย แต่หมายความว่าเทรดเดอร์อาจถูกบังคับให้ออกจากสถานะในช่วงเวลาที่แย่ที่สุด โดยไม่มีอำนาจควบคุมจังหวะเวลาของการออกนั้น</p>
-<h2>ต้นทุนของการถือเลเวอเรจไว้ข้ามคืน</h2>
+<h2 id="ต-นท-นของการถ-อเลเวอเรจไว-ข-ามค-น">ต้นทุนของการถือเลเวอเรจไว้ข้ามคืน</h2>
 <p>นอกจากความเสี่ยงด้านราคาแล้ว การถือ CFD ที่ใช้เลเวอเรจไว้ข้ามคืนมักก่อให้เกิดต้นทุนทางการเงิน (การโรลโอเวอร์) เนื่องจากในทางปฏิบัติ ส่วนหนึ่งของมูลค่าสถานะกำลังถูกจัดหาเงินทุนให้ ในสถานะมูลค่า R$ 5.000,00 ที่มีอัตรารายวัน 0,02% ต้นทุนคือ R$ 1,00 ต่อวัน ซึ่งเล็กน้อยหากมองแยก แต่จะสะสมในสถานะที่ถือไว้เป็นสัปดาห์หรือเดือน กัดกินผลลัพธ์แม้ว่าราคาสินทรัพย์จะไม่เคลื่อนไหวมากนัก</p>
-<h2>ทำไม CFD จึงขยายทั้งกำไรและขาดทุนเท่ากัน</h2>
+<h2 id="ทำไม-cfd-จ-งขยายท-งกำไรและขาดท-นเท-าก-น">ทำไม CFD จึงขยายทั้งกำไรและขาดทุนเท่ากัน</h2>
 <p>เป็นเรื่องปกติที่จะได้ยินเกี่ยวกับศักยภาพในการทำกำไรจากเลเวอเรจ แต่ลืมไปว่ามันทำงานแบบสมมาตร ในตัวอย่างก่อนหน้า หากสินทรัพย์ขึ้น 8% แทนที่จะลง กำไรก็จะเป็น R$ 400,00 เช่นกันจากมาร์จิ้น R$ 500,00 หรือผลตอบแทน 80% เลเวอเรจไม่ได้เลือกข้าง มันขยายผลลัพธ์ของการเคลื่อนไหวใด ๆ ไม่ว่าจะเกิดขึ้นในทิศทางไหน และด้วยเหตุนี้เองมันจึงสามารถให้กำไรอย่างรวดเร็วและดึงเงินทุนออกไปได้เร็วพอ ๆ กัน</p>
-<h2>ทำไมระยะเวลาของสัญญาจึงสำคัญน้อยกว่าตราสารอื่น</h2>
+<h2 id="ทำไมระยะเวลาของส-ญญาจ-งสำค-ญน-อยกว-าตราสารอ-น">ทำไมระยะเวลาของสัญญาจึงสำคัญน้อยกว่าตราสารอื่น</h2>
 <p>ต่างจากออปชันที่มีวันหมดอายุและสูญเสียมูลค่าตามเวลา CFD สามารถถือเปิดไว้ได้ไม่จำกัดเวลา สิ่งที่เปลี่ยนไปคือต้นทุนการโรลโอเวอร์ที่คิดค่าธรรมเนียมทุกวันที่สถานะยังเปิดอยู่ สิ่งนี้ทำให้ CFD ในทางทฤษฎีมีความยืดหยุ่นสำหรับระยะเวลาที่หลากหลาย แต่ความยืดหยุ่นเดียวกันนี้ก็อาจนำไปสู่การถือสถานะที่ขาดทุนไว้นานกว่าที่วางแผนไว้ สะสมต้นทุนโรลโอเวอร์บนผลขาดทุนที่บางทีควรจะปิดไปแล้วก่อนหน้านี้</p>
-<h2>สิ่งที่ควรนำไปใช้จากกลไกนี้</h2>
+<h2 id="ส-งท-ควรนำไปใช-จากกลไกน">สิ่งที่ควรนำไปใช้จากกลไกนี้</h2>
 <p>ก่อนเทรด CFD ควรจำลองสถานการณ์การร่วงลงของสินทรัพย์ในรูปแบบต่าง ๆ (ไม่ใช่แค่ขาขึ้น) และคำนวณว่ามันจะคิดเป็นเท่าไหร่เมื่อเทียบกับมาร์จิ้นที่วางไว้ ไม่ใช่มูลค่ารวมของสถานะ แบบฝึกหัดง่าย ๆ นี้มักเผยให้เห็นว่าความเสี่ยงที่แท้จริงของสถานะที่ใช้เลเวอเรจนั้นมากกว่าที่เห็นเมื่อดูแค่มูลค่าเงินลงทุนบนหน้าจอมาก การเข้าใจกลไกภายในนี้ก่อนเทรด คือสิ่งที่แยกการใช้เลเวอเรจอย่างมีการคำนวณ ออกจากการยอมรับมูลค่าสูงสุดที่โบรกเกอร์เสนอโดยไม่เข้าใจว่ามันหมายถึงความเสี่ยงเท่าไหร่</p>
-        <div class="bq-post__cta">
-          <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+            <div class="bq-post__cta">
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
+            </div>
+            <div class="ap__fim">
+              <p>อัปเดตเมื่อ: <time datetime="2026-09-27">27 ก.ย. 2569</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span><button class="ap__compartilhar" type="button">แชร์ <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>ทีม Duotide</strong><p>ทีมบรรณาธิการของ Duotide เขียนคู่มือและข่าวในบล็อกนี้ ทั้งเรื่องการทำงานของตลาด การบริหารความเสี่ยง และการใช้แพลตฟอร์ม เนื้อหาทั้งหมดไม่ใช่คำแนะนำการลงทุน</p></div>
+              <a class="btn ap__equipe" href="/th/about/">รู้จักทีมงาน</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>อ่านเพิ่มเติม</h2>
+        <aside class="ap__rel">
+          <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/th/blog/how-to-use-stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีใช้สต็อปลอสและเทคโปรฟิตในการเทรด forex</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
             <a class="bq__card" href="/th/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">กลยุทธ์มาร์ติงเกลในการเทรด: ทำงานอย่างไรและความเสี่ยง</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
@@ -215,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/indicador-zigzag-como-filtrar-el-ruido-del-grafico/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Indicadores",
       "author": {
@@ -172,28 +172,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Indicador ZigZag: cómo filtrar el ruido del gráfico</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicadores</span>
-        <h1>Indicador ZigZag: cómo filtrar el ruido del gráfico</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Mirar un gráfico de precios sin ningún filtro puede ser agotador: decenas de pequeñas subidas y bajadas compiten por la atención, dificultando ver el movimiento realmente relevante detrás de tanto ruido. El ZigZag existe justamente para resolver este problema visual, trazando líneas rectas que conectan solo los techos y suelos significativos del gráfico, ignorando lo que queda en medio del camino.</p><p>Este artículo explica cómo el ZigZag decide qué es ruido y qué es movimiento relevante, para qué sirve en la práctica, y por qué no debe confundirse con un generador de señales de entrada.</p><h2>Cómo decide el ZigZag qué mostrar</h2><p>El indicador se configura con un límite mínimo de variación, definido en porcentaje del precio o en número de puntos. Cualquier movimiento menor a ese límite se ignora, y el ZigZag solo traza una nueva línea cuando el precio se mueve lo suficiente como para superar ese umbral a partir del último techo o suelo identificado. Por ejemplo, con un límite del 5%, una oscilación del 2% en medio de una tendencia simplemente no aparece en el indicador — solo entra en el dibujo cuando el movimiento acumulado supera el 5% definido.</p><h2>Para qué es realmente útil el ZigZag</h2><h3>Identificar techos y suelos relevantes</h3><p>Al eliminar el ruido de corto plazo, resulta más fácil ver dónde están los puntos de reversión que realmente importaron en el historial del activo — información útil para trazar líneas de soporte y resistencia con más confianza que intentando adivinar eso en un gráfico lleno de pequeñas oscilaciones.</p><h3>Apoyar la lectura de patrones gráficos</h3><p>Patrones como el doble techo, hombro-cabeza-hombro o canales de tendencia se vuelven más evidentes cuando el ZigZag ya eliminó el ruido menor, funcionando como un esqueleto visual sobre el cual esos patrones pueden identificarse con más claridad, incluso para quien estudia el conteo de ondas en análisis técnico. Sin ese filtro, sería mucho más difícil separar visualmente qué pata del gráfico representa el movimiento principal y cuál es solo una corrección dentro de él.</p><h3>Medir la amplitud de movimientos anteriores</h3><p>Como cada línea del ZigZag conecta un techo con un suelo (o viceversa), facilita medir rápidamente cuántos puntos o qué porcentaje se movió el activo en cada pata del gráfico, lo que ayuda a calibrar expectativas de objetivo con base en movimientos pasados de tamaño parecido.</p><h2>La limitación más importante del ZigZag</h2><p>El ZigZag es un indicador que mira hacia atrás: solo confirma un techo o suelo después de que el precio ya se movió lo suficiente en la dirección opuesta como para probar que ese punto fue, de hecho, una reversión. Esto significa que la última línea del indicador puede cambiar, o repintarse, conforme se forman nuevas velas — el techo que parecía definitivo hace poco puede dejar de existir si el precio sigue subiendo. Por esta razón, usar el ZigZag como gatillo directo de entrada es arriesgado: en el momento en que la señal aparece con claridad, el movimiento que describe ya ocurrió. Esto hace que el ZigZag se parezca más a una herramienta retrospectiva que a un indicador de anticipación.</p><h2>Cómo ajustar el parámetro de sensibilidad</h2><ul><li>Un límite pequeño (por ejemplo, 1% o 2%) muestra más detalles, pero vuelve a incluir bastante ruido de corto plazo.</li><li>Un límite mayor (por ejemplo, 8% o 10%) simplifica bastante el gráfico, pero puede ignorar reversiones relevantes para operaciones de plazo más corto.</li><li>El ajuste ideal depende del activo y del marco temporal: los activos más volátiles generalmente piden un límite mayor para no generar ruido en exceso, y lo contrario vale para activos más estables.</li></ul><h2>Cómo usar el ZigZag de forma responsable</h2><p>La mejor forma de aprovechar el ZigZag es como herramienta de análisis visual y de estudio histórico, no como gatillo de entrada. Combina la lectura de los techos y suelos que destaca con un indicador de momentum, como el RSI, o con la lectura de volumen, para decidir el momento real de entrar en una operación. Como cualquier herramienta basada en datos ya ocurridos, el ZigZag no predice el próximo movimiento, y el riesgo de pérdida sigue presente incluso con el gráfico más organizado visualmente — vale la pena estudiar su comportamiento en cuenta demo antes de incorporarlo a tu rutina de análisis.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-zigzag-como-filtrar-o-ruido-do-grafico" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">4 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-28">28 de septiembre de 2026</time></p>
+            <span class="bq__tag">Indicadores</span>
+            <h1>Indicador ZigZag: cómo filtrar el ruido del gráfico</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#como-decide-el-zigzag-que-mostrar">Cómo decide el ZigZag qué mostrar</a></li>
+                <li><a href="#para-que-es-realmente-util-el-zigzag">Para qué es realmente útil el ZigZag</a></li>
+                <li><a href="#la-limitacion-mas-importante-del-zigzag">La limitación más importante del ZigZag</a></li>
+                <li><a href="#como-ajustar-el-parametro-de-sensibilidad">Cómo ajustar el parámetro de sensibilidad</a></li>
+                <li><a href="#como-usar-el-zigzag-de-forma-responsable">Cómo usar el ZigZag de forma responsable</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Mirar un gráfico de precios sin ningún filtro puede ser agotador: decenas de pequeñas subidas y bajadas compiten por la atención, dificultando ver el movimiento realmente relevante detrás de tanto ruido. El ZigZag existe justamente para resolver este problema visual, trazando líneas rectas que conectan solo los techos y suelos significativos del gráfico, ignorando lo que queda en medio del camino.</p><p>Este artículo explica cómo el ZigZag decide qué es ruido y qué es movimiento relevante, para qué sirve en la práctica, y por qué no debe confundirse con un generador de señales de entrada.</p><h2 id="como-decide-el-zigzag-que-mostrar">Cómo decide el ZigZag qué mostrar</h2><p>El indicador se configura con un límite mínimo de variación, definido en porcentaje del precio o en número de puntos. Cualquier movimiento menor a ese límite se ignora, y el ZigZag solo traza una nueva línea cuando el precio se mueve lo suficiente como para superar ese umbral a partir del último techo o suelo identificado. Por ejemplo, con un límite del 5%, una oscilación del 2% en medio de una tendencia simplemente no aparece en el indicador — solo entra en el dibujo cuando el movimiento acumulado supera el 5% definido.</p><h2 id="para-que-es-realmente-util-el-zigzag">Para qué es realmente útil el ZigZag</h2><h3>Identificar techos y suelos relevantes</h3><p>Al eliminar el ruido de corto plazo, resulta más fácil ver dónde están los puntos de reversión que realmente importaron en el historial del activo — información útil para trazar líneas de soporte y resistencia con más confianza que intentando adivinar eso en un gráfico lleno de pequeñas oscilaciones.</p><h3>Apoyar la lectura de patrones gráficos</h3><p>Patrones como el doble techo, hombro-cabeza-hombro o canales de tendencia se vuelven más evidentes cuando el ZigZag ya eliminó el ruido menor, funcionando como un esqueleto visual sobre el cual esos patrones pueden identificarse con más claridad, incluso para quien estudia el conteo de ondas en análisis técnico. Sin ese filtro, sería mucho más difícil separar visualmente qué pata del gráfico representa el movimiento principal y cuál es solo una corrección dentro de él.</p><h3>Medir la amplitud de movimientos anteriores</h3><p>Como cada línea del ZigZag conecta un techo con un suelo (o viceversa), facilita medir rápidamente cuántos puntos o qué porcentaje se movió el activo en cada pata del gráfico, lo que ayuda a calibrar expectativas de objetivo con base en movimientos pasados de tamaño parecido.</p><h2 id="la-limitacion-mas-importante-del-zigzag">La limitación más importante del ZigZag</h2><p>El ZigZag es un indicador que mira hacia atrás: solo confirma un techo o suelo después de que el precio ya se movió lo suficiente en la dirección opuesta como para probar que ese punto fue, de hecho, una reversión. Esto significa que la última línea del indicador puede cambiar, o repintarse, conforme se forman nuevas velas — el techo que parecía definitivo hace poco puede dejar de existir si el precio sigue subiendo. Por esta razón, usar el ZigZag como gatillo directo de entrada es arriesgado: en el momento en que la señal aparece con claridad, el movimiento que describe ya ocurrió. Esto hace que el ZigZag se parezca más a una herramienta retrospectiva que a un indicador de anticipación.</p><h2 id="como-ajustar-el-parametro-de-sensibilidad">Cómo ajustar el parámetro de sensibilidad</h2><ul><li>Un límite pequeño (por ejemplo, 1% o 2%) muestra más detalles, pero vuelve a incluir bastante ruido de corto plazo.</li><li>Un límite mayor (por ejemplo, 8% o 10%) simplifica bastante el gráfico, pero puede ignorar reversiones relevantes para operaciones de plazo más corto.</li><li>El ajuste ideal depende del activo y del marco temporal: los activos más volátiles generalmente piden un límite mayor para no generar ruido en exceso, y lo contrario vale para activos más estables.</li></ul><h2 id="como-usar-el-zigzag-de-forma-responsable">Cómo usar el ZigZag de forma responsable</h2><p>La mejor forma de aprovechar el ZigZag es como herramienta de análisis visual y de estudio histórico, no como gatillo de entrada. Combina la lectura de los techos y suelos que destaca con un indicador de momentum, como el RSI, o con la lectura de volumen, para decidir el momento real de entrar en una operación. Como cualquier herramienta basada en datos ya ocurridos, el ZigZag no predice el próximo movimiento, y el riesgo de pérdida sigue presente incluso con el gráfico más organizado visualmente — vale la pena estudiar su comportamiento en cuenta demo antes de incorporarlo a tu rutina de análisis.</p>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-28">28 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/que-es-el-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qué es el indicador ADX y cómo funciona</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/que-es-el-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qué es el Oscilador Estocástico y cómo funciona</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -201,7 +238,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

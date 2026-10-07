@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,36 +173,62 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Taxa de swap: como calcular o custo de manter posição aberta</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Forex</span>
-        <h1>Taxa de swap: como calcular o custo de manter posição aberta</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Toda posição alavancada mantida aberta após o horário de fechamento diário do mercado pode gerar um custo — ou, em alguns casos, um crédito — chamado de taxa de swap, também conhecido como taxa overnight ou de rollover. Ela aparece em forex, CFDs, commodities, índices e posições de margem em criptomoedas. Se a operação é aberta e fechada no mesmo dia, antes do horário de rollover, normalmente não há swap a calcular.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-swap-taxa-overnight" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Forex</span>
+            <h1>Taxa de swap: como calcular o custo de manter posição aberta</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#como-o-calculo-funciona">Como o cálculo funciona</a></li>
+                <li><a href="#exemplo-resolvido-swap-percentual">Exemplo resolvido: swap percentual</a></li>
+                <li><a href="#por-que-compra-e-venda-custam-diferente">Por que compra e venda custam diferente</a></li>
+                <li><a href="#quando-o-swap-realmente-importa">Quando o swap realmente importa</a></li>
+                <li><a href="#o-habito-que-evita-surpresa-na-conta">O hábito que evita surpresa na conta</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Toda posição alavancada mantida aberta após o horário de fechamento diário do mercado pode gerar um custo — ou, em alguns casos, um crédito — chamado de taxa de swap, também conhecido como taxa overnight ou de rollover. Ela aparece em forex, CFDs, commodities, índices e posições de margem em criptomoedas. Se a operação é aberta e fechada no mesmo dia, antes do horário de rollover, normalmente não há swap a calcular.</p>
 <p>O problema do swap é que ele não chega como uma cobrança visível na hora da entrada. Ele aparece depois, silenciosamente, na conta. Isso faz com que muitos traders só percebam o impacto quando uma operação que parecia de curto prazo vira, sem planejamento, uma posição mantida por vários dias.</p>
-<h2>Como o cálculo funciona</h2>
+<h2 id="como-o-calculo-funciona">Como o cálculo funciona</h2>
 <p>A fórmula depende de como a corretora exibe a taxa de swap. Quando ela é mostrada como percentual do valor da posição:</p>
 <p>Swap = valor da posição × taxa diária de swap × noites cobradas</p>
 <p>Quando ela é mostrada por lote:</p>
 <p>Swap = tamanho do lote × swap por lote × noites cobradas</p>
 <p>A expressão "noites cobradas" merece atenção. Uma posição mantida durante o fim de semana costuma contar como mais de uma noite, porque o mercado precisa liquidar o período em que ficou fechado. Muitas plataformas aplicam rollover triplo em um dia específico da semana, mas o dia exato e a taxa variam por instrumento e corretora — por isso vale sempre checar as condições vigentes antes de decidir manter uma posição aberta durante a noite.</p>
-<h2>Exemplo resolvido: swap percentual</h2>
+<h2 id="exemplo-resolvido-swap-percentual">Exemplo resolvido: swap percentual</h2>
 <p>Suponha uma posição com valor de exposição de R$ 7.500, taxa diária de swap de 0,05% para operações compradas e mantida por três noites cobradas (por incluir o rollover triplo do fim de semana). O cálculo é:</p>
 <p>R$ 7.500 × 0,05% × 3 = R$ 11,25 de custo estimado</p>
 <p>Se a mesma posição, do lado vendido, tiver uma taxa diária de −0,02% (um crédito, em vez de custo), o resultado nas mesmas três noites seria:</p>
 <p>R$ 7.500 × (−0,02%) × 3 = −R$ 4,50, ou seja, um crédito de R$ 4,50 na conta</p>
 <p>Note que o sinal da taxa muda o resultado de custo para crédito — por isso é essencial usar exatamente o sinal mostrado pela plataforma, sem adaptar mentalmente o número.</p>
-<h2>Por que compra e venda custam diferente</h2>
+<h2 id="por-que-compra-e-venda-custam-diferente">Por que compra e venda custam diferente</h2>
 <p>O swap não é uma tarifa aleatória. Em forex, ele está ligado à diferença entre as taxas de juros das duas moedas do par. Em CFDs, pode refletir custo de financiamento, liquidez e regras específicas do instrumento. Por isso é comum que:</p>
 <ul>
 <li>Operações compradas tenham um custo de financiamento diferente das operações vendidas no mesmo ativo.</li>
@@ -210,18 +236,29 @@
 <li>Ajustes da corretora e regras específicas de cada instrumento também influenciem o valor final.</li>
 </ul>
 <p>Isso não significa que a direção da operação deva ser escolhida com base no swap. A direção precisa vir da análise técnica ou do cenário que motivou a operação. Mas quando duas ideias de entrada são parecidas e uma delas tem custo overnight muito mais alto, o swap passa a ser um critério de desempate legítimo.</p>
-<h2>Quando o swap realmente importa</h2>
+<h2 id="quando-o-swap-realmente-importa">Quando o swap realmente importa</h2>
 <p>Um custo de R$ 2 por noite não é automaticamente relevante. Em uma operação com alvo de R$ 150, esse valor é praticamente irrelevante. Na mesma operação, mas com alvo de apenas R$ 8 — típico de um scalper —, esses R$ 2 por noite corroem uma fatia enorme do resultado esperado.</p>
 <p>O cálculo prático que vale fazer antes de manter uma posição aberta durante a noite é simples: pegar o valor estimado do swap para o número de noites planejadas e comparar com o alvo de lucro da operação. Se o swap representa uma fração pequena do alvo, o custo é administrável. Se representa uma fatia grande, vale reconsiderar manter a posição aberta ou reduzir o tamanho para compensar.</p>
-<h2>O hábito que evita surpresa na conta</h2>
+<h2 id="o-habito-que-evita-surpresa-na-conta">O hábito que evita surpresa na conta</h2>
 <p>O fluxo prático para usar esse cálculo é: primeiro, verificar como a corretora mostra a taxa de swap — percentual ou por lote; segundo, calcular o valor da posição ou o tamanho do lote; terceiro, aplicar a taxa de compra e de venda separadamente, já que costumam ser diferentes; quarto, multiplicar pelo número real de noites que a posição ficará aberta, sem esquecer o rollover triplo quando aplicável; por fim, comparar o resultado com o alvo planejado da operação.</p>
 <p>O swap costuma ser tratado como detalhe menor porque, ao contrário do spread, ele não aparece de forma imediata na tela. Mas um custo que passa despercebido continua sendo um custo. Antes de decidir manter qualquer posição aberta de um dia para o outro, seja na Duotide ou em outra plataforma, vale a pena fazer essa conta rápida — ela evita que um resultado positivo no gráfico vire uma surpresa negativa no extrato.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/melhores-indicadores-para-operar-forex/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Melhores indicadores técnicos para operar no mercado forex</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/pares-de-forex-mais-negociados-caracteristicas/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 pares de forex mais negociados e o que observar em cada um</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
@@ -229,7 +266,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +329,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

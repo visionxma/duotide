@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/forexte-spread-nasil-hesaplanir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-corretora-offshore-o-que-e.webp",
       "articleSection": "Forex",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Forex'te Spread Nasıl Hesaplanır: Formül ve Örnekler</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Forex</span>
-        <h1>Forex'te Spread Nasıl Hesaplanır: Formül ve Örnekler</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Forex'te spread'i hesaplamak için, alış fiyatından (bid) satış fiyatını (ask) çıkarmanız ve bu farkı pip'e çevirmeniz yeterlidir. EUR/USD satışta 1,08500 ve alışta 1,08512 olarak kotasyon görüyorsa, spread 0,00012, yani 1,2 pip'tir. Bu işlemde pip değeri R$ 10 ise, bu spread işleme giriş ve çıkış için yaklaşık R$ 12'ye mal olur.</p><p>Bu, hesabın basit kısmı. Trader'ın daha sonra hissettiği kısım ise spread'in küçük bir hedefe, sıkı bir stop'a veya çok yüksek frekansla işlem yapan bir stratejiye ne yaptığıdır.</p><h2>İlk adım: spread'i pip cinsinden hesaplamak</h2><p>Spread, satış fiyatı (bid) ile alış fiyatı (ask) arasındaki farktır:</p><p>Spread = alış fiyatı − satış fiyatı</p><p>Çoğu ana parite için bir pip 0,0001'e eşittir. Japon yeni içeren paritelerde ise bir pip 0,01'e eşittir. EUR/USD örneği: satış fiyatı 1,08500, alış fiyatı 1,08512. Fark 0,00012'dir, bu da 1,2 pip'e eşittir.</p><p>Bir alış işlemi normalde alış fiyatından açılır ve satış fiyatından kapanır; bir satış işlemi ise tersi yolu izler. İki fiyat arasındaki bu fark, işlem yapmanın maliyetinin ortaya çıktığı sessiz yollardan biridir — işlem hafifçe negatif başlar ve bunun her girişte gerçek bir maliyet olmaya devam ettiğini fark etmeden bunu görmeye alışmak kolaydır.</p><h2>İkinci adım: spread'i paraya dönüştürmek</h2><p>Spread'i pip cinsinden öğrendikten sonra, parasal maliyetin hesaplanması doğrudandır:</p><p>Spread maliyeti = pip cinsinden spread × pip değeri</p><p>Spread 1,5 pip ve pip değeri R$ 10 ise, tahmini maliyet şudur:</p><p>1,5 × R$ 10 = işlem başına R$ 15</p><p>Ay içinde benzer yirmi işlemde, bu maliyet R$ 300'e çıkar. Hesap basittir — zor olan, küçük hedeflere bağımlı bir stratejiye bağlanmadan önce bunu yapmayı hatırlamaktır.</p><h2>Pozisyon büyüklüğü neden her şeyi değiştirir</h2><p>Spread pip cinsinden ölçülür, ama para olarak ödenir — bu da aynı 1,5 pip'lik spread'in pozisyon büyüklüğüne bağlı olarak önemsiz ya da pahalı olabileceği anlamına gelir:</p><ul><li><strong>0,01 lot</strong> (pip değeri yaklaşık R$ 0,50) — 0,8 pip'lik spread R$ 0,40'a, 1,5 pip'lik spread R$ 0,75'e, 2,5 pip'lik spread R$ 1,25'e mal olur.</li><li><strong>0,10 lot</strong> (pip değeri yaklaşık R$ 5,00) — aynı spread'ler R$ 4,00, R$ 7,50 ve R$ 12,50'ye mal olur.</li><li><strong>1 standart lot</strong> (pip değeri yaklaşık R$ 50,00) — aynı spread'ler R$ 40,00, R$ 75,00 ve R$ 125,00'e mal olur.</li></ul><p>Sadece «spread 1 pip» demek eksik bir bilgidir. EUR/USD'de 0,01 lotta bir pip yaklaşık R$ 0,50 değerindedir; aynı pip 1 standart lotta yaklaşık R$ 50 değerindedir. Büyük pozisyonlarla veya yüksek frekansla işlem yapanlar spread'i arka plan gürültüsü gibi ele alamaz.</p><h2>Hedefin yüzdesi olarak spread maliyeti</h2><p>En yararlı karşılaştırma «spread kaç pip» değil, «spread planladığım hedefin ne kadarını temsil ediyor» sorusudur. Bir işlemin hedefi 5 pip ve spread 1 pip ise, fiyat işlem lehine hareket etmeden önce spread zaten brüt hedefin %20'sini tüketir.</p><p>Bu sorun çok kısa vadede işlem yapanlar için daha görünür olsa da onlarla sınırlı değildir. Aynı seansta birçok kez giriş yapan bir trader, tek bir işlemdeki küçük bir spread'in tüm bir haftalık işlem boyunca önemli hale geldiğini görebilir. Swing trade gibi daha büyük hedeflerle işlem yapanlar ise işlem başına spread'i daha az hisseder, ama yine de farklı pariteler arasındaki maliyeti karşılaştırmaları gerekir — geniş spread'li egzotik bir parite, teknik olarak iyi bir kurulumu pratikte çok daha az cazip hale getirebilir.</p><h2>Baştan sona tam bir örnek</h2><p>R$ 5.000'lik hesabı olan bir trader, EUR/USD'de 0,20 lot (pip değeri yaklaşık R$ 2) işlem yapıyor, spread 1,4 pip ve hedef 40 pip. Spread maliyeti şudur:</p><p>1,4 × R$ 2 = işlem başına R$ 2,80</p><p>R$ 80'e eşdeğer olan 40 pip'lik brüt hedefle karşılaştırıldığında, spread hedefin %3,5'ini temsil eder — yönetilebilir bir maliyet. Aynı trader, sadece 6 pip'lik (R$ 12) bir scalping hedefi ararsa, spread'in brüt hedefin yaklaşık %23'ünü tükettiğini görür — bu, işlem maliyetini telafi etmek için daha yüksek bir başarı oranı gerektiren çok daha önemli bir dilimdir.</p><h2>Sonuçta sürpriz olmasını önleyen alışkanlık</h2><p>Küçük hedeflere dayalı herhangi bir stratejiyi benimsemeden önce, seçilen paritenin spread'ini pip cinsinden hesaplamaya, planlanan pozisyon büyüklüğünde paraya çevirmeye ve bu değeri işlemin hedefiyle karşılaştırmaya değer. Spread hedefin küçük bir dilimini tüketiyorsa, maliyet makuldür. Büyük bir dilimini tüketiyorsa, strateji piyasa riskini değerlendirmeden önce bile işlem yapmanın kendi maliyetine karşı rekabet ediyor olabilir. Emri onaylamadan önce Duotide'da veya başka herhangi bir platformda yapılan bu basit hesaplama, bir stratejinin gerçekten uygulanabilir olup olmadığını, ya da tek başına spread'in beklenen sonucu zaten geçersiz kılıp kılmadığını anlamaya yardımcı olur.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-calcular-o-spread-no-forex" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Forex</span>
+            <h1>Forex'te Spread Nasıl Hesaplanır: Formül ve Örnekler</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#ilk-adım-spread-i-pip-cinsinden-hesaplamak">İlk adım: spread'i pip cinsinden hesaplamak</a></li>
+                <li><a href="#ikinci-adım-spread-i-paraya-donusturmek">İkinci adım: spread'i paraya dönüştürmek</a></li>
+                <li><a href="#pozisyon-buyuklugu-neden-her-seyi-degistirir">Pozisyon büyüklüğü neden her şeyi değiştirir</a></li>
+                <li><a href="#hedefin-yuzdesi-olarak-spread-maliyeti">Hedefin yüzdesi olarak spread maliyeti</a></li>
+                <li><a href="#bastan-sona-tam-bir-ornek">Baştan sona tam bir örnek</a></li>
+                <li><a href="#sonucta-surpriz-olmasını-onleyen-alıskanlık">Sonuçta sürpriz olmasını önleyen alışkanlık</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Forex'te spread'i hesaplamak için, alış fiyatından (bid) satış fiyatını (ask) çıkarmanız ve bu farkı pip'e çevirmeniz yeterlidir. EUR/USD satışta 1,08500 ve alışta 1,08512 olarak kotasyon görüyorsa, spread 0,00012, yani 1,2 pip'tir. Bu işlemde pip değeri R$ 10 ise, bu spread işleme giriş ve çıkış için yaklaşık R$ 12'ye mal olur.</p><p>Bu, hesabın basit kısmı. Trader'ın daha sonra hissettiği kısım ise spread'in küçük bir hedefe, sıkı bir stop'a veya çok yüksek frekansla işlem yapan bir stratejiye ne yaptığıdır.</p><h2 id="ilk-adım-spread-i-pip-cinsinden-hesaplamak">İlk adım: spread'i pip cinsinden hesaplamak</h2><p>Spread, satış fiyatı (bid) ile alış fiyatı (ask) arasındaki farktır:</p><p>Spread = alış fiyatı − satış fiyatı</p><p>Çoğu ana parite için bir pip 0,0001'e eşittir. Japon yeni içeren paritelerde ise bir pip 0,01'e eşittir. EUR/USD örneği: satış fiyatı 1,08500, alış fiyatı 1,08512. Fark 0,00012'dir, bu da 1,2 pip'e eşittir.</p><p>Bir alış işlemi normalde alış fiyatından açılır ve satış fiyatından kapanır; bir satış işlemi ise tersi yolu izler. İki fiyat arasındaki bu fark, işlem yapmanın maliyetinin ortaya çıktığı sessiz yollardan biridir — işlem hafifçe negatif başlar ve bunun her girişte gerçek bir maliyet olmaya devam ettiğini fark etmeden bunu görmeye alışmak kolaydır.</p><h2 id="ikinci-adım-spread-i-paraya-donusturmek">İkinci adım: spread'i paraya dönüştürmek</h2><p>Spread'i pip cinsinden öğrendikten sonra, parasal maliyetin hesaplanması doğrudandır:</p><p>Spread maliyeti = pip cinsinden spread × pip değeri</p><p>Spread 1,5 pip ve pip değeri R$ 10 ise, tahmini maliyet şudur:</p><p>1,5 × R$ 10 = işlem başına R$ 15</p><p>Ay içinde benzer yirmi işlemde, bu maliyet R$ 300'e çıkar. Hesap basittir — zor olan, küçük hedeflere bağımlı bir stratejiye bağlanmadan önce bunu yapmayı hatırlamaktır.</p><h2 id="pozisyon-buyuklugu-neden-her-seyi-degistirir">Pozisyon büyüklüğü neden her şeyi değiştirir</h2><p>Spread pip cinsinden ölçülür, ama para olarak ödenir — bu da aynı 1,5 pip'lik spread'in pozisyon büyüklüğüne bağlı olarak önemsiz ya da pahalı olabileceği anlamına gelir:</p><ul><li><strong>0,01 lot</strong> (pip değeri yaklaşık R$ 0,50) — 0,8 pip'lik spread R$ 0,40'a, 1,5 pip'lik spread R$ 0,75'e, 2,5 pip'lik spread R$ 1,25'e mal olur.</li><li><strong>0,10 lot</strong> (pip değeri yaklaşık R$ 5,00) — aynı spread'ler R$ 4,00, R$ 7,50 ve R$ 12,50'ye mal olur.</li><li><strong>1 standart lot</strong> (pip değeri yaklaşık R$ 50,00) — aynı spread'ler R$ 40,00, R$ 75,00 ve R$ 125,00'e mal olur.</li></ul><p>Sadece «spread 1 pip» demek eksik bir bilgidir. EUR/USD'de 0,01 lotta bir pip yaklaşık R$ 0,50 değerindedir; aynı pip 1 standart lotta yaklaşık R$ 50 değerindedir. Büyük pozisyonlarla veya yüksek frekansla işlem yapanlar spread'i arka plan gürültüsü gibi ele alamaz.</p><h2 id="hedefin-yuzdesi-olarak-spread-maliyeti">Hedefin yüzdesi olarak spread maliyeti</h2><p>En yararlı karşılaştırma «spread kaç pip» değil, «spread planladığım hedefin ne kadarını temsil ediyor» sorusudur. Bir işlemin hedefi 5 pip ve spread 1 pip ise, fiyat işlem lehine hareket etmeden önce spread zaten brüt hedefin %20'sini tüketir.</p><p>Bu sorun çok kısa vadede işlem yapanlar için daha görünür olsa da onlarla sınırlı değildir. Aynı seansta birçok kez giriş yapan bir trader, tek bir işlemdeki küçük bir spread'in tüm bir haftalık işlem boyunca önemli hale geldiğini görebilir. Swing trade gibi daha büyük hedeflerle işlem yapanlar ise işlem başına spread'i daha az hisseder, ama yine de farklı pariteler arasındaki maliyeti karşılaştırmaları gerekir — geniş spread'li egzotik bir parite, teknik olarak iyi bir kurulumu pratikte çok daha az cazip hale getirebilir.</p><h2 id="bastan-sona-tam-bir-ornek">Baştan sona tam bir örnek</h2><p>R$ 5.000'lik hesabı olan bir trader, EUR/USD'de 0,20 lot (pip değeri yaklaşık R$ 2) işlem yapıyor, spread 1,4 pip ve hedef 40 pip. Spread maliyeti şudur:</p><p>1,4 × R$ 2 = işlem başına R$ 2,80</p><p>R$ 80'e eşdeğer olan 40 pip'lik brüt hedefle karşılaştırıldığında, spread hedefin %3,5'ini temsil eder — yönetilebilir bir maliyet. Aynı trader, sadece 6 pip'lik (R$ 12) bir scalping hedefi ararsa, spread'in brüt hedefin yaklaşık %23'ünü tükettiğini görür — bu, işlem maliyetini telafi etmek için daha yüksek bir başarı oranı gerektiren çok daha önemli bir dilimdir.</p><h2 id="sonucta-surpriz-olmasını-onleyen-alıskanlık">Sonuçta sürpriz olmasını önleyen alışkanlık</h2><p>Küçük hedeflere dayalı herhangi bir stratejiyi benimsemeden önce, seçilen paritenin spread'ini pip cinsinden hesaplamaya, planlanan pozisyon büyüklüğünde paraya çevirmeye ve bu değeri işlemin hedefiyle karşılaştırmaya değer. Spread hedefin küçük bir dilimini tüketiyorsa, maliyet makuldür. Büyük bir dilimini tüketiyorsa, strateji piyasa riskini değerlendirmeden önce bile işlem yapmanın kendi maliyetine karşı rekabet ediyor olabilir. Emri onaylamadan önce Duotide'da veya başka herhangi bir platformda yapılan bu basit hesaplama, bir stratejinin gerçekten uygulanabilir olup olmadığını, ya da tek başına spread'in beklenen sonucu zaten geçersiz kılıp kılmadığını anlamaya yardımcı olur.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/forex-islemi-icin-en-iyi-teknik-gostergeler/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Forex İşlemi İçin En İyi Teknik Göstergeler</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/en-cok-islem-goren-5-forex-paritesi-ve-ozellikleri/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">En Çok İşlem Gören 5 Forex Paritesi ve Her Birinde Dikkat Edilecekler</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

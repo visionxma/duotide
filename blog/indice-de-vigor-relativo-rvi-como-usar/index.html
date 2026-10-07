@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,42 +173,79 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">RVI: como usar o Índice de Vigor Relativo na análise técnica</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicadores</span>
-        <h1>RVI: como usar o Índice de Vigor Relativo na análise técnica</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>O Índice de Vigor Relativo, conhecido pela sigla RVI (do inglês Relative Vigor Index), é um indicador de momentum que tenta responder a uma pergunta simples: a força que empurra o preço para cima ou para baixo está realmente sustentada, ou é só um solavanco passageiro? Diferente de médias móveis, que olham apenas para onde o preço está indo, o RVI olha para <em>como</em> o candle se formou, comparando o fechamento com a abertura e relacionando essa diferença à amplitude total do período.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indice-de-vigor-relativo-rvi-como-usar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Indicadores</span>
+            <h1>RVI: como usar o Índice de Vigor Relativo na análise técnica</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#como-o-rvi-e-calculado">Como o RVI é calculado</a></li>
+                <li><a href="#como-interpretar-os-sinais">Como interpretar os sinais</a></li>
+                <li><a href="#um-exemplo-numerico">Um exemplo numérico</a></li>
+                <li><a href="#erros-comuns-e-cuidados-ao-usar-o-rvi">Erros comuns e cuidados ao usar o RVI</a></li>
+                <li><a href="#colocando-o-rvi-em-pratica">Colocando o RVI em prática</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>O Índice de Vigor Relativo, conhecido pela sigla RVI (do inglês Relative Vigor Index), é um indicador de momentum que tenta responder a uma pergunta simples: a força que empurra o preço para cima ou para baixo está realmente sustentada, ou é só um solavanco passageiro? Diferente de médias móveis, que olham apenas para onde o preço está indo, o RVI olha para <em>como</em> o candle se formou, comparando o fechamento com a abertura e relacionando essa diferença à amplitude total do período.</p>
 <p>A lógica por trás disso vem da observação de que, em tendências de alta saudáveis, os preços tendem a fechar perto da máxima do candle. Em tendências de baixa, o oposto acontece: o fechamento fica perto da mínima. Quando isso deixa de ocorrer, mesmo que o preço ainda esteja subindo ou caindo, o RVI já sinaliza que o fôlego do movimento está enfraquecendo.</p>
-<h2>Como o RVI é calculado</h2>
+<h2 id="como-o-rvi-e-calculado">Como o RVI é calculado</h2>
 <p>A fórmula básica de um único candle é: RVI = (Fechamento − Abertura) ÷ (Máxima − Mínima). O resultado varia entre -1 e 1. Valores próximos de 1 mostram um candle de força compradora forte, com o fechamento colado na máxima. Valores próximos de -1 indicam o oposto, uma pressão vendedora dominante.</p>
 <p>Na prática, ninguém usa o valor de um candle isolado, porque o ruído seria enorme. Por isso, a versão usada nas plataformas de análise suaviza esse cálculo com uma média móvel simples, normalmente de 10 períodos, tanto no numerador quanto no denominador. O resultado é uma linha mais estável, acompanhada de uma segunda linha, chamada linha de sinal, que costuma ser uma média ponderada de 4 períodos do próprio RVI. É o cruzamento entre essas duas linhas que a maioria dos traders observa.</p>
-<h2>Como interpretar os sinais</h2>
+<h2 id="como-interpretar-os-sinais">Como interpretar os sinais</h2>
 <p>O sinal mais comum é o cruzamento: quando o RVI cruza a linha de sinal de baixo para cima, muitos traders veem isso como um indício de que a força compradora está ganhando espaço. O cruzamento inverso, de cima para baixo, sugere o oposto. Esses cruzamentos funcionam melhor quando confirmam um movimento que já existe no gráfico de preço, e não como gatilho isolado.</p>
 <p>O segundo uso, mais valioso para quem já tem alguma experiência, é a divergência. Se o preço de um ativo faz uma nova máxima, mas o RVI faz uma máxima mais baixa que a anterior, isso é uma divergência de baixa: o preço subiu, mas o vigor por trás da subida diminuiu. O raciocínio inverso vale para fundos: preço fazendo mínima mais baixa enquanto o RVI sobe é um sinal de que a pressão vendedora pode estar se esgotando.</p>
-<h2>Um exemplo numérico</h2>
+<h2 id="um-exemplo-numerico">Um exemplo numérico</h2>
 <p>Imagine uma ação negociada a R$ 38,00 na abertura do pregão. Durante o dia ela oscila entre uma mínima de R$ 37,80 e uma máxima de R$ 39,50, fechando a R$ 39,20. Aplicando a fórmula de um candle: (39,20 − 38,00) ÷ (39,50 − 37,80) = 1,20 ÷ 1,70 = 0,70. Esse valor isolado já mostra um candle forte, com o fechamento bem próximo da máxima do dia. Se, nos dias seguintes, o preço continuar subindo mas essa razão calculada for caindo para 0,50, depois 0,30, isso mostra queda de vigor mesmo com o preço ainda em alta — um alerta de que a tendência pode estar perdendo combustível antes mesmo de reverter no gráfico.</p>
-<h2>Erros comuns e cuidados ao usar o RVI</h2>
+<h2 id="erros-comuns-e-cuidados-ao-usar-o-rvi">Erros comuns e cuidados ao usar o RVI</h2>
 <p>O primeiro erro é tratar o RVI como um indicador antecipatório perfeito. Ele é, por construção, um indicador de confirmação e de força, não de previsão do próximo candle. O segundo erro é usá-lo sozinho: como qualquer oscilador baseado em preço, ele pode gerar sinais falsos em mercados sem direção definida, indo e voltando ao redor da linha de sinal sem que nada de relevante aconteça no preço. Por isso, muitos traders combinam o RVI com uma leitura de tendência mais ampla, como uma média móvel de período maior, usando o oscilador apenas para cronometrar entradas dentro de uma direção já identificada.</p>
 <p>Vale lembrar também que nenhum indicador técnico garante resultado. O RVI ajuda a organizar a leitura de força e fraqueza de um movimento, mas o mercado pode invalidar qualquer sinal a qualquer momento, e operar sempre envolve risco de perda.</p>
-<h2>Colocando o RVI em prática</h2>
+<h2 id="colocando-o-rvi-em-pratica">Colocando o RVI em prática</h2>
 <p>Para quem está começando, uma forma simples de testar o indicador é observar um ativo que você já acompanha e marcar, por uma semana, os cruzamentos entre o RVI e a linha de sinal, comparando com o que aconteceu no preço logo depois. Isso cria uma referência pessoal de como o indicador se comporta naquele ativo específico, antes de pensar em usá-lo para tomar decisões reais. Em uma plataforma como a Duotide, é possível adicionar o RVI ao gráfico e visualizar esse comportamento lado a lado com o preço, o que facilita bastante esse tipo de estudo antes de qualquer operação.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -216,7 +253,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +316,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/bandes-de-bollinger-toucher-la-bande/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Indicateurs",
       "author": {
@@ -172,28 +172,68 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Que signifie le prix qui touche la bande de Bollinger</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicateurs</span>
-        <h1>Que signifie le prix qui touche la bande de Bollinger</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Les bandes de Bollinger apparaissent sur pratiquement toutes les plateformes de graphiques, et une bonne partie des traders débutants apprennent vite la règle simplifiée : le prix a touché la bande du haut, il pourrait baisser ; le prix a touché la bande du bas, il pourrait monter. Cette lecture simplifiée passe à côté du point central de l'indicateur, qui est statistique, et non un signal d'achat ou de vente tout prêt.</p><h2>Le calcul derrière les bandes</h2><p>La bande centrale est une moyenne mobile simple, généralement sur 20 périodes. Les bandes supérieure et inférieure sont calculées en ajoutant et en soustrayant un multiple de l'écart type du prix par rapport à cette moyenne, généralement deux fois :</p><p><strong>Bande centrale = Moyenne Mobile Simple sur 20 périodes</strong></p><p><strong>Bande supérieure = Bande centrale + (2 x écart type)</strong></p><p><strong>Bande inférieure = Bande centrale - (2 x écart type)</strong></p><h2>Un exemple numérique</h2><p>Supposons une action avec une moyenne mobile sur 20 périodes à R$ 48,00 et un écart type récent de R$ 1,50. Les bandes se calculent ainsi :</p><ul><li>Bande supérieure = R$ 48,00 + (2 x R$ 1,50) = R$ 51,00</li><li>Bande inférieure = R$ 48,00 - (2 x R$ 1,50) = R$ 45,00</li></ul><p>Cela crée un canal de R$ 45,00 à R$ 51,00 autour de la moyenne. Comme le calcul utilise l'écart type, il s'adapte tout seul : si la volatilité de l'actif augmente, l'écart type croît et les bandes s'éloignent de la moyenne. Si la volatilité baisse, les bandes se rapprochent.</p><h2>Ce que toucher la bande signifie réellement</h2><p>En termes statistiques, utiliser deux fois l'écart type cherche à capturer la majeure partie des oscillations normales de prix à l'intérieur du canal, en partant de l'hypothèse d'une distribution proche de la normale. En pratique, le prix touche ou dépasse la bande plus fréquemment que ne le suggérerait cette hypothèse théorique, parce que le marché ne se comporte pas exactement comme une distribution statistique idéale. Toucher la bande supérieure signifie que le prix est étiré par rapport à sa propre moyenne récente, pas qu'une baisse est garantie ensuite.</p><h2>Squeeze : quand les bandes se resserrent</h2><p>Quand la volatilité baisse pendant une période, les bandes se rapprochent beaucoup, formant ce qu'on appelle généralement un squeeze. Ce resserrement précède généralement une période de mouvement plus important, bien qu'il n'indique pas la direction de ce mouvement futur. Un squeeze peut être suivi aussi bien d'une cassure haussière que baissière, et l'indicateur lui-même n'a aucun moyen d'anticiper lequel des deux va se produire.</p><h2>Le prix qui longe la bande en forte tendance</h2><p>Dans une forte tendance haussière, il est courant que le prix reste collé ou touche de façon répétée la bande supérieure pendant plusieurs bougies consécutives, sans que cela signifie un retournement imminent. Les traders qui vendent chaque fois que le prix touche la bande supérieure pendant une tendance forte accumulent généralement des pertes, car ils luttent contre le mouvement dominant plutôt que d'identifier une réelle perte de force. Le comportement des bandes dans une tendance définie est différent de celui dans un marché latéral, et traiter les deux scénarios de la même façon est une erreur courante.</p><h2>Différence entre marché en range et marché en tendance</h2><p>Dans un marché sans direction claire, oscillant à l'intérieur d'une fourchette, toucher la bande supérieure ou inférieure tend à être un signal plus utile d'un possible épuisement du mouvement, car le prix est historiquement revenu près de la moyenne dans ce type de scénario. Dans un marché avec une tendance bien définie, en revanche, la bande fonctionne mieux comme référence de distance par rapport à la moyenne que comme déclencheur de retournement. Avant de décider comment utiliser le toucher de bande, il vaut la peine d'identifier d'abord si l'actif est en tendance ou en range latéral.</p><h2>Ajuster la période et le multiplicateur</h2><p>Le paramètre par défaut de 20 périodes et deux fois l'écart type fonctionne comme point de départ, mais ce n'est pas une règle fixe gravée dans la pierre. Une période plus courte rend les bandes plus sensibles aux changements récents de volatilité, réagissant plus vite, mais avec plus d'oscillation dans le tracé même du canal. Une période plus longue lisse ces changements, au prix d'une réaction plus lente à un véritable changement de volatilité de l'actif. De même, augmenter le multiplicateur de l'écart type élargit le canal et réduit le nombre de fois où le prix touche les bandes, tandis que réduire le multiplicateur fait l'inverse. Tester différentes combinaisons sur l'historique de l'actif spécifique aide à comprendre quel ajustement a le plus de sens pour le type d'opération visé.</p><h2>Ce qu'il faut retenir pour le graphique</h2><p>Les bandes de Bollinger décrivent la volatilité et la distance statistique par rapport à une moyenne, pas une prévision automatique de retournement. Utiliser l'indicateur en combinaison avec le contexte de tendance, de support et de résistance tend à produire des lectures plus utiles que de traiter chaque toucher de bande comme un signal d'entrée isolé.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-sao-as-bandas-de-bollinger" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-28">28 septembre 2026</time></p>
+            <span class="bq__tag">Indicateurs</span>
+            <h1>Que signifie le prix qui touche la bande de Bollinger</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#le-calcul-derriere-les-bandes">Le calcul derrière les bandes</a></li>
+                <li><a href="#un-exemple-numerique">Un exemple numérique</a></li>
+                <li><a href="#ce-que-toucher-la-bande-signifie-reellement">Ce que toucher la bande signifie réellement</a></li>
+                <li><a href="#squeeze-quand-les-bandes-se-resserrent">Squeeze : quand les bandes se resserrent</a></li>
+                <li><a href="#le-prix-qui-longe-la-bande-en-forte-tendance">Le prix qui longe la bande en forte tendance</a></li>
+                <li><a href="#difference-entre-marche-en-range-et-marche-en-tendance">Différence entre marché en range et marché en tendance</a></li>
+                <li><a href="#ajuster-la-periode-et-le-multiplicateur">Ajuster la période et le multiplicateur</a></li>
+                <li><a href="#ce-qu-il-faut-retenir-pour-le-graphique">Ce qu'il faut retenir pour le graphique</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Les bandes de Bollinger apparaissent sur pratiquement toutes les plateformes de graphiques, et une bonne partie des traders débutants apprennent vite la règle simplifiée : le prix a touché la bande du haut, il pourrait baisser ; le prix a touché la bande du bas, il pourrait monter. Cette lecture simplifiée passe à côté du point central de l'indicateur, qui est statistique, et non un signal d'achat ou de vente tout prêt.</p><h2 id="le-calcul-derriere-les-bandes">Le calcul derrière les bandes</h2><p>La bande centrale est une moyenne mobile simple, généralement sur 20 périodes. Les bandes supérieure et inférieure sont calculées en ajoutant et en soustrayant un multiple de l'écart type du prix par rapport à cette moyenne, généralement deux fois :</p><p><strong>Bande centrale = Moyenne Mobile Simple sur 20 périodes</strong></p><p><strong>Bande supérieure = Bande centrale + (2 x écart type)</strong></p><p><strong>Bande inférieure = Bande centrale - (2 x écart type)</strong></p><h2 id="un-exemple-numerique">Un exemple numérique</h2><p>Supposons une action avec une moyenne mobile sur 20 périodes à R$ 48,00 et un écart type récent de R$ 1,50. Les bandes se calculent ainsi :</p><ul><li>Bande supérieure = R$ 48,00 + (2 x R$ 1,50) = R$ 51,00</li><li>Bande inférieure = R$ 48,00 - (2 x R$ 1,50) = R$ 45,00</li></ul><p>Cela crée un canal de R$ 45,00 à R$ 51,00 autour de la moyenne. Comme le calcul utilise l'écart type, il s'adapte tout seul : si la volatilité de l'actif augmente, l'écart type croît et les bandes s'éloignent de la moyenne. Si la volatilité baisse, les bandes se rapprochent.</p><h2 id="ce-que-toucher-la-bande-signifie-reellement">Ce que toucher la bande signifie réellement</h2><p>En termes statistiques, utiliser deux fois l'écart type cherche à capturer la majeure partie des oscillations normales de prix à l'intérieur du canal, en partant de l'hypothèse d'une distribution proche de la normale. En pratique, le prix touche ou dépasse la bande plus fréquemment que ne le suggérerait cette hypothèse théorique, parce que le marché ne se comporte pas exactement comme une distribution statistique idéale. Toucher la bande supérieure signifie que le prix est étiré par rapport à sa propre moyenne récente, pas qu'une baisse est garantie ensuite.</p><h2 id="squeeze-quand-les-bandes-se-resserrent">Squeeze : quand les bandes se resserrent</h2><p>Quand la volatilité baisse pendant une période, les bandes se rapprochent beaucoup, formant ce qu'on appelle généralement un squeeze. Ce resserrement précède généralement une période de mouvement plus important, bien qu'il n'indique pas la direction de ce mouvement futur. Un squeeze peut être suivi aussi bien d'une cassure haussière que baissière, et l'indicateur lui-même n'a aucun moyen d'anticiper lequel des deux va se produire.</p><h2 id="le-prix-qui-longe-la-bande-en-forte-tendance">Le prix qui longe la bande en forte tendance</h2><p>Dans une forte tendance haussière, il est courant que le prix reste collé ou touche de façon répétée la bande supérieure pendant plusieurs bougies consécutives, sans que cela signifie un retournement imminent. Les traders qui vendent chaque fois que le prix touche la bande supérieure pendant une tendance forte accumulent généralement des pertes, car ils luttent contre le mouvement dominant plutôt que d'identifier une réelle perte de force. Le comportement des bandes dans une tendance définie est différent de celui dans un marché latéral, et traiter les deux scénarios de la même façon est une erreur courante.</p><h2 id="difference-entre-marche-en-range-et-marche-en-tendance">Différence entre marché en range et marché en tendance</h2><p>Dans un marché sans direction claire, oscillant à l'intérieur d'une fourchette, toucher la bande supérieure ou inférieure tend à être un signal plus utile d'un possible épuisement du mouvement, car le prix est historiquement revenu près de la moyenne dans ce type de scénario. Dans un marché avec une tendance bien définie, en revanche, la bande fonctionne mieux comme référence de distance par rapport à la moyenne que comme déclencheur de retournement. Avant de décider comment utiliser le toucher de bande, il vaut la peine d'identifier d'abord si l'actif est en tendance ou en range latéral.</p><h2 id="ajuster-la-periode-et-le-multiplicateur">Ajuster la période et le multiplicateur</h2><p>Le paramètre par défaut de 20 périodes et deux fois l'écart type fonctionne comme point de départ, mais ce n'est pas une règle fixe gravée dans la pierre. Une période plus courte rend les bandes plus sensibles aux changements récents de volatilité, réagissant plus vite, mais avec plus d'oscillation dans le tracé même du canal. Une période plus longue lisse ces changements, au prix d'une réaction plus lente à un véritable changement de volatilité de l'actif. De même, augmenter le multiplicateur de l'écart type élargit le canal et réduit le nombre de fois où le prix touche les bandes, tandis que réduire le multiplicateur fait l'inverse. Tester différentes combinaisons sur l'historique de l'actif spécifique aide à comprendre quel ajustement a le plus de sens pour le type d'opération visé.</p><h2 id="ce-qu-il-faut-retenir-pour-le-graphique">Ce qu'il faut retenir pour le graphique</h2><p>Les bandes de Bollinger décrivent la volatilité et la distance statistique par rapport à une moyenne, pas une prévision automatique de retournement. Utiliser l'indicateur en combinaison avec le contexte de tendance, de support et de résistance tend à produire des lectures plus utiles que de traiter chaque toucher de bande comme un signal d'entrée isolé.</p>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-28">28 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/quest-ce-que-lindicateur-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'indicateur ADX et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/quest-ce-que-loscillateur-stochastique/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'oscillateur stochastique et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -201,7 +241,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +305,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

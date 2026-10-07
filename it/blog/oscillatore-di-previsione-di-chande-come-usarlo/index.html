@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/oscillatore-di-previsione-di-chande-come-usarlo/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Indicatori",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Percorso di navigazione">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/it/">Home</a></li>
         <li><a href="/it/blog/">Blog</a></li>
         <li><span aria-current="page">Oscillatore di Previsione di Chande: come usarlo nel trading</span></li>
       </ol>
+      <a class="ap__voltar" href="/it/blog/">Indietro</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicatori</span>
-        <h1>Oscillatore di Previsione di Chande: come usarlo nel trading</h1>
-        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Tra gli indicatori creati dall'analista e statistico Tushar Chande, l'Oscillatore di Previsione di Chande (Chande Forecast Oscillator, o CFO) è uno dei meno conosciuti fuori dai circoli più tecnici, ma porta un'idea interessante: invece di guardare solo alle medie mobili semplici, usa la regressione lineare per calcolare un valore "atteso" del prezzo e confronta questo valore con il prezzo reale.</p><p>In questo articolo capirai la logica dietro il CFO, come interpretarlo e come può completare altri indicatori di trend e momentum.</p><h2>L'idea dietro l'indicatore</h2><p>Una regressione lineare, applicata a una serie di prezzi, traccia la linea retta che meglio si adatta al movimento recente di quell'asset — è un modo statistico di dire "se questo trend continuasse esattamente così com'è, questo sarebbe il prossimo prezzo atteso". Il CFO usa questa linea per calcolare un valore di previsione per la candela attuale e poi misura la differenza percentuale tra questo valore previsto e il prezzo di chiusura reale.</p><p>Quando il prezzo reale sta sopra il valore previsto dalla regressione, il CFO diventa positivo, segnalando che il mercato sta avanzando più velocemente di quanto suggerisse il trend lineare recente. Quando il prezzo sta sotto il previsto, il CFO diventa negativo, indicando un avanzamento più lento dell'atteso, o un calo.</p><h2>Come funziona il calcolo, nella pratica</h2><p>Supponi che la regressione lineare calcolata con le ultime 14 candele di un asset proietti un prezzo atteso di R$ 48,00 per la candela attuale, ma il prezzo di chiusura reale sia R$ 49,44. La differenza percentuale sarebbe di circa il 3% [(49,44 − 48,00) / 48,00 × 100], e questo sarebbe il valore del CFO in questa candela: +3.</p><p>Un CFO positivo e crescente suggerisce che il prezzo si sta allontanando verso l'alto dal suo trend lineare recente — il che può indicare sia un movimento di forza reale sia un'estensione che tende a essere corretta. È qui che entra l'interpretazione combinata con altri elementi del grafico.</p><h2>Incrocio della linea zero</h2><p>Come altri oscillatori, il CFO ha una linea zero centrale. Un incrocio da negativo a positivo indica che il prezzo ha iniziato a superare la propria proiezione lineare recente, il che tende a essere letto come segnale di forza d'acquisto che guadagna spazio. L'incrocio inverso, da positivo a negativo, suggerisce l'opposto.</p><p>Questi incroci tendono a funzionare meglio come conferma di un movimento già in corso che come segnale anticipato di inversione, dato che il calcolo dipende dal trend lineare dei periodi precedenti.</p><h2>Scegliendo il periodo di regressione</h2><p>Il periodo usato per calcolare la regressione lineare influenza molto anche la lettura del CFO. Un periodo corto, come 5 o 9 candele, rende l'indicatore più sensibile alle variazioni recenti, generando incroci e oscillazioni con più frequenza, utile per chi opera periodi più brevi, ma anche più soggetto al rumore. Un periodo più lungo, come 20 o 30 candele, smussa la linea di regressione e fa reagire il CFO in modo più lento, riflettendo trend più consolidati.</p><p>Non esiste un periodo fisso universale: l'ideale è testare valori diversi sullo stesso asset e osservare quale configurazione produce letture che hanno senso rispetto al comportamento storico di quel mercato, invece di semplicemente copiare il periodo standard di un altro indicatore.</p><h2>Divergenze nel CFO</h2><p>Come nell'RSI, è possibile osservare divergenze tra il CFO e il prezzo. Se il prezzo fa un nuovo massimo, ma il CFO fa una lettura più bassa rispetto al massimo precedente, questo suggerisce che, nonostante il prezzo salga, si sta allontanando sempre meno dal suo trend lineare recente — un segnale di perdita di forza che può precedere una correzione.</p><h2>Combinare il CFO con altri indicatori</h2><p>Essendo un indicatore basato su regressione lineare, il CFO tende a reagire in modo simile agli indicatori di trend, quindi di solito non ha senso usarlo accanto a diverse medie mobili diverse — il segnale diventerebbe ridondante. Funziona meglio completato da un indicatore di volume o di volatilità, che portano una dimensione diversa all'analisi.</p><p>Su Duotide, vale la pena testare il CFO su periodi di regressione diversi e confrontare la sua lettura con il comportamento reale del prezzo su asset che già segui, prima di incorporarlo come parte di una strategia. Come qualsiasi indicatore statistico basato su dati passati, il CFO proietta un trend che può non confermarsi, e ogni decisione di ingresso deve considerare il rischio reale di perdita dell'operazione.</p>
-        <div class="bq-post__cta">
-          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="oscilador-de-previsao-de-chande" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiato">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">4 min di lettura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
+            </div>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-28">28 settembre 2026</time></p>
+            <span class="bq__tag">Indicatori</span>
+            <h1>Oscillatore di Previsione di Chande: come usarlo nel trading</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Team Duotide</strong><small>Redazione</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Indice">
+              <p class="ap__indice-tit">Indice</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#l-idea-dietro-l-indicatore">L'idea dietro l'indicatore</a></li>
+                <li><a href="#come-funziona-il-calcolo-nella-pratica">Come funziona il calcolo, nella pratica</a></li>
+                <li><a href="#incrocio-della-linea-zero">Incrocio della linea zero</a></li>
+                <li><a href="#scegliendo-il-periodo-di-regressione">Scegliendo il periodo di regressione</a></li>
+                <li><a href="#divergenze-nel-cfo">Divergenze nel CFO</a></li>
+                <li><a href="#combinare-il-cfo-con-altri-indicatori">Combinare il CFO con altri indicatori</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Tra gli indicatori creati dall'analista e statistico Tushar Chande, l'Oscillatore di Previsione di Chande (Chande Forecast Oscillator, o CFO) è uno dei meno conosciuti fuori dai circoli più tecnici, ma porta un'idea interessante: invece di guardare solo alle medie mobili semplici, usa la regressione lineare per calcolare un valore "atteso" del prezzo e confronta questo valore con il prezzo reale.</p><p>In questo articolo capirai la logica dietro il CFO, come interpretarlo e come può completare altri indicatori di trend e momentum.</p><h2 id="l-idea-dietro-l-indicatore">L'idea dietro l'indicatore</h2><p>Una regressione lineare, applicata a una serie di prezzi, traccia la linea retta che meglio si adatta al movimento recente di quell'asset — è un modo statistico di dire "se questo trend continuasse esattamente così com'è, questo sarebbe il prossimo prezzo atteso". Il CFO usa questa linea per calcolare un valore di previsione per la candela attuale e poi misura la differenza percentuale tra questo valore previsto e il prezzo di chiusura reale.</p><p>Quando il prezzo reale sta sopra il valore previsto dalla regressione, il CFO diventa positivo, segnalando che il mercato sta avanzando più velocemente di quanto suggerisse il trend lineare recente. Quando il prezzo sta sotto il previsto, il CFO diventa negativo, indicando un avanzamento più lento dell'atteso, o un calo.</p><h2 id="come-funziona-il-calcolo-nella-pratica">Come funziona il calcolo, nella pratica</h2><p>Supponi che la regressione lineare calcolata con le ultime 14 candele di un asset proietti un prezzo atteso di R$ 48,00 per la candela attuale, ma il prezzo di chiusura reale sia R$ 49,44. La differenza percentuale sarebbe di circa il 3% [(49,44 − 48,00) / 48,00 × 100], e questo sarebbe il valore del CFO in questa candela: +3.</p><p>Un CFO positivo e crescente suggerisce che il prezzo si sta allontanando verso l'alto dal suo trend lineare recente — il che può indicare sia un movimento di forza reale sia un'estensione che tende a essere corretta. È qui che entra l'interpretazione combinata con altri elementi del grafico.</p><h2 id="incrocio-della-linea-zero">Incrocio della linea zero</h2><p>Come altri oscillatori, il CFO ha una linea zero centrale. Un incrocio da negativo a positivo indica che il prezzo ha iniziato a superare la propria proiezione lineare recente, il che tende a essere letto come segnale di forza d'acquisto che guadagna spazio. L'incrocio inverso, da positivo a negativo, suggerisce l'opposto.</p><p>Questi incroci tendono a funzionare meglio come conferma di un movimento già in corso che come segnale anticipato di inversione, dato che il calcolo dipende dal trend lineare dei periodi precedenti.</p><h2 id="scegliendo-il-periodo-di-regressione">Scegliendo il periodo di regressione</h2><p>Il periodo usato per calcolare la regressione lineare influenza molto anche la lettura del CFO. Un periodo corto, come 5 o 9 candele, rende l'indicatore più sensibile alle variazioni recenti, generando incroci e oscillazioni con più frequenza, utile per chi opera periodi più brevi, ma anche più soggetto al rumore. Un periodo più lungo, come 20 o 30 candele, smussa la linea di regressione e fa reagire il CFO in modo più lento, riflettendo trend più consolidati.</p><p>Non esiste un periodo fisso universale: l'ideale è testare valori diversi sullo stesso asset e osservare quale configurazione produce letture che hanno senso rispetto al comportamento storico di quel mercato, invece di semplicemente copiare il periodo standard di un altro indicatore.</p><h2 id="divergenze-nel-cfo">Divergenze nel CFO</h2><p>Come nell'RSI, è possibile osservare divergenze tra il CFO e il prezzo. Se il prezzo fa un nuovo massimo, ma il CFO fa una lettura più bassa rispetto al massimo precedente, questo suggerisce che, nonostante il prezzo salga, si sta allontanando sempre meno dal suo trend lineare recente — un segnale di perdita di forza che può precedere una correzione.</p><h2 id="combinare-il-cfo-con-altri-indicatori">Combinare il CFO con altri indicatori</h2><p>Essendo un indicatore basato su regressione lineare, il CFO tende a reagire in modo simile agli indicatori di trend, quindi di solito non ha senso usarlo accanto a diverse medie mobili diverse — il segnale diventerebbe ridondante. Funziona meglio completato da un indicatore di volume o di volatilità, che portano una dimensione diversa all'analisi.</p><p>Su Duotide, vale la pena testare il CFO su periodi di regressione diversi e confrontare la sua lettura con il comportamento reale del prezzo su asset che già segui, prima di incorporarlo come parte di una strategia. Come qualsiasi indicatore statistico basato su dati passati, il CFO proietta un trend che può non confermarsi, e ogni decisione di ingresso deve considerare il rischio reale di perdita dell'operazione.</p>
+            <div class="bq-post__cta">
+              <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aggiornato il: <time datetime="2026-09-28">28 set 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Team Duotide</strong><p>La redazione di Duotide scrive le guide e le notizie di questo blog: come funzionano i mercati, gestione del rischio e uso della piattaforma. Nulla di quanto scritto qui è una raccomandazione di investimento.</p></div>
+              <a class="btn ap__equipe" href="/it/chi-siamo/">Conosci il team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leggi anche</h2>
+        <aside class="ap__rel">
+          <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/cose-loscillatore-stocastico-e-come-funziona/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Oscillatore Stocastico e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

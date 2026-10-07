@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,49 +173,86 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Vertiv (VRT): a acao por tras da infraestrutura de IA</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Ações</span>
-        <h1>Vertiv (VRT): a acao por tras da infraestrutura de IA</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="analise-acao-vertiv-vrt-2026" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Ações</span>
+            <h1>Vertiv (VRT): a acao por tras da infraestrutura de IA</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#o-que-a-vertiv-faz-dentro-de-um-data-center-de-ia">O que a Vertiv faz dentro de um data center de IA</a></li>
+                <li><a href="#os-numeros-que-explicam-a-forca-da-acao-em-2026">Os numeros que explicam a forca da acao em 2026</a></li>
+                <li><a href="#tres-motores-por-tras-da-forca-da-vrt">Tres motores por tras da forca da VRT</a></li>
+                <li><a href="#os-riscos-que-pesam-sobre-a-vertiv">Os riscos que pesam sobre a Vertiv</a></li>
+                <li><a href="#como-olhar-para-a-vertiv-sem-se-deixar-levar-pelo-entusiasmo">Como olhar para a Vertiv sem se deixar levar pelo entusiasmo</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>Quando o assunto e inteligencia artificial, a atencao costuma ir direto para quem fabrica chips. Mas existe um grupo de empresas que ganha dinheiro com um problema mais chato e menos glamouroso: como manter um data center cheio de processadores potentes ligado, refrigerado e funcionando sem parar. A Vertiv (ticker VRT, na bolsa americana) e uma das principais fornecedoras desse tipo de infraestrutura, e por isso a acao virou um dos papeis mais discutidos entre quem acompanha o setor de tecnologia em 2026.</p>
 <p>Este texto explica o que a empresa faz, quais numeros sustentam a valorizacao recente e quais riscos merecem atencao. Os dados citados aqui refletem informacoes publicadas sobre a empresa em meados de 2026 e podem estar defasados no momento em que voce ler este artigo. Nada aqui deve ser interpretado como recomendacao de compra ou venda.</p>
-<h2>O que a Vertiv faz dentro de um data center de IA</h2>
+<h2 id="o-que-a-vertiv-faz-dentro-de-um-data-center-de-ia">O que a Vertiv faz dentro de um data center de IA</h2>
 <p>A Vertiv nao produz processadores nem monta servidores. O negocio dela e a parte fisica que sustenta esses equipamentos: sistemas de energia, refrigeracao, racks e softwares de monitoramento que evitam falhas e superaquecimento. Quanto mais denso e potente fica um data center voltado para treinar modelos de IA, maior o calor gerado e mais complexa fica a engenharia por tras da climatizacao.</p>
 <p>Uma parte importante do modelo de negocio da empresa esta em atuar como parceira de projeto de fabricantes de chips e provedores de nuvem, participando do desenho de novos data centers antes mesmo de eles serem construidos. Isso a diferencia de um fornecedor comum, que so entra depois que o projeto ja esta definido.</p>
-<h2>Os numeros que explicam a forca da acao em 2026</h2>
+<h2 id="os-numeros-que-explicam-a-forca-da-acao-em-2026">Os numeros que explicam a forca da acao em 2026</h2>
 <p>Segundo dados divulgados pela propria empresa e por fontes de mercado, a Vertiv reportou crescimento de receita de cerca de 27,7% em relacao ao ano anterior, com margem operacional acima de 20% e uma carteira de pedidos (backlog) superior a 15 bilhoes de dolares. A companhia elevou sua projecao de vendas para 2026 para uma faixa entre 13,5 e 14 bilhoes de dolares, partindo de uma base anual de cerca de 10,2 bilhoes. No primeiro trimestre de 2026, o lucro operacional teria subido 64% e a geracao de caixa livre cresceu de forma ainda mais acentuada.</p>
 <p>A acao acumulava valorizacao expressiva no ano ate a publicacao dessas informacoes, e a empresa passou a integrar o indice S&amp;P 500 em marco de 2026, o que costuma atrair fluxo automatico de fundos que replicam esse indice.</p>
-<h2>Tres motores por tras da forca da VRT</h2>
+<h2 id="tres-motores-por-tras-da-forca-da-vrt">Tres motores por tras da forca da VRT</h2>
 <ul>
 <li><strong>Demanda por resfriamento liquido:</strong> data centers voltados para IA geram mais calor por metro quadrado do que data centers tradicionais, e a Vertiv tem investido em aquisicoes voltadas para essa tecnologia.</li>
 <li><strong>Parcerias de engenharia:</strong> a colaboracao com grandes fabricantes de chips para desenhar sistemas de energia e refrigeracao junto com as novas geracoes de servidores cria um relacionamento mais dificil de substituir do que uma simples venda de equipamento.</li>
 <li><strong>Entrada em indices de referencia:</strong> a inclusao no S&amp;P 500 aumenta a visibilidade da empresa entre investidores institucionais e pode sustentar demanda continua pela acao.</li>
 </ul>
-<h2>Os riscos que pesam sobre a Vertiv</h2>
+<h2 id="os-riscos-que-pesam-sobre-a-vertiv">Os riscos que pesam sobre a Vertiv</h2>
 <p>O primeiro risco e de execucao. Converter uma carteira de pedidos bilionaria em receita de verdade exige escalar producao, controlar custos e entregar projetos complexos dentro do prazo. Qualquer problema na cadeia de fornecimento de componentes especializados pode atrasar entregas e pressionar margens.</p>
 <p>O segundo risco esta ligado a dependencia dos grandes clientes de nuvem e IA. Se esses gigantes reduzirem investimento em novos data centers, seja por questoes macroeconomicas ou por terem construido capacidade demais, os pedidos futuros da Vertiv podem desacelerar. Alguns clientes tambem podem optar por desenvolver solucoes de refrigeracao internamente.</p>
 <p>Por fim, ha o risco de valuation. Uma acao que sobe de forma acentuada e passa a ser negociada com multiplos de lucro elevados ja embute bastante otimismo no preco. Se os resultados futuros vierem abaixo do esperado, mesmo uma decepcao pequena pode gerar uma reacao forte no papel, justamente porque o mercado ja precificou um cenario bastante favoravel.</p>
-<h2>Como olhar para a Vertiv sem se deixar levar pelo entusiasmo</h2>
+<h2 id="como-olhar-para-a-vertiv-sem-se-deixar-levar-pelo-entusiasmo">Como olhar para a Vertiv sem se deixar levar pelo entusiasmo</h2>
 <p>Empresas ligadas a infraestrutura de IA costumam ser apresentadas como apostas obvias no crescimento do setor, mas isso nao elimina o risco de execucao nem o risco de ciclo de investimento em tecnologia. Antes de tirar qualquer conclusao sobre a Vertiv ou qualquer outra acao do setor, vale acompanhar os proximos resultados trimestrais, observar se a carteira de pedidos esta realmente virando receita e comparar o preco atual com os fundamentos declarados pela empresa, e nao apenas com o entusiasmo do momento. Investir em acoes envolve risco de perda de capital, e desempenho passado nao garante resultado futuro.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/por-que-a-acao-da-nike-caiu-saida-do-sp-100/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Por que a ação da Nike caiu? A saída do S&amp;P 100 explicada</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/guia-de-operacoes-de-curto-prazo-em-acoes/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Guia de operações de curto prazo em ações: 4 etapas</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -223,7 +260,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -286,6 +323,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

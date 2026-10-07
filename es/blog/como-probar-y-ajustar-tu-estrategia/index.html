@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/como-probar-y-ajustar-tu-estrategia/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
       "articleSection": "Estrategias",
       "author": {
@@ -172,28 +172,64 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Ruta de navegación">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
         <li><span aria-current="page">Cómo probar y ajustar tu estrategia de trading</span></li>
       </ol>
+      <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Estrategias</span>
-        <h1>Cómo probar y ajustar tu estrategia de trading</h1>
-        <p class="bq-post__meta">Equipo Duotide · <time datetime="2026-09-24">24/09/2026</time> · 6 min de lectura</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Después de definir el perfil de trader que combina contigo — tiempo disponible, tolerancia al riesgo, capital y personalidad —, el paso siguiente es poner a prueba la estrategia elegida antes de operar montos relevantes. Es en esta etapa donde mucha gente salta directo al dinero real, movida por la ansiedad de empezar, y termina pagando para aprender lecciones que una prueba simple ya habría mostrado sin costo.</p><p>Esta es la segunda parte de la guía sobre cómo elegir una estrategia de trading. Aquí el foco es práctico: cómo probar una estrategia en el historial, cómo ajustar el riesgo con base en esa prueba, y cómo saber, con criterio, cuándo es hora de cambiar de estrategia.</p><h2>Un backtest simple, sin necesidad de programación</h2><p>Backtest es solo aplicar las reglas de la estrategia a datos que ya ocurrieron, para ver cómo se habría comportado. No se necesita software caro para empezar: un gráfico histórico y una hoja de cálculo ya resuelven. Elige el activo, define las reglas exactas de entrada y salida (por ejemplo, comprar cuando el precio cruza la media móvil de 20 períodos hacia arriba, y salir con un objetivo del 2% o un stop del 1%), y recorre manualmente los últimos seis a doce meses de gráfico, anotando cada señal que la regla habría generado.</p><p>Registra, para cada señal, si el resultado habría sido positivo o negativo y de cuánto. Con 30 a 40 señales anotadas, ya se pueden calcular dos métricas simples: la tasa de acierto (cuántas operaciones habrían sido positivas, dividido entre el total) y el resultado medio por operación. Una estrategia con una tasa de acierto del 40%, por ejemplo, todavía puede ser rentable si las ganancias son, en promedio, mayores que las pérdidas.</p><h2>Cómo ajustar el riesgo después de la prueba</h2><p>El backtest también sirve para calibrar el tamaño de las posiciones. Supongamos un capital de R$ 2.000 y una regla de arriesgar 1% por operación, lo que equivale a R$ 20. Si la prueba mostró una racha de hasta cinco pérdidas seguidas en el período analizado, vale la pena simular ese escenario: cinco pérdidas de R$ 20 suman R$ 100, cerca del 5% del capital. Si ese valor parece manejable, el riesgo del 1% por operación está dentro de lo razonable para ese perfil; si parece demasiado pesado, es hora de reducir el riesgo por operación antes de operar con dinero real.</p><p>Ese ajuste no se hace una única vez. Conforme el capital cambia, o conforme la volatilidad del activo aumenta o disminuye, el valor de riesgo por operación debe recalcularse, siempre como un porcentaje fijo del capital actual, nunca como un valor fijo en reales que queda desactualizado con el tiempo.</p><h2>Cuándo cambiar de estrategia, con criterio</h2><p>Cambiar de estrategia cada vez que una operación sale mal es uno de los errores más comunes entre principiantes, y suele empeorar el resultado, porque la persona nunca llega a acumular señales suficientes para evaluar nada con seriedad. El criterio para cambiar de estrategia debería ser estadístico, no emocional: si después de 30 o 40 operaciones siguiendo la regla al pie de la letra el resultado acumulado sigue siendo negativo, y no hubo ningún cambio relevante en las condiciones del mercado, entonces sí tiene sentido revisar o sustituir la estrategia.</p><p>También vale la pena cambiar cuando las condiciones del mercado cambian de forma estructural: una estrategia diseñada para mercados en tendencia, por ejemplo, tiende a producir resultados malos en períodos largos de lateralización, e insistir en ella en ese escenario es diferente de que la estrategia esté simplemente equivocada.</p><h2>Documentar para aprender del propio historial</h2><p>Mantener un registro de cada operación — activo, fecha, motivo de la entrada, resultado y una nota sobre qué se siguió o no al pie de la letra — es lo que transforma meses de operación en aprendizaje real. Sin ese registro, cada error se repite porque nadie tiene cómo identificar el patrón. Con el registro, se pueden responder preguntas concretas, como si las pérdidas se concentran en determinado horario, en determinado tipo de activo, o justo después de una ganancia grande, cuando la confianza tiende a subir más de lo que debería.</p><p>Probar, ajustar y documentar no son etapas que se hacen una vez y se olvidan: son un ciclo continuo. Cada bloque de operaciones — ya sea en acciones, monedas o índices, incluso en plataformas como Duotide — genera datos nuevos para revisar el riesgo y confirmar, o no, que la estrategia elegida en la primera parte de esta guía sigue teniendo sentido para tu perfil.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-testar-e-ajustar-sua-estrategia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Enlace copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">6 min de lectura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
+            </div>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-09-27">27 de septiembre de 2026</time></p>
+            <span class="bq__tag">Estrategias</span>
+            <h1>Cómo probar y ajustar tu estrategia de trading</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipo Duotide</strong><small>Equipo editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contenido">
+              <p class="ap__indice-tit">Contenido</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#un-backtest-simple-sin-necesidad-de-programacion">Un backtest simple, sin necesidad de programación</a></li>
+                <li><a href="#como-ajustar-el-riesgo-despues-de-la-prueba">Cómo ajustar el riesgo después de la prueba</a></li>
+                <li><a href="#cuando-cambiar-de-estrategia-con-criterio">Cuándo cambiar de estrategia, con criterio</a></li>
+                <li><a href="#documentar-para-aprender-del-propio-historial">Documentar para aprender del propio historial</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Después de definir el perfil de trader que combina contigo — tiempo disponible, tolerancia al riesgo, capital y personalidad —, el paso siguiente es poner a prueba la estrategia elegida antes de operar montos relevantes. Es en esta etapa donde mucha gente salta directo al dinero real, movida por la ansiedad de empezar, y termina pagando para aprender lecciones que una prueba simple ya habría mostrado sin costo.</p><p>Esta es la segunda parte de la guía sobre cómo elegir una estrategia de trading. Aquí el foco es práctico: cómo probar una estrategia en el historial, cómo ajustar el riesgo con base en esa prueba, y cómo saber, con criterio, cuándo es hora de cambiar de estrategia.</p><h2 id="un-backtest-simple-sin-necesidad-de-programacion">Un backtest simple, sin necesidad de programación</h2><p>Backtest es solo aplicar las reglas de la estrategia a datos que ya ocurrieron, para ver cómo se habría comportado. No se necesita software caro para empezar: un gráfico histórico y una hoja de cálculo ya resuelven. Elige el activo, define las reglas exactas de entrada y salida (por ejemplo, comprar cuando el precio cruza la media móvil de 20 períodos hacia arriba, y salir con un objetivo del 2% o un stop del 1%), y recorre manualmente los últimos seis a doce meses de gráfico, anotando cada señal que la regla habría generado.</p><p>Registra, para cada señal, si el resultado habría sido positivo o negativo y de cuánto. Con 30 a 40 señales anotadas, ya se pueden calcular dos métricas simples: la tasa de acierto (cuántas operaciones habrían sido positivas, dividido entre el total) y el resultado medio por operación. Una estrategia con una tasa de acierto del 40%, por ejemplo, todavía puede ser rentable si las ganancias son, en promedio, mayores que las pérdidas.</p><h2 id="como-ajustar-el-riesgo-despues-de-la-prueba">Cómo ajustar el riesgo después de la prueba</h2><p>El backtest también sirve para calibrar el tamaño de las posiciones. Supongamos un capital de R$ 2.000 y una regla de arriesgar 1% por operación, lo que equivale a R$ 20. Si la prueba mostró una racha de hasta cinco pérdidas seguidas en el período analizado, vale la pena simular ese escenario: cinco pérdidas de R$ 20 suman R$ 100, cerca del 5% del capital. Si ese valor parece manejable, el riesgo del 1% por operación está dentro de lo razonable para ese perfil; si parece demasiado pesado, es hora de reducir el riesgo por operación antes de operar con dinero real.</p><p>Ese ajuste no se hace una única vez. Conforme el capital cambia, o conforme la volatilidad del activo aumenta o disminuye, el valor de riesgo por operación debe recalcularse, siempre como un porcentaje fijo del capital actual, nunca como un valor fijo en reales que queda desactualizado con el tiempo.</p><h2 id="cuando-cambiar-de-estrategia-con-criterio">Cuándo cambiar de estrategia, con criterio</h2><p>Cambiar de estrategia cada vez que una operación sale mal es uno de los errores más comunes entre principiantes, y suele empeorar el resultado, porque la persona nunca llega a acumular señales suficientes para evaluar nada con seriedad. El criterio para cambiar de estrategia debería ser estadístico, no emocional: si después de 30 o 40 operaciones siguiendo la regla al pie de la letra el resultado acumulado sigue siendo negativo, y no hubo ningún cambio relevante en las condiciones del mercado, entonces sí tiene sentido revisar o sustituir la estrategia.</p><p>También vale la pena cambiar cuando las condiciones del mercado cambian de forma estructural: una estrategia diseñada para mercados en tendencia, por ejemplo, tiende a producir resultados malos en períodos largos de lateralización, e insistir en ella en ese escenario es diferente de que la estrategia esté simplemente equivocada.</p><h2 id="documentar-para-aprender-del-propio-historial">Documentar para aprender del propio historial</h2><p>Mantener un registro de cada operación — activo, fecha, motivo de la entrada, resultado y una nota sobre qué se siguió o no al pie de la letra — es lo que transforma meses de operación en aprendizaje real. Sin ese registro, cada error se repite porque nadie tiene cómo identificar el patrón. Con el registro, se pueden responder preguntas concretas, como si las pérdidas se concentran en determinado horario, en determinado tipo de activo, o justo después de una ganancia grande, cuando la confianza tiende a subir más de lo que debería.</p><p>Probar, ajustar y documentar no son etapas que se hacen una vez y se olvidan: son un ciclo continuo. Cada bloque de operaciones — ya sea en acciones, monedas o índices, incluso en plataformas como Duotide — genera datos nuevos para revisar el riesgo y confirmar, o no, que la estrategia elegida en la primera parte de esta guía sigue teniendo sentido para tu perfil.</p>
+            <div class="bq-post__cta">
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Actualizado el: <time datetime="2026-09-27">27 sept 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipo Duotide</strong><p>El equipo editorial de Duotide escribe las guías y noticias de este blog: cómo funciona el mercado, gestión del riesgo y uso de la plataforma. Nada aquí es una recomendación de inversión.</p></div>
+              <a class="btn ap__equipe" href="/es/sobre/">Conoce al equipo</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lee también</h2>
+        <aside class="ap__rel">
+          <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/cruce-de-medias-moviles-exponenciales-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cruce de medias móviles exponenciales (EMA) en el trading</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/como-elegir-el-plazo-de-una-operacion/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo elegir el plazo (expiración) de una operación</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
@@ -201,7 +237,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +301,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

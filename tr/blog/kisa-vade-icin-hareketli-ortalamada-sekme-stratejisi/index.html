@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/kisa-vade-icin-hareketli-ortalamada-sekme-stratejisi/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Stratejiler",
       "author": {
@@ -172,45 +172,84 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Kısa vade için hareketli ortalamada sekme stratejisi</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Stratejiler</span>
-        <h1>Kısa vade için hareketli ortalamada sekme stratejisi</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Trend takip stratejileri arasında, "hareketli ortalamada sekme" (moving average bounce) olarak adlandırılan strateji net bir avantaja sahiptir: tek bir gösterge kullanır, grafikte görselleştirmesi kolaydır ve uygulamaya başlamak için birçok uyum kuralı ezberlemeyi gerektirmez.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-repique-na-media-movel" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Stratejiler</span>
+            <h1>Kısa vade için hareketli ortalamada sekme stratejisi</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#hareketli-ortalamayı-secmek">Hareketli ortalamayı seçmek</a></li>
+                <li><a href="#islem-yapmadan-once-trendi-teyit-etmek">İşlem yapmadan önce trendi teyit etmek</a></li>
+                <li><a href="#giris-sinyali">Giriş sinyali</a></li>
+                <li><a href="#risk-neden-girmeden-once-hesaplanmalıdır">Risk neden girmeden önce hesaplanmalıdır</a></li>
+                <li><a href="#bu-stratejideki-yaygın-hatalar">Bu stratejideki yaygın hatalar</a></li>
+                <li><a href="#gercek-sermayeyle-islem-yapmadan-once-sekmeyi-uygulamak">Gerçek sermayeyle işlem yapmadan önce sekmeyi uygulamak</a></li>
+                <li><a href="#yontemin-avantajları-ve-sınırlamaları">Yöntemin avantajları ve sınırlamaları</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Trend takip stratejileri arasında, "hareketli ortalamada sekme" (moving average bounce) olarak adlandırılan strateji net bir avantaja sahiptir: tek bir gösterge kullanır, grafikte görselleştirmesi kolaydır ve uygulamaya başlamak için birçok uyum kuralı ezberlemeyi gerektirmez.</p>
 <p>Ana fikir basittir: belirlenmiş bir trendde, fiyat nadiren düz bir çizgide yükselir (veya düşer). İlerler, bir hareketli ortalamaya dokunana veya yaklaşana kadar geri çekilir ve orijinal yönüne devam eder — ve strateji tam olarak bu geri çekilmenin ardından gelen sekmeyi yakalamaya çalışır.</p>
-<h2>Hareketli ortalamayı seçmek</h2>
+<h2 id="hareketli-ortalamayı-secmek">Hareketli ortalamayı seçmek</h2>
 <p>En yaygın seçim 21 periyotluk üstel hareketli ortalamadır (EMA), çünkü aynı büyüklükteki basit bir ortalamadan son fiyata daha hızlı tepki verir. 9 periyot gibi daha kısa ortalamalar daha fazla sinyal üretir, ama daha fazla sahte sekme de üretir; 50 periyot gibi daha uzun ortalamalar gürültüyü filtreler, ama daha yavaş tepki verir ve daha az fırsat üretir. "Doğru" bir periyot yoktur — grafik vadesi ve takip ettiğiniz varlıkla uyumlu bir periyot vardır.</p>
-<h2>İşlem yapmadan önce trendi teyit etmek</h2>
+<h2 id="islem-yapmadan-once-trendi-teyit-etmek">İşlem yapmadan önce trendi teyit etmek</h2>
 <p>Sekmeyi aramadan önce, bir trend olduğunu teyit etmek gerekir. Bu, hareketli ortalamanın kendi eğimine bakarak yapılabilir: yukarı eğimliyse ve fiyat çoğu zaman onun üzerinde kalıyorsa, yükseliş trendi aktiftir ve bu stratejide sadece alım girişleri mantıklıdır. Ortalama aşağı eğimliyse ve fiyat onun altındaysa, senaryo tam tersidir ve sadece satım girişleri değerlendirilir.</p>
-<h2>Giriş sinyali</h2>
+<h2 id="giris-sinyali">Giriş sinyali</h2>
 <p>Yükseliş trendinde R$ 5,40'tan işlem gören, 21 periyotluk EMA'sı da yükselen bir hisse düşünün. Fiyat R$ 5,39'a geri çekilir, ortalamaya değer ve hemen üzerinde, R$ 5,41'de bir yükseliş mumu kapatır. Dokunuştan sonra ortalamanın üzerindeki bu kapanış giriş tetikleyicisidir — dokunuşun kendisi değil, çünkü fiyat sekmeden basitçe ortalamayı geçebilir.</p>
 <p>Bu örnekte stop, sekme mumunun en düşüğünün biraz altında, diyelim R$ 5,35'te durur — hisse başına R$ 0,06'lık bir risk. 1'e 2'lik bir risk-getiri oranı kullanarak, hedef girişin R$ 0,12 üzerinde, yani R$ 5,53'te olur.</p>
-<h2>Risk neden girmeden önce hesaplanmalıdır</h2>
+<h2 id="risk-neden-girmeden-once-hesaplanmalıdır">Risk neden girmeden önce hesaplanmalıdır</h2>
 <p>Hisse başına R$ 0,06 olarak belirlenen risk ve, örneğin, R$ 10.000'lik bir sermayenin %1'i olan hesap maruziyet limitiyle — yani işlem başına R$ 100 azami risk — girmeden önce pozisyon büyüklüğü hesaplanabilir: R$ 100 ÷ R$ 0,06 ≈ 1.666 hisse. Bu hesap iki yaygın tuzaktan kaçınmayı sağlar: belirlenen stop için çok büyük bir lotla işlem yapmak veya stopu o kadar sıkı belirlemek ki herhangi bir normal piyasa gürültüsü trader'ı zaten işlemden çıkarır.</p>
-<h2>Bu stratejideki yaygın hatalar</h2>
+<h2 id="bu-stratejideki-yaygın-hatalar">Bu stratejideki yaygın hatalar</h2>
 <p>En sık görülen hata, ortalamaya herhangi bir yaklaşımı bir giriş sinyaliyle karıştırmaktır — önceden tahmin etmek yerine teyit mumunun kapanışını beklemek gerekir. İkinci hata, fiyatın yönsüz olarak ortalamayı tekrar tekrar kestiği, bir dizi küçük zarar üreten, net bir trendi olmayan piyasalarda stratejiyi kullanmaktır. Üçüncüsü, işlem zaten kaybederken sekmeye "daha fazla alan vermek" için stopu taşımaktır; bu, hesaplanmış bir riski belirsiz bir riske dönüştürür.</p>
-<h2>Gerçek sermayeyle işlem yapmadan önce sekmeyi uygulamak</h2>
+<h2 id="gercek-sermayeyle-islem-yapmadan-once-sekmeyi-uygulamak">Gerçek sermayeyle işlem yapmadan önce sekmeyi uygulamak</h2>
 <p>Sekme davranışı oynak varlıklar ile daha istikrarlı varlıklar arasında oldukça değiştiğinden, stratejiyi canlı uygulamadan önce, fiyatın seçilen ortalamada kaç kez temiz bir şekilde sektiğini sayarak grafiğin geçmişini gözden geçirmekte fayda var. Bu, beklentiyi kalibre etmeye yardımcı olur: hareketli ortalamaya dayalı hiçbir strateji her seferinde isabet etmez ve işin bir kısmı, her şeyi bir seferde daha büyük pozisyonlarla geri kazanmaya çalışmadan, küçük ve kontrollü zararları sürecin bir parçası olarak kabul etmektir.</p>
-<h2>Yöntemin avantajları ve sınırlamaları</h2>
+<h2 id="yontemin-avantajları-ve-sınırlamaları">Yöntemin avantajları ve sınırlamaları</h2>
 <p>Hareketli ortalamada sekmenin başlıca avantajı sadeliktir: tek bir gösterge, tek bir giriş kuralı ve tek bir trend filtresi, yöntemi birçok ekrana veya aynı anda uyuşan birçok göstergeye bağlı olmadan takip etmeyi kolaylaştırır. Bu, işlemleri sonradan gözden geçirmeyi de kolaylaştırır, çünkü her girişin neden yapıldığı nettir.</p>
 <p>Başlıca sınırlama, tam olarak aynı madalyonun diğer yüzüdür: zaten kurulmuş bir trende bağlı olduğundan, strateji fiyatın "lehte sekeceği" baskın bir yön olmayan yatay piyasalarda iyi işlemez. Piyasanın trend etmeyi bırakıp yatay seyre girdiğini hızla fark etmek — genellikle hareketli ortalamanın kendisi eğimlenmeyi bırakıp yatay hale geldiğinde — yöntemin işlediği bağlamın dışında ısrar etmeyi önler.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de üstel hareketli ortalama (EMA) kesişimi</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -218,7 +257,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -282,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

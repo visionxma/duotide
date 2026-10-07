@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/vortex-gostergesi-nasil-yapilandirilir-ve-kullanilir/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Sayfa yolu">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/tr/">Ana Sayfa</a></li>
         <li><a href="/tr/blog/">Blog</a></li>
         <li><span aria-current="page">Vortex göstergesi: nasıl yapılandırılır ve kullanılır</span></li>
       </ol>
+      <a class="ap__voltar" href="/tr/blog/">Geri</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Göstergeler</span>
-        <h1>Vortex göstergesi: nasıl yapılandırılır ve kullanılır</h1>
-        <p class="bq-post__meta">Duotide Ekibi · <time datetime="2026-09-24">24.09.2026</time> · 4 dk okuma</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Vortex göstergesi, teknik analiz araçları arasında nadir görülen bir ilhamdan doğdu: yaratıcıları Etienne Botes ve Douglas Siepman, Avusturyalı mucit Viktor Schauberger'in su akışıyla ilgili gözlemlerine dayandılar ve finansal piyasa hareketlerinin doğada gözlemlenen vorteks örüntülerine benzeyebileceğini öne sürdüler. Pratikte, sonuç, benzetmenin ima ettiğinden daha basit yorumlanabilen, iki çizgili bir trend göstergesidir.</p><h2>Hesaplamanın arkasındaki fikir</h2><p>Vortex, mevcut mumun en düşüğü ile önceki mumun en yükseği arasındaki mesafeyi (yükseliş hareketi) ve mevcut mumun en yükseği ile önceki mumun en düşüğü arasındaki mesafeyi (düşüş hareketi) ölçer. Bu mesafelerden biri diğerine göre ne kadar büyükse, karşılık gelen yönlü hareket o kadar güçlüdür. Bir dönem boyunca (varsayılan olarak 14) yumuşatılmış bu iki ölçüm, göstergenin iki çizgisini oluşturur: VI+ (yükseliş hareketi) ve VI- (düşüş hareketi).</p><p>Hesaplama ayrıca her mumun gerçek aralığını da (ATR ve ADX'te kullanılan aynı kavram) dikkate alır; bu, mumlar arasında gap'ler olsa bile göstergenin hareketi yakalamasına yardımcı olur.</p><h2>Nasıl yapılandırılır</h2><p>Vortex, momentum (veya platforma bağlı olarak trend) göstergeleri kategorisindedir ve varsayılan olarak iki ana çizgi için 14 periyot kullanır. Aşırı alım ve aşırı satım seviyeleri genellikle sırasıyla 1,1 ve 0,9 olarak yapılandırılır, ancak bu iki seviyenin göstergenin okumasında, VI+ ve VI- çizgilerinin kendi aralarındaki kesişiminden daha az ağırlığı vardır.</p><h2>Sinyaller nasıl okunur</h2><ul><li><strong>Yükseliş sinyali</strong>: VI+ çizgisi VI-'nin altındayken üstüne çıkar ve üstünde kalır — yükseliş hareketinin baskın hale geldiğini gösterir.</li><li><strong>Düşüş sinyali</strong>: VI- çizgisi VI+'nın altındayken üstüne çıkar ve üstünde kalır — düşüş hareketinin baskın hale geldiğini gösterir.</li><li><strong>Çizgiler arası mesafe</strong>: kesişimden sonra VI+ ve VI- arasındaki boşluk ne kadar büyükse, devam eden trend o kadar güçlü kabul edilir.</li></ul><p>Bir örnek: VI-'nin haftalarca VI+'nın üzerinde olduğu (düşüş trendi) bir döviz çiftinde, VI+ VI-'nin üzerine çıkar ve iki çizgi arasındaki mesafe sonraki mumlarda artmaya başlar. Bu kombinasyon — kesişim artı mesafenin açılması — trendin yön değiştirdiğinin bir teyidi olarak okunur, sonraki mumda tersine dönebilecek izole bir kesişim olarak değil.</p><h2>Her kesişim bir girişe dönüşmemelidir</h2><p>VI+ ve VI- arasındaki bir kesişim, otomatik bir alım veya satım emri olarak değil, varlığa daha yakından dikkat etmek için bir davet olarak ele alınmalıdır: son fiyat davranışını kontrol etmek, yakında önemli bir destek veya direnç olup olmadığını değerlendirmek ve ancak o zaman işaret edilen yönde bir giriş düşünmek. Net bir trendi olmayan piyasalarda, kesişimler kısa sürede birkaç kez tekrarlanma eğilimindedir, kullanılabilir bir hareket üretmeden — bu, pratik olarak yatay piyasada her trend göstergesini etkileyen aynı sahte sinyal sorunudur.</p><h2>Vortex'i diğer göstergelerle birleştirmek</h2><p>Sadece trendi ölçtüğünden, Vortex, esasen aynı şeyi ölçen başka bir trend göstergesiyle değil, farklı nitelikte bir göstergeyle birleştirildiğinde fayda sağlar. MACD ve ADX genellikle iyi tamamlayıcılar olarak anılır: MACD momentum okumasını güçlendirir, ADX ise Vortex kesişiminin işaret ettiği trend gücünün gerçekten bir girişi haklı çıkaracak kadar önemli olup olmadığını teyit etmeye yardımcı olur.</p><h2>Risk yönetimi hâlâ gereklidir</h2><p>Herhangi bir trend göstergesi gibi, Vortex her zaman isabet etmez ve üzerine kurulmuş bir strateji, girişten önce belirlenmiş bir stop-loss ve mantıklı olduğunda bir kâr al hedefi içermelidir. Hiçbir araç, arkasındaki mantık ne kadar ayrıntılı olursa olsun, her zaman doğru sinyaller vermez — ve Vortex'i başka türlü ele almak, herhangi bir trend stratejisinin birçok işlem boyunca gerçekte nasıl davrandığını görmezden gelmek olur.</p><p>Gerçek işlemlere güvenmeden önce göstergeyi farklı varlıklarda ve vadelerde test etmekte de fayda var: bir hisse senedinin günlük grafiğinde iyi işleyen 14 periyot, iki piyasa arasındaki volatilite ve davranış farkı nedeniyle bir döviz çiftinin gün içi grafiğinde aynı sonuçları üretmeyebilir.</p>
-        <div class="bq-post__cta">
-          <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="indicador-vortex-como-configurar-e-usar" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Bağlantı kopyalandı">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
+            </div>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <span class="bq__tag">Göstergeler</span>
+            <h1>Vortex göstergesi: nasıl yapılandırılır ve kullanılır</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Ekibi</strong><small>Editör ekibi</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="İçindekiler">
+              <p class="ap__indice-tit">İçindekiler</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#hesaplamanın-arkasındaki-fikir">Hesaplamanın arkasındaki fikir</a></li>
+                <li><a href="#nasıl-yapılandırılır">Nasıl yapılandırılır</a></li>
+                <li><a href="#sinyaller-nasıl-okunur">Sinyaller nasıl okunur</a></li>
+                <li><a href="#her-kesisim-bir-girise-donusmemelidir">Her kesişim bir girişe dönüşmemelidir</a></li>
+                <li><a href="#vortex-i-diger-gostergelerle-birlestirmek">Vortex'i diğer göstergelerle birleştirmek</a></li>
+                <li><a href="#risk-yonetimi-hala-gereklidir">Risk yönetimi hâlâ gereklidir</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Başa dön</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Vortex göstergesi, teknik analiz araçları arasında nadir görülen bir ilhamdan doğdu: yaratıcıları Etienne Botes ve Douglas Siepman, Avusturyalı mucit Viktor Schauberger'in su akışıyla ilgili gözlemlerine dayandılar ve finansal piyasa hareketlerinin doğada gözlemlenen vorteks örüntülerine benzeyebileceğini öne sürdüler. Pratikte, sonuç, benzetmenin ima ettiğinden daha basit yorumlanabilen, iki çizgili bir trend göstergesidir.</p><h2 id="hesaplamanın-arkasındaki-fikir">Hesaplamanın arkasındaki fikir</h2><p>Vortex, mevcut mumun en düşüğü ile önceki mumun en yükseği arasındaki mesafeyi (yükseliş hareketi) ve mevcut mumun en yükseği ile önceki mumun en düşüğü arasındaki mesafeyi (düşüş hareketi) ölçer. Bu mesafelerden biri diğerine göre ne kadar büyükse, karşılık gelen yönlü hareket o kadar güçlüdür. Bir dönem boyunca (varsayılan olarak 14) yumuşatılmış bu iki ölçüm, göstergenin iki çizgisini oluşturur: VI+ (yükseliş hareketi) ve VI- (düşüş hareketi).</p><p>Hesaplama ayrıca her mumun gerçek aralığını da (ATR ve ADX'te kullanılan aynı kavram) dikkate alır; bu, mumlar arasında gap'ler olsa bile göstergenin hareketi yakalamasına yardımcı olur.</p><h2 id="nasıl-yapılandırılır">Nasıl yapılandırılır</h2><p>Vortex, momentum (veya platforma bağlı olarak trend) göstergeleri kategorisindedir ve varsayılan olarak iki ana çizgi için 14 periyot kullanır. Aşırı alım ve aşırı satım seviyeleri genellikle sırasıyla 1,1 ve 0,9 olarak yapılandırılır, ancak bu iki seviyenin göstergenin okumasında, VI+ ve VI- çizgilerinin kendi aralarındaki kesişiminden daha az ağırlığı vardır.</p><h2 id="sinyaller-nasıl-okunur">Sinyaller nasıl okunur</h2><ul><li><strong>Yükseliş sinyali</strong>: VI+ çizgisi VI-'nin altındayken üstüne çıkar ve üstünde kalır — yükseliş hareketinin baskın hale geldiğini gösterir.</li><li><strong>Düşüş sinyali</strong>: VI- çizgisi VI+'nın altındayken üstüne çıkar ve üstünde kalır — düşüş hareketinin baskın hale geldiğini gösterir.</li><li><strong>Çizgiler arası mesafe</strong>: kesişimden sonra VI+ ve VI- arasındaki boşluk ne kadar büyükse, devam eden trend o kadar güçlü kabul edilir.</li></ul><p>Bir örnek: VI-'nin haftalarca VI+'nın üzerinde olduğu (düşüş trendi) bir döviz çiftinde, VI+ VI-'nin üzerine çıkar ve iki çizgi arasındaki mesafe sonraki mumlarda artmaya başlar. Bu kombinasyon — kesişim artı mesafenin açılması — trendin yön değiştirdiğinin bir teyidi olarak okunur, sonraki mumda tersine dönebilecek izole bir kesişim olarak değil.</p><h2 id="her-kesisim-bir-girise-donusmemelidir">Her kesişim bir girişe dönüşmemelidir</h2><p>VI+ ve VI- arasındaki bir kesişim, otomatik bir alım veya satım emri olarak değil, varlığa daha yakından dikkat etmek için bir davet olarak ele alınmalıdır: son fiyat davranışını kontrol etmek, yakında önemli bir destek veya direnç olup olmadığını değerlendirmek ve ancak o zaman işaret edilen yönde bir giriş düşünmek. Net bir trendi olmayan piyasalarda, kesişimler kısa sürede birkaç kez tekrarlanma eğilimindedir, kullanılabilir bir hareket üretmeden — bu, pratik olarak yatay piyasada her trend göstergesini etkileyen aynı sahte sinyal sorunudur.</p><h2 id="vortex-i-diger-gostergelerle-birlestirmek">Vortex'i diğer göstergelerle birleştirmek</h2><p>Sadece trendi ölçtüğünden, Vortex, esasen aynı şeyi ölçen başka bir trend göstergesiyle değil, farklı nitelikte bir göstergeyle birleştirildiğinde fayda sağlar. MACD ve ADX genellikle iyi tamamlayıcılar olarak anılır: MACD momentum okumasını güçlendirir, ADX ise Vortex kesişiminin işaret ettiği trend gücünün gerçekten bir girişi haklı çıkaracak kadar önemli olup olmadığını teyit etmeye yardımcı olur.</p><h2 id="risk-yonetimi-hala-gereklidir">Risk yönetimi hâlâ gereklidir</h2><p>Herhangi bir trend göstergesi gibi, Vortex her zaman isabet etmez ve üzerine kurulmuş bir strateji, girişten önce belirlenmiş bir stop-loss ve mantıklı olduğunda bir kâr al hedefi içermelidir. Hiçbir araç, arkasındaki mantık ne kadar ayrıntılı olursa olsun, her zaman doğru sinyaller vermez — ve Vortex'i başka türlü ele almak, herhangi bir trend stratejisinin birçok işlem boyunca gerçekte nasıl davrandığını görmezden gelmek olur.</p><p>Gerçek işlemlere güvenmeden önce göstergeyi farklı varlıklarda ve vadelerde test etmekte de fayda var: bir hisse senedinin günlük grafiğinde iyi işleyen 14 periyot, iki piyasa arasındaki volatilite ve davranış farkı nedeniyle bir döviz çiftinin gün içi grafiğinde aynı sonuçları üretmeyebilir.</p>
+            <div class="bq-post__cta">
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
+            </div>
+            <div class="ap__fim">
+              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Ekibi</strong><p>Duotide editör ekibi bu blogdaki rehberleri ve haberleri yazar: piyasaların nasıl işlediği, risk yönetimi ve platformun kullanımı. Buradaki hiçbir içerik yatırım tavsiyesi değildir.</p></div>
+              <a class="btn ap__equipe" href="/tr/hakkinda/">Ekibi tanıyın</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Bunları da okuyun</h2>
+        <aside class="ap__rel">
+          <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

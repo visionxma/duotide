@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/parabolic-sar-comment-utiliser-lindicateur/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "Indicateurs",
       "author": {
@@ -172,46 +172,83 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Parabolic SAR : comment utiliser l'indicateur de tendance</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicateurs</span>
-        <h1>Parabolic SAR : comment utiliser l'indicateur de tendance</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Parmi les indicateurs de tendance les plus visuels de l'analyse technique se trouve le Parabolic SAR, créé par l'ingénieur J. Welles Wilder — le même auteur que le RSI et l'ATR. Sur le graphique, il apparaît comme une séquence de points au-dessus ou en dessous des bougies, et cette position à elle seule livre déjà une bonne partie de l'information : des points sous le prix indiquent une tendance haussière, des points au-dessus indiquent une tendance baissière.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="parabolic-sar-como-usar-indicador" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-28">28 septembre 2026</time></p>
+            <span class="bq__tag">Indicateurs</span>
+            <h1>Parabolic SAR : comment utiliser l'indicateur de tendance</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#comment-l-indicateur-est-calcule">Comment l'indicateur est calculé</a></li>
+                <li><a href="#un-exemple-numerique">Un exemple numérique</a></li>
+                <li><a href="#quand-l-indicateur-signale-un-retournement">Quand l'indicateur signale un retournement</a></li>
+                <li><a href="#points-forts-et-limites">Points forts et limites</a></li>
+                <li><a href="#ajuster-le-facteur-d-acceleration">Ajuster le Facteur d'Accélération</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Parmi les indicateurs de tendance les plus visuels de l'analyse technique se trouve le Parabolic SAR, créé par l'ingénieur J. Welles Wilder — le même auteur que le RSI et l'ATR. Sur le graphique, il apparaît comme une séquence de points au-dessus ou en dessous des bougies, et cette position à elle seule livre déjà une bonne partie de l'information : des points sous le prix indiquent une tendance haussière, des points au-dessus indiquent une tendance baissière.</p>
 <p>Le sigle SAR vient de « Stop and Reverse » (arrêter et inverser), ce qui livre déjà la proposition originale de l'indicateur : signaler le moment de clôturer une position et d'envisager d'ouvrir l'opération inverse.</p>
-<h2>Comment l'indicateur est calculé</h2>
+<h2 id="comment-l-indicateur-est-calcule">Comment l'indicateur est calculé</h2>
 <p>Le calcul du Parabolic SAR utilise trois éléments : la valeur du SAR de la période précédente, le Point Extrême (EP, le plus haut ou le plus bas le plus récent pendant la tendance) et le Facteur d'Accélération (AF), qui commence à 0,02 et augmente de 0,02 à chaque fois qu'un nouveau Point Extrême est atteint, jusqu'à un plafond standard de 0,20.</p>
 <p>La formule est : nouveau SAR = SAR précédent + AF × (EP − SAR précédent). Cela signifie qu'au début d'une tendance, le SAR se déplace lentement, et à mesure que le Facteur d'Accélération augmente, les points se rapprochent du prix plus rapidement — d'où la forme « parabolique » qui donne son nom à l'indicateur.</p>
-<h2>Un exemple numérique</h2>
+<h2 id="un-exemple-numerique">Un exemple numérique</h2>
 <p>Supposons une action en tendance haussière, avec le SAR de la veille à R$ 41,00, le Point Extrême (le plus haut sommet de la tendance jusqu'à présent) à R$ 45,00 et le Facteur d'Accélération à 0,04 après deux avancées de sommet. Le nouveau SAR est de :</p>
 <p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16.</p>
 <p>Le lendemain, si l'action fait un nouveau sommet à R$ 46,00, le Point Extrême monte à cette valeur et le Facteur d'Accélération avance à 0,06. Le SAR suivant serait R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45. Notez comment le point monte de plus en plus vite à chaque nouvelle avancée, « poursuivant » le prix.</p>
-<h2>Quand l'indicateur signale un retournement</h2>
+<h2 id="quand-l-indicateur-signale-un-retournement">Quand l'indicateur signale un retournement</h2>
 <p>Tant que le prix reste au-dessus de la ligne de points, le SAR continue de monter avec la tendance. Au moment où le prix clôture en dessous de la valeur du SAR, l'indicateur s'inverse : les points commencent à apparaître au-dessus des bougies, le Facteur d'Accélération revient à 0,02 et le Point Extrême est recalculé sur la base du plus bas le plus récent, désormais pour une tendance baissière.</p>
 <p>C'est cette inversion — le « stop and reverse » du nom — que de nombreux traders utilisent à la fois comme signal de sortie d'une position acheteuse et comme signal d'entrée vendeuse possible, selon la stratégie adoptée.</p>
-<h2>Points forts et limites</h2>
+<h2 id="points-forts-et-limites">Points forts et limites</h2>
 <p>Le Parabolic SAR fonctionne bien sur les marchés avec une tendance définie et de longue durée, où les points accompagnent le mouvement sans générer beaucoup de faux signaux. Le problème apparaît sur les marchés sans direction claire : comme l'indicateur est toujours « allumé », changeant de position à chaque oscillation, il peut générer plusieurs signaux de retournement à la suite qui ne se confirment pas, un comportement connu sous le nom de whipsaw.</p>
 <p>C'est pourquoi une bonne partie des traders utilise le SAR conjointement avec un indicateur de tendance, comme une moyenne mobile de plus longue période, en n'appliquant les signaux du SAR que lorsqu'ils sont alignés avec la direction plus large du marché. La plateforme Duotide permet de tracer le Parabolic SAR avec d'autres indicateurs sur le même graphique, ce qui facilite ce type de comparaison avant toute décision.</p>
-<h2>Ajuster le Facteur d'Accélération</h2>
+<h2 id="ajuster-le-facteur-d-acceleration">Ajuster le Facteur d'Accélération</h2>
 <p>La plupart des plateformes permettent de modifier les valeurs par défaut de 0,02 (pas) et 0,20 (plafond) du Facteur d'Accélération. Réduire le pas à 0,01 rend l'indicateur plus lent à réagir, générant moins de signaux de retournement, mais retardant aussi la sortie en cas de changement réel de tendance. Augmenter le pas à 0,03 ou plus fait l'inverse : le SAR réagit plus vite au prix, courant plus près des bougies, au prix de davantage de faux signaux sur les marchés agités.</p>
 <p>Il n'existe pas de réglage universellement meilleur — le choix dépend de l'actif et de l'unité de temps utilisée. Un actif historiquement plus volatil tend à bénéficier d'un pas plus petit, qui filtre une partie du bruit ; un actif avec des tendances plus douces et constantes peut bien fonctionner avec les valeurs par défaut. Tester différents réglages sur des données historiques, avant d'appliquer un ajustement à une opération réelle, aide à comprendre comment l'indicateur se comporte sur l'actif spécifique analysé.</p>
 <p>Comme pour tout indicateur technique, le Parabolic SAR travaille avec des données de prix passées et ne garantit pas le comportement futur du marché. Définissez toujours la taille de la position et le stop loss avant d'entrer dans une opération, et traitez les signaux de l'indicateur comme un point de départ pour l'analyse, pas comme un ordre automatique d'achat ou de vente.</p>
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-28">28 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/quest-ce-que-lindicateur-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'indicateur ADX et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/quest-ce-que-loscillateur-stochastique/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'oscillateur stochastique et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -219,7 +256,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -283,6 +320,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

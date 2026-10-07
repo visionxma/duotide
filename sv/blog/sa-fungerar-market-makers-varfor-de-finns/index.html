@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/sa-fungerar-market-makers-varfor-de-finns/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Marknad",
       "author": {
@@ -172,42 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Navigeringsspår">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/sv/">Hem</a></li>
         <li><a href="/sv/blog/">Blogg</a></li>
         <li><span aria-current="page">Så fungerar market makers och varför de existerar</span></li>
       </ol>
+      <a class="ap__voltar" href="/sv/blog/">Tillbaka</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Marknad</span>
-        <h1>Så fungerar market makers och varför de existerar</h1>
-        <p class="bq-post__meta">Duotide-teamet · <time datetime="2026-09-24">2026-09-24</time> · 4 min läsning</p>
-        <figure class="foto"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>För att en köp- eller säljorder ska kunna utföras måste det finnas någon på andra sidan, villig att handla just då. Hos många tillgångar, särskilt de mindre handlade, sker inte det alltid spontant — och det är där market makern, marknadsgararen, kommer in.</p>
-<h2>Vad en marknadsgarare åtar sig att göra</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-funcionam-os-market-makers" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Länken kopierad">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
+            </div>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-27">27 september 2026</time></p>
+            <span class="bq__tag">Marknad</span>
+            <h1>Så fungerar market makers och varför de existerar</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-teamet</strong><small>Redaktionen</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Innehåll">
+              <p class="ap__indice-tit">Innehåll</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#vad-en-marknadsgarare-atar-sig-att-gora">Vad en marknadsgarare åtar sig att göra</a></li>
+                <li><a href="#varifran-marknadsgararens-vinst-kommer">Varifrån marknadsgararens vinst kommer</a></li>
+                <li><a href="#varfor-den-har-tjansten-behovs">Varför den här tjänsten behövs</a></li>
+                <li><a href="#hur-marknadsgararens-risk-hanteras">Hur marknadsgararens risk hanteras</a></li>
+                <li><a href="#vad-detta-betyder-for-den-som-handlar-i-detaljhandeln">Vad detta betyder för den som handlar i detaljhandeln</a></li>
+                <li><a href="#skillnaden-mellan-marknadsgarare-och-exekverande-maklare">Skillnaden mellan marknadsgarare och exekverande mäklare</a></li>
+                <li><a href="#en-strukturell-del-inte-ett-hot">En strukturell del, inte ett hot</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Till toppen</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>För att en köp- eller säljorder ska kunna utföras måste det finnas någon på andra sidan, villig att handla just då. Hos många tillgångar, särskilt de mindre handlade, sker inte det alltid spontant — och det är där market makern, marknadsgararen, kommer in.</p>
+<h2 id="vad-en-marknadsgarare-atar-sig-att-gora">Vad en marknadsgarare åtar sig att göra</h2>
 <p>En market maker är en institution — bank, mäklarfirma eller specialiserat företag — som åtar sig att kontinuerligt erbjuda både en köpsida och en säljsida för en viss tillgång, och garanterar att det alltid finns någon villig att handla med den som vill köpa eller sälja just då. Det åtagandet är vad som upprätthåller likviditeten hos många tillgångar, särskilt utanför marknadens naturligt mest aktiva tider.</p>
-<h2>Varifrån marknadsgararens vinst kommer</h2>
+<h2 id="varifran-marknadsgararens-vinst-kommer">Varifrån marknadsgararens vinst kommer</h2>
 <p>Marknadsgararens huvudsakliga vinst kommer från spreaden — skillnaden mellan det köp- och säljpris den själv erbjuder. Om den köper till R$ 24,98 och säljer till R$ 25,02, tjänar den R$ 0,04 per enhet som handlas på båda sidorna, upprepade gånger under dagen, i stor volym. Den affärsmodellen bygger på att omsätta hög volym med liten marginal per affär, inte på att gissa rätt om prisets riktning — marknadsgararen förblir i teorin neutral mellan de två sidorna, och fångar bara spreaden.</p>
-<h2>Varför den här tjänsten behövs</h2>
+<h2 id="varfor-den-har-tjansten-behovs">Varför den här tjänsten behövs</h2>
 <p>Utan någon som kontinuerligt garanterar båda sidorna skulle tillgångar med lite naturlig volym ha mycket bredare och oförutsägbara spreadar, med priset som svänger kraftigt vid varje stor order — eftersom det skulle saknas motpart tillgänglig i rätt ögonblick. Närvaron av marknadsgarare minskar den friktionen, vilket gör det lättare att köpa och sälja snabbt, till ett mer förutsägbart pris, även i tillgångar som inte har en enorm naturlig handelsvolym.</p>
-<h2>Hur marknadsgararens risk hanteras</h2>
+<h2 id="hur-marknadsgararens-risk-hanteras">Hur marknadsgararens risk hanteras</h2>
 <p>Även om målet är att förbli neutral hamnar marknadsgararen tillfälligt med kvarvarande positioner — lite mer köpt eller sålt än den skulle önska, beroende på det orderflöde den tar emot. För att hantera den risken justerar den kontinuerligt de priser den erbjuder: om den samlar på sig mer köpt position än önskat tenderar den att sänka säljpriset något för att locka fler köpare och balansera om sin position, och tvärtom när den är mer såld. Den kontinuerliga justeringen är en del av anledningen till att priset rör sig så flytande under handelsdagen.</p>
-<h2>Vad detta betyder för den som handlar i detaljhandeln</h2>
+<h2 id="vad-detta-betyder-for-den-som-handlar-i-detaljhandeln">Vad detta betyder för den som handlar i detaljhandeln</h2>
 <p>Att förstå den här funktionen hjälper till att tolka varför spreaden vidgas vid viktiga nyhetstillfällen: risken med att hålla båda sidorna öppna ökar när priset kan hoppa kraftigt, och marknadsgararen skyddar sig genom att vidga skillnaden mellan köp och sälj i sådana stunder. Det förklarar också varför mindre likvida tillgångar, utan en aktiv marknadsgarare, ofta har bredare spreadar hela tiden — det finns ingen som konstant absorberar den risken.</p>
-<h2>Skillnaden mellan marknadsgarare och exekverande mäklare</h2>
+<h2 id="skillnaden-mellan-marknadsgarare-och-exekverande-maklare">Skillnaden mellan marknadsgarare och exekverande mäklare</h2>
 <p>Det är vanligt att blanda ihop marknadsgararens roll med den mäklare du använder för att skicka order. Mäklaren är kanalen genom vilken din order når marknaden; marknadsgararen är den som, på andra sidan, garanterar att det finns en motpart tillgänglig att handla med. I vissa modeller kan själva mäklaren också agera som marknadsgarare för vissa tillgångar, men det är reglerat och informerat, och ändrar inte den centrala principen: någon måste åta sig båda sidorna för att likviditeten ska finnas konstant.</p>
-<h2>En strukturell del, inte ett hot</h2>
+<h2 id="en-strukturell-del-inte-ett-hot">En strukturell del, inte ett hot</h2>
 <p>Närvaron av marknadsgarare är en strukturell egenskap hos varje organiserad marknad, reglerad av börser och tillsynsmyndigheter, och bör inte förväxlas med prismanipulation. Deras roll är att tillhandahålla den likviditet som gör att order kan utföras snabbt — slutpriset för vilken tillgång som helst förblir resultatet av jämvikten mellan alla köpare och säljare som deltar på marknaden, inte ett isolerat beslut av en enda part. Att förstå den här mekaniken hjälper detaljhandelstradern att bättre tolka varför spreaden varierar under dagen, i stället för att se den variationen som något godtyckligt.</p>
-        <div class="bq-post__cta">
-          <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            <div class="bq-post__cta">
+              <p><strong>Öva innan du tar risker.</strong> Öppna ditt Duotide-konto och testa dina idéer på demokontot med R$ 10 000 i virtuella medel.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
+            </div>
+            <div class="ap__fim">
+              <p>Uppdaterad: <time datetime="2026-09-27">27 sep. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-teamet</strong><p>Duotides redaktion skriver guiderna och nyheterna i den här bloggen: hur marknaden fungerar, riskhantering och hur plattformen används. Inget här är investeringsrådgivning.</p></div>
+              <a class="btn ap__equipe" href="/sv/om-denna-webbplats/">Möt teamet</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Läs också</h2>
+        <aside class="ap__rel">
+          <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/anthropics-borsintroduktion-fakta-och-rykte/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Anthropics börsintroduktion: vad som är fakta och vad som är rykte</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/handel-utanfor-ordinarie-handelstid-after-hours/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad handel utanför ordinarie handelstid (after-hours) är</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
@@ -215,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/en/blog/detrended-price-oscillator-dpo/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "Indicators",
       "author": {
@@ -172,28 +172,68 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/en/">Home</a></li>
         <li><a href="/en/blog/">Blog</a></li>
         <li><span aria-current="page">DPO: How to Use the Detrended Price Oscillator</span></li>
       </ol>
+      <a class="ap__voltar" href="/en/blog/">Back</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicators</span>
-        <h1>DPO: How to Use the Detrended Price Oscillator</h1>
-        <p class="bq-post__meta">Duotide Team · <time datetime="2026-09-24">09/24/2026</time> · 4 min read</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Most trend indicators are designed to track price in real time. The <em>Detrended Price Oscillator</em>, known by the acronym DPO, does the opposite on purpose: it removes the chart's long-term trend to expose only the short- and medium-term cycles that stay hidden behind it.</p><h2>The problem the DPO tries to solve</h2><p>When an asset is in a strong uptrend, it's common for it to form smaller peaks and valleys within that overall rise. Looking only at raw price, it's hard to visually separate these smaller cycles from the underlying move. The DPO tackles this problem by comparing the current price with a moving average shifted backward in time, removing much of the long-term trend component from the equation.</p><h2>How the calculation works</h2><p>The formula takes a simple moving average of a given number of periods — 20, for example — and shifts it backward by roughly half that period plus one. Then it subtracts this shifted average from each candle's closing price. The result is a line that oscillates above and below zero, highlighting peaks and valleys that represent short-term cycles, without the trend's overall slope getting in the way of the reading.</p><h2>What the DPO line reveals</h2><p>When the DPO is at positive values, the price is above the shifted average, indicating a moment of strength within the observed short-term cycle. When it's at negative values, the price is below that average, indicating weakness within the same cycle. The indicator's practical value lies in helping identify the approximate duration of these cycles — counting how many periods separate one DPO peak from another — which can guide, for example, the expected interval between one entry and another in a cycle-based strategy.</p><h2>An example with numbers</h2><p>Suppose an asset with a 20-period simple moving average shifted 11 periods back, currently at R$ 45.00. If the most recent candle's closing price is R$ 47.25, the DPO value at that point is 47.25 − 45.00 = 2.25, a positive value indicating the price is R$ 2.25 above the shifted reference average. If, a few weeks later, the same calculation results in -1.80, that shows the short-term cycle flipped from strength to weakness within that observed period — information that's much harder to notice looking only at raw price during a continuous uptrend.</p><h2>Why the DPO isn't for reading trend</h2><p>Precisely because its calculation removes the trend on purpose, the DPO shouldn't be used to decide whether an asset is rising or falling long-term — for that, traditional trend indicators remain more suitable. Another point of attention is the time shift: since the average used in the calculation is shifted backward, the DPO tends to be "delayed" relative to the most recent candle, which reinforces its role as a tool for identifying past cycles, not an early signal of the next move.</p><h2>Combining the DPO with other tools</h2><p>A common way to use it is combining the DPO with a longer-term trend indicator: the trend indicator sets the overall direction (up, down, or sideways), and the DPO helps identify, within that direction, the moments when the short-term cycle is favorable for an entry aligned with the main trend — for example, entering an uptrend only when the DPO comes out of negative values and starts rising, suggesting the start of a new strength cycle within the bigger trend.</p><h2>Practical precautions</h2><p>Like any tool based on shifted averages, the DPO works best on assets that historically show some reasonably regular cyclical pattern. In very erratic markets, with no identifiable cycle, the indicator can generate readings that flip signal very often, with no clear practical use.</p><h2>To wrap up</h2><p>The DPO is a niche tool, specifically useful for those who want to study short- and medium-term cycles hidden within a bigger trend, and shouldn't replace traditional trend indicators when deciding the market's overall direction. Testing it side by side with the price chart, watching the distance between peaks and valleys on assets you already follow, is the best way to understand whether it adds real value to your analysis.</p>
-        <div class="bq-post__cta">
-          <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="oscilador-de-preco-destendenciado-dpo" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copied">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">Sep 24, 2026</time><span class="ap__sep">4 min read</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span>
+            </div>
+            <p class="ap__atual">Updated: <time datetime="2026-09-28">September 28, 2026</time></p>
+            <span class="bq__tag">Indicators</span>
+            <h1>DPO: How to Use the Detrended Price Oscillator</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Team</strong><small>Editorial team</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Contents">
+              <p class="ap__indice-tit">Contents</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#the-problem-the-dpo-tries-to-solve">The problem the DPO tries to solve</a></li>
+                <li><a href="#how-the-calculation-works">How the calculation works</a></li>
+                <li><a href="#what-the-dpo-line-reveals">What the DPO line reveals</a></li>
+                <li><a href="#an-example-with-numbers">An example with numbers</a></li>
+                <li><a href="#why-the-dpo-isn-t-for-reading-trend">Why the DPO isn't for reading trend</a></li>
+                <li><a href="#combining-the-dpo-with-other-tools">Combining the DPO with other tools</a></li>
+                <li><a href="#practical-precautions">Practical precautions</a></li>
+                <li><a href="#to-wrap-up">To wrap up</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Most trend indicators are designed to track price in real time. The <em>Detrended Price Oscillator</em>, known by the acronym DPO, does the opposite on purpose: it removes the chart's long-term trend to expose only the short- and medium-term cycles that stay hidden behind it.</p><h2 id="the-problem-the-dpo-tries-to-solve">The problem the DPO tries to solve</h2><p>When an asset is in a strong uptrend, it's common for it to form smaller peaks and valleys within that overall rise. Looking only at raw price, it's hard to visually separate these smaller cycles from the underlying move. The DPO tackles this problem by comparing the current price with a moving average shifted backward in time, removing much of the long-term trend component from the equation.</p><h2 id="how-the-calculation-works">How the calculation works</h2><p>The formula takes a simple moving average of a given number of periods — 20, for example — and shifts it backward by roughly half that period plus one. Then it subtracts this shifted average from each candle's closing price. The result is a line that oscillates above and below zero, highlighting peaks and valleys that represent short-term cycles, without the trend's overall slope getting in the way of the reading.</p><h2 id="what-the-dpo-line-reveals">What the DPO line reveals</h2><p>When the DPO is at positive values, the price is above the shifted average, indicating a moment of strength within the observed short-term cycle. When it's at negative values, the price is below that average, indicating weakness within the same cycle. The indicator's practical value lies in helping identify the approximate duration of these cycles — counting how many periods separate one DPO peak from another — which can guide, for example, the expected interval between one entry and another in a cycle-based strategy.</p><h2 id="an-example-with-numbers">An example with numbers</h2><p>Suppose an asset with a 20-period simple moving average shifted 11 periods back, currently at R$ 45.00. If the most recent candle's closing price is R$ 47.25, the DPO value at that point is 47.25 − 45.00 = 2.25, a positive value indicating the price is R$ 2.25 above the shifted reference average. If, a few weeks later, the same calculation results in -1.80, that shows the short-term cycle flipped from strength to weakness within that observed period — information that's much harder to notice looking only at raw price during a continuous uptrend.</p><h2 id="why-the-dpo-isn-t-for-reading-trend">Why the DPO isn't for reading trend</h2><p>Precisely because its calculation removes the trend on purpose, the DPO shouldn't be used to decide whether an asset is rising or falling long-term — for that, traditional trend indicators remain more suitable. Another point of attention is the time shift: since the average used in the calculation is shifted backward, the DPO tends to be "delayed" relative to the most recent candle, which reinforces its role as a tool for identifying past cycles, not an early signal of the next move.</p><h2 id="combining-the-dpo-with-other-tools">Combining the DPO with other tools</h2><p>A common way to use it is combining the DPO with a longer-term trend indicator: the trend indicator sets the overall direction (up, down, or sideways), and the DPO helps identify, within that direction, the moments when the short-term cycle is favorable for an entry aligned with the main trend — for example, entering an uptrend only when the DPO comes out of negative values and starts rising, suggesting the start of a new strength cycle within the bigger trend.</p><h2 id="practical-precautions">Practical precautions</h2><p>Like any tool based on shifted averages, the DPO works best on assets that historically show some reasonably regular cyclical pattern. In very erratic markets, with no identifiable cycle, the indicator can generate readings that flip signal very often, with no clear practical use.</p><h2 id="to-wrap-up">To wrap up</h2><p>The DPO is a niche tool, specifically useful for those who want to study short- and medium-term cycles hidden within a bigger trend, and shouldn't replace traditional trend indicators when deciding the market's overall direction. Testing it side by side with the price chart, watching the distance between peaks and valleys on assets you already follow, is the best way to understand whether it adds real value to your analysis.</p>
+            <div class="bq-post__cta">
+              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
+            </div>
+            <div class="ap__fim">
+              <p>Updated: <time datetime="2026-09-28">Sep 28, 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span><button class="ap__compartilhar" type="button">Share <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Team</strong><p>The Duotide editorial team writes the guides and news on this blog: how markets work, risk management and using the platform. Nothing here is investment advice.</p></div>
+              <a class="btn ap__equipe" href="/en/about/">Meet the team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Read also</h2>
+        <aside class="ap__rel">
+          <h2>Related articles</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/en/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">What the ADX Indicator Is and How It Works</span><span class="bq__meta">09/24/2026 · 4 min read</span></a>
             <a class="bq__card" href="/en/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">What the Stochastic Oscillator Is and How It Works</span><span class="bq__meta">09/24/2026 · 4 min read</span></a>
@@ -201,7 +241,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +305,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

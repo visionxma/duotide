@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/id/blog/kalkulator-stop-loss-dengan-atr/",
       "inLanguage": "id",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Manajemen risiko",
       "author": {
@@ -172,30 +172,58 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Jejak navigasi">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/id/">Beranda</a></li>
         <li><a href="/id/blog/">Blog</a></li>
         <li><span aria-current="page">Kalkulator Stop Loss dengan ATR: Cara Menentukan Jaraknya</span></li>
       </ol>
+      <a class="ap__voltar" href="/id/blog/">Kembali</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Manajemen risiko</span>
-        <h1>Kalkulator Stop Loss dengan ATR: Cara Menentukan Jaraknya</h1>
-        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 menit baca</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-stop-loss-com-atr" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Tautan disalin">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Sep 2026</time><span class="ap__sep">4 menit baca</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> kali dilihat</span></span>
+            </div>
+            <p class="ap__atual">Diperbarui: <time datetime="2026-09-27">27 September 2026</time></p>
+            <span class="bq__tag">Manajemen risiko</span>
+            <h1>Kalkulator Stop Loss dengan ATR: Cara Menentukan Jaraknya</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Tim Duotide</strong><small>Tim editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Daftar isi">
+              <p class="ap__indice-tit">Daftar isi</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#apa-yang-diukur-atr">Apa yang Diukur ATR</a></li>
+                <li><a href="#rumus-stop-berbasis-atr">Rumus Stop Berbasis ATR</a></li>
+                <li><a href="#contoh-terpecahkan-dalam-r">Contoh Terpecahkan dalam R$</a></li>
+                <li><a href="#atr-tidak-menggantikan-struktur-grafik">ATR Tidak Menggantikan Struktur Grafik</a></li>
+                <li><a href="#tidak-ada-pengali-yang-sempurna">Tidak Ada Pengali yang Sempurna</a></li>
+                <li><a href="#waspadai-gap-dan-eksekusi">Waspadai Gap dan Eksekusi</a></li>
+                <li><a href="#pengingat-terakhir-sebelum-bertransaksi">Pengingat Terakhir Sebelum Bertransaksi</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Kembali ke atas</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>Salah satu keraguan paling umum bagi yang baru mulai bertransaksi adalah pada jarak berapa menempatkan stop loss. Menempatkannya terlalu dekat meningkatkan peluang terkena stop oleh fluktuasi normal aset. Menempatkannya terlalu jauh meningkatkan kerugian ketika transaksi salah arah. Cara praktis menjawab pertanyaan ini adalah menggunakan ATR, Average True Range, sebagai acuan volatilitas terkini untuk menghitung jarak stop.</p>
-<h2>Apa yang Diukur ATR</h2>
+<h2 id="apa-yang-diukur-atr">Apa yang Diukur ATR</h2>
 <p>ATR mengukur besaran rata-rata pergerakan harga dalam sejumlah periode tertentu, biasanya 14. ATR tidak menunjukkan arah, hanya seberapa jauh aset biasanya bergerak. Untuk setiap candle, dihitung True Range, yaitu nilai terbesar di antara tiga opsi ini: selisih antara titik tertinggi dan terendah candle saat ini, selisih antara titik tertinggi saat ini dan penutupan sebelumnya, dan selisih antara titik terendah saat ini dan penutupan sebelumnya. ATR adalah rata-rata nilai-nilai ini sepanjang periode yang dipilih.</p>
-<h2>Rumus Stop Berbasis ATR</h2>
+<h2 id="rumus-stop-berbasis-atr">Rumus Stop Berbasis ATR</h2>
 <p><strong>Jarak stop = ATR x pengali</strong></p>
 <p>Untuk transaksi beli: <strong>Stop = harga entry - jarak stop</strong></p>
 <p>Untuk transaksi jual: <strong>Stop = harga entry + jarak stop</strong></p>
-<h2>Contoh Terpecahkan dalam R$</h2>
+<h2 id="contoh-terpecahkan-dalam-r">Contoh Terpecahkan dalam R$</h2>
 <p>Misalkan sebuah transaksi beli pada saham yang diperdagangkan di R$ 50,00, dengan ATR harian R$ 1,20 dan pengali 2. Jarak stop-nya adalah:</p>
 <ul>
 <li>Jarak = R$ 1,20 x 2 = R$ 2,40</li>
@@ -206,21 +234,32 @@
 <li>Ukuran posisi = R$ 200,00 / R$ 2,40 = sekitar 83 saham</li>
 </ul>
 <p>Dengan posisi ini, jika harga turun hingga R$ 47,60, kerugiannya mendekati R$ 200,00 yang direncanakan, sebelum biaya komisi. Target acuan 2R, atau dua kali risiko yang diambil, akan berada sekitar R$ 54,80, tetapi ini hanyalah acuan matematis, bukan jaminan bahwa harga akan mencapainya.</p>
-<h2>ATR Tidak Menggantikan Struktur Grafik</h2>
+<h2 id="atr-tidak-menggantikan-struktur-grafik">ATR Tidak Menggantikan Struktur Grafik</h2>
 <p>ATR menjawab pertanyaan seberapa jauh aset ini biasanya bergerak. ATR tidak menjawab pertanyaan di mana ide entry saya salah. Pertanyaan kedua ini datang dari analisis grafik, seperti dasar sebelumnya atau zona support. Urutan yang disarankan adalah: pertama tandai level yang membatalkan transaksi, lalu ukur jarak antara entry dan level tersebut, dan baru kemudian bandingkan jarak ini dengan ATR untuk melihat apakah masuk akal mengingat volatilitas terkini. Jika jarak struktural jauh lebih kecil daripada yang disarankan ATR, stop mungkin terlalu ketat untuk noise normal aset tersebut.</p>
-<h2>Tidak Ada Pengali yang Sempurna</h2>
+<h2 id="tidak-ada-pengali-yang-sempurna">Tidak Ada Pengali yang Sempurna</h2>
 <p>Pengali rendah menciptakan stop yang lebih dekat dan posisi lebih besar untuk risiko R$ yang sama, tetapi lebih terpapar pada fluktuasi umum. Pengali tinggi menciptakan stop lebih jauh dan posisi lebih kecil, mengurangi keluar karena noise, tetapi menuntut harga menempuh jarak lebih jauh untuk mencapai hasil yang sama dalam kelipatan risiko. Pengali ideal bergantung pada aset, timeframe yang ditransaksikan, dan jenis setup, dan ada baiknya menguji nilai berbeda pada riwayat sebelum mengadopsi angka tetap untuk semua transaksi.</p>
-<h2>Waspadai Gap dan Eksekusi</h2>
+<h2 id="waspadai-gap-dan-eksekusi">Waspadai Gap dan Eksekusi</h2>
 <p>Perhitungan ini mengasumsikan bahwa posisi akan ditutup tepat pada harga stop. Dalam praktiknya, gap, berita, dan pasar dengan likuiditas rendah bisa membuat eksekusi terjadi jauh dari harga yang direncanakan, terutama pada aset yang tutup semalaman atau akhir pekan. ATR membantu menentukan ukuran risiko yang diharapkan dalam kondisi normal, tetapi tidak menghilangkan risiko eksekusi yang lebih buruk dari yang direncanakan pada momen-momen stres di pasar.</p>
-<h2>Pengingat Terakhir Sebelum Bertransaksi</h2>
+<h2 id="pengingat-terakhir-sebelum-bertransaksi">Pengingat Terakhir Sebelum Bertransaksi</h2>
 <p>Tentukan pengali sebelum melihat ukuran posisi yang dihasilkan, bukan sebaliknya. Memilih pengali hanya untuk mencapai ukuran posisi yang terasa nyaman membalik logika manajemen risiko: stop yang seharusnya menentukan ukuran posisi, bukan ukuran yang diinginkan yang menentukan stop.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+            <div class="bq-post__cta">
+              <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Diperbarui: <time datetime="2026-09-27">27 Sep 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> kali dilihat</span></span><button class="ap__compartilhar" type="button">Bagikan <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Tim Duotide</strong><p>Tim editorial Duotide menulis panduan dan berita di blog ini: cara kerja pasar, manajemen risiko, dan penggunaan platform. Tidak ada isi di sini yang merupakan saran investasi.</p></div>
+              <a class="btn ap__equipe" href="/id/tentang/">Kenali tim kami</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Baca juga</h2>
+        <aside class="ap__rel">
+          <h2>Artikel terkait</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/id/blog/cara-menggunakan-stop-loss-dan-take-profit-di-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cara Menggunakan Stop Loss dan Take Profit di Forex</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
             <a class="bq__card" href="/id/blog/strategi-martingale-dalam-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strategi Martingale dalam Trading: Cara Kerja dan Risikonya</span><span class="bq__meta">24/09/2026 · 4 menit baca</span></a>
@@ -228,7 +267,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +331,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

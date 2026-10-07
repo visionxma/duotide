@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/calculateur-desperance-mathematique-trading/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Gestion du risque",
       "author": {
@@ -172,29 +172,58 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Fil d’Ariane">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
         <li><span aria-current="page">Calculateur d'espérance mathématique : votre edge ?</span></li>
       </ol>
+      <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestion du risque</span>
-        <h1>Calculateur d'espérance mathématique : votre edge ?</h1>
-        <p class="bq-post__meta">Équipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de lecture</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Une stratégie peut réussir la majorité de ses opérations et pourtant vider le compte petit à petit. L'inverse est aussi vrai : il est possible de se tromper sur plus de la moitié des entrées et de terminer le mois dans le profit. Le taux de réussite seul ne répond pas à la question de savoir si une stratégie a un réel avantage. Celle qui répond à cette question, c'est l'espérance mathématique, aussi appelée expectancy.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-expectativa-matematica-no-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Lien copié">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
+            </div>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-27">27 septembre 2026</time></p>
+            <span class="bq__tag">Gestion du risque</span>
+            <h1>Calculateur d'espérance mathématique : votre edge ?</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Équipe Duotide</strong><small>Équipe éditoriale</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Sommaire">
+              <p class="ap__indice-tit">Sommaire</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#la-formule-de-l-esperance-mathematique">La formule de l'espérance mathématique</a></li>
+                <li><a href="#un-exemple-resolu-en-reais">Un exemple résolu en reais</a></li>
+                <li><a href="#un-taux-de-reussite-de-45-peut-etre-positif">Un taux de réussite de 45% peut être positif</a></li>
+                <li><a href="#n-oubliez-pas-les-couts">N'oubliez pas les coûts</a></li>
+                <li><a href="#un-deuxieme-exemple-cette-fois-avec-une-esperance-negative">Un deuxième exemple, cette fois avec une espérance négative</a></li>
+                <li><a href="#comment-utiliser-cela-au-quotidien">Comment utiliser cela au quotidien</a></li>
+                <li><a href="#combien-d-operations-suffisent-pour-se-fier-au-chiffre">Combien d'opérations suffisent pour se fier au chiffre</a></li>
+                <li><a href="#que-faire-apres-avoir-calcule-l-esperance">Que faire après avoir calculé l'espérance</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Une stratégie peut réussir la majorité de ses opérations et pourtant vider le compte petit à petit. L'inverse est aussi vrai : il est possible de se tromper sur plus de la moitié des entrées et de terminer le mois dans le profit. Le taux de réussite seul ne répond pas à la question de savoir si une stratégie a un réel avantage. Celle qui répond à cette question, c'est l'espérance mathématique, aussi appelée expectancy.</p>
 <p>L'espérance mathématique montre, en moyenne, combien une stratégie gagne ou perd par opération, en se basant sur l'historique des résultats. Un chiffre positif est une preuve d'avantage statistique dans l'échantillon observé, pas une garantie de profit futur.</p>
-<h2>La formule de l'espérance mathématique</h2>
+<h2 id="la-formule-de-l-esperance-mathematique">La formule de l'espérance mathématique</h2>
 <p>La version la plus connue de la formule est :</p>
 <p><strong>Espérance = (taux de réussite x gain moyen) - (taux d'échec x perte moyenne)</strong></p>
 <p>Cette formule fonctionne bien quand chaque opération se termine par un gain ou une perte, et quand les moyennes incluent déjà des coûts comme le courtage. Pour rendre le calcul encore plus clair, il est aussi possible de calculer l'espérance nette directement à partir des totaux :</p>
 <p><strong>Espérance nette = [(nombre de gains x gain moyen) - (nombre de pertes x perte moyenne) - coûts totaux] / total des opérations</strong></p>
-<h2>Un exemple résolu en reais</h2>
+<h2 id="un-exemple-resolu-en-reais">Un exemple résolu en reais</h2>
 <p>Supposons qu'un trader ait passé en revue 40 opérations d'un même setup, toutes avec le même risque planifié par entrée, et soit arrivé aux chiffres suivants :</p>
 <ul>
 <li>Opérations gagnantes : 18</li>
@@ -211,24 +240,35 @@
 <li>Espérance par opération : R$ 940,00 / 40 = R$ 23,50</li>
 </ul>
 <p>En exprimant ce résultat en multiples du risque (R), en utilisant le risque moyen de R$ 100,00 par opération, l'espérance est de <strong>+0,235R par opération</strong>. Cela signifie que, en moyenne sur cet échantillon, chaque opération a rapporté environ 23,5% du risque planifié. Le facteur de profit de ce même échantillon, calculé comme le gain total divisé par la perte totale, est de 2.700 / 1.760, soit environ <strong>1,53</strong>.</p>
-<h2>Un taux de réussite de 45% peut être positif</h2>
+<h2 id="un-taux-de-reussite-de-45-peut-etre-positif">Un taux de réussite de 45% peut être positif</h2>
 <p>Remarquez que le taux de réussite de l'exemple ci-dessus n'est que de 45% (18 sur 40 opérations), en dessous de la moitié. Pourtant, l'espérance est positive, car le gain moyen est presque deux fois supérieur à la perte moyenne. C'est la raison pour laquelle se demander uniquement quel est le taux de réussite d'une stratégie conduit souvent à des conclusions erronées sur sa qualité.</p>
-<h2>N'oubliez pas les coûts</h2>
+<h2 id="n-oubliez-pas-les-couts">N'oubliez pas les coûts</h2>
 <p>Le courtage, les frais de courtier et les éventuels coûts de maintien d'une position ouverte pendant la nuit réduisent l'espérance nette. Une stratégie avec une espérance brute de R$ 6,00 par opération peut devenir négative après déduction de R$ 7,00 de coûts moyens par opération. Chaque fois que possible, utilisez les coûts réels facturés par le courtier, et non une estimation optimiste, pour ne pas gonfler artificiellement le résultat.</p>
-<h2>Un deuxième exemple, cette fois avec une espérance négative</h2>
+<h2 id="un-deuxieme-exemple-cette-fois-avec-une-esperance-negative">Un deuxième exemple, cette fois avec une espérance négative</h2>
 <p>Pour bien marquer le contraste, voici un second cas avec 50 opérations : 21 gagnantes avec un gain moyen de R$ 90,00 et 29 perdantes avec une perte moyenne de R$ 75,00. Le gain total est de 21 x R$ 90,00 = R$ 1.890,00, et la perte totale de 29 x R$ 75,00 = R$ 2.175,00. Le résultat net de l'échantillon est négatif, à R$ 285,00, ce qui donne une espérance de R$ 1.890,00 moins R$ 2.175,00, divisé par 50 opérations, soit une perte moyenne de R$ 5,70 par opération. Même avec un taux de réussite de 42%, proche de la fourchette considérée comme normale pour de nombreuses stratégies, le rapport entre gain moyen et perte moyenne n'a pas suffi à soutenir un résultat positif.</p>
-<h2>Comment utiliser cela au quotidien</h2>
-<h2>Combien d'opérations suffisent pour se fier au chiffre</h2>
+<h2 id="comment-utiliser-cela-au-quotidien">Comment utiliser cela au quotidien</h2>
+<h2 id="combien-d-operations-suffisent-pour-se-fier-au-chiffre">Combien d'opérations suffisent pour se fier au chiffre</h2>
 <p>Il n'existe pas de chiffre magique universel. Un échantillon inférieur à 30 opérations est généralement considéré comme trop petit pour toute conclusion solide. Entre 30 et 100 opérations, le résultat donne déjà une première estimation, mais peut encore beaucoup changer avec quelques résultats extrêmes. Au-delà de 100 ou 200 opérations, le chiffre commence à devenir plus informatif, sans jamais constituer une preuve définitive que l'avantage va continuer d'exister à l'avenir.</p>
-<h2>Que faire après avoir calculé l'espérance</h2>
+<h2 id="que-faire-apres-avoir-calcule-l-esperance">Que faire après avoir calculé l'espérance</h2>
 <p>Si l'espérance ressort négative après avoir compté les coûts réels, il n'est pas pertinent de discuter d'une augmentation de position avant de corriger la stratégie. Si elle ressort positive, il vaut la peine de tester la robustesse du résultat : retirez la plus grosse opération gagnante de l'échantillon et recalculez. Si l'espérance devient négative avec ce seul retrait, le résultat dépend peut-être trop d'une seule opération hors norme, et mérite plus de prudence avant d'augmenter la taille des positions.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            <div class="bq-post__cta">
+              <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
+            </div>
+            <div class="ap__fim">
+              <p>Mis à jour le: <time datetime="2026-09-27">27 sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Équipe Duotide</strong><p>L’équipe éditoriale de Duotide rédige les guides et les actualités de ce blog : fonctionnement des marchés, gestion du risque et utilisation de la plateforme. Rien ici ne constitue un conseil en investissement.</p></div>
+              <a class="btn ap__equipe" href="/fr/a-propos/">Découvrir l’équipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>À lire aussi</h2>
+        <aside class="ap__rel">
+          <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/comment-utiliser-stop-loss-et-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment utiliser stop loss et take profit en forex</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/strategie-martingale-en-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stratégie martingale en trading : fonctionnement et risques</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
@@ -236,7 +276,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -300,6 +340,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

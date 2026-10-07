@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fil/blog/calculator-ng-mathematical-expectancy-sa-trading/",
       "inLanguage": "fil",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Pamamahala ng panganib",
       "author": {
@@ -172,30 +172,59 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Breadcrumb navigation">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/fil/">Home</a></li>
         <li><a href="/fil/blog/">Blog</a></li>
         <li><span aria-current="page">Calculator ng mathematical expectancy: may edge ba ang diskarte mo</span></li>
       </ol>
+      <a class="ap__voltar" href="/fil/blog/">Bumalik</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Pamamahala ng panganib</span>
-        <h1>Calculator ng mathematical expectancy: may edge ba ang diskarte mo</h1>
-        <p class="bq-post__meta">Duotide Team · <time datetime="2026-09-24">09/24/2026</time> · 4 min basahin</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-expectativa-matematica-no-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Nakopya ang link">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">Set 24, 2026</time><span class="ap__sep">4 min basahin</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span>
+            </div>
+            <p class="ap__atual">Na-update noong: <time datetime="2026-09-27">Setyembre 27, 2026</time></p>
+            <span class="bq__tag">Pamamahala ng panganib</span>
+            <h1>Calculator ng mathematical expectancy: may edge ba ang diskarte mo</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide Team</strong><small>Editorial team</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Nilalaman">
+              <p class="ap__indice-tit">Nilalaman</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#ang-pormula-ng-mathematical-expectancy">Ang pormula ng mathematical expectancy</a></li>
+                <li><a href="#isang-resweltong-halimbawa-sa-r">Isang resweltong halimbawa sa R$</a></li>
+                <li><a href="#ang-win-rate-na-45-ay-maaaring-positibo">Ang win rate na 45% ay maaaring positibo</a></li>
+                <li><a href="#huwag-kalimutan-ang-mga-gastos">Huwag kalimutan ang mga gastos</a></li>
+                <li><a href="#isang-ikalawang-halimbawa-ngayon-may-negatibong-expectancy">Isang ikalawang halimbawa, ngayon may negatibong expectancy</a></li>
+                <li><a href="#paano-gamitin-ito-araw-araw">Paano gamitin ito araw-araw</a></li>
+                <li><a href="#ilang-operasyon-ang-sapat-para-pagkatiwalaan-ang-numero">Ilang operasyon ang sapat para pagkatiwalaan ang numero</a></li>
+                <li><a href="#ano-ang-gagawin-pagkatapos-kalkulahin-ang-expectancy">Ano ang gagawin pagkatapos kalkulahin ang expectancy</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Bumalik sa itaas</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>Maaaring tama ang isang diskarte sa karamihan ng operasyon at magpatuloy pa ring unti-unting maubos ang account. Totoo rin ang kabaligtaran: posibleng magkamali sa higit sa kalahati ng entry at matapos ang buwan nang may kita. Hindi sinasagot ng win rate mag-isa kung may tunay na kalamangan ang isang diskarte. Ang sumasagot sa tanong na ito ay ang mathematical expectancy, tinatawag din na expectancy.</p>
 <p>Ipinapakita ng mathematical expectancy, sa average, kung magkano ang nakikita o nawawala ng isang diskarte kada operasyon, isinasaalang-alang ang kasaysayan ng mga resulta. Ang isang positibong numero ay ebidensya ng estadistikang kalamangan sa loob ng sample na naobserbahan, hindi garantiya ng kita sa hinaharap.</p>
-<h2>Ang pormula ng mathematical expectancy</h2>
+<h2 id="ang-pormula-ng-mathematical-expectancy">Ang pormula ng mathematical expectancy</h2>
 <p>Ang pinakakilalang bersyon ng pormula ay:</p>
 <p><strong>Expectancy = (win rate x average na kita) - (loss rate x average na pagkalugi)</strong></p>
 <p>Mahusay gumana ang pormulang ito kapag ang bawat operasyon ay nagtatapos sa kita o pagkalugi, at kapag kasama na sa mga average ang mga gastos tulad ng komisyon. Para mas maging malinaw ang kalkulasyon, posible ring kalkulahin ang net expectancy nang direkta gamit ang mga kabuuan:</p>
 <p><strong>Net expectancy = [(bilang ng kita x average na kita) - (bilang ng pagkalugi x average na pagkalugi) - kabuuang gastos] / kabuuang operasyon</strong></p>
-<h2>Isang resweltong halimbawa sa R$</h2>
+<h2 id="isang-resweltong-halimbawa-sa-r">Isang resweltong halimbawa sa R$</h2>
 <p>Ipagpalagay na sinuri ng isang trader ang 40 operasyon ng parehong setup, lahat may parehong planadong risk kada entry, at nakuha ang mga sumusunod na numero:</p>
 <ul>
 <li>Nananalong operasyon: 18</li>
@@ -212,24 +241,35 @@
 <li>Expectancy kada operasyon: R$ 940,00 / 40 = R$ 23,50</li>
 </ul>
 <p>Ipinapahayag ang resultang ito sa multiple ng risk (R), gamit ang average na risk na R$ 100,00 kada operasyon, ang expectancy ay <strong>+0,235R kada operasyon</strong>. Ibig sabihin nito, sa average ng sample na ito, bawat operasyon ay nagbunga ng humigit-kumulang 23,5% ng planadong risk. Ang profit factor ng parehong sample, kinakalkula bilang kabuuang kita hinati sa kabuuang pagkalugi, ay 2.700 / 1.760, o humigit-kumulang <strong>1,53</strong>.</p>
-<h2>Ang win rate na 45% ay maaaring positibo</h2>
+<h2 id="ang-win-rate-na-45-ay-maaaring-positibo">Ang win rate na 45% ay maaaring positibo</h2>
 <p>Pansinin na ang win rate ng halimbawa sa itaas ay 45% lamang (18 sa 40 operasyon), mas mababa sa kalahati. Sa kabila nito, positibo ang expectancy, dahil halos dalawang beses na mas malaki ang average na kita kaysa sa average na pagkalugi. Ito ang dahilan kung bakit ang pagtanong lamang kung ano ang win rate ng isang diskarte ay kadalasang humahantong sa maling konklusyon tungkol sa kalidad nito.</p>
-<h2>Huwag kalimutan ang mga gastos</h2>
+<h2 id="huwag-kalimutan-ang-mga-gastos">Huwag kalimutan ang mga gastos</h2>
 <p>Binabawasan ng komisyon, bayad ng broker, at posibleng gastos sa pagpapanatili ng bukas na posisyon sa gabi ang net expectancy. Ang isang diskarteng may gross expectancy na R$ 6,00 kada operasyon ay maaaring maging negatibo pagkatapos bawasan ng R$ 7,00 sa average na gastos kada operasyon. Kung maaari, gamitin ang tunay na gastos na sinisingil ng broker, hindi ang isang optimistikong pagtatantya, para hindi artipisyal na palakihin ang resulta.</p>
-<h2>Isang ikalawang halimbawa, ngayon may negatibong expectancy</h2>
+<h2 id="isang-ikalawang-halimbawa-ngayon-may-negatibong-expectancy">Isang ikalawang halimbawa, ngayon may negatibong expectancy</h2>
 <p>Para maging malinaw ang kaibahan, tingnan ang isang ikalawang kaso na may 50 operasyon: 21 nananalo na may average na kita na R$ 90,00 at 29 natatalo na may average na pagkalugi na R$ 75,00. Ang kabuuang kita ay 21 x R$ 90,00 = R$ 1.890,00, at ang kabuuang pagkalugi ay 29 x R$ 75,00 = R$ 2.175,00. Negatibo ang net na resulta ng sample, sa R$ 285,00, na nagbibigay ng expectancy na R$ 1.890,00 bawas R$ 2.175,00, hinati sa 50 operasyon, ibig sabihin, average na pagkalugi na R$ 5,70 kada operasyon. Kahit may win rate na 42%, malapit sa hanay na itinuturing na normal para sa maraming diskarte, hindi sapat ang relasyon sa pagitan ng average na kita at average na pagkalugi para mapanatili ang isang positibong resulta.</p>
-<h2>Paano gamitin ito araw-araw</h2>
-<h2>Ilang operasyon ang sapat para pagkatiwalaan ang numero</h2>
+<h2 id="paano-gamitin-ito-araw-araw">Paano gamitin ito araw-araw</h2>
+<h2 id="ilang-operasyon-ang-sapat-para-pagkatiwalaan-ang-numero">Ilang operasyon ang sapat para pagkatiwalaan ang numero</h2>
 <p>Walang unibersal na mahikang numero. Ang isang sample na mas mababa sa 30 operasyon ay kadalasang itinuturing na napakaliit para sa anumang matibay na konklusyon. Sa pagitan ng 30 at 100 operasyon, nagbibigay na ang resulta ng unang pagtatantya, ngunit maaari pa ring lubos na magbago sa iilang extreme na resulta. Higit sa 100 o 200 operasyon, nagsisimulang maging mas informative ang numero, kahit hindi ito kailanman magiging pinal na patunay na magpapatuloy ang kalamangan sa hinaharap.</p>
-<h2>Ano ang gagawin pagkatapos kalkulahin ang expectancy</h2>
+<h2 id="ano-ang-gagawin-pagkatapos-kalkulahin-ang-expectancy">Ano ang gagawin pagkatapos kalkulahin ang expectancy</h2>
 <p>Kung negatibo ang expectancy pagkatapos bilangin ang tunay na gastos, hindi na makatuwiran talakayin ang pagpapalaki ng posisyon bago iwasto ang diskarte. Kung positibo naman, sulit subukan ang tibay ng resulta: alisin ang pinakamalaking nananalong operasyon sa sample at kalkulahin muli. Kung naging negatibo ang expectancy sa pag-aalis lamang na iyon, maaaring masyadong nakadepende ang resulta sa iisang operasyong wala sa normal na kurba, at karapat-dapat sa higit na pag-iingat bago palakihin ang laki ng mga posisyon.</p>
 
-        <div class="bq-post__cta">
-          <p><strong>Magsanay muna bago sumugal.</strong> Gumawa ng account sa Duotide at subukan ang iyong mga ideya sa demo account na may R$ 10,000 na virtual na pondo.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Gumawa ng libreng account</a>
+            <div class="bq-post__cta">
+              <p><strong>Magsanay muna bago sumugal.</strong> Gumawa ng account sa Duotide at subukan ang iyong mga ideya sa demo account na may R$ 10,000 na virtual na pondo.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fil" target="_blank" rel="noopener sponsored nofollow">Gumawa ng libreng account</a>
+            </div>
+            <div class="ap__fim">
+              <p>Na-update noong: <time datetime="2026-09-27">Set 27, 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span><button class="ap__compartilhar" type="button">Ibahagi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide Team</strong><p>Ang editorial team ng Duotide ang sumusulat ng mga gabay at balita sa blog na ito: kung paano gumagana ang merkado, risk management at paggamit ng platform. Walang anuman dito ang payo sa pamumuhunan.</p></div>
+              <a class="btn ap__equipe" href="/fil/tungkol-sa-site/">Kilalanin ang team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Basahin din</h2>
+        <aside class="ap__rel">
+          <h2>Mga kaugnay na artikulo</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fil/blog/paano-gamitin-ang-stop-loss-at-take-profit-sa-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Paano gamitin ang stop loss at take profit sa forex</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
             <a class="bq__card" href="/fil/blog/diskarteng-martingale-sa-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Diskarteng martingale sa trading: paano gumagana at ang mga risk</span><span class="bq__meta">09/24/2026 · 4 min basahin</span></a>
@@ -237,7 +277,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -301,6 +341,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

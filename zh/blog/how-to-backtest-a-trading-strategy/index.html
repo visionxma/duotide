@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/how-to-backtest-a-trading-strategy/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
       "articleSection": "交易策略",
       "author": {
@@ -172,33 +172,61 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">如何在真正交易之前对一个策略做回测</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">交易策略</span>
-        <h1>如何在真正交易之前对一个策略做回测</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>回测是指在冒险投入真实资金之前，用历史数据测试一个交易策略的过程。这个思路很简单：把你在实盘中会使用的相同入场和离场规则，套用到图表过去的一段时期上，记录每次产生信号时本来会发生什么。这一步能把一个有证据支持有效的策略，和一个只是回头看图表时觉得不错的想法区分开来。</p>
-<h2>第一步：用文字明确写下入场和离场规则</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-fazer-o-backtest-de-uma-estrategia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">交易策略</span>
+            <h1>如何在真正交易之前对一个策略做回测</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#第一步-用文字明确写下入场和离场规则">第一步：用文字明确写下入场和离场规则</a></li>
+                <li><a href="#第二步-逐个信号地检查历史数据">第二步：逐个信号地检查历史数据</a></li>
+                <li><a href="#第三步-计算胜率和平均盈亏比">第三步：计算胜率和平均盈亏比</a></li>
+                <li><a href="#第四步-计算数学期望">第四步：计算数学期望</a></li>
+                <li><a href="#回测不能保证什么">回测不能保证什么</a></li>
+                <li><a href="#把这个流程付诸实践">把这个流程付诸实践</a></li>
+                <li><a href="#一个额外的注意事项-样本大小比看起来更重要">一个额外的注意事项：样本大小比看起来更重要</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>回测是指在冒险投入真实资金之前，用历史数据测试一个交易策略的过程。这个思路很简单：把你在实盘中会使用的相同入场和离场规则，套用到图表过去的一段时期上，记录每次产生信号时本来会发生什么。这一步能把一个有证据支持有效的策略，和一个只是回头看图表时觉得不错的想法区分开来。</p>
+<h2 id="第一步-用文字明确写下入场和离场规则">第一步：用文字明确写下入场和离场规则</h2>
 <p>在查看任何历史数据之前，先写下你将要测试的确切规则——例如：“当价格以高于平均30%的成交量突破最近20根K线的最高点时买入；在上涨2%时获利离场，或在下跌1%时止损。”像“看起来是个好机会就买入”这样模糊的规则无法被一致地测试，因为它每次都依赖于主观判断。</p>
-<h2>第二步：逐个信号地检查历史数据</h2>
+<h2 id="第二步-逐个信号地检查历史数据">第二步：逐个信号地检查历史数据</h2>
 <p>规则确定后，逐一检查历史图表，找出每一次满足入场条件的时刻，并记录离场规则本应产生的结果——盈利还是亏损，以点数或百分比表示。重要的是要保持自律，严格按照写下的规则执行，不要在看到实际结果之后再“调整”结果，否则会让测试偏向有利于该策略的方向。</p>
-<h2>第三步：计算胜率和平均盈亏比</h2>
+<h2 id="第三步-计算胜率和平均盈亏比">第三步：计算胜率和平均盈亏比</h2>
 <p>在收集了一个合理的样本——至少30个信号，理想情况下更多——之后，计算两个数字：胜率（盈利交易的百分比）和平均盈亏比（盈利交易的平均收益除以亏损交易的平均损失）。假设一次回测有40个信号，18笔盈利，22笔亏损，盈利交易的平均收益为60.00雷亚尔，亏损交易的平均损失为35.00雷亚尔。胜率为45%（18/40），盈亏比为1.71（60/35）。</p>
-<h2>第四步：计算数学期望</h2>
+<h2 id="第四步-计算数学期望">第四步：计算数学期望</h2>
 <p>数学期望衡量的是每笔交易平均预期的结果，计算方式如下：（胜率 × 平均盈利）−（败率 × 平均亏损）。用示例中的数字计算：（0.45 × 60.00雷亚尔）−（0.55 × 35.00雷亚尔）= 27.00雷亚尔 − 19.25雷亚尔 = 平均每笔交易+7.75雷亚尔。正的期望值表明，如果长期保持相同的胜率和相同的盈亏比，这个策略往往会产生正的结果——这并不保证每一笔单独的交易都会盈利，但表明在所测试的样本中存在统计上的优势。</p>
-<h2>回测不能保证什么</h2>
+<h2 id="回测不能保证什么">回测不能保证什么</h2>
 <p>历史数据上的正结果并不保证未来会有同样的表现——市场条件会变化，一个小样本也可能只是碰巧表现有利。此外，手动回测容易受到事后诸葛偏差的影响：在已经知道后来发生了什么的情况下，很容易在不知不觉中调整对某个信号的解读。因此，许多交易者会在回测之后，用一段时间在模拟账户中实时应用同样的规则，然后再投入较大的真实资金。</p>
-<h2>把这个流程付诸实践</h2>
+<h2 id="把这个流程付诸实践">把这个流程付诸实践</h2>
 <ul>
 <li>在查看任何历史数据之前，先写下入场和离场规则。</li>
 <li>收集至少30个信号的样本，让这些数字具备一定的统计分量。</li>
@@ -206,14 +234,25 @@
 <li>即使回测结果为正，也要先在模拟账户中测试一段时间，再投入真实资金。</li>
 </ul>
 <p>回测是一种筛选工具，而不是保证：它有助于排除那些没有任何明显统计优势的策略，也有助于更好地理解剩下策略的预期表现——但任何基于过去计算出的数学期望，都不是对未来结果的承诺。</p>
-<h2>一个额外的注意事项：样本大小比看起来更重要</h2>
+<h2 id="一个额外的注意事项-样本大小比看起来更重要">一个额外的注意事项：样本大小比看起来更重要</h2>
 <p>仅基于10个或15个信号计算出的正数学期望，统计价值很低——它可能只是样本中的运气，而不是策略真正的优势。测试的信号数量越多，结果的可信度就越高，尽管无论样本多大，都无法完全消除对未来的不确定性。同样值得在不同的市场时期——上涨、下跌和横盘——测试这个策略，因为一个规则可能在一种市场状态下表现良好，在另一种状态下表现糟糕，而只在一段强劲上涨时期做的回测，往往会高估预期结果。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -221,7 +260,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -285,6 +324,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

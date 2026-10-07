@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,28 +173,65 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">O que é o Oscilador Estocástico e como ele funciona</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Indicadores</span>
-        <h1>O que é o Oscilador Estocástico e como ele funciona</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>O Oscilador Estocástico parte de uma ideia simples: em uma alta consistente, o preço costuma fechar perto do topo da faixa recente de negociação. Em uma queda consistente, costuma fechar perto do fundo. O indicador transforma essa observação numa escala de 0 a 100, mostrando onde o último fechamento está dentro do intervalo de máximas e mínimas de um determinado número de candles.</p><p>Criado por George Lane nos anos 1950, o Estocástico continua entre os osciladores mais usados porque é fácil de visualizar e reage relativamente rápido às mudanças de ritmo do mercado. Mas, como qualquer indicador de momento, ele tem limitações que só aparecem quando você entende a conta por trás dele.</p><h2>A fórmula do %K</h2><p>A linha principal do indicador, chamada %K, segue esta fórmula:</p><p><strong>%K = 100 × (Fechamento atual − Menor mínima do período) ÷ (Maior máxima do período − Menor mínima do período)</strong></p><p>Suponha que, nos últimos 14 candles de um ativo, a máxima tenha sido R$ 110,00 e a mínima R$ 90,00. Se o fechamento mais recente foi R$ 106,00, o cálculo fica:</p><p><strong>%K = 100 × (106 − 90) ÷ (110 − 90) = 100 × 16 ÷ 20 = 80</strong></p><p>Um %K de 80 significa que o preço fechou nos 20% superiores da faixa de preço observada — perto da máxima do período, não necessariamente em máxima histórica.</p><h2>Para que serve o %D</h2><p>A maioria das plataformas plota o %K junto com uma segunda linha, o %D, que é uma média móvel simples do %K (normalmente de 3 períodos). O %D suaviza as oscilações bruscas do %K e funciona como linha de sinal: quando o %K cruza o %D de baixo para cima, alguns traders enxergam força compradora entrando; quando cruza de cima para baixo, força vendedora.</p><p>É comum também aplicar uma suavização extra ao próprio %K antes de calcular o %D — o chamado Estocástico lento —, o que reduz sinais falsos ao custo de reagir um pouco mais devagar.</p><h2>Sobrecompra e sobrevenda: cuidado com o exagero</h2><p>As zonas mais citadas são acima de 80 (sobrecompra) e abaixo de 20 (sobrevenda). O erro clássico é tratar isso como ordem automática de venda ou compra. Em uma tendência de alta forte, o %K pode ficar colado acima de 80 por muitos candles seguidos, e vender só porque o indicador está esticado significa sair de um movimento que ainda tinha fôlego.</p><ul><li><strong>%K acima de 80</strong>: preço fechando perto do topo da faixa recente — força compradora, não sinal automático de reversão.</li><li><strong>%K abaixo de 20</strong>: preço fechando perto do fundo da faixa recente — força vendedora, com a mesma ressalva.</li><li><strong>Divergência</strong>: quando o preço faz uma máxima mais alta, mas o %K faz uma máxima mais baixa (ou o oposto), o momento está perdendo força mesmo que o preço ainda avance.</li></ul><h2>Onde o indicador funciona melhor</h2><p>O Estocástico tende a se comportar melhor em mercados que oscilam dentro de uma faixa definida, alternando entre suporte e resistência, do que em tendências fortes e prolongadas. Numa faixa lateral, os cruzamentos de %K e %D perto dos extremos 20 e 80 tendem a marcar pontos de virada com mais frequência. Numa tendência forte, o ideal é usar o indicador para medir correções dentro do movimento principal, e não para tentar prever o fim da tendência.</p><p>Um exemplo prático: em um par de moedas em tendência de alta, um recuo que leva o %K de 90 para perto de 20 pode representar apenas uma pausa saudável do movimento, especialmente se a estrutura de máximas e mínimas do gráfico continuar ascendente. Vender só porque o oscilador zerou ignoraria o contexto maior.</p><h2>Juntando as peças</h2><p>O Oscilador Estocástico funciona melhor como parte de uma leitura mais ampla do que sozinho. Combiná-lo com a tendência principal do gráfico, com níveis de suporte e resistência, ou com outro indicador que meça força de tendência ajuda a filtrar entradas que dependeriam só de um número cruzando 20 ou 80. Como em qualquer ferramenta de análise técnica, ele aumenta a qualidade da leitura, mas não elimina o risco de uma operação dar errado — gestão de posição e limite de perda continuam sendo parte necessária do processo, independentemente de quão claro o sinal pareça no momento da entrada.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-e-o-oscilador-estocastico" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Indicadores</span>
+            <h1>O que é o Oscilador Estocástico e como ele funciona</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#a-formula-do-k">A fórmula do %K</a></li>
+                <li><a href="#para-que-serve-o-d">Para que serve o %D</a></li>
+                <li><a href="#sobrecompra-e-sobrevenda-cuidado-com-o-exagero">Sobrecompra e sobrevenda: cuidado com o exagero</a></li>
+                <li><a href="#onde-o-indicador-funciona-melhor">Onde o indicador funciona melhor</a></li>
+                <li><a href="#juntando-as-pecas">Juntando as peças</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>O Oscilador Estocástico parte de uma ideia simples: em uma alta consistente, o preço costuma fechar perto do topo da faixa recente de negociação. Em uma queda consistente, costuma fechar perto do fundo. O indicador transforma essa observação numa escala de 0 a 100, mostrando onde o último fechamento está dentro do intervalo de máximas e mínimas de um determinado número de candles.</p><p>Criado por George Lane nos anos 1950, o Estocástico continua entre os osciladores mais usados porque é fácil de visualizar e reage relativamente rápido às mudanças de ritmo do mercado. Mas, como qualquer indicador de momento, ele tem limitações que só aparecem quando você entende a conta por trás dele.</p><h2 id="a-formula-do-k">A fórmula do %K</h2><p>A linha principal do indicador, chamada %K, segue esta fórmula:</p><p><strong>%K = 100 × (Fechamento atual − Menor mínima do período) ÷ (Maior máxima do período − Menor mínima do período)</strong></p><p>Suponha que, nos últimos 14 candles de um ativo, a máxima tenha sido R$ 110,00 e a mínima R$ 90,00. Se o fechamento mais recente foi R$ 106,00, o cálculo fica:</p><p><strong>%K = 100 × (106 − 90) ÷ (110 − 90) = 100 × 16 ÷ 20 = 80</strong></p><p>Um %K de 80 significa que o preço fechou nos 20% superiores da faixa de preço observada — perto da máxima do período, não necessariamente em máxima histórica.</p><h2 id="para-que-serve-o-d">Para que serve o %D</h2><p>A maioria das plataformas plota o %K junto com uma segunda linha, o %D, que é uma média móvel simples do %K (normalmente de 3 períodos). O %D suaviza as oscilações bruscas do %K e funciona como linha de sinal: quando o %K cruza o %D de baixo para cima, alguns traders enxergam força compradora entrando; quando cruza de cima para baixo, força vendedora.</p><p>É comum também aplicar uma suavização extra ao próprio %K antes de calcular o %D — o chamado Estocástico lento —, o que reduz sinais falsos ao custo de reagir um pouco mais devagar.</p><h2 id="sobrecompra-e-sobrevenda-cuidado-com-o-exagero">Sobrecompra e sobrevenda: cuidado com o exagero</h2><p>As zonas mais citadas são acima de 80 (sobrecompra) e abaixo de 20 (sobrevenda). O erro clássico é tratar isso como ordem automática de venda ou compra. Em uma tendência de alta forte, o %K pode ficar colado acima de 80 por muitos candles seguidos, e vender só porque o indicador está esticado significa sair de um movimento que ainda tinha fôlego.</p><ul><li><strong>%K acima de 80</strong>: preço fechando perto do topo da faixa recente — força compradora, não sinal automático de reversão.</li><li><strong>%K abaixo de 20</strong>: preço fechando perto do fundo da faixa recente — força vendedora, com a mesma ressalva.</li><li><strong>Divergência</strong>: quando o preço faz uma máxima mais alta, mas o %K faz uma máxima mais baixa (ou o oposto), o momento está perdendo força mesmo que o preço ainda avance.</li></ul><h2 id="onde-o-indicador-funciona-melhor">Onde o indicador funciona melhor</h2><p>O Estocástico tende a se comportar melhor em mercados que oscilam dentro de uma faixa definida, alternando entre suporte e resistência, do que em tendências fortes e prolongadas. Numa faixa lateral, os cruzamentos de %K e %D perto dos extremos 20 e 80 tendem a marcar pontos de virada com mais frequência. Numa tendência forte, o ideal é usar o indicador para medir correções dentro do movimento principal, e não para tentar prever o fim da tendência.</p><p>Um exemplo prático: em um par de moedas em tendência de alta, um recuo que leva o %K de 90 para perto de 20 pode representar apenas uma pausa saudável do movimento, especialmente se a estrutura de máximas e mínimas do gráfico continuar ascendente. Vender só porque o oscilador zerou ignoraria o contexto maior.</p><h2 id="juntando-as-pecas">Juntando as peças</h2><p>O Oscilador Estocástico funciona melhor como parte de uma leitura mais ampla do que sozinho. Combiná-lo com a tendência principal do gráfico, com níveis de suporte e resistência, ou com outro indicador que meça força de tendência ajuda a filtrar entradas que dependeriam só de um número cruzando 20 ou 80. Como em qualquer ferramenta de análise técnica, ele aumenta a qualidade da leitura, mas não elimina o risco de uma operação dar errado — gestão de posição e limite de perda continuam sendo parte necessária do processo, independentemente de quão claro o sinal pareça no momento da entrada.</p>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -202,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +302,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,28 +173,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Como entender uma cotação de mercado</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Iniciantes</span>
-        <h1>Como entender uma cotação de mercado</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Antes de aprender qualquer indicador ou estratégia, existe uma habilidade mais básica que costuma ficar para trás: saber ler os números que aparecem numa cotação. Para quem está começando, uma tela cheia de valores piscando pode parecer mais confusa do que realmente é — a maior parte dessas informações segue um padrão simples, uma vez que você entende o que cada campo representa.</p><h2>Bid e ask: os dois lados de todo preço</h2><p>Todo ativo negociado tem, na verdade, dois preços ao mesmo tempo, não apenas um:</p><ul><li><strong>Bid (compra)</strong>: o maior preço que alguém está disposto a pagar pelo ativo naquele momento.</li><li><strong>Ask (venda)</strong>: o menor preço pelo qual alguém está disposto a vender o ativo naquele momento.</li></ul><p>Quando você compra a mercado, paga o preço de ask. Quando vende a mercado, recebe o preço de bid. Isso significa que, ao comprar e vender imediatamente em sequência, sem nenhuma variação de preço no meio do caminho, você já teria uma pequena perda — a diferença entre os dois preços.</p><h2>O que é o spread</h2><p>Essa diferença entre bid e ask é chamada de spread, e funciona como um custo embutido em cada operação. Um exemplo: se o bid de um ativo está em R$ 24,80 e o ask em R$ 24,84, o spread é de R$ 0,04. Numa operação de 100 unidades, isso representa R$ 4,00 de diferença entre comprar e vender no mesmo instante.</p><p>Ativos mais negociados, com mais gente comprando e vendendo o tempo todo, costumam ter spread menor. Ativos menos líquidos, ou negociados fora do horário regular, tendem a ter spread mais largo — um dos motivos pelos quais operar em horários de baixa liquidez costuma custar mais caro por operação.</p><h2>Último preço, máxima, mínima e abertura</h2><p>Além de bid e ask, a maioria das cotações traz outros quatro números de referência:</p><ul><li><strong>Último preço (ou last)</strong>: o preço do negócio mais recente fechado, nem sempre igual ao bid ou ao ask no instante seguinte.</li><li><strong>Abertura</strong>: o primeiro preço negociado no período em análise (dia, semana, mês).</li><li><strong>Máxima e mínima</strong>: os valores mais alto e mais baixo já negociados dentro desse mesmo período.</li></ul><p>Comparar o último preço com a abertura mostra se o ativo está subindo ou caindo desde o início do período. Comparar o último preço com a máxima e a mínima mostra onde ele está posicionado dentro da faixa de negociação daquele dia — informação parecida com a que o Oscilador Estocástico calcula de forma automática.</p><h2>Variação percentual: o número que todo mundo olha primeiro</h2><p>A variação percentual mostra o quanto o preço mudou desde uma referência, geralmente o fechamento do período anterior. A fórmula é simples:</p><p><strong>Variação % = ((Preço atual − Preço de referência) ÷ Preço de referência) × 100</strong></p><p>Exemplo: se um ativo fechou o pregão anterior a R$ 50,00 e está sendo negociado agora a R$ 51,50, a variação seria: ((51,50 − 50,00) ÷ 50,00) × 100 = (1,50 ÷ 50,00) × 100 = 3%. Uma queda para R$ 48,50 no mesmo cenário resultaria em uma variação de -3%, usando a mesma conta com sinal invertido.</p><h2>Volume: quantos negócios sustentam aquele preço</h2><p>O volume mostra a quantidade de unidades negociadas num determinado período. Um movimento de preço acompanhado de volume acima da média tende a carregar mais convicção do que o mesmo movimento com volume baixo, já que reflete mais participantes concordando com aquele novo nível de preço.</p><h2>Juntando os números numa leitura</h2><p>Uma cotação completa conta uma pequena história: de onde o preço partiu (abertura), até onde chegou nos dois extremos (máxima e mínima), onde está agora em relação a esses extremos, quanto mudou percentualmente, e com que volume de negociação por trás disso. Aprender a ler esses números em conjunto, em vez de olhar só o preço atual isolado, é o primeiro passo antes de qualquer análise mais avançada — e vale lembrar que, em qualquer operação real, o spread entre bid e ask é um custo que precisa entrar na conta desde o início.</p><p>Com o tempo, ler uma cotação completa deixa de ser um exercício consciente e passa a acontecer quase automaticamente, do mesmo jeito que ler as horas num relógio analógico. Até lá, vale o hábito de checar cada um desses números antes de decidir qualquer coisa, em vez de reagir apenas ao preço que pisca na tela.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-entender-uma-cotacao-de-mercado" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Iniciantes</span>
+            <h1>Como entender uma cotação de mercado</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#bid-e-ask-os-dois-lados-de-todo-preco">Bid e ask: os dois lados de todo preço</a></li>
+                <li><a href="#o-que-e-o-spread">O que é o spread</a></li>
+                <li><a href="#ultimo-preco-maxima-minima-e-abertura">Último preço, máxima, mínima e abertura</a></li>
+                <li><a href="#variacao-percentual-o-numero-que-todo-mundo-olha-primeiro">Variação percentual: o número que todo mundo olha primeiro</a></li>
+                <li><a href="#volume-quantos-negocios-sustentam-aquele-preco">Volume: quantos negócios sustentam aquele preço</a></li>
+                <li><a href="#juntando-os-numeros-numa-leitura">Juntando os números numa leitura</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Antes de aprender qualquer indicador ou estratégia, existe uma habilidade mais básica que costuma ficar para trás: saber ler os números que aparecem numa cotação. Para quem está começando, uma tela cheia de valores piscando pode parecer mais confusa do que realmente é — a maior parte dessas informações segue um padrão simples, uma vez que você entende o que cada campo representa.</p><h2 id="bid-e-ask-os-dois-lados-de-todo-preco">Bid e ask: os dois lados de todo preço</h2><p>Todo ativo negociado tem, na verdade, dois preços ao mesmo tempo, não apenas um:</p><ul><li><strong>Bid (compra)</strong>: o maior preço que alguém está disposto a pagar pelo ativo naquele momento.</li><li><strong>Ask (venda)</strong>: o menor preço pelo qual alguém está disposto a vender o ativo naquele momento.</li></ul><p>Quando você compra a mercado, paga o preço de ask. Quando vende a mercado, recebe o preço de bid. Isso significa que, ao comprar e vender imediatamente em sequência, sem nenhuma variação de preço no meio do caminho, você já teria uma pequena perda — a diferença entre os dois preços.</p><h2 id="o-que-e-o-spread">O que é o spread</h2><p>Essa diferença entre bid e ask é chamada de spread, e funciona como um custo embutido em cada operação. Um exemplo: se o bid de um ativo está em R$ 24,80 e o ask em R$ 24,84, o spread é de R$ 0,04. Numa operação de 100 unidades, isso representa R$ 4,00 de diferença entre comprar e vender no mesmo instante.</p><p>Ativos mais negociados, com mais gente comprando e vendendo o tempo todo, costumam ter spread menor. Ativos menos líquidos, ou negociados fora do horário regular, tendem a ter spread mais largo — um dos motivos pelos quais operar em horários de baixa liquidez costuma custar mais caro por operação.</p><h2 id="ultimo-preco-maxima-minima-e-abertura">Último preço, máxima, mínima e abertura</h2><p>Além de bid e ask, a maioria das cotações traz outros quatro números de referência:</p><ul><li><strong>Último preço (ou last)</strong>: o preço do negócio mais recente fechado, nem sempre igual ao bid ou ao ask no instante seguinte.</li><li><strong>Abertura</strong>: o primeiro preço negociado no período em análise (dia, semana, mês).</li><li><strong>Máxima e mínima</strong>: os valores mais alto e mais baixo já negociados dentro desse mesmo período.</li></ul><p>Comparar o último preço com a abertura mostra se o ativo está subindo ou caindo desde o início do período. Comparar o último preço com a máxima e a mínima mostra onde ele está posicionado dentro da faixa de negociação daquele dia — informação parecida com a que o Oscilador Estocástico calcula de forma automática.</p><h2 id="variacao-percentual-o-numero-que-todo-mundo-olha-primeiro">Variação percentual: o número que todo mundo olha primeiro</h2><p>A variação percentual mostra o quanto o preço mudou desde uma referência, geralmente o fechamento do período anterior. A fórmula é simples:</p><p><strong>Variação % = ((Preço atual − Preço de referência) ÷ Preço de referência) × 100</strong></p><p>Exemplo: se um ativo fechou o pregão anterior a R$ 50,00 e está sendo negociado agora a R$ 51,50, a variação seria: ((51,50 − 50,00) ÷ 50,00) × 100 = (1,50 ÷ 50,00) × 100 = 3%. Uma queda para R$ 48,50 no mesmo cenário resultaria em uma variação de -3%, usando a mesma conta com sinal invertido.</p><h2 id="volume-quantos-negocios-sustentam-aquele-preco">Volume: quantos negócios sustentam aquele preço</h2><p>O volume mostra a quantidade de unidades negociadas num determinado período. Um movimento de preço acompanhado de volume acima da média tende a carregar mais convicção do que o mesmo movimento com volume baixo, já que reflete mais participantes concordando com aquele novo nível de preço.</p><h2 id="juntando-os-numeros-numa-leitura">Juntando os números numa leitura</h2><p>Uma cotação completa conta uma pequena história: de onde o preço partiu (abertura), até onde chegou nos dois extremos (máxima e mínima), onde está agora em relação a esses extremos, quanto mudou percentualmente, e com que volume de negociação por trás disso. Aprender a ler esses números em conjunto, em vez de olhar só o preço atual isolado, é o primeiro passo antes de qualquer análise mais avançada — e vale lembrar que, em qualquer operação real, o spread entre bid e ask é um custo que precisa entrar na conta desde o início.</p><p>Com o tempo, ler uma cotação completa deixa de ser um exercício consciente e passa a acontecer quase automaticamente, do mesmo jeito que ler as horas num relógio analógico. Até lá, vale o hábito de checar cada um desses números antes de decidir qualquer coisa, em vez de reagir apenas ao preço que pisca na tela.</p>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/livros-essenciais-para-traders-iniciantes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Livros essenciais para quem está começando no trading</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/ferramentas-de-trading-como-escolher-as-certas/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ferramentas de trading: como escolher as certas</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -202,7 +240,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

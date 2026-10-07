@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,42 +173,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Como operar CFDs na prática: da escolha do ativo à saída</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Mercado</span>
-        <h1>Como operar CFDs na prática: da escolha do ativo à saída</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>CFD é a sigla para contrato por diferença (contract for difference): um instrumento em que você não compra o ativo em si, mas um contrato cujo resultado reflete a diferença entre o preço de entrada e o preço de saída. Isso permite operar tanto na alta quanto na baixa de ações, índices, moedas e commodities sem precisar deter o ativo fisicamente. Este guia foca na parte prática — os passos e os números de uma operação — deixando a teoria mais ampla para quem já entende o mecanismo básico.</p>
-<h2>Passo 1: entenda o que a margem realmente significa</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="como-operar-cfds-na-pratica" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Mercado</span>
+            <h1>Como operar CFDs na prática: da escolha do ativo à saída</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#passo-1-entenda-o-que-a-margem-realmente-significa">Passo 1: entenda o que a margem realmente significa</a></li>
+                <li><a href="#passo-2-calcule-o-resultado-antes-de-entrar-nao-depois">Passo 2: calcule o resultado antes de entrar, não depois</a></li>
+                <li><a href="#passo-3-defina-o-stop-loss-como-parte-da-entrada-nao-como-pl">Passo 3: defina o stop loss como parte da entrada, não como plano B</a></li>
+                <li><a href="#passo-4-considere-o-custo-de-manter-a-posicao-aberta">Passo 4: considere o custo de manter a posição aberta</a></li>
+                <li><a href="#passo-5-escolha-o-tamanho-da-posicao-pela-margem-nao-pela-ex">Passo 5: escolha o tamanho da posição pela margem, não pela exposição</a></li>
+                <li><a href="#passo-6-acompanhe-a-posicao-nao-so-o-preco-do-ativo">Passo 6: acompanhe a posição, não só o preço do ativo</a></li>
+                <li><a href="#colocando-tudo-junto">Colocando tudo junto</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>CFD é a sigla para contrato por diferença (contract for difference): um instrumento em que você não compra o ativo em si, mas um contrato cujo resultado reflete a diferença entre o preço de entrada e o preço de saída. Isso permite operar tanto na alta quanto na baixa de ações, índices, moedas e commodities sem precisar deter o ativo fisicamente. Este guia foca na parte prática — os passos e os números de uma operação — deixando a teoria mais ampla para quem já entende o mecanismo básico.</p>
+<h2 id="passo-1-entenda-o-que-a-margem-realmente-significa">Passo 1: entenda o que a margem realmente significa</h2>
 <p>Ao abrir um CFD, você não deposita o valor total da posição — apenas uma margem, um percentual dela. Suponha um CFD sobre uma ação cotada a R$ 100,00, com margem exigida de 20%. Para controlar uma posição de 100 unidades (R$ 10.000,00 de exposição), você precisa depositar apenas R$ 2.000,00. Esses outros R$ 8.000,00 são, na prática, emprestados pela alavancagem embutida no contrato — o que amplia tanto o ganho quanto a perda proporcional ao capital depositado.</p>
-<h2>Passo 2: calcule o resultado antes de entrar, não depois</h2>
+<h2 id="passo-2-calcule-o-resultado-antes-de-entrar-nao-depois">Passo 2: calcule o resultado antes de entrar, não depois</h2>
 <p>Continuando o exemplo: se a ação subir para R$ 103,00, o ganho na posição é de R$ 300,00 (100 unidades × R$ 3,00). Sobre a margem depositada de R$ 2.000,00, isso representa 15% de retorno — bem mais do que os 3% de valorização do ativo, por causa da alavancagem. O espelho é verdadeiro: se a ação cair para R$ 97,00, a perda de R$ 300,00 também representa 15% da margem depositada. Fazer essa conta antes de abrir a posição evita a surpresa de ver uma variação pequena no preço do ativo virar uma perda grande no capital disponível.</p>
-<h2>Passo 3: defina o stop loss como parte da entrada, não como plano B</h2>
+<h2 id="passo-3-defina-o-stop-loss-como-parte-da-entrada-nao-como-pl">Passo 3: defina o stop loss como parte da entrada, não como plano B</h2>
 <p>Como a alavancagem amplia o resultado, um movimento contrário maior que o esperado pode consumir a margem disponível rapidamente — em casos extremos, gerando uma chamada de margem, quando a corretora pede mais depósito ou encerra a posição automaticamente para conter a perda. Definir o nível de stop loss no momento da entrada, calculando quanto isso representa em reais e em percentual da margem, é o que evita que uma operação isolada comprometa o restante do capital disponível para operar.</p>
-<h2>Passo 4: considere o custo de manter a posição aberta</h2>
+<h2 id="passo-4-considere-o-custo-de-manter-a-posicao-aberta">Passo 4: considere o custo de manter a posição aberta</h2>
 <p>CFDs mantidos além do mesmo dia costumam gerar um custo (ou, mais raramente, um crédito) de rolagem, cobrado por manter a posição alavancada aberta de um dia para o outro. Em uma posição de R$ 10.000,00 de exposição com uma taxa de rolagem de 0,03% ao dia, o custo diário seria de R$ 3,00 — um valor pequeno isoladamente, mas que se acumula em posições mantidas por semanas, reduzindo o resultado líquido da operação.</p>
-<h2>Passo 5: escolha o tamanho da posição pela margem, não pela exposição</h2>
+<h2 id="passo-5-escolha-o-tamanho-da-posicao-pela-margem-nao-pela-ex">Passo 5: escolha o tamanho da posição pela margem, não pela exposição</h2>
 <p>Um erro comum é dimensionar a operação pensando apenas na exposição total (os R$ 10.000,00 do exemplo) sem considerar que o risco real de perda rápida está atrelado à margem menor (os R$ 2.000,00). Como regra prática, muitos traders limitam o risco de cada operação a uma fração pequena do capital total disponível para operar — 1% a 2%, por exemplo — calculado sobre a distância entre o preço de entrada e o stop loss, não sobre o tamanho total do contrato.</p>
-<h2>Passo 6: acompanhe a posição, não só o preço do ativo</h2>
+<h2 id="passo-6-acompanhe-a-posicao-nao-so-o-preco-do-ativo">Passo 6: acompanhe a posição, não só o preço do ativo</h2>
 <p>Depois de aberta a posição, o que importa monitorar não é só a cotação do ativo, mas o quanto resta de margem livre na conta — o valor que ainda não está comprometido com a posição aberta. Se várias operações alavancadas forem abertas ao mesmo tempo, a margem livre pode cair rápido mesmo sem nenhuma delas ter atingido o stop individualmente, aumentando o risco de uma chamada de margem conjunta. Verificar esse número junto com o preço é parte do acompanhamento, não um detalhe secundário.</p>
-<h2>Colocando tudo junto</h2>
+<h2 id="colocando-tudo-junto">Colocando tudo junto</h2>
 <p>Operar CFDs de forma organizada significa, na prática, calcular três números antes de qualquer entrada: quanto de margem a posição exige, quanto se perde se o stop for atingido, e quanto custa manter a posição pelo tempo planejado. Plataformas como a Duotide mostram esses valores diretamente na tela de abertura da ordem, o que ajuda a fazer essa conta antes de confirmar — mas a decisão de operar dentro desses limites continua sendo do trader, e a alavancagem embutida no CFD significa que perdas podem superar, em alguns casos, o valor originalmente depositado como margem. Por isso, CFDs costumam ser recomendados apenas depois que o operador já entende bem o comportamento do ativo sem alavancagem.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/ipo-da-anthropic-o-que-se-sabe-ate-agora/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">IPO da Anthropic: o que é fato e o que ainda é rumor</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/negociacao-fora-do-horario-de-pregao/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é negociação fora do horário de pregão (after-hours)</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -216,7 +255,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

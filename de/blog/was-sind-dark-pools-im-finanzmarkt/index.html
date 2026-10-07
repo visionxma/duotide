@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/de/blog/was-sind-dark-pools-im-finanzmarkt/",
       "inLanguage": "de",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp",
       "articleSection": "Markt",
       "author": {
@@ -172,42 +172,81 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/de/">Start</a></li>
         <li><a href="/de/blog/">Blog</a></li>
         <li><span aria-current="page">Was Dark Pools sind und wie sie die sichtbare Marktliquidität beeinflussen</span></li>
       </ol>
+      <a class="ap__voltar" href="/de/blog/">Zurück</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Markt</span>
-        <h1>Was Dark Pools sind und wie sie die sichtbare Marktliquidität beeinflussen</h1>
-        <p class="bq-post__meta">Duotide-Team · <time datetime="2026-09-24">24.09.2026</time> · 4 Min. Lesezeit</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Nicht jeder Handel mit Aktien und anderen Vermögenswerten findet an den offenen Börsen statt, die jeder Investor in Echtzeit beobachten kann. Ein erheblicher Teil des weltweit gehandelten Volumens läuft über private Handelsumgebungen, bekannt als Dark Pools, oder "dunkle Becken" — so genannt, weil die Orders dort vor der Ausführung nicht öffentlich erscheinen.</p>
-<h2>Was ein Dark Pool genau ist</h2>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="o-que-sao-dark-pools-no-mercado-financeiro" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link kopiert">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24. Sept. 2026</time><span class="ap__sep">4 Min. Lesezeit</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span>
+            </div>
+            <p class="ap__atual">Aktualisiert am: <time datetime="2026-09-28">28. September 2026</time></p>
+            <span class="bq__tag">Markt</span>
+            <h1>Was Dark Pools sind und wie sie die sichtbare Marktliquidität beeinflussen</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide-Team</strong><small>Redaktion</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Inhalt">
+              <p class="ap__indice-tit">Inhalt</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#was-ein-dark-pool-genau-ist">Was ein Dark Pool genau ist</a></li>
+                <li><a href="#warum-eine-institution-es-vorzieht-so-zu-handeln">Warum eine Institution es vorzieht, so zu handeln</a></li>
+                <li><a href="#der-effekt-auf-die-transparenz-fur-den-kleinanleger">Der Effekt auf die Transparenz für den Kleinanleger</a></li>
+                <li><a href="#regulierung-und-grenzen-dieser-art-von-handel">Regulierung und Grenzen dieser Art von Handel</a></li>
+                <li><a href="#keine-verschworungstheorie-sondern-ein-baustein-des-systems">Keine Verschwörungstheorie, sondern ein Baustein des Systems</a></li>
+                <li><a href="#was-das-in-der-praxis-fur-den-privathandel-andert">Was das in der Praxis für den Privathandel ändert</a></li>
+                <li><a href="#was-zu-beobachten-ist-wenn-das-volumen-nicht-zur-bewegung-zu">Was zu beobachten ist, wenn das Volumen nicht zur Bewegung zu passen scheint</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Nach oben</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Nicht jeder Handel mit Aktien und anderen Vermögenswerten findet an den offenen Börsen statt, die jeder Investor in Echtzeit beobachten kann. Ein erheblicher Teil des weltweit gehandelten Volumens läuft über private Handelsumgebungen, bekannt als Dark Pools, oder "dunkle Becken" — so genannt, weil die Orders dort vor der Ausführung nicht öffentlich erscheinen.</p>
+<h2 id="was-ein-dark-pool-genau-ist">Was ein Dark Pool genau ist</h2>
 <p>Ein Dark Pool ist eine private Handelsplattform, betrieben von Banken, Brokern oder spezialisierten Unternehmen, auf der institutionelle Investoren — Pensionsfonds, Vermögensverwalter, große Investmentfonds — große Aktienpakete handeln können, ohne die Order vor der Ausführung dem öffentlichen Markt auszusetzen. Das Geschäft wird erst nach Abschluss öffentlich, meist mit einer kleinen Meldeverzögerung.</p>
-<h2>Warum eine Institution es vorzieht, so zu handeln</h2>
+<h2 id="warum-eine-institution-es-vorzieht-so-zu-handeln">Warum eine Institution es vorzieht, so zu handeln</h2>
 <p>Stellen Sie sich einen Fonds vor, der ein Paket von 2 Millionen Aktien eines Unternehmens verkaufen muss. Würde diese gesamte Order auf einmal im öffentlichen Orderbuch einer Börse erscheinen, würde der Markt wahrscheinlich schon vor vollständiger Ausführung reagieren und den Preis drücken, während andere Teilnehmer den Verkaufsdruck bemerken — ein Effekt namens Marktimpact. Durch den Handel in einem Dark Pool kann der Fonds dieses große Volumen mit ebenfalls institutionellen Gegenparteien ausführen, ohne die Absicht vorab preiszugeben und ohne den Preis gegen sich selbst zu bewegen, bevor die Operation abgeschlossen ist.</p>
-<h2>Der Effekt auf die Transparenz für den Kleinanleger</h2>
+<h2 id="der-effekt-auf-die-transparenz-fur-den-kleinanleger">Der Effekt auf die Transparenz für den Kleinanleger</h2>
 <p>Da ein Teil des gehandelten Volumens vor der Ausführung nicht im öffentlichen Orderbuch erscheint, stellen Preis und sichtbares Volumen an den offenen Börsen nur einen Bruchteil der tatsächlichen Marktaktivität bei diesem Vermögenswert dar. Das bedeutet, dass ein Kleinanleger, der nur das Volumen der offenen Börse betrachtet, ein unvollständiges Bild des tatsächlichen Angebots und der Nachfrage für diesen Titel zu einem bestimmten Zeitpunkt sehen kann — ohne dass das an sich eine Unregelmäßigkeit darstellt.</p>
-<h2>Regulierung und Grenzen dieser Art von Handel</h2>
+<h2 id="regulierung-und-grenzen-dieser-art-von-handel">Regulierung und Grenzen dieser Art von Handel</h2>
 <p>Dark Pools unterliegen der Regulierung durch die Aufsichtsbehörden jedes Marktes, mit spezifischen Regeln zur Meldung von Operationen, Mindestpaketgröße und Frist zur Veröffentlichung des Handels nach Abschluss. Diese Regeln existieren gerade, um den Vorteil der Verringerung des Marktimpacts bei großen Orders mit der Notwendigkeit auszugleichen, ein Mindestmaß an Transparenz für den Markt als Ganzes zu wahren.</p>
-<h2>Keine Verschwörungstheorie, sondern ein Baustein des Systems</h2>
+<h2 id="keine-verschworungstheorie-sondern-ein-baustein-des-systems">Keine Verschwörungstheorie, sondern ein Baustein des Systems</h2>
 <p>Es ist üblich, auf die Idee zu stoßen, dass Dark Pools existieren, um Bewegungen großer Akteure vor dem Kleinanleger zu "verstecken". In der Praxis existiert der Mechanismus, um ein reales und anerkanntes Problem zu lösen — den Marktimpact sehr großer Orders — innerhalb eines regulierten und gemeldeten Rahmens, nicht um am Rande des Gesetzes zu operieren. Der Kleinanleger hat keinen direkten Zugang zu diesen Umgebungen, weil sie für institutionellen Handel großen Umfangs konzipiert sind, nicht weil eine Absicht besteht, ihm speziell zu schaden.</p>
-<h2>Was das in der Praxis für den Privathandel ändert</h2>
+<h2 id="was-das-in-der-praxis-fur-den-privathandel-andert">Was das in der Praxis für den Privathandel ändert</h2>
 <p>Zu wissen, dass Dark Pools existieren, hilft, bestimmte Preisbewegungen zu erklären, die scheinbar unverhältnismäßig zum sichtbaren Volumen an der offenen Börse sind — ein Teil der tatsächlichen Aktivität war einfach nicht sichtbar, bis die Operation gemeldet wurde. Das unterstreicht, wie wichtig es ist, keine endgültigen Schlüsse allein aus dem Volumen einer einzigen Börse zu ziehen, besonders bei großkapitalisierten Vermögenswerten, wo der institutionelle Handel intensiver ist, und Volumen- und Orderfluss-Ablesungen als partielle Daten zu behandeln, nicht als vollständiges Marktbild.</p>
-<h2>Was zu beobachten ist, wenn das Volumen nicht zur Bewegung zu passen scheint</h2>
+<h2 id="was-zu-beobachten-ist-wenn-das-volumen-nicht-zur-bewegung-zu">Was zu beobachten ist, wenn das Volumen nicht zur Bewegung zu passen scheint</h2>
 <p>Wenn sich ein Vermögenswert deutlich bewegt, ohne ein entsprechendes sichtbares Volumen an der offenen Börse, lohnt es sich, die Möglichkeit zu berücksichtigen, dass relevanter Handel außerhalb der öffentlichen Umgebung stattgefunden hat, bevor er gemeldet wurde. Das ändert nicht die Entscheidung, zu handeln oder nicht, verhindert aber den voreiligen Schluss, dass "sich der Markt ohne Grund bewegt hat" — oft gab es den Grund, er war nur im Moment der Bewegung nicht sichtbar. Regelmäßige Berichte über aggregiertes Volumen zu verfolgen, wenn verfügbar, hilft, ein etwas vollständigeres Bild zu haben als nur das Echtzeit-Orderbuch. Diese Gewohnheit ist besonders nützlich für alle, die Entscheidungen auf Volumenanalyse stützen: zu verstehen, dass die angezeigte Zahl partiell ist, nicht das gesamte am Markt gehandelte Volumen, verhindert falsche Schlüsse aus unvollständigen Daten.</p>
-        <div class="bq-post__cta">
-          <p><strong>Üben, bevor Sie etwas riskieren.</strong> Eröffnen Sie Ihr Duotide-Konto und testen Sie Ihre Ideen im Demokonto mit R$ 10.000 virtuellem Guthaben.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
+            <div class="bq-post__cta">
+              <p><strong>Üben, bevor Sie etwas riskieren.</strong> Eröffnen Sie Ihr Duotide-Konto und testen Sie Ihre Ideen im Demokonto mit R$ 10.000 virtuellem Guthaben.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aktualisiert am: <time datetime="2026-09-28">28. Sept. 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span><button class="ap__compartilhar" type="button">Teilen <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide-Team</strong><p>Die Duotide-Redaktion schreibt die Ratgeber und Nachrichten in diesem Blog: wie Märkte funktionieren, Risikomanagement und die Nutzung der Plattform. Nichts hier ist eine Anlageempfehlung.</p></div>
+              <a class="btn ap__equipe" href="/de/ueber-uns/">Das Team kennenlernen</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Lesen Sie auch</h2>
+        <aside class="ap__rel">
+          <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/de/blog/anthropic-ipo-was-bisher-bekannt-ist/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Anthropic-IPO: was Fakt ist und was noch Gerücht</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
             <a class="bq__card" href="/de/blog/handel-ausserhalb-der-boersenzeiten-after-hours/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was ist Handel außerhalb der regulären Börsenzeiten (After-Hours)</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
@@ -215,7 +254,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -279,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

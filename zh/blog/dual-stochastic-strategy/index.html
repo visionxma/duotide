@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/dual-stochastic-strategy/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "交易策略",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">双随机指标策略：如何组合两个振荡指标</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">交易策略</span>
-        <h1>双随机指标策略：如何组合两个振荡指标</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>只使用一个随机振荡指标的问题之一，是它在波动较大的市场中可能产生大量信号，其中很多在短时间内相互矛盾。双随机指标策略试图通过组合两个设置不同的振荡指标来解决这个问题：一个较慢的，用作背景过滤器；一个较快的，用来寻找确切的入场时机。</p><p>在本文中，你将了解如何搭建这种组合、其背后的逻辑，以及一个如何综合解读这两个振荡指标的实际示例。</p><h2>为什么使用两个随机指标而不是一个</h2><p>设置为短周期的随机指标对价格变动反应很快，这对精确的入场点很有用，但也会产生大量毫无结果的超买超卖信号，尤其是在强劲趋势期间。而周期较长的随机指标变动更平滑，反映的是更长周期的动量，但反应太慢，不适合单独作为入场触发条件。</p><p>双随机指标的理念是同时使用这两种速度：慢速随机指标确定背景——即顺着哪个方向交易才合理——而快速随机指标则在这个背景之内指出更精确的时机。</p><h2>设置这两个振荡指标</h2><p>一种常见的设置是使用一个周期较长的慢速随机指标（例如21周期，并附加平滑处理），用来捕捉资产的背景动量，以及一个周期较短的快速随机指标（例如5周期），用来产生入场信号。周期的确切选择可能因所交易的时间周期和资产而异，但一慢一快的逻辑保持不变。</p><p>在图表上，慢速随机指标通常显示在价格图表下方，快速随机指标紧接其下，这样就能逐根K线地在视觉上比较两者。</p><h2>如何综合解读这两者</h2><p>基本的解读方式是这样的：首先观察慢速随机指标。如果它正从超卖区（低于20）走出并向上回升，那么背景条件就有利于做多。只有在这之后，才观察快速随机指标，寻找与这个背景相符的入场信号——例如，快速随机指标的%K线和%D线出现上涨交叉，同样是从超卖区出发。</p><p>当两个振荡指标意见一致时——慢速指标显示背景有利，快速指标在此背景内给出入场信号——理论上，这笔交易比单独使用其中任何一个指标获得更多支持。如果快速指标发出买入信号，但慢速指标仍处于超买区或正在下降，这种分歧就是入场前需要更加谨慎的理由。</p><h2>一个实际的解读示例</h2><p>假设某资产报价为33.20雷亚尔，慢速随机指标从18上升到25，正走出超卖区。此时，快速随机指标在15的位置从下方向上穿越，同样处于超卖区内。这种组合暗示了一个可能的买入入场机会，止损设在近期最低点稍下方，目标由图表上下一个重要阻力位确定。</p><h2>应用该策略时的注意事项</h2><p>即使两个振荡指标意见一致，双随机指标也不应该脱离图表更大的背景孤立使用，比如更高时间周期的趋势和附近的支撑阻力水平。这个策略能减少相互矛盾的信号数量，但不能消除假信号，尤其是在高度横盘或有突发新闻的市场中。</p><h2>付诸实践</h2><p>在Duotide上，可以在同一张图表上设置两个不同周期的随机振荡指标，并在投入真实资金之前先测试这种组合。值得记录一段时间内观察到的信号结果，根据所选资产的表现调整周期。和任何基于指标的策略一样，这里存在真实的亏损风险，每笔头寸的规模都应该与这种风险相匹配。</p><p>应用同一理念的另一种方式，是对同一资产在两个不同的时间周期上使用同一个随机指标周期——例如，用4小时图确定背景，用15分钟图确定入场时机。其背后的逻辑与经典的双随机指标策略相同：较长的周期确定首选方向，较短的周期在这个方向内精确入场点，这有助于避免逆着资产当时的主导走势入场。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="estrategia-dual-stochastic" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">交易策略</span>
+            <h1>双随机指标策略：如何组合两个振荡指标</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#为什么使用两个随机指标而不是一个">为什么使用两个随机指标而不是一个</a></li>
+                <li><a href="#设置这两个振荡指标">设置这两个振荡指标</a></li>
+                <li><a href="#如何综合解读这两者">如何综合解读这两者</a></li>
+                <li><a href="#一个实际的解读示例">一个实际的解读示例</a></li>
+                <li><a href="#应用该策略时的注意事项">应用该策略时的注意事项</a></li>
+                <li><a href="#付诸实践">付诸实践</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>只使用一个随机振荡指标的问题之一，是它在波动较大的市场中可能产生大量信号，其中很多在短时间内相互矛盾。双随机指标策略试图通过组合两个设置不同的振荡指标来解决这个问题：一个较慢的，用作背景过滤器；一个较快的，用来寻找确切的入场时机。</p><p>在本文中，你将了解如何搭建这种组合、其背后的逻辑，以及一个如何综合解读这两个振荡指标的实际示例。</p><h2 id="为什么使用两个随机指标而不是一个">为什么使用两个随机指标而不是一个</h2><p>设置为短周期的随机指标对价格变动反应很快，这对精确的入场点很有用，但也会产生大量毫无结果的超买超卖信号，尤其是在强劲趋势期间。而周期较长的随机指标变动更平滑，反映的是更长周期的动量，但反应太慢，不适合单独作为入场触发条件。</p><p>双随机指标的理念是同时使用这两种速度：慢速随机指标确定背景——即顺着哪个方向交易才合理——而快速随机指标则在这个背景之内指出更精确的时机。</p><h2 id="设置这两个振荡指标">设置这两个振荡指标</h2><p>一种常见的设置是使用一个周期较长的慢速随机指标（例如21周期，并附加平滑处理），用来捕捉资产的背景动量，以及一个周期较短的快速随机指标（例如5周期），用来产生入场信号。周期的确切选择可能因所交易的时间周期和资产而异，但一慢一快的逻辑保持不变。</p><p>在图表上，慢速随机指标通常显示在价格图表下方，快速随机指标紧接其下，这样就能逐根K线地在视觉上比较两者。</p><h2 id="如何综合解读这两者">如何综合解读这两者</h2><p>基本的解读方式是这样的：首先观察慢速随机指标。如果它正从超卖区（低于20）走出并向上回升，那么背景条件就有利于做多。只有在这之后，才观察快速随机指标，寻找与这个背景相符的入场信号——例如，快速随机指标的%K线和%D线出现上涨交叉，同样是从超卖区出发。</p><p>当两个振荡指标意见一致时——慢速指标显示背景有利，快速指标在此背景内给出入场信号——理论上，这笔交易比单独使用其中任何一个指标获得更多支持。如果快速指标发出买入信号，但慢速指标仍处于超买区或正在下降，这种分歧就是入场前需要更加谨慎的理由。</p><h2 id="一个实际的解读示例">一个实际的解读示例</h2><p>假设某资产报价为33.20雷亚尔，慢速随机指标从18上升到25，正走出超卖区。此时，快速随机指标在15的位置从下方向上穿越，同样处于超卖区内。这种组合暗示了一个可能的买入入场机会，止损设在近期最低点稍下方，目标由图表上下一个重要阻力位确定。</p><h2 id="应用该策略时的注意事项">应用该策略时的注意事项</h2><p>即使两个振荡指标意见一致，双随机指标也不应该脱离图表更大的背景孤立使用，比如更高时间周期的趋势和附近的支撑阻力水平。这个策略能减少相互矛盾的信号数量，但不能消除假信号，尤其是在高度横盘或有突发新闻的市场中。</p><h2 id="付诸实践">付诸实践</h2><p>在Duotide上，可以在同一张图表上设置两个不同周期的随机振荡指标，并在投入真实资金之前先测试这种组合。值得记录一段时间内观察到的信号结果，根据所选资产的表现调整周期。和任何基于指标的策略一样，这里存在真实的亏损风险，每笔头寸的规模都应该与这种风险相匹配。</p><p>应用同一理念的另一种方式，是对同一资产在两个不同的时间周期上使用同一个随机指标周期——例如，用4小时图确定背景，用15分钟图确定入场时机。其背后的逻辑与经典的双随机指标策略相同：较长的周期确定首选方向，较短的周期在这个方向内精确入场点，这有助于避免逆着资产当时的主导走势入场。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

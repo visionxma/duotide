@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/id/blog/greeks-opsi-untuk-pemula/",
       "inLanguage": "id",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Opsi",
       "author": {
@@ -172,28 +172,68 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Jejak navigasi">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/id/">Beranda</a></li>
         <li><a href="/id/blog/">Blog</a></li>
         <li><span aria-current="page">Greeks Opsi untuk Pemula: Delta, Gamma, Theta, dan Vega</span></li>
       </ol>
+      <a class="ap__voltar" href="/id/blog/">Kembali</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Opsi</span>
-        <h1>Greeks Opsi untuk Pemula: Delta, Gamma, Theta, dan Vega</h1>
-        <p class="bq-post__meta">Tim Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 menit baca</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Yang mulai mempelajari opsi biasanya cepat bertemu empat kata yang terdengar seperti bahasa Yunani sungguhan: delta, gamma, theta, dan vega. Ini, dalam praktiknya, adalah ukuran yang menunjukkan bagaimana harga sebuah opsi bereaksi terhadap berbagai faktor, seperti pergerakan aset dasar, berlalunya waktu, dan perubahan volatilitas. Memahami apa yang diukur masing-masing membantu menilai sebuah transaksi opsi sebelum masuk, alih-alih baru mengetahui kemudian mengapa harga kontrak bergerak dengan cara yang tidak terduga.</p><h2>Delta: Seberapa Besar Opsi Bergerak Bersama Aset</h2><p>Delta mengukur sensitivitas harga opsi terhadap variasi harga aset dasar. Call option dengan delta 0,60, misalnya, cenderung naik sekitar R$ 0,60 untuk setiap kenaikan R$ 1,00 pada aset dasar, dengan faktor lain tetap konstan. Call option memiliki delta positif, antara 0 dan 1. Put option memiliki delta negatif, antara -1 dan 0. Semakin dalam in-the-money sebuah opsi, semakin delta mendekati 1 atau -1, dan semakin jauh out-of-the-money, semakin dekat ke nol.</p><h2>Gamma: Kecepatan Perubahan Delta</h2><p>Jika delta menunjukkan arah, gamma menunjukkan seberapa cepat arah itu bisa berubah ketika harga aset bergerak. Gamma tinggi berarti delta opsi bisa bervariasi banyak dengan pergerakan kecil aset dasar, yang biasanya terjadi pada opsi mendekati harga exercise dan mendekati jatuh tempo. Ini penting karena posisi dengan gamma tinggi bisa berubah profil risikonya dengan cepat, membutuhkan perhatian lebih dibandingkan posisi dengan gamma rendah.</p><h2>Theta: Biaya Menahan Opsi Seiring Waktu</h2><p>Theta mengukur berapa banyak nilai yang cenderung hilang dari opsi per hari, hanya karena berlalunya waktu, dengan faktor lain tetap konstan. Efek ini dikenal sebagai peluruhan waktu (time decay). Bagi yang membeli opsi, theta bekerja melawan posisi: setiap hari yang berlalu tanpa aset bergerak cukup jauh mengurangi nilai kontrak. Bagi yang menjual opsi, theta bekerja mendukung, yang menjelaskan mengapa strategi menjual opsi sering digambarkan sebagai taruhan pada waktu, bukan hanya arah harga.</p><h2>Vega: Sensitivitas terhadap Perubahan Volatilitas</h2><p>Vega mengukur berapa banyak harga opsi berubah ketika volatilitas implisit pasar naik atau turun, tanpa harga aset dasar perlu bergerak. Pada periode ketidakpastian, seperti sebelum hasil perusahaan atau keputusan suku bunga, volatilitas implisit cenderung naik, yang bisa membuat opsi lebih mahal bahkan tanpa pergerakan langsung pada harga aset. Setelah peristiwa itu, volatilitas biasanya turun drastis, efek yang disebut volatility crush, yang bisa mengurangi nilai opsi meski aset bergerak ke arah yang diharapkan.</p><h2>Contoh Numerik Menggabungkan Delta dan Gamma</h2><p>Anggaplah sebuah call option diperdagangkan R$ 2,00, dengan delta 0,40 dan gamma 0,05, atas aset yang dikuotasi R$ 50,00. Jika aset naik R$ 1,00, menjadi R$ 51,00, harga opsi baru yang diperkirakan mendekati R$ 2,40, hanya menggunakan delta. Tetapi gamma 0,05 menunjukkan bahwa delta itu sendiri juga naik, dari 0,40 menjadi sekitar 0,45 setelah pergerakan itu. Ini berarti, jika aset naik R$ 1,00 lagi setelahnya, opsi seharusnya bereaksi sedikit lebih kuat dibandingkan reaksinya pada kenaikan pertama. Efek akumulatif inilah yang menjadi alasan mengapa posisi dengan gamma tinggi bisa terlihat tenang dan, tiba-tiba, mulai bergerak jauh lebih kuat dari yang diharapkan.</p><h2>Rho: Greek yang Jarang Diperhatikan Pemula</h2><p>Ada juga Greek kelima, disebut rho, yang mengukur sensitivitas harga opsi terhadap perubahan suku bunga. Pada sebagian besar transaksi jangka pendek, efek rho kecil dibandingkan faktor lain, tetapi menjadi relevan pada opsi berjangka lebih panjang atau pada periode perubahan cepat suku bunga. Ada baiknya mengetahui bahwa ia ada, meski fokus sehari-hari biasanya tetap pada delta, gamma, theta, dan vega.</p><h2>Cara Greeks Bekerja Bersama</h2><p>Tidak ada Greek yang bekerja sendirian. Sebuah opsi bisa memiliki delta yang mendukung kenaikan aset, tetapi tetap kehilangan nilai jika theta menggerus keuntungan lebih cepat dari kenaikan harga, atau jika volatilitas turun segera setelah entri. Sebelum menyusun transaksi opsi, ada baiknya bertanya bukan hanya apakah aset akan naik atau turun, tetapi juga berapa lama itu akan terjadi dan bagaimana volatilitas implisit cenderung berperilaku dalam periode itu.</p><h2>Mengapa Ini Penting bagi Pemula</h2><p>Mengabaikan Greeks tidak membuat transaksi lebih sederhana, hanya menyembunyikan risiko yang tetap ada apa pun yang terjadi. Pembeli opsi yang memahami theta tahu bahwa ia membutuhkan pergerakan yang relatif cepat untuk mengompensasi kerusakan waktu. Penjual opsi yang memahami gamma tahu bahwa posisinya bisa menjadi jauh lebih berisiko mendekati jatuh tempo. Bertransaksi opsi melibatkan risiko, termasuk kemungkinan kehilangan seluruh nilai yang diinvestasikan dalam kontrak, dan memahami Greeks adalah langkah praktis untuk menilai risiko ini sebelum masuk, bukan jaminan hasil.</p>
-        <div class="bq-post__cta">
-          <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="gregas-das-opcoes-para-iniciantes" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Tautan disalin">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 Sep 2026</time><span class="ap__sep">4 menit baca</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> kali dilihat</span></span>
+            </div>
+            <p class="ap__atual">Diperbarui: <time datetime="2026-09-27">27 September 2026</time></p>
+            <span class="bq__tag">Opsi</span>
+            <h1>Greeks Opsi untuk Pemula: Delta, Gamma, Theta, dan Vega</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Tim Duotide</strong><small>Tim editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Daftar isi">
+              <p class="ap__indice-tit">Daftar isi</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#delta-seberapa-besar-opsi-bergerak-bersama-aset">Delta: Seberapa Besar Opsi Bergerak Bersama Aset</a></li>
+                <li><a href="#gamma-kecepatan-perubahan-delta">Gamma: Kecepatan Perubahan Delta</a></li>
+                <li><a href="#theta-biaya-menahan-opsi-seiring-waktu">Theta: Biaya Menahan Opsi Seiring Waktu</a></li>
+                <li><a href="#vega-sensitivitas-terhadap-perubahan-volatilitas">Vega: Sensitivitas terhadap Perubahan Volatilitas</a></li>
+                <li><a href="#contoh-numerik-menggabungkan-delta-dan-gamma">Contoh Numerik Menggabungkan Delta dan Gamma</a></li>
+                <li><a href="#rho-greek-yang-jarang-diperhatikan-pemula">Rho: Greek yang Jarang Diperhatikan Pemula</a></li>
+                <li><a href="#cara-greeks-bekerja-bersama">Cara Greeks Bekerja Bersama</a></li>
+                <li><a href="#mengapa-ini-penting-bagi-pemula">Mengapa Ini Penting bagi Pemula</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Kembali ke atas</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Yang mulai mempelajari opsi biasanya cepat bertemu empat kata yang terdengar seperti bahasa Yunani sungguhan: delta, gamma, theta, dan vega. Ini, dalam praktiknya, adalah ukuran yang menunjukkan bagaimana harga sebuah opsi bereaksi terhadap berbagai faktor, seperti pergerakan aset dasar, berlalunya waktu, dan perubahan volatilitas. Memahami apa yang diukur masing-masing membantu menilai sebuah transaksi opsi sebelum masuk, alih-alih baru mengetahui kemudian mengapa harga kontrak bergerak dengan cara yang tidak terduga.</p><h2 id="delta-seberapa-besar-opsi-bergerak-bersama-aset">Delta: Seberapa Besar Opsi Bergerak Bersama Aset</h2><p>Delta mengukur sensitivitas harga opsi terhadap variasi harga aset dasar. Call option dengan delta 0,60, misalnya, cenderung naik sekitar R$ 0,60 untuk setiap kenaikan R$ 1,00 pada aset dasar, dengan faktor lain tetap konstan. Call option memiliki delta positif, antara 0 dan 1. Put option memiliki delta negatif, antara -1 dan 0. Semakin dalam in-the-money sebuah opsi, semakin delta mendekati 1 atau -1, dan semakin jauh out-of-the-money, semakin dekat ke nol.</p><h2 id="gamma-kecepatan-perubahan-delta">Gamma: Kecepatan Perubahan Delta</h2><p>Jika delta menunjukkan arah, gamma menunjukkan seberapa cepat arah itu bisa berubah ketika harga aset bergerak. Gamma tinggi berarti delta opsi bisa bervariasi banyak dengan pergerakan kecil aset dasar, yang biasanya terjadi pada opsi mendekati harga exercise dan mendekati jatuh tempo. Ini penting karena posisi dengan gamma tinggi bisa berubah profil risikonya dengan cepat, membutuhkan perhatian lebih dibandingkan posisi dengan gamma rendah.</p><h2 id="theta-biaya-menahan-opsi-seiring-waktu">Theta: Biaya Menahan Opsi Seiring Waktu</h2><p>Theta mengukur berapa banyak nilai yang cenderung hilang dari opsi per hari, hanya karena berlalunya waktu, dengan faktor lain tetap konstan. Efek ini dikenal sebagai peluruhan waktu (time decay). Bagi yang membeli opsi, theta bekerja melawan posisi: setiap hari yang berlalu tanpa aset bergerak cukup jauh mengurangi nilai kontrak. Bagi yang menjual opsi, theta bekerja mendukung, yang menjelaskan mengapa strategi menjual opsi sering digambarkan sebagai taruhan pada waktu, bukan hanya arah harga.</p><h2 id="vega-sensitivitas-terhadap-perubahan-volatilitas">Vega: Sensitivitas terhadap Perubahan Volatilitas</h2><p>Vega mengukur berapa banyak harga opsi berubah ketika volatilitas implisit pasar naik atau turun, tanpa harga aset dasar perlu bergerak. Pada periode ketidakpastian, seperti sebelum hasil perusahaan atau keputusan suku bunga, volatilitas implisit cenderung naik, yang bisa membuat opsi lebih mahal bahkan tanpa pergerakan langsung pada harga aset. Setelah peristiwa itu, volatilitas biasanya turun drastis, efek yang disebut volatility crush, yang bisa mengurangi nilai opsi meski aset bergerak ke arah yang diharapkan.</p><h2 id="contoh-numerik-menggabungkan-delta-dan-gamma">Contoh Numerik Menggabungkan Delta dan Gamma</h2><p>Anggaplah sebuah call option diperdagangkan R$ 2,00, dengan delta 0,40 dan gamma 0,05, atas aset yang dikuotasi R$ 50,00. Jika aset naik R$ 1,00, menjadi R$ 51,00, harga opsi baru yang diperkirakan mendekati R$ 2,40, hanya menggunakan delta. Tetapi gamma 0,05 menunjukkan bahwa delta itu sendiri juga naik, dari 0,40 menjadi sekitar 0,45 setelah pergerakan itu. Ini berarti, jika aset naik R$ 1,00 lagi setelahnya, opsi seharusnya bereaksi sedikit lebih kuat dibandingkan reaksinya pada kenaikan pertama. Efek akumulatif inilah yang menjadi alasan mengapa posisi dengan gamma tinggi bisa terlihat tenang dan, tiba-tiba, mulai bergerak jauh lebih kuat dari yang diharapkan.</p><h2 id="rho-greek-yang-jarang-diperhatikan-pemula">Rho: Greek yang Jarang Diperhatikan Pemula</h2><p>Ada juga Greek kelima, disebut rho, yang mengukur sensitivitas harga opsi terhadap perubahan suku bunga. Pada sebagian besar transaksi jangka pendek, efek rho kecil dibandingkan faktor lain, tetapi menjadi relevan pada opsi berjangka lebih panjang atau pada periode perubahan cepat suku bunga. Ada baiknya mengetahui bahwa ia ada, meski fokus sehari-hari biasanya tetap pada delta, gamma, theta, dan vega.</p><h2 id="cara-greeks-bekerja-bersama">Cara Greeks Bekerja Bersama</h2><p>Tidak ada Greek yang bekerja sendirian. Sebuah opsi bisa memiliki delta yang mendukung kenaikan aset, tetapi tetap kehilangan nilai jika theta menggerus keuntungan lebih cepat dari kenaikan harga, atau jika volatilitas turun segera setelah entri. Sebelum menyusun transaksi opsi, ada baiknya bertanya bukan hanya apakah aset akan naik atau turun, tetapi juga berapa lama itu akan terjadi dan bagaimana volatilitas implisit cenderung berperilaku dalam periode itu.</p><h2 id="mengapa-ini-penting-bagi-pemula">Mengapa Ini Penting bagi Pemula</h2><p>Mengabaikan Greeks tidak membuat transaksi lebih sederhana, hanya menyembunyikan risiko yang tetap ada apa pun yang terjadi. Pembeli opsi yang memahami theta tahu bahwa ia membutuhkan pergerakan yang relatif cepat untuk mengompensasi kerusakan waktu. Penjual opsi yang memahami gamma tahu bahwa posisinya bisa menjadi jauh lebih berisiko mendekati jatuh tempo. Bertransaksi opsi melibatkan risiko, termasuk kemungkinan kehilangan seluruh nilai yang diinvestasikan dalam kontrak, dan memahami Greeks adalah langkah praktis untuk menilai risiko ini sebelum masuk, bukan jaminan hasil.</p>
+            <div class="bq-post__cta">
+              <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Diperbarui: <time datetime="2026-09-27">27 Sep 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> kali dilihat</span></span><button class="ap__compartilhar" type="button">Bagikan <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Tim Duotide</strong><p>Tim editorial Duotide menulis panduan dan berita di blog ini: cara kerja pasar, manajemen risiko, dan penggunaan platform. Tidak ada isi di sini yang merupakan saran investasi.</p></div>
+              <a class="btn ap__equipe" href="/id/tentang/">Kenali tim kami</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Baca juga</h2>
+        <aside class="ap__rel">
+          <h2>Artikel terkait</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/id/blog/cara-kerja-opsi-biner-dalam-praktik/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cara Kerja Opsi Biner dalam Praktik</span><span class="bq__meta">24/09/2026 · 6 menit baca</span></a>
             <a class="bq__card" href="/id/blog/opsi-biner-langkah-demi-langkah-dan-manajemen-risiko/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opsi Biner: Langkah Demi Langkah Praktis dan Manajemen Risiko</span><span class="bq__meta">24/09/2026 · 6 menit baca</span></a>
@@ -201,7 +241,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +305,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

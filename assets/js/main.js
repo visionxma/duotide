@@ -238,3 +238,62 @@
   if (mais) mais.addEventListener('click', function () { limite += passo; aplicar(); });
   aplicar();
 })();
+
+// Página de artigo do blog: barra de progresso, sumário que acompanha a leitura,
+// contador de visitas (uma por navegador por dia) e botão de compartilhar.
+(function () {
+  var ap = document.querySelector('.ap');
+  if (!ap) return;
+  var texto = ap.querySelector('.ap__texto');
+  var barra = ap.querySelector('.ap__barra'), trilho = ap.querySelector('.ap__trilho');
+  var topoBarra = document.querySelector('.ap__progresso span');
+  var itens = [].map.call(ap.querySelectorAll('.ap__trilho li'), function (li) {
+    var a = li.querySelector('a'); return { li: li, h: document.getElementById(a.getAttribute('href').slice(1)) };
+  }).filter(function (x) { return x.h; });
+  var pedido = false;
+  function atualizar() {
+    pedido = false;
+    var r = texto.getBoundingClientRect(), vh = window.innerHeight;
+    var p = Math.min(1, Math.max(0, (vh * 0.35 - r.top) / Math.max(1, r.height - vh * 0.35)));
+    if (topoBarra) topoBarra.style.width = (p * 100) + '%';
+    var linha = vh * 0.3, atual = -1;
+    itens.forEach(function (x, i) { if (x.h.getBoundingClientRect().top <= linha) atual = i; });
+    itens.forEach(function (x, i) { x.li.classList.toggle('is-lido', i < atual); x.li.classList.toggle('is-atual', i === atual); });
+    if (barra && trilho) {
+      // a barra cresce até o item que está sendo lido, proporcional ao quanto da seção já passou
+      var alt = trilho.clientHeight;
+      if (itens.length && atual >= 0) {
+        var prox = itens[atual + 1], ini = itens[atual].h.getBoundingClientRect().top, fim = prox ? prox.h.getBoundingClientRect().top : r.bottom;
+        var frac = Math.min(1, Math.max(0, (linha - ini) / Math.max(1, fim - ini)));
+        var li = itens[atual].li, y0 = li.offsetTop, y1 = prox ? prox.li.offsetTop : alt;
+        barra.style.height = (y0 + (y1 - y0) * frac) + 'px';
+      } else barra.style.height = itens.length ? '0px' : (p * alt) + 'px';
+    }
+  }
+  function pedir() { if (!pedido) { pedido = true; requestAnimationFrame(atualizar); } }
+  window.addEventListener('scroll', pedir, { passive: true });
+  window.addEventListener('resize', pedir);
+  atualizar();
+
+  // visitas: soma uma por navegador por dia; se o contador não responder, o número fica escondido
+  var slug = ap.getAttribute('data-slug'), api = ap.getAttribute('data-api');
+  if (slug && api && window.fetch) {
+    var hoje = new Date().toISOString().slice(0, 10), chave = 'vis:' + slug, ja = null;
+    try { ja = localStorage.getItem(chave); } catch (e) {}
+    fetch(api + '/v/' + slug, { method: ja === hoje ? 'GET' : 'POST' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (!d || typeof d.n !== 'number' || d.n < 1) return;
+      try { localStorage.setItem(chave, hoje); } catch (e) {}
+      var txt = d.n.toLocaleString(document.documentElement.lang || 'pt-BR');
+      [].forEach.call(ap.querySelectorAll('[data-visitas]'), function (el) { el.querySelector('b').textContent = txt; el.hidden = false; });
+    }).catch(function () {});
+  }
+
+  // compartilhar: menu nativo do celular, ou copia o link
+  var bt = ap.querySelector('.ap__compartilhar');
+  if (bt) bt.addEventListener('click', function () {
+    var url = location.href.split('#')[0], titulo = document.title;
+    if (navigator.share) { navigator.share({ title: titulo, url: url }).catch(function () {}); return; }
+    var feito = function () { var o = bt.innerHTML; bt.textContent = ap.getAttribute('data-copiado'); setTimeout(function () { bt.innerHTML = o; }, 1800); };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(feito, function () {}); else feito();
+  });
+})();

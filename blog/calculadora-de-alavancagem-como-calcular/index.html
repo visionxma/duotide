@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -173,31 +173,57 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Trilha de navegação">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><span aria-current="page">Como calcular a alavancagem e a margem necessária no trading</span></li>
       </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Gestão de risco</span>
-        <h1>Como calcular a alavancagem e a margem necessária no trading</h1>
-        <p class="bq-post__meta">Equipe Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min de leitura</p>
-        <figure class="foto"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Alavancagem é o mecanismo que permite controlar uma posição maior no mercado usando uma fração desse valor como margem, depositada na corretora. Ela existe em forex, criptomoedas, CFDs, commodities e índices, e em todos esses casos a fórmula central é a mesma.</p>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-alavancagem-como-calcular" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <span class="bq__tag">Gestão de risco</span>
+            <h1>Como calcular a alavancagem e a margem necessária no trading</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Equipe Duotide</strong><small>Equipe editorial</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#a-formula-universal">A fórmula universal</a></li>
+                <li><a href="#o-numero-que-realmente-importa-a-alavancagem-efetiva">O número que realmente importa: a alavancagem efetiva</a></li>
+                <li><a href="#exemplo-em-forex-mesma-posicao-alavancagens-diferentes">Exemplo em forex: mesma posição, alavancagens diferentes</a></li>
+                <li><a href="#exemplo-em-criptomoedas">Exemplo em criptomoedas</a></li>
+                <li><a href="#como-usar-esse-calculo-na-pratica">Como usar esse cálculo na prática</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Alavancagem é o mecanismo que permite controlar uma posição maior no mercado usando uma fração desse valor como margem, depositada na corretora. Ela existe em forex, criptomoedas, CFDs, commodities e índices, e em todos esses casos a fórmula central é a mesma.</p>
 <p>O ponto que mais gera confusão é achar que a alavancagem, por si só, define o risco da operação. Não define. A alavancagem muda quanto capital é exigido para abrir a posição — ela não muda o tamanho do movimento de mercado que a posição representa.</p>
-<h2>A fórmula universal</h2>
+<h2 id="a-formula-universal">A fórmula universal</h2>
 <p>A margem necessária para abrir uma posição é calculada assim:</p>
 <p>Margem necessária = valor da posição ÷ alavancagem</p>
 <p>Se uma posição vale R$ 50.000 e a alavancagem é 1:20, a margem necessária é R$ 2.500. Com alavancagem 1:100, a mesma posição de R$ 50.000 exige apenas R$ 500 de margem. Em ambos os casos, porém, a posição continua se comportando como uma posição de R$ 50.000 — é esse valor que determina o quanto se ganha ou perde a cada variação percentual do ativo, não a margem depositada.</p>
-<h2>O número que realmente importa: a alavancagem efetiva</h2>
+<h2 id="o-numero-que-realmente-importa-a-alavancagem-efetiva">O número que realmente importa: a alavancagem efetiva</h2>
 <p>A maioria das explicações sobre alavancagem para por aí, mas falta uma peça: a alavancagem efetiva, calculada como o valor total da posição dividido pelo saldo da conta. Um trader pode ter acesso a alavancagem de 1:500 e ainda assim operar de forma conservadora, usando posições pequenas. Outro trader pode usar apenas 1:10 e correr risco excessivo, simplesmente por abrir uma posição grande demais para o tamanho da própria conta.</p>
 <p>Antes de qualquer operação alavancada, quatro perguntas merecem resposta: qual é o valor total da posição, quanto de margem será bloqueado, qual é a alavancagem efetiva resultante, e qual seria a perda estimada se o preço chegasse ao stop planejado.</p>
-<h2>Exemplo em forex: mesma posição, alavancagens diferentes</h2>
+<h2 id="exemplo-em-forex-mesma-posicao-alavancagens-diferentes">Exemplo em forex: mesma posição, alavancagens diferentes</h2>
 <p>Um trader com conta de R$ 5.000 abre 0,10 lote de EUR/USD perto de 1,0850, com stop de 30 pips. O valor da posição é de aproximadamente R$ 54.250 (10.000 euros convertidos pela cotação de exemplo), e o valor do pip nessa posição é de cerca de R$ 5. O risco no stop, portanto, é de R$ 150, independentemente da alavancagem escolhida.</p>
 <ul>
 <li><strong>Alavancagem 1:10</strong> — margem necessária de cerca de R$ 5.425; alavancagem efetiva de 10,85x; risco no stop de R$ 150.</li>
@@ -205,7 +231,7 @@
 <li><strong>Alavancagem 1:100</strong> — margem necessária de cerca de R$ 543; mesma alavancagem efetiva; mesmo risco de R$ 150.</li>
 </ul>
 <p>A margem bloqueada muda bastante entre os três cenários. O risco financeiro da operação não muda nada, porque o tamanho da posição e a distância do stop permaneceram idênticos. É essa a lição central: a alavancagem define quanto capital é reservado para abrir a posição; o tamanho da posição é quem define a exposição real ao risco.</p>
-<h2>Exemplo em criptomoedas</h2>
+<h2 id="exemplo-em-criptomoedas">Exemplo em criptomoedas</h2>
 <p>O mesmo raciocínio vale fora do forex. Suponha que o bitcoin esteja cotado a R$ 350.000 e um trader abra uma posição de 0,02 BTC com alavancagem 1:10. O valor da posição é:</p>
 <p>0,02 × R$ 350.000 = R$ 7.000</p>
 <p>A margem necessária é:</p>
@@ -213,15 +239,26 @@
 <p>Se o preço do bitcoin cair 5% contra a posição, a perda aproximada, antes de custos, é:</p>
 <p>R$ 7.000 × 5% = R$ 350</p>
 <p>De novo, a alavancagem não decidiu sozinha o tamanho da perda. Foram a quantidade de bitcoin negociada e o tamanho do movimento de preço que determinaram o resultado. Uma quantidade menor de BTC reduziria a exposição; um stop mais apertado ou mais largo mudaria o ponto em que a perda se concretiza — mas nenhuma dessas variáveis é a alavancagem em si.</p>
-<h2>Como usar esse cálculo na prática</h2>
+<h2 id="como-usar-esse-calculo-na-pratica">Como usar esse cálculo na prática</h2>
 <p>Antes de escolher a alavancagem em qualquer operação, o caminho mais seguro é inverter a ordem das perguntas: em vez de perguntar "qual a maior alavancagem disponível", pergunte "qual valor de posição eu realmente quero ter exposição, dado o meu capital e o risco que estou disposto a assumir". A partir desse valor de posição, a margem necessária vem como consequência da fórmula, não como ponto de partida.</p>
 <p>Alavancagem alta aumenta o potencial de ganho, mas na mesma proporção aumenta o potencial de perda, e pode levar a chamadas de margem quando o mercado se move contra a posição rapidamente. Ela é uma ferramenta, não um atalho para lucro garantido — trading envolve risco de perda em qualquer nível de alavancagem, e vale sempre confirmar as condições de margem específicas de cada instrumento na plataforma antes de operar, seja na Duotide ou em qualquer outro ambiente de negociação.</p>
-        <div class="bq-post__cta">
-          <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Equipe Duotide</strong><p>A equipe editorial da Duotide escreve os guias e as notícias deste blog: como o mercado funciona, gestão de risco e uso da plataforma. Nada aqui é recomendação de investimento.</p></div>
+              <a class="btn ap__equipe" href="/sobre/">Conheça a equipe</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leia também</h2>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/stop-loss-e-take-profit-no-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como usar stop loss e take profit no forex</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
             <a class="bq__card" href="/blog/estrategia-martingale-no-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia martingale no trading: como funciona e os riscos</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
@@ -229,7 +266,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -292,6 +329,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

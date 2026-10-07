@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/gamma-squeeze-vs-short-squeeze/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp",
       "articleSection": "股票",
       "author": {
@@ -172,47 +172,85 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">伽马挤压对比空头挤压：真正的区别是什么</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">股票</span>
-        <h1>伽马挤压对比空头挤压：真正的区别是什么</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="gamma-squeeze-vs-short-squeeze-diferencas" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">股票</span>
+            <h1>伽马挤压对比空头挤压：真正的区别是什么</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#空头挤压-卖空者被迫回补">空头挤压：卖空者被迫回补</a></li>
+                <li><a href="#伽马挤压-卖出看涨期权的一方调整对冲">伽马挤压：卖出看涨期权的一方调整对冲</a></li>
+                <li><a href="#两者可能同时发生">两者可能同时发生</a></li>
+                <li><a href="#公开数据能证明什么-不能证明什么">公开数据能证明什么，不能证明什么</a></li>
+                <li><a href="#2021年的gamestop事件-为什么单一标签不够">2021年的GameStop事件：为什么单一标签不够</a></li>
+                <li><a href="#在图表已经飙升之后才试图入场的风险">在图表已经飙升之后才试图入场的风险</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>空头挤压（short squeeze）和伽马挤压（gamma squeeze）是两个每当某只股票突然暴涨时经常一起出现的术语，但它们描述的是不同的机制，买盘背后的买家也不相同。把两者混为一谈，可能会让人押注于一次实际上并没有相同动力支撑的走势延续。</p>
-<h2>空头挤压：卖空者被迫回补</h2>
+<h2 id="空头挤压-卖空者被迫回补">空头挤压：卖空者被迫回补</h2>
 <p>空头挤压始于卖空借入股票、押注价格下跌的交易者。如果价格不跌反涨，这些头寸就会开始累积亏损。保证金追缴、持续上升的股票借券成本，或内部风险限额，都可能迫使这些卖空者回补股票以平仓。如果许多卖空者同时试图回补，这种额外的需求可能会把价格推得更高，进而迫使其他卖空者也这样做。</p>
-<h2>伽马挤压：卖出看涨期权的一方调整对冲</h2>
+<h2 id="伽马挤压-卖出看涨期权的一方调整对冲">伽马挤压：卖出看涨期权的一方调整对冲</h2>
 <p>伽马挤压的起源不同，与期权市场相关。当许多投资者买入某只股票的看涨期权时，这些期权的卖方——通常是做市商——可能会持有一个需要对冲的敞口。如果这个卖方持有的是负的净伽马头寸，那么随着价格上涨，他可能需要买入该资产的股票来对冲风险。由于价格上涨会再次改变这一敞口，可能就需要买入更多股票，从而形成一个自我强化上涨的循环。</p>
-<h2>两者可能同时发生</h2>
+<h2 id="两者可能同时发生">两者可能同时发生</h2>
 <p>一次普通的上涨或一条重要新闻，可能会同时吸引股票和看涨期权的买家。如果这部分期权买入导致做市商持有空头伽马头寸，这些做市商的对冲行为可能会带来额外的需求。更高的价格随后可能会迫使卖空者回补头寸。这两种力量可能在同一次走势中相互推动，这使得很难分清上涨中各自贡献了多少。</p>
-<h2>公开数据能证明什么，不能证明什么</h2>
+<h2 id="公开数据能证明什么-不能证明什么">公开数据能证明什么，不能证明什么</h2>
 <ul>
 <li><strong>看涨期权成交量：</strong>显示了成交了多少份合约，但不能证明做市商就此持有了空头伽马头寸，因为这些期权的一部分可能是由其他投资者卖出的，或是在带有相反头寸的结构中交易的。</li>
 <li><strong>未平仓合约：</strong>显示了有多少合约仍然有效，但不能揭示交易双方分别是谁。</li>
 <li><strong>卖空持仓（short interest）：</strong>通常一个月只公布两次，因此一个较高的数字并不能证明卖空者现在正在回补，只能说明这个头寸在最近一次统计日期时存在。</li>
 </ul>
 <p>价格和成交量同时上升，既可能符合这两种说法中的任何一种，也可能两者都不符合，因为普通买家同样可能是这次走势背后的推动力量。</p>
-<h2>2021年的GameStop事件：为什么单一标签不够</h2>
+<h2 id="2021年的gamestop事件-为什么单一标签不够">2021年的GameStop事件：为什么单一标签不够</h2>
 <p>美国证券交易委员会（SEC）对2021年1月GameStop事件的分析发现，有证据表明，知名的卖空者在上涨的特定阶段买入了股票，这表明部分走势来自空头回补。但同一份分析也指出，这种回补只占总买入量的一小部分，而且在回补的直接效应本应减弱之后，价格仍然维持高位数周。这份分析还观察到期权活动异常活跃，但其中很大一部分来自看跌期权的买入，而做市商是在买入而不是卖出看涨期权，这与经典伽马挤压的预期模式并不吻合。结论是，持续的乐观情绪，而不是这两种机制中的任何一种单独作用，才是价格能长时间维持高位的原因。</p>
-<h2>在图表已经飙升之后才试图入场的风险</h2>
+<h2 id="在图表已经飙升之后才试图入场的风险">在图表已经飙升之后才试图入场的风险</h2>
 <p>在走势已经变得明显之后才去追逐一次挤压，通常意味着在最糟糕的时刻买入。点差可能扩大，期权可能因隐含波动率升高而变得昂贵，市价单的成交价格也可能与屏幕上显示的最新价格相差甚远。这两种机制都不能保证接下来还会有走势，一旦回补或期权对冲的力度减弱，强劲的上涨也可能反转。在入场之前设定好风险，仍然比试图猜测哪个标签能更好地解释一次已经发生的走势更重要。</p>
 
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/why-nike-stock-fell-sp-100-removal-explained/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">为什么Nike的股价下跌？被剔除出标普100指数的原因解析</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/short-term-stock-trading-guide/"><img src="/assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">股票短线交易指南：四个步骤</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -220,7 +258,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -284,6 +322,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

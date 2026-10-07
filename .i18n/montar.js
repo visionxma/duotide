@@ -553,12 +553,13 @@ function imagens(html) {
   const main = (html.match(/<main[\s\S]*?<\/main>/) || [''])[0];
   return [...new Set([...main.matchAll(/<img[^>]+src="(\/[^"]+)"/g)].map(m => SITE + m[1]))];
 }
+const dataValida = d => /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}([+-]\d{2}:\d{2}|Z))?$/.test(d || '') ? d : HOJE;
 function urlset(lista) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${lista.map(u => `\t<url>
 \t\t<loc>${escXml(u.loc)}</loc>
-\t\t<lastmod>${u.lastmod}</lastmod>
+\t\t<lastmod>${dataValida(u.lastmod)}</lastmod>
 ${u.alternados.map(a => `\t\t<xhtml:link rel="alternate" hreflang="${a.codigo}" href="${escXml(a.href)}"/>\n`).join('')}${u.imagens.map(i => `\t\t<image:image>\n\t\t\t<image:loc>${escXml(i)}</image:loc>\n\t\t</image:image>\n`).join('')}\t</url>`).join('\n')}
 </urlset>
 `;
@@ -567,7 +568,7 @@ ${u.alternados.map(a => `\t\t<xhtml:link rel="alternate" hreflang="${a.codigo}" 
 function main() {
   // datas anteriores (sitemap.xml em pt), para não inventar lastmod
   const antigo = fs.existsSync(path.join(RAIZ, 'sitemap.xml')) ? ler(path.join(RAIZ, 'sitemap.xml')) : '';
-  const lastmodPt = Object.fromEntries([...antigo.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)].map(m => [m[1], m[2]]));
+  const lastmodPt = Object.fromEntries([...antigo.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2}[^<]*)<\/lastmod>/g)].map(m => [m[1], m[2]]));
 
   // 1. idiomas traduzidos: pasta regenerada do zero
   const lastmodTrad = {};

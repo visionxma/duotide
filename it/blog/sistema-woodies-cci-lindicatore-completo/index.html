@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/sistema-woodies-cci-lindicatore-completo/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Strategie",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="Percorso di navigazione">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/it/">Home</a></li>
         <li><a href="/it/blog/">Blog</a></li>
         <li><span aria-current="page">Sistema Woodies CCI: l'indicatore completo, non solo il CCI base</span></li>
       </ol>
+      <a class="ap__voltar" href="/it/blog/">Indietro</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">Strategie</span>
-        <h1>Sistema Woodies CCI: l'indicatore completo, non solo il CCI base</h1>
-        <p class="bq-post__meta">Team Duotide · <time datetime="2026-09-24">24/09/2026</time> · 4 min di lettura</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>Molte persone conoscono il CCI solo come un oscillatore che misura se il prezzo è esteso verso l'alto o verso il basso. La versione resa popolare da Ken Wood, nota come Woodies CCI, va oltre: invece di usare una sola linea, combina due calcoli dello stesso indicatore e regole specifiche di ingresso, formando un sistema completo di decisione, non solo un filtro di ipercomprato e ipervenduto.</p><p>Questo articolo spiega come si incastrano i pezzi di questo sistema e come costruire una checklist di ingresso con essi, senza dipendere dal memorizzare solo un incrocio di linee.</p><h2>Cosa differenzia il Woodies CCI dall'usare il CCI da solo</h2><p>Il CCI tradizionale, da solo, tende a generare molti segnali falsi quando usato solo con la regola di comprare in ipervenduto e vendere in ipercomprato. Il sistema Woodies risolve parte di questo problema aggiungendo una seconda linea, più veloce, e trattando l'incrocio tra loro, non solo il livello assoluto dell'indicatore, come trigger di attenzione.</p><h2>Le due linee: CCI standard e il CCI turbo</h2><p>Nel sistema completo, appaiono fianco a fianco due versioni dello stesso calcolo:</p><ul><li><strong>CCI standard</strong>, calcolato su un periodo più lungo (tradizionalmente 14 periodi), rappresentato come un istogramma.</li><li><strong>CCI turbo</strong>, calcolato su un periodo corto (tradizionalmente 6 periodi), rappresentato come una linea più reattiva sopra lo stesso istogramma.</li></ul><p>Quando la linea turbo incrocia l'istogramma dal basso verso l'alto, questo suggerisce un'accelerazione d'acquisto a breve termine dentro il movimento maggiore misurato dal CCI standard; l'incrocio inverso suggerisce l'opposto. Da solo, questo incrocio non è ancora un segnale di ingresso — è il primo filtro del sistema.</p><h2>La lettura tramite l'istogramma e lo zero line reject</h2><p>Uno dei pattern più usati dentro il sistema è il cosiddetto zero line reject: l'istogramma si avvicina alla linea zero dopo un movimento coerente in una direzione, ma invece di incrociarla, viene rigettato e riprende il senso precedente. Questo viene interpretato come un pullback dentro il trend che lo stesso CCI stava già disegnando, e non come un'inversione.</p><p>Per considerare valido questo pattern, il sistema richiede un contesto di trend già definito nell'istogramma prima dell'avvicinamento alla linea zero — il pattern perde forza quando il CCI sta solo oscillando lateralmente intorno allo zero, senza direzione chiara precedente.</p><h2>Rottura di linea di trend dentro lo stesso indicatore</h2><p>Un altro strumento del sistema completo è tracciare una linea di trend sui picchi e valli dello stesso istogramma del CCI, allo stesso modo in cui si traccia una linea di trend sul grafico di prezzo. Quando l'istogramma rompe questa linea, il sistema lo interpreta come un segnale che il momentum sta cambiando ancora prima che il prezzo confermi questo cambiamento in modo chiaro. Questa rottura tende a guadagnare più peso quando avviene vicino a una zona di zero line reject o a un incrocio tra le due linee del CCI.</p><h2>Come costruire una checklist di ingresso con il sistema completo</h2><ul><li>L'istogramma mostra un trend definito nei periodi recenti, e non solo rumore intorno allo zero.</li><li>La linea turbo incrocia l'istogramma nella direzione del trend già identificato.</li><li>C'è uno zero line reject o una rottura di linea di trend dello stesso indicatore che rafforza lo stesso segnale.</li><li>Il prezzo, sul grafico normale, non sta contraddicendo apertamente ciò che il CCI mostra.</li></ul><p>Quanti più di questi punti si allineano nella stessa direzione, tanto più il segnale si avvicina alla logica originale del sistema — usare un unico incrocio isolato tende a riprodurre gli stessi segnali falsi del CCI tradizionale.</p><h2>Gestione del rischio dentro il sistema</h2><p>Nessun sistema basato sul CCI dispensa dallo stop e dal calcolo preventivo del rischio. Supponi un asset quotato a R$ 120,00, con il sistema Woodies che indica uno zero line reject rialzista confermato dall'incrocio delle due linee. Un ingresso a R$ 120,50, con stop al minimo recente di R$ 118,00 (rischio di R$ 2,50 per unità) e target a R$ 126,00, vicino alla resistenza successiva (rendimento di R$ 5,50 per unità), risulta in un rapporto rischio-rendimento di circa 1 a 2,2 — calcolato prima di confermare l'ingresso, non dopo.</p><p>Il sistema Woodies CCI organizza meglio la lettura dell'indicatore, ma resta uno strumento di probabilità, non una garanzia di successo. Testa le regole su grafici storici o su una piattaforma come Duotide prima di applicarle con capitale che non puoi permetterti di perdere, e mantieni sempre lo stop definito come parte dello stesso segnale, non come un dettaglio successivo.</p>
-        <div class="bq-post__cta">
-          <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="sistema-completo-woodies-cci-estrategia" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiato">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">4 min di lettura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
+            </div>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-28">28 settembre 2026</time></p>
+            <span class="bq__tag">Strategie</span>
+            <h1>Sistema Woodies CCI: l'indicatore completo, non solo il CCI base</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Team Duotide</strong><small>Redazione</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Indice">
+              <p class="ap__indice-tit">Indice</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#cosa-differenzia-il-woodies-cci-dall-usare-il-cci-da-solo">Cosa differenzia il Woodies CCI dall'usare il CCI da solo</a></li>
+                <li><a href="#le-due-linee-cci-standard-e-il-cci-turbo">Le due linee: CCI standard e il CCI turbo</a></li>
+                <li><a href="#la-lettura-tramite-l-istogramma-e-lo-zero-line-reject">La lettura tramite l'istogramma e lo zero line reject</a></li>
+                <li><a href="#rottura-di-linea-di-trend-dentro-lo-stesso-indicatore">Rottura di linea di trend dentro lo stesso indicatore</a></li>
+                <li><a href="#come-costruire-una-checklist-di-ingresso-con-il-sistema-comp">Come costruire una checklist di ingresso con il sistema completo</a></li>
+                <li><a href="#gestione-del-rischio-dentro-il-sistema">Gestione del rischio dentro il sistema</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>Molte persone conoscono il CCI solo come un oscillatore che misura se il prezzo è esteso verso l'alto o verso il basso. La versione resa popolare da Ken Wood, nota come Woodies CCI, va oltre: invece di usare una sola linea, combina due calcoli dello stesso indicatore e regole specifiche di ingresso, formando un sistema completo di decisione, non solo un filtro di ipercomprato e ipervenduto.</p><p>Questo articolo spiega come si incastrano i pezzi di questo sistema e come costruire una checklist di ingresso con essi, senza dipendere dal memorizzare solo un incrocio di linee.</p><h2 id="cosa-differenzia-il-woodies-cci-dall-usare-il-cci-da-solo">Cosa differenzia il Woodies CCI dall'usare il CCI da solo</h2><p>Il CCI tradizionale, da solo, tende a generare molti segnali falsi quando usato solo con la regola di comprare in ipervenduto e vendere in ipercomprato. Il sistema Woodies risolve parte di questo problema aggiungendo una seconda linea, più veloce, e trattando l'incrocio tra loro, non solo il livello assoluto dell'indicatore, come trigger di attenzione.</p><h2 id="le-due-linee-cci-standard-e-il-cci-turbo">Le due linee: CCI standard e il CCI turbo</h2><p>Nel sistema completo, appaiono fianco a fianco due versioni dello stesso calcolo:</p><ul><li><strong>CCI standard</strong>, calcolato su un periodo più lungo (tradizionalmente 14 periodi), rappresentato come un istogramma.</li><li><strong>CCI turbo</strong>, calcolato su un periodo corto (tradizionalmente 6 periodi), rappresentato come una linea più reattiva sopra lo stesso istogramma.</li></ul><p>Quando la linea turbo incrocia l'istogramma dal basso verso l'alto, questo suggerisce un'accelerazione d'acquisto a breve termine dentro il movimento maggiore misurato dal CCI standard; l'incrocio inverso suggerisce l'opposto. Da solo, questo incrocio non è ancora un segnale di ingresso — è il primo filtro del sistema.</p><h2 id="la-lettura-tramite-l-istogramma-e-lo-zero-line-reject">La lettura tramite l'istogramma e lo zero line reject</h2><p>Uno dei pattern più usati dentro il sistema è il cosiddetto zero line reject: l'istogramma si avvicina alla linea zero dopo un movimento coerente in una direzione, ma invece di incrociarla, viene rigettato e riprende il senso precedente. Questo viene interpretato come un pullback dentro il trend che lo stesso CCI stava già disegnando, e non come un'inversione.</p><p>Per considerare valido questo pattern, il sistema richiede un contesto di trend già definito nell'istogramma prima dell'avvicinamento alla linea zero — il pattern perde forza quando il CCI sta solo oscillando lateralmente intorno allo zero, senza direzione chiara precedente.</p><h2 id="rottura-di-linea-di-trend-dentro-lo-stesso-indicatore">Rottura di linea di trend dentro lo stesso indicatore</h2><p>Un altro strumento del sistema completo è tracciare una linea di trend sui picchi e valli dello stesso istogramma del CCI, allo stesso modo in cui si traccia una linea di trend sul grafico di prezzo. Quando l'istogramma rompe questa linea, il sistema lo interpreta come un segnale che il momentum sta cambiando ancora prima che il prezzo confermi questo cambiamento in modo chiaro. Questa rottura tende a guadagnare più peso quando avviene vicino a una zona di zero line reject o a un incrocio tra le due linee del CCI.</p><h2 id="come-costruire-una-checklist-di-ingresso-con-il-sistema-comp">Come costruire una checklist di ingresso con il sistema completo</h2><ul><li>L'istogramma mostra un trend definito nei periodi recenti, e non solo rumore intorno allo zero.</li><li>La linea turbo incrocia l'istogramma nella direzione del trend già identificato.</li><li>C'è uno zero line reject o una rottura di linea di trend dello stesso indicatore che rafforza lo stesso segnale.</li><li>Il prezzo, sul grafico normale, non sta contraddicendo apertamente ciò che il CCI mostra.</li></ul><p>Quanti più di questi punti si allineano nella stessa direzione, tanto più il segnale si avvicina alla logica originale del sistema — usare un unico incrocio isolato tende a riprodurre gli stessi segnali falsi del CCI tradizionale.</p><h2 id="gestione-del-rischio-dentro-il-sistema">Gestione del rischio dentro il sistema</h2><p>Nessun sistema basato sul CCI dispensa dallo stop e dal calcolo preventivo del rischio. Supponi un asset quotato a R$ 120,00, con il sistema Woodies che indica uno zero line reject rialzista confermato dall'incrocio delle due linee. Un ingresso a R$ 120,50, con stop al minimo recente di R$ 118,00 (rischio di R$ 2,50 per unità) e target a R$ 126,00, vicino alla resistenza successiva (rendimento di R$ 5,50 per unità), risulta in un rapporto rischio-rendimento di circa 1 a 2,2 — calcolato prima di confermare l'ingresso, non dopo.</p><p>Il sistema Woodies CCI organizza meglio la lettura dell'indicatore, ma resta uno strumento di probabilità, non una garanzia di successo. Testa le regole su grafici storici o su una piattaforma come Duotide prima di applicarle con capitale che non puoi permetterti di perdere, e mantieni sempre lo stop definito come parte dello stesso segnale, non come un dettaglio successivo.</p>
+            <div class="bq-post__cta">
+              <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con R$ 10.000 virtuali.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Aggiornato il: <time datetime="2026-09-28">28 set 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Team Duotide</strong><p>La redazione di Duotide scrive le guide e le notizie di questo blog: come funzionano i mercati, gestione del rischio e uso della piattaforma. Nulla di quanto scritto qui è una raccomandazione di investimento.</p></div>
+              <a class="btn ap__equipe" href="/it/chi-siamo/">Conosci il team</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>Leggi anche</h2>
+        <aside class="ap__rel">
+          <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/incrocio-di-medie-mobili-esponenziali-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Incrocio di medie mobili esponenziali (EMA) nel trading</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/come-scegliere-la-scadenza-di-una-operazione/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come scegliere la scadenza di un'operazione</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

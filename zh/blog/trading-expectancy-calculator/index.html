@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/trading-expectancy-calculator/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-27T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "风险管理",
       "author": {
@@ -172,30 +172,59 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">数学期望计算器：你的策略是否有优势</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">风险管理</span>
-        <h1>数学期望计算器：你的策略是否有优势</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 4 分钟</p>
-        <figure class="foto"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="calculadora-de-expectativa-matematica-no-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <span class="bq__tag">风险管理</span>
+            <h1>数学期望计算器：你的策略是否有优势</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#数学期望的公式">数学期望的公式</a></li>
+                <li><a href="#一个用雷亚尔计算的示例">一个用雷亚尔计算的示例</a></li>
+                <li><a href="#45-的胜率也可能是正期望">45%的胜率也可能是正期望</a></li>
+                <li><a href="#不要忘记成本">不要忘记成本</a></li>
+                <li><a href="#第二个例子-这次是负期望">第二个例子：这次是负期望</a></li>
+                <li><a href="#如何在日常中运用这一点">如何在日常中运用这一点</a></li>
+                <li><a href="#多少笔交易才足以信任这个数字">多少笔交易才足以信任这个数字</a></li>
+                <li><a href="#算出期望之后该怎么做">算出期望之后该怎么做</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            
 <p>一个策略可能大部分交易都赚钱，却依然在慢慢耗尽账户。反过来也是成立的：完全可能一半以上的入场都判断错误，却在月末实现盈利。仅凭胜率无法回答一个策略是否真的具有优势。能够回答这个问题的是数学期望，也叫expectancy。</p>
 <p>数学期望显示的是，基于历史交易结果，一个策略平均每笔交易赚多少或亏多少。一个正数是该样本内存在统计优势的证据，而不是对未来盈利的保证。</p>
-<h2>数学期望的公式</h2>
+<h2 id="数学期望的公式">数学期望的公式</h2>
 <p>这个公式最广为人知的版本是：</p>
 <p><strong>期望 = （胜率 × 平均盈利）-（败率 × 平均亏损）</strong></p>
 <p>当每笔交易都以盈利或亏损收场，并且平均值中已经包含了佣金等成本时，这个公式效果最好。为了让计算更清晰，也可以直接用总数计算净期望：</p>
 <p><strong>净期望 = [（盈利笔数 × 平均盈利）-（亏损笔数 × 平均亏损）- 总成本] / 总交易笔数</strong></p>
-<h2>一个用雷亚尔计算的示例</h2>
+<h2 id="一个用雷亚尔计算的示例">一个用雷亚尔计算的示例</h2>
 <p>假设一位交易者回顾了同一个交易设置下的40笔交易，每笔交易都设定了相同的计划风险，得到以下数字：</p>
 <ul>
 <li>盈利交易：18笔</li>
@@ -212,24 +241,35 @@
 <li>每笔交易的期望值：940.00雷亚尔 / 40 = 23.50雷亚尔</li>
 </ul>
 <p>用风险倍数（R）来表示这个结果，以每笔交易平均100.00雷亚尔的风险计算，期望值为<strong>每笔交易+0.235R</strong>。这意味着，在这个样本的平均水平上，每笔交易的收益大约相当于计划风险的23.5%。这个样本的盈亏比，计算方式为总盈利除以总亏损，结果为2700除以1760，约为<strong>1.53</strong>。</p>
-<h2>45%的胜率也可能是正期望</h2>
+<h2 id="45-的胜率也可能是正期望">45%的胜率也可能是正期望</h2>
 <p>请注意，上面这个例子的胜率只有45%（40笔中的18笔），低于一半。尽管如此，期望值依然是正的，因为平均盈利几乎是平均亏损的两倍。这正是为什么只问一个策略的胜率是多少，往往会对其质量得出错误结论的原因。</p>
-<h2>不要忘记成本</h2>
+<h2 id="不要忘记成本">不要忘记成本</h2>
 <p>佣金、券商手续费，以及隔夜持仓可能产生的费用，都会降低净期望值。一个每笔交易毛期望为6.00雷亚尔的策略，在扣除平均每笔7.00雷亚尔的成本后，可能会变成负值。只要有可能，就应该使用券商实际收取的费用，而不是乐观的估计值，以免人为夸大结果。</p>
-<h2>第二个例子：这次是负期望</h2>
+<h2 id="第二个例子-这次是负期望">第二个例子：这次是负期望</h2>
 <p>为了让对比更清晰，来看第二个案例，共50笔交易：21笔盈利，平均盈利90.00雷亚尔；29笔亏损，平均亏损75.00雷亚尔。总盈利为21 × 90.00雷亚尔 = 1890.00雷亚尔，总亏损为29 × 75.00雷亚尔 = 2175.00雷亚尔。这个样本的净结果为负，为285.00雷亚尔，也就是1890.00雷亚尔减去2175.00雷亚尔，再除以50笔交易，即每笔交易平均亏损5.70雷亚尔。即使胜率为42%，接近许多策略被认为正常的区间，平均盈利与平均亏损之间的关系依然不足以支撑一个正的结果。</p>
-<h2>如何在日常中运用这一点</h2>
-<h2>多少笔交易才足以信任这个数字</h2>
+<h2 id="如何在日常中运用这一点">如何在日常中运用这一点</h2>
+<h2 id="多少笔交易才足以信任这个数字">多少笔交易才足以信任这个数字</h2>
 <p>不存在一个放之四海而皆准的神奇数字。低于30笔交易的样本，通常被认为对任何可靠结论来说都太小了。在30到100笔交易之间，结果已经能给出一个初步估计，但仍可能因为少数极端结果而发生较大变化。超过100或200笔交易后，这个数字才开始变得更具参考价值，尽管它永远不能作为这种优势未来会继续存在的确凿证据。</p>
-<h2>算出期望之后该怎么做</h2>
+<h2 id="算出期望之后该怎么做">算出期望之后该怎么做</h2>
 <p>如果计入真实成本后期望为负，那么在讨论加大仓位之前，先修正策略才有意义。如果期望为正，值得测试结果的稳健性：从样本中去掉最大的一笔盈利交易，重新计算一次。如果仅仅去掉这一笔交易，期望就变成了负数，说明这个结果可能过度依赖于某一笔极端交易，在加大仓位规模之前应该更加谨慎。</p>
 
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何在外汇交易中使用止损和止盈</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -237,7 +277,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -301,6 +341,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>

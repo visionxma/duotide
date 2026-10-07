@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260927a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610071811">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/margin-trading-risks-and-strategies/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-09-28T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "风险管理",
       "author": {
@@ -172,28 +172,66 @@
     </div>
   </header>
   <nav class="breadcrumb" aria-label="面包屑导航">
-    <div class="container">
+    <div class="container ap__trilha">
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
         <li><span aria-current="page">保证金交易的风险：追加保证金、强制平仓与清算</span></li>
       </ol>
+      <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
   </nav>
   <main id="conteudo"><!--artigo-blog-->
-    <section class="section">
-      <div class="container article bq-post">
-        <span class="bq__tag">风险管理</span>
-        <h1>保证金交易的风险：追加保证金、强制平仓与清算</h1>
-        <p class="bq-post__meta">Duotide 团队 · <time datetime="2026-09-24">2026/09/24</time> · 阅读 5 分钟</p>
-        <figure class="foto"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
-        <p>每一笔保证金操作都带有一种超越资产价格本身的风险：操作结构本身的风险，它甚至能在市场证明谁的判断正确之前，就把一个仓位强制平掉。追加保证金通知、强制平仓和清算，正是为什么两个拥有相同资金、相同“允许”杠杆的账户，最终结局可能截然不同的原因。</p><p>这篇文章不会重复保证金运作的基础知识。这里的重点，是理解为什么经纪商提供的杠杆并不等于你实际承担的杠杆，一次追加保证金通知是如何演变成强制平仓的，以及哪些实际的决定能在风险出现在屏幕上之前就降低它。</p><h2>有效杠杆：很少有人在操作前做的计算</h2><p>经纪商公布的杠杆——10:1、20:1、30:1——只是该工具允许的最大限度。真正重要的是有效杠杆：已开仓位的总价值除以账户资金。正是这个差异，把一笔有风险的操作与一笔受控的操作区分开来。</p><p>假设一个账户资金为R$ 10.000,00，操作一种最大杠杆为30:1的资产。一位激进的交易者开出一笔R$ 90.000,00的仓位，保证金为R$ 3.000,00（90.000 ÷ 30）。即使有30:1的杠杆限额可用，相对于总资金的有效杠杆是9:1（90.000 ÷ 10.000）。有了这个数字，该资产只需下跌3.33%，就会造成资金30%的亏损（9 × 3.33%）——决定实际打击大小的，是有效杠杆，而不是经纪商公布的限额。</p><p>再来对比第二位交易者，同样的资金、同样可用的杠杆，但只开出R$ 20.000,00的仓位。有效杠杆降到2:1，同样3.33%的下跌，代表资金亏损6.67%——在同一家经纪商、同一种资产上，亏损小了五倍。</p><h2>追加保证金通知：终结之前的警告</h2><p>当账户的保证金水平——资金除以已使用保证金，以百分比表示——跌破经纪商设定的某个限额，通常接近100%时，就会触发追加保证金通知。低于这个点，经纪商会提示担保金已经不足，并可能要求追加存款。</p><p>对那位激进的交易者（仓位R$ 90.000,00，保证金R$ 3.000,00，资金R$ 10.000,00）来说，当资金跌破用作保证金的R$ 3.000,00时，即在亏损R$ 7.000,00之后，100%保证金水平的通知就会触发——该资产只需下跌7.78%（7.000 ÷ 90.000）。而对那位保守的交易者来说，保证金为R$ 666,67（20.000 ÷ 30），只有在亏损R$ 9.333,33之后才会触发通知，相当于该资产下跌46.67%——仅仅因为相对资金的仓位更小，就获得了大得多的缓冲空间。</p><h2>强制平仓（stop out）：经纪商替你平仓的时刻</h2><p>强制平仓是下一个阶段，不再取决于交易者的意愿：当保证金水平跌破第二个限额，通常比追加保证金通知的限额更低——根据经纪商和工具的不同，可能是50%、30%或20%——仓位会被自动平掉，以防止亏损超过可用资金。</p><p>对那位激进的交易者来说，保证金水平50%触发的强制平仓，意味着资金低于R$ 1.500,00，这发生在亏损R$ 8.500,00之后——该资产只需下跌9.44%（8.500 ÷ 90.000）。价格变动还不到10%，超过80%的初始资金就已经消失。对那位保守的交易者来说，同样的计算只会在该资产下跌48.33%之后才会成立。9.44%和48.33%之间的差异，完全是所选有效杠杆的结果，与运气或“更好的”经纪商无关。</p><h2>为什么清算的代价可能超出预期</h2><p>强制平仓真正执行的价格，并不总是保证金水平跨过限额那一刻的价格。在波动剧烈的市场中，价格跳空以及多个账户同时清算时执行速度变慢，可能导致仓位以比计算出的更大亏损平仓——这就是所谓的执行滑点（slippage）。当交易者在相关性较高的资产上同时持有多个仓位时，风险还会进一步增加：如果这些资产一起朝不利于账户的方向变动，它们会同时贬值，消耗保证金水平的速度会比单独一笔操作快得多。</p><h2>控制风险的实用策略</h2><p>降低追加保证金通知和强制平仓风险，取决于开仓之前做出的决定：</p><ul><li><strong>在操作前计算有效杠杆</strong>——用已开仓位除以账户资金，而不是除以用作保证金的金额。决定真实风险的是这个数字，而不是经纪商的限额。</li><li><strong>根据止损来确定仓位大小，而不是根据可用保证金</strong>——决定你愿意以雷亚尔计损失多少（比如资金的1%到2%），再根据到止损的距离计算仓位。</li><li><strong>保留充足的自由保证金</strong>——避免把全部资金都用作单笔操作的保证金；自由保证金越多，保证金水平就越高，离追加保证金通知就越远。</li><li><strong>避免为亏损的仓位加码</strong>——为一笔已经亏损的操作追加保证金以“等待反转”，只会让强制平仓更近，而不是更远。</li><li><strong>警惕相关性高的仓位</strong>——多笔朝同一方向变动的操作，会放大单一市场事件对账户保证金水平的影响。</li><li><strong>关注保证金水平，而不只是资产价格</strong>——设定一个远高于经纪商强制平仓点的个人出场规则，能在被强制清算之前留出反应的时间。</li></ul><h2>控制有效杠杆是掌握在你手中的事</h2><p>经纪商设定最大杠杆限额，以及追加保证金和强制平仓的水平，但每笔操作的有效杠杆，始终是交易者自己的选择。在用真实资金操作之前，先在Duotide或其他平台的模拟账户中测试这种行为，有助于直观了解保证金水平对不同仓位大小的反应，而不必付出真实亏损的代价来学习这一课。保证金会双向放大结果，损失全部存入资金的风险是真实存在的。</p>
-        <div class="bq-post__cta">
-          <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
-          <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="riscos-e-estrategias-no-trading-com-margem" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="链接已复制">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 5 分钟</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
+            </div>
+            <p class="ap__atual">更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+            <span class="bq__tag">风险管理</span>
+            <h1>保证金交易的风险：追加保证金、强制平仓与清算</h1>
+            <div class="ap__autor"><img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Duotide 团队</strong><small>编辑团队</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="目录">
+              <p class="ap__indice-tit">目录</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#有效杠杆-很少有人在操作前做的计算">有效杠杆：很少有人在操作前做的计算</a></li>
+                <li><a href="#追加保证金通知-终结之前的警告">追加保证金通知：终结之前的警告</a></li>
+                <li><a href="#强制平仓-stop-out-经纪商替你平仓的时刻">强制平仓（stop out）：经纪商替你平仓的时刻</a></li>
+                <li><a href="#为什么清算的代价可能超出预期">为什么清算的代价可能超出预期</a></li>
+                <li><a href="#控制风险的实用策略">控制风险的实用策略</a></li>
+                <li><a href="#控制有效杠杆是掌握在你手中的事">控制有效杠杆是掌握在你手中的事</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <p>每一笔保证金操作都带有一种超越资产价格本身的风险：操作结构本身的风险，它甚至能在市场证明谁的判断正确之前，就把一个仓位强制平掉。追加保证金通知、强制平仓和清算，正是为什么两个拥有相同资金、相同“允许”杠杆的账户，最终结局可能截然不同的原因。</p><p>这篇文章不会重复保证金运作的基础知识。这里的重点，是理解为什么经纪商提供的杠杆并不等于你实际承担的杠杆，一次追加保证金通知是如何演变成强制平仓的，以及哪些实际的决定能在风险出现在屏幕上之前就降低它。</p><h2 id="有效杠杆-很少有人在操作前做的计算">有效杠杆：很少有人在操作前做的计算</h2><p>经纪商公布的杠杆——10:1、20:1、30:1——只是该工具允许的最大限度。真正重要的是有效杠杆：已开仓位的总价值除以账户资金。正是这个差异，把一笔有风险的操作与一笔受控的操作区分开来。</p><p>假设一个账户资金为R$ 10.000,00，操作一种最大杠杆为30:1的资产。一位激进的交易者开出一笔R$ 90.000,00的仓位，保证金为R$ 3.000,00（90.000 ÷ 30）。即使有30:1的杠杆限额可用，相对于总资金的有效杠杆是9:1（90.000 ÷ 10.000）。有了这个数字，该资产只需下跌3.33%，就会造成资金30%的亏损（9 × 3.33%）——决定实际打击大小的，是有效杠杆，而不是经纪商公布的限额。</p><p>再来对比第二位交易者，同样的资金、同样可用的杠杆，但只开出R$ 20.000,00的仓位。有效杠杆降到2:1，同样3.33%的下跌，代表资金亏损6.67%——在同一家经纪商、同一种资产上，亏损小了五倍。</p><h2 id="追加保证金通知-终结之前的警告">追加保证金通知：终结之前的警告</h2><p>当账户的保证金水平——资金除以已使用保证金，以百分比表示——跌破经纪商设定的某个限额，通常接近100%时，就会触发追加保证金通知。低于这个点，经纪商会提示担保金已经不足，并可能要求追加存款。</p><p>对那位激进的交易者（仓位R$ 90.000,00，保证金R$ 3.000,00，资金R$ 10.000,00）来说，当资金跌破用作保证金的R$ 3.000,00时，即在亏损R$ 7.000,00之后，100%保证金水平的通知就会触发——该资产只需下跌7.78%（7.000 ÷ 90.000）。而对那位保守的交易者来说，保证金为R$ 666,67（20.000 ÷ 30），只有在亏损R$ 9.333,33之后才会触发通知，相当于该资产下跌46.67%——仅仅因为相对资金的仓位更小，就获得了大得多的缓冲空间。</p><h2 id="强制平仓-stop-out-经纪商替你平仓的时刻">强制平仓（stop out）：经纪商替你平仓的时刻</h2><p>强制平仓是下一个阶段，不再取决于交易者的意愿：当保证金水平跌破第二个限额，通常比追加保证金通知的限额更低——根据经纪商和工具的不同，可能是50%、30%或20%——仓位会被自动平掉，以防止亏损超过可用资金。</p><p>对那位激进的交易者来说，保证金水平50%触发的强制平仓，意味着资金低于R$ 1.500,00，这发生在亏损R$ 8.500,00之后——该资产只需下跌9.44%（8.500 ÷ 90.000）。价格变动还不到10%，超过80%的初始资金就已经消失。对那位保守的交易者来说，同样的计算只会在该资产下跌48.33%之后才会成立。9.44%和48.33%之间的差异，完全是所选有效杠杆的结果，与运气或“更好的”经纪商无关。</p><h2 id="为什么清算的代价可能超出预期">为什么清算的代价可能超出预期</h2><p>强制平仓真正执行的价格，并不总是保证金水平跨过限额那一刻的价格。在波动剧烈的市场中，价格跳空以及多个账户同时清算时执行速度变慢，可能导致仓位以比计算出的更大亏损平仓——这就是所谓的执行滑点（slippage）。当交易者在相关性较高的资产上同时持有多个仓位时，风险还会进一步增加：如果这些资产一起朝不利于账户的方向变动，它们会同时贬值，消耗保证金水平的速度会比单独一笔操作快得多。</p><h2 id="控制风险的实用策略">控制风险的实用策略</h2><p>降低追加保证金通知和强制平仓风险，取决于开仓之前做出的决定：</p><ul><li><strong>在操作前计算有效杠杆</strong>——用已开仓位除以账户资金，而不是除以用作保证金的金额。决定真实风险的是这个数字，而不是经纪商的限额。</li><li><strong>根据止损来确定仓位大小，而不是根据可用保证金</strong>——决定你愿意以雷亚尔计损失多少（比如资金的1%到2%），再根据到止损的距离计算仓位。</li><li><strong>保留充足的自由保证金</strong>——避免把全部资金都用作单笔操作的保证金；自由保证金越多，保证金水平就越高，离追加保证金通知就越远。</li><li><strong>避免为亏损的仓位加码</strong>——为一笔已经亏损的操作追加保证金以“等待反转”，只会让强制平仓更近，而不是更远。</li><li><strong>警惕相关性高的仓位</strong>——多笔朝同一方向变动的操作，会放大单一市场事件对账户保证金水平的影响。</li><li><strong>关注保证金水平，而不只是资产价格</strong>——设定一个远高于经纪商强制平仓点的个人出场规则，能在被强制清算之前留出反应的时间。</li></ul><h2 id="控制有效杠杆是掌握在你手中的事">控制有效杠杆是掌握在你手中的事</h2><p>经纪商设定最大杠杆限额，以及追加保证金和强制平仓的水平，但每笔操作的有效杠杆，始终是交易者自己的选择。在用真实资金操作之前，先在Duotide或其他平台的模拟账户中测试这种行为，有助于直观了解保证金水平对不同仓位大小的反应，而不必付出真实亏损的代价来学习这一课。保证金会双向放大结果，损失全部存入资金的风险是真实存在的。</p>
+            <div class="bq-post__cta">
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
+            </div>
+            <div class="ap__fim">
+              <p>更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
+              <div><strong>Duotide 团队</strong><p>Duotide 编辑团队撰写本博客的指南和新闻：市场如何运作、风险管理以及平台的使用。本站内容均不构成投资建议。</p></div>
+              <a class="btn ap__equipe" href="/zh/about-us/">认识团队</a>
+            </div>
+          </div>
         </div>
-        <aside class="bq-post__mais">
-          <h2>延伸阅读</h2>
+        <aside class="ap__rel">
+          <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何在外汇交易中使用止损和止盈</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
             <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
@@ -201,7 +239,7 @@
           </div>
         </aside>
       </div>
-    </section>
+    </article>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -265,6 +303,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=20260927a" defer></script>
+  <script src="/assets/js/main.js?v=202610071811" defer></script>
 </body>
 </html>
