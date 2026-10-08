@@ -45,6 +45,8 @@ function capa(a, i) {
   return lista[(k - 1) % lista.length];
 }
 // Textos da página de artigo (layout no molde do blog da IQ Option), por idioma.
+const GRAF = require('./graficos.js');
+const desenhados = new Map(); // um SVG por artigo, compartilhado pelos 17 idiomas
 const TXT = JSON.parse(fs.readFileSync(path.join(__dirname, 'textos-artigo.json'), 'utf8'));
 const VISITAS = 'https://duotide-visitas.visionxma.workers.dev';
 const fmtCurta = (d, codigo) => { try { return new Intl.DateTimeFormat(codigo, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
@@ -54,6 +56,7 @@ const diaSP = ms => new Date(ms).toLocaleDateString('sv-SE', { timeZone: 'Americ
 function atualizado(a, pasta) {
   const datas = [a.data];
   if (a.atualizado) datas.push(a.atualizado);
+  if (a.revisado) datas.push(a.revisado);
   for (const p of [path.join(PASTA, a.slugPt + '.json'), pasta ? path.join(TRAD, pasta, a.slugPt + '.json') : null]) {
     if (p && fs.existsSync(p)) datas.push(diaSP(fs.statSync(p).mtimeMs));
   }
@@ -139,7 +142,7 @@ function lista(pasta = '') {
     const t = traducoes[pasta][a.slug];
     if (!t) continue;
     const cats = (chromeDe(pasta).blog || {}).cats || {};
-    out.push({ ...a, slugPt: a.slug, slug: t.slug, titulo: t.titulo, descricao: t.descricao, corpo: t.corpo,
+    out.push({ ...a, slugPt: a.slug, slug: t.slug, titulo: t.titulo, descricao: t.descricao, corpo: t.corpo, resposta: t.resposta,
       categoriaPt: a.categoria, categoria: cats[a.categoria] || a.categoria, href: alts[pasta], alts });
   }
   return out;
@@ -176,7 +179,17 @@ function gerar(pasta = '') {
     const mesma = arts.filter(o => o.slug !== a.slug && o.categoria === a.categoria);
     const outros = [...mesma, ...arts.filter(o => o.slug !== a.slug && o.categoria !== a.categoria)].slice(0, 3);
     const T = TXT[pasta] || TXT[''];
-    const sm = sumario(a.corpo);
+    // gráfico próprio com cotações reais (quando o artigo pede um)
+    let figura = '';
+    if (a.grafico) {
+      if (!desenhados.has(a.slugPt)) desenhados.set(a.slugPt, GRAF.desenhar(a.slugPt, a.grafico, SITE.replace('https://', '')));
+      const gi = desenhados.get(a.slugPt);
+      const leg = T.grafico.replace('{ativo}', gi.ativo).replace('{ini}', fmtData(gi.ini, idioma.codigo)).replace('{fim}', fmtData(gi.fim, idioma.codigo)).replace('{fonte}', gi.fonte);
+      figura = `<figure class="ap__grafico"><img src="${gi.src}" alt="${esc(leg)}" width="960" height="540" loading="lazy" decoding="async"><figcaption>${esc(leg)}</figcaption></figure>`;
+    }
+    let corpoArt = a.corpo;
+    if (figura) corpoArt = corpoArt.includes('<!--grafico-->') ? corpoArt.replace('<!--grafico-->', figura) : corpoArt.replace(/<h2/, figura + '<h2');
+    const sm = sumario(corpoArt);
     const atual = atualizado(a, pasta);
     const ed = editoria(a.categoriaPt || a.categoria, pasta);
     const autor = esc(ed.nome);
@@ -220,7 +233,8 @@ ${sm.itens.map(i => `                <li><a href="#${i.id}">${esc(i.t)}</a></li>
             </nav>
           </aside>
           <div class="ap__texto article">
-            ${sm.html}
+${a.resposta ? `            <div class="ap__resposta"><p class="ap__resposta-tit">${esc(T.resposta)}</p><p>${a.resposta}</p></div>
+` : ''}            ${sm.html}
 ${a.fonte ? `            <p class="artigo__fonte">${esc(B.fonte || '')} <a href="${esc(a.fonte)}" target="_blank" rel="noopener nofollow">Traders Union</a>.</p>
 ` : ''}            <div class="bq-post__cta">
               <p><strong>${esc(B.cta_titulo)}</strong> ${esc(B.cta_texto)}</p>
@@ -234,6 +248,23 @@ ${a.fonte ? `            <p class="artigo__fonte">${esc(B.fonte || '')} <a href=
               ${selo(ed, 96)}
               <div><strong>${autor}</strong><p>${esc(ed.bio)}</p></div>
             </div>
+            <div class="ap__avaliar" data-votos="${esc(T.votos)}" data-voto1="${esc(T.voto1)}" data-obrigado="${esc(T.obrigado)}" data-sem="${esc(T.sem_votos)}">
+              <p class="ap__avaliar-tit">${esc(T.util)}</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="${esc(T.util)}">${[1, 2, 3, 4, 5].map(n => `<button type="button" role="radio" aria-checked="false" data-voto="${n}" aria-label="${n}/5">★</button>`).join('')}</div>
+              <p class="ap__avaliar-info" aria-live="polite">${esc(T.sem_votos)}</p>
+            </div>
+            <section class="ap__coment" data-enviado="${esc(T.enviado)}" data-erro="${esc(T.erro)}" data-vazio="${esc(T.vazio)}" data-idioma="${idioma.codigo}">
+              <h2>${esc(T.comentarios)}</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">${esc(T.vazio)}</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">${esc(T.comentar)}</p>
+                <input name="nome" type="text" maxlength="60" required placeholder="${esc(T.nome)}" aria-label="${esc(T.nome)}" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="${esc(T.texto)}" aria-label="${esc(T.texto)}"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">${esc(T.enviar)}</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
           </div>
         </div>
         <aside class="ap__rel">

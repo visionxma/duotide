@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610072135">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -230,6 +230,23 @@
               <span class="ap__avatar ap__avatar--g" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span>
               <div><strong>ฝ่ายวิเคราะห์</strong><p>อธิบายกราฟ อินดิเคเตอร์ และกลยุทธ์การเทรด ว่าทำงานอย่างไร พลาดตรงไหน และทดสอบก่อนใช้อย่างไร</p></div>
             </div>
+            <div class="ap__avaliar" data-votos="{m} จาก 5 · {n} คะแนน" data-voto1="1 คะแนน" data-obrigado="ขอบคุณสำหรับคะแนน!" data-sem="มาเป็นคนแรกที่ให้คะแนน">
+              <p class="ap__avaliar-tit">บทความนี้มีประโยชน์ไหม?</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="บทความนี้มีประโยชน์ไหม?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
+              <p class="ap__avaliar-info" aria-live="polite">มาเป็นคนแรกที่ให้คะแนน</p>
+            </div>
+            <section class="ap__coment" data-enviado="เราได้รับความคิดเห็นของคุณแล้ว จะแสดงที่นี่หลังทีมงานอนุมัติ" data-erro="ส่งไม่ได้ในขณะนี้ โปรดลองอีกครั้งในอีกสักครู่" data-vazio="ยังไม่มีความคิดเห็น มาเป็นคนแรกกัน" data-idioma="th">
+              <h2>ความคิดเห็น</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">ยังไม่มีความคิดเห็น มาเป็นคนแรกกัน</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">แสดงความคิดเห็น</p>
+                <input name="nome" type="text" maxlength="60" required placeholder="ชื่อของคุณ" aria-label="ชื่อของคุณ" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="ความคิดเห็นของคุณ" aria-label="ความคิดเห็นของคุณ"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">ส่งความคิดเห็น</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
           </div>
         </div>
         <aside class="ap__rel">
@@ -304,6 +321,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610072135" defer></script>
+  <script src="/assets/js/main.js?v=202610081231" defer></script>
 </body>
 </html>

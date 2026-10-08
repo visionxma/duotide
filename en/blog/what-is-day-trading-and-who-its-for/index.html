@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610072135">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -228,6 +228,23 @@
               <span class="ap__avatar ap__avatar--g" style="background:#7c3aed" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M3 9.5 12 5l9 4.5-9 4.5z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7 11.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-3.5M21 9.5V14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
               <div><strong>Beginner's Guide</strong><p>Answers the first questions of those just starting out: account, platform, basic concepts and common mistakes.</p></div>
             </div>
+            <div class="ap__avaliar" data-votos="{m} out of 5 · {n} ratings" data-voto1="1 rating" data-obrigado="Thanks for your rating!" data-sem="Be the first to rate it.">
+              <p class="ap__avaliar-tit">Was this article helpful?</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="Was this article helpful?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
+              <p class="ap__avaliar-info" aria-live="polite">Be the first to rate it.</p>
+            </div>
+            <section class="ap__coment" data-enviado="We received your comment. It will appear here once approved by our team." data-erro="Couldn't send right now. Please try again shortly." data-vazio="No comments yet. Be the first to comment." data-idioma="en">
+              <h2>Comments</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">No comments yet. Be the first to comment.</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">Leave a comment</p>
+                <input name="nome" type="text" maxlength="60" required placeholder="Your name" aria-label="Your name" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="Your comment" aria-label="Your comment"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">Post comment</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
           </div>
         </div>
         <aside class="ap__rel">
@@ -302,6 +319,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610072135" defer></script>
+  <script src="/assets/js/main.js?v=202610081231" defer></script>
 </body>
 </html>

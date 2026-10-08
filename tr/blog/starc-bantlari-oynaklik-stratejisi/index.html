@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610072135">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -243,6 +243,23 @@
               <span class="ap__avatar ap__avatar--g" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span>
               <div><strong>Analiz Masası</strong><p>Grafikleri, göstergeleri ve işlem stratejilerini açıklar: nasıl çalıştıklarını, nerede yanıldıklarını ve önce nasıl test edileceklerini.</p></div>
             </div>
+            <div class="ap__avaliar" data-votos="5 üzerinden {m} · {n} değerlendirme" data-voto1="1 değerlendirme" data-obrigado="Değerlendirmeniz için teşekkürler!" data-sem="İlk değerlendiren siz olun.">
+              <p class="ap__avaliar-tit">Bu makale faydalı oldu mu?</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="Bu makale faydalı oldu mu?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
+              <p class="ap__avaliar-info" aria-live="polite">İlk değerlendiren siz olun.</p>
+            </div>
+            <section class="ap__coment" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
+              <h2>Yorumlar</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">Henüz yorum yok. İlk yorumu siz yapın.</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">Yorum bırakın</p>
+                <input name="nome" type="text" maxlength="60" required placeholder="Adınız" aria-label="Adınız" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="Yorumunuz" aria-label="Yorumunuz"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">Yorumu gönder</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
           </div>
         </div>
         <aside class="ap__rel">
@@ -317,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610072135" defer></script>
+  <script src="/assets/js/main.js?v=202610081231" defer></script>
 </body>
 </html>

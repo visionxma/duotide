@@ -297,3 +297,64 @@
     if (navigator.clipboard) navigator.clipboard.writeText(url).then(feito, function () {}); else feito();
   });
 })();
+
+// Avaliação (estrelas) e comentários do artigo: dados reais no mesmo serviço das visitas.
+(function () {
+  var ap = document.querySelector('.ap');
+  if (!ap || !window.fetch) return;
+  var slug = ap.getAttribute('data-slug'), api = ap.getAttribute('data-api');
+  var lang = document.documentElement.lang || 'pt-BR';
+  var visitante = null;
+  try { visitante = localStorage.getItem('visitante'); if (!visitante) { visitante = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2) + Date.now()); localStorage.setItem('visitante', visitante); } } catch (e) { visitante = String(Math.random()).slice(2) + Date.now(); }
+
+  var av = ap.querySelector('.ap__avaliar');
+  if (av) {
+    var info = av.querySelector('.ap__avaliar-info'), bts = [].slice.call(av.querySelectorAll('[data-voto]'));
+    var meu = 0; try { meu = +localStorage.getItem('voto:' + slug) || 0; } catch (e) {}
+    var pinta = function (n) { bts.forEach(function (b) { var on = +b.getAttribute('data-voto') <= n; b.classList.toggle('is-on', on); b.setAttribute('aria-checked', String(+b.getAttribute('data-voto') === n)); }); };
+    var mostra = function (d) {
+      if (!d || !d.total) { info.textContent = av.getAttribute('data-sem'); return; }
+      var m = d.media.toLocaleString(lang, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+      info.textContent = d.total === 1 ? m + '/5 · ' + av.getAttribute('data-voto1') : av.getAttribute('data-votos').replace('{m}', m).replace('{n}', d.total.toLocaleString(lang));
+    };
+    pinta(meu);
+    fetch(api + '/a/' + slug).then(function (r) { return r.ok ? r.json() : null; }).then(mostra).catch(function () {});
+    bts.forEach(function (b) {
+      b.addEventListener('mouseenter', function () { pinta(+b.getAttribute('data-voto')); });
+      b.addEventListener('mouseleave', function () { pinta(meu); });
+      b.addEventListener('click', function () {
+        var v = +b.getAttribute('data-voto');
+        fetch(api + '/a/' + slug, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ voto: v, visitante: visitante }) })
+          .then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+            if (!d) return;
+            meu = v; pinta(v); try { localStorage.setItem('voto:' + slug, v); } catch (e) {}
+            mostra(d); var t = info.textContent; info.textContent = av.getAttribute('data-obrigado') + ' ' + t;
+          }).catch(function () {});
+      });
+    });
+  }
+
+  var sec = ap.querySelector('.ap__coment');
+  if (sec) {
+    var lista = sec.querySelector('.ap__coment-lista'), form = sec.querySelector('form'), msg = sec.querySelector('.ap__coment-msg');
+    fetch(api + '/c/' + slug).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (!d || !d.itens || !d.itens.length) return;
+      lista.innerHTML = '';
+      d.itens.forEach(function (c) {
+        var li = document.createElement('li'), s = document.createElement('strong'), t = document.createElement('time'), p = document.createElement('p');
+        s.textContent = c.nome; t.dateTime = c.criado; t.textContent = new Date(c.criado).toLocaleDateString(lang); p.textContent = c.texto;
+        li.appendChild(s); li.appendChild(t); li.appendChild(p); lista.appendChild(li);
+      });
+    }).catch(function () {});
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var bt = form.querySelector('button'); bt.disabled = true; msg.className = 'ap__coment-msg'; msg.textContent = '';
+      var dados = { nome: form.nome.value, texto: form.texto.value, site_url: form.site_url.value, idioma: sec.getAttribute('data-idioma'), url: location.href.split('#')[0] };
+      fetch(api + '/c/' + slug, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dados) })
+        .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+        .then(function () { form.reset(); msg.textContent = sec.getAttribute('data-enviado'); })
+        .catch(function () { msg.className = 'ap__coment-msg is-erro'; msg.textContent = sec.getAttribute('data-erro'); })
+        .then(function () { bt.disabled = false; });
+    });
+  }
+})();

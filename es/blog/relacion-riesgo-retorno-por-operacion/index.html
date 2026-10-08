@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610072135">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -225,6 +225,23 @@
               <span class="ap__avatar ap__avatar--g" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <div><strong>Redacción de Riesgo y Comportamiento</strong><p>Escribe sobre gestión del riesgo, tamaño de posición y la psicología detrás de las decisiones de quien opera.</p></div>
             </div>
+            <div class="ap__avaliar" data-votos="{m} de 5 · {n} valoraciones" data-voto1="1 valoración" data-obrigado="¡Gracias por tu valoración!" data-sem="Sé el primero en valorarlo.">
+              <p class="ap__avaliar-tit">¿Te resultó útil este artículo?</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="¿Te resultó útil este artículo?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
+              <p class="ap__avaliar-info" aria-live="polite">Sé el primero en valorarlo.</p>
+            </div>
+            <section class="ap__coment" data-enviado="Recibimos tu comentario. Aparecerá aquí cuando el equipo lo apruebe." data-erro="No se pudo enviar ahora. Inténtalo de nuevo en unos instantes." data-vazio="Aún no hay comentarios. Sé el primero en comentar." data-idioma="es">
+              <h2>Comentarios</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">Aún no hay comentarios. Sé el primero en comentar.</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">Deja tu comentario</p>
+                <input name="nome" type="text" maxlength="60" required placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="Tu comentario" aria-label="Tu comentario"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">Enviar comentario</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
           </div>
         </div>
         <aside class="ap__rel">
@@ -299,6 +316,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610072135" defer></script>
+  <script src="/assets/js/main.js?v=202610081231" defer></script>
 </body>
 </html>

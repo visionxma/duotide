@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610072135">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -246,6 +246,23 @@
               <span class="ap__avatar ap__avatar--g" style="background:#d97706" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-width="2"/><path d="M10 8h3.2a2 2 0 0 1 0 4H10m0 0h3.6a2 2 0 0 1 0 4H10m0-8v8m1.5-9.5v1.5m0 8v1.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
               <div><strong>Kryptoredaktionen</strong><p>Bevakar kryptovalutor och tokens: hur marknaderna fungerar och vad som ändras när man handlar dem hos en mäklare.</p></div>
             </div>
+            <div class="ap__avaliar" data-votos="{m} av 5 · {n} betyg" data-voto1="1 betyg" data-obrigado="Tack för ditt betyg!" data-sem="Bli först med att betygsätta.">
+              <p class="ap__avaliar-tit">Var artikeln till hjälp?</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="Var artikeln till hjälp?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
+              <p class="ap__avaliar-info" aria-live="polite">Bli först med att betygsätta.</p>
+            </div>
+            <section class="ap__coment" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
+              <h2>Kommentarer</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">Inga kommentarer ännu. Bli först med att kommentera.</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">Lämna en kommentar</p>
+                <input name="nome" type="text" maxlength="60" required placeholder="Ditt namn" aria-label="Ditt namn" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="Din kommentar" aria-label="Din kommentar"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">Skicka kommentar</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
           </div>
         </div>
         <aside class="ap__rel">
@@ -320,6 +337,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610072135" defer></script>
+  <script src="/assets/js/main.js?v=202610081231" defer></script>
 </body>
 </html>

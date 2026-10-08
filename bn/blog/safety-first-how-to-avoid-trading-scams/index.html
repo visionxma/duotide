@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610072135">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -227,6 +227,23 @@
               <span class="ap__avatar ap__avatar--g" style="background:#7c3aed" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M3 9.5 12 5l9 4.5-9 4.5z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7 11.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-3.5M21 9.5V14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
               <div><strong>নতুনদের গাইড</strong><p>যারা শুরু করছেন তাদের প্রথম প্রশ্নের উত্তর দেয়: অ্যাকাউন্ট, প্ল্যাটফর্ম, মৌলিক ধারণা ও সাধারণ ভুল।</p></div>
             </div>
+            <div class="ap__avaliar" data-votos="৫-এর মধ্যে {m} · {n}টি রেটিং" data-voto1="১টি রেটিং" data-obrigado="রেটিং দেওয়ার জন্য ধন্যবাদ!" data-sem="প্রথম রেটিংটি আপনিই দিন।">
+              <p class="ap__avaliar-tit">এই নিবন্ধটি কি কাজে লেগেছে?</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="এই নিবন্ধটি কি কাজে লেগেছে?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
+              <p class="ap__avaliar-info" aria-live="polite">প্রথম রেটিংটি আপনিই দিন।</p>
+            </div>
+            <section class="ap__coment" data-enviado="আপনার মন্তব্য পেয়েছি। দল অনুমোদন দিলে এটি এখানে দেখা যাবে।" data-erro="এখন পাঠানো গেল না। একটু পরে আবার চেষ্টা করুন।" data-vazio="এখনো কোনো মন্তব্য নেই। প্রথম মন্তব্যটি আপনিই করুন।" data-idioma="bn">
+              <h2>মন্তব্য</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">এখনো কোনো মন্তব্য নেই। প্রথম মন্তব্যটি আপনিই করুন।</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">আপনার মন্তব্য লিখুন</p>
+                <input name="nome" type="text" maxlength="60" required placeholder="আপনার নাম" aria-label="আপনার নাম" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="আপনার মন্তব্য" aria-label="আপনার মন্তব্য"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">মন্তব্য পাঠান</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
           </div>
         </div>
         <aside class="ap__rel">
@@ -301,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610072135" defer></script>
+  <script src="/assets/js/main.js?v=202610081231" defer></script>
 </body>
 </html>
