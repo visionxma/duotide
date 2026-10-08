@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>5 conseils pour trader avec plus d'efficacité de temps et de capital | Blog Duotide</title>
-  <meta name="description" content="Apprenez à utiliser des alertes, définir le risque avant de trader, regrouper les analyses et tester des idées en démo pour économiser temps et argent.">
+  <meta name="description" content="Alertes, risque défini avant l'entrée, stop basé sur l'ATR, blocs d'analyse et suivi : cinq habitudes illustrées par un exemple réel sur l'EUR/USD.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/5-conseils-pour-trader-efficacite-temps-capital/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/5-dicas-para-operar-com-mais-eficiencia-de-tempo-e-capital/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="5 conseils pour trader avec plus d'efficacité de temps et de capital">
-  <meta property="og:description" content="Apprenez à utiliser des alertes, définir le risque avant de trader, regrouper les analyses et tester des idées en démo pour économiser temps et argent.">
+  <meta property="og:description" content="Alertes, risque défini avant l'entrée, stop basé sur l'ATR, blocs d'analyse et suivi : cinq habitudes illustrées par un exemple réel sur l'EUR/USD.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/5-conseils-pour-trader-efficacite-temps-capital/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="5 conseils pour trader avec plus d'efficacité de temps et de capital">
-  <meta name="twitter:description" content="Apprenez à utiliser des alertes, définir le risque avant de trader, regrouper les analyses et tester des idées en démo pour économiser temps et argent.">
+  <meta name="twitter:description" content="Alertes, risque défini avant l'entrée, stop basé sur l'ATR, blocs d'analyse et suivi : cinq habitudes illustrées par un exemple réel sur l'EUR/USD.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,7 +65,7 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/5-conseils-pour-trader-efficacite-temps-capital/#artigo",
       "headline": "5 conseils pour trader avec plus d'efficacité de temps et de capital",
-      "description": "Apprenez à utiliser des alertes, définir le risque avant de trader, regrouper les analyses et tester des idées en démo pour économiser temps et argent.",
+      "description": "Alertes, risque défini avant l'entrée, stop basé sur l'ATR, blocs d'analyse et suivi : cinq habitudes illustrées par un exemple réel sur l'EUR/USD.",
       "url": "https://duotide.com.br/fr/blog/5-conseils-pour-trader-efficacite-temps-capital/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -203,34 +203,70 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#1-utilisez-des-alertes-plutot-que-de-fixer-le-graphique-en-p">1. Utilisez des alertes plutôt que de fixer le graphique en permanence</a></li>
-                <li><a href="#2-definissez-le-risque-de-l-operation-avant-d-ouvrir-le-grap">2. Définissez le risque de l'opération avant d'ouvrir le graphique de l'actif</a></li>
-                <li><a href="#3-regroupez-le-temps-d-analyse-en-blocs-pas-en-verifications">3. Regroupez le temps d'analyse en blocs, pas en vérifications constantes</a></li>
-                <li><a href="#4-testez-toute-nouvelle-idee-sur-un-compte-demo-avant-de-ris">4. Testez toute nouvelle idée sur un compte démo avant de risquer du capital</a></li>
-                <li><a href="#5-tenez-un-registre-simple-pour-identifier-les-schemas-de-pe">5. Tenez un registre simple pour identifier les schémas de perte de temps et d'argent</a></li>
-                <li><a href="#combiner-les-cinq-conseils-dans-un-exemple-de-journee-de-tra">Combiner les cinq conseils dans un exemple de journée de trading</a></li>
-                <li><a href="#evitez-l-habitude-de-recuperer-le-temps-perdu-avec-plus-d-op">Évitez l'habitude de « récupérer » le temps perdu avec plus d'opérations</a></li>
-                <li><a href="#conclusion-pratique">Conclusion pratique</a></li>
+                <li><a href="#1-utilisez-des-alertes-plutot-que-de-fixer-le-graphique">1. Utilisez des alertes plutôt que de fixer le graphique</a></li>
+                <li><a href="#2-definissez-le-risque-avant-d-ouvrir-le-graphique">2. Définissez le risque avant d'ouvrir le graphique</a></li>
+                <li><a href="#3-adaptez-la-taille-de-la-position-a-la-volatilite">3. Adaptez la taille de la position à la volatilité</a></li>
+                <li><a href="#exemple-reel-l-atr-de-l-eur-usd-en-2026">Exemple réel : l'ATR de l'EUR/USD en 2026</a></li>
+                <li><a href="#4-regroupez-l-analyse-en-blocs-de-temps">4. Regroupez l'analyse en blocs de temps</a></li>
+                <li><a href="#5-testez-en-demo-et-consignez-tout">5. Testez en démo et consignez tout</a></li>
+                <li><a href="#comment-assembler-les-cinq-conseils-dans-une-journee-de-trad">Comment assembler les cinq conseils dans une journée de trading</a></li>
+                <li><a href="#erreurs-courantes-en-essayant-d-economiser-du-temps-et-du-ca">Erreurs courantes en essayant d'économiser du temps et du capital</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Les opérations de courte durée sollicitent deux ressources limitées en même temps : le temps d'attention et le capital. Chaque minute passée à analyser un actif sans critère et chaque real risqué sans règle claire réduisent la capacité à soutenir ce type de trading sur le long terme. Les cinq conseils suivants portent justement sur la protection de ces deux ressources.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/5-dicas-para-operar-com-mais-eficiencia-de-tempo-e-capital.svg" alt="Graphique : EUR/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : EUR/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure><h2 id="1-utilisez-des-alertes-plutot-que-de-fixer-le-graphique-en-p">1. Utilisez des alertes plutôt que de fixer le graphique en permanence</h2>
-<p>Configurer des alertes de prix pour les niveaux qui comptent vraiment — un support, une résistance, un niveau de cassure — libère du temps qui serait passé à regarder le graphique en attendant que quelque chose se passe. Cela réduit la fatigue mentale au fil de la journée et évite les décisions prises simplement parce que la personne est devant l'écran depuis longtemps et sent qu'elle « doit faire quelque chose ».</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="2-definissez-le-risque-de-l-operation-avant-d-ouvrir-le-grap">2. Définissez le risque de l'opération avant d'ouvrir le graphique de l'actif</h2>
-<p>Décider combien de capital on est prêt à risquer dans une opération avant même de regarder où en est le prix à ce moment-là évite que la taille de la position soit influencée par l'émotion du moment. Un exemple simple : sur un compte de R$ 4.000, définir au préalable que la limite par opération est de 1,5 % (R$ 60) rend le calcul de la taille de la position, une fois l'entrée et le stop identifiés, presque automatique — sans possibilité d'« étirer » le risque parce que l'opportunité semble trop bonne pour être laissée passer.</p>
-<h2 id="3-regroupez-le-temps-d-analyse-en-blocs-pas-en-verifications">3. Regroupez le temps d'analyse en blocs, pas en vérifications constantes</h2>
-<p>Vérifier le marché toutes les quelques minutes tout au long de la journée consomme du temps et de l'énergie sans nécessairement améliorer la qualité de la décision. Réserver des blocs fixes — par exemple, 20 minutes le matin et 20 minutes l'après-midi — pour revoir les positions et le marché produit généralement des décisions plus organisées que des vérifications constantes et dispersées, tout en laissant le reste de la journée libre pour d'autres activités.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="4-testez-toute-nouvelle-idee-sur-un-compte-demo-avant-de-ris">4. Testez toute nouvelle idée sur un compte démo avant de risquer du capital</h2>
-<p>Chaque fois qu'une nouvelle idée de stratégie apparaît — un indicateur différent, une combinaison de signaux qui a paru intéressante — la tester d'abord sur un compte démo ne coûte que du temps, pas de capital. Cela évite le schéma courant qui consiste à « apprendre » une nouvelle stratégie directement avec de l'argent réel, l'une des façons les plus coûteuses de découvrir si une idée fonctionne ou non.</p>
-<h2 id="5-tenez-un-registre-simple-pour-identifier-les-schemas-de-pe">5. Tenez un registre simple pour identifier les schémas de perte de temps et d'argent</h2>
-<p>Noter rapidement, après chaque opération, l'actif, le motif de l'entrée et le résultat permet d'identifier, après quelques semaines, si un certain type d'opération consomme un temps disproportionné par rapport au résultat qu'il génère. Parfois, ce registre révèle qu'une bonne partie du temps d'analyse est consacrée à des opérations à faible résultat, tandis que peu d'opérations bien choisies concentrent l'essentiel du résultat — une information qui n'apparaît qu'avec l'enregistrement dans la durée, pas avec la mémoire à court terme.</p>
-<h2 id="combiner-les-cinq-conseils-dans-un-exemple-de-journee-de-tra">Combiner les cinq conseils dans un exemple de journée de trading</h2>
-<p>Imaginez un trader qui, avant de commencer, fixe le risque maximal de la journée à R$ 100, configure trois alertes de prix sur les actifs de sa liste de suivi, et réserve deux blocs de 20 minutes pour revoir le marché. En recevant une alerte, il connaît déjà la taille de la position grâce au risque prédéfini, sans avoir besoin de recalculer dans le feu de l'action. À la fin de la journée, il enregistre les opérations effectuées, y compris le temps total passé à analyser chacune d'elles. Ce processus, répété jour après jour, tend à consommer bien moins de temps et d'énergie que trader sans aucune de ces cinq pratiques.</p>
-<h2 id="evitez-l-habitude-de-recuperer-le-temps-perdu-avec-plus-d-op">Évitez l'habitude de « récupérer » le temps perdu avec plus d'opérations</h2><p>Quand un bloc d'analyse dépasse l'horaire prévu, il est courant d'essayer de compenser en tradant plus vite que ce que le processus normal permettrait, en sautant des étapes de sa propre checklist. Ce raccourci tend à coûter plus cher que le temps qu'il fait économiser, car il augmente le risque de se tromper précisément dans le calcul du risque ou dans la confirmation de l'entrée. Si un bloc d'analyse dépasse le temps réservé, le plus sûr est simplement de reporter la décision au bloc suivant, plutôt que d'accélérer le processus sous pression.</p><h2 id="conclusion-pratique">Conclusion pratique</h2>
-<p>Économiser du temps et du capital dans les opérations à court terme ne dépend pas de trouver un raccourci magique, mais d'éliminer les habitudes qui gaspillent inutilement ces deux ressources : vérifications constantes, risque décidé sur un coup de tête et tests effectués directement avec de l'argent réel. Appliquer ces cinq conseils de façon cohérente tend à rendre le processus plus durable, tout en gardant à l'esprit qu'aucun d'eux n'élimine le risque de perte inhérent à toute opération sur le marché.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Pour trader avec plus d'efficacité, définissez le risque de chaque opération avant d'ouvrir le graphique, adaptez la taille de la position à la volatilité (l'ATR y aide), utilisez des alertes plutôt que de surveiller l'écran, réservez des blocs de temps pour l'analyse et consignez chaque opération. Ces habitudes ne garantissent pas de profit, mais évitent le gaspillage d'attention et des pertes plus importantes que prévu.</p></div>
+            <p>Qui fait des opérations de courte durée se bat pour deux ressources à la fois : l'attention et le capital. Chaque minute passée à regarder le graphique sans critère épuise, et chaque opération ouverte sans règle de risque consomme de l'argent qui manquera plus tard. Aucun des conseils ci-dessous n'est un secret ; ce qui fait la différence, c'est de les appliquer tous les jours, de la même façon.</p>
+<p>Pour ne pas rester dans l'abstrait, nous utilisons les cours journaliers réels de l'EUR/USD (Yahoo Finance) entre avril et octobre 2026, ainsi que l'ATR, un indicateur de volatilité, pour montrer comment la taille de la position devrait changer en même temps que le marché.</p>
+<h2 id="1-utilisez-des-alertes-plutot-que-de-fixer-le-graphique">1. Utilisez des alertes plutôt que de fixer le graphique</h2>
+<p>Marquez les quelques niveaux qui comptent pour votre plan, comme un support, une résistance ou un chiffre rond très surveillé, et laissez la plateforme vous avertir quand le prix les atteint. Le temps entre deux alertes reste libre pour autre chose, et vous évitez le piège d'ouvrir une opération simplement parce que vous êtes devant l'écran depuis une heure et que vous sentez le besoin de faire quelque chose.</p>
+<p>Sur l'EUR/USD, le niveau de 1,1500 a été franchi trois fois en clôture journalière sur la période : à la baisse le 18 juin 2026 (de 1,15073 à 1,14586), à la hausse le 30 juillet (de 1,14672 à 1,15235), puis de nouveau à la baisse le 16 septembre (de 1,15376 à 1,14699). Trois alertes en six mois. Qui aurait surveillé ce niveau en regardant le graphique toute la journée aurait passé des centaines d'heures pour voir ces trois mêmes événements.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="2-definissez-le-risque-avant-d-ouvrir-le-graphique">2. Définissez le risque avant d'ouvrir le graphique</h2>
+<p>Décidez combien vous pouvez perdre par opération avant de voir où se trouve le prix. Quand la limite est fixée avec le graphique déjà sous les yeux, l'envie d'entrer a tendance à faire gonfler le chiffre. Une règle courante consiste à risquer entre 0,5 % et 2 % du capital par opération. Sur un compte de 5 000 $, 1 % représente 50 $ : si le stop est touché, la perte est de 50 $, et pas plus.</p>
+<h2 id="3-adaptez-la-taille-de-la-position-a-la-volatilite">3. Adaptez la taille de la position à la volatilité</h2>
+<p>Un risque fixe en argent ne veut pas dire une position fixe. Si le marché bouge davantage, le stop doit être placé plus loin pour ne pas être touché par le bruit normal du marché, et la position doit donc être plus petite. L'ATR (Average True Range, ou amplitude moyenne vraie) mesure justement l'amplitude habituelle de l'actif par bougie.</p>
+<h3>Comment calculer la taille de la position avec l'ATR</h3>
+<ul class="check-list">
+<li><strong>Distance du stop</strong> = 1,5 × ATR(14) journalier.</li>
+<li><strong>Taille de la position</strong> = risque en argent ÷ distance du stop.</li>
+<li>Sur l'EUR/USD, chaque variation de 0,0001 (un pip) sur 1 000 euros vaut 0,10 $.</li>
+</ul>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="exemple-reel-l-atr-de-l-eur-usd-en-2026">Exemple réel : l'ATR de l'EUR/USD en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/5-dicas-para-operar-com-mais-eficiencia-de-tempo-e-capital.svg" alt="Graphique : EUR/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : EUR/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure>
+<p>Le graphique montre l'EUR/USD du 1er avril 2026 au 6 octobre 2026, avec l'ATR à 14 périodes dans le panneau inférieur. La paire a commencé à 1,15906 et terminé à 1,12535, soit une baisse de 2,91 %. Plus intéressant que la direction, c'est le changement de volatilité :</p>
+<h3>Avril : volatilité élevée</h3>
+<p>Le 7 avril 2026, l'ATR a atteint 0,00965, soit près de 97 pips par jour, la valeur la plus élevée de la période. Avec la règle de 1,5 × ATR, le stop se trouverait à 0,01448 du prix d'entrée. Pour risquer 50 $, la position serait de 50 ÷ 0,01448 = environ 3 450 euros.</p>
+<h3>Septembre : un marché plus calme</h3>
+<p>Le 8 septembre 2026, l'ATR est tombé à 0,00473, environ 47 pips, la valeur la plus basse de la période. Le stop calculé avec la même règle se trouverait à 0,007095, et la position pour le même risque de 50 $ monterait à 50 ÷ 0,007095 = environ 7 050 euros, soit le double d'avril.</p>
+<h3>Octobre : la volatilité est de retour</h3>
+<p>Dans la dernière semaine de septembre, la paire a perdu la zone de 1,13 et l'ATR a de nouveau augmenté, atteignant 0,00654 le 6 octobre. Le stop serait de 0,00981 et la position, de 50 ÷ 0,00981 = environ 5 100 euros. Qui aurait gardé la taille de septembre aurait risqué, sans s'en rendre compte, bien plus que les 50 $ prévus.</p>
+<p>Ces chiffres décrivent ce qui s'est passé ; ils n'indiquent pas ce que l'EUR/USD va faire à partir de maintenant.</p>
+<h2 id="4-regroupez-l-analyse-en-blocs-de-temps">4. Regroupez l'analyse en blocs de temps</h2>
+<p>Vérifier le marché toutes les quelques minutes consomme de l'énergie et améliore rarement la décision. Réservez des blocs fixes, par exemple 20 minutes le matin et 20 l'après-midi, pour revoir les alertes, les positions ouvertes et l'ATR des actifs que vous suivez. En dehors de ces blocs, ce sont les alertes qui travaillent.</p>
+<p>Si le bloc dépasse l'horaire prévu, reportez la décision au bloc suivant plutôt que d'accélérer. Sauter des étapes de sa propre checklist pour rattraper le temps perdu, c'est justement le moment où l'on se trompe dans le calcul du stop ou de la taille de la position.</p>
+<h2 id="5-testez-en-demo-et-consignez-tout">5. Testez en démo et consignez tout</h2>
+<p>Toute nouvelle idée, qu'il s'agisse d'un indicateur différent ou d'un ajustement du stop, devrait d'abord passer par le compte démo. Tester en démo coûte du temps ; tester avec de l'argent réel coûte de l'argent. En même temps que le test, tenez un registre simple de chaque opération : date, actif, motif de l'entrée, distance du stop, taille de la position, résultat et temps passé à l'analyser.</p>
+<p>Après quelques semaines, le registre montre des choses que la mémoire cache : des types d'opérations qui prennent beaucoup de temps pour peu de résultat, des horaires où vous vous trompez davantage, et des jours où la taille de la position n'a pas respecté la règle.</p>
+<h2 id="comment-assembler-les-cinq-conseils-dans-une-journee-de-trad">Comment assembler les cinq conseils dans une journée de trading</h2>
+<h3>Avant le marché</h3>
+<p>Définissez le risque maximal par opération et par jour, vérifiez l'ATR des actifs de votre liste et configurez les alertes aux niveaux du plan.</p>
+<h3>Pendant la journée</h3>
+<p>Ouvrez le graphique quand une alerte se déclenche ou à l'heure du bloc prévu. S'il y a une entrée, la taille de la position découle déjà du calcul risque ÷ distance du stop, sans rien décider dans le feu de l'action.</p>
+<h3>Après le marché</h3>
+<p>Consignez les opérations, y compris celles que vous n'avez pas faites et pourquoi.</p>
+<h3>Limites</h3>
+<p>L'ATR regarde en arrière : il mesure la volatilité des 14 dernières séances et peut grimper brusquement avec une annonce. En cas de gap à l'ouverture, le prix peut sauter par-dessus le stop, et la perte réelle dépasse alors ce qui était prévu. Aucun de ces conseils n'élimine le risque de perte ; ils permettent seulement de garder le risque à la taille que vous avez choisie.</p>
+<h2 id="erreurs-courantes-en-essayant-d-economiser-du-temps-et-du-ca">Erreurs courantes en essayant d'économiser du temps et du capital</h2>
+<ul class="check-list">
+<li>Utiliser la même taille de position pendant les semaines calmes et agitées, comme si l'ATR n'avait pas changé.</li>
+<li>Placer le stop plus près que ne le suggère l'ATR pour faire tenir une position plus grande.</li>
+<li>Configurer des alertes sur tant de niveaux qu'elles deviennent du bruit et que vous recommencez à fixer l'écran toute la journée.</li>
+<li>Augmenter le risque après une série de pertes pour récupérer plus vite.</li>
+<li>Tester de nouvelles idées directement sur le compte réel parce que la démo semble une perte de temps.</li>
+<li>Laisser le registre pour la fin de la semaine et le remplir de mémoire.</li>
+</ul>
+<p>Pour vous entraîner, ouvrez l'EUR/USD ou l'actif que vous suivez sur le compte démo, ajoutez l'ATR à 14 périodes et calculez, pendant quelques semaines, la taille de la position pour un risque fixe avant chaque entrée. Notez le résultat de chaque opération : c'est ce registre qui montrera si votre processus économise vraiment du temps et du capital.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
@@ -266,8 +302,8 @@
           <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/comment-fonctionnent-les-options-binaires/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment fonctionnent les options binaires, en pratique</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/options-binaires-guide-pratique-et-gestion-du-risque/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Options binaires : guide pratique et gestion du risque</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/options-digitales-comment-elles-fonctionnent/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Options digitales : comment elles fonctionnent et calculer le risque</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/options-binaires-guide-pratique-et-gestion-du-risque/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Options binaires : guide pratique et gestion du risque</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/options-digitales-comment-elles-fonctionnent/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Options digitales : comment elles fonctionnent et calculer le risque</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
           </div>
         </aside>
       </div>
@@ -334,6 +370,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081305" defer></script>
+  <script src="/assets/js/main.js?v=202610081333" defer></script>
 </body>
 </html>

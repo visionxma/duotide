@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/bn/blog/parabolic-sar-indicator-guide/",
       "inLanguage": "bn",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-28T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "ইন্ডিকেটর",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">২৪ সেপ, ২০২৬</time><span class="ap__sep">4 মিনিটে পড়ুন</span></span>
+              <span><time datetime="2026-09-24">২৪ সেপ, ২০২৬</time><span class="ap__sep">6 মিনিটে পড়ুন</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> বার দেখা হয়েছে</span></span>
             </div>
-            <p class="ap__atual">হালনাগাদ: <time datetime="2026-09-28">২৮ সেপ্টেম্বর, ২০২৬</time></p>
+            <p class="ap__atual">হালনাগাদ: <time datetime="2026-10-08">৮ অক্টোবর, ২০২৬</time></p>
             <span class="bq__tag">ইন্ডিকেটর</span>
             <h1>Parabolic SAR: প্রবণতা অনুসরণ করতে নির্দেশকটি কীভাবে ব্যবহার করবেন</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>বিশ্লেষণ বিভাগ</strong><small>Duotide বিভাগ</small></span></div>
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>প্রযুক্তিগত বিশ্লেষণের সবচেয়ে দৃশ্যত প্রবণতা নির্দেশকগুলোর মধ্যে আছে Parabolic SAR, প্রকৌশলী জে. ওয়েলেস ওয়াইল্ডার দ্বারা তৈরি — RSI এবং ATR-এর একই লেখক। চার্টে, এটি ক্যান্ডেলের উপরে বা নিচে বিন্দুর একটি ক্রম হিসেবে দেখা যায়, এবং এই অবস্থানই নিজে থেকে অনেক তথ্য দেয়: দামের নিচের বিন্দু ঊর্ধ্বমুখী প্রবণতা নির্দেশ করে, উপরের বিন্দু নিম্নমুখী প্রবণতা নির্দেশ করে।</p>
 <p>SAR সংক্ষিপ্ত রূপটি এসেছে "Stop and Reverse" (থামুন এবং বিপরীত করুন) থেকে, যা ইতিমধ্যে নির্দেশকের মূল প্রস্তাবটি দেয়: একটি পজিশন বন্ধ করার মুহূর্ত সংকেত দেওয়া এবং বিপরীত অপারেশন খোলার কথা বিবেচনা করা।</p>
-<h2 id="ন-র-দ-শকট-ক-ভ-ব-গণন-কর-হয">নির্দেশকটি কীভাবে গণনা করা হয়</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/parabolic-sar-como-usar-indicador.svg" alt="চার্ট: Tesla, দৈনিক, ০১/০৪/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Yahoo Finance। নিজস্ব বিশ্লেষণ।" width="960" height="540" loading="lazy" decoding="async"><figcaption>চার্ট: Tesla, দৈনিক, ০১/০৪/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Yahoo Finance। নিজস্ব বিশ্লেষণ।</figcaption></figure><h2 id="ন-র-দ-শকট-ক-ভ-ব-গণন-কর-হয">নির্দেশকটি কীভাবে গণনা করা হয়</h2>
 <p>Parabolic SAR-এর গণনা তিনটি উপাদান ব্যবহার করে: পূর্ববর্তী পিরিয়ডের SAR-এর মান, চরম বিন্দু (EP, প্রবণতার সময় সবচেয়ে সাম্প্রতিক সর্বোচ্চ বা সর্বনিম্ন) এবং ত্বরণ ফ্যাক্টর (AF), যা 0,02-এ শুরু হয় এবং প্রতিবার একটি নতুন চরম বিন্দু অর্জিত হলে 0,02 বাড়ে, 0,20-এর একটি স্ট্যান্ডার্ড সিলিং পর্যন্ত।</p>
 <p>সূত্রটি হলো: নতুন SAR = পূর্ববর্তী SAR + AF × (EP − পূর্ববর্তী SAR)। এর অর্থ হলো, একটি প্রবণতার শুরুতে, SAR ধীরে সরে, এবং ত্বরণ ফ্যাক্টর বাড়ার সঙ্গে সঙ্গে, বিন্দুগুলো দ্রুত দামের কাছাকাছি আসতে শুরু করে — এখান থেকেই "প্যারাবলিক" আকৃতি এসেছে যা নির্দেশকটিকে নাম দিয়েছে।</p>
 <figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="একট-স-খ-য-গত-উদ-হরণ">একটি সংখ্যাগত উদাহরণ</h2>
@@ -237,7 +237,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
             </div>
             <div class="ap__fim">
-              <p>হালনাগাদ: <time datetime="2026-09-28">২৮ সেপ, ২০২৬</time></p>
+              <p>হালনাগাদ: <time datetime="2026-10-08">৮ অক্টো, ২০২৬</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> বার দেখা হয়েছে</span></span><button class="ap__compartilhar" type="button">শেয়ার করুন <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -267,7 +267,7 @@
           <h2>সম্পর্কিত নিবন্ধ</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
             <a class="bq__card" href="/bn/blog/what-is-average-true-range/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">অ্যাভারেজ ট্রু রেঞ্জ (ATR) কী এবং কীভাবে গণনা করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
           </div>
         </aside>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081305" defer></script>
+  <script src="/assets/js/main.js?v=202610081333" defer></script>
 </body>
 </html>
