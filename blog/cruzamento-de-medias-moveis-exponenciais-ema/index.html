@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Cruzamento de médias móveis exponenciais (EMA) no trading | Blog Duotide</title>
-  <meta name="description" content="Como montar uma estratégia de cruzamento de EMAs, com exemplo numérico, e por que esse método falha em mercados sem tendência definida.">
+  <meta name="description" content="Como funciona o cruzamento de EMAs, o cálculo da média exponencial com o ouro em 2026, os sinais reais das EMAs de 9 e 21 e os erros mais comuns.">
   <link rel="canonical" href="https://duotide.com.br/blog/cruzamento-de-medias-moveis-exponenciais-ema/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/cruzamento-de-medias-moveis-exponenciais-ema/">
@@ -34,7 +34,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Cruzamento de médias móveis exponenciais (EMA) no trading">
-  <meta property="og:description" content="Como montar uma estratégia de cruzamento de EMAs, com exemplo numérico, e por que esse método falha em mercados sem tendência definida.">
+  <meta property="og:description" content="Como funciona o cruzamento de EMAs, o cálculo da média exponencial com o ouro em 2026, os sinais reais das EMAs de 9 e 21 e os erros mais comuns.">
   <meta property="og:url" content="https://duotide.com.br/blog/cruzamento-de-medias-moveis-exponenciais-ema/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
@@ -44,7 +44,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cruzamento de médias móveis exponenciais (EMA) no trading">
-  <meta name="twitter:description" content="Como montar uma estratégia de cruzamento de EMAs, com exemplo numérico, e por que esse método falha em mercados sem tendência definida.">
+  <meta name="twitter:description" content="Como funciona o cruzamento de EMAs, o cálculo da média exponencial com o ouro em 2026, os sinais reais das EMAs de 9 e 21 e os erros mais comuns.">
   <meta name="twitter:label1" content="Escrito por">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tempo de leitura">
@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -66,11 +66,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/blog/cruzamento-de-medias-moveis-exponenciais-ema/#artigo",
       "headline": "Cruzamento de médias móveis exponenciais (EMA) no trading",
-      "description": "Como montar uma estratégia de cruzamento de EMAs, com exemplo numérico, e por que esse método falha em mercados sem tendência definida.",
+      "description": "Como funciona o cruzamento de EMAs, o cálculo da média exponencial com o ouro em 2026, os sinais reais das EMAs de 9 e 21 e os erros mais comuns.",
       "url": "https://duotide.com.br/blog/cruzamento-de-medias-moveis-exponenciais-ema/",
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-24T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Estratégias",
       "author": {
@@ -189,10 +189,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">5 min de leitura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
             </div>
-            <p class="ap__atual">Atualizado em: <time datetime="2026-09-24">24 de setembro de 2026</time></p>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-10-08">8 de outubro de 2026</time></p>
             <span class="bq__tag">Estratégias</span>
             <h1>Cruzamento de médias móveis exponenciais (EMA) no trading</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Redação de Análise</strong><small>Editoria Duotide</small></span></div>
@@ -204,24 +204,74 @@
             <nav class="ap__indice" aria-label="Conteúdo">
               <p class="ap__indice-tit">Conteúdo</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#como-a-estrategia-funciona">Como a estratégia funciona</a></li>
-                <li><a href="#um-exemplo-com-numeros">Um exemplo com números</a></li>
-                <li><a href="#o-atraso-e-o-preco-a-pagar">O atraso é o preço a pagar</a></li>
-                <li><a href="#onde-o-metodo-falha-com-frequencia">Onde o método falha com frequência</a></li>
-                <li><a href="#ajustando-os-periodos-das-medias">Ajustando os períodos das médias</a></li>
-                <li><a href="#usando-o-cruzamento-com-criterio">Usando o cruzamento com critério</a></li>
+                <li><a href="#o-que-e-a-ema">O que é a EMA</a></li>
+                <li><a href="#como-calcular-a-ema">Como calcular a EMA</a></li>
+                <li><a href="#exemplo-real-as-emas-de-9-e-21-no-ouro">Exemplo real: as EMAs de 9 e 21 no ouro</a></li>
+                <li><a href="#como-usar-o-cruzamento-de-emas">Como usar o cruzamento de EMAs</a></li>
+                <li><a href="#erros-comuns-no-cruzamento-de-emas">Erros comuns no cruzamento de EMAs</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>O cruzamento de médias móveis exponenciais é uma das estratégias mais ensinadas para quem está começando em análise técnica, e por um bom motivo: é fácil de visualizar, fácil de automatizar e não depende de interpretação subjetiva de padrão gráfico. A ideia central é usar duas EMAs de períodos diferentes e observar o momento em que uma cruza a outra.</p><p>A escolha pela EMA, em vez da média móvel simples, não é acidental. Como a EMA dá mais peso aos preços recentes, ela reage mais rápido a mudanças de direção — algo especialmente relevante numa estratégia que depende justamente do momento exato do cruzamento entre duas linhas.</p><h2 id="como-a-estrategia-funciona">Como a estratégia funciona</h2><p>O formato mais comum usa duas EMAs, uma mais curta e outra mais longa — por exemplo, 9 e 21 períodos:</p><ul><li><strong>Cruzamento de alta</strong>: a EMA curta cruza de baixo para cima da EMA longa, sugerindo que o momento recente está ficando mais forte que a média de fundo.</li><li><strong>Cruzamento de baixa</strong>: a EMA curta cruza de cima para baixo da EMA longa, sugerindo enfraquecimento do momento de alta anterior.</li></ul><p>A lógica por trás disso é que, quando a média de curto prazo passa a ficar acima da de longo prazo, os preços recentes estão puxando a média para cima com mais força do que o histórico mais distante — um sinal indireto de que a tendência pode estar mudando de direção.</p><h2 id="um-exemplo-com-numeros">Um exemplo com números</h2><p>Imagine um ativo em que a EMA de 9 períodos está em R$ 74,20 e a EMA de 21 períodos está em R$ 74,80, com o preço subindo nos últimos candles. Se, dois candles depois, a EMA de 9 sobe para R$ 75,10 e a de 21 está em R$ 74,90, ocorreu o cruzamento de alta: a média curta passou a de longa. Esse é o ponto que a estratégia trata como sinal de entrada comprada.</p><p>O caminho inverso — EMA de 9 cruzando para baixo da EMA de 21 — geraria o sinal de saída ou de venda, dependendo de como a estratégia foi montada.</p><h2 id="o-atraso-e-o-preco-a-pagar">O atraso é o preço a pagar</h2><p>Como qualquer média móvel, a EMA reage ao que já aconteceu, não ao que vai acontecer. O cruzamento só se confirma depois que o preço já se moveu o suficiente para inverter a posição relativa entre as duas linhas. Isso significa que parte do movimento já ficou para trás no momento em que o sinal aparece — a estratégia troca previsão por confirmação, e isso tem um custo direto no tamanho do lucro potencial de cada entrada.</p><h2 id="onde-o-metodo-falha-com-frequencia">Onde o método falha com frequência</h2><p>Em mercados sem tendência clara, oscilando de lado dentro de uma faixa estreita, as duas EMAs ficam entrelaçadas, cruzando repetidamente em curtos intervalos de tempo. Cada cruzamento gera um sinal, mas o preço não anda o suficiente na direção indicada antes de reverter e gerar o cruzamento oposto. O resultado é uma sequência de pequenas perdas — o efeito de tesourada (whipsaw) que costuma corroer contas que operam todo cruzamento sem nenhum filtro adicional.</p><p>Uma forma de reduzir esse problema é combinar o cruzamento com um filtro de força de tendência, como o ADX: exigir que o ADX esteja acima de determinado nível antes de considerar válido um cruzamento ajuda a descartar boa parte dos sinais gerados em mercados sem direção definida.</p><h2 id="ajustando-os-periodos-das-medias">Ajustando os períodos das médias</h2><p>Combinações mais curtas, como 5 e 13, geram sinais mais cedo, mas também mais sinais falsos. Combinações mais longas, como 21 e 55, demoram mais para confirmar, só que tendem a filtrar melhor o ruído de curto prazo. Não existe combinação universalmente superior — o ideal depende do prazo em que você pretende manter a operação e de quanto atraso de confirmação você está disposto a aceitar em troca de menos sinais falsos.</p><h2 id="usando-o-cruzamento-com-criterio">Usando o cruzamento com critério</h2><p>O cruzamento de EMAs funciona melhor como parte de um sistema com filtros adicionais — força de tendência, volume, ou contexto de suporte e resistência — do que como regra isolada aplicada sem exceção. Ele automatiza uma parte da decisão, mas não substitui a necessidade de gestão de risco: mesmo o melhor conjunto de períodos ainda vai gerar sinais falsos com alguma frequência, especialmente em mercados de lado.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Resposta rápida</p><p>O cruzamento de EMAs usa duas médias móveis exponenciais, uma curta e uma longa (por exemplo, 9 e 21 períodos): a curta cruzando para cima da longa é sinal de alta, e para baixo, de baixa. Como a EMA dá mais peso aos preços recentes, ela vira mais rápido que a média simples, mas continua atrasada em relação ao preço. Em tendência, o método pega boa parte do movimento; em mercado lateral, gera sinais falsos em sequência.</p></div>
+            <p>O cruzamento de médias móveis exponenciais é uma das estratégias mais ensinadas para quem começa em análise técnica, e por um bom motivo: é fácil de ver no gráfico, fácil de automatizar e não depende de interpretar padrões. A ideia é acompanhar duas EMAs de períodos diferentes e agir quando uma cruza a outra.</p>
+<p>Neste guia usamos as cotações diárias reais do ouro (contrato futuro na bolsa de Nova York, em dólares por onça) entre abril e outubro de 2026, com as EMAs de 9 e 21 pregões, para mostrar o cálculo e os sinais que realmente apareceram.</p>
+<h2 id="o-que-e-a-ema">O que é a EMA</h2>
+<p>A EMA (média móvel exponencial) é uma média em que os preços mais recentes pesam mais do que os antigos. Na média simples, o fechamento de hoje e o de 20 dias atrás têm o mesmo peso; na exponencial, o peso dos dados antigos vai diminuindo aos poucos. Por isso a EMA reage mais rápido a mudanças de direção, algo relevante numa estratégia que depende do momento do cruzamento.</p>
+<h3>Como funciona o cruzamento</h3>
+<ul class="check-list">
+<li><strong>Cruzamento de alta:</strong> a EMA curta cruza de baixo para cima a EMA longa. Os preços recentes estão puxando a média para cima com mais força do que o histórico.</li>
+<li><strong>Cruzamento de baixa:</strong> a EMA curta cruza de cima para baixo a EMA longa, sinal de enfraquecimento.</li>
+</ul>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-calcular-a-ema">Como calcular a EMA</h2>
+<p>A fórmula usa um fator de peso k = 2 ÷ (N + 1):</p>
+<ul class="check-list">
+<li>EMA de 9: k = 2 ÷ 10 = <strong>0,2</strong>. EMA de 21: k = 2 ÷ 22 = <strong>0,0909</strong>.</li>
+<li><strong>EMA de hoje = fechamento × k + EMA de ontem × (1 − k)</strong>.</li>
+</ul>
+<h3>Exemplo com dados reais do ouro</h3>
+<p>Em 04/08/2026, a EMA de 9 estava em US$ 4.093,06 e a de 21 em US$ 4.098,44, a curta ainda abaixo da longa. Em 05/08 o ouro fechou a US$ 4.305,20:</p>
+<ul class="check-list">
+<li>EMA de 9 = 4.305,20 × 0,2 + 4.093,06 × 0,8 = 861,04 + 3.274,45 = <strong>4.135,49</strong></li>
+<li>EMA de 21 = 4.305,20 × 0,0909 + 4.098,44 × 0,9091 ≈ 391,38 + 3.725,85 = <strong>4.117,2</strong></li>
+<li>A EMA de 9 passou de US$ 5,38 abaixo para US$ 18,26 acima da de 21: cruzamento de alta.</li>
+</ul>
+<p>Repare que um único dia forte bastou para virar a ordem das médias. É isso que torna a EMA rápida, e também o que a faz reagir a dias isolados.</p>
+<h2 id="exemplo-real-as-emas-de-9-e-21-no-ouro">Exemplo real: as EMAs de 9 e 21 no ouro</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-medias-moveis-exponenciais-ema.svg" alt="Gráfico: Ouro, diário, de 01/04/2026 a 07/10/2026. Dados: Yahoo Finance. Elaboração própria." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: Ouro, diário, de 01/04/2026 a 07/10/2026. Dados: Yahoo Finance. Elaboração própria.</figcaption></figure>
+<p>No período do gráfico, o ouro caiu de US$ 4.813,10 (01/04) para US$ 4.140,70 (07/10), queda de 13,97%, com máxima de US$ 4.917,70 em 17/04 e mínima de US$ 3.955,40 em 30/06. Houve quatro cruzamentos. Imagine alguém que compra no cruzamento de alta e vende no de baixa.</p>
+<h3>Abril: sinal de alta perto do topo</h3>
+<p>O cruzamento de alta de 15/04 saiu com o ouro a US$ 4.823,60. Dois pregões depois veio a máxima do período, US$ 4.917,70, e em 23/04 o cruzamento de baixa mandou sair a US$ 4.724,00: −US$ 99,60 por onça, ou −2,06%. O sinal chegou quando a alta já estava no fim.</p>
+<h3>Abril a agosto: o valor de ficar de fora</h3>
+<p>Entre 23/04 e 05/08 a EMA de 9 ficou abaixo da de 21. Nesse intervalo o ouro foi de US$ 4.724,00 até a mínima de US$ 3.955,40, em 30/06, queda de 16,27%. Para quem só opera comprado, o cruzamento de baixa serviu como filtro para não comprar durante a queda.</p>
+<h3>Agosto a setembro: acertou a direção, devolveu o lucro</h3>
+<p>Na compra de 05/08 a US$ 4.305,20, o ouro chegou a US$ 4.755,00 em 25/08, US$ 449,80 acima da entrada. O cruzamento de baixa só veio em 14/09, a US$ 4.351,90: lucro de US$ 46,70 por onça, ou 1,08%, cerca de um décimo do que o movimento chegou a oferecer. Depois da saída, o ouro fechou 07/10 a US$ 4.140,70, 4,85% abaixo.</p>
+<p>Para comparar: com médias simples de 9 e 21 no mesmo período houve seis cruzamentos, incluindo um de alta em 18/05 e um de baixa no dia seguinte. Nem sempre a EMA gera mais sinais; depende do caminho do preço. Os casos acima descrevem o que aconteceu, não o que vai acontecer.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-usar-o-cruzamento-de-emas">Como usar o cruzamento de EMAs</h2>
+<h3>Como filtro de tendência</h3>
+<p>O uso mais robusto é decidir o lado: com a EMA curta acima, só compras; abaixo, só vendas ou nada. O caso de abril a agosto mostra o valor disso.</p>
+<h3>Com uma saída mais ágil que o cruzamento contrário</h3>
+<p>Em agosto, esperar o cruzamento de baixa devolveu quase todo o ganho. Alternativas comuns são um stop móvel de algumas vezes o ATR ou a saída no fechamento abaixo da EMA curta.</p>
+<h3>Com um filtro contra a lateralidade</h3>
+<p>Uma média longa, como a de 200, ou o ADX acima de 20 a 25 ajudam a evitar operar quando as duas EMAs estão entrelaçadas.</p>
+<h3>Limitações</h3>
+<p>A EMA é calculada com preços passados, então todo cruzamento chega depois que parte do movimento já aconteceu. Em mercado lateral, as médias cruzam em sequência e cada sinal termina numa pequena perda, o efeito conhecido como whipsaw. E como um único dia forte pode virar a EMA curta, notícias isoladas geram sinais que não se sustentam.</p>
+<h2 id="erros-comuns-no-cruzamento-de-emas">Erros comuns no cruzamento de EMAs</h2>
+<ul class="check-list">
+<li>Operar todo cruzamento, sem filtro de tendência ou de lateralidade.</li>
+<li>Usar o cruzamento contrário como única saída e devolver o lucro de tendências curtas.</li>
+<li>Escolher os períodos olhando para trás até achar a combinação que teria dado mais lucro.</li>
+<li>Confundir EMA com média simples: os valores e as datas dos cruzamentos são diferentes.</li>
+<li>Entrar sem stop, contando que o próximo cruzamento vai avisar a hora de sair.</li>
+</ul>
+<p>Para praticar, coloque as EMAs de 9 e 21 no gráfico diário de um ativo na conta demo e registre cada cruzamento, o preço de entrada, o melhor preço alcançado e o preço do cruzamento seguinte. A diferença entre o que o movimento ofereceu e o que a regra entregou vai mostrar onde a sua saída precisa melhorar.</p>
             <div class="bq-post__cta">
               <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
             </div>
             <div class="ap__fim">
-              <p>Atualizado em: <time datetime="2026-09-24">24 de set. de 2026</time></p>
+              <p>Atualizado em: <time datetime="2026-10-08">8 de out. de 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -233,12 +283,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -250,9 +300,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/como-escolher-o-prazo-de-uma-operacao/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como escolher o prazo (expiração) de uma operação</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/melhores-indicadores-para-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Os melhores indicadores para quem faz day trade</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/estrategia-dual-stochastic/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia do duplo estocástico: como combinar dois osciladores</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/como-escolher-o-prazo-de-uma-operacao/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como escolher o prazo (expiração) de uma operação</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
+            <a class="bq__card" href="/blog/melhores-indicadores-para-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Melhores indicadores para day trade: médias, VWAP, RSI, ATR e volume</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
+            <a class="bq__card" href="/blog/estrategia-dual-stochastic/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia do duplo estocástico: como combinar dois osciladores</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -318,6 +368,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

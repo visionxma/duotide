@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -222,7 +222,7 @@
 <p><strong>RS = Durchschnitt der Gewinne / Durchschnitt der Verluste</strong></p>
 <p>Danach wird RS mit folgender Formel auf die Skala von 0 bis 100 umgerechnet:</p>
 <p><strong>RSI = 100 - [100 / (1 + RS)]</strong></p>
-<h2 id="ein-von-hand-gelostes-beispiel">Ein von Hand gelöstes Beispiel</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ein-von-hand-gelostes-beispiel">Ein von Hand gelöstes Beispiel</h2>
 <p>Um die Rechnung zu vereinfachen, hier ein Beispiel mit nur 5 Preisänderungen statt der normalerweise verwendeten 14, nur zur Veranschaulichung der Berechnung. Nehmen wir folgende Tagesschlusskurse einer Aktie an: R$ 10,00; R$ 10,20; R$ 10,15; R$ 10,40; R$ 10,30; R$ 10,50.</p>
 <p>Die Änderungen zwischen einem Schlusskurs und dem nächsten waren:</p>
 <ul>
@@ -236,7 +236,7 @@
 <p>Ein RSI nahe 81 zeigt an, dass die jüngsten Gewinne in diesem vereinfachten Zeitraum klar über den Verlusten dominierten, was den Indikator in eine überkaufte Ablesung bringt.</p>
 <h2 id="wie-man-die-uberkauft-und-uberverkauft-niveaus-interpretiert">Wie man die Überkauft- und Überverkauft-Niveaus interpretiert</h2>
 <p>Die traditionelle Lesart betrachtet Werte über 70 als überkauft, was darauf hindeutet, dass die Aufwärtsbewegung überdehnt sein könnte, und Werte unter 30 als überverkauft, was dasselbe für eine Abwärtsbewegung andeutet. Diese Zahlen sind kein automatisches Kauf- oder Verkaufssignal. In einem starken Aufwärtstrend kann der RSI lange über 70 bleiben, und jedes Mal zu verkaufen, wenn er dieses Niveau kreuzt, kann bedeuten, aus einem Trend auszusteigen, der noch viel Raum zur Fortsetzung hatte.</p>
-<h2 id="divergenz-wenn-preis-und-rsi-nicht-ubereinstimmen">Divergenz: wenn Preis und RSI nicht übereinstimmen</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="divergenz-wenn-preis-und-rsi-nicht-ubereinstimmen">Divergenz: wenn Preis und RSI nicht übereinstimmen</h2>
 <p>Eine Divergenz tritt auf, wenn der Preis ein neues Hoch bildet, aber der RSI ein niedrigeres Hoch als das vorherige bildet, was darauf hindeutet, dass die Aufwärtsbewegung im Hintergrund an Kraft verliert, selbst wenn der Preis noch steigt. Dasselbe gilt umgekehrt, wenn der Preis ein niedrigeres Tief bildet, während der RSI ein höheres Tief bildet. Die Divergenz ist eine Warnung vor möglichem Kraftverlust der Bewegung, keine Garantie für eine unmittelbare Umkehr.</p>
 <h2 id="haufige-fehler-beim-einsatz-des-rsi">Häufige Fehler beim Einsatz des RSI</h2>
 <ul>
@@ -267,12 +267,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="War dieser Artikel hilfreich?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Geben Sie die erste Bewertung ab.</p>
             </div>
-            <section class="ap__coment" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
               <h2>Kommentare</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Noch keine Kommentare. Schreiben Sie den ersten.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Kommentar schreiben</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ihr Name" aria-label="Ihr Name" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ihr Name (optional)" aria-label="Ihr Name (optional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ihr Kommentar" aria-label="Ihr Kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Kommentar senden</button>
@@ -284,9 +284,9 @@
         <aside class="ap__rel">
           <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
             <a class="bq__card" href="/de/blog/was-ist-der-stochastik-oszillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Stochastik-Oszillator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
           </div>
         </aside>
       </div>
@@ -353,6 +353,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

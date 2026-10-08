@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,14 +219,14 @@
 <h2 id="como-o-indicador-e-calculado">Como o indicador é calculado</h2>
 <p>O cálculo do Parabolic SAR usa três elementos: o valor do SAR do período anterior, o Ponto Extremo (EP, a máxima ou mínima mais recente durante a tendência) e o Fator de Aceleração (AF), que começa em 0,02 e aumenta em 0,02 a cada vez que um novo Ponto Extremo é atingido, até um teto padrão de 0,20.</p>
 <p>A fórmula é: novo SAR = SAR anterior + AF × (EP − SAR anterior). Isso significa que, no início de uma tendência, o SAR se move devagar, e conforme o Fator de Aceleração cresce, os pontos passam a se aproximar do preço mais rapidamente — daí o formato "parabólico" que dá nome ao indicador.</p>
-<h2 id="um-exemplo-numerico">Um exemplo numérico</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="um-exemplo-numerico">Um exemplo numérico</h2>
 <p>Suponha uma ação em tendência de alta, com o SAR do dia anterior em R$ 41,00, o Ponto Extremo (a maior máxima da tendência até agora) em R$ 45,00 e o Fator de Aceleração em 0,04 depois de dois avanços de máxima. O novo SAR fica em:</p>
 <p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16.</p>
 <p>No dia seguinte, se a ação fizer uma nova máxima de R$ 46,00, o Ponto Extremo sobe para esse valor e o Fator de Aceleração avança para 0,06. O SAR seguinte seria R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45. Note como o ponto vai subindo mais rápido a cada novo avanço, "perseguindo" o preço.</p>
 <h2 id="quando-o-indicador-sinaliza-reversao">Quando o indicador sinaliza reversão</h2>
 <p>Enquanto o preço se mantém acima da linha de pontos, o SAR continua subindo junto com a tendência. No momento em que o preço fecha abaixo do valor do SAR, o indicador inverte: os pontos passam a aparecer acima dos candles, o Fator de Aceleração volta para 0,02 e o Ponto Extremo passa a ser recalculado com base na mínima mais recente, agora para uma tendência de baixa.</p>
 <p>É essa inversão — o "stop and reverse" do nome — que muitos traders usam tanto como sinal de saída de uma posição comprada quanto como possível sinal de entrada vendida, dependendo da estratégia adotada.</p>
-<h2 id="pontos-fortes-e-limitacoes">Pontos fortes e limitações</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="pontos-fortes-e-limitacoes">Pontos fortes e limitações</h2>
 <p>O Parabolic SAR funciona bem em mercados com tendência definida e de longa duração, onde os pontos acompanham o movimento sem gerar muitos sinais falsos. O problema aparece em mercados sem direção clara: como o indicador está sempre "ligado", alternando de posição a cada oscilação, ele pode gerar vários sinais de reversão em sequência que não se confirmam, um comportamento conhecido como whipsaw.</p>
 <p>Por isso, boa parte dos traders usa o SAR em conjunto com um indicador de tendência, como uma média móvel de prazo mais longo, aplicando os sinais do SAR apenas quando estão alinhados com a direção maior do mercado. A plataforma da Duotide permite plotar o Parabolic SAR junto com outros indicadores no mesmo gráfico, o que facilita esse tipo de comparação antes de qualquer decisão.</p>
 <h2 id="ajustando-o-fator-de-aceleracao">Ajustando o Fator de Aceleração</h2>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como calcular a força da tendência</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o ATR (Average True Range) e como calcular</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

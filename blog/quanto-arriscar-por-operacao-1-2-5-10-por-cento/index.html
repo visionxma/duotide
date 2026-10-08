@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,7 +219,7 @@
 <p>Quando o risco é um percentual fixo do saldo atual, cada perda fica um pouco menor em valor absoluto conforme a conta encolhe. A fórmula do saldo restante depois de uma sequência de perdas é:</p>
 <p>Saldo final = saldo inicial × (1 − percentual de risco) elevado ao número de perdas</p>
 <p>Aplicando a uma conta de R$ 10.000 com risco de 5% por operação: depois de uma perda, restam R$ 9.500. Depois de cinco perdas seguidas, restam cerca de R$ 7.738. Depois de dez perdas seguidas, restam cerca de R$ 5.987 — uma queda de quase 40% no capital, mesmo o percentual de risco parecendo moderado à primeira vista.</p>
-<h2 id="a-tabela-que-muda-a-decisao">A tabela que muda a decisão</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="a-tabela-que-muda-a-decisao">A tabela que muda a decisão</h2>
 <p>Veja o quanto do capital desaparece depois de sequências de perdas em diferentes percentuais de risco fixo:</p>
 <ul>
 <li><strong>3 perdas seguidas</strong> — risco de 1%: −3,0%; risco de 2%: −5,9%; risco de 5%: −14,3%; risco de 10%: −27,1%.</li>
@@ -231,7 +231,7 @@
 <h2 id="o-lado-mais-cruel-a-matematica-da-recuperacao">O lado mais cruel: a matemática da recuperação</h2>
 <p>Perdas e ganhos não são simétricos. Uma queda de 20% exige um ganho de 25% só para voltar ao ponto de partida. Uma queda de 40% exige um ganho de 66,7%. Uma queda de 65% — o resultado de dez perdas seguidas arriscando 10% por operação — exige um ganho de cerca de 186% apenas para empatar. Não é o dobro do esforço, é muito mais que isso, porque a base de cálculo do ganho necessário já está bem menor.</p>
 <p>É por isso que um plano de risco precisa ser desenhado para sobreviver a uma sequência de perdas antes que ela aconteça — não é possível redesenhar a gestão de risco no meio do pânico, com a conta já em queda livre e o julgamento comprometido pela pressão emocional do momento.</p>
-<h2 id="como-usar-essa-tabela-na-pratica">Como usar essa tabela na prática</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-usar-essa-tabela-na-pratica">Como usar essa tabela na prática</h2>
 <p>O exercício mais útil antes de definir o risco por operação é perguntar: "se eu tiver dez perdas seguidas — algo que qualquer estratégia enfrenta eventualmente —, quanto da minha conta eu aceito perder, e quanto eu preciso recuperar depois disso?" Se a resposta a 5% ou 10% de risco por operação parecer assustadora quando confrontada com a recuperação necessária, o percentual está alto demais para o seu perfil, independentemente de quanto isso "atrase" o crescimento da conta no curto prazo.</p>
 <p>Arriscar 1% ou 2% por operação pode parecer lento para quem quer resultado rápido, mas é justamente essa lentidão que permite continuar operando depois de uma sequência ruim, em vez de precisar reconstruir a conta do zero. Trading envolve risco de perda em qualquer percentual escolhido — a diferença entre os números acima não é entre arriscar e não arriscar, é entre um risco do qual dá para se recuperar com calma e um risco que compromete a capacidade de continuar operando com a cabeça no lugar.</p>
             <div class="bq-post__cta">
@@ -251,12 +251,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -269,7 +269,7 @@
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/blog/stop-loss-e-take-profit-no-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como usar stop loss e take profit no forex</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/estrategia-martingale-no-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia martingale no trading: como funciona e os riscos</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/estrategia-martingale-no-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia martingale no trading: como funciona e por que é tão arriscada</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
             <a class="bq__card" href="/blog/quando-encerrar-uma-operacao-sinais-de-saida/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Quando encerrar uma operação: sinais de saída</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
           </div>
         </aside>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,7 +218,7 @@
 <p>Когда риск — это фиксированный процент от текущего баланса, каждый следующий убыток становится немного меньше в абсолютном выражении по мере уменьшения счёта. Формула остатка баланса после серии убытков такова:</p>
 <p>Итоговый баланс = начальный баланс × (1 − процент риска) в степени числа убытков</p>
 <p>Применительно к счёту в 10 000 руб. с риском 5% за сделку: после одного убытка остаётся 9500 руб. После пяти убытков подряд остаётся около 7738 руб. После десяти убытков подряд остаётся около 5987 руб. — падение капитала почти на 40%, хотя процент риска на первый взгляд кажется умеренным.</p>
-<h2 id="таблица-которая-меняет-решение">Таблица, которая меняет решение</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="таблица-которая-меняет-решение">Таблица, которая меняет решение</h2>
 <p>Посмотрите, сколько капитала исчезает после серий убытков при разных фиксированных процентах риска:</p>
 <ul>
 <li><strong>3 убытка подряд</strong> — риск 1%: −3,0%; риск 2%: −5,9%; риск 5%: −14,3%; риск 10%: −27,1%.</li>
@@ -230,7 +230,7 @@
 <h2 id="самая-жестокая-сторона-математика-восстановления">Самая жестокая сторона: математика восстановления</h2>
 <p>Убытки и прибыль несимметричны. Падение на 20% требует роста на 25%, просто чтобы вернуться к исходной точке. Падение на 40% требует роста на 66,7%. Падение на 65% — результат десяти убытков подряд при риске 10% за сделку — требует роста примерно на 186% лишь для выхода в ноль. Это не вдвое больше усилий, а намного больше, потому что база расчёта необходимой прибыли уже значительно меньше.</p>
 <p>Именно поэтому план риска нужно составлять так, чтобы пережить серию убытков ещё до того, как она произойдёт, — невозможно перестраивать управление риском в разгар паники, когда счёт уже в свободном падении, а суждение искажено эмоциональным давлением момента.</p>
-<h2 id="как-использовать-эту-таблицу-на-практике">Как использовать эту таблицу на практике</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="как-использовать-эту-таблицу-на-практике">Как использовать эту таблицу на практике</h2>
 <p>Самое полезное упражнение перед определением риска на сделку — задать вопрос: «если у меня будет десять убытков подряд — а с этим рано или поздно сталкивается любая стратегия, — сколько от моего счёта я готов потерять и сколько мне потребуется восстановить после этого?» Если ответ при риске 5% или 10% за сделку кажется пугающим в сравнении с необходимым восстановлением, значит, процент слишком высок для вашего профиля, независимо от того, насколько это «замедляет» рост счёта в краткосрочной перспективе.</p>
 <p>Риск в 1% или 2% за сделку может показаться медленным тем, кто хочет быстрого результата, но именно эта неспешность позволяет продолжать торговать после неудачной серии, вместо того чтобы восстанавливать счёт с нуля. Трейдинг сопряжён с риском убытка при любом выбранном проценте — разница между приведёнными выше числами не в том, рисковать или нет, а в том, идёт ли речь о риске, от которого можно спокойно оправиться, или о риске, который лишает способности продолжать торговать с ясной головой.</p>
             <div class="bq-post__cta">
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Была ли статья полезной?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Оцените первым.</p>
             </div>
-            <section class="ap__coment" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
+            <section class="ap__coment" data-anonimo="Аноним" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
               <h2>Комментарии</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Комментариев пока нет. Будьте первым.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Оставить комментарий</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ваше имя" aria-label="Ваше имя" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ваше имя (необязательно)" aria-label="Ваше имя (необязательно)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ваш комментарий" aria-label="Ваш комментарий"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Отправить</button>
@@ -268,7 +268,7 @@
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/ru/blog/how-to-use-stop-loss-and-take-profit-in-forex-trading/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Как использовать стоп-лосс и тейк-профит на форекс</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Стратегия мартингейл в трейдинге: как работает и риски</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Стратегия мартингейл в трейдинге: как работает и риски</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
             <a class="bq__card" href="/ru/blog/when-to-exit-a-trade-exit-signals/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Когда закрывать сделку: сигналы для выхода</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
           </div>
         </aside>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

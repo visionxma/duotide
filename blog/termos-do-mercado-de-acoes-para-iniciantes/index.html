@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -221,12 +221,12 @@
 <h2 id="acao-e-quota-share">Ação e quota (share)</h2>
 <p>Uma ação representa uma fatia de propriedade de uma empresa. Ao comprar uma ação, você está comprando uma pequena parte daquele negócio — não está comprando o produto da empresa nem emprestando dinheiro a ela. Se a empresa vai bem, mais investidores tendem a querer possuir aquela ação, o que pode empurrar o preço para cima. Se a empresa decepciona, ou se o mercado espera problemas à frente, o preço pode cair.</p>
 <p>A quota, ou <em>share</em> em inglês, é a unidade contável dessa propriedade: você pode ter 1, 10 ou 100 quotas de uma ação. Isso importa porque o resultado financeiro depende da quantidade. Se uma ação sobe de R$ 50 para R$ 55, o ganho é de R$ 5 por quota — com 10 quotas, o ganho é de R$ 50; com 100 quotas, R$ 500. O movimento da ação foi o mesmo; o tamanho da posição mudou o resultado em dinheiro.</p>
-<h2 id="ticker">Ticker</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ticker">Ticker</h2>
 <p>O ticker é o código curto usado para identificar uma ação em bolsa — por exemplo, PETR4 ou VALE3 na bolsa brasileira. Tickers tornam as plataformas mais rápidas de usar, mas também podem gerar confusão entre empresas de nomes parecidos ou ativos listados em bolsas diferentes. Antes de confirmar qualquer ordem, vale conferir se o ticker corresponde mesmo à empresa pretendida — um erro simples de digitação pode levar a comprar o ativo errado.</p>
 <h2 id="bid-ask-e-spread">Bid, ask e spread</h2>
 <p>O bid é o maior preço que um comprador está oferecendo no momento. O ask é o menor preço que um vendedor está aceitando. O spread é a diferença entre os dois. Se uma ação mostra bid de R$ 100,00 e ask de R$ 100,05, o spread é de R$ 0,05 — ao comprar imediatamente, você tende a pagar perto do ask; ao vender imediatamente, tende a receber perto do bid.</p>
 <p>Ações muito líquidas costumam ter spread apertado; ações menos negociadas podem ter spread mais largo, o que encarece entrar e sair rapidamente de uma posição. O spread é fácil de ignorar porque não chega como uma cobrança separada — mas continua sendo um custo real a cada operação.</p>
-<h2 id="ordem-a-mercado-e-ordem-limitada">Ordem a mercado e ordem limitada</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ordem-a-mercado-e-ordem-limitada">Ordem a mercado e ordem limitada</h2>
 <p>Uma ordem a mercado pede para comprar ou vender assim que possível, pelo melhor preço disponível — ela prioriza velocidade, não precisão de preço. Uma ordem limitada define o preço máximo que você aceita pagar numa compra, ou o preço mínimo que aceita receber numa venda — ela prioriza controle, com o risco de não ser executada se o mercado não chegar até aquele preço.</p>
 <p>Nenhuma das duas é automaticamente melhor. Use ordem a mercado quando a execução rápida importa mais do que uma pequena diferença de preço; use ordem limitada quando o preço importa mais do que a certeza de ser executado.</p>
 <h2 id="volume">Volume</h2>
@@ -254,12 +254,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -271,9 +271,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/como-entender-uma-cotacao-de-mercado/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como entender uma cotação de mercado</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/livros-essenciais-para-traders-iniciantes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Livros essenciais para quem está começando no trading</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/ferramentas-de-trading-como-escolher-as-certas/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ferramentas de trading: como escolher as certas</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/como-entender-uma-cotacao-de-mercado/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como entender uma cotação de mercado: bid, ask, spread e variação</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
+            <a class="bq__card" href="/blog/livros-essenciais-para-traders-iniciantes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Livros essenciais para traders iniciantes: 5 clássicos e o que tirar de cada um</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
+            <a class="bq__card" href="/blog/ferramentas-de-trading-como-escolher-as-certas/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ferramentas de trading: como escolher as certas para começar</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -339,6 +339,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

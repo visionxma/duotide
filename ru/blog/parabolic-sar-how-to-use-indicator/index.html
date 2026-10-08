@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,14 +218,14 @@
 <h2 id="как-рассчитывается-индикатор">Как рассчитывается индикатор</h2>
 <p>Расчёт Parabolic SAR использует три элемента: значение SAR предыдущего периода, Экстремальную точку (EP — последний максимум или минимум за время тренда) и Фактор ускорения (AF), который начинается с 0,02 и увеличивается на 0,02 каждый раз, когда достигается новая Экстремальная точка, до стандартного предела в 0,20.</p>
 <p>Формула такова: новый SAR = предыдущий SAR + AF × (EP − предыдущий SAR). Это значит, что в начале тренда SAR движется медленно, а по мере роста Фактора ускорения точки начинают быстрее приближаться к цене — отсюда и «параболическая» форма, давшая название индикатору.</p>
-<h2 id="числовои-пример">Числовой пример</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="числовои-пример">Числовой пример</h2>
 <p>Предположим, акция находится в восходящем тренде, SAR предыдущего дня равен 41,00 руб., Экстремальная точка (наибольший максимум тренда на данный момент) — 45,00 руб., а Фактор ускорения — 0,04 после двух обновлений максимума. Новый SAR составит:</p>
 <p>41,00 руб. + 0,04 × (45,00 руб. − 41,00 руб.) = 41,00 руб. + 0,04 × 4,00 руб. = 41,00 руб. + 0,16 руб. = 41,16 руб.</p>
 <p>На следующий день, если акция обновит максимум до 46,00 руб., Экстремальная точка поднимется до этого значения, а Фактор ускорения вырастет до 0,06. Следующий SAR составит 41,16 руб. + 0,06 × (46,00 руб. − 41,16 руб.) = 41,16 руб. + 0,06 × 4,84 руб. = 41,16 руб. + 0,29 руб. = 41,45 руб. Обратите внимание, как точка поднимается всё быстрее с каждым новым обновлением, «преследуя» цену.</p>
 <h2 id="когда-индикатор-сигнализирует-о-развороте">Когда индикатор сигнализирует о развороте</h2>
 <p>Пока цена остаётся выше линии точек, SAR продолжает расти вместе с трендом. В момент, когда цена закрывается ниже значения SAR, индикатор переворачивается: точки начинают появляться выше свечей, Фактор ускорения возвращается к 0,02, а Экстремальная точка пересчитывается на основе последнего минимума — теперь уже для нисходящего тренда.</p>
 <p>Именно этот разворот — «stop and reverse» из названия — многие трейдеры используют как сигнал выхода из длинной позиции, так и как возможный сигнал входа в короткую, в зависимости от принятой стратегии.</p>
-<h2 id="сильные-стороны-и-ограничения">Сильные стороны и ограничения</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="сильные-стороны-и-ограничения">Сильные стороны и ограничения</h2>
 <p>Parabolic SAR хорошо работает на рынках с чётко выраженным и продолжительным трендом, где точки следуют за движением, не создавая много ложных сигналов. Проблема возникает на рынках без ясного направления: поскольку индикатор всегда «включён» и меняет положение при каждом колебании, он может подряд генерировать несколько сигналов разворота, которые не подтверждаются, — такое поведение известно как whipsaw (пила).</p>
 <p>Поэтому многие трейдеры используют SAR вместе с трендовым индикатором, например скользящей средней большего периода, применяя сигналы SAR только тогда, когда они совпадают с более крупным направлением рынка. Платформа Duotide позволяет отображать Parabolic SAR вместе с другими индикаторами на одном графике, что облегчает такое сравнение перед принятием любого решения.</p>
 <h2 id="настроика-фактора-ускорения">Настройка Фактора ускорения</h2>
@@ -249,12 +249,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Была ли статья полезной?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Оцените первым.</p>
             </div>
-            <section class="ap__coment" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
+            <section class="ap__coment" data-anonimo="Аноним" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
               <h2>Комментарии</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Комментариев пока нет. Будьте первым.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Оставить комментарий</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ваше имя" aria-label="Ваше имя" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ваше имя (необязательно)" aria-label="Ваше имя (необязательно)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ваш комментарий" aria-label="Ваш комментарий"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Отправить</button>
@@ -266,9 +266,9 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
             <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

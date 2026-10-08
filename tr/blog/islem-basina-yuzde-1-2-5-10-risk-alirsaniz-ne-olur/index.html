@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,7 +218,7 @@
 <p>Risk mevcut bakiyenin sabit bir yüzdesi olduğunda, hesap küçüldükçe her kayıp mutlak değer olarak biraz daha küçük hale gelir. Bir dizi kayıptan sonra kalan bakiyenin formülü şudur:</p>
 <p>Son bakiye = başlangıç bakiyesi × (1 − risk yüzdesi) üzeri kayıp sayısı</p>
 <p>İşlem başına %5 riskle R$ 10.000'lik bir hesaba uygulandığında: bir kayıptan sonra R$ 9.500 kalır. Art arda beş kayıptan sonra yaklaşık R$ 7.738 kalır. Art arda on kayıptan sonra yaklaşık R$ 5.987 kalır — risk yüzdesi ilk bakışta ölçülü görünse bile sermayede neredeyse %40'lık bir düşüş.</p>
-<h2 id="kararı-degistiren-tablo">Kararı Değiştiren Tablo</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="kararı-degistiren-tablo">Kararı Değiştiren Tablo</h2>
 <p>Farklı sabit risk yüzdelerinde kayıp dizilerinden sonra sermayenin ne kadarının yok olduğunu görün:</p>
 <ul>
 <li><strong>Art arda 3 kayıp</strong> — %1 risk: −%3,0; %2 risk: −%5,9; %5 risk: −%14,3; %10 risk: −%27,1.</li>
@@ -230,7 +230,7 @@
 <h2 id="en-acımasız-taraf-toparlanmanın-matematigi">En Acımasız Taraf: Toparlanmanın Matematiği</h2>
 <p>Kayıplar ve kazançlar simetrik değildir. %20'lik bir düşüş, başlangıç noktasına dönmek için sadece %25'lik bir kazanç gerektirir. %40'lık bir düşüş %66,7'lik bir kazanç gerektirir. İşlem başına %10 risk alarak art arda on kayıp sonucu olan %65'lik bir düşüş, sadece başa baş gelmek için yaklaşık %186'lık bir kazanç gerektirir. Çabanın iki katı değildir, çok daha fazlasıdır, çünkü gereken kazancın hesaplama tabanı zaten çok daha küçüktür.</p>
 <p>Bu yüzden bir risk planı, bir kayıp dizisi gerçekleşmeden önce ona dayanacak şekilde tasarlanmalıdır — hesap zaten serbest düşüşteyken ve yargı anın duygusal baskısıyla bozulmuşken, risk yönetimini panik ortasında yeniden tasarlamak mümkün değildir.</p>
-<h2 id="bu-tabloyu-pratikte-nasıl-kullanmalı">Bu Tabloyu Pratikte Nasıl Kullanmalı</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="bu-tabloyu-pratikte-nasıl-kullanmalı">Bu Tabloyu Pratikte Nasıl Kullanmalı</h2>
 <p>İşlem başına riski belirlemeden önce yapılacak en faydalı egzersiz şunu sormaktır: "art arda on kayıp yaşarsam — herhangi bir strateji eninde sonunda bununla karşılaşır —, hesabımın ne kadarını kaybetmeyi kabul ederim ve bundan sonra ne kadarını geri kazanmam gerekir?" İşlem başına %5 veya %10 riske verilen cevap, gereken toparlanmayla karşılaştırıldığında korkutucu görünüyorsa, bu kısa vadede hesabın büyümesini ne kadar "geciktirdiğinden" bağımsız olarak, yüzde sizin profiliniz için fazla yüksektir.</p>
 <p>İşlem başına %1 veya %2 risk almak hızlı sonuç isteyenler için yavaş görünebilir, ama tam da bu yavaşlık, hesabı sıfırdan yeniden inşa etmek yerine kötü bir diziden sonra işlem yapmaya devam etmenizi sağlar. Trading seçilen herhangi bir yüzdede kayıp riski taşır — yukarıdaki sayılar arasındaki fark risk almakla almamak arasında değildir, sakin bir şekilde toparlanabileceğiniz bir risk ile kafanız yerinde işlem yapmaya devam etme kapasitenizi tehlikeye atan bir risk arasındadır.</p>
             <div class="bq-post__cta">
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bu makale faydalı oldu mu?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">İlk değerlendiren siz olun.</p>
             </div>
-            <section class="ap__coment" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
+            <section class="ap__coment" data-anonimo="Anonim" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
               <h2>Yorumlar</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Henüz yorum yok. İlk yorumu siz yapın.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Yorum bırakın</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Adınız" aria-label="Adınız" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Adınız (isteğe bağlı)" aria-label="Adınız (isteğe bağlı)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Yorumunuz" aria-label="Yorumunuz"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Yorumu gönder</button>
@@ -268,7 +268,7 @@
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/tr/blog/forexte-stop-loss-ve-take-profit-nasil-kullanilir/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Forex'te Stop Loss ve Take Profit Nasıl Kullanılır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/trading-de-martingale-stratejisi-nasil-calisir-ve-riskleri/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de martingale stratejisi: nasıl çalışır ve riskleri</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/trading-de-martingale-stratejisi-nasil-calisir-ve-riskleri/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de martingale stratejisi: nasıl çalışır ve riskleri</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/bir-islemi-ne-zaman-kapatmali-cikis-sinyalleri/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemi Ne Zaman Kapatmalı: Çıkış Sinyalleri</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
           </div>
         </aside>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

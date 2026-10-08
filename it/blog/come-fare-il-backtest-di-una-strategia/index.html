@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/it/blog/come-fare-il-backtest-di-una-strategia/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
       "articleSection": "Strategie",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">4 min di lettura</span></span>
+              <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">5 min di lettura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
             </div>
-            <p class="ap__atual">Aggiornato il: <time datetime="2026-09-27">27 settembre 2026</time></p>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-10-08">8 ottobre 2026</time></p>
             <span class="bq__tag">Strategie</span>
             <h1>Come fare il backtest di una strategia prima di operare</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Redazione Analisi</strong><small>Sezione Duotide</small></span></div>
@@ -216,13 +216,13 @@
           </aside>
           <div class="ap__texto article">
             <p>Il backtest è il processo di testare una strategia di operazione usando dati storici, prima di rischiarci capitale reale. L'idea è semplice: applicare le stesse regole di ingresso e uscita che useresti dal vivo su un periodo passato del grafico, e registrare cosa sarebbe successo a ogni segnale generato. È una fase che separa una strategia con evidenza di funzionamento da un'idea che sembra solo buona guardando il grafico in modo retrospettivo.</p>
-<h2 id="passo-1-definisci-per-iscritto-la-regola-di-ingresso-e-uscit">Passo 1: definisci per iscritto la regola di ingresso e uscita</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/como-fazer-o-backtest-de-uma-estrategia.svg" alt="Grafico: S&amp;P 500, giornaliero, dal 02/01/2026 al 07/10/2026. Dati: Yahoo Finance. Elaborazione propria." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafico: S&amp;P 500, giornaliero, dal 02/01/2026 al 07/10/2026. Dati: Yahoo Finance. Elaborazione propria.</figcaption></figure><h2 id="passo-1-definisci-per-iscritto-la-regola-di-ingresso-e-uscit">Passo 1: definisci per iscritto la regola di ingresso e uscita</h2>
 <p>Prima di guardare qualsiasi dato storico, scrivi la regola esatta che testerai — per esempio: "comprare quando il prezzo rompe il massimo delle ultime 20 candele con volume 30% sopra la media; uscire in profitto al 2% di rialzo o allo stop all'1% di calo". Regole vaghe come "comprare quando sembra una buona opportunità" non possono essere testate in modo coerente, perché dipendono da un giudizio soggettivo a ogni segnale.</p>
-<h2 id="passo-2-percorri-lo-storico-segnale-per-segnale">Passo 2: percorri lo storico segnale per segnale</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="passo-2-percorri-lo-storico-segnale-per-segnale">Passo 2: percorri lo storico segnale per segnale</h2>
 <p>Con la regola definita, percorri il grafico storico identificando ogni volta in cui la condizione di ingresso sarebbe stata soddisfatta, e registra il risultato che la regola di uscita avrebbe generato — profitto o perdita, in punti o percentuale. È importante mantenere la disciplina di applicare la regola esattamente come scritta, senza "aggiustare" il risultato dopo aver visto cosa è successo, a rischio di distorcere il test a favore della strategia.</p>
 <h2 id="passo-3-calcola-il-tasso-di-successo-e-il-payoff-medio">Passo 3: calcola il tasso di successo e il payoff medio</h2>
 <p>Dopo aver raccolto un campione ragionevole — almeno 30 segnali, idealmente di più — calcola due numeri: il tasso di successo (percentuale di operazioni vincenti) e il payoff medio (il guadagno medio delle operazioni vincenti diviso per la perdita media di quelle perdenti). Supponi un backtest con 40 segnali, 18 vincenti e 22 perdenti, guadagno medio di R$ 60,00 nelle vincenti e perdita media di R$ 35,00 nelle perdenti. Il tasso di successo è del 45% (18/40) e il payoff è di 1,71 (60/35).</p>
-<h2 id="passo-4-calcola-l-aspettativa-matematica">Passo 4: calcola l'aspettativa matematica</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="passo-4-calcola-l-aspettativa-matematica">Passo 4: calcola l'aspettativa matematica</h2>
 <p>L'aspettativa matematica misura il risultato medio atteso per operazione, e si calcola così: (tasso di successo × guadagno medio) − (tasso di errore × perdita media). Usando i numeri dell'esempio: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positivi per operazione, in media. Un'aspettativa positiva indica che, mantenendo la stessa proporzione di successi e lo stesso payoff nel tempo, la strategia tende a generare un risultato positivo — il che non garantisce che ogni singola operazione sarà redditizia, ma indica un vantaggio statistico nel campione testato.</p>
 <h2 id="cosa-non-garantisce-il-backtest">Cosa non garantisce il backtest</h2>
 <p>Un risultato positivo nello storico non garantisce la stessa performance in futuro — le condizioni di mercato cambiano, e un campione piccolo può essere stato favorevole per caso. Inoltre, i backtest manuali sono soggetti al bias del senno di poi: è facile, senza volerlo, aggiustare l'interpretazione di un segnale sapendo cosa è successo dopo. Per questo, molti trader fanno seguire al backtest un periodo di test su conto simulato, applicando la stessa regola in tempo reale prima di operare con capitale rilevante.</p>
@@ -241,7 +241,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Aggiornato il: <time datetime="2026-09-27">27 set 2026</time></p>
+              <p>Aggiornato il: <time datetime="2026-10-08">8 ott 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -253,12 +253,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Questo articolo ti è stato utile?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sii il primo a valutare.</p>
             </div>
-            <section class="ap__coment" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
+            <section class="ap__coment" data-anonimo="Anonimo" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
               <h2>Commenti</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ancora nessun commento. Scrivi tu il primo.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lascia un commento</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Il tuo nome" aria-label="Il tuo nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Il tuo nome (facoltativo)" aria-label="Il tuo nome (facoltativo)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Il tuo commento" aria-label="Il tuo commento"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Invia commento</button>
@@ -270,9 +270,9 @@
         <aside class="ap__rel">
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/it/blog/incrocio-di-medie-mobili-esponenziali-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Incrocio di medie mobili esponenziali (EMA) nel trading</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/come-scegliere-la-scadenza-di-una-operazione/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come scegliere la scadenza di un'operazione</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/i-migliori-indicatori-per-chi-fa-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">I migliori indicatori per chi fa day trade</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/incrocio-di-medie-mobili-esponenziali-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Incrocio di medie mobili esponenziali (EMA) nel trading</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/come-scegliere-la-scadenza-di-una-operazione/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come scegliere la scadenza di un'operazione</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/i-migliori-indicatori-per-chi-fa-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">I migliori indicatori per chi fa day trade</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
           </div>
         </aside>
       </div>
@@ -339,6 +339,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

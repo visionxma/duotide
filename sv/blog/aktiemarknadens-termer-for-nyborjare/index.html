@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -220,12 +220,12 @@
 <h2 id="aktie-och-andel-share">Aktie och andel (share)</h2>
 <p>En aktie representerar en ägarandel i ett företag. När du köper en aktie köper du en liten del av det företaget — du köper inte företagets produkt och lånar heller inte ut pengar till det. Går företaget bra tenderar fler investerare att vilja äga den aktien, vilket kan driva upp priset. Besviker företaget, eller om marknaden förväntar sig problem framöver, kan priset falla.</p>
 <p>Andelen, eller <em>share</em> på engelska, är den räkneenhet som används för detta ägande: du kan ha 1, 10 eller 100 andelar av en aktie. Det spelar roll eftersom det ekonomiska resultatet beror på antalet. Om en aktie stiger från 50 kr till 55 kr blir vinsten 5 kr per andel — med 10 andelar blir vinsten 50 kr, med 100 andelar 500 kr. Aktiens rörelse var densamma; positionens storlek förändrade resultatet i pengar.</p>
-<h2 id="ticker">Ticker</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ticker">Ticker</h2>
 <p>Tickern är den korta koden som används för att identifiera en aktie på börsen — till exempel PETR4 eller VALE3 på den brasilianska börsen. Tickers gör plattformarna snabbare att använda, men kan också skapa förvirring mellan företag med liknande namn eller tillgångar noterade på olika börser. Innan du bekräftar en order är det värt att kontrollera att tickern verkligen motsvarar det avsedda företaget — ett enkelt skrivfel kan leda till att du köper fel tillgång.</p>
 <h2 id="bid-ask-och-spread">Bid, ask och spread</h2>
 <p>Bid är det högsta pris som en köpare erbjuder just nu. Ask är det lägsta pris som en säljare accepterar. Spreaden är skillnaden mellan de två. Om en aktie visar bid på 100,00 kr och ask på 100,05 kr är spreaden 0,05 kr — vid ett omedelbart köp tenderar du att betala nära ask-priset, vid en omedelbar försäljning tenderar du att få nära bid-priset.</p>
 <p>Mycket likvida aktier brukar ha smal spread; mindre omsatta aktier kan ha bredare spread, vilket gör det dyrare att snabbt gå in i och ur en position. Spreaden är lätt att missa eftersom den inte dyker upp som en separat avgift — men den är fortfarande en verklig kostnad vid varje affär.</p>
-<h2 id="marknadsorder-och-limitorder">Marknadsorder och limitorder</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="marknadsorder-och-limitorder">Marknadsorder och limitorder</h2>
 <p>En marknadsorder ber om att köpa eller sälja så snart som möjligt, till bästa tillgängliga pris — den prioriterar hastighet, inte prisprecision. En limitorder anger det högsta pris du accepterar att betala vid ett köp, eller det lägsta pris du accepterar att få vid en försäljning — den prioriterar kontroll, med risken att inte bli utförd om marknaden inte når det priset.</p>
 <p>Ingen av de två är automatiskt bättre. Använd marknadsorder när snabb utförande betyder mer än en liten prisskillnad; använd limitorder när priset betyder mer än säkerheten att bli utförd.</p>
 <h2 id="volym">Volym</h2>
@@ -253,12 +253,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Var artikeln till hjälp?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Bli först med att betygsätta.</p>
             </div>
-            <section class="ap__coment" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
               <h2>Kommentarer</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Inga kommentarer ännu. Bli först med att kommentera.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lämna en kommentar</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ditt namn" aria-label="Ditt namn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ditt namn (valfritt)" aria-label="Ditt namn (valfritt)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Din kommentar" aria-label="Din kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Skicka kommentar</button>
@@ -270,9 +270,9 @@
         <aside class="ap__rel">
           <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/sv/blog/sa-forstar-du-en-marknadskurs/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så förstår du en marknadskurs</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
-            <a class="bq__card" href="/sv/blog/grundlaggande-bocker-for-nyborjare-i-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Grundläggande böcker för den som börjar med trading</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
-            <a class="bq__card" href="/sv/blog/tradingverktyg-sa-valjer-du-de-ratta/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Tradingverktyg: så väljer du de rätta</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-forstar-du-en-marknadskurs/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så förstår du en marknadskurs</span><span class="bq__meta">2026-09-24 · 5 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/grundlaggande-bocker-for-nyborjare-i-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Grundläggande böcker för den som börjar med trading</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/tradingverktyg-sa-valjer-du-de-ratta/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Tradingverktyg: så väljer du de rätta</span><span class="bq__meta">2026-09-24 · 5 min läsning</span></a>
           </div>
         </aside>
       </div>
@@ -339,6 +339,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

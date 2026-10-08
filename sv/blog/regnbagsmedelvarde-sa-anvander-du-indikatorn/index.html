@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,13 +218,13 @@
             <p>Bland de mindre omtalade trendindikatorerna sticker Regnbågsmedelvärdet ut visuellt: flera glidande medelvärden med ökande perioder, plottade tillsammans i samma diagram, bildar färgade band som öppnas och stängs i takt med att trendens styrka förändras. Namnet är bokstavligt — när den är väl inställd påminner indikatorn verkligen om en regnbåge ovanför priset.</p>
 <h2 id="hur-indikatorn-ar-uppbyggd">Hur indikatorn är uppbyggd</h2>
 <p>Logiken är enkel att förstå, även om beräkningen bakom kan verka komplex. I stället för att använda ett enda glidande medelvärde tillämpar indikatorn en sekvens av medelvärden, där varje jämnar ut det föregående — till exempel ett medelvärde på 2 perioder av priset, sedan ett medelvärde på 2 perioder av det första medelvärdet, och så vidare, och upprepar processen ett tiotal gånger. Resultatet är en uppsättning linjer med något olika fördröjningar sinsemellan, färgade för att underlätta den visuella avläsningen av ordningen mellan dem.</p>
-<h2 id="vad-bandens-bredd-och-ordning-avslojar">Vad bandens bredd och ordning avslöjar</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="vad-bandens-bredd-och-ordning-avslojar">Vad bandens bredd och ordning avslöjar</h2>
 <p>När marknaden är i en stark och konsekvent trend organiserar sig regnbågens linjer i ordning, en ovanför den andra, och bandet mellan dem öppnas, vilket visar en tydlig separation mellan de kortare och längre periodernas medelvärden. När marknaden tappar riktning och går in i konsolidering blandas linjerna ihop, korsar varandra upprepade gånger och bandet smalnar av, vilket bildar det som ofta kallas en "knut" mitt i regnbågen.</p>
 <p>Den visuella avläsningen fungerar som en termometer för trendstyrka: ett brett och ordnat band indikerar en etablerad trend; ett smalt och blandat band indikerar obeslutsamhet, ett ögonblick då ingångssignaler brukar vara mindre pålitliga.</p>
 <h2 id="ingangs-och-utgangssignaler">Ingångs- och utgångssignaler</h2>
 <p>Den mest använda signalen är genombrottet av "knuten": när regnbågens linjer, tidigare blandade, börjar organisera sig i en tydlig sekvens och bandet börjar öppnas, tolkas det som början på en ny trend. Mer konservativa traders väntar på att priset stänger konsekvent över (eller under) hela uppsättningen medelvärden innan de betraktar det som en starkare bekräftelse.</p>
 <p>För utgång följer många ögonblicket då bandet börjar smalna av igen, eller när priset korsar tillbaka in i regnbågen, vilket signalerar att trenden som stödde affären tappar kraft.</p>
-<h2 id="ett-exempel-med-siffror">Ett exempel med siffror</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ett-exempel-med-siffror">Ett exempel med siffror</h2>
 <p>Föreställ dig en tillgång i konsolidering, som svänger mellan R$ 18,50 och R$ 19,20 i flera dagar, med regnbågens medelvärden blandade i det smala intervallet på R$ 0,70. En viss dag bryter priset R$ 19,20 med kraft och medelvärdena börjar ordna sig, med det kortaste ovanför det längsta, och öppnar ett band som några dagar senare mäter R$ 1,10, mellan R$ 19,80 och R$ 20,90. Den bandöppningen, i takt med det stigande priset, är den typen av visuell signal som indikatorn är utformad för att framhäva.</p>
 <h2 id="att-kombinera-regnbagen-med-andra-verktyg">Att kombinera regnbågen med andra verktyg</h2>
 <p>Eftersom indikatorn i grunden är en trendavläsning säger den inte mycket om exakta ingångspunkter inom den trenden. En oscillator som RSI, använd tillsammans, hjälper till att identifiera återhämtningsmoment inom den trend som redan bekräftats av regnbågen — och undviker att gå in precis på toppen av en rörelse som redan rört sig mycket. Volymen hjälper också till att validera om genombrottet av "knuten" har verkligt marknadsdeltagande bakom sig, och inte bara är en rörelse med få affärer.</p>
@@ -249,12 +249,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Var artikeln till hjälp?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Bli först med att betygsätta.</p>
             </div>
-            <section class="ap__coment" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
               <h2>Kommentarer</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Inga kommentarer ännu. Bli först med att kommentera.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lämna en kommentar</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ditt namn" aria-label="Ditt namn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ditt namn (valfritt)" aria-label="Ditt namn (valfritt)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Din kommentar" aria-label="Din kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Skicka kommentar</button>
@@ -266,9 +266,9 @@
         <aside class="ap__rel">
           <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/sv/blog/vad-ar-adx-indikatorn-och-hur-fungerar-den/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är ADX-indikatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/vad-ar-adx-indikatorn-och-hur-fungerar-den/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är ADX-indikatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/vad-ar-stokastiska-oscillatorn-och-hur-fungerar-den/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Stokastiska Oscillatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
-            <a class="bq__card" href="/sv/blog/vad-ar-average-true-range-atr-och-hur-berakna/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Average True Range (ATR) och hur man beräknar det</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/vad-ar-average-true-range-atr-och-hur-berakna/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Average True Range (ATR) och hur man beräknar det</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

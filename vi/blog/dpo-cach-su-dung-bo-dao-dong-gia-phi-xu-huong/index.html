@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,11 +219,11 @@
             <p>Hầu hết các chỉ báo xu hướng được thiết kế để theo sát giá theo thời gian thực. Bộ dao động giá phi xu hướng, được biết đến với ký hiệu DPO (viết tắt của <em>Detrended Price Oscillator</em>), làm điều ngược lại một cách có chủ đích: nó loại bỏ xu hướng dài hạn khỏi biểu đồ để chỉ để lộ ra các chu kỳ ngắn và trung hạn bị ẩn giấu đằng sau xu hướng đó.</p>
 <h2 id="van-đe-ma-dpo-co-gang-giai-quyet">Vấn đề mà DPO cố gắng giải quyết</h2>
 <p>Khi một tài sản đang trong xu hướng tăng mạnh, việc nó hình thành các đỉnh và đáy nhỏ hơn bên trong đợt tăng chung đó là điều bình thường. Nếu chỉ nhìn vào giá thô, sẽ khó phân biệt trực quan những chu kỳ nhỏ này với biến động nền. DPO giải quyết vấn đề này bằng cách so sánh giá hiện tại với một đường trung bình động được dịch chuyển lùi về thời gian trước, loại bỏ phần lớn thành phần xu hướng dài hạn ra khỏi phương trình.</p>
-<h2 id="cach-phep-tinh-hoat-đong">Cách phép tính hoạt động</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-phep-tinh-hoat-đong">Cách phép tính hoạt động</h2>
 <p>Công thức lấy một đường trung bình động đơn giản của một số kỳ nhất định — chẳng hạn 20 — và dịch chuyển nó lùi lại khoảng một nửa số kỳ đó cộng thêm một. Sau đó, lấy giá đóng cửa của mỗi nến trừ đi đường trung bình đã dịch chuyển này. Kết quả là một đường dao động trên và dưới mức 0, làm nổi bật các đỉnh và đáy đại diện cho các chu kỳ ngắn hạn, mà không bị độ dốc chung của xu hướng làm nhiễu cách đọc.</p>
 <h2 id="đuong-dpo-tiet-lo-đieu-gi">Đường DPO tiết lộ điều gì</h2>
 <p>Khi DPO ở giá trị dương, giá đang ở trên đường trung bình đã dịch chuyển, cho thấy một thời điểm mạnh trong chu kỳ ngắn hạn đang quan sát. Khi ở giá trị âm, giá đang ở dưới đường trung bình đó, cho thấy sự yếu đi trong cùng chu kỳ. Giá trị thực tiễn của chỉ báo này nằm ở việc giúp xác định độ dài xấp xỉ của các chu kỳ đó — bằng cách đếm số kỳ giữa một đỉnh này với đỉnh khác trên DPO — điều này có thể định hướng, chẳng hạn, khoảng cách kỳ vọng giữa một lần vào lệnh này với lần khác trong một chiến lược dựa trên chu kỳ.</p>
-<h2 id="mot-vi-du-bang-so">Một ví dụ bằng số</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="mot-vi-du-bang-so">Một ví dụ bằng số</h2>
 <p>Giả sử một tài sản có đường trung bình động đơn giản 20 kỳ được dịch chuyển lùi 11 kỳ, hiện đang ở mức R$ 45,00. Nếu giá đóng cửa của nến gần nhất là R$ 47,25, giá trị DPO tại điểm đó là 47,25 − 45,00 = 2,25, một giá trị dương cho thấy giá đang cao hơn R$ 2,25 so với đường trung bình tham chiếu đã dịch chuyển. Nếu, vài tuần sau, cùng phép tính đó cho ra -1,80, điều này cho thấy chu kỳ ngắn hạn đã chuyển từ mạnh sang yếu trong giai đoạn quan sát đó — một thông tin khó nhận ra hơn nhiều nếu chỉ nhìn vào giá thô trong một xu hướng tăng liên tục.</p>
 <h2 id="vi-sao-dpo-khong-dung-đe-đoc-xu-huong">Vì sao DPO không dùng để đọc xu hướng</h2>
 <p>Chính vì phép tính của nó loại bỏ xu hướng một cách có chủ đích, DPO không nên được dùng để quyết định xem một tài sản đang tăng hay giảm trong dài hạn — với mục đích đó, các chỉ báo xu hướng truyền thống vẫn phù hợp hơn. Một điểm đáng chú ý khác là độ trễ thời gian: vì đường trung bình dùng trong phép tính bị dịch chuyển lùi, DPO có xu hướng "trễ" so với nến gần nhất, điều này củng cố vai trò của nó như một công cụ nhận diện các chu kỳ đã qua, chứ không phải tín hiệu báo trước cho biến động tiếp theo.</p>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bài viết này có hữu ích không?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Hãy là người đầu tiên đánh giá.</p>
             </div>
-            <section class="ap__coment" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
+            <section class="ap__coment" data-anonimo="Ẩn danh" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
               <h2>Bình luận</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Chưa có bình luận nào. Hãy là người đầu tiên.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Để lại bình luận</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Tên của bạn" aria-label="Tên của bạn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Tên của bạn (không bắt buộc)" aria-label="Tên của bạn (không bắt buộc)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Bình luận của bạn" aria-label="Bình luận của bạn"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Gửi bình luận</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
             <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

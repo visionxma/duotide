@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,7 +219,7 @@
 <p>La relación riesgo-retorno compara cuánto se arriesga en una operación con cuánto se espera ganar, medida en el momento de la entrada, antes de que ocurra nada. Para una compra, la fórmula es:</p>
 <p>Riesgo-retorno = (objetivo − entrada) ÷ (entrada − stop)</p>
 <p>Un ejemplo resuelto: un trader compra EUR/USD a 1,0850, coloca el stop en 1,0820 y el objetivo en 1,0910. El riesgo es de 30 pips (1,0850 − 1,0820) y el retorno potencial es de 60 pips (1,0910 − 1,0850). Dividiendo 60 entre 30, la relación es 1:2: por cada real arriesgado, el potencial de ganancia es de dos reales.</p>
-<h2 id="la-tabla-que-cambia-la-forma-de-pensar-el-riesgo">La tabla que cambia la forma de pensar el riesgo</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="la-tabla-que-cambia-la-forma-de-pensar-el-riesgo">La tabla que cambia la forma de pensar el riesgo</h2>
 <p>Antes de decidir "qué riesgo-retorno buscar", hay que responder una pregunta más simple: ¿con qué frecuencia necesita acertar la estrategia para, como mínimo, empatar? La fórmula de la tasa de acierto de equilibrio es:</p>
 <p>Tasa de equilibrio = 1 ÷ (1 + relación riesgo-retorno)</p>
 <ul>
@@ -233,7 +233,7 @@
 <p>Expectativa = (tasa de acierto × relación riesgo-retorno) − (1 − tasa de acierto)</p>
 <p>Aplicando esto a un ejemplo concreto: una estrategia con relación 1:2 y tasa de acierto del 50% tiene una expectativa de (0,5 × 2) − 0,5 = +0,5R por operación. Si cada R vale R$ 100 (el riesgo fijo por operación en una cuenta de R$ 10.000 con riesgo del 1%), eso equivale a R$ 50 de ganancia esperada por operación, en promedio, a lo largo de muchas repeticiones.</p>
 <p>Ahora compara con una estrategia 1:1 y 60% de acierto: expectativa de (0,6 × 1) − 0,4 = +0,2R, o R$ 20 por operación en este mismo ejemplo. Menos por operación, pero si esa estrategia genera el doble de señales en el mismo período, el resultado final puede ser mayor. Por eso perseguir ciegamente una relación riesgo-retorno alta, sin considerar la tasa de acierto real del setup, puede ser peor que operar con objetivos más modestos y consistentes.</p>
-<h2 id="por-que-la-regla-cambia-segun-el-estilo-de-operacion">Por qué la regla cambia según el estilo de operación</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="por-que-la-regla-cambia-segun-el-estilo-de-operacion">Por qué la regla cambia según el estilo de operación</h2>
 <p>Un operador de cortísimo plazo que fuerza relaciones 1:3 probablemente va a descartar la mayoría de las señales legítimas de su propio método, porque el mercado rara vez recorre esa distancia en el tiempo en que opera. En cambio, un operador de tendencia que acepta relaciones 1:1 puede estar dejando dinero sobre la mesa, porque su tasa de acierto naturalmente más baja exige objetivos mayores para compensar las pérdidas.</p>
 <p>La regla correcta no viene de una norma genérica encontrada en internet, viene del propio historial del trader. Ahí entra la importancia de registrar cada operación: sin saber la tasa de acierto real de un setup, la relación riesgo-retorno es solo un número bonito en el papel.</p>
 <h2 id="llevando-esto-a-la-practica">Llevando esto a la práctica</h2>
@@ -255,12 +255,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="¿Te resultó útil este artículo?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sé el primero en valorarlo.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recibimos tu comentario. Aparecerá aquí cuando el equipo lo apruebe." data-erro="No se pudo enviar ahora. Inténtalo de nuevo en unos instantes." data-vazio="Aún no hay comentarios. Sé el primero en comentar." data-idioma="es">
+            <section class="ap__coment" data-anonimo="Anónimo" data-enviado="Recibimos tu comentario. Aparecerá aquí cuando el equipo lo apruebe." data-erro="No se pudo enviar ahora. Inténtalo de nuevo en unos instantes." data-vazio="Aún no hay comentarios. Sé el primero en comentar." data-idioma="es">
               <h2>Comentarios</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Aún no hay comentarios. Sé el primero en comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deja tu comentario</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Tu nombre (opcional)" aria-label="Tu nombre (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Tu comentario" aria-label="Tu comentario"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentario</button>
@@ -273,7 +273,7 @@
           <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en el forex</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
-            <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia martingala en el trading: cómo funciona y sus riesgos</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Estrategia martingala en el trading: cómo funciona y sus riesgos</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/cuando-cerrar-una-operacion-senales-de-salida/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cuándo cerrar una operación: señales de salida</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
           </div>
         </aside>
@@ -341,6 +341,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

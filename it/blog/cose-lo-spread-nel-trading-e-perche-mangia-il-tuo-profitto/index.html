@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,11 +218,11 @@
 <p>Capire lo spread cambia il modo in cui valuti se un'operazione vale la pena, soprattutto in asset meno liquidi o in operazioni brevissime, dove questo costo pesa proporzionalmente di più.</p>
 <h2 id="come-appare-lo-spread-nella-pratica">Come appare lo spread nella pratica</h2>
 <p>Immagina la coppia EUR/USD quotata così: acquisto (bid) a 1,0850 e vendita (ask) a 1,0852. Questo significa che, se vuoi comprare euro ora, paghi 1,0852 dollari per euro; se vuoi vendere, ricevi solo 1,0850. Lo spread qui è di 0,0002, ovvero 2 pip. Aprendo una posizione, entri già con questa differenza contro di te: per pareggiare, il prezzo deve muoversi almeno i 2 pip dello spread prima che appaia qualsiasi profitto.</p>
-<h2 id="chi-definisce-questo-prezzo-e-perche">Chi definisce questo prezzo, e perché</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="chi-definisce-questo-prezzo-e-perche">Chi definisce questo prezzo, e perché</h2>
 <p>Lo spread viene definito dai partecipanti che forniscono liquidità al mercato — broker, banche e market maker che si impegnano ad avere sempre un lato di acquisto e uno di vendita disponibili. Guadagnano esattamente su questa differenza, e la dimensione dello spread riflette il rischio che assumono nel mantenere questa offerta costante. Quanto più un asset viene negoziato, con più persone che comprano e vendono continuamente, tanto minore tende a essere lo spread — per questo il dollaro contro il real tende ad avere uno spread molto più stretto di un'azione a bassissimo volume in borsa.</p>
 <h2 id="spread-fisso-e-spread-variabile">Spread fisso e spread variabile</h2>
 <p>Alcuni strumenti operano con spread fisso, che non cambia indipendentemente dall'orario o dalla volatilità. Altri hanno spread variabile, che si allarga nei momenti di notizie importanti o bassa liquidità — per esempio, durante la pubblicazione di un dato sull'occupazione negli Stati Uniti, lo spread del dollaro può saltare da 2 a 8 o 10 pip in pochi secondi. Chi opera sulle notizie senza prestarci attenzione tende a sorprendersi con un prezzo di ingresso molto peggiore dell'atteso.</p>
-<h2 id="l-effetto-accumulato-dello-spread-sul-tuo-risultato">L'effetto accumulato dello spread sul tuo risultato</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="l-effetto-accumulato-dello-spread-sul-tuo-risultato">L'effetto accumulato dello spread sul tuo risultato</h2>
 <p>Supponi di fare 20 operazioni al mese su un asset con spread equivalente a R$ 0,50 per operazione (considerando il lotto negoziato). Questo rappresenta già R$ 10,00 di costo fisso mensile, sommato a qualsiasi altra commissione addebitata. Per chi opera con molta frequenza — come nel day trade brevissimo — lo spread può consumare una fetta rilevante del profitto lordo, ancora prima di tasse e commissioni. Un esempio numerico: se la tua strategia ha un'aspettativa di guadagno medio di R$ 0,80 per operazione, ma lo spread costa R$ 0,50 in ogni ingresso e uscita, resta solo R$ 0,30 di margine reale — qualsiasi imprecisione nell'esecuzione può azzerare questo risultato.</p>
 <h2 id="come-ridurre-l-impatto-dello-spread-sulle-tue-operazioni">Come ridurre l'impatto dello spread sulle tue operazioni</h2>
 <ul>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Questo articolo ti è stato utile?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sii il primo a valutare.</p>
             </div>
-            <section class="ap__coment" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
+            <section class="ap__coment" data-anonimo="Anonimo" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
               <h2>Commenti</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ancora nessun commento. Scrivi tu il primo.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lascia un commento</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Il tuo nome" aria-label="Il tuo nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Il tuo nome (facoltativo)" aria-label="Il tuo nome (facoltativo)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Il tuo commento" aria-label="Il tuo commento"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Invia commento</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/it/blog/come-capire-una-quotazione-di-mercato/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come capire una quotazione di mercato</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/libri-essenziali-per-chi-inizia-nel-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Libri essenziali per chi sta iniziando nel trading</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/strumenti-di-trading-come-scegliere-quelli-giusti/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strumenti di trading: come scegliere quelli giusti</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/come-capire-una-quotazione-di-mercato/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come capire una quotazione di mercato</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/libri-essenziali-per-chi-inizia-nel-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Libri essenziali per chi sta iniziando nel trading</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/strumenti-di-trading-come-scegliere-quelli-giusti/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Strumenti di trading: come scegliere quelli giusti</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,14 +218,14 @@
 <h2 id="gosterge-nasıl-hesaplanır">Gösterge Nasıl Hesaplanır</h2>
 <p>Parabolic SAR'ın hesaplaması üç öğe kullanır: önceki periyodun SAR değeri, Uç Nokta (EP, trend boyunca en son zirve veya dip) ve 0,02'den başlayıp her yeni Uç Noktaya ulaşıldığında 0,02 artan, standart bir tavan olan 0,20'ye kadar çıkan Hızlanma Faktörü (AF).</p>
 <p>Formül şudur: yeni SAR = önceki SAR + AF × (EP − önceki SAR). Bu, bir trendin başlangıcında SAR'ın yavaş hareket ettiği, Hızlanma Faktörü büyüdükçe noktaların fiyata daha hızlı yaklaşmaya başladığı anlamına gelir — göstergeye adını veren "parabolik" şekil de buradan gelir.</p>
-<h2 id="sayısal-bir-ornek">Sayısal Bir Örnek</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="sayısal-bir-ornek">Sayısal Bir Örnek</h2>
 <p>Yükseliş trendinde, önceki günün SAR'ı R$ 41,00, Uç Nokta (trendin şimdiye kadarki en yüksek zirvesi) R$ 45,00 ve iki zirve ilerlemesinden sonra Hızlanma Faktörü 0,04 olan bir hisse düşünün. Yeni SAR şöyle olur:</p>
 <p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16.</p>
 <p>Ertesi gün hisse R$ 46,00'lık yeni bir zirve yaparsa, Uç Nokta bu değere yükselir ve Hızlanma Faktörü 0,06'ya ilerler. Bir sonraki SAR, R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45 olur. Noktanın her yeni ilerlemede fiyatı "kovalayarak" nasıl daha hızlı yükseldiğine dikkat edin.</p>
 <h2 id="gosterge-ne-zaman-donus-sinyali-verir">Gösterge Ne Zaman Dönüş Sinyali Verir</h2>
 <p>Fiyat nokta çizgisinin üzerinde kaldığı sürece, SAR trendle birlikte yükselmeye devam eder. Fiyat SAR değerinin altında kapandığı anda gösterge tersine döner: noktalar mumların üstünde görünmeye başlar, Hızlanma Faktörü 0,02'ye geri döner ve Uç Nokta, artık bir düşüş trendi için, en son dibe göre yeniden hesaplanmaya başlar.</p>
 <p>İsimdeki "stop and reverse"in kendisi olan bu tersine dönüş, birçok traderın, benimsenen stratejiye bağlı olarak, hem alış pozisyonundan çıkış sinyali hem de olası bir satış girişi sinyali olarak kullandığı şeydir.</p>
-<h2 id="guclu-yonler-ve-sınırlamalar">Güçlü Yönler ve Sınırlamalar</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="guclu-yonler-ve-sınırlamalar">Güçlü Yönler ve Sınırlamalar</h2>
 <p>Parabolic SAR, noktaların çok fazla yanlış sinyal üretmeden hareketi takip ettiği, tanımlı ve uzun süreli trendlere sahip piyasalarda iyi çalışır. Sorun, net bir yönü olmayan piyasalarda ortaya çıkar: gösterge her zaman "açık" olduğundan ve her salınımda konum değiştirdiğinden, doğrulanmayan art arda birçok dönüş sinyali üretebilir; bu davranış whipsaw olarak bilinir.</p>
 <p>Bu yüzden traderların büyük bir kısmı SAR'ı, daha uzun vadeli bir hareketli ortalama gibi bir trend göstergesiyle birlikte kullanır ve SAR sinyallerini yalnızca piyasanın daha büyük yönüyle uyumlu olduklarında uygular. Duotide platformu, Parabolic SAR'ı aynı grafikte diğer göstergelerle birlikte çizmeye izin verir, bu da herhangi bir karardan önce bu tür bir karşılaştırmayı kolaylaştırır.</p>
 <h2 id="hızlanma-faktorunu-ayarlamak">Hızlanma Faktörünü Ayarlamak</h2>
@@ -249,12 +249,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bu makale faydalı oldu mu?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">İlk değerlendiren siz olun.</p>
             </div>
-            <section class="ap__coment" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
+            <section class="ap__coment" data-anonimo="Anonim" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
               <h2>Yorumlar</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Henüz yorum yok. İlk yorumu siz yapın.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Yorum bırakın</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Adınız" aria-label="Adınız" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Adınız (isteğe bağlı)" aria-label="Adınız (isteğe bağlı)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Yorumunuz" aria-label="Yorumunuz"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Yorumu gönder</button>
@@ -266,9 +266,9 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

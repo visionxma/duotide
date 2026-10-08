@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,14 +218,14 @@
 <h2 id="wie-der-indikator-berechnet-wird">Wie der Indikator berechnet wird</h2>
 <p>Die Berechnung des Parabolic SAR nutzt drei Elemente: den SAR-Wert der vorherigen Periode, den Extrempunkt (EP, das jüngste Hoch oder Tief während des Trends) und den Beschleunigungsfaktor (AF), der bei 0,02 beginnt und sich bei jedem neuen erreichten Extrempunkt um 0,02 erhöht, bis zu einer Standardobergrenze von 0,20.</p>
 <p>Die Formel lautet: neuer SAR = vorheriger SAR + AF × (EP − vorheriger SAR). Das bedeutet, dass sich der SAR am Anfang eines Trends langsam bewegt, und während der Beschleunigungsfaktor wächst, nähern sich die Punkte dem Preis immer schneller — daher die "parabolische" Form, die dem Indikator seinen Namen gibt.</p>
-<h2 id="ein-zahlenbeispiel">Ein Zahlenbeispiel</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ein-zahlenbeispiel">Ein Zahlenbeispiel</h2>
 <p>Angenommen, eine Aktie befindet sich im Aufwärtstrend, mit dem SAR des Vortags bei R$ 41,00, dem Extrempunkt (dem höchsten Hoch des Trends bisher) bei R$ 45,00 und dem Beschleunigungsfaktor bei 0,04 nach zwei neuen Hochs. Der neue SAR ergibt sich zu:</p>
 <p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16.</p>
 <p>Bildet die Aktie am nächsten Tag ein neues Hoch von R$ 46,00, steigt der Extrempunkt auf diesen Wert, und der Beschleunigungsfaktor steigt auf 0,06. Der nächste SAR wäre R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45. Beachten Sie, wie der Punkt bei jedem neuen Fortschritt schneller steigt und dem Preis "nachjagt".</p>
 <h2 id="wann-der-indikator-eine-umkehr-signalisiert">Wann der Indikator eine Umkehr signalisiert</h2>
 <p>Solange der Preis über der Punktlinie bleibt, steigt der SAR weiter mit dem Trend. Sobald der Preis unter dem SAR-Wert schließt, kehrt sich der Indikator um: Die Punkte erscheinen nun über den Kerzen, der Beschleunigungsfaktor kehrt auf 0,02 zurück, und der Extrempunkt wird nun auf Basis des jüngsten Tiefs neu berechnet, jetzt für einen Abwärtstrend.</p>
 <p>Genau diese Umkehrung — das "Stop and Reverse" im Namen — nutzen viele Trader sowohl als Ausstiegssignal aus einer Kaufposition als auch als mögliches Einstiegssignal für einen Verkauf, je nach angewandter Strategie.</p>
-<h2 id="starken-und-grenzen">Stärken und Grenzen</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="starken-und-grenzen">Stärken und Grenzen</h2>
 <p>Der Parabolic SAR funktioniert gut in Märkten mit definiertem, lang anhaltendem Trend, wo die Punkte der Bewegung folgen, ohne viele Fehlsignale zu erzeugen. Das Problem tritt in Märkten ohne klare Richtung auf: Da der Indikator immer "eingeschaltet" ist und bei jeder Schwankung die Position wechselt, kann er mehrere aufeinanderfolgende Umkehrsignale erzeugen, die sich nicht bestätigen, ein als Whipsaw bekanntes Verhalten.</p>
 <p>Deshalb nutzt ein Großteil der Trader den SAR zusammen mit einem Trendindikator, wie einem gleitenden Durchschnitt längerer Periode, und wendet die SAR-Signale nur an, wenn sie mit der größeren Marktrichtung übereinstimmen. Die Duotide-Plattform ermöglicht es, den Parabolic SAR zusammen mit anderen Indikatoren im selben Chart darzustellen, was diese Art von Vergleich vor jeder Entscheidung erleichtert.</p>
 <h2 id="den-beschleunigungsfaktor-anpassen">Den Beschleunigungsfaktor anpassen</h2>
@@ -249,12 +249,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="War dieser Artikel hilfreich?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Geben Sie die erste Bewertung ab.</p>
             </div>
-            <section class="ap__coment" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
               <h2>Kommentare</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Noch keine Kommentare. Schreiben Sie den ersten.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Kommentar schreiben</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ihr Name" aria-label="Ihr Name" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ihr Name (optional)" aria-label="Ihr Name (optional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ihr Kommentar" aria-label="Ihr Kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Kommentar senden</button>
@@ -266,9 +266,9 @@
         <aside class="ap__rel">
           <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
             <a class="bq__card" href="/de/blog/was-ist-der-stochastik-oszillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Stochastik-Oszillator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

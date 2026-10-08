@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -217,11 +217,11 @@
 <p>Hình thức đơn giản hóa này thu hút người mới bắt đầu chính vì có vẻ dễ hiểu: bạn chọn một tài sản, đặt cược xem giá sẽ tăng hay giảm cho đến một thời điểm xác định, và biết chính xác khoản lãi hoặc lỗ sẽ là bao nhiêu ngay cả trước khi xác nhận giao dịch. Nhưng sự đơn giản bề ngoài này che giấu một cơ chế rủi ro đáng để hiểu rõ chi tiết trước khi giao dịch.</p>
 <h2 id="hop-đong-hoat-đong-ra-sao-trong-thuc-te">Hợp đồng hoạt động ra sao trong thực tế</h2>
 <p>Giả sử cặp EUR/USD đang được niêm yết ở mức 1,0850 và bạn tin rằng giá sẽ ở trên mức này sau năm phút. Bạn đặt R$ 100,00 vào dự đoán này, với mức lợi nhuận công bố là 80% nếu đúng. Nếu, khi kết thúc năm phút, giá ở mức 1,0855 — dù chỉ cao hơn 5 điểm — bạn nhận được R$ 180,00 (R$ 100,00 đã đặt cộng R$ 80,00 lợi nhuận). Nếu giá đóng ở mức 1,0849, dù chỉ thấp hơn 1 điểm so với giá vào lệnh, bạn mất toàn bộ R$ 100,00. Độ lớn của biến động không quan trọng: chỉ quan trọng thị trường đóng cửa ở phía nào so với giá vào lệnh.</p>
-<h2 id="vi-sao-loi-nhuan-khong-bao-gio-đoi-xung">Vì sao lợi nhuận không bao giờ đối xứng</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="vi-sao-loi-nhuan-khong-bao-gio-đoi-xung">Vì sao lợi nhuận không bao giờ đối xứng</h2>
 <p>Hãy chú ý rằng, trong ví dụ trên, khoản lãi khi dự đoán đúng (80% số tiền đặt cược) nhỏ hơn khoản lỗ khi dự đoán sai (100% số tiền đặt cược). Sự bất đối xứng này mang tính cấu trúc: để sản phẩm bền vững đối với bên cung cấp, mức lợi nhuận trả khi đúng, tính trung bình, cần nhỏ hơn số tiền mất khi sai. Trong thực tế, điều này có nghĩa là tỷ lệ đúng 50% — cùng xác suất như tung đồng xu — đã không còn đủ để hòa vốn qua nhiều giao dịch. Tính lại: trong 10 giao dịch R$ 100,00 với 5 lần đúng và 5 lần sai, bạn sẽ thắng 5 × R$ 80,00 = R$ 400,00 và thua 5 × R$ 100,00 = R$ 500,00, kết thúc với khoản lỗ R$ 100,00 dù đúng đến một nửa số lần.</p>
 <h2 id="vai-tro-cua-thoi-han-ngan">Vai trò của thời hạn ngắn</h2>
 <p>Quyền chọn nhị phân thường được cung cấp với thời hạn rất ngắn — từ vài giây đến vài phút — điều này làm tăng ảnh hưởng của may rủi lên kết quả của mỗi giao dịch riêng lẻ. Thời hạn càng ngắn, bất kỳ phân tích kỹ thuật hay cơ bản nào càng có ít thời gian để được xác nhận, và kết quả càng gần với một canh bạc về nhiễu giá cực ngắn hạn, chứ không phải về một xu hướng thực sự.</p>
-<h2 id="khac-biet-so-voi-mot-quyen-chon-truyen-thong">Khác biệt so với một quyền chọn truyền thống</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="khac-biet-so-voi-mot-quyen-chon-truyen-thong">Khác biệt so với một quyền chọn truyền thống</h2>
 <p>Một quyền chọn truyền thống (loại call hoặc put) có giá trị biến đổi tỷ lệ thuận với biến động của tài sản và thời gian còn lại đến khi đáo hạn — giá càng di chuyển có lợi cho vị thế, quyền chọn càng có giá trị cao hơn, và có thể đóng vị thế trước khi đáo hạn theo giá trị thị trường tại thời điểm đó. Trong quyền chọn nhị phân, không tồn tại sự biến đổi tỷ lệ này cũng như, nói chung, khả năng thoát lệnh trước thời hạn với một giá trị trung gian: kết quả chỉ được xác định khi hợp đồng kết thúc, và luôn là được ăn cả ngã về không.</p>
 <h2 id="can-can-nhac-đieu-gi-truoc-khi-giao-dich">Cần cân nhắc điều gì trước khi giao dịch</h2>
 <ul>
@@ -247,12 +247,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bài viết này có hữu ích không?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Hãy là người đầu tiên đánh giá.</p>
             </div>
-            <section class="ap__coment" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
+            <section class="ap__coment" data-anonimo="Ẩn danh" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
               <h2>Bình luận</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Chưa có bình luận nào. Hãy là người đầu tiên.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Để lại bình luận</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Tên của bạn" aria-label="Tên của bạn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Tên của bạn (không bắt buộc)" aria-label="Tên của bạn (không bắt buộc)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Bình luận của bạn" aria-label="Bình luận của bạn"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Gửi bình luận</button>
@@ -264,7 +264,7 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/cach-quyen-chon-nhi-phan-hoat-dong-trong-thuc-te/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách quyền chọn nhị phân hoạt động, trong thực tế</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-quyen-chon-nhi-phan-hoat-dong-trong-thuc-te/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách quyền chọn nhị phân hoạt động, trong thực tế</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
             <a class="bq__card" href="/vi/blog/quyen-chon-nhi-phan-huong-dan-thuc-hanh-va-quan-ly-rui-ro/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Quyền chọn nhị phân: hướng dẫn thực hành và quản lý rủi ro</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
             <a class="bq__card" href="/vi/blog/quyen-chon-so-hoat-dong-nhu-the-nao/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Quyền chọn số: hoạt động ra sao và cách tính rủi ro thực</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
           </div>
@@ -333,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

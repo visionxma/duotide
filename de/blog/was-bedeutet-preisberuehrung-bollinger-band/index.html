@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -223,7 +223,7 @@
 <p><strong>Zentrales Band = Einfacher gleitender 20-Perioden-Durchschnitt</strong></p>
 <p><strong>Oberes Band = Zentrales Band + (2 x Standardabweichung)</strong></p>
 <p><strong>Unteres Band = Zentrales Band - (2 x Standardabweichung)</strong></p>
-<h2 id="ein-zahlenbeispiel">Ein Zahlenbeispiel</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ein-zahlenbeispiel">Ein Zahlenbeispiel</h2>
 <p>Angenommen, eine Aktie hat einen 20-Perioden-Durchschnitt bei R$ 48,00 und eine jüngste Standardabweichung von R$ 1,50. Die Bänder werden so berechnet:</p>
 <ul>
 <li>Oberes Band = R$ 48,00 + (2 x R$ 1,50) = R$ 51,00</li>
@@ -232,7 +232,7 @@
 <p>Das erzeugt einen Kanal von R$ 45,00 bis R$ 51,00 um den Durchschnitt. Da die Berechnung die Standardabweichung nutzt, passt sie sich selbst an: Steigt die Volatilität des Vermögenswerts, wächst die Standardabweichung, und die Bänder entfernen sich vom Durchschnitt. Fällt die Volatilität, nähern sich die Bänder an.</p>
 <h2 id="was-eine-bandberuhrung-wirklich-bedeutet">Was eine Bandberührung wirklich bedeutet</h2>
 <p>Statistisch gesehen versucht die Nutzung der doppelten Standardabweichung, den Großteil der normalen Preisschwankungen innerhalb des Kanals zu erfassen, ausgehend von der Annahme einer nahezu normalen Verteilung. In der Praxis berührt oder überschreitet der Preis das Band häufiger, als diese theoretische Annahme vermuten lässt, weil sich der Markt nicht exakt wie eine ideale statistische Verteilung verhält. Das obere Band zu berühren bedeutet, dass der Preis im Verhältnis zu seinem eigenen jüngsten Durchschnitt überdehnt ist, nicht dass ein Rückgang danach garantiert ist.</p>
-<h2 id="squeeze-wenn-sich-die-bander-verengen">Squeeze: wenn sich die Bänder verengen</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="squeeze-wenn-sich-die-bander-verengen">Squeeze: wenn sich die Bänder verengen</h2>
 <p>Fällt die Volatilität über einen Zeitraum, nähern sich die Bänder stark an und bilden das, was meist Squeeze genannt wird. Diese Verengung geht meist einer Phase stärkerer Bewegung voraus, zeigt aber nicht die Richtung dieser zukünftigen Bewegung an. Auf einen Squeeze kann sowohl ein Aufwärts- als auch ein Abwärtsausbruch folgen, und der Indikator selbst kann nicht vorhersagen, welcher von beiden eintreten wird.</p>
 <h2 id="preis-der-bei-starkem-trend-am-band-entlanglauft">Preis, der bei starkem Trend am Band entlangläuft</h2>
 <p>Bei einem starken Aufwärtstrend ist es üblich, dass der Preis mehrere Kerzen hintereinander eng am oberen Band entlangläuft oder es wiederholt berührt, ohne dass das eine bevorstehende Umkehr bedeutet. Trader, die jedes Mal verkaufen, wenn der Preis während eines starken Trends das obere Band berührt, häufen meist Verluste an, weil sie gegen die vorherrschende Bewegung kämpfen, statt einen echten Kraftverlust zu erkennen. Das Verhalten der Bänder in einem definierten Trend unterscheidet sich vom Verhalten in einem Seitwärtsmarkt, und beide Szenarien gleich zu behandeln, ist ein häufiger Fehler.</p>
@@ -260,12 +260,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="War dieser Artikel hilfreich?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Geben Sie die erste Bewertung ab.</p>
             </div>
-            <section class="ap__coment" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
               <h2>Kommentare</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Noch keine Kommentare. Schreiben Sie den ersten.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Kommentar schreiben</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ihr Name" aria-label="Ihr Name" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ihr Name (optional)" aria-label="Ihr Name (optional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ihr Kommentar" aria-label="Ihr Kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Kommentar senden</button>
@@ -277,9 +277,9 @@
         <aside class="ap__rel">
           <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
             <a class="bq__card" href="/de/blog/was-ist-der-stochastik-oszillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Stochastik-Oszillator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
           </div>
         </aside>
       </div>
@@ -346,6 +346,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

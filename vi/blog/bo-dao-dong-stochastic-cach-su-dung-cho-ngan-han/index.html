@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -221,11 +221,11 @@
 <p>Đường chính, gọi là %K, được tính như sau: %K = [(Giá đóng cửa hiện tại − Mức thấp nhất của kỳ) ÷ (Mức cao nhất của kỳ − Mức thấp nhất của kỳ)] × 100. Kết quả luôn dao động trong khoảng từ 0 đến 100.</p>
 <p>Ví dụ thực tế: trong 14 kỳ, mức cao nhất là R$ 132,50 và mức thấp nhất là R$ 125,00 — một biên độ R$ 7,50. Nếu giá đóng cửa hiện tại là R$ 130,00, phép tính sẽ là: (130,00 − 125,00) ÷ 7,50 × 100 = 5,00 ÷ 7,50 × 100 = 66,67. Giá trị %K là 66,67, cho thấy giá đóng cửa đang ở hai phần ba của đỉnh biên độ gần đây — không quá căng, cũng không cạn kiệt.</p>
 <p>Đường thứ hai, %D, chỉ là một đường trung bình động 3 kỳ của %K, được dùng để làm mượt kết quả và giảm tín hiệu giả.</p>
-<h2 id="vung-qua-mua-va-qua-ban">Vùng quá mua và quá bán</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="vung-qua-mua-va-qua-ban">Vùng quá mua và quá bán</h2>
 <p>Theo quy ước, các giá trị trên 80 cho thấy quá mua — giá đóng cửa gần đỉnh của biên độ gần đây — và các giá trị dưới 20 cho thấy quá bán, gần đáy của biên độ. Điều này không có nghĩa là "bán vì đã vượt qua 80" hoặc "mua vì đã xuống dưới 20": trong một xu hướng mạnh, stochastic có thể bám sát đỉnh (hoặc đáy) trong nhiều nến liên tiếp, và hành động ngược lại xu hướng đó chỉ vì chỉ báo đang bị căng thường phải trả giá đắt.</p>
 <h2 id="cac-lan-cat-giua-k-va-d">Các lần cắt giữa %K và %D</h2>
 <p>Tín hiệu được sử dụng nhiều nhất trong ngắn hạn là sự cắt nhau của hai đường bên trong các vùng cực trị: khi %K cắt %D từ dưới lên bên trong vùng quá bán (dưới 20), được đọc là khả năng sức mua đang quay trở lại; khi cắt từ trên xuống bên trong vùng quá mua (trên 80), được đọc là khả năng sức bán đang quay trở lại. Bên ngoài các vùng này, cùng một lần cắt có trọng lượng thấp hơn nhiều.</p>
-<h2 id="phan-ky-tin-hieu-manh-nhat">Phân kỳ: tín hiệu mạnh nhất</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="phan-ky-tin-hieu-manh-nhat">Phân kỳ: tín hiệu mạnh nhất</h2>
 <p>Một cách sử dụng nâng cao hơn là so sánh hình dạng của giá với hình dạng của stochastic. Nếu giá tạo một đỉnh mới, nhưng stochastic tạo một đỉnh thấp hơn đỉnh trước đó, đây là một phân kỳ giảm — biến động tăng đang mất sức mạnh dù giá vẫn đang tăng. Lập luận ngược lại áp dụng cho một phân kỳ tăng tại các đáy giá. Phân kỳ không cho biết thời điểm vào lệnh chính xác, nhưng cảnh báo rằng xu hướng hiện tại có thể sắp kết thúc.</p>
 <h2 id="đieu-chinh-ky-cho-cac-giao-dich-nhanh">Điều chỉnh kỳ cho các giao dịch nhanh</h2>
 <p>Kỳ mặc định của stochastic là 14, nhưng người giao dịch biểu đồ 1 hoặc 5 phút thường giảm xuống còn 5 hoặc 9 kỳ, khiến chỉ báo nhạy cảm hơn và phản ứng nhanh hơn với các dao động. Tác dụng phụ là nhiều tín hiệu giả hơn, vì chỉ báo bắt đầu phản ứng với những nhiễu nhỏ của giá. Một cách phổ biến để bù đắp điều này là yêu cầu xác nhận từ một nến thứ hai trước khi vào lệnh, thay vì giao dịch ngay tại thời điểm cắt nhau.</p>
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bài viết này có hữu ích không?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Hãy là người đầu tiên đánh giá.</p>
             </div>
-            <section class="ap__coment" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
+            <section class="ap__coment" data-anonimo="Ẩn danh" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
               <h2>Bình luận</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Chưa có bình luận nào. Hãy là người đầu tiên.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Để lại bình luận</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Tên của bạn" aria-label="Tên của bạn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Tên của bạn (không bắt buộc)" aria-label="Tên của bạn (không bắt buộc)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Bình luận của bạn" aria-label="Bình luận của bạn"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Gửi bình luận</button>
@@ -269,9 +269,9 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
             <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

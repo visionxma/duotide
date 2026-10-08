@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,11 +218,11 @@
 <p>Esse formato simplificado atrai iniciantes justamente por parecer fácil de entender: você escolhe um ativo, aposta se o preço vai subir ou descer até um horário determinado, e sabe exatamente qual seria o ganho ou a perda antes mesmo de confirmar a operação. Mas essa simplicidade aparente esconde uma mecânica de risco que vale entender em detalhe antes de operar.</p>
 <h2 id="como-o-contrato-funciona-na-pratica">Como o contrato funciona na prática</h2>
 <p>Suponha que o par EUR/USD esteja cotado a 1,0850 e você acredite que o preço estará acima desse nível em cinco minutos. Você aplica R$ 100,00 nessa previsão, com um retorno anunciado de 80% em caso de acerto. Se, ao final dos cinco minutos, o preço estiver em 1,0855 — mesmo que só 5 pontos acima — você recebe R$ 180,00 (os R$ 100,00 aplicados mais R$ 80,00 de retorno). Se o preço fechar em 1,0849, mesmo que só 1 ponto abaixo do valor de entrada, você perde os R$ 100,00 inteiros. O tamanho do movimento não importa: importa apenas de que lado do preço de entrada o mercado fechou.</p>
-<h2 id="por-que-o-retorno-nunca-e-simetrico">Por que o retorno nunca é simétrico</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="por-que-o-retorno-nunca-e-simetrico">Por que o retorno nunca é simétrico</h2>
 <p>Repare que, no exemplo acima, o ganho em caso de acerto (80% do valor aplicado) é menor do que a perda em caso de erro (100% do valor aplicado). Essa assimetria é estrutural: para o produto ser sustentável para quem o oferece, o retorno pago ao acertar precisa ser, em média, menor do que o valor perdido ao errar. Na prática, isso significa que uma taxa de acerto de 50% — a mesma chance de cara ou coroa — já não é suficiente para ficar no zero a zero ao longo de muitas operações. Refazendo a conta: em 10 operações de R$ 100,00 com 5 acertos e 5 erros, você ganharia 5 × R$ 80,00 = R$ 400,00 e perderia 5 × R$ 100,00 = R$ 500,00, terminando com prejuízo de R$ 100,00 mesmo acertando metade das vezes.</p>
 <h2 id="o-papel-do-prazo-curto">O papel do prazo curto</h2>
 <p>Opções binárias costumam ser oferecidas em prazos muito curtos — de segundos a minutos — o que aumenta a influência do acaso sobre o resultado de cada operação individual. Quanto mais curto o prazo, menos tempo qualquer análise técnica ou fundamentalista tem para se confirmar, e mais o resultado se aproxima de uma aposta sobre ruído de curtíssimo prazo do preço, não sobre uma tendência real.</p>
-<h2 id="diferenca-para-uma-opcao-tradicional">Diferença para uma opção tradicional</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="diferenca-para-uma-opcao-tradicional">Diferença para uma opção tradicional</h2>
 <p>Uma opção tradicional (do tipo call ou put) tem um valor que varia proporcionalmente ao movimento do ativo e ao tempo até o vencimento — quanto mais a favor da posição o preço se move, mais a opção vale, e é possível encerrar a posição antes do vencimento pelo valor de mercado daquele momento. Na opção binária, não existe essa variação proporcional nem, em geral, a possibilidade de sair antes do prazo por um valor intermediário: o resultado só é definido no encerramento do contrato, e é sempre tudo ou nada.</p>
 <h2 id="o-que-considerar-antes-de-operar">O que considerar antes de operar</h2>
 <ul>
@@ -248,12 +248,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -265,7 +265,7 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/como-funcionam-as-opcoes-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como funcionam as opções binárias, na prática</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
+            <a class="bq__card" href="/blog/como-funcionam-as-opcoes-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como funcionam as opções binárias: payout, risco e exemplo real</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
             <a class="bq__card" href="/blog/opcoes-binarias-passo-a-passo-e-gestao-de-risco/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opções binárias: passo a passo prático e gestão de risco</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/opcoes-digitais-como-funcionam/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opções digitais: como funcionam e como calcular o risco real</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
           </div>
@@ -333,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

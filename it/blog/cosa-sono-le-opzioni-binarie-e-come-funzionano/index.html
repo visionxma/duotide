@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -217,11 +217,11 @@
 <p>Questo formato semplificato attira i principianti proprio perché sembra facile da capire: scegli un asset, scommetti se il prezzo salirà o scenderà entro un orario determinato, e sai esattamente quale sarebbe il guadagno o la perdita ancora prima di confermare l'operazione. Ma questa apparente semplicità nasconde una meccanica di rischio che vale la pena capire in dettaglio prima di operare.</p>
 <h2 id="come-funziona-il-contratto-nella-pratica">Come funziona il contratto nella pratica</h2>
 <p>Supponi che la coppia EUR/USD sia quotata a 1,0850 e tu creda che il prezzo sarà sopra questo livello tra cinque minuti. Applichi R$ 100,00 su questa previsione, con un rendimento annunciato dell'80% in caso di successo. Se, alla fine dei cinque minuti, il prezzo è a 1,0855 — anche se solo 5 punti sopra — ricevi R$ 180,00 (i R$ 100,00 applicati più R$ 80,00 di rendimento). Se il prezzo chiude a 1,0849, anche se solo 1 punto sotto il valore di ingresso, perdi gli interi R$ 100,00. La dimensione del movimento non conta: conta solo da quale lato del prezzo di ingresso il mercato è chiuso.</p>
-<h2 id="perche-il-rendimento-non-e-mai-simmetrico">Perché il rendimento non è mai simmetrico</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="perche-il-rendimento-non-e-mai-simmetrico">Perché il rendimento non è mai simmetrico</h2>
 <p>Nota che, nell'esempio sopra, il guadagno in caso di successo (80% del valore applicato) è minore della perdita in caso di errore (100% del valore applicato). Questa asimmetria è strutturale: perché il prodotto sia sostenibile per chi lo offre, il rendimento pagato in caso di successo deve essere, in media, minore del valore perso in caso di errore. Nella pratica, questo significa che un tasso di successo del 50% — la stessa probabilità di testa o croce — non è già sufficiente per restare in pareggio nel corso di molte operazioni. Rifacendo il conto: in 10 operazioni da R$ 100,00 con 5 successi e 5 errori, guadagneresti 5 × R$ 80,00 = R$ 400,00 e perderesti 5 × R$ 100,00 = R$ 500,00, terminando con una perdita di R$ 100,00 anche azzeccando metà delle volte.</p>
 <h2 id="il-ruolo-della-scadenza-breve">Il ruolo della scadenza breve</h2>
 <p>Le opzioni binarie tendono a essere offerte con scadenze molto brevi — da secondi a minuti — il che aumenta l'influenza del caso sul risultato di ogni singola operazione. Quanto più breve la scadenza, meno tempo ha qualsiasi analisi tecnica o fondamentale per confermarsi, e più il risultato si avvicina a una scommessa sul rumore brevissimo del prezzo, non su un vero trend.</p>
-<h2 id="differenza-rispetto-a-un-opzione-tradizionale">Differenza rispetto a un'opzione tradizionale</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="differenza-rispetto-a-un-opzione-tradizionale">Differenza rispetto a un'opzione tradizionale</h2>
 <p>Un'opzione tradizionale (del tipo call o put) ha un valore che varia proporzionalmente al movimento dell'asset e al tempo fino alla scadenza — quanto più il prezzo si muove a favore della posizione, tanto più l'opzione vale, ed è possibile chiudere la posizione prima della scadenza al valore di mercato di quel momento. Nell'opzione binaria, non esiste questa variazione proporzionale né, in generale, la possibilità di uscire prima della scadenza per un valore intermedio: il risultato viene definito solo alla chiusura del contratto, ed è sempre tutto o niente.</p>
 <h2 id="cosa-considerare-prima-di-operare">Cosa considerare prima di operare</h2>
 <ul>
@@ -247,12 +247,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Questo articolo ti è stato utile?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sii il primo a valutare.</p>
             </div>
-            <section class="ap__coment" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
+            <section class="ap__coment" data-anonimo="Anonimo" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
               <h2>Commenti</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ancora nessun commento. Scrivi tu il primo.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lascia un commento</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Il tuo nome" aria-label="Il tuo nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Il tuo nome (facoltativo)" aria-label="Il tuo nome (facoltativo)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Il tuo commento" aria-label="Il tuo commento"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Invia commento</button>
@@ -264,7 +264,7 @@
         <aside class="ap__rel">
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/it/blog/come-funzionano-le-opzioni-binarie/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come funzionano le opzioni binarie, nella pratica</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/come-funzionano-le-opzioni-binarie/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Come funzionano le opzioni binarie, nella pratica</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/opzioni-binarie-guida-pratica-e-gestione-del-rischio/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opzioni binarie: guida pratica passo dopo passo e gestione del rischio</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/opzioni-digitali-come-funzionano-e-come-calcolare-il-rischio/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opzioni digitali: come funzionano e come calcolare il rischio reale</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
           </div>
@@ -333,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

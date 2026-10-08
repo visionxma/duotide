@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,11 +219,11 @@
             <p>تُصمَّم معظم مؤشرات الاتجاه لمتابعة السعر لحظيًا. مذبذب السعر منزوع الاتجاه، المعروف بالاختصار DPO (من الإنجليزية <em>Detrended Price Oscillator</em>)، يفعل عكس ذلك عن قصد: فهو يزيل الاتجاه طويل الأجل من الرسم البياني ليكشف فقط عن الدورات قصيرة ومتوسطة الأجل المختبئة خلفه.</p>
 <h2 id="المشكلة-التي-يحاول-dpo-حلها">المشكلة التي يحاول DPO حلها</h2>
 <p>عندما يكون أصل ما في اتجاه صاعد قوي، من الشائع أن يشكّل قممًا وقيعانًا أصغر ضمن هذا الصعود العام. بالنظر فقط إلى السعر الخام، يصعب الفصل بصريًا بين هذه الدورات الأصغر وحركة الأساس. يعالج DPO هذه المشكلة بمقارنة السعر الحالي بمتوسط متحرك مُزاح إلى الوراء في الزمن، مما يزيل جزءًا كبيرًا من عنصر الاتجاه طويل الأجل من المعادلة.</p>
-<h2 id="كيف-يعمل-الحساب">كيف يعمل الحساب</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="كيف-يعمل-الحساب">كيف يعمل الحساب</h2>
 <p>تأخذ الصيغة متوسطًا متحركًا بسيطًا لعدد معين من الفترات — 20 مثلًا — وتزيحه إلى الوراء بمقدار نصف هذه الفترة زائد واحد، تقريبًا. بعد ذلك، تطرح هذا المتوسط المُزاح من سعر إغلاق كل شمعة. النتيجة خط يتذبذب فوق الصفر وتحته، يبرز القمم والقيعان التي تمثل دورات قصيرة الأجل، دون أن يعيق ميل الاتجاه العام القراءة.</p>
 <h2 id="ما-الذي-يكشفه-خط-dpo">ما الذي يكشفه خط DPO</h2>
 <p>عندما يكون DPO في قيم موجبة، يكون السعر أعلى من المتوسط المُزاح، مما يشير إلى لحظة قوة ضمن الدورة قصيرة الأجل المرصودة. عندما يكون في قيم سالبة، يكون السعر أدنى من هذا المتوسط، مما يشير إلى ضعف ضمن نفس الدورة. تكمن القيمة العملية للمؤشر في المساعدة على تحديد المدة التقريبية لهذه الدورات — بعدّ عدد الفترات الفاصلة بين قمة وأخرى في DPO — وهو ما يمكن أن يوجّه، على سبيل المثال، الفاصل الزمني المتوقع بين دخول وآخر في استراتيجية مبنية على الدورات.</p>
-<h2 id="مثال-بالا-رقام">مثال بالأرقام</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="مثال-بالا-رقام">مثال بالأرقام</h2>
 <p>افترض أصلًا بمتوسط متحرك بسيط لـ20 فترة مُزاح 11 فترة إلى الوراء، حاليًا عند 45.00 ريال برازيلي. إذا كان سعر إغلاق أحدث شمعة عند 47.25 ريال برازيلي، فإن قيمة DPO عند هذه النقطة هي 47.25 − 45.00 = 2.25، وهي قيمة موجبة تشير إلى أن السعر أعلى بـ2.25 ريال برازيلي من المتوسط المرجعي المُزاح. إذا نتج، بعد بضعة أسابيع، عن نفس الحساب -1.80، فهذا يُظهر أن الدورة قصيرة الأجل تحولت من القوة إلى الضعف ضمن تلك الفترة المرصودة — معلومة يصعب ملاحظتها بالنظر فقط إلى السعر الخام في اتجاه صاعد مستمر.</p>
 <h2 id="لماذا-لا-يصلح-dpo-لقراءة-الاتجاه">لماذا لا يصلح DPO لقراءة الاتجاه</h2>
 <p>تحديدًا لأن حسابه يزيل الاتجاه عن قصد، لا يجب استخدام DPO لتحديد ما إذا كان أصل ما في صعود أو هبوط على المدى الطويل — لهذا الغرض، لا تزال مؤشرات الاتجاه التقليدية أكثر ملاءمة. نقطة أخرى تستحق الانتباه هي الإزاحة الزمنية: بما أن المتوسط المستخدم في الحساب مُزاح إلى الوراء، يميل DPO إلى أن يكون "متأخرًا" بالنسبة لأحدث شمعة، مما يعزز دوره كأداة لتحديد الدورات الماضية، وليس كإشارة مبكرة للحركة التالية.</p>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="هل كان هذا المقال مفيدًا؟"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">كن أول من يقيّم.</p>
             </div>
-            <section class="ap__coment" data-enviado="استلمنا تعليقك. سيظهر هنا بعد موافقة الفريق." data-erro="تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل." data-vazio="لا توجد تعليقات بعد. كن أول من يعلّق." data-idioma="ar">
+            <section class="ap__coment" data-anonimo="مجهول" data-enviado="استلمنا تعليقك. سيظهر هنا بعد موافقة الفريق." data-erro="تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل." data-vazio="لا توجد تعليقات بعد. كن أول من يعلّق." data-idioma="ar">
               <h2>التعليقات</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">لا توجد تعليقات بعد. كن أول من يعلّق.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">اترك تعليقًا</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="اسمك" aria-label="اسمك" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="اسمك (اختياري)" aria-label="اسمك (اختياري)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="تعليقك" aria-label="تعليقك"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">إرسال التعليق</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,11 +219,11 @@
 <p>Entender o spread muda a forma como você avalia se uma operação vale a pena, principalmente em ativos menos líquidos ou em operações de curtíssimo prazo, onde esse custo pesa proporcionalmente mais.</p>
 <h2 id="como-o-spread-aparece-na-pratica">Como o spread aparece na prática</h2>
 <p>Imagine o par EUR/USD sendo cotado assim: compra (bid) a 1,0850 e venda (ask) a 1,0852. Isso significa que, se você quiser comprar euros agora, paga 1,0852 dólares por euro; se quiser vender, recebe apenas 1,0850. O spread aqui é de 0,0002, ou 2 pips. Ao abrir uma posição, você já entra com essa diferença contra você: para empatar, o preço precisa se mover pelo menos os 2 pips do spread antes de qualquer lucro aparecer.</p>
-<h2 id="quem-define-esse-preco-e-por-que">Quem define esse preço, e por quê</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="quem-define-esse-preco-e-por-que">Quem define esse preço, e por quê</h2>
 <p>O spread é definido pelos participantes que fornecem liquidez ao mercado — corretoras, bancos e formadores de mercado que se comprometem a sempre ter uma ponta de compra e uma de venda disponíveis. Eles lucram exatamente nessa diferença, e o tamanho do spread reflete o risco que assumem ao manter essa oferta constante. Quanto mais um ativo é negociado, com mais gente comprando e vendendo o tempo todo, menor tende a ser o spread — por isso o dólar contra o real costuma ter um spread bem mais apertado do que uma ação de baixíssimo volume na bolsa.</p>
 <h2 id="spread-fixo-e-spread-variavel">Spread fixo e spread variável</h2>
 <p>Alguns instrumentos operam com spread fixo, que não muda independente do horário ou da volatilidade. Outros têm spread variável, que se alarga em momentos de notícia importante ou baixa liquidez — por exemplo, durante a divulgação de um dado de emprego nos Estados Unidos, o spread do dólar pode saltar de 2 para 8 ou 10 pips em questão de segundos. Quem opera notícias sem prestar atenção nisso costuma se surpreender com o preço de entrada bem pior do que o esperado.</p>
-<h2 id="o-efeito-acumulado-do-spread-no-seu-resultado">O efeito acumulado do spread no seu resultado</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="o-efeito-acumulado-do-spread-no-seu-resultado">O efeito acumulado do spread no seu resultado</h2>
 <p>Suponha que você faça 20 operações por mês em um ativo com spread equivalente a R$ 0,50 por operação (considerando o lote negociado). Isso já representa R$ 10,00 de custo fixo mensal, somado a qualquer outra taxa cobrada. Para quem opera com muita frequência — como no day trade de curtíssimo prazo — o spread pode consumir uma fatia relevante do lucro bruto, ainda antes de impostos e taxas de corretagem. Um exemplo numérico: se sua estratégia tem uma expectativa de ganho médio de R$ 0,80 por operação, mas o spread custa R$ 0,50 em cada entrada e saída, sobra apenas R$ 0,30 de margem real — qualquer imprecisão na execução pode zerar esse resultado.</p>
 <h2 id="como-reduzir-o-impacto-do-spread-nas-suas-operacoes">Como reduzir o impacto do spread nas suas operações</h2>
 <ul>
@@ -251,12 +251,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -268,9 +268,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/como-entender-uma-cotacao-de-mercado/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como entender uma cotação de mercado</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/livros-essenciais-para-traders-iniciantes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Livros essenciais para quem está começando no trading</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/ferramentas-de-trading-como-escolher-as-certas/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ferramentas de trading: como escolher as certas</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/como-entender-uma-cotacao-de-mercado/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Como entender uma cotação de mercado: bid, ask, spread e variação</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
+            <a class="bq__card" href="/blog/livros-essenciais-para-traders-iniciantes/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Livros essenciais para traders iniciantes: 5 clássicos e o que tirar de cada um</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
+            <a class="bq__card" href="/blog/ferramentas-de-trading-como-escolher-as-certas/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Ferramentas de trading: como escolher as certas para começar</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

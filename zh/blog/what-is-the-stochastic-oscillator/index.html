@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -213,7 +213,7 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>随机振荡指标（Stochastic Oscillator）源自一个简单的想法：在持续上涨的行情中，价格通常收在近期交易区间的顶部附近。在持续下跌的行情中，则通常收在底部附近。该指标把这一观察转化为一个0到100的刻度，显示最近一次收盘价位于特定数量K线的最高最低价区间中的哪个位置。</p><p>随机振荡指标由George Lane在20世纪50年代创造，至今仍是最常用的振荡指标之一，因为它容易直观理解，并且对市场节奏的变化反应相对较快。但和任何动量指标一样，它也有一些局限性，只有理解了背后的计算方式才能看清楚。</p><h2 id="k的公式">%K的公式</h2><p>该指标的主线，称为%K，遵循以下公式：</p><p><strong>%K = 100 × (当前收盘价 − 周期内最低价) ÷ (周期内最高价 − 周期内最低价)</strong></p><p>假设某资产最近14根K线中，最高价为R$ 110,00，最低价为R$ 90,00。如果最近一次收盘价为R$ 106,00，计算结果为：</p><p><strong>%K = 100 × (106 − 90) ÷ (110 − 90) = 100 × 16 ÷ 20 = 80</strong></p><p>%K为80意味着收盘价位于所观察价格区间上方20%的位置——接近该周期的最高点，但不一定是历史最高点。</p><h2 id="d的作用是什么">%D的作用是什么</h2><p>大多数平台会把%K和第二条线%D一起绘制，%D是%K的简单移动平均线（通常为3周期）。%D平滑了%K的剧烈波动，起到信号线的作用：当%K从下方向上穿越%D时，一些交易者认为买方力量正在进场；向下穿越时，则认为是卖方力量。</p><p>在计算%D之前，通常还会对%K本身再做一次额外的平滑处理——即所谓的慢速随机指标——这能减少假信号，代价是反应会稍微慢一些。</p><h2 id="超买和超卖-警惕过度解读">超买和超卖：警惕过度解读</h2><p>最常被提及的区域是80以上（超买）和20以下（超卖）。经典的错误是把这当作自动的卖出或买入指令。在强劲的上升趋势中，%K可能连续多根K线都保持在80以上，仅仅因为指标显示拉伸就卖出，意味着提前退出一个仍有余力的行情。</p><ul><li><strong>%K高于80：</strong>价格收在近期区间的顶部附近——买方力量强劲，而非自动的反转信号。</li><li><strong>%K低于20：</strong>价格收在近期区间的底部附近——卖方力量强劲，同样需要注意上述保留意见。</li><li><strong>背离：</strong>当价格创出更高的高点，但%K却形成更低的高点（或相反情况）时，即使价格仍在推进，动能也正在减弱。</li></ul><h2 id="该指标在哪种情况下表现最好">该指标在哪种情况下表现最好</h2><p>随机指标往往在于支撑和阻力之间来回震荡的市场中，表现比在强劲且持久的趋势中更好。在横盘区间内，%K和%D在20和80这两个极值附近的交叉，往往能更频繁地标出转折点。而在强劲的趋势中，理想的用法是用该指标来衡量主要行情内的回调，而不是试图预测趋势的终结。</p><p>举个实际的例子：在一个处于上升趋势的货币对上，一次让%K从90回落到接近20的回调，可能只是这轮行情中一次健康的暂停，尤其是如果图表的高低点结构依然向上抬升的话。仅仅因为振荡指标归零就卖出，会忽视更大的背景。</p><h2 id="把这些要素整合起来">把这些要素整合起来</h2><p>随机振荡指标最好作为一个更全面判断的一部分，而不是单独使用。把它与图表的主要趋势、支撑和阻力水平，或者另一个衡量趋势力度的指标结合起来，有助于过滤掉那些仅仅依赖某个数字穿越20或80的入场信号。与任何技术分析工具一样，它能提高判断的质量，但不能消除一笔操作失败的风险——无论入场时信号看起来多么清晰，仓位管理和止损始终是这个过程中不可或缺的一部分。</p>
+            <p>随机振荡指标（Stochastic Oscillator）源自一个简单的想法：在持续上涨的行情中，价格通常收在近期交易区间的顶部附近。在持续下跌的行情中，则通常收在底部附近。该指标把这一观察转化为一个0到100的刻度，显示最近一次收盘价位于特定数量K线的最高最低价区间中的哪个位置。</p><p>随机振荡指标由George Lane在20世纪50年代创造，至今仍是最常用的振荡指标之一，因为它容易直观理解，并且对市场节奏的变化反应相对较快。但和任何动量指标一样，它也有一些局限性，只有理解了背后的计算方式才能看清楚。</p><h2 id="k的公式">%K的公式</h2><p>该指标的主线，称为%K，遵循以下公式：</p><p><strong>%K = 100 × (当前收盘价 − 周期内最低价) ÷ (周期内最高价 − 周期内最低价)</strong></p><p>假设某资产最近14根K线中，最高价为R$ 110,00，最低价为R$ 90,00。如果最近一次收盘价为R$ 106,00，计算结果为：</p><p><strong>%K = 100 × (106 − 90) ÷ (110 − 90) = 100 × 16 ÷ 20 = 80</strong></p><p>%K为80意味着收盘价位于所观察价格区间上方20%的位置——接近该周期的最高点，但不一定是历史最高点。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="d的作用是什么">%D的作用是什么</h2><p>大多数平台会把%K和第二条线%D一起绘制，%D是%K的简单移动平均线（通常为3周期）。%D平滑了%K的剧烈波动，起到信号线的作用：当%K从下方向上穿越%D时，一些交易者认为买方力量正在进场；向下穿越时，则认为是卖方力量。</p><p>在计算%D之前，通常还会对%K本身再做一次额外的平滑处理——即所谓的慢速随机指标——这能减少假信号，代价是反应会稍微慢一些。</p><h2 id="超买和超卖-警惕过度解读">超买和超卖：警惕过度解读</h2><p>最常被提及的区域是80以上（超买）和20以下（超卖）。经典的错误是把这当作自动的卖出或买入指令。在强劲的上升趋势中，%K可能连续多根K线都保持在80以上，仅仅因为指标显示拉伸就卖出，意味着提前退出一个仍有余力的行情。</p><ul><li><strong>%K高于80：</strong>价格收在近期区间的顶部附近——买方力量强劲，而非自动的反转信号。</li><li><strong>%K低于20：</strong>价格收在近期区间的底部附近——卖方力量强劲，同样需要注意上述保留意见。</li><li><strong>背离：</strong>当价格创出更高的高点，但%K却形成更低的高点（或相反情况）时，即使价格仍在推进，动能也正在减弱。</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="该指标在哪种情况下表现最好">该指标在哪种情况下表现最好</h2><p>随机指标往往在于支撑和阻力之间来回震荡的市场中，表现比在强劲且持久的趋势中更好。在横盘区间内，%K和%D在20和80这两个极值附近的交叉，往往能更频繁地标出转折点。而在强劲的趋势中，理想的用法是用该指标来衡量主要行情内的回调，而不是试图预测趋势的终结。</p><p>举个实际的例子：在一个处于上升趋势的货币对上，一次让%K从90回落到接近20的回调，可能只是这轮行情中一次健康的暂停，尤其是如果图表的高低点结构依然向上抬升的话。仅仅因为振荡指标归零就卖出，会忽视更大的背景。</p><h2 id="把这些要素整合起来">把这些要素整合起来</h2><p>随机振荡指标最好作为一个更全面判断的一部分，而不是单独使用。把它与图表的主要趋势、支撑和阻力水平，或者另一个衡量趋势力度的指标结合起来，有助于过滤掉那些仅仅依赖某个数字穿越20或80的入场信号。与任何技术分析工具一样，它能提高判断的质量，但不能消除一笔操作失败的风险——无论入场时信号看起来多么清晰，仓位管理和止损始终是这个过程中不可或缺的一部分。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
@@ -231,12 +231,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -248,9 +248,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD、随机指标与抛物线SAR：如何组合使用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD、随机指标与抛物线SAR：如何组合使用</span><span class="bq__meta">2026/09/24 · 阅读 7 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -317,6 +317,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

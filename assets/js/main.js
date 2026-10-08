@@ -342,7 +342,7 @@
       lista.innerHTML = '';
       d.itens.forEach(function (c) {
         var li = document.createElement('li'), s = document.createElement('strong'), t = document.createElement('time'), p = document.createElement('p');
-        s.textContent = c.nome; t.dateTime = c.criado; t.textContent = new Date(c.criado).toLocaleDateString(lang); p.textContent = c.texto;
+        s.textContent = c.nome || sec.getAttribute('data-anonimo'); t.dateTime = c.criado; t.textContent = new Date(c.criado).toLocaleDateString(lang); p.textContent = c.texto;
         li.appendChild(s); li.appendChild(t); li.appendChild(p); lista.appendChild(li);
       });
     }).catch(function () {});

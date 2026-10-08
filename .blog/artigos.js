@@ -46,6 +46,22 @@ function capa(a, i) {
 }
 // Textos da página de artigo (layout no molde do blog da IQ Option), por idioma.
 const GRAF = require('./graficos.js');
+// Ilustrações próprias (assets/img/blog/<nome>.webp), duas por artigo, escolhidas pelo tema.
+const ILUS = { ind: ['ind-01', 'ind-02', 'ind-03', 'ind-04', 'ind-05'], est: ['est-01', 'est-02', 'est-03', 'est-04'],
+  ris: ['ris-01', 'ris-02', 'ris-03', 'ris-04'], psi: ['psi-01', 'psi-02', 'psi-03'], ini: ['ini-01', 'ini-02', 'ini-03'],
+  forex: ['mer-01', 'est-02', 'ind-03'], cripto: ['mer-03', 'ind-01', 'ini-02'], acoes: ['mer-04', 'est-03', 'ind-03'],
+  commod: ['mer-02', 'mer-05', 'mer-01'], mercado: ['mer-04', 'mer-01', 'est-03', 'mer-02'] };
+const GRUPO_ILUS = { 'Indicadores': 'ind', 'Análise técnica': 'ind', 'Estratégias': 'est', 'Opções': 'est', 'Gestão de risco': 'ris', 'Psicologia': 'psi',
+  'Iniciantes': 'ini', 'Forex': 'forex', 'Criptomoedas': 'cripto', 'Ações': 'acoes', 'ETFs e índices': 'acoes', 'Commodities': 'commod', 'Mercado': 'mercado', 'Notícias': 'mercado' };
+const temIlus = n => fs.existsSync(path.join(RAIZ, 'assets/img/blog', n + '.webp'));
+function ilustrar(corpo, a) {
+  const lista = (ILUS[GRUPO_ILUS[a.categoriaPt || a.categoria]] || ILUS.mercado).filter(temIlus);
+  if (!lista.length) return corpo;
+  let h = 0; for (const c of a.slugPt) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  const esc2 = [lista[h % lista.length], lista[(h + 1) % lista.length]].filter((v, i, arr) => arr.indexOf(v) === i);
+  let n = 0;
+  return corpo.replace(/<h2/g, m => { n++; const k = n === 2 ? 0 : n === 4 ? 1 : -1; return k >= 0 && esc2[k] ? `<figure class="ap__ilustra"><img src="/assets/img/blog/${esc2[k]}.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure>` + m : m; });
+}
 const desenhados = new Map(); // um SVG por artigo, compartilhado pelos 17 idiomas
 const TXT = JSON.parse(fs.readFileSync(path.join(__dirname, 'textos-artigo.json'), 'utf8'));
 const VISITAS = 'https://duotide-visitas.visionxma.workers.dev';
@@ -189,6 +205,7 @@ function gerar(pasta = '') {
     }
     let corpoArt = a.corpo;
     if (figura) corpoArt = corpoArt.includes('<!--grafico-->') ? corpoArt.replace('<!--grafico-->', figura) : corpoArt.replace(/<h2/, figura + '<h2');
+    corpoArt = ilustrar(corpoArt, a);
     const sm = sumario(corpoArt);
     const atual = atualizado(a, pasta);
     const ed = editoria(a.categoriaPt || a.categoria, pasta);
@@ -253,12 +270,12 @@ ${a.fonte ? `            <p class="artigo__fonte">${esc(B.fonte || '')} <a href=
               <div class="ap__estrelas" role="radiogroup" aria-label="${esc(T.util)}">${[1, 2, 3, 4, 5].map(n => `<button type="button" role="radio" aria-checked="false" data-voto="${n}" aria-label="${n}/5">★</button>`).join('')}</div>
               <p class="ap__avaliar-info" aria-live="polite">${esc(T.sem_votos)}</p>
             </div>
-            <section class="ap__coment" data-enviado="${esc(T.enviado)}" data-erro="${esc(T.erro)}" data-vazio="${esc(T.vazio)}" data-idioma="${idioma.codigo}">
+            <section class="ap__coment" data-anonimo="${esc(T.anonimo)}" data-enviado="${esc(T.enviado)}" data-erro="${esc(T.erro)}" data-vazio="${esc(T.vazio)}" data-idioma="${idioma.codigo}">
               <h2>${esc(T.comentarios)}</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">${esc(T.vazio)}</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">${esc(T.comentar)}</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="${esc(T.nome)}" aria-label="${esc(T.nome)}" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="${esc(T.nome)}" aria-label="${esc(T.nome)}" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="${esc(T.texto)}" aria-label="${esc(T.texto)}"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">${esc(T.enviar)}</button>

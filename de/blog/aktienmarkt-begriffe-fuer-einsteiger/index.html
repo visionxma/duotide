@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -220,12 +220,12 @@
 <h2 id="aktie-und-anteil-share">Aktie und Anteil (Share)</h2>
 <p>Eine Aktie stellt einen Eigentumsanteil an einem Unternehmen dar. Beim Kauf einer Aktie kaufen Sie einen kleinen Teil dieses Geschäfts — Sie kaufen nicht das Produkt des Unternehmens und leihen ihm auch kein Geld. Läuft es dem Unternehmen gut, wollen tendenziell mehr Investoren diese Aktie besitzen, was den Preis nach oben drücken kann. Enttäuscht das Unternehmen, oder erwartet der Markt Probleme voraus, kann der Preis fallen.</p>
 <p>Der Anteil, oder <em>Share</em> auf Englisch, ist die zählbare Einheit dieses Eigentums: Sie können 1, 10 oder 100 Anteile einer Aktie haben. Das ist wichtig, weil das finanzielle Ergebnis von der Menge abhängt. Steigt eine Aktie von R$ 50 auf R$ 55, beträgt der Gewinn R$ 5 pro Anteil — mit 10 Anteilen beträgt der Gewinn R$ 50; mit 100 Anteilen R$ 500. Die Aktienbewegung war dieselbe; die Positionsgröße veränderte das Ergebnis in Geld.</p>
-<h2 id="ticker">Ticker</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ticker">Ticker</h2>
 <p>Der Ticker ist der kurze Code zur Identifikation einer Aktie an der Börse — zum Beispiel PETR4 oder VALE3 an der brasilianischen Börse. Ticker machen Plattformen schneller nutzbar, können aber auch Verwirrung zwischen Unternehmen mit ähnlichen Namen oder an verschiedenen Börsen notierten Vermögenswerten erzeugen. Bevor Sie eine Order bestätigen, lohnt es sich zu prüfen, ob der Ticker wirklich dem gewünschten Unternehmen entspricht — ein einfacher Tippfehler kann zum Kauf des falschen Vermögenswerts führen.</p>
 <h2 id="bid-ask-und-spread">Bid, Ask und Spread</h2>
 <p>Der Bid ist der höchste Preis, den ein Käufer im Moment bietet. Der Ask ist der niedrigste Preis, den ein Verkäufer akzeptiert. Der Spread ist die Differenz zwischen beiden. Zeigt eine Aktie einen Bid von R$ 100,00 und einen Ask von R$ 100,05, beträgt der Spread R$ 0,05 — bei sofortigem Kauf zahlen Sie tendenziell nahe dem Ask; bei sofortigem Verkauf erhalten Sie tendenziell nahe dem Bid.</p>
 <p>Sehr liquide Aktien haben meist einen engen Spread; weniger gehandelte Aktien können einen breiteren Spread haben, was den schnellen Ein- und Ausstieg aus einer Position verteuert. Der Spread ist leicht zu übersehen, weil er nicht als separate Gebühr erscheint — bleibt aber bei jeder Operation eine echte Kostenposition.</p>
-<h2 id="marktorder-und-limitorder">Marktorder und Limitorder</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="marktorder-und-limitorder">Marktorder und Limitorder</h2>
 <p>Eine Marktorder verlangt, so schnell wie möglich zum besten verfügbaren Preis zu kaufen oder zu verkaufen — sie priorisiert Geschwindigkeit, nicht Preisgenauigkeit. Eine Limitorder legt den maximalen Preis fest, den Sie bei einem Kauf zu zahlen bereit sind, oder den minimalen Preis, den Sie bei einem Verkauf zu erhalten bereit sind — sie priorisiert Kontrolle, mit dem Risiko, nicht ausgeführt zu werden, falls der Markt diesen Preis nicht erreicht.</p>
 <p>Keine der beiden ist automatisch besser. Nutzen Sie die Marktorder, wenn schnelle Ausführung wichtiger ist als eine kleine Preisdifferenz; nutzen Sie die Limitorder, wenn der Preis wichtiger ist als die Gewissheit der Ausführung.</p>
 <h2 id="volumen">Volumen</h2>
@@ -254,12 +254,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="War dieser Artikel hilfreich?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Geben Sie die erste Bewertung ab.</p>
             </div>
-            <section class="ap__coment" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
               <h2>Kommentare</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Noch keine Kommentare. Schreiben Sie den ersten.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Kommentar schreiben</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ihr Name" aria-label="Ihr Name" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ihr Name (optional)" aria-label="Ihr Name (optional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ihr Kommentar" aria-label="Ihr Kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Kommentar senden</button>
@@ -271,9 +271,9 @@
         <aside class="ap__rel">
           <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/de/blog/wie-man-eine-marktkursnotierung-versteht/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wie man eine Marktkursnotierung versteht</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/wichtige-buecher-fuer-trading-einsteiger/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wichtige Bücher für alle, die mit Trading beginnen</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/trading-werkzeuge-die-richtigen-waehlen/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading-Werkzeuge: wie man die richtigen wählt</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/wie-man-eine-marktkursnotierung-versteht/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wie man eine Marktkursnotierung versteht</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/wichtige-buecher-fuer-trading-einsteiger/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wichtige Bücher für alle, die mit Trading beginnen</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/trading-werkzeuge-die-richtigen-waehlen/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading-Werkzeuge: wie man die richtigen wählt</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
           </div>
         </aside>
       </div>
@@ -340,6 +340,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

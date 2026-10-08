@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/hedge-strategy-for-options-trades/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "交易策略",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 5 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">交易策略</span>
             <h1>交易中的对冲：如何用另一笔头寸保护一笔交易</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>分析栏目</strong><small>Duotide 栏目</small></span></div>
@@ -215,10 +215,10 @@
           <div class="ap__texto article">
             <p>对冲（Hedge）是一个在金融领域随处可见的词，常常被视为一件复杂的事，只有大型基金才会用到。但实际上，其逻辑很简单：与其把全部赌注押在一个方向上，不如再开一笔头寸，在市场朝第一笔头寸的反方向移动时保护部分结果。目的不是两次获利——而是在对市场的判断出错时，减少损失的程度。</p>
 <p>这个理念适用于股票、货币、大宗商品，也适用于极短线交易。共同点始终是一样的：购买某种保险，即使这会牺牲原始交易的一部分潜在利润。</p>
-<h2 id="对冲背后的原理">对冲背后的原理</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="图表：USD/BRL，日线，2026/05/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：USD/BRL，日线，2026/05/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="对冲背后的原理">对冲背后的原理</h2>
 <p>一次经典的对冲，是在同一资产、或走势相似的资产上，组合两笔结果相反的头寸。如果第一笔头寸押注某种货币上涨，第二笔押注同一货币下跌，最终结果取决于价格变动了多少，以及每笔头寸的相对规模——而不仅仅取决于哪一笔赢、哪一笔输。</p>
 <p>构建这种保护有两种常见方式。第一种是同步对冲：几乎同时开出两笔头寸，通常是因为对市场的判断在两个可能的情景之间摇摆不定。第二种是调整型对冲：在第一笔头寸已经出现亏损之后再开第二笔头寸，用来锁定最大亏损，避免如果价格继续朝不利方向走，结果进一步恶化。</p>
-<h2 id="一个用整数举例的示例">一个用整数举例的示例</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="一个用整数举例的示例">一个用整数举例的示例</h2>
 <p>假设一笔200雷亚尔的交易，押注美元兑雷亚尔上涨，判断正确的回报率为85%，到期时间为30分钟。还剩10分钟时，一条经济新闻改变了局势，价格开始朝不利方向走。你没有单纯地等待结果，而是开了第二笔100雷亚尔的交易，押注美元下跌，同样是85%的回报率。</p>
 <p>有两种可能的结局。如果美元收高，第一笔交易带来170雷亚尔的利润（200雷亚尔的85%），第二笔损失投入的100雷亚尔——净结果是获利70雷亚尔。如果美元收低，第一笔交易损失200雷亚尔，第二笔带来85雷亚尔的利润（100雷亚尔的85%）——净结果是亏损115雷亚尔。与什么都不做相比——如果美元下跌就会损失全部200雷亚尔——对冲在不利情景下把亏损减少了85雷亚尔，代价是在有利情景下减少了收益。</p>
 <h2 id="什么时候值得使用对冲">什么时候值得使用对冲</h2>
@@ -227,7 +227,7 @@
 <li>当技术判断在两种情景之间摇摆不定，而降低总敞口比试图精确判断方向更重要时。</li>
 <li>当目标是保护当天已经取得的一连串盈利，宁愿接受一个较小的结果，也不愿冒着在一笔交易中把一切都吐回去的风险时。</li>
 </ul>
-<h2 id="什么时候对冲弊大于利">什么时候对冲弊大于利</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="什么时候对冲弊大于利">什么时候对冲弊大于利</h2>
 <p>对冲是有成本的——它通常会降低可能的利润，因为两笔头寸在每种情景下的回报率通常并不相同。每当一笔交易开始变得不利就出于本能地使用对冲，和把对冲作为入场前就已确定的计划的一部分来使用，是两回事。前者会让对冲变成一种否认亏损的方式；后者则是一种风险管理工具。区别就在于是提前决定好使用标准，还是在当下情绪激动时才做决定。</p>
 <h2 id="在日常应用之前如何测试">在日常应用之前如何测试</h2>
 <p>在用真实资金使用对冲之前，值得模拟一笔交易的四种可能情景——小幅上涨、大幅上涨、小幅下跌、大幅下跌——并计算在有第二笔头寸和没有第二笔头寸时各自的净结果。像Duotide这样的工具会在开仓前显示每项资产的回报率，这有助于提前做好这个计算，而不是在交易过程中承受压力时才决定。对冲并不能消除风险：它只是把风险在不同情景之间重新分配，而这种取舍是否适合你的资金和计划，取决于交易者自己的判断。</p>
@@ -236,7 +236,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -248,12 +248,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -265,9 +265,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">日内交易者最实用的指标</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">日内交易者最实用的指标</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -334,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

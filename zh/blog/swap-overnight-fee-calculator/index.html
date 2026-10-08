@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/swap-overnight-fee-calculator/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "外汇",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 5 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">外汇</span>
             <h1>隔夜利息（Swap）：如何计算持仓过夜的成本</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>分析栏目</strong><small>Duotide 栏目</small></span></div>
@@ -215,13 +215,13 @@
           <div class="ap__texto article">
             <p>任何在每日市场收盘时间之后仍持有的杠杆仓位，都可能产生一笔成本——在某些情况下是一笔收入——被称为掉期费（swap），也叫隔夜费或展期费（rollover）。它出现在外汇、差价合约、大宗商品、指数以及加密货币的保证金仓位中。如果交易在展期时间之前于当天开仓并平仓，通常不会产生需要计算的掉期费。</p>
 <p>掉期费的问题在于，它不会在入场时以明显的费用形式出现。它是之后悄悄出现在账户里的。这使得许多交易者只有在一笔原本看起来是短线的交易，在没有计划的情况下变成持有数天的仓位时，才意识到它的影响。</p>
-<h2 id="计算方式是如何运作的">计算方式是如何运作的</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-swap-taxa-overnight.svg" alt="图表：EUR/USD，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：EUR/USD，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="计算方式是如何运作的">计算方式是如何运作的</h2>
 <p>公式取决于券商如何展示掉期费率。当它以仓位价值的百分比显示时：</p>
 <p>掉期费 = 仓位价值 × 每日掉期费率 × 计费夜数</p>
 <p>当它按手数显示时：</p>
 <p>掉期费 = 手数 × 每手掉期费 × 计费夜数</p>
 <p>“计费夜数”这个说法值得注意。周末持有的仓位通常会被计为超过一晚，因为市场需要结算市场关闭期间的这段时间。许多平台会在一周中的某个特定日子应用三倍展期，但具体日期和费率因交易工具和券商而异——因此，在决定隔夜持仓之前，务必核实当时适用的条件。</p>
-<h2 id="解答示例-百分比掉期费">解答示例：百分比掉期费</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="解答示例-百分比掉期费">解答示例：百分比掉期费</h2>
 <p>假设一笔仓位敞口价值为7500雷亚尔，多头每日掉期费率为0.05%，持有三个计费夜（因为包含了周末的三倍展期）。计算如下：</p>
 <p>7500雷亚尔 × 0.05% × 3 = 预计成本11.25雷亚尔</p>
 <p>如果同一笔仓位，空头方向，每日费率为−0.02%（这是一笔收入，而不是成本），同样三个晚上的结果将是：</p>
@@ -235,7 +235,7 @@
 <li>券商的调整和每种交易工具的特定规则也会影响最终数值。</li>
 </ul>
 <p>这并不意味着交易方向应该根据掉期费来选择。方向应该来自技术分析或促成这笔交易的市场情况。但当两个入场想法相似，而其中一个的隔夜成本明显更高时，掉期费就可以成为一个合理的决胜标准。</p>
-<h2 id="什么时候掉期费真正重要">什么时候掉期费真正重要</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="什么时候掉期费真正重要">什么时候掉期费真正重要</h2>
 <p>每晚2雷亚尔的成本，并不会自动变得重要。在一笔目标为150雷亚尔的交易中，这个数值几乎无关紧要。同样的交易，如果目标只有8雷亚尔——这在剥头皮交易者中很典型——那么每晚2雷亚尔就会侵蚀预期收益中相当大的一部分。</p>
 <p>在决定隔夜持仓之前，值得做的实用计算很简单：把计划持有夜数对应的预计掉期费金额，与这笔交易的获利目标进行比较。如果掉期费只占目标的一小部分，这个成本是可控的。如果占比很大，就值得重新考虑是否继续持仓，或者缩小仓位来加以弥补。</p>
 <h2 id="避免账户出现意外的习惯">避免账户出现意外的习惯</h2>
@@ -246,7 +246,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -258,12 +258,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -275,7 +275,7 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/best-technical-indicators-for-forex-trading/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">操作外汇市场的最佳技术指标</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/best-technical-indicators-for-forex-trading/"><img src="/assets/img/capas/blog-corretora-offshore-o-que-e.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">操作外汇市场的最佳技术指标</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
             <a class="bq__card" href="/zh/blog/most-traded-forex-pairs-characteristics/"><img src="/assets/img/duotide-corretora-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5种最常交易的外汇货币对及各自需要关注的要点</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
             <a class="bq__card" href="/zh/blog/best-time-to-trade-forex-market/"><img src="/assets/img/terra.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">外汇市场操作的最佳时间是什么时候</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
@@ -344,6 +344,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

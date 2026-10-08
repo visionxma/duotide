@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/tr/blog/bollinger-bantlarini-kullanmanin-3-yolu/",
       "inLanguage": "tr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Göstergeler",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">4 dk okuma</span></span>
+              <span><time datetime="2026-09-24">24 Eyl 2026</time><span class="ap__sep">5 dk okuma</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span>
             </div>
-            <p class="ap__atual">Güncellenme: <time datetime="2026-09-27">27 Eylül 2026</time></p>
+            <p class="ap__atual">Güncellenme: <time datetime="2026-10-08">8 Ekim 2026</time></p>
             <span class="bq__tag">Göstergeler</span>
             <h1>Teknik Analizde Bollinger Bantlarını Kullanmanın 3 Yolu</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Analiz Masası</strong><small>Duotide masası</small></span></div>
@@ -216,16 +216,16 @@
           <div class="ap__texto article">
             <p>Bollinger Bantları, teknik analizin en çok yönlü göstergelerinden biridir çünkü tek bir araçta trend ve volatilite hakkında bilgiyi bir araya getirir. Birçok kişi grafikteki üç çizginin şeklini tanımayı öğrenir, ama çok azı bunun "fiyat yükseldi, fiyat düştü" gibi bariz olanın ötesinde neyi gösterebileceğini keşfeder.</p>
 <p>Bu yazıda göstergenin nasıl hesaplandığını ve ondan sinyal çıkarmanın üç farklı yolunu göreceksiniz: volatilite değişimlerini belirlemek, kenarlarda dönüş işlemi yapmak ve trend kırılımlarını takip etmek.</p>
-<h2 id="bantlar-nasıl-hesaplanır">Bantlar Nasıl Hesaplanır</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/3-formas-de-usar-bandas-de-bollinger.svg" alt="Grafik: Ouro, günlük, 02.03.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: Ouro, günlük, 02.03.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz.</figcaption></figure><h2 id="bantlar-nasıl-hesaplanır">Bantlar Nasıl Hesaplanır</h2>
 <p>Göstergenin üç çizgisi vardır. Ortadaki, genellikle 20 periyotluk basit bir hareketli ortalamadır. Üst ve alt olmak üzere diğer ikisi, bu ortalamadan, aynı periyottaki fiyatın standart sapmasının bir katına eşit bir mesafede yer alır — piyasa standardı 2 standart sapmadır.</p>
 <p>Örnek: EUR/USD paritesinin 20 periyotluk hareketli ortalaması 1,0850'de ve bu periyodun standart sapması 0,0040 ise, üst bant 1,0850 + (2 × 0,0040) = 1,0930'da, alt bant ise 1,0850 − (2 × 0,0040) = 1,0770'te olur. Fiyat ne kadar çok dalgalanırsa, bantlar ortalamadan o kadar uzaklaşır; fiyat ne kadar durgun kalırsa, bantlar o kadar birbirine yaklaşır.</p>
-<h2 id="yontem-1-bantların-aralıgıyla-volatiliteyi-okumak">Yöntem 1: Bantların Aralığıyla Volatiliteyi Okumak</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="yontem-1-bantların-aralıgıyla-volatiliteyi-okumak">Yöntem 1: Bantların Aralığıyla Volatiliteyi Okumak</h2>
 <p>Bantlar birbirine çok yaklaştığında, piyasa düşük volatilitededir — genellikle daha güçlü bir hareketten önce gelen bir kararsızlık dönemi. Bu daralma squeeze olarak bilinir. Bantlar çok açıldığında piyasa hareketlidir ve çok büyük bir açılmadan sonra, yön belirtmese bile volatilitenin tekrar düşmesi yaygındır.</p>
 <p>Bu kullanım alım veya satım sinyali vermez: sadece bir şeyin olmak üzere olduğunu haber verir, böylece trader hareket gelmeden önce pozisyon büyüklüğünü ve stop mesafesini ayarlayabilir.</p>
 <h2 id="yontem-2-kenarlarda-donus-islemi-yapmak">Yöntem 2: Kenarlarda Dönüş İşlemi Yapmak</h2>
 <p>Belirli bir trendi olmayan (yatay) piyasalarda, fiyat bantlara sanki bir tavan ve tabanmış gibi saygı gösterme eğilimindedir. Fiyat üst banda dokunduğunda veya onu aştığında ve ardından bantın içine geri dönen bir mumla kapandığında, bazı traderlar bunu yükselişin tükenişinin ve merkez ortalamaya kadar olası bir düşüşün sinyali olarak görür. Aynı mantık alt bantta tersine geçerlidir.</p>
 <p>Bu kullanım, RSI gibi başka bir momentum göstergesiyle teyit edildiğinde daha iyi çalışır, çünkü güçlü bir trendde fiyat, dönmeden birçok mum boyunca bir banda "yapışık yürüyebilir" — ve sadece üst banda dokunduğu için satış yapan biri bu koşullarda trende karşı para kaybeder.</p>
-<h2 id="yontem-3-kırılımı-takip-etmek">Yöntem 3: Kırılımı Takip Etmek</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="yontem-3-kırılımı-takip-etmek">Yöntem 3: Kırılımı Takip Etmek</h2>
 <p>Üçüncü yöntem ikincinin tam tersidir: trader dönüşü beklemek yerine hareketi takip eder. Bir squeeze'den (dar bantlar) sonra, fiyat büyük gövdeli bir mum ve normalden yüksek bir hacimle üst bandı kırarsa, bu bir yükseliş trendinin başlangıcını gösterebilir — ve trader kırılıma karşı değil, onun yönünde pozisyon açar. Aynısı, düşüş yönünde alt bant kırılımları için de geçerlidir.</p>
 <p>Bollinger Bantlarını dönüş (Yöntem 2) veya kırılım (Yöntem 3) için kullanma arasındaki fark piyasa bağlamına bağlıdır: yatay piyasa dönüşü, güç ile takip edilen bir squeeze ise kırılımı destekler. İki okumayı kriter olmadan karıştırmak, göstergeyi kullanmaya yeni başlayanların en yaygın hatasıdır.</p>
 <h2 id="bollinger-bantlarıyla-risk-yonetimi">Bollinger Bantlarıyla Risk Yönetimi</h2>
@@ -238,7 +238,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
             </div>
             <div class="ap__fim">
-              <p>Güncellenme: <time datetime="2026-09-27">27 Eyl 2026</time></p>
+              <p>Güncellenme: <time datetime="2026-10-08">8 Eki 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> görüntülenme</span></span><button class="ap__compartilhar" type="button">Paylaş <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bu makale faydalı oldu mu?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">İlk değerlendiren siz olun.</p>
             </div>
-            <section class="ap__coment" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
+            <section class="ap__coment" data-anonimo="Anonim" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
               <h2>Yorumlar</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Henüz yorum yok. İlk yorumu siz yapın.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Yorum bırakın</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Adınız" aria-label="Adınız" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Adınız (isteğe bağlı)" aria-label="Adınız (isteğe bağlı)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Yorumunuz" aria-label="Yorumunuz"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Yorumu gönder</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -220,11 +220,11 @@
             <p>A maioria dos indicadores de tendência é desenhada para acompanhar o preço em tempo real. O Oscilador de Preço Destendenciado, conhecido pela sigla DPO (do inglês <em>Detrended Price Oscillator</em>), faz o oposto de propósito: ele remove a tendência de longo prazo do gráfico para deixar à mostra apenas os ciclos de curto e médio prazo que ficam escondidos por trás dela.</p>
 <h2 id="o-problema-que-o-dpo-tenta-resolver">O problema que o DPO tenta resolver</h2>
 <p>Quando um ativo está em tendência de alta forte, é comum que ele forme picos e vales menores dentro dessa subida geral. Olhando só para o preço bruto, é difícil separar visualmente esses ciclos menores do movimento de fundo. O DPO ataca esse problema comparando o preço atual com uma média móvel deslocada para trás no tempo, eliminando boa parte do componente de tendência de longo prazo da equação.</p>
-<h2 id="como-o-calculo-funciona">Como o cálculo funciona</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-o-calculo-funciona">Como o cálculo funciona</h2>
 <p>A fórmula pega uma média móvel simples de um determinado número de períodos — 20, por exemplo — e a desloca para trás em metade desse período mais um, aproximadamente. Depois, subtrai essa média deslocada do preço de fechamento de cada candle. O resultado é uma linha que oscila acima e abaixo de zero, destacando picos e vales que representam ciclos de curto prazo, sem a inclinação geral da tendência atrapalhando a leitura.</p>
 <h2 id="o-que-a-linha-do-dpo-revela">O que a linha do DPO revela</h2>
 <p>Quando o DPO está em valores positivos, o preço está acima da média deslocada, indicando um momento de força dentro do ciclo de curto prazo observado. Quando está em valores negativos, o preço está abaixo dessa média, indicando fraqueza dentro do mesmo ciclo. O valor prático do indicador está em ajudar a identificar a duração aproximada desses ciclos — contando quantos períodos separam um pico do outro no DPO — o que pode orientar, por exemplo, o intervalo esperado entre uma entrada e outra numa estratégia baseada em ciclos.</p>
-<h2 id="um-exemplo-com-numeros">Um exemplo com números</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="um-exemplo-com-numeros">Um exemplo com números</h2>
 <p>Suponha um ativo com média móvel simples de 20 períodos deslocada em 11 períodos para trás, atualmente em R$ 45,00. Se o preço de fechamento do candle mais recente está em R$ 47,25, o valor do DPO nesse ponto é 47,25 − 45,00 = 2,25, um valor positivo que indica que o preço está R$ 2,25 acima da média de referência deslocada. Se, algumas semanas depois, o mesmo cálculo resultar em -1,80, isso mostra que o ciclo de curto prazo virou de força para fraqueza dentro daquele período observado — uma informação que fica bem mais difícil de perceber olhando só o preço bruto numa tendência de alta contínua.</p>
 <h2 id="por-que-o-dpo-nao-serve-para-ler-tendencia">Por que o DPO não serve para ler tendência</h2>
 <p>Justamente porque seu cálculo remove a tendência de propósito, o DPO não deve ser usado para decidir se um ativo está em alta ou em baixa no longo prazo — para isso, indicadores de tendência tradicionais continuam sendo mais adequados. Outro ponto de atenção é o deslocamento no tempo: como a média usada no cálculo é deslocada para trás, o DPO tende a ficar "atrasado" em relação ao candle mais recente, o que reforça seu papel como ferramenta de identificação de ciclos passados, não de sinal antecipado do próximo movimento.</p>
@@ -251,12 +251,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -268,9 +268,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como calcular a força da tendência</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o ATR (Average True Range) e como calcular</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,14 +218,14 @@
 <h2 id="cach-chi-bao-đuoc-tinh-toan">Cách chỉ báo được tính toán</h2>
 <p>Phép tính Parabolic SAR sử dụng ba yếu tố: giá trị SAR của kỳ trước, Điểm Cực Trị (EP, mức cao nhất hoặc thấp nhất gần đây nhất trong xu hướng) và Hệ Số Gia Tốc (AF), bắt đầu ở mức 0,02 và tăng thêm 0,02 mỗi khi một Điểm Cực Trị mới được đạt tới, cho đến một mức trần mặc định là 0,20.</p>
 <p>Công thức là: SAR mới = SAR trước đó + AF × (EP − SAR trước đó). Điều này có nghĩa là, vào đầu một xu hướng, SAR di chuyển chậm, và khi Hệ Số Gia Tốc tăng lên, các điểm bắt đầu tiến gần giá nhanh hơn — đó là lý do cho hình dạng "parabol" đặt tên cho chỉ báo này.</p>
-<h2 id="mot-vi-du-bang-so">Một ví dụ bằng số</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="mot-vi-du-bang-so">Một ví dụ bằng số</h2>
 <p>Giả sử một cổ phiếu đang trong xu hướng tăng, với SAR của ngày trước ở mức R$ 41,00, Điểm Cực Trị (mức cao nhất của xu hướng cho đến hiện tại) ở mức R$ 45,00 và Hệ Số Gia Tốc ở mức 0,04 sau hai lần tăng mức cao nhất. SAR mới sẽ là:</p>
 <p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16.</p>
 <p>Ngày hôm sau, nếu cổ phiếu tạo một mức cao mới R$ 46,00, Điểm Cực Trị tăng lên mức đó và Hệ Số Gia Tốc tăng lên 0,06. SAR tiếp theo sẽ là R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45. Hãy chú ý cách điểm này tăng nhanh hơn sau mỗi lần tiến mới, "đuổi theo" giá.</p>
 <h2 id="khi-nao-chi-bao-bao-hieu-đao-chieu">Khi nào chỉ báo báo hiệu đảo chiều</h2>
 <p>Miễn là giá vẫn ở trên đường các điểm, SAR tiếp tục tăng cùng với xu hướng. Vào thời điểm giá đóng cửa dưới giá trị SAR, chỉ báo sẽ đảo ngược: các điểm bắt đầu xuất hiện trên các nến, Hệ Số Gia Tốc quay về 0,02 và Điểm Cực Trị được tính lại dựa trên mức thấp nhất gần đây nhất, giờ đây cho một xu hướng giảm.</p>
 <p>Chính sự đảo ngược này — "dừng lại và đảo chiều" trong tên gọi — mà nhiều trader sử dụng vừa như tín hiệu thoát một vị thế mua, vừa như tín hiệu vào lệnh bán có thể xảy ra, tùy vào chiến lược được áp dụng.</p>
-<h2 id="điem-manh-va-han-che">Điểm mạnh và hạn chế</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="điem-manh-va-han-che">Điểm mạnh và hạn chế</h2>
 <p>Parabolic SAR hoạt động tốt trong các thị trường có xu hướng rõ ràng và kéo dài, nơi các điểm theo sát biến động mà không tạo ra nhiều tín hiệu sai. Vấn đề xuất hiện trong các thị trường không có hướng đi rõ ràng: vì chỉ báo này luôn "bật", chuyển đổi vị trí sau mỗi dao động, nó có thể tạo ra nhiều tín hiệu đảo chiều liên tiếp không được xác nhận, một hành vi được gọi là whipsaw.</p>
 <p>Vì vậy, phần lớn trader sử dụng SAR cùng với một chỉ báo xu hướng, như đường trung bình động kỳ dài hơn, chỉ áp dụng các tín hiệu của SAR khi chúng phù hợp với hướng đi lớn hơn của thị trường. Nền tảng Duotide cho phép vẽ Parabolic SAR cùng với các chỉ báo khác trên cùng một biểu đồ, điều này tạo điều kiện thuận lợi cho kiểu so sánh này trước bất kỳ quyết định nào.</p>
 <h2 id="đieu-chinh-he-so-gia-toc">Điều chỉnh Hệ Số Gia Tốc</h2>
@@ -249,12 +249,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bài viết này có hữu ích không?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Hãy là người đầu tiên đánh giá.</p>
             </div>
-            <section class="ap__coment" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
+            <section class="ap__coment" data-anonimo="Ẩn danh" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
               <h2>Bình luận</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Chưa có bình luận nào. Hãy là người đầu tiên.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Để lại bình luận</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Tên của bạn" aria-label="Tên của bạn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Tên của bạn (không bắt buộc)" aria-label="Tên của bạn (không bắt buộc)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Bình luận của bạn" aria-label="Bình luận của bạn"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Gửi bình luận</button>
@@ -266,9 +266,9 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
             <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

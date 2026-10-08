@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/zigzag-indicator-filter-chart-noise/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-28T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "技术指标",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 6 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">技术指标</span>
             <h1>ZigZag指标：如何过滤图表噪音</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>分析栏目</strong><small>Duotide 栏目</small></span></div>
@@ -213,13 +213,13 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>不加任何过滤地看价格图表可能很累：几十个小幅涨跌争夺着注意力，让人很难从这么多噪音中看清真正重要的行情。ZigZag正是为了解决这个视觉问题而存在的，它只用直线连接图表上重要的顶部和底部，忽略中间的部分。</p><p>这篇文章解释了ZigZag如何判断什么是噪音、什么是重要行情，它在实践中到底有什么用，以及为什么不应把它误认为一个入场信号生成器。</p><h2 id="zigzag如何决定显示什么">ZigZag如何决定显示什么</h2><p>该指标通过一个最小变动幅度的限制来设置，可以用价格的百分比或点数来定义。任何小于这个限制的行情都会被忽略，只有当价格从上一个确认的顶部或底部开始移动，足以超过这个阈值时，ZigZag才会画出一条新的线。举例来说，设定5%的限制时，一次趋势中途出现的2%波动根本不会出现在该指标上——只有累计行情超过设定的5%时，才会被画出来。</p><h2 id="zigzag真正的用途是什么">ZigZag真正的用途是什么</h2><h3>识别重要的顶部和底部</h3><p>通过去除短期噪音，可以更容易看清该资产历史上真正重要的反转点在哪里——这些信息有助于更有把握地画出支撑线和阻力线，而不是在一张充满小幅波动的图表上凭猜测去做。</p><h3>辅助解读图表形态</h3><p>像双顶、头肩顶或趋势通道这样的形态，在ZigZag已经消除了较小噪音之后会变得更加明显，它就像一个视觉骨架，使这些形态更容易被清晰识别，对研究技术分析波浪计数的人也同样有用。没有这层过滤，要在视觉上区分图表中哪一段代表主要行情、哪一段只是其中的一次修正，会困难得多。</p><h3>衡量以往行情的幅度</h3><p>由于ZigZag的每条线都连接一个顶部和一个底部（或相反），它使人能够快速衡量该资产在图表每一段中移动了多少点数或百分比，这有助于根据过去类似规模的行情来校准目标预期。</p><h2 id="zigzag最重要的局限">ZigZag最重要的局限</h2><p>ZigZag是一个回顾性的指标：它只有在价格朝相反方向移动了足够幅度、证明那个点确实是一次反转之后，才会确认一个顶部或底部。这意味着，随着新K线的形成，该指标最后一条线可能会发生变化，或者说被“重绘”——不久前看起来已经确定的顶部，如果价格继续上涨，就可能不复存在。正因如此，把ZigZag直接当作入场触发信号是有风险的：当信号清晰出现时，它所描述的行情其实已经发生了。这使得ZigZag更像是一个回顾性工具，而不是一个前瞻性指标。</p><h2 id="如何调整敏感度参数">如何调整敏感度参数</h2><ul><li>较小的限制（例如1%或2%）会显示更多细节，但也会重新引入相当多的短期噪音。</li><li>较大的限制（例如8%或10%）会大幅简化图表，但可能忽略对短线操作而言重要的反转。</li><li>理想的设置取决于资产和图表周期：波动性更大的资产通常需要更大的限制，以避免产生过多噪音，波动性更小的资产则相反。</li></ul><h2 id="如何负责任地使用zigzag">如何负责任地使用ZigZag</h2><p>利用ZigZag最好的方式，是把它当作视觉分析和历史研究的工具，而不是入场触发条件。把它标出的顶部和底部，与RSI这样的动量指标或成交量的解读结合起来，来决定真正的入场时机。与任何基于已发生数据的工具一样，ZigZag无法预测下一次行情，即使图表在视觉上更加整洁，亏损的风险依然存在——值得先在模拟账户中研究它的表现，再将它纳入你的分析流程。</p>
+            <p>不加任何过滤地看价格图表可能很累：几十个小幅涨跌争夺着注意力，让人很难从这么多噪音中看清真正重要的行情。ZigZag正是为了解决这个视觉问题而存在的，它只用直线连接图表上重要的顶部和底部，忽略中间的部分。</p><p>这篇文章解释了ZigZag如何判断什么是噪音、什么是重要行情，它在实践中到底有什么用，以及为什么不应把它误认为一个入场信号生成器。</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="图表：Ibovespa，日线，2026/03/02 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Ibovespa，日线，2026/03/02 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="zigzag如何决定显示什么">ZigZag如何决定显示什么</h2><p>该指标通过一个最小变动幅度的限制来设置，可以用价格的百分比或点数来定义。任何小于这个限制的行情都会被忽略，只有当价格从上一个确认的顶部或底部开始移动，足以超过这个阈值时，ZigZag才会画出一条新的线。举例来说，设定5%的限制时，一次趋势中途出现的2%波动根本不会出现在该指标上——只有累计行情超过设定的5%时，才会被画出来。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="zigzag真正的用途是什么">ZigZag真正的用途是什么</h2><h3>识别重要的顶部和底部</h3><p>通过去除短期噪音，可以更容易看清该资产历史上真正重要的反转点在哪里——这些信息有助于更有把握地画出支撑线和阻力线，而不是在一张充满小幅波动的图表上凭猜测去做。</p><h3>辅助解读图表形态</h3><p>像双顶、头肩顶或趋势通道这样的形态，在ZigZag已经消除了较小噪音之后会变得更加明显，它就像一个视觉骨架，使这些形态更容易被清晰识别，对研究技术分析波浪计数的人也同样有用。没有这层过滤，要在视觉上区分图表中哪一段代表主要行情、哪一段只是其中的一次修正，会困难得多。</p><h3>衡量以往行情的幅度</h3><p>由于ZigZag的每条线都连接一个顶部和一个底部（或相反），它使人能够快速衡量该资产在图表每一段中移动了多少点数或百分比，这有助于根据过去类似规模的行情来校准目标预期。</p><h2 id="zigzag最重要的局限">ZigZag最重要的局限</h2><p>ZigZag是一个回顾性的指标：它只有在价格朝相反方向移动了足够幅度、证明那个点确实是一次反转之后，才会确认一个顶部或底部。这意味着，随着新K线的形成，该指标最后一条线可能会发生变化，或者说被“重绘”——不久前看起来已经确定的顶部，如果价格继续上涨，就可能不复存在。正因如此，把ZigZag直接当作入场触发信号是有风险的：当信号清晰出现时，它所描述的行情其实已经发生了。这使得ZigZag更像是一个回顾性工具，而不是一个前瞻性指标。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="如何调整敏感度参数">如何调整敏感度参数</h2><ul><li>较小的限制（例如1%或2%）会显示更多细节，但也会重新引入相当多的短期噪音。</li><li>较大的限制（例如8%或10%）会大幅简化图表，但可能忽略对短线操作而言重要的反转。</li><li>理想的设置取决于资产和图表周期：波动性更大的资产通常需要更大的限制，以避免产生过多噪音，波动性更小的资产则相反。</li></ul><h2 id="如何负责任地使用zigzag">如何负责任地使用ZigZag</h2><p>利用ZigZag最好的方式，是把它当作视觉分析和历史研究的工具，而不是入场触发条件。把它标出的顶部和底部，与RSI这样的动量指标或成交量的解读结合起来，来决定真正的入场时机。与任何基于已发生数据的工具一样，ZigZag无法预测下一次行情，即使图表在视觉上更加整洁，亏损的风险依然存在——值得先在模拟账户中研究它的表现，再将它纳入你的分析流程。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -231,12 +231,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -248,9 +248,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -317,6 +317,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

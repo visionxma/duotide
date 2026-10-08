@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -221,11 +221,11 @@
 <p>%K adı verilen ana çizgi şöyle hesaplanır: %K = [(Mevcut kapanış − Periyodun en düşük dibi) ÷ (Periyodun en yüksek zirvesi − Periyodun en düşük dibi)] × 100. Sonuç her zaman 0 ile 100 arasında değişir.</p>
 <p>Pratik bir örnek: 14 periyotta zirve R$ 132,50 ve dip R$ 125,00 idi — R$ 7,50'lik bir genişlik. Mevcut kapanış R$ 130,00 ise, hesaplama şöyle olur: (130,00 − 125,00) ÷ 7,50 × 100 = 5,00 ÷ 7,50 × 100 = 66,67. %K değeri 66,67'dir, bu da kapanışın son aralığın tepesine üçte iki mesafede olduğunu gösterir — ne gerilmiş ne de tükenmiş.</p>
 <p>İkinci çizgi olan %D, sonucu yumuşatmak ve yanlış sinyalleri azaltmak için kullanılan, %K'nın sadece 3 periyotluk bir hareketli ortalamasıdır.</p>
-<h2 id="asırı-alım-ve-asırı-satım-bolgeleri">Aşırı Alım ve Aşırı Satım Bölgeleri</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="asırı-alım-ve-asırı-satım-bolgeleri">Aşırı Alım ve Aşırı Satım Bölgeleri</h2>
 <p>Kabule göre 80'in üzerindeki değerler aşırı alımı gösterir — fiyat son aralığın tepesine yakın kapanmıştır — ve 20'nin altındaki değerler, aralığın dibine yakın aşırı satımı gösterir. Bu, "80'i geçtiği için sat" veya "20'yi geçtiği için al" anlamına gelmez: güçlü bir trendde stokastik, art arda birçok mum boyunca tepeye (veya dibe) yapışık kalabilir ve gösterge gerildi diye bu trende karşı hareket etmek genellikle pahalıya mal olur.</p>
 <h2 id="k-ve-d-arasındaki-kesisimler">%K ve %D Arasındaki Kesişimler</h2>
 <p>Kısa vadede en çok kullanılan sinyal, iki çizginin uç bölgeler içindeki kesişimidir: %K, aşırı satım bölgesinde (20'nin altında) %D'yi aşağıdan yukarıya keserse, olası bir alım gücünün geri döndüğü olarak okunur; aşırı alım bölgesinde (80'in üzerinde) yukarıdan aşağıya keserse, olası bir satım gücünün geri döndüğü olarak okunur. Bu bölgelerin dışında, aynı kesişimin ağırlığı çok daha azdır.</p>
-<h2 id="uyumsuzluklar-en-guclu-sinyal">Uyumsuzluklar: En Güçlü Sinyal</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="uyumsuzluklar-en-guclu-sinyal">Uyumsuzluklar: En Güçlü Sinyal</h2>
 <p>Daha ileri bir kullanım, fiyatın çizdiği şekli stokastiğin çizdiği şekille karşılaştırmaktır. Fiyat yeni bir zirve yaparken stokastik öncekinden daha düşük bir zirve yaparsa, bu bir düşüş uyumsuzluğudur — fiyat hâlâ yükseliyor olsa bile yükseliş hareketi güç kaybediyordur. Fiyat diplerinde bir yükseliş uyumsuzluğu için ters mantık geçerlidir. Uyumsuzluklar tam giriş anını vermez, ama mevcut trendin sona yaklaşmış olabileceğini haber verir.</p>
 <h2 id="hızlı-islemler-icin-periyotları-ayarlamak">Hızlı İşlemler İçin Periyotları Ayarlamak</h2>
 <p>Stokastiğin standart periyodu 14'tür, ama 1 veya 5 dakikalık grafiklerle işlem yapanlar genellikle 5 veya 9 periyoda düşürür, bu da göstergeyi daha duyarlı hale getirir ve dalgalanmalara daha hızlı tepki vermesini sağlar. Yan etkisi daha fazla yanlış sinyaldir, çünkü gösterge küçük fiyat gürültülerine tepki vermeye başlar. Bunu telafi etmenin yaygın bir yolu, kesişimin tam anında işlem yapmak yerine, girmeden önce ikinci bir mumdan doğrulama istemektir.</p>
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bu makale faydalı oldu mu?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">İlk değerlendiren siz olun.</p>
             </div>
-            <section class="ap__coment" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
+            <section class="ap__coment" data-anonimo="Anonim" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
               <h2>Yorumlar</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Henüz yorum yok. İlk yorumu siz yapın.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Yorum bırakın</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Adınız" aria-label="Adınız" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Adınız (isteğe bağlı)" aria-label="Adınız (isteğe bağlı)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Yorumunuz" aria-label="Yorumunuz"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Yorumu gönder</button>
@@ -269,9 +269,9 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
           </div>
         </aside>
       </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

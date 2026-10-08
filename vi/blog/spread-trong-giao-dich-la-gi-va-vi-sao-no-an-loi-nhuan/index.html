@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,11 +218,11 @@
 <p>Hiểu về spread thay đổi cách bạn đánh giá liệu một giao dịch có đáng thực hiện hay không, đặc biệt với các tài sản kém thanh khoản hơn hoặc trong các giao dịch cực ngắn hạn, nơi chi phí này chiếm tỷ trọng lớn hơn.</p>
 <h2 id="spread-xuat-hien-trong-thuc-te-nhu-the-nao">Spread xuất hiện trong thực tế như thế nào</h2>
 <p>Hãy tưởng tượng cặp EUR/USD được báo giá như sau: mua (bid) ở mức 1,0850 và bán (ask) ở mức 1,0852. Điều này có nghĩa là, nếu bạn muốn mua euro ngay bây giờ, bạn trả 1,0852 đô la cho mỗi euro; nếu muốn bán, bạn chỉ nhận được 1,0850. Spread ở đây là 0,0002, hay 2 pip. Khi mở một vị thế, bạn đã bắt đầu với sự chênh lệch này bất lợi cho mình: để hòa vốn, giá cần di chuyển ít nhất 2 pip của spread trước khi bất kỳ khoản lợi nhuận nào xuất hiện.</p>
-<h2 id="ai-xac-đinh-muc-gia-nay-va-vi-sao">Ai xác định mức giá này, và vì sao</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ai-xac-đinh-muc-gia-nay-va-vi-sao">Ai xác định mức giá này, và vì sao</h2>
 <p>Spread được xác định bởi những bên cung cấp thanh khoản cho thị trường — các công ty môi giới, ngân hàng và nhà tạo lập thị trường cam kết luôn có sẵn một mức mua và một mức bán. Họ kiếm lợi nhuận chính từ khoản chênh lệch này, và độ lớn của spread phản ánh rủi ro mà họ chấp nhận khi duy trì việc chào giá liên tục đó. Một tài sản càng được giao dịch nhiều, với càng nhiều người mua và bán liên tục, spread có xu hướng càng nhỏ — đó là lý do vì sao đô la so với real thường có spread hẹp hơn nhiều so với một cổ phiếu có khối lượng giao dịch rất thấp trên sàn.</p>
 <h2 id="spread-co-đinh-va-spread-bien-đong">Spread cố định và spread biến động</h2>
 <p>Một số công cụ giao dịch với spread cố định, không thay đổi bất kể thời gian hay mức độ biến động. Những công cụ khác có spread biến động, sẽ mở rộng vào những thời điểm có tin tức quan trọng hoặc thanh khoản thấp — ví dụ, trong lúc công bố dữ liệu việc làm ở Hoa Kỳ, spread của đô la có thể nhảy từ 2 lên 8 hoặc 10 pip chỉ trong vài giây. Những ai giao dịch theo tin tức mà không chú ý đến điều này thường bất ngờ với mức giá vào lệnh tệ hơn nhiều so với dự kiến.</p>
-<h2 id="tac-đong-tich-luy-cua-spread-len-ket-qua-cua-ban">Tác động tích lũy của spread lên kết quả của bạn</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="tac-đong-tich-luy-cua-spread-len-ket-qua-cua-ban">Tác động tích lũy của spread lên kết quả của bạn</h2>
 <p>Giả sử bạn thực hiện 20 giao dịch mỗi tháng trên một tài sản có spread tương đương R$ 0,50 cho mỗi giao dịch (tính theo lô giao dịch). Điều đó đã tạo ra R$ 10,00 chi phí cố định hàng tháng, cộng thêm bất kỳ khoản phí nào khác. Đối với người giao dịch với tần suất rất cao — như trong day trade cực ngắn hạn — spread có thể ngốn một phần đáng kể lợi nhuận gộp, thậm chí trước cả thuế và phí môi giới. Một ví dụ bằng số: nếu chiến lược của bạn kỳ vọng mức lãi trung bình R$ 0,80 mỗi giao dịch, nhưng spread tốn R$ 0,50 cho mỗi lần vào và ra lệnh, chỉ còn lại R$ 0,30 biên lợi nhuận thực — bất kỳ sai sót nhỏ nào trong khâu thực thi cũng có thể xóa sạch kết quả này.</p>
 <h2 id="cach-giam-tac-đong-cua-spread-len-giao-dich-cua-ban">Cách giảm tác động của spread lên giao dịch của bạn</h2>
 <ul>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bài viết này có hữu ích không?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Hãy là người đầu tiên đánh giá.</p>
             </div>
-            <section class="ap__coment" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
+            <section class="ap__coment" data-anonimo="Ẩn danh" data-enviado="Chúng tôi đã nhận được bình luận. Bình luận sẽ hiển thị sau khi được duyệt." data-erro="Chưa gửi được. Vui lòng thử lại sau ít phút." data-vazio="Chưa có bình luận nào. Hãy là người đầu tiên." data-idioma="vi">
               <h2>Bình luận</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Chưa có bình luận nào. Hãy là người đầu tiên.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Để lại bình luận</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Tên của bạn" aria-label="Tên của bạn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Tên của bạn (không bắt buộc)" aria-label="Tên của bạn (không bắt buộc)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Bình luận của bạn" aria-label="Bình luận của bạn"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Gửi bình luận</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/cach-hieu-mot-bao-gia-thi-truong/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách hiểu một báo giá thị trường</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/nhung-cuon-sach-can-doc-cho-nguoi-moi-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Những cuốn sách cần đọc cho người mới bắt đầu trading</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/cong-cu-giao-dich-cach-chon-dung-cong-cu/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Công cụ giao dịch: cách chọn đúng công cụ</span><span class="bq__meta">24/09/2026 · 4 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-hieu-mot-bao-gia-thi-truong/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách hiểu một báo giá thị trường</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/nhung-cuon-sach-can-doc-cho-nguoi-moi-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Những cuốn sách cần đọc cho người mới bắt đầu trading</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cong-cu-giao-dich-cach-chon-dung-cong-cu/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Công cụ giao dịch: cách chọn đúng công cụ</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

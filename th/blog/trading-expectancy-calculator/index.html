@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/th/blog/trading-expectancy-calculator/",
       "inLanguage": "th",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "การบริหารความเสี่ยง",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 ก.ย. 2569</time><span class="ap__sep">อ่าน 4 นาที</span></span>
+              <span><time datetime="2026-09-24">24 ก.ย. 2569</time><span class="ap__sep">อ่าน 5 นาที</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span>
             </div>
-            <p class="ap__atual">อัปเดตเมื่อ: <time datetime="2026-09-27">27 กันยายน 2569</time></p>
+            <p class="ap__atual">อัปเดตเมื่อ: <time datetime="2026-10-08">8 ตุลาคม 2569</time></p>
             <span class="bq__tag">การบริหารความเสี่ยง</span>
             <h1>เครื่องคำนวณค่าคาดหวังทางคณิตศาสตร์: กลยุทธ์ของคุณมี edge ไหม</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>ฝ่ายความเสี่ยงและพฤติกรรม</strong><small>ฝ่ายของ Duotide</small></span></div>
@@ -219,12 +219,12 @@
             
 <p>กลยุทธ์หนึ่งอาจชนะการเทรดส่วนใหญ่และยังคงทำให้บัญชีค่อย ๆ หมดลงได้ สิ่งตรงข้ามก็เป็นจริงเช่นกัน เป็นไปได้ที่จะแพ้มากกว่าครึ่งของจุดเข้าและจบเดือนด้วยกำไร อัตราชนะเพียงอย่างเดียวไม่ได้ตอบว่ากลยุทธ์หนึ่งมีความได้เปรียบจริงหรือไม่ สิ่งที่ตอบคำถามนี้คือค่าคาดหวังทางคณิตศาสตร์ หรือที่เรียกว่า expectancy</p>
 <p>ค่าคาดหวังทางคณิตศาสตร์แสดงโดยเฉลี่ยว่ากลยุทธ์หนึ่งได้กำไรหรือขาดทุนเท่าไรต่อการเทรด โดยพิจารณาจากประวัติผลลัพธ์ ตัวเลขที่เป็นบวกเป็นหลักฐานของความได้เปรียบทางสถิติภายในกลุ่มตัวอย่างที่สังเกต ไม่ใช่การรับประกันกำไรในอนาคต</p>
-<h2 id="ส-ตรของค-าคาดหว-งทางคณ-ตศาสตร">สูตรของค่าคาดหวังทางคณิตศาสตร์</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-expectativa-matematica-no-trading.svg" alt="กราฟ: Ibovespa รายวัน ตั้งแต่ 02/01/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: Ibovespa รายวัน ตั้งแต่ 02/01/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="ส-ตรของค-าคาดหว-งทางคณ-ตศาสตร">สูตรของค่าคาดหวังทางคณิตศาสตร์</h2>
 <p>สูตรที่รู้จักกันดีที่สุดคือ</p>
 <p><strong>ค่าคาดหวัง = (อัตราชนะ x กำไรเฉลี่ย) - (อัตราแพ้ x ขาดทุนเฉลี่ย)</strong></p>
 <p>สูตรนี้ใช้ได้ดีเมื่อทุกการเทรดจบด้วยกำไรหรือขาดทุน และเมื่อค่าเฉลี่ยรวมต้นทุนอย่างค่าคอมมิชชันไว้แล้ว เพื่อให้การคำนวณชัดเจนยิ่งขึ้น ยังสามารถคำนวณค่าคาดหวังสุทธิได้โดยตรงจากผลรวม</p>
 <p><strong>ค่าคาดหวังสุทธิ = [(จำนวนครั้งที่ชนะ x กำไรเฉลี่ย) - (จำนวนครั้งที่แพ้ x ขาดทุนเฉลี่ย) - ต้นทุนรวม] / จำนวนการเทรดทั้งหมด</strong></p>
-<h2 id="ต-วอย-างท-แก-แล-วเป-นเง-นบาท">ตัวอย่างที่แก้แล้วเป็นเงินบาท</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ต-วอย-างท-แก-แล-วเป-นเง-นบาท">ตัวอย่างที่แก้แล้วเป็นเงินบาท</h2>
 <p>สมมติเทรดเดอร์คนหนึ่งทบทวนการเทรด 40 ครั้งจาก setup เดียวกัน ทุกครั้งมีความเสี่ยงที่วางแผนไว้เท่ากันต่อจุดเข้า และได้ตัวเลขดังนี้</p>
 <ul>
 <li>การเทรดที่ชนะ: 18 ครั้ง</li>
@@ -243,7 +243,7 @@
 <p>เมื่อแสดงผลลัพธ์นี้เป็นทวีคูณของความเสี่ยง (R) โดยใช้ความเสี่ยงเฉลี่ย R$ 100,00 ต่อการเทรด ค่าคาดหวังจะอยู่ที่ <strong>+0,235R ต่อการเทรด</strong> นั่นหมายความว่าโดยเฉลี่ยในกลุ่มตัวอย่างนี้ แต่ละการเทรดให้ผลตอบแทนประมาณ 23,5% ของความเสี่ยงที่วางแผนไว้ ปัจจัยกำไรของกลุ่มตัวอย่างเดียวกันนี้ คำนวณจากกำไรรวมหารด้วยขาดทุนรวม อยู่ที่ 2.700 / 1.760 หรือประมาณ <strong>1,53</strong></p>
 <h2 id="อ-ตราชนะ-45-อาจเป-นบวกได">อัตราชนะ 45% อาจเป็นบวกได้</h2>
 <p>สังเกตว่าอัตราชนะในตัวอย่างข้างต้นอยู่ที่เพียง 45% (18 จาก 40 การเทรด) ต่ำกว่าครึ่งหนึ่ง แต่ถึงกระนั้นค่าคาดหวังก็เป็นบวก เพราะกำไรเฉลี่ยมากกว่าขาดทุนเฉลี่ยเกือบสองเท่า นี่คือเหตุผลที่การถามเพียงว่าอัตราชนะของกลยุทธ์หนึ่งคือเท่าไรมักนำไปสู่ข้อสรุปที่ผิดพลาดเกี่ยวกับคุณภาพของมัน</p>
-<h2 id="อย-าล-มต-นท-น">อย่าลืมต้นทุน</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="อย-าล-มต-นท-น">อย่าลืมต้นทุน</h2>
 <p>ค่าคอมมิชชัน ค่าธรรมเนียมโบรกเกอร์ และต้นทุนที่อาจเกิดขึ้นจากการถือสถานะข้ามคืน ล้วนลดค่าคาดหวังสุทธิ กลยุทธ์ที่มีค่าคาดหวังขั้นต้น R$ 6,00 ต่อการเทรดอาจกลายเป็นลบได้หลังหักต้นทุนเฉลี่ย R$ 7,00 ต่อการเทรด เมื่อใดที่ทำได้ ให้ใช้ต้นทุนจริงที่โบรกเกอร์เรียกเก็บ ไม่ใช่การประมาณที่มองโลกในแง่ดี เพื่อไม่ให้ผลลัพธ์ถูกบิดเบือนให้ดูดีเกินจริง</p>
 <h2 id="ต-วอย-างท-สอง-คราวน-ค-าคาดหว-งเป-นลบ">ตัวอย่างที่สอง คราวนี้ค่าคาดหวังเป็นลบ</h2>
 <p>เพื่อให้เห็นความแตกต่างชัดเจน ดูกรณีที่สองด้วย 50 การเทรด 21 ครั้งชนะด้วยกำไรเฉลี่ย R$ 90,00 และ 29 ครั้งแพ้ด้วยขาดทุนเฉลี่ย R$ 75,00 กำไรรวมอยู่ที่ 21 x R$ 90,00 = R$ 1.890,00 และขาดทุนรวมอยู่ที่ 29 x R$ 75,00 = R$ 2.175,00 ผลลัพธ์สุทธิของกลุ่มตัวอย่างเป็นลบที่ R$ 285,00 ซึ่งให้ค่าคาดหวังเท่ากับ R$ 1.890,00 ลบ R$ 2.175,00 หารด้วย 50 การเทรด หรือขาดทุนเฉลี่ย R$ 5,70 ต่อการเทรด แม้จะมีอัตราชนะ 42% ซึ่งใกล้เคียงกับช่วงที่ถือว่าปกติสำหรับหลายกลยุทธ์ ความสัมพันธ์ระหว่างกำไรเฉลี่ยและขาดทุนเฉลี่ยก็ไม่เพียงพอที่จะรักษาผลลัพธ์ที่เป็นบวกไว้ได้</p>
@@ -258,7 +258,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
-              <p>อัปเดตเมื่อ: <time datetime="2026-09-27">27 ก.ย. 2569</time></p>
+              <p>อัปเดตเมื่อ: <time datetime="2026-10-08">8 ต.ค. 2569</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> ครั้งที่เข้าชม</span></span><button class="ap__compartilhar" type="button">แชร์ <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -270,12 +270,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="บทความนี้มีประโยชน์ไหม?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">มาเป็นคนแรกที่ให้คะแนน</p>
             </div>
-            <section class="ap__coment" data-enviado="เราได้รับความคิดเห็นของคุณแล้ว จะแสดงที่นี่หลังทีมงานอนุมัติ" data-erro="ส่งไม่ได้ในขณะนี้ โปรดลองอีกครั้งในอีกสักครู่" data-vazio="ยังไม่มีความคิดเห็น มาเป็นคนแรกกัน" data-idioma="th">
+            <section class="ap__coment" data-anonimo="ไม่ระบุชื่อ" data-enviado="เราได้รับความคิดเห็นของคุณแล้ว จะแสดงที่นี่หลังทีมงานอนุมัติ" data-erro="ส่งไม่ได้ในขณะนี้ โปรดลองอีกครั้งในอีกสักครู่" data-vazio="ยังไม่มีความคิดเห็น มาเป็นคนแรกกัน" data-idioma="th">
               <h2>ความคิดเห็น</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">ยังไม่มีความคิดเห็น มาเป็นคนแรกกัน</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">แสดงความคิดเห็น</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="ชื่อของคุณ" aria-label="ชื่อของคุณ" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="ชื่อของคุณ (ไม่บังคับ)" aria-label="ชื่อของคุณ (ไม่บังคับ)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="ความคิดเห็นของคุณ" aria-label="ความคิดเห็นของคุณ"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">ส่งความคิดเห็น</button>
@@ -288,7 +288,7 @@
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/th/blog/how-to-use-stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีใช้สต็อปลอสและเทคโปรฟิตในการเทรด forex</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
-            <a class="bq__card" href="/th/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">กลยุทธ์มาร์ติงเกลในการเทรด: ทำงานอย่างไรและความเสี่ยง</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
+            <a class="bq__card" href="/th/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">กลยุทธ์มาร์ติงเกลในการเทรด: ทำงานอย่างไรและความเสี่ยง</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
             <a class="bq__card" href="/th/blog/when-to-exit-a-trade-exit-signals/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">เมื่อไหร่ควรปิดการเทรด: สัญญาณการออก</span><span class="bq__meta">24/09/2569 · อ่าน 4 นาที</span></a>
           </div>
         </aside>
@@ -356,6 +356,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

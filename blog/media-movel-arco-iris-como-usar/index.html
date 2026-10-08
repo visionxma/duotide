@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,13 +219,13 @@
             <p>Entre os indicadores de tendência menos comentados, a Média Móvel Arco-Íris chama atenção pelo visual: várias médias móveis de períodos crescentes, plotadas juntas sobre o mesmo gráfico, formando faixas coloridas que se abrem e se fecham conforme a força da tendência muda. O nome é literal — quando bem configurado, o indicador realmente lembra um arco-íris sobre o preço.</p>
 <h2 id="como-o-indicador-e-construido">Como o indicador é construído</h2>
 <p>A lógica é simples de entender, mesmo que o cálculo por trás pareça complexo. Em vez de usar uma única média móvel, o indicador aplica uma sequência de médias, cada uma suavizando a anterior — por exemplo, uma média de 2 períodos sobre o preço, depois uma média de 2 períodos sobre essa primeira média, e assim por diante, repetindo o processo uma dezena de vezes. O resultado é um conjunto de linhas com defasagens ligeiramente diferentes entre si, coloridas para facilitar a leitura visual da ordem entre elas.</p>
-<h2 id="o-que-a-largura-e-a-ordem-das-faixas-revelam">O que a largura e a ordem das faixas revelam</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="o-que-a-largura-e-a-ordem-das-faixas-revelam">O que a largura e a ordem das faixas revelam</h2>
 <p>Quando o mercado está numa tendência forte e consistente, as linhas do arco-íris se organizam em ordem, uma acima da outra, e a faixa entre elas se abre, mostrando separação clara entre as médias de período mais curto e mais longo. Quando o mercado perde direção e entra em consolidação, as linhas se embaralham, se cruzam entre si repetidamente e a faixa se estreita, formando o que costuma ser chamado de "nó" no meio do arco-íris.</p>
 <p>Essa leitura visual funciona como um termômetro de força de tendência: faixa larga e ordenada indica tendência estabelecida; faixa estreita e embaralhada indica indecisão, momento em que sinais de entrada costumam ser menos confiáveis.</p>
 <h2 id="sinais-de-entrada-e-saida">Sinais de entrada e saída</h2>
 <p>O sinal mais usado é o rompimento do "nó": quando as linhas do arco-íris, antes embaralhadas, começam a se organizar numa sequência clara e a faixa começa a se abrir, isso é lido como o início de uma nova tendência. Traders mais conservadores esperam o preço fechar de forma consistente acima (ou abaixo) de todo o conjunto de médias antes de considerar isso uma confirmação mais forte.</p>
 <p>Para saída, muitos acompanham o momento em que a faixa começa a se estreitar novamente, ou quando o preço cruza de volta para dentro do arco-íris, sinalizando que a tendência que sustentava a operação está perdendo força.</p>
-<h2 id="um-exemplo-com-numeros">Um exemplo com números</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="um-exemplo-com-numeros">Um exemplo com números</h2>
 <p>Imagine um ativo em consolidação, oscilando entre R$ 18,50 e R$ 19,20 por vários dias, com as médias do arco-íris embaralhadas nessa faixa estreita de R$ 0,70. Em determinado dia, o preço rompe R$ 19,20 com força e as médias começam a se ordenar, com a mais curta acima da mais longa, abrindo uma faixa que passa a medir R$ 1,10 alguns dias depois, entre R$ 19,80 e R$ 20,90. Essa abertura de faixa, acompanhando o preço em alta, é o tipo de sinal visual que o indicador foi desenhado para destacar.</p>
 <h2 id="combinando-o-arco-iris-com-outras-ferramentas">Combinando o arco-íris com outras ferramentas</h2>
 <p>Como o indicador é, no fundo, uma leitura de tendência, ele não diz muito sobre pontos exatos de entrada dentro dessa tendência. Um oscilador como o RSI, usado em conjunto, ajuda a identificar momentos de recuo dentro da tendência já confirmada pelo arco-íris — evitando entrar justamente no topo de um movimento que já rodou bastante. O volume também ajuda a validar se o rompimento do "nó" tem participação real do mercado por trás, e não é apenas um movimento de poucos negócios.</p>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como calcular a força da tendência</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o ATR (Average True Range) e como calcular</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

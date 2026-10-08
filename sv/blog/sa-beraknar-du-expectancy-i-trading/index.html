@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/sa-beraknar-du-expectancy-i-trading/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Riskhantering",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">5 min läsning</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
             </div>
-            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-27">27 september 2026</time></p>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-10-08">8 oktober 2026</time></p>
             <span class="bq__tag">Riskhantering</span>
             <h1>Så beräknar du expectancy: har din strategi en edge?</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Redaktionen för risk och beteende</strong><small>Duotide-redaktion</small></span></div>
@@ -219,12 +219,12 @@
             
 <p>En strategi kan träffa rätt i de flesta affärerna och ändå tömma kontot lite i taget. Motsatsen gäller också: det är möjligt att ha fel i mer än hälften av ingångarna och ändå avsluta månaden med vinst. Träffsäkerheten ensam svarar inte på om en strategi har en verklig fördel. Den som svarar på den frågan är den matematiska förväntan, även kallad expectancy.</p>
 <p>Den matematiska förväntan visar, i genomsnitt, hur mycket en strategi vinner eller förlorar per affär, med hänsyn till resultathistoriken. Ett positivt tal är ett bevis på statistisk fördel inom det observerade urvalet, inte en garanti för framtida vinst.</p>
-<h2 id="formeln-for-matematisk-forvantan">Formeln för matematisk förväntan</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-expectativa-matematica-no-trading.svg" alt="Diagram: Ibovespa, dagligt, 2026-01-02 till 2026-10-07. Data: Yahoo Finance. Egen analys." width="960" height="540" loading="lazy" decoding="async"><figcaption>Diagram: Ibovespa, dagligt, 2026-01-02 till 2026-10-07. Data: Yahoo Finance. Egen analys.</figcaption></figure><h2 id="formeln-for-matematisk-forvantan">Formeln för matematisk förväntan</h2>
 <p>Den mest kända versionen av formeln är:</p>
 <p><strong>Förväntan = (träffsäkerhet x genomsnittlig vinst) - (felfrekvens x genomsnittlig förlust)</strong></p>
 <p>Den här formeln fungerar bra när varje affär slutar med vinst eller förlust, och när genomsnitten redan inkluderar kostnader som courtage. För att göra beräkningen ännu tydligare går det också att beräkna nettoförväntan direkt utifrån totalerna:</p>
 <p><strong>Nettoförväntan = [(antal vinster x genomsnittlig vinst) - (antal förluster x genomsnittlig förlust) - totala kostnader] / totalt antal affärer</strong></p>
-<h2 id="ett-lost-exempel-i-kronor">Ett löst exempel i kronor</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ett-lost-exempel-i-kronor">Ett löst exempel i kronor</h2>
 <p>Anta att en trader granskade 40 affärer från samma setup, alla med samma planerade risk per ingång, och kom fram till följande siffror:</p>
 <ul>
 <li>Vinnande affärer: 18</li>
@@ -243,7 +243,7 @@
 <p>Om man uttrycker resultatet i multiplar av risken (R), med den genomsnittliga risken på R$ 100,00 per affär, blir förväntan <strong>+0,235R per affär</strong>. Det betyder att, i genomsnitt för det här urvalet, gav varje affär cirka 23,5% av den planerade risken. Vinstfaktorn för samma urval, beräknad som total vinst delat med total förlust, blir 2.700 / 1.760, eller ungefär <strong>1,53</strong>.</p>
 <h2 id="en-traffsakerhet-pa-45-kan-vara-positiv">En träffsäkerhet på 45% kan vara positiv</h2>
 <p>Lägg märke till att träffsäkerheten i exemplet ovan bara är 45% (18 av 40 affärer), under hälften. Ändå är förväntan positiv, eftersom den genomsnittliga vinsten är nästan dubbelt så stor som den genomsnittliga förlusten. Det är anledningen till att det ofta leder till felaktiga slutsatser om en strategis kvalitet att bara fråga vad dess träffsäkerhet är.</p>
-<h2 id="glom-inte-kostnaderna">Glöm inte kostnaderna</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="glom-inte-kostnaderna">Glöm inte kostnaderna</h2>
 <p>Courtage, mäklaravgifter och eventuella kostnader för att hålla en position öppen över natten minskar nettoförväntan. En strategi med en bruttoförväntan på R$ 6,00 per affär kan bli negativ efter avdrag för R$ 7,00 i genomsnittliga kostnader per affär. Använd om möjligt de verkliga kostnaderna som mäklaren tar ut, inte en optimistisk uppskattning, för att inte konstgjort blåsa upp resultatet.</p>
 <h2 id="ett-andra-exempel-nu-med-negativ-forvantan">Ett andra exempel, nu med negativ förväntan</h2>
 <p>För att göra kontrasten tydlig, se ett andra fall med 50 affärer: 21 vinnande med en genomsnittlig vinst på R$ 90,00 och 29 förlorande med en genomsnittlig förlust på R$ 75,00. Den totala vinsten blir 21 x R$ 90,00 = R$ 1.890,00, och den totala förlusten 29 x R$ 75,00 = R$ 2.175,00. Urvalets nettoresultat är negativt, R$ 285,00, vilket ger en förväntan på R$ 1.890,00 minus R$ 2.175,00, delat på 50 affärer, det vill säga en genomsnittlig förlust på R$ 5,70 per affär. Trots en träffsäkerhet på 42%, nära det intervall som anses normalt för många strategier, räckte inte förhållandet mellan genomsnittlig vinst och genomsnittlig förlust för att upprätthålla ett positivt resultat.</p>
@@ -258,7 +258,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
             </div>
             <div class="ap__fim">
-              <p>Uppdaterad: <time datetime="2026-09-27">27 sep. 2026</time></p>
+              <p>Uppdaterad: <time datetime="2026-10-08">8 okt. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -270,12 +270,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Var artikeln till hjälp?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Bli först med att betygsätta.</p>
             </div>
-            <section class="ap__coment" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
               <h2>Kommentarer</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Inga kommentarer ännu. Bli först med att kommentera.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lämna en kommentar</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ditt namn" aria-label="Ditt namn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ditt namn (valfritt)" aria-label="Ditt namn (valfritt)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Din kommentar" aria-label="Din kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Skicka kommentar</button>
@@ -288,7 +288,7 @@
           <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/sv/blog/sa-anvander-du-stop-loss-och-take-profit-i-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så använder du stop loss och take profit i forex</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
-            <a class="bq__card" href="/sv/blog/martingale-strategin-i-trading-risker/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Martingale-strategin i trading: så fungerar den och riskerna</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/martingale-strategin-i-trading-risker/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Martingale-strategin i trading: så fungerar den och riskerna</span><span class="bq__meta">2026-09-24 · 5 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/nar-du-ska-avsluta-en-affar-utgangssignaler/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">När du ska avsluta en affär: utgångssignaler</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
           </div>
         </aside>
@@ -356,6 +356,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

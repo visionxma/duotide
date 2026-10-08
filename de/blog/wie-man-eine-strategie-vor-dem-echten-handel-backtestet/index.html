@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/de/blog/wie-man-eine-strategie-vor-dem-echten-handel-backtestet/",
       "inLanguage": "de",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
       "articleSection": "Strategien",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24. Sept. 2026</time><span class="ap__sep">4 Min. Lesezeit</span></span>
+              <span><time datetime="2026-09-24">24. Sept. 2026</time><span class="ap__sep">5 Min. Lesezeit</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span>
             </div>
-            <p class="ap__atual">Aktualisiert am: <time datetime="2026-09-27">27. September 2026</time></p>
+            <p class="ap__atual">Aktualisiert am: <time datetime="2026-10-08">8. Oktober 2026</time></p>
             <span class="bq__tag">Strategien</span>
             <h1>Wie man eine Strategie vor dem echten Handel backtestet</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Ressort Analyse</strong><small>Duotide-Ressort</small></span></div>
@@ -216,13 +216,13 @@
           </aside>
           <div class="ap__texto article">
             <p>Backtest ist der Prozess, eine Handelsstrategie mit historischen Daten zu testen, bevor echtes Kapital darin riskiert wird. Die Idee ist einfach: dieselben Ein- und Ausstiegsregeln, die Sie live nutzen würden, auf einen vergangenen Chart-Zeitraum anzuwenden und zu protokollieren, was bei jedem erzeugten Signal passiert wäre. Es ist ein Schritt, der eine mit Funktionsnachweis belegte Strategie von einer Idee unterscheidet, die nur beim rückblickenden Betrachten des Charts gut erscheint.</p>
-<h2 id="schritt-1-definieren-sie-die-ein-und-ausstiegsregel-schriftl">Schritt 1: definieren Sie die Ein- und Ausstiegsregel schriftlich</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/como-fazer-o-backtest-de-uma-estrategia.svg" alt="Chart: S&amp;P 500, täglich, 02.01.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: S&amp;P 500, täglich, 02.01.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung.</figcaption></figure><h2 id="schritt-1-definieren-sie-die-ein-und-ausstiegsregel-schriftl">Schritt 1: definieren Sie die Ein- und Ausstiegsregel schriftlich</h2>
 <p>Bevor Sie historische Daten betrachten, schreiben Sie die exakte Regel auf, die Sie testen werden — zum Beispiel: "kaufen, wenn der Preis das Hoch der letzten 20 Kerzen mit Volumen 30% über dem Durchschnitt durchbricht; bei 2% Gewinn im Plus aussteigen oder bei 1% Verlust am Stop". Vage Regeln wie "kaufen, wenn es nach einer guten Gelegenheit aussieht" können nicht konsistent getestet werden, weil sie bei jedem Signal von subjektivem Urteil abhängen.</p>
-<h2 id="schritt-2-gehen-sie-die-historie-signal-fur-signal-durch">Schritt 2: gehen Sie die Historie Signal für Signal durch</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="schritt-2-gehen-sie-die-historie-signal-fur-signal-durch">Schritt 2: gehen Sie die Historie Signal für Signal durch</h2>
 <p>Mit der definierten Regel gehen Sie den historischen Chart durch, identifizieren jedes Mal, wenn die Einstiegsbedingung erfüllt gewesen wäre, und protokollieren das Ergebnis, das die Ausstiegsregel erzeugt hätte — Gewinn oder Verlust, in Punkten oder Prozent. Wichtig ist, die Disziplin zu wahren, die Regel exakt wie geschrieben anzuwenden, ohne das Ergebnis nachträglich "anzupassen", nachdem Sie gesehen haben, was passiert ist, unter Risiko, den Test zugunsten der Strategie zu verzerren.</p>
 <h2 id="schritt-3-berechnen-sie-trefferquote-und-durchschnittlichen-">Schritt 3: berechnen Sie Trefferquote und durchschnittlichen Payoff</h2>
 <p>Nach dem Sammeln einer angemessenen Stichprobe — mindestens 30 Signale, idealerweise mehr — berechnen Sie zwei Zahlen: die Trefferquote (Prozentsatz gewinnender Trades) und den durchschnittlichen Payoff (der durchschnittliche Gewinn der gewinnenden Trades geteilt durch den durchschnittlichen Verlust der verlierenden). Angenommen ein Backtest mit 40 Signalen, 18 Gewinnern und 22 Verlierern, durchschnittlichem Gewinn von R$ 60,00 bei den Gewinnern und durchschnittlichem Verlust von R$ 35,00 bei den Verlierern. Die Trefferquote beträgt 45% (18/40) und der Payoff 1,71 (60/35).</p>
-<h2 id="schritt-4-berechnen-sie-die-expectancy">Schritt 4: berechnen Sie die Expectancy</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="schritt-4-berechnen-sie-die-expectancy">Schritt 4: berechnen Sie die Expectancy</h2>
 <p>Die Expectancy misst das erwartete durchschnittliche Ergebnis pro Trade und wird so berechnet: (Trefferquote × durchschnittlicher Gewinn) − (Fehlerquote × durchschnittlicher Verlust). Mit den Zahlen des Beispiels: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positiv pro Trade, im Durchschnitt. Eine positive Expectancy zeigt an, dass die Strategie bei gleichbleibendem Verhältnis von Treffern und gleichbleibendem Payoff über die Zeit tendenziell ein positives Ergebnis erzeugt — was nicht garantiert, dass jeder einzelne Trade profitabel sein wird, aber einen statistischen Vorteil in der getesteten Stichprobe anzeigt.</p>
 <h2 id="was-der-backtest-nicht-garantiert">Was der Backtest nicht garantiert</h2>
 <p>Ein positives Ergebnis in der Historie garantiert nicht dieselbe Performance in Zukunft — Marktbedingungen ändern sich, und eine kleine Stichprobe kann zufällig günstig gewesen sein. Zudem sind manuelle Backtests dem Rückschaufehler ausgesetzt: Es ist leicht, unabsichtlich die Interpretation eines Signals anzupassen, wenn man weiß, was danach passierte. Deshalb lassen viele Trader dem Backtest eine Testphase in einem simulierten Konto folgen, wobei dieselbe Regel in Echtzeit angewendet wird, bevor mit relevantem Kapital gehandelt wird.</p>
@@ -241,7 +241,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
             </div>
             <div class="ap__fim">
-              <p>Aktualisiert am: <time datetime="2026-09-27">27. Sept. 2026</time></p>
+              <p>Aktualisiert am: <time datetime="2026-10-08">8. Okt. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span><button class="ap__compartilhar" type="button">Teilen <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -253,12 +253,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="War dieser Artikel hilfreich?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Geben Sie die erste Bewertung ab.</p>
             </div>
-            <section class="ap__coment" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
               <h2>Kommentare</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Noch keine Kommentare. Schreiben Sie den ersten.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Kommentar schreiben</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ihr Name" aria-label="Ihr Name" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ihr Name (optional)" aria-label="Ihr Name (optional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ihr Kommentar" aria-label="Ihr Kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Kommentar senden</button>
@@ -270,9 +270,9 @@
         <aside class="ap__rel">
           <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Kreuzung exponentieller gleitender Durchschnitte (EMA)</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/wie-man-die-laufzeit-ablauf-eines-trades-waehlt/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wie man die Laufzeit (Ablauf) eines Trades wählt</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/beste-indikatoren-fuer-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Die besten Indikatoren für Day-Trader</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Kreuzung exponentieller gleitender Durchschnitte (EMA)</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/wie-man-die-laufzeit-ablauf-eines-trades-waehlt/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Wie man die Laufzeit (Ablauf) eines Trades wählt</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/beste-indikatoren-fuer-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Die besten Indikatoren für Day-Trader</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
           </div>
         </aside>
       </div>
@@ -339,6 +339,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

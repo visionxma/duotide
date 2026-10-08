@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -224,7 +224,7 @@
 <p><strong>Banda central = Media Movel Simples de 20 periodos</strong></p>
 <p><strong>Banda superior = Banda central + (2 x desvio padrao)</strong></p>
 <p><strong>Banda inferior = Banda central - (2 x desvio padrao)</strong></p>
-<h2 id="um-exemplo-numerico">Um exemplo numerico</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="um-exemplo-numerico">Um exemplo numerico</h2>
 <p>Suponha uma acao com media movel de 20 periodos em R$ 48,00 e desvio padrao recente de R$ 1,50. As bandas ficam calculadas assim:</p>
 <ul>
 <li>Banda superior = R$ 48,00 + (2 x R$ 1,50) = R$ 51,00</li>
@@ -233,7 +233,7 @@
 <p>Isso cria um canal de R$ 45,00 a R$ 51,00 ao redor da media. Como o calculo usa desvio padrao, ele se adapta sozinho: se a volatilidade do ativo aumentar, o desvio padrao cresce e as bandas se afastam da media. Se a volatilidade cair, as bandas se aproximam.</p>
 <h2 id="o-que-tocar-a-banda-realmente-significa">O que tocar a banda realmente significa</h2>
 <p>Em termos estatisticos, usar duas vezes o desvio padrao busca capturar a maior parte das oscilacoes normais de preco dentro do canal, partindo do pressuposto de uma distribuicao proxima da normal. Na pratica, o preco toca ou ultrapassa a banda com mais frequencia do que essa suposicao teorica sugeriria, porque o mercado nao se comporta exatamente como uma distribuicao estatistica ideal. Tocar a banda superior significa que o preco esta esticado em relacao a sua propria media recente, nao que uma queda esteja garantida a seguir.</p>
-<h2 id="squeeze-quando-as-bandas-se-apertam">Squeeze: quando as bandas se apertam</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="squeeze-quando-as-bandas-se-apertam">Squeeze: quando as bandas se apertam</h2>
 <p>Quando a volatilidade cai por um periodo, as bandas se aproximam bastante, formando o que costuma ser chamado de squeeze. Esse aperto costuma anteceder um periodo de maior movimento, embora nao indique a direcao desse movimento futuro. Um squeeze pode ser seguido tanto por um rompimento de alta quanto de baixa, e o proprio indicador nao tem como antecipar qual dos dois vai acontecer.</p>
 <h2 id="preco-andando-pela-banda-em-tendencia-forte">Preco andando pela banda em tendencia forte</h2>
 <p>Em uma tendencia de alta forte, e comum o preco andar colado ou repetidamente tocando a banda superior por varios candles seguidos, sem que isso signifique uma reversao iminente. Traders que vendem toda vez que o preco toca a banda superior durante uma tendencia forte costumam acumular perdas, porque estao lutando contra o movimento predominante em vez de identificar uma real perda de forca. O comportamento das bandas em uma tendencia definida e diferente do comportamento em um mercado lateral, e tratar os dois cenarios da mesma forma e um erro comum.</p>
@@ -261,12 +261,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -278,9 +278,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como calcular a força da tendência</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o ATR (Average True Range) e como calcular</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -346,6 +346,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

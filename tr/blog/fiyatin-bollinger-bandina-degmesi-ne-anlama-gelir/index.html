@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -223,7 +223,7 @@
 <p><strong>Orta bant = 20 periyotluk Basit Hareketli Ortalama</strong></p>
 <p><strong>Üst bant = Orta bant + (2 x standart sapma)</strong></p>
 <p><strong>Alt bant = Orta bant - (2 x standart sapma)</strong></p>
-<h2 id="sayısal-bir-ornek">Sayısal Bir Örnek</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="sayısal-bir-ornek">Sayısal Bir Örnek</h2>
 <p>20 periyotluk hareketli ortalaması R$ 48,00 ve son dönem standart sapması R$ 1,50 olan bir hisse düşünün. Bantlar şöyle hesaplanır:</p>
 <ul>
 <li>Üst bant = R$ 48,00 + (2 x R$ 1,50) = R$ 51,00</li>
@@ -232,7 +232,7 @@
 <p>Bu, ortalamanın etrafında R$ 45,00 ile R$ 51,00 arasında bir kanal oluşturur. Hesaplama standart sapma kullandığından kendi kendine uyum sağlar: varlığın volatilitesi artarsa standart sapma büyür ve bantlar ortalamadan uzaklaşır. Volatilite düşerse bantlar birbirine yaklaşır.</p>
 <h2 id="banda-degmek-gercekte-ne-anlama-gelir">Banda Değmek Gerçekte Ne Anlama Gelir</h2>
 <p>İstatistiksel olarak, standart sapmanın iki katını kullanmak, normale yakın bir dağılım varsayımından yola çıkarak normal fiyat dalgalanmalarının büyük kısmını kanal içinde yakalamayı amaçlar. Pratikte fiyat, bu teorik varsayımın önerdiğinden daha sık banda değer veya onu aşar, çünkü piyasa tam olarak ideal bir istatistiksel dağılım gibi davranmaz. Üst banda değmek, fiyatın kendi son ortalamasına göre gerildiği anlamına gelir, hemen ardından bir düşüşün garanti olduğu anlamına gelmez.</p>
-<h2 id="squeeze-bantlar-daraldıgında">Squeeze: Bantlar Daraldığında</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="squeeze-bantlar-daraldıgında">Squeeze: Bantlar Daraldığında</h2>
 <p>Volatilite bir süreliğine düştüğünde bantlar oldukça yaklaşır ve genellikle squeeze olarak adlandırılan durumu oluşturur. Bu daralma genellikle daha büyük bir hareket dönemini önceler, ama bu gelecekteki hareketin yönünü göstermez. Bir squeezei hem yukarı hem de aşağı yönlü bir kırılım izleyebilir ve göstergenin kendisi ikisinden hangisinin olacağını öngöremez.</p>
 <h2 id="guclu-trendde-bant-boyunca-ilerleyen-fiyat">Güçlü Trendde Bant Boyunca İlerleyen Fiyat</h2>
 <p>Güçlü bir yükseliş trendinde, fiyatın üst banda yapışık ilerlemesi ya da art arda birçok mumda tekrar tekrar ona değmesi yaygındır, ve bu yakın bir dönüşü göstermez. Güçlü bir trend sırasında fiyat üst banda her değdiğinde satan traderlar genellikle kayıp biriktirir, çünkü gerçek bir güç kaybını tespit etmek yerine baskın harekete karşı savaşırlar. Bantların tanımlı bir trenddeki davranışı yatay bir piyasadakinden farklıdır ve iki senaryoyu aynı şekilde ele almak yaygın bir hatadır.</p>
@@ -260,12 +260,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bu makale faydalı oldu mu?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">İlk değerlendiren siz olun.</p>
             </div>
-            <section class="ap__coment" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
+            <section class="ap__coment" data-anonimo="Anonim" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
               <h2>Yorumlar</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Henüz yorum yok. İlk yorumu siz yapın.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Yorum bırakın</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Adınız" aria-label="Adınız" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Adınız (isteğe bağlı)" aria-label="Adınız (isteğe bağlı)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Yorumunuz" aria-label="Yorumunuz"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Yorumu gönder</button>
@@ -277,9 +277,9 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
           </div>
         </aside>
       </div>
@@ -346,6 +346,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

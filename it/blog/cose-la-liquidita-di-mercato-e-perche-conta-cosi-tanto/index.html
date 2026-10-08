@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -225,11 +225,11 @@
 <p>La liquidità coinvolge anche la rapidità con cui un ordine può essere completato. Una quotazione attraente sullo schermo serve a poco se non c'è interesse sufficiente dall'altro lato per chiudere l'affare quando ne hai davvero bisogno.</p>
 <h3>4. Capacità di recupero dopo un ordine grande</h3>
 <p>Anche un mercato liquido può muoversi quando arriva un ordine grande. La differenza sta in cosa succede dopo: in un mercato resiliente, nuove offerte di acquisto e vendita appaiono rapidamente e lo spread torna al normale. In un mercato più fragile, il book degli ordini resta più sottile più a lungo, e lo spread impiega tempo a normalizzarsi.</p>
-<h2 id="perche-il-prezzo-sullo-schermo-puo-non-essere-il-prezzo-di-e">Perché il prezzo sullo schermo può non essere il prezzo di esecuzione</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/mer-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="perche-il-prezzo-sullo-schermo-puo-non-essere-il-prezzo-di-e">Perché il prezzo sullo schermo può non essere il prezzo di esecuzione</h2>
 <p>L'ultimo prezzo negoziato mostra che uno scambio è avvenuto a quel valore, ma non garantisce che il prossimo ordine, soprattutto un ordine grande, verrà eseguito allo stesso prezzo. Supponi che l'ultimo scambio di un'azione sia stato a R$ 10,00, ma i venditori disponibili ora offrano 50 azioni a R$ 10,00, altre 50 azioni a R$ 10,10 e 200 azioni a R$ 10,50. Un ordine a mercato per comprare 300 azioni dovrebbe attraversare i tre livelli, risultando in un prezzo medio di esecuzione di circa R$ 10,35, ben sopra l'ultimo prezzo mostrato sullo schermo.</p>
 <h2 id="liquidita-non-e-lo-stesso-di-volume">Liquidità non è lo stesso di volume</h2>
 <p>Il volume mostra quanto è stato negoziato durante un periodo. La liquidità chiede cosa può essere negoziato ora, con quale rapidità e a quale costo. Un mercato può registrare volume alto durante uno shock di notizie, con spread che si allargano e il prezzo che salta tra uno scambio e l'altro, il che significa alta attività, ma esecuzione scarsa. Un altro mercato può avere volume modesto e comunque assorbire un piccolo ordine con poco impatto sul prezzo.</p>
-<h2 id="perche-questo-conta-nella-pratica">Perché questo conta nella pratica</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="perche-questo-conta-nella-pratica">Perché questo conta nella pratica</h2>
 <ul>
 <li><strong>Costo di ingresso e uscita:</strong> lo spread viene pagato tramite il prezzo di esecuzione, quindi uno spread ampio aumenta la distanza che il prezzo deve percorrere perché l'operazione inizi a essere in profitto.</li>
 <li><strong>Slippage:</strong> in mercati con poca profondità, il prezzo finale dell'ordine può risultare molto diverso dal prezzo atteso al momento dell'invio.</li>
@@ -256,12 +256,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Questo articolo ti è stato utile?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sii il primo a valutare.</p>
             </div>
-            <section class="ap__coment" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
+            <section class="ap__coment" data-anonimo="Anonimo" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
               <h2>Commenti</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ancora nessun commento. Scrivi tu il primo.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lascia un commento</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Il tuo nome" aria-label="Il tuo nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Il tuo nome (facoltativo)" aria-label="Il tuo nome (facoltativo)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Il tuo commento" aria-label="Il tuo commento"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Invia commento</button>
@@ -274,8 +274,8 @@
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/ipo-di-anthropic-cosa-si-sa-finora/"><img src="/assets/img/capas/noticia-titulos-globais-caem-apostas-fed.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">IPO di Anthropic: cosa è fatto e cosa è ancora voce</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/cose-la-negoziazione-fuori-orario-after-hours/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è la negoziazione fuori orario di borsa (after-hours)</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/4-libri-classici-che-ogni-trader-dovrebbe-leggere/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">4 libri classici che ogni trader dovrebbe leggere</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-la-negoziazione-fuori-orario-after-hours/"><img src="/assets/img/capas/noticia-futuros-nasdaq-caem-juros-treasuries.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è la negoziazione fuori orario di borsa (after-hours)</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/4-libri-classici-che-ogni-trader-dovrebbe-leggere/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">4 libri classici che ogni trader dovrebbe leggere</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
           </div>
         </aside>
       </div>
@@ -342,6 +342,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

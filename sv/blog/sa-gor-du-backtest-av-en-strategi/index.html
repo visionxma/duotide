@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/sa-gor-du-backtest-av-en-strategi/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-01.webp",
       "articleSection": "Strategier",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">5 min läsning</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
             </div>
-            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-27">27 september 2026</time></p>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-10-08">8 oktober 2026</time></p>
             <span class="bq__tag">Strategier</span>
             <h1>Så gör du backtest av en strategi innan du handlar på riktigt</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Analysredaktionen</strong><small>Duotide-redaktion</small></span></div>
@@ -216,13 +216,13 @@
           </aside>
           <div class="ap__texto article">
             <p>Backtest är processen att testa en handelsstrategi med hjälp av historiska data, innan man riskerar riktigt kapital i den. Idén är enkel: tillämpa samma ingångs- och utgångsregler som du skulle använda live på en tidigare period i diagrammet, och registrera vad som skulle ha hänt vid varje genererad signal. Det är ett steg som skiljer en strategi med belägg för att fungera från en idé som bara verkar bra när man tittar på diagrammet i efterhand.</p>
-<h2 id="steg-1-definiera-ingangs-och-utgangsregeln-skriftligt">Steg 1: definiera ingångs- och utgångsregeln skriftligt</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/como-fazer-o-backtest-de-uma-estrategia.svg" alt="Diagram: S&amp;P 500, dagligt, 2026-01-02 till 2026-10-07. Data: Yahoo Finance. Egen analys." width="960" height="540" loading="lazy" decoding="async"><figcaption>Diagram: S&amp;P 500, dagligt, 2026-01-02 till 2026-10-07. Data: Yahoo Finance. Egen analys.</figcaption></figure><h2 id="steg-1-definiera-ingangs-och-utgangsregeln-skriftligt">Steg 1: definiera ingångs- och utgångsregeln skriftligt</h2>
 <p>Innan du tittar på någon historisk data, skriv den exakta regel du kommer att testa — till exempel: "köp när priset bryter över de senaste 20 candlarnas högsta med en volym 30% över genomsnittet; ta vinst vid 2% uppgång eller stoppa vid 1% nedgång". Vaga regler som "köp när det verkar vara ett bra tillfälle" kan inte testas konsekvent, eftersom de beror på subjektivt omdöme vid varje signal.</p>
-<h2 id="steg-2-ga-igenom-historiken-signal-for-signal">Steg 2: gå igenom historiken signal för signal</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="steg-2-ga-igenom-historiken-signal-for-signal">Steg 2: gå igenom historiken signal för signal</h2>
 <p>Med regeln definierad, gå igenom det historiska diagrammet och identifiera varje gång ingångsvillkoret skulle ha uppfyllts, och registrera resultatet som utgångsregeln skulle ha gett — vinst eller förlust, i punkter eller procent. Det är viktigt att hålla disciplinen att tillämpa regeln exakt som den är skriven, utan att "justera" resultatet efter att ha sett vad som hände, med risk att snedvrida testet till strategins fördel.</p>
 <h2 id="steg-3-berakna-traffsakerheten-och-den-genomsnittliga-payoff">Steg 3: beräkna träffsäkerheten och den genomsnittliga payoffen</h2>
 <p>Efter att ha samlat ett rimligt urval — minst 30 signaler, helst fler — beräkna två tal: träffsäkerheten (andel vinnande affärer) och den genomsnittliga payoffen (den genomsnittliga vinsten för vinnande affärer delat med den genomsnittliga förlusten för förlorande). Anta ett backtest med 40 signaler, 18 vinnande och 22 förlorande, en genomsnittlig vinst på R$ 60,00 i de vinnande och en genomsnittlig förlust på R$ 35,00 i de förlorande. Träffsäkerheten är 45% (18/40) och payoffen är 1,71 (60/35).</p>
-<h2 id="steg-4-berakna-den-matematiska-forvantan">Steg 4: beräkna den matematiska förväntan</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="steg-4-berakna-den-matematiska-forvantan">Steg 4: beräkna den matematiska förväntan</h2>
 <p>Den matematiska förväntan mäter det genomsnittliga förväntade resultatet per affär, och beräknas så här: (träffsäkerhet × genomsnittlig vinst) − (felfrekvens × genomsnittlig förlust). Med siffrorna från exemplet: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positivt per affär, i genomsnitt. En positiv förväntan tyder på att strategin, om samma andel träffar och samma payoff bibehålls över tid, tenderar att generera ett positivt resultat — vilket inte garanterar att varje enskild affär blir lönsam, men indikerar en statistisk fördel i det testade urvalet.</p>
 <h2 id="vad-backtestet-inte-garanterar">Vad backtestet inte garanterar</h2>
 <p>Ett positivt resultat i historiken garanterar inte samma prestanda framöver — marknadsförhållanden förändras, och ett litet urval kan ha varit gynnsamt av en slump. Dessutom är manuella backtester utsatta för efterklokhetsbias: det är lätt att, utan att mena det, justera tolkningen av en signal med vetskap om vad som hände sedan. Därför följer många traders upp backtestet med en testperiod på ett simulerat konto, där samma regel tillämpas i realtid innan man handlar med betydande kapital.</p>
@@ -241,7 +241,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
             </div>
             <div class="ap__fim">
-              <p>Uppdaterad: <time datetime="2026-09-27">27 sep. 2026</time></p>
+              <p>Uppdaterad: <time datetime="2026-10-08">8 okt. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -253,12 +253,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Var artikeln till hjälp?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Bli först med att betygsätta.</p>
             </div>
-            <section class="ap__coment" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
               <h2>Kommentarer</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Inga kommentarer ännu. Bli först med att kommentera.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lämna en kommentar</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ditt namn" aria-label="Ditt namn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ditt namn (valfritt)" aria-label="Ditt namn (valfritt)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Din kommentar" aria-label="Din kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Skicka kommentar</button>
@@ -270,9 +270,9 @@
         <aside class="ap__rel">
           <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/sv/blog/korsning-av-ema-i-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Korsning av exponentiella glidande medelvärden (EMA) i trading</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
-            <a class="bq__card" href="/sv/blog/sa-valjer-du-loptiden-for-en-affar/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du löptiden (expiration) för en affär</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
-            <a class="bq__card" href="/sv/blog/basta-indikatorerna-for-daytrading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">De bästa indikatorerna för den som gör daytrading</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/korsning-av-ema-i-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Korsning av exponentiella glidande medelvärden (EMA) i trading</span><span class="bq__meta">2026-09-24 · 5 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-valjer-du-loptiden-for-en-affar/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så väljer du löptiden (expiration) för en affär</span><span class="bq__meta">2026-09-24 · 5 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/basta-indikatorerna-for-daytrading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">De bästa indikatorerna för den som gör daytrading</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
           </div>
         </aside>
       </div>
@@ -339,6 +339,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

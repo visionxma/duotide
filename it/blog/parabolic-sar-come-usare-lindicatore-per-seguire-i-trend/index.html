@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,14 +218,14 @@
 <h2 id="come-viene-calcolato-l-indicatore">Come viene calcolato l'indicatore</h2>
 <p>Il calcolo del Parabolic SAR usa tre elementi: il valore del SAR del periodo precedente, il Punto Estremo (EP, il massimo o minimo più recente durante il trend) e il Fattore di Accelerazione (AF), che inizia a 0,02 e aumenta di 0,02 ogni volta che viene raggiunto un nuovo Punto Estremo, fino a un tetto standard di 0,20.</p>
 <p>La formula è: nuovo SAR = SAR precedente + AF × (EP − SAR precedente). Questo significa che, all'inizio di un trend, il SAR si muove lentamente, e man mano che il Fattore di Accelerazione cresce, i punti iniziano ad avvicinarsi al prezzo più rapidamente — da qui la forma "parabolica" che dà il nome all'indicatore.</p>
-<h2 id="un-esempio-numerico">Un esempio numerico</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="un-esempio-numerico">Un esempio numerico</h2>
 <p>Supponi un'azione in trend rialzista, con il SAR del giorno precedente a R$ 41,00, il Punto Estremo (il massimo più alto del trend finora) a R$ 45,00 e il Fattore di Accelerazione a 0,04 dopo due avanzamenti di massimo. Il nuovo SAR sta a:</p>
 <p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16.</p>
 <p>Il giorno successivo, se l'azione fa un nuovo massimo di R$ 46,00, il Punto Estremo sale a questo valore e il Fattore di Accelerazione avanza a 0,06. Il SAR successivo sarebbe R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45. Nota come il punto sale sempre più rapidamente a ogni nuovo avanzamento, "inseguendo" il prezzo.</p>
 <h2 id="quando-l-indicatore-segnala-inversione">Quando l'indicatore segnala inversione</h2>
 <p>Finché il prezzo resta sopra la linea di punti, il SAR continua a salire insieme al trend. Nel momento in cui il prezzo chiude sotto il valore del SAR, l'indicatore si inverte: i punti iniziano ad apparire sopra le candele, il Fattore di Accelerazione torna a 0,02 e il Punto Estremo viene ricalcolato in base al minimo più recente, ora per un trend ribassista.</p>
 <p>È questa inversione — lo "stop and reverse" del nome — che molti trader usano sia come segnale di uscita da una posizione long sia come possibile segnale di ingresso short, a seconda della strategia adottata.</p>
-<h2 id="punti-forti-e-limiti">Punti forti e limiti</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="punti-forti-e-limiti">Punti forti e limiti</h2>
 <p>Il Parabolic SAR funziona bene in mercati con trend definito e di lunga durata, dove i punti seguono il movimento senza generare troppi segnali falsi. Il problema appare nei mercati senza direzione chiara: poiché l'indicatore è sempre "attivo", alternando posizione a ogni oscillazione, può generare diversi segnali di inversione in sequenza che non si confermano, un comportamento noto come whipsaw.</p>
 <p>Per questo, buona parte dei trader usa il SAR insieme a un indicatore di trend, come una media mobile di periodo più lungo, applicando i segnali del SAR solo quando sono allineati con la direzione maggiore del mercato. La piattaforma di Duotide permette di tracciare il Parabolic SAR insieme ad altri indicatori sullo stesso grafico, il che facilita questo tipo di confronto prima di qualsiasi decisione.</p>
 <h2 id="adattando-il-fattore-di-accelerazione">Adattando il Fattore di Accelerazione</h2>
@@ -249,12 +249,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Questo articolo ti è stato utile?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sii il primo a valutare.</p>
             </div>
-            <section class="ap__coment" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
+            <section class="ap__coment" data-anonimo="Anonimo" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
               <h2>Commenti</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ancora nessun commento. Scrivi tu il primo.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lascia un commento</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Il tuo nome" aria-label="Il tuo nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Il tuo nome (facoltativo)" aria-label="Il tuo nome (facoltativo)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Il tuo commento" aria-label="Il tuo commento"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Invia commento</button>
@@ -266,9 +266,9 @@
         <aside class="ap__rel">
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/cose-loscillatore-stocastico-e-come-funziona/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Oscillatore Stocastico e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Average True Range (ATR) e come calcolarlo</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Average True Range (ATR) e come calcolarlo</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

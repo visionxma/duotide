@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/dual-stochastic-strategy/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "交易策略",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 5 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">交易策略</span>
             <h1>双随机指标策略：如何组合两个振荡指标</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>分析栏目</strong><small>Duotide 栏目</small></span></div>
@@ -214,13 +214,13 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>只使用一个随机振荡指标的问题之一，是它在波动较大的市场中可能产生大量信号，其中很多在短时间内相互矛盾。双随机指标策略试图通过组合两个设置不同的振荡指标来解决这个问题：一个较慢的，用作背景过滤器；一个较快的，用来寻找确切的入场时机。</p><p>在本文中，你将了解如何搭建这种组合、其背后的逻辑，以及一个如何综合解读这两个振荡指标的实际示例。</p><h2 id="为什么使用两个随机指标而不是一个">为什么使用两个随机指标而不是一个</h2><p>设置为短周期的随机指标对价格变动反应很快，这对精确的入场点很有用，但也会产生大量毫无结果的超买超卖信号，尤其是在强劲趋势期间。而周期较长的随机指标变动更平滑，反映的是更长周期的动量，但反应太慢，不适合单独作为入场触发条件。</p><p>双随机指标的理念是同时使用这两种速度：慢速随机指标确定背景——即顺着哪个方向交易才合理——而快速随机指标则在这个背景之内指出更精确的时机。</p><h2 id="设置这两个振荡指标">设置这两个振荡指标</h2><p>一种常见的设置是使用一个周期较长的慢速随机指标（例如21周期，并附加平滑处理），用来捕捉资产的背景动量，以及一个周期较短的快速随机指标（例如5周期），用来产生入场信号。周期的确切选择可能因所交易的时间周期和资产而异，但一慢一快的逻辑保持不变。</p><p>在图表上，慢速随机指标通常显示在价格图表下方，快速随机指标紧接其下，这样就能逐根K线地在视觉上比较两者。</p><h2 id="如何综合解读这两者">如何综合解读这两者</h2><p>基本的解读方式是这样的：首先观察慢速随机指标。如果它正从超卖区（低于20）走出并向上回升，那么背景条件就有利于做多。只有在这之后，才观察快速随机指标，寻找与这个背景相符的入场信号——例如，快速随机指标的%K线和%D线出现上涨交叉，同样是从超卖区出发。</p><p>当两个振荡指标意见一致时——慢速指标显示背景有利，快速指标在此背景内给出入场信号——理论上，这笔交易比单独使用其中任何一个指标获得更多支持。如果快速指标发出买入信号，但慢速指标仍处于超买区或正在下降，这种分歧就是入场前需要更加谨慎的理由。</p><h2 id="一个实际的解读示例">一个实际的解读示例</h2><p>假设某资产报价为33.20雷亚尔，慢速随机指标从18上升到25，正走出超卖区。此时，快速随机指标在15的位置从下方向上穿越，同样处于超卖区内。这种组合暗示了一个可能的买入入场机会，止损设在近期最低点稍下方，目标由图表上下一个重要阻力位确定。</p><h2 id="应用该策略时的注意事项">应用该策略时的注意事项</h2><p>即使两个振荡指标意见一致，双随机指标也不应该脱离图表更大的背景孤立使用，比如更高时间周期的趋势和附近的支撑阻力水平。这个策略能减少相互矛盾的信号数量，但不能消除假信号，尤其是在高度横盘或有突发新闻的市场中。</p><h2 id="付诸实践">付诸实践</h2><p>在Duotide上，可以在同一张图表上设置两个不同周期的随机振荡指标，并在投入真实资金之前先测试这种组合。值得记录一段时间内观察到的信号结果，根据所选资产的表现调整周期。和任何基于指标的策略一样，这里存在真实的亏损风险，每笔头寸的规模都应该与这种风险相匹配。</p><p>应用同一理念的另一种方式，是对同一资产在两个不同的时间周期上使用同一个随机指标周期——例如，用4小时图确定背景，用15分钟图确定入场时机。其背后的逻辑与经典的双随机指标策略相同：较长的周期确定首选方向，较短的周期在这个方向内精确入场点，这有助于避免逆着资产当时的主导走势入场。</p>
+            <p>只使用一个随机振荡指标的问题之一，是它在波动较大的市场中可能产生大量信号，其中很多在短时间内相互矛盾。双随机指标策略试图通过组合两个设置不同的振荡指标来解决这个问题：一个较慢的，用作背景过滤器；一个较快的，用来寻找确切的入场时机。</p><p>在本文中，你将了解如何搭建这种组合、其背后的逻辑，以及一个如何综合解读这两个振荡指标的实际示例。</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-dual-stochastic.svg" alt="图表：Apple，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Apple，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="为什么使用两个随机指标而不是一个">为什么使用两个随机指标而不是一个</h2><p>设置为短周期的随机指标对价格变动反应很快，这对精确的入场点很有用，但也会产生大量毫无结果的超买超卖信号，尤其是在强劲趋势期间。而周期较长的随机指标变动更平滑，反映的是更长周期的动量，但反应太慢，不适合单独作为入场触发条件。</p><p>双随机指标的理念是同时使用这两种速度：慢速随机指标确定背景——即顺着哪个方向交易才合理——而快速随机指标则在这个背景之内指出更精确的时机。</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="设置这两个振荡指标">设置这两个振荡指标</h2><p>一种常见的设置是使用一个周期较长的慢速随机指标（例如21周期，并附加平滑处理），用来捕捉资产的背景动量，以及一个周期较短的快速随机指标（例如5周期），用来产生入场信号。周期的确切选择可能因所交易的时间周期和资产而异，但一慢一快的逻辑保持不变。</p><p>在图表上，慢速随机指标通常显示在价格图表下方，快速随机指标紧接其下，这样就能逐根K线地在视觉上比较两者。</p><h2 id="如何综合解读这两者">如何综合解读这两者</h2><p>基本的解读方式是这样的：首先观察慢速随机指标。如果它正从超卖区（低于20）走出并向上回升，那么背景条件就有利于做多。只有在这之后，才观察快速随机指标，寻找与这个背景相符的入场信号——例如，快速随机指标的%K线和%D线出现上涨交叉，同样是从超卖区出发。</p><p>当两个振荡指标意见一致时——慢速指标显示背景有利，快速指标在此背景内给出入场信号——理论上，这笔交易比单独使用其中任何一个指标获得更多支持。如果快速指标发出买入信号，但慢速指标仍处于超买区或正在下降，这种分歧就是入场前需要更加谨慎的理由。</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="一个实际的解读示例">一个实际的解读示例</h2><p>假设某资产报价为33.20雷亚尔，慢速随机指标从18上升到25，正走出超卖区。此时，快速随机指标在15的位置从下方向上穿越，同样处于超卖区内。这种组合暗示了一个可能的买入入场机会，止损设在近期最低点稍下方，目标由图表上下一个重要阻力位确定。</p><h2 id="应用该策略时的注意事项">应用该策略时的注意事项</h2><p>即使两个振荡指标意见一致，双随机指标也不应该脱离图表更大的背景孤立使用，比如更高时间周期的趋势和附近的支撑阻力水平。这个策略能减少相互矛盾的信号数量，但不能消除假信号，尤其是在高度横盘或有突发新闻的市场中。</p><h2 id="付诸实践">付诸实践</h2><p>在Duotide上，可以在同一张图表上设置两个不同周期的随机振荡指标，并在投入真实资金之前先测试这种组合。值得记录一段时间内观察到的信号结果，根据所选资产的表现调整周期。和任何基于指标的策略一样，这里存在真实的亏损风险，每笔头寸的规模都应该与这种风险相匹配。</p><p>应用同一理念的另一种方式，是对同一资产在两个不同的时间周期上使用同一个随机指标周期——例如，用4小时图确定背景，用15分钟图确定入场时机。其背后的逻辑与经典的双随机指标策略相同：较长的周期确定首选方向，较短的周期在这个方向内精确入场点，这有助于避免逆着资产当时的主导走势入场。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -232,12 +232,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -249,9 +249,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">日内交易者最实用的指标</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">日内交易者最实用的指标</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -318,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -21,7 +21,9 @@ const nomeAtivo = a => NOMES[a] || a;
 const arq = a => path.join(DADOS, a.replace(/[^A-Za-z0-9]/g, '_') + '.json');
 
 // ---------------------------------------------------------------- dados
-function baixar(ativo, fonte) {
+function baixar(ativo, fonte, forcar) {
+  // os textos citam números destes arquivos: baixar de novo mudaria os números e as datas por baixo do texto
+  if (fs.existsSync(arq(ativo)) && !forcar) throw new Error(`${ativo} já está em .blog/dados e não deve ser baixado de novo (os artigos citam esses números). Use o arquivo que existe.`);
   fonte = fonte || (/USDT$/.test(ativo) ? 'binance' : 'yahoo');
   let barras = [];
   if (fonte === 'binance') {
@@ -37,10 +39,14 @@ function baixar(ativo, fonte) {
     const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ativo)}?range=5y&interval=1d`;
     const j = JSON.parse(execFileSync('curl', ['-sL', '-m', '30', '-A', 'Mozilla/5.0', url]).toString());
     const r = j.chart.result[0], q = r.indicators.quote[0];
-    barras = r.timestamp.map((t, i) => ({ t: new Date(t * 1000).toISOString().slice(0, 10), o: q.open[i], h: q.high[i], l: q.low[i], c: q.close[i], v: q.volume[i] || 0 }))
+    // data no fuso do próprio mercado (câmbio vem à meia-noite de Londres; sem isso o pregão cai no dia anterior)
+    const fuso = r.meta.gmtoffset || 0;
+    barras = r.timestamp.map((t, i) => ({ t: new Date((t + fuso) * 1000).toISOString().slice(0, 10), o: q.open[i], h: q.high[i], l: q.low[i], c: q.close[i], v: q.volume[i] || 0 }))
       .filter(b => [b.o, b.h, b.l, b.c].every(x => typeof x === 'number'));
   }
-  const vistos = new Set(); barras = barras.filter(b => !vistos.has(b.t) && vistos.add(b.t));
+  // o pregão de hoje ainda está aberto: fica de fora
+  const hoje = new Date().toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+  const vistos = new Set(); barras = barras.filter(b => b.t < hoje && !vistos.has(b.t) && vistos.add(b.t));
   if (!barras.length) throw new Error('sem dados para ' + ativo);
   fs.mkdirSync(DADOS, { recursive: true });
   fs.writeFileSync(arq(ativo), JSON.stringify({ ativo, fonte, baixado: new Date().toISOString().slice(0, 10), barras }));
@@ -205,7 +211,7 @@ function desenhar(slug, g, marca) {
 module.exports = { baixar, carregar, calcular, fatos, desenhar, nomeAtivo, rsi, sma, ema, macd };
 if (require.main === module) {
   const [cmd, a, b] = process.argv.slice(2);
-  if (cmd === 'baixar') console.log(a, baixar(a, b), 'pregões');
+  if (cmd === 'baixar') console.log(a, baixar(a, b, process.argv.includes('--forcar')), 'pregões');
   else if (cmd === 'fatos') { const art = JSON.parse(fs.readFileSync(path.join(__dirname, 'artigos', a + '.json'), 'utf8')); console.log(JSON.stringify(fatos(art.grafico), null, 1)); }
   else console.log('uso: node .blog/graficos.js baixar <ativo> [fonte] | fatos <slug>');
 }

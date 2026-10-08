@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -221,11 +221,11 @@
 <p>প্রধান রেখা, %K নামে পরিচিত, এভাবে গণনা করা হয়: %K = [(বর্তমান ক্লোজিং − পিরিয়ডের সর্বনিম্ন) ÷ (পিরিয়ডের সর্বোচ্চ − পিরিয়ডের সর্বনিম্ন)] × 100। ফলাফল সবসময় 0 এবং 100-এর মধ্যে পরিবর্তিত হয়।</p>
 <p>ব্যবহারিক উদাহরণ: 14 পিরিয়ডে, সর্বোচ্চ ছিল R$ 132,50 এবং সর্বনিম্ন ছিল R$ 125,00 — R$ 7,50-এর একটি পরিসর। যদি বর্তমান ক্লোজিং R$ 130,00-এ থাকে, গণনাটি হবে: (130,00 − 125,00) ÷ 7,50 × 100 = 5,00 ÷ 7,50 × 100 = 66,67। %K-এর মান 66,67, যা দেখায় যে ক্লোজিং সাম্প্রতিক পরিসরের শীর্ষের দুই-তৃতীয়াংশে আছে — না প্রসারিত, না ক্লান্ত।</p>
 <p>দ্বিতীয় রেখা, %D, শুধু %K-এর 3-পিরিয়ডের একটি মুভিং এভারেজ, যা ফলাফল মসৃণ করতে এবং মিথ্যা সংকেত কমাতে ব্যবহৃত হয়।</p>
-<h2 id="ওভ-রবট-এব-ওভ-রস-ল-ড-অঞ-চল">ওভারবট এবং ওভারসোল্ড অঞ্চল</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ওভ-রবট-এব-ওভ-রস-ল-ড-অঞ-চল">ওভারবট এবং ওভারসোল্ড অঞ্চল</h2>
 <p>প্রথা অনুযায়ী, 80-এর উপরে মান ওভারবট নির্দেশ করে — দাম সাম্প্রতিক পরিসরের শীর্ষের কাছে বন্ধ হয়েছে — এবং 20-এর নিচে মান ওভারসোল্ড নির্দেশ করে, পরিসরের তলার কাছে। এর অর্থ এই নয় যে "80 পার হয়েছে বলে বিক্রি করুন" বা "20 পার হয়েছে বলে কিনুন": একটি শক্তিশালী প্রবণতায়, স্টোকাস্টিক অনেক পরপর ক্যান্ডেলের জন্য শীর্ষে (বা তলায়) লেগে থাকতে পারে, এবং শুধু নির্দেশক প্রসারিত বলে সেই প্রবণতার বিরুদ্ধে কাজ করা সাধারণত ব্যয়বহুল প্রমাণিত হয়।</p>
 <h2 id="k-এব-d-এর-মধ-য-ক-রসওভ-র">%K এবং %D-এর মধ্যে ক্রসওভার</h2>
 <p>স্বল্প মেয়াদে সবচেয়ে বেশি ব্যবহৃত সংকেত হলো চরম অঞ্চলের মধ্যে দুটি রেখার ক্রসওভার: যখন %K ওভারসোল্ড অঞ্চলে (20-এর নিচে) নিচে থেকে উপরে %D-কে ক্রস করে, এটি সম্ভাব্য ক্রয় শক্তি ফিরে আসা হিসেবে পড়া হয়; যখন ওভারবট অঞ্চলে (80-এর উপরে) উপর থেকে নিচে ক্রস করে, এটি সম্ভাব্য বিক্রয় শক্তি ফিরে আসা হিসেবে পড়া হয়। এই অঞ্চলগুলোর বাইরে, একই ক্রসওভারের ওজন অনেক কম।</p>
-<h2 id="ব-চ-য-ত-সবচ-য-শক-ত-শ-ল-স-ক-ত">বিচ্যুতি: সবচেয়ে শক্তিশালী সংকেত</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ব-চ-য-ত-সবচ-য-শক-ত-শ-ল-স-ক-ত">বিচ্যুতি: সবচেয়ে শক্তিশালী সংকেত</h2>
 <p>একটি বেশি উন্নত ব্যবহার হলো দামের নকশাকে স্টোকাস্টিকের নকশার সঙ্গে তুলনা করা। যদি দাম একটি নতুন উচ্চতায় পৌঁছায়, কিন্তু স্টোকাস্টিক আগেরটির চেয়ে কম উচ্চতায় পৌঁছায়, এটি একটি নিম্নমুখী বিচ্যুতি — দাম এখনও বাড়লেও ঊর্ধ্বমুখী মুভমেন্ট শক্তি হারাচ্ছে। দামের তলায় একটি ঊর্ধ্বমুখী বিচ্যুতির জন্য বিপরীত যুক্তি প্রযোজ্য। বিচ্যুতি প্রবেশের সঠিক মুহূর্ত দেয় না, কিন্তু সতর্ক করে যে বর্তমান প্রবণতা শেষের কাছাকাছি থাকতে পারে।</p>
 <h2 id="দ-র-ত-অপ-র-শন-র-জন-য-প-র-য-ড-স-মঞ-জস-য-কর">দ্রুত অপারেশনের জন্য পিরিয়ড সামঞ্জস্য করা</h2>
 <p>স্টোকাস্টিকের স্ট্যান্ডার্ড পিরিয়ড হলো 14, কিন্তু যারা 1 বা 5 মিনিটের চার্টে অপারেট করেন তারা সাধারণত 5 বা 9 পিরিয়ডে কমিয়ে ফেলেন, নির্দেশককে বেশি সংবেদনশীল করে এবং দোলনে দ্রুত প্রতিক্রিয়া দেখান। পার্শ্ব প্রতিক্রিয়া হলো বেশি মিথ্যা সংকেত, কারণ নির্দেশকটি দামের ছোট শব্দে প্রতিক্রিয়া দেখাতে শুরু করে। এটি পূরণ করার একটি সাধারণ উপায় হলো ক্রসওভারের ঠিক মুহূর্তে অপারেট করার পরিবর্তে প্রবেশের আগে একটি দ্বিতীয় ক্যান্ডেলের নিশ্চিতকরণ দাবি করা।</p>
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="এই নিবন্ধটি কি কাজে লেগেছে?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">প্রথম রেটিংটি আপনিই দিন।</p>
             </div>
-            <section class="ap__coment" data-enviado="আপনার মন্তব্য পেয়েছি। দল অনুমোদন দিলে এটি এখানে দেখা যাবে।" data-erro="এখন পাঠানো গেল না। একটু পরে আবার চেষ্টা করুন।" data-vazio="এখনো কোনো মন্তব্য নেই। প্রথম মন্তব্যটি আপনিই করুন।" data-idioma="bn">
+            <section class="ap__coment" data-anonimo="বেনামী" data-enviado="আপনার মন্তব্য পেয়েছি। দল অনুমোদন দিলে এটি এখানে দেখা যাবে।" data-erro="এখন পাঠানো গেল না। একটু পরে আবার চেষ্টা করুন।" data-vazio="এখনো কোনো মন্তব্য নেই। প্রথম মন্তব্যটি আপনিই করুন।" data-idioma="bn">
               <h2>মন্তব্য</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">এখনো কোনো মন্তব্য নেই। প্রথম মন্তব্যটি আপনিই করুন।</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">আপনার মন্তব্য লিখুন</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="আপনার নাম" aria-label="আপনার নাম" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="আপনার নাম (ঐচ্ছিক)" aria-label="আপনার নাম (ঐচ্ছিক)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="আপনার মন্তব্য" aria-label="আপনার মন্তব্য"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">মন্তব্য পাঠান</button>
@@ -269,9 +269,9 @@
         <aside class="ap__rel">
           <h2>সম্পর্কিত নিবন্ধ</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
             <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/what-is-average-true-range/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">অ্যাভারেজ ট্রু রেঞ্জ (ATR) কী এবং কীভাবে গণনা করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 4 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-average-true-range/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">অ্যাভারেজ ট্রু রেঞ্জ (ATR) কী এবং কীভাবে গণনা করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
           </div>
         </aside>
       </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

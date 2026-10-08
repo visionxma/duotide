@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -214,7 +214,7 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>在分析师兼统计学家Tushar Chande创建的众多指标中，Chande预测振荡指标（Chande Forecast Oscillator，简称CFO）是在更专业的技术圈子之外较少被了解的一个，但它蕴含着一个有趣的想法：它不只是观察简单移动平均线，而是使用线性回归来计算价格的“预期”值，并将这个值与真实价格进行比较。</p><p>在这篇文章中，你将了解CFO背后的逻辑、如何解读它，以及它如何补充其他趋势和动量指标。</p><h2 id="该指标背后的理念">该指标背后的理念</h2><p>对一系列价格应用线性回归，会画出一条最贴合该资产近期走势的直线——这是一种统计学上的方式，用来表述“如果这个趋势完全按现在的样子继续下去，下一个预期价格会是多少”。CFO用这条线为当前K线计算一个预测值，然后衡量这个预测值与实际收盘价之间的百分比差异。</p><p>当实际价格高于回归预测的值时，CFO为正，表明市场推进的速度快于近期线性趋势所暗示的速度。当价格低于预测值时，CFO为负，表明推进速度比预期更慢，或者正在下跌。</p><h2 id="计算方式在实践中如何运作">计算方式在实践中如何运作</h2><p>假设根据某资产最近14根K线计算出的线性回归，为当前K线预测的价格是R$ 48,00，但实际收盘价是R$ 49,44。百分比差异约为3%[(49,44 − 48,00) / 48,00 × 100]，这就是该K线上CFO的数值：+3。</p><p>一个为正且不断增大的CFO，说明价格正在向上偏离其近期的线性趋势——这既可能表明真实的力量正在增强，也可能表明一次拉伸过度、往往会被修正的行情。这时就需要结合图表上的其他元素来进行解读。</p><h2 id="零轴的穿越">零轴的穿越</h2><p>与其他振荡指标一样，CFO也有一条中心零轴。从负转正的穿越，表明价格已经开始超越其自身近期的线性预测，这通常被解读为买方力量正在增强的信号。从正转负的相反穿越，则暗示相反的情况。</p><p>由于计算依赖于前几个周期的线性趋势，这些穿越更适合作为确认一个已经在进行中的行情，而不是提前预示反转的信号。</p><h2 id="选择回归周期">选择回归周期</h2><p>用于计算线性回归的周期，也会大大影响CFO的解读。像5或9根K线这样较短的周期，会让指标对近期变化更敏感，产生更频繁的穿越和波动，适合操作短周期的人，但也更容易受噪音影响。像20或30根K线这样较长的周期，会平滑回归线，让CFO的反应变慢，反映的是更稳固的趋势。</p><p>不存在一个通用的固定周期：理想的做法是在同一资产上测试不同的数值，观察哪种设置产生的解读，与该市场历史行为相符，而不是简单照搬另一个指标的默认周期。</p><h2 id="cfo中的背离">CFO中的背离</h2><p>与RSI类似，也可以观察CFO与价格之间的背离。如果价格创出新高，但CFO的读数却低于前一个高点时的读数，这表明尽管价格在上涨，它偏离自身近期线性趋势的幅度却越来越小——这是力量减弱的信号，可能预示着一次回调即将到来。</p><h2 id="将cfo与其他指标结合使用">将CFO与其他指标结合使用</h2><p>由于CFO是基于线性回归的指标，它的反应往往与趋势指标类似，因此通常不适合把它与多条不同的移动平均线放在一起使用——信号会显得多余。它更适合与成交量或波动性指标搭配使用，因为这些工具带来了分析的另一个维度。</p><p>在Duotide上，值得在不同的回归周期上测试CFO，并将它的解读与你已经关注的资产真实的价格表现进行比较，然后再将它纳入策略的一部分。与任何基于历史数据的统计指标一样，CFO所预测的趋势可能不会得到确认，任何入场决定都应考虑这笔操作真实存在的亏损风险。</p>
+            <p>在分析师兼统计学家Tushar Chande创建的众多指标中，Chande预测振荡指标（Chande Forecast Oscillator，简称CFO）是在更专业的技术圈子之外较少被了解的一个，但它蕴含着一个有趣的想法：它不只是观察简单移动平均线，而是使用线性回归来计算价格的“预期”值，并将这个值与真实价格进行比较。</p><p>在这篇文章中，你将了解CFO背后的逻辑、如何解读它，以及它如何补充其他趋势和动量指标。</p><h2 id="该指标背后的理念">该指标背后的理念</h2><p>对一系列价格应用线性回归，会画出一条最贴合该资产近期走势的直线——这是一种统计学上的方式，用来表述“如果这个趋势完全按现在的样子继续下去，下一个预期价格会是多少”。CFO用这条线为当前K线计算一个预测值，然后衡量这个预测值与实际收盘价之间的百分比差异。</p><p>当实际价格高于回归预测的值时，CFO为正，表明市场推进的速度快于近期线性趋势所暗示的速度。当价格低于预测值时，CFO为负，表明推进速度比预期更慢，或者正在下跌。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="计算方式在实践中如何运作">计算方式在实践中如何运作</h2><p>假设根据某资产最近14根K线计算出的线性回归，为当前K线预测的价格是R$ 48,00，但实际收盘价是R$ 49,44。百分比差异约为3%[(49,44 − 48,00) / 48,00 × 100]，这就是该K线上CFO的数值：+3。</p><p>一个为正且不断增大的CFO，说明价格正在向上偏离其近期的线性趋势——这既可能表明真实的力量正在增强，也可能表明一次拉伸过度、往往会被修正的行情。这时就需要结合图表上的其他元素来进行解读。</p><h2 id="零轴的穿越">零轴的穿越</h2><p>与其他振荡指标一样，CFO也有一条中心零轴。从负转正的穿越，表明价格已经开始超越其自身近期的线性预测，这通常被解读为买方力量正在增强的信号。从正转负的相反穿越，则暗示相反的情况。</p><p>由于计算依赖于前几个周期的线性趋势，这些穿越更适合作为确认一个已经在进行中的行情，而不是提前预示反转的信号。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="选择回归周期">选择回归周期</h2><p>用于计算线性回归的周期，也会大大影响CFO的解读。像5或9根K线这样较短的周期，会让指标对近期变化更敏感，产生更频繁的穿越和波动，适合操作短周期的人，但也更容易受噪音影响。像20或30根K线这样较长的周期，会平滑回归线，让CFO的反应变慢，反映的是更稳固的趋势。</p><p>不存在一个通用的固定周期：理想的做法是在同一资产上测试不同的数值，观察哪种设置产生的解读，与该市场历史行为相符，而不是简单照搬另一个指标的默认周期。</p><h2 id="cfo中的背离">CFO中的背离</h2><p>与RSI类似，也可以观察CFO与价格之间的背离。如果价格创出新高，但CFO的读数却低于前一个高点时的读数，这表明尽管价格在上涨，它偏离自身近期线性趋势的幅度却越来越小——这是力量减弱的信号，可能预示着一次回调即将到来。</p><h2 id="将cfo与其他指标结合使用">将CFO与其他指标结合使用</h2><p>由于CFO是基于线性回归的指标，它的反应往往与趋势指标类似，因此通常不适合把它与多条不同的移动平均线放在一起使用——信号会显得多余。它更适合与成交量或波动性指标搭配使用，因为这些工具带来了分析的另一个维度。</p><p>在Duotide上，值得在不同的回归周期上测试CFO，并将它的解读与你已经关注的资产真实的价格表现进行比较，然后再将它纳入策略的一部分。与任何基于历史数据的统计指标一样，CFO所预测的趋势可能不会得到确认，任何入场决定都应考虑这笔操作真实存在的亏损风险。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
@@ -232,12 +232,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -249,9 +249,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -318,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

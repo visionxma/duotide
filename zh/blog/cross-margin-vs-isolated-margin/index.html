@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/cross-margin-vs-isolated-margin/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-28T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguranca.webp",
       "articleSection": "风险管理",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 6 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">风险管理</span>
             <h1>全仓保证金对比逐仓保证金：不同情况下该如何选择</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>风险与行为栏目</strong><small>Duotide 栏目</small></span></div>
@@ -215,13 +215,13 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>使用保证金操作的人，尤其是在衍生品和加密货币这类市场中，需要做出一个很多初学者容易忽视的决定：使用全仓保证金还是逐仓保证金。这个选择本身不会改变入场策略，但会彻底改变风险在同时持有的多笔操作之间的分布方式。</p><p>理解这两种模式之间的区别，可以避免一些不愉快的意外，比如在一笔操作中损失超出预期的资金，或者相反，因为可用保证金不足而被迫提前平仓。</p><h2 id="什么是逐仓保证金">什么是逐仓保证金</h2><p>在逐仓保证金模式下，每笔操作都会分配一个特定金额的保证金，与账户中其余的资金分开。如果这笔操作方向判断错误，价格触及为其分配的保证金上限，那么只有这部分金额会亏损——账户中其余的资金保持完好，不受这笔特定操作的影响。</p><h2 id="什么是全仓保证金">什么是全仓保证金</h2><p>在全仓保证金模式下，账户中所有可用余额都作为持仓的支撑。这意味着一笔亏损的仓位可以使用账户其他部分的资金来维持更长时间，避免被过早强制平仓，但这也意味着，如果行情持续不利，整个账户余额都会暴露在那笔操作的风险之下。</p><h2 id="比较两种模式的数值示例">比较两种模式的数值示例</h2><p>假设一位交易者账户中有R$ 10.000,00，开了一笔分配R$ 1.000,00逐仓保证金的操作。如果市场大幅逆势运行，这笔操作的最大亏损被限制在R$ 1.000,00——剩下的R$ 9.000,00依然可用且受到保护，即使这笔操作被强制平仓。</p><p>现在假设同一位交易者对同样的操作使用全仓保证金。如果市场逆势运行，系统可能会使用剩余R$ 9.000,00中的一部分来避免自动强制平仓，让这笔操作维持更长时间。如果之后价格反转，这可能是有利的，但这也意味着，如果不利行情持续且剧烈，亏损可能超过最初的R$ 1.000,00，侵蚀账户总资金中更大的一部分。</p><h2 id="什么时候每种模式更合适">什么时候每种模式更合适</h2><ul><li><strong>逐仓保证金</strong>通常更适合正在测试新策略、希望明确限制每笔操作最大风险，或者同时操作多个仓位、不希望一笔操作拖累其他仓位的人。</li><li><strong>全仓保证金</strong>可能更适合经验更丰富的交易者，他们以整个持仓组合为整体来管理风险，愿意让单笔仓位以占用可用总资金为代价获得更多的缓冲空间。</li></ul><h2 id="在不知不觉中选错模式的风险">在不知不觉中选错模式的风险</h2><p>一个常见的错误，是使用全仓保证金操作，却没有意识到一笔规模设定不当的操作可能危及整个账户余额，而不仅仅是看起来分配给那笔仓位的金额。另一方面，全部使用逐仓保证金而不根据每笔操作调整分配的金额，也可能导致在本来会朝着有利方向发展的短期行情中被过早强制平仓。</p><h2 id="如何在实践中做出决定">如何在实践中做出决定</h2><p>在两种模式之间做选择之前，值得先模拟一些场景：你愿意在一笔操作中承受多大的亏损，以及如果这笔操作出错，账户中剩余的资金在每种模式下会发生什么。新手交易者通常更能从逐仓保证金的可预测性中受益，因为它能明确限制每笔操作可能出现的最坏情况，这既有助于情绪控制，也便于计算每笔操作的风险——这是任何稳健资金管理计划的支柱之一。</p><h2 id="多笔操作同时进行时-两种模式的表现">多笔操作同时进行时，两种模式的表现</h2><p>当同时存在多笔操作时，全仓保证金和逐仓保证金之间的区别会更加明显。在逐仓保证金模式下，每个仓位都有自己的亏损上限，因此一笔糟糕的操作不会影响其他操作的表现。在全仓保证金模式下，一笔亏损严重的操作可能会占用原本用来支撑其他仓位的保证金，从而产生连锁反应：一笔操作的恶化，可能迫使另一笔本身还处于可控范围内的操作被强制平仓。</p><p>因此，在全仓保证金模式下同时操作多个仓位的人，需要计算整个持仓组合的综合风险，而不仅仅是每笔操作单独的风险，这比逐笔操作需要更多的关注和纪律。而在逐仓保证金模式下，这种分析自然会简单得多，因为每笔操作最坏的情况从一开始就被限定，与同一账户中其他持仓发生的情况无关。</p>
+            <p>使用保证金操作的人，尤其是在衍生品和加密货币这类市场中，需要做出一个很多初学者容易忽视的决定：使用全仓保证金还是逐仓保证金。这个选择本身不会改变入场策略，但会彻底改变风险在同时持有的多笔操作之间的分布方式。</p><p>理解这两种模式之间的区别，可以避免一些不愉快的意外，比如在一笔操作中损失超出预期的资金，或者相反，因为可用保证金不足而被迫提前平仓。</p><figure class="ap__grafico"><img src="/assets/graficos/margem-cruzada-vs-margem-isolada.svg" alt="图表：ETH/USDT，日线，2026/04/01 至 2026/09/30。数据：Binance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：ETH/USDT，日线，2026/04/01 至 2026/09/30。数据：Binance。自行分析。</figcaption></figure><h2 id="什么是逐仓保证金">什么是逐仓保证金</h2><p>在逐仓保证金模式下，每笔操作都会分配一个特定金额的保证金，与账户中其余的资金分开。如果这笔操作方向判断错误，价格触及为其分配的保证金上限，那么只有这部分金额会亏损——账户中其余的资金保持完好，不受这笔特定操作的影响。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="什么是全仓保证金">什么是全仓保证金</h2><p>在全仓保证金模式下，账户中所有可用余额都作为持仓的支撑。这意味着一笔亏损的仓位可以使用账户其他部分的资金来维持更长时间，避免被过早强制平仓，但这也意味着，如果行情持续不利，整个账户余额都会暴露在那笔操作的风险之下。</p><h2 id="比较两种模式的数值示例">比较两种模式的数值示例</h2><p>假设一位交易者账户中有R$ 10.000,00，开了一笔分配R$ 1.000,00逐仓保证金的操作。如果市场大幅逆势运行，这笔操作的最大亏损被限制在R$ 1.000,00——剩下的R$ 9.000,00依然可用且受到保护，即使这笔操作被强制平仓。</p><p>现在假设同一位交易者对同样的操作使用全仓保证金。如果市场逆势运行，系统可能会使用剩余R$ 9.000,00中的一部分来避免自动强制平仓，让这笔操作维持更长时间。如果之后价格反转，这可能是有利的，但这也意味着，如果不利行情持续且剧烈，亏损可能超过最初的R$ 1.000,00，侵蚀账户总资金中更大的一部分。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="什么时候每种模式更合适">什么时候每种模式更合适</h2><ul><li><strong>逐仓保证金</strong>通常更适合正在测试新策略、希望明确限制每笔操作最大风险，或者同时操作多个仓位、不希望一笔操作拖累其他仓位的人。</li><li><strong>全仓保证金</strong>可能更适合经验更丰富的交易者，他们以整个持仓组合为整体来管理风险，愿意让单笔仓位以占用可用总资金为代价获得更多的缓冲空间。</li></ul><h2 id="在不知不觉中选错模式的风险">在不知不觉中选错模式的风险</h2><p>一个常见的错误，是使用全仓保证金操作，却没有意识到一笔规模设定不当的操作可能危及整个账户余额，而不仅仅是看起来分配给那笔仓位的金额。另一方面，全部使用逐仓保证金而不根据每笔操作调整分配的金额，也可能导致在本来会朝着有利方向发展的短期行情中被过早强制平仓。</p><h2 id="如何在实践中做出决定">如何在实践中做出决定</h2><p>在两种模式之间做选择之前，值得先模拟一些场景：你愿意在一笔操作中承受多大的亏损，以及如果这笔操作出错，账户中剩余的资金在每种模式下会发生什么。新手交易者通常更能从逐仓保证金的可预测性中受益，因为它能明确限制每笔操作可能出现的最坏情况，这既有助于情绪控制，也便于计算每笔操作的风险——这是任何稳健资金管理计划的支柱之一。</p><h2 id="多笔操作同时进行时-两种模式的表现">多笔操作同时进行时，两种模式的表现</h2><p>当同时存在多笔操作时，全仓保证金和逐仓保证金之间的区别会更加明显。在逐仓保证金模式下，每个仓位都有自己的亏损上限，因此一笔糟糕的操作不会影响其他操作的表现。在全仓保证金模式下，一笔亏损严重的操作可能会占用原本用来支撑其他仓位的保证金，从而产生连锁反应：一笔操作的恶化，可能迫使另一笔本身还处于可控范围内的操作被强制平仓。</p><p>因此，在全仓保证金模式下同时操作多个仓位的人，需要计算整个持仓组合的综合风险，而不仅仅是每笔操作单独的风险，这比逐笔操作需要更多的关注和纪律。而在逐仓保证金模式下，这种分析自然会简单得多，因为每笔操作最坏的情况从一开始就被限定，与同一账户中其他持仓发生的情况无关。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -233,12 +233,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -251,7 +251,7 @@
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何在外汇交易中使用止损和止盈</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
             <a class="bq__card" href="/zh/blog/when-to-close-a-trade-exit-signals/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">何时结束一笔操作：出场信号</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
           </div>
         </aside>
@@ -319,6 +319,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

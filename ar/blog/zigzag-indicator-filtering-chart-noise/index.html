@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/ar/blog/zigzag-indicator-filtering-chart-noise/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-28T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "المؤشرات",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">4 دقائق قراءة</span></span>
+              <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">6 دقائق قراءة</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
             </div>
-            <p class="ap__atual">آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-10-08">8 أكتوبر 2026</time></p>
             <span class="bq__tag">المؤشرات</span>
             <h1>مؤشر ZigZag: كيفية تصفية ضوضاء الرسم البياني</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>قسم التحليل</strong><small>قسم في Duotide</small></span></div>
@@ -213,13 +213,13 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>النظر إلى رسم بياني للسعر دون أي تصفية يمكن أن يكون مرهقًا: عشرات الارتفاعات والانخفاضات الصغيرة تتنافس على الانتباه، ما يصعّب رؤية الحركة المهمة فعليًا وراء كل هذه الضوضاء. يوجد ZigZag تحديدًا لحل هذه المشكلة البصرية، برسم خطوط مستقيمة تربط فقط القمم والقيعان المهمة في الرسم البياني، متجاهلة ما يقع في المنتصف.</p><p>يشرح هذا المقال كيف يقرر ZigZag ما هو ضوضاء وما هو حركة مهمة، وما فائدته عمليًا، ولماذا لا ينبغي الخلط بينه وبين مولد إشارات دخول.</p><h2 id="كيف-يقرر-zigzag-ما-يعرضه">كيف يقرر ZigZag ما يعرضه</h2><p>يُضبط المؤشر بحد أدنى للتغير، محدد كنسبة مئوية من السعر أو كعدد من النقاط. تُتجاهل أي حركة أصغر من هذا الحد، ولا يرسم ZigZag خطًا جديدًا إلا عندما يتحرك السعر بما يكفي لتجاوز هذا العتبة انطلاقًا من آخر قمة أو قاع محدد. مثلاً، بحد 5%، لا يظهر تذبذب بنسبة 2% في منتصف اتجاه في المؤشر إطلاقًا — لا يدخل في الرسم إلا عندما تتجاوز الحركة المتراكمة نسبة 5% المحددة.</p><h2 id="لماذا-zigzag-مفيد-فعلا">لماذا ZigZag مفيد فعلاً</h2><h3>تحديد القمم والقيعان المهمة</h3><p>بإزالة ضوضاء المدى القصير، يصبح أسهل رؤية أين توجد نقاط الانعكاس التي كانت مهمة فعلاً في تاريخ الأصل — معلومة مفيدة لرسم خطوط الدعم والمقاومة بثقة أكبر من محاولة تخمين ذلك في رسم بياني مليء بتذبذبات صغيرة.</p><h3>دعم قراءة الأنماط البيانية</h3><p>تصبح أنماط مثل القمة المزدوجة، أو الرأس والكتفين، أو قنوات الاتجاه أكثر وضوحًا عندما يكون ZigZag قد أزال الضوضاء الصغيرة بالفعل، عاملاً كهيكل بصري يمكن من خلاله تحديد هذه الأنماط بوضوح أكبر، بما في ذلك لمن يدرس عد الموجات في التحليل الفني. دون هذا المرشح، سيكون أصعب بكثير الفصل بصريًا بين الجزء من الرسم البياني الذي يمثل الحركة الرئيسية والجزء الذي هو مجرد تصحيح ضمنها.</p><h3>قياس مدى الحركات السابقة</h3><p>بما أن كل خط في ZigZag يربط قمة بقاع (أو العكس)، فإنه يسهل قياس عدد النقاط أو النسبة المئوية التي تحرك بها الأصل بسرعة في كل جزء من الرسم البياني، ما يساعد على معايرة توقعات الهدف بناءً على حركات سابقة بحجم مشابه.</p><h2 id="الحد-الا-هم-لـ-zigzag">الحد الأهم لـ ZigZag</h2><p>ZigZag مؤشر ينظر إلى الوراء: لا يؤكد قمة أو قاعًا إلا بعد أن يكون السعر قد تحرك بما يكفي في الاتجاه المعاكس لإثبات أن تلك النقطة كانت فعلاً انعكاسًا. هذا يعني أن الخط الأخير للمؤشر يمكن أن يتغير، أو يُعاد رسمه، مع تشكل شموع جديدة — القمة التي بدت نهائية قبل قليل قد تختفي إذا استمر السعر بالارتفاع. لهذا السبب، استخدام ZigZag كمحفز دخول مباشر أمر خطير: لحظة ظهور الإشارة بوضوح، تكون الحركة التي يصفها قد حدثت بالفعل. هذا يجعل ZigZag أشبه بأداة استعادية منه بمؤشر استباقي.</p><h2 id="كيفية-ضبط-معيار-الحساسية">كيفية ضبط معيار الحساسية</h2><ul><li>حد صغير (مثلاً، 1% أو 2%) يُظهر تفاصيل أكثر، لكنه يعيد تضمين قدر كبير من ضوضاء المدى القصير.</li><li>حد أكبر (مثلاً، 8% أو 10%) يبسط الرسم البياني كثيرًا، لكنه قد يتجاهل انعكاسات مهمة للصفقات ذات المدى الأقصر.</li><li>يعتمد الضبط المثالي على الأصل والإطار الزمني للرسم البياني: الأصول الأكثر تقلبًا تتطلب عادة حدًا أكبر لتجنب توليد ضوضاء مفرطة، والعكس صحيح للأصول الأكثر استقرارًا.</li></ul><h2 id="كيفية-استخدام-zigzag-بمسو-ولية">كيفية استخدام ZigZag بمسؤولية</h2><p>أفضل طريقة للاستفادة من ZigZag هي كأداة تحليل بصري ودراسة تاريخية، لا كمحفز دخول. اجمع قراءة القمم والقيعان التي يبرزها مع مؤشر زخم، مثل RSI، أو مع قراءة الحجم، لتحديد اللحظة الفعلية للدخول في صفقة. مثل أي أداة قائمة على بيانات حدثت بالفعل، لا يتنبأ ZigZag بالحركة التالية، ومخاطرة الخسارة تظل قائمة حتى مع رسم بياني أكثر تنظيمًا بصريًا — يجدر دراسة سلوكه في حساب تجريبي قبل إدماجه في روتين تحليلك.</p>
+            <p>النظر إلى رسم بياني للسعر دون أي تصفية يمكن أن يكون مرهقًا: عشرات الارتفاعات والانخفاضات الصغيرة تتنافس على الانتباه، ما يصعّب رؤية الحركة المهمة فعليًا وراء كل هذه الضوضاء. يوجد ZigZag تحديدًا لحل هذه المشكلة البصرية، برسم خطوط مستقيمة تربط فقط القمم والقيعان المهمة في الرسم البياني، متجاهلة ما يقع في المنتصف.</p><p>يشرح هذا المقال كيف يقرر ZigZag ما هو ضوضاء وما هو حركة مهمة، وما فائدته عمليًا، ولماذا لا ينبغي الخلط بينه وبين مولد إشارات دخول.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="الرسم البياني: Ibovespa، يومي، من 02‏/03‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص." width="960" height="540" loading="lazy" decoding="async"><figcaption>الرسم البياني: Ibovespa، يومي، من 02‏/03‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص.</figcaption></figure><h2 id="كيف-يقرر-zigzag-ما-يعرضه">كيف يقرر ZigZag ما يعرضه</h2><p>يُضبط المؤشر بحد أدنى للتغير، محدد كنسبة مئوية من السعر أو كعدد من النقاط. تُتجاهل أي حركة أصغر من هذا الحد، ولا يرسم ZigZag خطًا جديدًا إلا عندما يتحرك السعر بما يكفي لتجاوز هذا العتبة انطلاقًا من آخر قمة أو قاع محدد. مثلاً، بحد 5%، لا يظهر تذبذب بنسبة 2% في منتصف اتجاه في المؤشر إطلاقًا — لا يدخل في الرسم إلا عندما تتجاوز الحركة المتراكمة نسبة 5% المحددة.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="لماذا-zigzag-مفيد-فعلا">لماذا ZigZag مفيد فعلاً</h2><h3>تحديد القمم والقيعان المهمة</h3><p>بإزالة ضوضاء المدى القصير، يصبح أسهل رؤية أين توجد نقاط الانعكاس التي كانت مهمة فعلاً في تاريخ الأصل — معلومة مفيدة لرسم خطوط الدعم والمقاومة بثقة أكبر من محاولة تخمين ذلك في رسم بياني مليء بتذبذبات صغيرة.</p><h3>دعم قراءة الأنماط البيانية</h3><p>تصبح أنماط مثل القمة المزدوجة، أو الرأس والكتفين، أو قنوات الاتجاه أكثر وضوحًا عندما يكون ZigZag قد أزال الضوضاء الصغيرة بالفعل، عاملاً كهيكل بصري يمكن من خلاله تحديد هذه الأنماط بوضوح أكبر، بما في ذلك لمن يدرس عد الموجات في التحليل الفني. دون هذا المرشح، سيكون أصعب بكثير الفصل بصريًا بين الجزء من الرسم البياني الذي يمثل الحركة الرئيسية والجزء الذي هو مجرد تصحيح ضمنها.</p><h3>قياس مدى الحركات السابقة</h3><p>بما أن كل خط في ZigZag يربط قمة بقاع (أو العكس)، فإنه يسهل قياس عدد النقاط أو النسبة المئوية التي تحرك بها الأصل بسرعة في كل جزء من الرسم البياني، ما يساعد على معايرة توقعات الهدف بناءً على حركات سابقة بحجم مشابه.</p><h2 id="الحد-الا-هم-لـ-zigzag">الحد الأهم لـ ZigZag</h2><p>ZigZag مؤشر ينظر إلى الوراء: لا يؤكد قمة أو قاعًا إلا بعد أن يكون السعر قد تحرك بما يكفي في الاتجاه المعاكس لإثبات أن تلك النقطة كانت فعلاً انعكاسًا. هذا يعني أن الخط الأخير للمؤشر يمكن أن يتغير، أو يُعاد رسمه، مع تشكل شموع جديدة — القمة التي بدت نهائية قبل قليل قد تختفي إذا استمر السعر بالارتفاع. لهذا السبب، استخدام ZigZag كمحفز دخول مباشر أمر خطير: لحظة ظهور الإشارة بوضوح، تكون الحركة التي يصفها قد حدثت بالفعل. هذا يجعل ZigZag أشبه بأداة استعادية منه بمؤشر استباقي.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="كيفية-ضبط-معيار-الحساسية">كيفية ضبط معيار الحساسية</h2><ul><li>حد صغير (مثلاً، 1% أو 2%) يُظهر تفاصيل أكثر، لكنه يعيد تضمين قدر كبير من ضوضاء المدى القصير.</li><li>حد أكبر (مثلاً، 8% أو 10%) يبسط الرسم البياني كثيرًا، لكنه قد يتجاهل انعكاسات مهمة للصفقات ذات المدى الأقصر.</li><li>يعتمد الضبط المثالي على الأصل والإطار الزمني للرسم البياني: الأصول الأكثر تقلبًا تتطلب عادة حدًا أكبر لتجنب توليد ضوضاء مفرطة، والعكس صحيح للأصول الأكثر استقرارًا.</li></ul><h2 id="كيفية-استخدام-zigzag-بمسو-ولية">كيفية استخدام ZigZag بمسؤولية</h2><p>أفضل طريقة للاستفادة من ZigZag هي كأداة تحليل بصري ودراسة تاريخية، لا كمحفز دخول. اجمع قراءة القمم والقيعان التي يبرزها مع مؤشر زخم، مثل RSI، أو مع قراءة الحجم، لتحديد اللحظة الفعلية للدخول في صفقة. مثل أي أداة قائمة على بيانات حدثت بالفعل، لا يتنبأ ZigZag بالحركة التالية، ومخاطرة الخسارة تظل قائمة حتى مع رسم بياني أكثر تنظيمًا بصريًا — يجدر دراسة سلوكه في حساب تجريبي قبل إدماجه في روتين تحليلك.</p>
             <div class="bq-post__cta">
               <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
             </div>
             <div class="ap__fim">
-              <p>آخر تحديث: <time datetime="2026-09-28">28 سبتمبر 2026</time></p>
+              <p>آخر تحديث: <time datetime="2026-10-08">8 أكتوبر 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -231,12 +231,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="هل كان هذا المقال مفيدًا؟"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">كن أول من يقيّم.</p>
             </div>
-            <section class="ap__coment" data-enviado="استلمنا تعليقك. سيظهر هنا بعد موافقة الفريق." data-erro="تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل." data-vazio="لا توجد تعليقات بعد. كن أول من يعلّق." data-idioma="ar">
+            <section class="ap__coment" data-anonimo="مجهول" data-enviado="استلمنا تعليقك. سيظهر هنا بعد موافقة الفريق." data-erro="تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل." data-vazio="لا توجد تعليقات بعد. كن أول من يعلّق." data-idioma="ar">
               <h2>التعليقات</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">لا توجد تعليقات بعد. كن أول من يعلّق.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">اترك تعليقًا</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="اسمك" aria-label="اسمك" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="اسمك (اختياري)" aria-label="اسمك (اختياري)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="تعليقك" aria-label="تعليقك"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">إرسال التعليق</button>
@@ -248,9 +248,9 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
@@ -317,6 +317,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

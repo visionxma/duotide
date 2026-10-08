@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/sv/blog/optionernas-grekiska-tal-for-nyborjare/",
       "inLanguage": "sv",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-28T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Optioner",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">4 min läsning</span></span>
+              <span><time datetime="2026-09-24">24 sep. 2026</time><span class="ap__sep">5 min läsning</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span>
             </div>
-            <p class="ap__atual">Uppdaterad: <time datetime="2026-09-28">28 september 2026</time></p>
+            <p class="ap__atual">Uppdaterad: <time datetime="2026-10-08">8 oktober 2026</time></p>
             <span class="bq__tag">Optioner</span>
             <h1>Optionernas grekiska tal för nybörjare: delta, gamma, theta, vega</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Analysredaktionen</strong><small>Duotide-redaktion</small></span></div>
@@ -218,13 +218,13 @@
           <div class="ap__texto article">
             
 <p>Den som börjar studera optioner stöter oftast snabbt på fyra ord som verkar vara riktig grekiska: delta, gamma, theta och vega. De är, i praktiken, mått som visar hur priset på en option reagerar på olika faktorer, som den underliggande tillgångens rörelse, tidens gång och förändringar i volatiliteten. Att förstå vad var och en mäter hjälper till att bedöma en optionsaffär innan man går in, i stället för att i efterhand upptäcka varför kontraktets pris rörde sig på ett oväntat sätt.</p>
-<h2 id="delta-hur-mycket-optionen-ror-sig-tillsammans-med-tillgangen">Delta: hur mycket optionen rör sig tillsammans med tillgången</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/gregas-das-opcoes-para-iniciantes.svg" alt="Diagram: GOOGL, dagligt, 2026-06-01 till 2026-10-07. Data: Yahoo Finance. Egen analys." width="960" height="540" loading="lazy" decoding="async"><figcaption>Diagram: GOOGL, dagligt, 2026-06-01 till 2026-10-07. Data: Yahoo Finance. Egen analys.</figcaption></figure><h2 id="delta-hur-mycket-optionen-ror-sig-tillsammans-med-tillgangen">Delta: hur mycket optionen rör sig tillsammans med tillgången</h2>
 <p>Deltat mäter känsligheten hos optionens pris för en förändring i den underliggande tillgångens pris. En köpoption med delta 0,60, till exempel, tenderar att stiga cirka R$ 0,60 för varje uppgång på R$ 1,00 i den underliggande tillgången, med övriga faktorer konstanta. Köpoptioner har positivt delta, mellan 0 och 1. Säljoptioner har negativt delta, mellan -1 och 0. Ju mer optionen är in the money, desto närmare 1 eller -1 ligger deltat, och ju mer den är out of the money, desto närmare noll.</p>
-<h2 id="gamma-hastigheten-pa-deltats-forandring">Gamma: hastigheten på deltats förändring</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="gamma-hastigheten-pa-deltats-forandring">Gamma: hastigheten på deltats förändring</h2>
 <p>Om deltat visar riktningen visar gamma hur snabbt den riktningen kan förändras när tillgångens pris rör sig. Ett högt gamma betyder att optionens delta kan variera mycket vid små rörelser i den underliggande tillgången, vilket ofta händer med optioner nära lösenpriset och nära förfall. Det spelar roll eftersom en position med högt gamma snabbt kan ändra riskprofil, vilket kräver mer uppmärksamhet än en position med lågt gamma.</p>
 <h2 id="theta-kostnaden-for-att-halla-optionen-over-tid">Theta: kostnaden för att hålla optionen över tid</h2>
 <p>Theta mäter hur mycket värde optionen tenderar att förlora per dag, enbart genom tidens gång, med övriga faktorer konstanta. Den här effekten kallas tidsförfall. För den som köper optioner arbetar theta mot positionen: varje dag som går utan att tillgången rör sig tillräckligt minskar kontraktets värde. För den som säljer optioner arbetar theta till fördel, vilket förklarar varför optionsförsäljningsstrategier ofta beskrivs som satsningar på tiden, inte bara på prisets riktning.</p>
-<h2 id="vega-kanslighet-for-forandringar-i-volatiliteten">Vega: känslighet för förändringar i volatiliteten</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="vega-kanslighet-for-forandringar-i-volatiliteten">Vega: känslighet för förändringar i volatiliteten</h2>
 <p>Vega mäter hur mycket optionens pris förändras när marknadens implicita volatilitet stiger eller sjunker, utan att den underliggande tillgångens pris behöver röra sig. Under perioder av osäkerhet, som inför ett företagsresultat eller ett räntebeslut, tenderar den implicita volatiliteten att stiga, vilket kan fördyra optioner även utan omedelbar rörelse i tillgångens pris. Efter händelsen brukar volatiliteten falla abrupt, en effekt som kallas volatilitetskrasch, vilket kan minska optionens värde även om tillgången rört sig i den förväntade riktningen.</p>
 <h2 id="ett-numeriskt-exempel-som-kombinerar-delta-och-gamma">Ett numeriskt exempel som kombinerar delta och gamma</h2>
 <p>Anta en köpoption som handlas till R$ 2,00, med delta 0,40 och gamma 0,05, på en tillgång noterad till R$ 50,00. Om tillgången stiger R$ 1,00, till R$ 51,00, hamnar optionens nya uppskattade pris nära R$ 2,40, med bara deltat som grund. Men gamma på 0,05 visar att själva deltat också stiger, från 0,40 till cirka 0,45 efter den rörelsen. Det betyder att om tillgången stiger ytterligare R$ 1,00 efter det, bör optionen reagera lite starkare än den gjorde vid den första uppgången. Den ackumulerade effekten är anledningen till att positioner med högt gamma kan verka lugna och sedan plötsligt börja röra sig med mycket mer kraft än väntat.</p>
@@ -240,7 +240,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-sv" target="_blank" rel="noopener sponsored nofollow">Skapa gratiskonto</a>
             </div>
             <div class="ap__fim">
-              <p>Uppdaterad: <time datetime="2026-09-28">28 sep. 2026</time></p>
+              <p>Uppdaterad: <time datetime="2026-10-08">8 okt. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visningar</span></span><button class="ap__compartilhar" type="button">Dela <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Var artikeln till hjälp?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Bli först med att betygsätta.</p>
             </div>
-            <section class="ap__coment" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
               <h2>Kommentarer</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Inga kommentarer ännu. Bli först med att kommentera.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lämna en kommentar</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ditt namn" aria-label="Ditt namn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ditt namn (valfritt)" aria-label="Ditt namn (valfritt)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Din kommentar" aria-label="Din kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Skicka kommentar</button>
@@ -269,7 +269,7 @@
         <aside class="ap__rel">
           <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/sv/blog/sa-fungerar-binara-optioner-i-praktiken/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så fungerar binära optioner, i praktiken</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/sa-fungerar-binara-optioner-i-praktiken/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Så fungerar binära optioner, i praktiken</span><span class="bq__meta">2026-09-24 · 5 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/binara-optioner-steg-for-steg-och-riskhantering/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binära optioner: praktisk steg-för-steg-guide och riskhantering</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/digitala-optioner-hur-de-fungerar-och-hur-du-berakna-risken/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Digitala optioner: hur de fungerar och hur du beräknar den verkliga risken</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
           </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

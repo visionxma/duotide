@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -223,7 +223,7 @@
 <p><strong>Центральная полоса = простая скользящая средняя за 20 периодов</strong></p>
 <p><strong>Верхняя полоса = центральная полоса + (2 x стандартное отклонение)</strong></p>
 <p><strong>Нижняя полоса = центральная полоса - (2 x стандартное отклонение)</strong></p>
-<h2 id="числовои-пример">Числовой пример</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="числовои-пример">Числовой пример</h2>
 <p>Предположим, акция со скользящей средней за 20 периодов в 48,00 руб. и недавним стандартным отклонением в 1,50 руб. Полосы рассчитываются так:</p>
 <ul>
 <li>Верхняя полоса = 48,00 руб. + (2 x 1,50 руб.) = 51,00 руб.</li>
@@ -232,7 +232,7 @@
 <p>Это создаёт канал от 45,00 руб. до 51,00 руб. вокруг средней. Поскольку расчёт использует стандартное отклонение, он подстраивается сам: если волатильность актива растёт, стандартное отклонение увеличивается, и полосы отдаляются от средней. Если волатильность падает, полосы сближаются.</p>
 <h2 id="что-на-самом-деле-означает-касание-полосы">Что на самом деле означает касание полосы</h2>
 <p>В статистическом смысле использование удвоенного стандартного отклонения стремится захватить большую часть нормальных колебаний цены внутри канала, исходя из предположения о распределении, близком к нормальному. На практике цена касается полосы или выходит за неё чаще, чем предполагала бы эта теоретическая гипотеза, потому что рынок ведёт себя не в точности как идеальное статистическое распределение. Касание верхней полосы означает, что цена растянута относительно своей недавней средней, а не то, что падение гарантировано вслед за этим.</p>
-<h2 id="сжатие-когда-полосы-сужаются">Сжатие: когда полосы сужаются</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="сжатие-когда-полосы-сужаются">Сжатие: когда полосы сужаются</h2>
 <p>Когда волатильность падает на протяжении какого-то периода, полосы сильно сближаются, формируя то, что обычно называют сжатием. Такое сужение обычно предшествует периоду более сильного движения, хотя и не указывает направление этого будущего движения. За сжатием может последовать как рост, так и снижение, и сам индикатор не способен предугадать, какой из двух вариантов произойдёт.</p>
 <h2 id="движение-цены-вдоль-полосы-при-сильном-тренде">Движение цены вдоль полосы при сильном тренде</h2>
 <p>При сильном восходящем тренде цена нередко идёт вплотную к верхней полосе или неоднократно касается её на протяжении нескольких свечей подряд, и это не означает неминуемый разворот. Трейдеры, продающие каждый раз, когда цена касается верхней полосы во время сильного тренда, часто накапливают убытки, потому что борются с преобладающим движением, вместо того чтобы выявлять реальную потерю силы. Поведение полос при чётко выраженном тренде отличается от поведения на боковом рынке, и рассматривать оба сценария одинаково — распространённая ошибка.</p>
@@ -260,12 +260,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Была ли статья полезной?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Оцените первым.</p>
             </div>
-            <section class="ap__coment" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
+            <section class="ap__coment" data-anonimo="Аноним" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
               <h2>Комментарии</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Комментариев пока нет. Будьте первым.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Оставить комментарий</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ваше имя" aria-label="Ваше имя" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ваше имя (необязательно)" aria-label="Ваше имя (необязательно)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ваш комментарий" aria-label="Ваш комментарий"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Отправить</button>
@@ -277,9 +277,9 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
             <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
           </div>
         </aside>
       </div>
@@ -346,6 +346,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

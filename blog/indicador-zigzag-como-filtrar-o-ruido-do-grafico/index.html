@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>Indicador ZigZag: como filtrar o ruído do gráfico | Blog Duotide</title>
-  <meta name="description" content="Como o ZigZag ignora oscilações pequenas para mostrar apenas os movimentos relevantes de preço, e por que ele não deve ser usado como sinal de entrada.">
+  <title>Indicador ZigZag: o que é, como configurar e por que ele repinta | Blog Duotide</title>
+  <meta name="description" content="Como o ZigZag filtra o ruído do gráfico, exemplo real no Ibovespa com 5% e 10%, o atraso na confirmação dos topos e os erros mais comuns.">
   <link rel="canonical" href="https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/">
@@ -33,8 +33,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Indicador ZigZag: como filtrar o ruído do gráfico">
-  <meta property="og:description" content="Como o ZigZag ignora oscilações pequenas para mostrar apenas os movimentos relevantes de preço, e por que ele não deve ser usado como sinal de entrada.">
+  <meta property="og:title" content="Indicador ZigZag: o que é, como configurar e por que ele repinta">
+  <meta property="og:description" content="Como o ZigZag filtra o ruído do gráfico, exemplo real no Ibovespa com 5% e 10%, o atraso na confirmação dos topos e os erros mais comuns.">
   <meta property="og:url" content="https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-04.webp">
@@ -43,8 +43,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Indicador ZigZag: como filtrar o ruído do gráfico">
-  <meta name="twitter:description" content="Como o ZigZag ignora oscilações pequenas para mostrar apenas os movimentos relevantes de preço, e por que ele não deve ser usado como sinal de entrada.">
+  <meta name="twitter:title" content="Indicador ZigZag: o que é, como configurar e por que ele repinta">
+  <meta name="twitter:description" content="Como o ZigZag filtra o ruído do gráfico, exemplo real no Ibovespa com 5% e 10%, o atraso na confirmação dos topos e os erros mais comuns.">
   <meta name="twitter:label1" content="Escrito por">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tempo de leitura">
@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,12 +65,12 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/#artigo",
-      "headline": "Indicador ZigZag: como filtrar o ruído do gráfico",
-      "description": "Como o ZigZag ignora oscilações pequenas para mostrar apenas os movimentos relevantes de preço, e por que ele não deve ser usado como sinal de entrada.",
+      "headline": "Indicador ZigZag: o que é, como configurar e por que ele repinta",
+      "description": "Como o ZigZag filtra o ruído do gráfico, exemplo real no Ibovespa com 5% e 10%, o atraso na confirmação dos topos e os erros mais comuns.",
       "url": "https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/",
       "inLanguage": "pt-BR",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "Indicadores",
       "author": {
@@ -104,7 +104,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Indicador ZigZag: como filtrar o ruído do gráfico",
+          "name": "Indicador ZigZag: o que é, como configurar e por que ele repinta",
           "item": "https://duotide.com.br/blog/indicador-zigzag-como-filtrar-o-ruido-do-grafico/"
         }
       ]
@@ -177,7 +177,7 @@
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
-        <li><span aria-current="page">Indicador ZigZag: como filtrar o ruído do gráfico</span></li>
+        <li><span aria-current="page">Indicador ZigZag: o que é, como configurar e por que ele repinta</span></li>
       </ol>
       <a class="ap__voltar" href="/blog/">Voltar</a>
     </div>
@@ -189,12 +189,12 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">4 min de leitura</span></span>
+              <span><time datetime="2026-09-24">24 de set. de 2026</time><span class="ap__sep">6 min de leitura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
             </div>
-            <p class="ap__atual">Atualizado em: <time datetime="2026-09-27">27 de setembro de 2026</time></p>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-10-08">8 de outubro de 2026</time></p>
             <span class="bq__tag">Indicadores</span>
-            <h1>Indicador ZigZag: como filtrar o ruído do gráfico</h1>
+            <h1>Indicador ZigZag: o que é, como configurar e por que ele repinta</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Redação de Análise</strong><small>Editoria Duotide</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -204,23 +204,73 @@
             <nav class="ap__indice" aria-label="Conteúdo">
               <p class="ap__indice-tit">Conteúdo</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#como-o-zigzag-decide-o-que-mostrar">Como o ZigZag decide o que mostrar</a></li>
-                <li><a href="#para-que-o-zigzag-e-realmente-util">Para que o ZigZag é realmente útil</a></li>
-                <li><a href="#a-limitacao-mais-importante-do-zigzag">A limitação mais importante do ZigZag</a></li>
-                <li><a href="#como-ajustar-o-parametro-de-sensibilidade">Como ajustar o parâmetro de sensibilidade</a></li>
-                <li><a href="#como-usar-o-zigzag-de-forma-responsavel">Como usar o ZigZag de forma responsável</a></li>
+                <li><a href="#o-que-e-o-zigzag">O que é o ZigZag</a></li>
+                <li><a href="#como-o-zigzag-e-calculado">Como o ZigZag é calculado</a></li>
+                <li><a href="#exemplo-real-o-zigzag-no-ibovespa-em-2026">Exemplo real: o ZigZag no Ibovespa em 2026</a></li>
+                <li><a href="#como-usar-o-zigzag">Como usar o ZigZag</a></li>
+                <li><a href="#erros-comuns-ao-usar-o-zigzag">Erros comuns ao usar o ZigZag</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Olhar um gráfico de preço sem filtro nenhum pode ser cansativo: dezenas de pequenas subidas e descidas competem pela atenção, dificultando enxergar o movimento realmente relevante por trás de tanto ruído. O ZigZag existe justamente para resolver esse problema visual, traçando linhas retas que conectam apenas os topos e fundos significativos do gráfico, ignorando o que fica no meio do caminho.</p><p>Este artigo explica como o ZigZag decide o que é ruído e o que é movimento relevante, para que serve na prática, e por que ele não deve ser confundido com um gerador de sinais de entrada.</p><h2 id="como-o-zigzag-decide-o-que-mostrar">Como o ZigZag decide o que mostrar</h2><p>O indicador é configurado com um limite mínimo de variação, definido em porcentagem do preço ou em número de pontos. Qualquer movimento menor do que esse limite é ignorado, e o ZigZag só traça uma nova linha quando o preço se move o suficiente para superar esse limiar a partir do último topo ou fundo identificado. Por exemplo, com um limite de 5%, uma oscilação de 2% no meio de uma tendência simplesmente não aparece no indicador — só entra no desenho quando o movimento acumulado ultrapassa os 5% definidos.</p><h2 id="para-que-o-zigzag-e-realmente-util">Para que o ZigZag é realmente útil</h2><h3>Identificar topos e fundos relevantes</h3><p>Ao remover o ruído de curto prazo, fica mais fácil enxergar onde estão os pontos de reversão que realmente importaram no histórico do ativo — informação útil para desenhar linhas de suporte e resistência com mais confiança do que tentando adivinhar isso em um gráfico cheio de pequenas oscilações.</p><h3>Apoiar a leitura de padrões gráficos</h3><p>Padrões como topo duplo, ombro-cabeça-ombro ou canais de tendência ficam mais evidentes quando o ZigZag já eliminou o ruído menor, funcionando como um esqueleto visual sobre o qual esses padrões podem ser identificados com mais clareza, inclusive para quem estuda contagem de ondas em análise técnica. Sem esse filtro, seria muito mais difícil separar visualmente qual perna do gráfico representa o movimento principal e qual é apenas uma correção dentro dele.</p><h3>Medir a amplitude de movimentos anteriores</h3><p>Como cada linha do ZigZag conecta um topo a um fundo (ou vice-versa), ele facilita medir rapidamente quantos pontos ou qual porcentagem o ativo se moveu em cada perna do gráfico, o que ajuda a calibrar expectativas de alvo com base em movimentos passados de tamanho parecido.</p><h2 id="a-limitacao-mais-importante-do-zigzag">A limitação mais importante do ZigZag</h2><p>O ZigZag é um indicador que olha para trás: ele só confirma um topo ou fundo depois que o preço já se moveu o suficiente na direção oposta para provar que aquele ponto foi, de fato, uma reversão. Isso significa que a última linha do indicador pode mudar, ou repintar, conforme novos candles se formam — o topo que parecia definitivo há pouco pode deixar de existir se o preço continuar subindo. Por essa razão, usar o ZigZag como gatilho direto de entrada é arriscado: no momento em que o sinal aparece com clareza, o movimento que ele descreve já aconteceu. Isso torna o ZigZag mais parecido com uma ferramenta de retrospectiva do que com um indicador de antecipação.</p><h2 id="como-ajustar-o-parametro-de-sensibilidade">Como ajustar o parâmetro de sensibilidade</h2><ul><li>Um limite pequeno (por exemplo, 1% ou 2%) mostra mais detalhes, mas volta a incluir bastante ruído de curto prazo.</li><li>Um limite maior (por exemplo, 8% ou 10%) simplifica bastante o gráfico, mas pode ignorar reversões relevantes para operações de prazo mais curto.</li><li>O ajuste ideal depende do ativo e do prazo gráfico: ativos mais voláteis geralmente pedem um limite maior para não gerar ruído em excesso, e o contrário vale para ativos mais estáveis.</li></ul><h2 id="como-usar-o-zigzag-de-forma-responsavel">Como usar o ZigZag de forma responsável</h2><p>A melhor forma de aproveitar o ZigZag é como ferramenta de análise visual e de estudo histórico, não como gatilho de entrada. Combine a leitura dos topos e fundos que ele destaca com um indicador de momento, como o RSI, ou com a leitura de volume, para decidir o momento real de entrar em uma operação. Como qualquer ferramenta baseada em dados já ocorridos, o ZigZag não prevê o próximo movimento, e o risco de perda continua presente mesmo com o gráfico mais organizado visualmente — vale estudar seu comportamento em conta de demonstração antes de incorporá-lo à sua rotina de análise.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Resposta rápida</p><p>O ZigZag é um filtro que liga apenas os topos e fundos em que o preço reverteu mais que um limite mínimo, como 5% ou 10%, e ignora as oscilações menores. Ele serve para enxergar a estrutura do gráfico, medir o tamanho das pernas e marcar suportes e resistências. Não serve como sinal de entrada: só confirma uma virada depois que o preço já andou o limite inteiro, e a última perna pode mudar, ou repintar, a cada novo candle.</p></div>
+            <p>Olhar um gráfico diário sem filtro nenhum cansa: dezenas de pequenas subidas e descidas disputam a atenção e escondem o movimento que realmente importou. O ZigZag resolve esse problema visual traçando linhas retas que ligam apenas os topos e fundos relevantes, e ignorando tudo o que fica no meio do caminho.</p>
+<p>Neste guia usamos os fechamentos diários reais do Ibovespa entre março e outubro de 2026 para mostrar como o indicador decide o que é ruído, quanto tempo ele demora para confirmar um topo ou um fundo e por que a última perna do desenho não é confiável.</p>
+<h2 id="o-que-e-o-zigzag">O que é o ZigZag</h2>
+<p>O ZigZag não é um oscilador nem uma média. Ele é um filtro: você define uma variação mínima, em porcentagem ou em pontos, e o indicador só desenha uma nova perna quando o preço anda pelo menos isso na direção oposta a partir do último topo ou fundo. Movimentos menores que o limite simplesmente não aparecem. Com 5%, uma correção de 3% no meio de uma alta fica invisível.</p>
+<p>Algumas plataformas usam máximas e mínimas; outras, só fechamentos. Neste artigo usamos fechamentos, o que evita a ambiguidade de pregões em que o preço faz máxima e mínima extremas no mesmo dia.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-o-zigzag-e-calculado">Como o ZigZag é calculado</h2>
+<ul class="check-list">
+<li>Comece em um ponto e acompanhe o preço, guardando o maior fechamento (topo provisório) enquanto a perna for de alta.</li>
+<li>Quando um fechamento ficar pelo menos X% abaixo do topo provisório, aquele topo é confirmado e começa uma perna de baixa.</li>
+<li>Na perna de baixa, guarde o menor fechamento (fundo provisório) até que um fechamento fique X% acima dele. Aí o fundo é confirmado.</li>
+<li>Repita. A última perna fica sempre em aberto.</li>
+</ul>
+<h3>Exemplo com dados reais do Ibovespa</h3>
+<p>Com limite de 5%, o Ibovespa marcou topo em 14/04/2026, fechando a 198.657 pontos. Para esse topo ser confirmado, era preciso um fechamento abaixo de 198.657 × 0,95 = <strong>188.724</strong> pontos. Isso só aconteceu em 28/04, com fechamento a 188.619, nove pregões depois do topo.</p>
+<p>No sentido contrário, o fundo de 18/08 (166.335 pontos) exigia um fechamento acima de 166.335 × 1,05 = <strong>174.652</strong> pontos. O primeiro veio em 27/08, a 175.135 pontos, sete pregões depois. Nos dois casos, quando o ZigZag desenhou a perna, o preço já estava 5% longe do ponto de virada.</p>
+<h2 id="exemplo-real-o-zigzag-no-ibovespa-em-2026">Exemplo real: o ZigZag no Ibovespa em 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="Gráfico: Ibovespa, diário, de 02/03/2026 a 07/10/2026. Dados: Yahoo Finance. Elaboração própria." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: Ibovespa, diário, de 02/03/2026 a 07/10/2026. Dados: Yahoo Finance. Elaboração própria.</figcaption></figure>
+<p>O Ibovespa começou a janela a 189.307 pontos em 02/03 e fechou 07/10 a 204.302, alta de 7,92% no período, com mínima intradiária de 164.835 em 14/08. Com limite de 5% nos fechamentos, o ZigZag reduz esses sete meses a seis pernas:</p>
+<ul class="check-list">
+<li>Topo de 189.307 (02/03) até fundo de 176.219 (20/03): queda de 6,91%.</li>
+<li>Fundo de 176.219 até topo de 198.657 (14/04): alta de 12,73%.</li>
+<li>Topo de 198.657 até fundo de 168.278 (18/06): queda de 15,29%.</li>
+<li>Fundo de 168.278 até topo de 178.000 (03/08): alta de 5,78%.</li>
+<li>Topo de 178.000 até fundo de 166.335 (18/08): queda de 6,55%.</li>
+<li>Fundo de 166.335 até o topo provisório de 206.912 (05/10): alta de 24,39%, ainda em aberto.</li>
+</ul>
+<h3>O atraso na confirmação</h3>
+<p>O fundo de 18/06 é o caso mais extremo. O preço subiu devagar a partir dali, e o fechamento 5% acima (177.866 pontos) só veio em 10/07, 16 pregões depois. Durante mais de três semanas, o ZigZag ainda mostrava a perna de baixa como se ela continuasse. Quem esperasse o indicador para reconhecer o fundo teria entrado bem depois da virada.</p>
+<h3>O mesmo gráfico com 10%</h3>
+<p>Trocando o limite para 10%, sobram só três pontos: fundo de 176.219 em 20/03, topo de 198.657 em 14/04 e fundo de 166.335 em 18/08, com a perna atual em aberto até 206.912. A queda de abril a agosto vira uma perna só, de 16,27%, e a pequena alta de junho a agosto desaparece. A confirmação também demora mais: o topo de 14/04 só foi confirmado em 13/05, 19 pregões depois, e o fundo de 18/08 em 02/09, 11 pregões depois.</p>
+<h3>A última perna repinta</h3>
+<p>Em 05/10 o índice fechou a 206.912 pontos, 7,70% acima do fechamento anterior, e o ZigZag marcou ali o topo provisório. Em 07/10 o fechamento foi 204.302, só 1,26% abaixo. Esse topo só vira definitivo se houver um fechamento abaixo de 196.566 (5% abaixo); se o índice fizer um fechamento acima de 206.912 antes disso, o topo simplesmente muda de lugar no desenho. É isso que os traders chamam de repintura.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-usar-o-zigzag">Como usar o ZigZag</h2>
+<h3>Encontrar topos e fundos para suporte e resistência</h3>
+<p>O uso mais honesto do ZigZag é retrospectivo. Os fundos de 168.278 (junho) e 166.335 (agosto) ficaram a pouco mais de 1% um do outro, uma região de suporte que salta aos olhos com o filtro ligado e fica escondida no meio das velas sem ele.</p>
+<h3>Medir o tamanho das pernas</h3>
+<p>Como cada linha liga um topo a um fundo, fica fácil comparar movimentos. No Ibovespa, as pernas de 2026 com filtro de 5% variaram de 5,78% a 24,39%. Isso ajuda a calibrar alvos e stops com base no que o ativo costuma fazer, e serve de base para traçar retrações de Fibonacci.</p>
+<h3>Escolher o limite</h3>
+<p>Limites pequenos (1% a 3%) mostram mais detalhe e trazem de volta parte do ruído; limites grandes (8% a 10%) deixam só os movimentos principais. Ativos mais voláteis pedem limites maiores. Uma regra prática é usar algo perto de duas a três vezes a variação diária média do ativo no prazo em que você opera.</p>
+<h3>Limitações</h3>
+<p>O ZigZag não prevê nada: ele confirma topos e fundos depois que o preço já andou o limite inteiro na direção contrária, e a última perna pode mudar a cada novo candle. Por isso, não serve como gatilho de entrada. Combine-o com um indicador de momento, como o RSI, ou com volume para decidir o momento de agir.</p>
+<h2 id="erros-comuns-ao-usar-o-zigzag">Erros comuns ao usar o ZigZag</h2>
+<ul class="check-list">
+<li>Usar o topo ou fundo mais recente como se fosse definitivo, esquecendo que a última perna repinta.</li>
+<li>Fazer backtest com o ZigZag sem levar em conta o atraso: no histórico, o indicador parece acertar todos os topos porque eles já foram confirmados.</li>
+<li>Comprar ou vender no momento em que uma perna aparece, quando o preço já andou 5% ou 10% desde a virada.</li>
+<li>Escolher o limite sem relação com a volatilidade do ativo, o que gera pernas demais ou de menos.</li>
+<li>Achar que o desenho passado indica o próximo movimento: os exemplos acima descrevem o que aconteceu com o Ibovespa, não o que vai acontecer.</li>
+</ul>
+<p>Para praticar sem arriscar dinheiro, abra o gráfico do Ibovespa ou de outro ativo na conta demo, aplique o ZigZag com 5% e com 10% e anote, a cada nova perna, em que dia o indicador confirmou o topo ou o fundo e quanto o preço já tinha andado. Esse registro mostra na prática o tamanho do atraso.</p>
             <div class="bq-post__cta">
               <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com R$ 10.000 virtuais.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
             </div>
             <div class="ap__fim">
-              <p>Atualizado em: <time datetime="2026-09-27">27 de set. de 2026</time></p>
+              <p>Atualizado em: <time datetime="2026-10-08">8 de out. de 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -232,12 +282,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
               <h2>Comentários</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deixe seu comentário</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Seu nome" aria-label="Seu nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentário</button>
@@ -249,9 +299,9 @@
         <aside class="ap__rel">
           <h2>Artigos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o indicador ADX e como calcular a força da tendência</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
             <a class="bq__card" href="/blog/o-que-e-o-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Oscilador Estocástico e como ele funciona</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
-            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o Average True Range (ATR) e como calcular</span><span class="bq__meta">24/09/2026 · 4 min de leitura</span></a>
+            <a class="bq__card" href="/blog/o-que-e-o-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">O que é o ATR (Average True Range) e como calcular</span><span class="bq__meta">24/09/2026 · 6 min de leitura</span></a>
           </div>
         </aside>
       </div>
@@ -317,6 +367,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

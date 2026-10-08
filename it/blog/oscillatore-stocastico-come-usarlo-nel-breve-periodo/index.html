@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -221,11 +221,11 @@
 <p>La linea principale, chiamata %K, si calcola così: %K = [(Chiusura attuale − Minimo più basso del periodo) ÷ (Massimo più alto del periodo − Minimo più basso del periodo)] × 100. Il risultato varia sempre tra 0 e 100.</p>
 <p>Esempio pratico: in 14 periodi, il massimo è stato R$ 132,50 e il minimo R$ 125,00 — un'ampiezza di R$ 7,50. Se la chiusura attuale è a R$ 130,00, il calcolo è: (130,00 − 125,00) ÷ 7,50 × 100 = 5,00 ÷ 7,50 × 100 = 66,67. Il valore di %K è 66,67, il che mostra che la chiusura è a due terzi del top della fascia recente — né esteso, né esaurito.</p>
 <p>La seconda linea, %D, è solo una media mobile a 3 periodi del %K, usata per smussare il risultato e ridurre i segnali falsi.</p>
-<h2 id="zone-di-ipercomprato-e-ipervenduto">Zone di ipercomprato e ipervenduto</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="zone-di-ipercomprato-e-ipervenduto">Zone di ipercomprato e ipervenduto</h2>
 <p>Per convenzione, valori sopra 80 indicano ipercomprato — il prezzo ha chiuso vicino al top della fascia recente — e valori sotto 20 indicano ipervenduto, vicino al fondo della fascia. Questo non significa "vendi perché ha superato 80" o "compra perché ha superato 20": in un forte trend, lo stocastico può restare incollato al top (o al fondo) per molte candele consecutive, e agire contro questo trend solo perché l'indicatore è esteso tende a costare caro.</p>
 <h2 id="incroci-tra-k-e-d">Incroci tra %K e %D</h2>
 <p>Il segnale più usato nel breve periodo è l'incrocio delle due linee dentro le zone estreme: quando %K incrocia %D dal basso verso l'alto dentro la zona di ipervenduto (sotto 20), viene letto come possibile ritorno della forza d'acquisto; quando incrocia dall'alto verso il basso dentro la zona di ipercomprato (sopra 80), viene letto come possibile ritorno della forza di vendita. Fuori da queste zone, lo stesso incrocio ha un peso molto minore.</p>
-<h2 id="divergenze-il-segnale-piu-forte">Divergenze: il segnale più forte</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="divergenze-il-segnale-piu-forte">Divergenze: il segnale più forte</h2>
 <p>Un uso più avanzato è confrontare il disegno del prezzo con il disegno dello stocastico. Se il prezzo fa un nuovo massimo, ma lo stocastico fa un massimo più basso del precedente, questa è una divergenza ribassista — il movimento rialzista sta perdendo forza anche se il prezzo sta ancora salendo. Il ragionamento inverso vale per una divergenza rialzista sui minimi di prezzo. Le divergenze non danno il momento esatto di ingresso, ma avvisano che il trend attuale potrebbe essere vicino alla fine.</p>
 <h2 id="adattando-i-periodi-per-operazioni-rapide">Adattando i periodi per operazioni rapide</h2>
 <p>Il periodo standard dello stocastico è 14, ma chi opera grafici a 1 o 5 minuti tende a ridurlo a 5 o 9 periodi, rendendo l'indicatore più sensibile e reagendo più velocemente alle oscillazioni. L'effetto collaterale è più segnali falsi, perché l'indicatore inizia a reagire a piccoli rumori del prezzo. Un modo comune di compensare questo è richiedere la conferma di una seconda candela prima di entrare, invece di operare nell'esatto momento dell'incrocio.</p>
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Questo articolo ti è stato utile?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sii il primo a valutare.</p>
             </div>
-            <section class="ap__coment" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
+            <section class="ap__coment" data-anonimo="Anonimo" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
               <h2>Commenti</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ancora nessun commento. Scrivi tu il primo.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lascia un commento</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Il tuo nome" aria-label="Il tuo nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Il tuo nome (facoltativo)" aria-label="Il tuo nome (facoltativo)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Il tuo commento" aria-label="Il tuo commento"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Invia commento</button>
@@ -269,9 +269,9 @@
         <aside class="ap__rel">
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/cose-loscillatore-stocastico-e-come-funziona/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Oscillatore Stocastico e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Average True Range (ATR) e come calcolarlo</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Average True Range (ATR) e come calcolarlo</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
           </div>
         </aside>
       </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

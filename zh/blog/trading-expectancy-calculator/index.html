@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/trading-expectancy-calculator/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "风险管理",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 5 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">风险管理</span>
             <h1>数学期望计算器：你的策略是否有优势</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>风险与行为栏目</strong><small>Duotide 栏目</small></span></div>
@@ -219,12 +219,12 @@
             
 <p>一个策略可能大部分交易都赚钱，却依然在慢慢耗尽账户。反过来也是成立的：完全可能一半以上的入场都判断错误，却在月末实现盈利。仅凭胜率无法回答一个策略是否真的具有优势。能够回答这个问题的是数学期望，也叫expectancy。</p>
 <p>数学期望显示的是，基于历史交易结果，一个策略平均每笔交易赚多少或亏多少。一个正数是该样本内存在统计优势的证据，而不是对未来盈利的保证。</p>
-<h2 id="数学期望的公式">数学期望的公式</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-expectativa-matematica-no-trading.svg" alt="图表：Ibovespa，日线，2026/01/02 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Ibovespa，日线，2026/01/02 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="数学期望的公式">数学期望的公式</h2>
 <p>这个公式最广为人知的版本是：</p>
 <p><strong>期望 = （胜率 × 平均盈利）-（败率 × 平均亏损）</strong></p>
 <p>当每笔交易都以盈利或亏损收场，并且平均值中已经包含了佣金等成本时，这个公式效果最好。为了让计算更清晰，也可以直接用总数计算净期望：</p>
 <p><strong>净期望 = [（盈利笔数 × 平均盈利）-（亏损笔数 × 平均亏损）- 总成本] / 总交易笔数</strong></p>
-<h2 id="一个用雷亚尔计算的示例">一个用雷亚尔计算的示例</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="一个用雷亚尔计算的示例">一个用雷亚尔计算的示例</h2>
 <p>假设一位交易者回顾了同一个交易设置下的40笔交易，每笔交易都设定了相同的计划风险，得到以下数字：</p>
 <ul>
 <li>盈利交易：18笔</li>
@@ -243,7 +243,7 @@
 <p>用风险倍数（R）来表示这个结果，以每笔交易平均100.00雷亚尔的风险计算，期望值为<strong>每笔交易+0.235R</strong>。这意味着，在这个样本的平均水平上，每笔交易的收益大约相当于计划风险的23.5%。这个样本的盈亏比，计算方式为总盈利除以总亏损，结果为2700除以1760，约为<strong>1.53</strong>。</p>
 <h2 id="45-的胜率也可能是正期望">45%的胜率也可能是正期望</h2>
 <p>请注意，上面这个例子的胜率只有45%（40笔中的18笔），低于一半。尽管如此，期望值依然是正的，因为平均盈利几乎是平均亏损的两倍。这正是为什么只问一个策略的胜率是多少，往往会对其质量得出错误结论的原因。</p>
-<h2 id="不要忘记成本">不要忘记成本</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="不要忘记成本">不要忘记成本</h2>
 <p>佣金、券商手续费，以及隔夜持仓可能产生的费用，都会降低净期望值。一个每笔交易毛期望为6.00雷亚尔的策略，在扣除平均每笔7.00雷亚尔的成本后，可能会变成负值。只要有可能，就应该使用券商实际收取的费用，而不是乐观的估计值，以免人为夸大结果。</p>
 <h2 id="第二个例子-这次是负期望">第二个例子：这次是负期望</h2>
 <p>为了让对比更清晰，来看第二个案例，共50笔交易：21笔盈利，平均盈利90.00雷亚尔；29笔亏损，平均亏损75.00雷亚尔。总盈利为21 × 90.00雷亚尔 = 1890.00雷亚尔，总亏损为29 × 75.00雷亚尔 = 2175.00雷亚尔。这个样本的净结果为负，为285.00雷亚尔，也就是1890.00雷亚尔减去2175.00雷亚尔，再除以50笔交易，即每笔交易平均亏损5.70雷亚尔。即使胜率为42%，接近许多策略被认为正常的区间，平均盈利与平均亏损之间的关系依然不足以支撑一个正的结果。</p>
@@ -258,7 +258,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -270,12 +270,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -288,7 +288,7 @@
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/zh/blog/stop-loss-and-take-profit-in-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何在外汇交易中使用止损和止盈</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/martingale-strategy-in-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">交易中的马丁格尔策略：如何运作及其风险</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
             <a class="bq__card" href="/zh/blog/when-to-close-a-trade-exit-signals/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">何时结束一笔操作：出场信号</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
           </div>
         </aside>
@@ -356,6 +356,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

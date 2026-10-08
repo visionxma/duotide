@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/starc-vs-bollinger-bands-which-to-use/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-04.webp",
       "articleSection": "技术指标",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 5 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">技术指标</span>
             <h1>STARC通道还是布林带：该选哪一个？</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>分析栏目</strong><small>Duotide 栏目</small></span></div>
@@ -214,13 +214,13 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>当有人第一次打开图表，看到两条像走廊一样把价格包围起来的线时，很容易把STARC指标（Stoller Average Range Channel）和布林带弄混。它们在视觉上确实相似：一条中线，两条分别位于价格上方和下方的轨道。但每种指标计算这些轨道的方式大不相同，这会显著改变信号的表现，为你的交易风格选错指标可能导致糟糕的入场。</p><p>本文解释这两种指标在构造上的差异，说明各自在什么情况下表现更好，并给出一个结合风险管理规则使用它们的示例。</p><h2 id="每种指标是如何计算的">每种指标是如何计算的</h2><h3>布林带</h3><p>布林带以一条简单移动均线（通常为20周期）为基础，再加减该周期内价格的两倍标准差。由于标准差衡量的是价格围绕均线的离散程度，轨道会在波动率上升时张开，在市场趋于平静时收拢——这种一张一合的运动被称为收窄（squeeze）。</p><h3>STARC通道</h3><p>STARC同样以简单移动均线作为中线，但上下轨是通过加减ATR（平均真实波幅）的某个倍数构建的，而不是标准差。由于ATR衡量的是价格K线（包括跳空）的平均波幅，STARC通道往往对波动率变化的反应更为平缓和稳定，不会像布林带那样有时出现剧烈的波动。</p><h2 id="在实践中-这对交易者意味着什么">在实践中，这对交易者意味着什么</h2><p>由于标准差对孤立的价格尖峰更敏感，布林带往往张合速度更快——这对希望迅速识别低波动率时期（通常是强势行情之前的预兆）的人来说很有用。而STARC由于基于ATR，产生的通道更稳定，这有助于偏好在一个明确价格区间内操作的交易者，即在没有明显趋势的市场中，靠近下轨买入、靠近上轨卖出。</p><h2 id="一个对比两者的例子">一个对比两者的例子</h2><p>假设某资产报价25.00雷亚尔，20周期均线同样是25.00雷亚尔。在布林带中，标准差为0.80雷亚尔，轨道分别为26.60雷亚尔（上轨）和23.40雷亚尔（下轨）。在STARC中，ATR为0.60雷亚尔，乘数为2，轨道分别为26.20雷亚尔和23.80雷亚尔——一个略微更窄、也不太容易因单根较长K线突然扩大的通道。</p><p>如果价格触及23.80雷亚尔（STARC的下轨），但还没有到达布林带的23.40雷亚尔，一位跟随STARC的交易者已经会得到一个可能的买入信号，而使用布林带的人则还在等待。</p><h2 id="如何决定使用哪一个">如何决定使用哪一个</h2><ul><li>如果你的重点是在突破之前识别波动率的收缩，布林带通常更直接。</li><li>如果你在横盘中交易，偏好一个更稳定、不会突然大幅扩张的通道，STARC往往表现更好。</li><li>两者都不能预测未来：它们描述的都是价格近期的表现，所以和一个动能指标（比如RSI）或支撑阻力的解读结合使用效果更好。</li><li>在选择之前，先在同一个资产、同一个周期上测试这两种指标——表现的差异会因资产和图表周期而不同。</li></ul><h2 id="两种指标都存在的局限">两种指标都存在的局限</h2><p>STARC是分析师曼宁·斯托勒作为布林带的替代方案而创立的，但这两种指标都没有解决操作波动率通道最主要的风险：在强劲趋势中，价格可能连续多根K线贴着上轨或下轨运行，这并不意味着反转。每次价格触及下轨就买入、却不检查趋势背景的人，就有可能在一波仍将继续的下跌中买入。</p><p>另一个重要的点是图表周期：在1分钟图上计算的轨道，反应方式会和日线图上计算的同样轨道大不相同，因为标准差和ATR都直接依赖于所选择的时间区间。调整均线周期（例如测试14、20或30）以及轨道的乘数，是找到最能描述你所关注资产表现的配置的过程的一部分。</p><h2 id="付诸实践">付诸实践</h2><p>STARC和布林带之间没有绝对的对错——只有哪一个更适合你的交易风格。一个不错的做法是在Duotide的模拟账户中同时打开这两个指标，应用到你平常关注的资产上，观察几周时间，看哪一个能更好地预判你想要捕捉的行情。请记住，任何波动率通道都只是辅助工具，不是准确率的保证，基于这些通道的任何策略都仍然离不开止损这种风险控制手段。</p>
+            <p>当有人第一次打开图表，看到两条像走廊一样把价格包围起来的线时，很容易把STARC指标（Stoller Average Range Channel）和布林带弄混。它们在视觉上确实相似：一条中线，两条分别位于价格上方和下方的轨道。但每种指标计算这些轨道的方式大不相同，这会显著改变信号的表现，为你的交易风格选错指标可能导致糟糕的入场。</p><p>本文解释这两种指标在构造上的差异，说明各自在什么情况下表现更好，并给出一个结合风险管理规则使用它们的示例。</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-starc-ou-bandas-de-bollinger-qual-usar.svg" alt="图表：Nvidia，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Nvidia，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="每种指标是如何计算的">每种指标是如何计算的</h2><h3>布林带</h3><p>布林带以一条简单移动均线（通常为20周期）为基础，再加减该周期内价格的两倍标准差。由于标准差衡量的是价格围绕均线的离散程度，轨道会在波动率上升时张开，在市场趋于平静时收拢——这种一张一合的运动被称为收窄（squeeze）。</p><h3>STARC通道</h3><p>STARC同样以简单移动均线作为中线，但上下轨是通过加减ATR（平均真实波幅）的某个倍数构建的，而不是标准差。由于ATR衡量的是价格K线（包括跳空）的平均波幅，STARC通道往往对波动率变化的反应更为平缓和稳定，不会像布林带那样有时出现剧烈的波动。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="在实践中-这对交易者意味着什么">在实践中，这对交易者意味着什么</h2><p>由于标准差对孤立的价格尖峰更敏感，布林带往往张合速度更快——这对希望迅速识别低波动率时期（通常是强势行情之前的预兆）的人来说很有用。而STARC由于基于ATR，产生的通道更稳定，这有助于偏好在一个明确价格区间内操作的交易者，即在没有明显趋势的市场中，靠近下轨买入、靠近上轨卖出。</p><h2 id="一个对比两者的例子">一个对比两者的例子</h2><p>假设某资产报价25.00雷亚尔，20周期均线同样是25.00雷亚尔。在布林带中，标准差为0.80雷亚尔，轨道分别为26.60雷亚尔（上轨）和23.40雷亚尔（下轨）。在STARC中，ATR为0.60雷亚尔，乘数为2，轨道分别为26.20雷亚尔和23.80雷亚尔——一个略微更窄、也不太容易因单根较长K线突然扩大的通道。</p><p>如果价格触及23.80雷亚尔（STARC的下轨），但还没有到达布林带的23.40雷亚尔，一位跟随STARC的交易者已经会得到一个可能的买入信号，而使用布林带的人则还在等待。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="如何决定使用哪一个">如何决定使用哪一个</h2><ul><li>如果你的重点是在突破之前识别波动率的收缩，布林带通常更直接。</li><li>如果你在横盘中交易，偏好一个更稳定、不会突然大幅扩张的通道，STARC往往表现更好。</li><li>两者都不能预测未来：它们描述的都是价格近期的表现，所以和一个动能指标（比如RSI）或支撑阻力的解读结合使用效果更好。</li><li>在选择之前，先在同一个资产、同一个周期上测试这两种指标——表现的差异会因资产和图表周期而不同。</li></ul><h2 id="两种指标都存在的局限">两种指标都存在的局限</h2><p>STARC是分析师曼宁·斯托勒作为布林带的替代方案而创立的，但这两种指标都没有解决操作波动率通道最主要的风险：在强劲趋势中，价格可能连续多根K线贴着上轨或下轨运行，这并不意味着反转。每次价格触及下轨就买入、却不检查趋势背景的人，就有可能在一波仍将继续的下跌中买入。</p><p>另一个重要的点是图表周期：在1分钟图上计算的轨道，反应方式会和日线图上计算的同样轨道大不相同，因为标准差和ATR都直接依赖于所选择的时间区间。调整均线周期（例如测试14、20或30）以及轨道的乘数，是找到最能描述你所关注资产表现的配置的过程的一部分。</p><h2 id="付诸实践">付诸实践</h2><p>STARC和布林带之间没有绝对的对错——只有哪一个更适合你的交易风格。一个不错的做法是在Duotide的模拟账户中同时打开这两个指标，应用到你平常关注的资产上，观察几周时间，看哪一个能更好地预判你想要捕捉的行情。请记住，任何波动率通道都只是辅助工具，不是准确率的保证，基于这些通道的任何策略都仍然离不开止损这种风险控制手段。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-27">2026年9月27日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -232,12 +232,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -249,9 +249,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -318,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

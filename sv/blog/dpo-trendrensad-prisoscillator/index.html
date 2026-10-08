@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,11 +219,11 @@
             <p>De flesta trendindikatorer är utformade för att följa priset i realtid. Den trendrensade prisoscillatorn, känd under förkortningen DPO (från engelskans <em>Detrended Price Oscillator</em>), gör medvetet motsatsen: den tar bort den långsiktiga trenden från grafen för att bara visa de kort- och medelfristiga cyklerna som annars döljs bakom den.</p>
 <h2 id="problemet-som-dpo-forsoker-losa">Problemet som DPO försöker lösa</h2>
 <p>När en tillgång befinner sig i en stark uppåttrend är det vanligt att den bildar mindre toppar och dalar inom den övergripande uppgången. Om man bara tittar på det råa priset är det svårt att visuellt skilja dessa mindre cykler från den underliggande rörelsen. DPO angriper problemet genom att jämföra det aktuella priset med ett glidande medelvärde som är förskjutet bakåt i tiden, vilket eliminerar en stor del av den långsiktiga trendkomponenten ur ekvationen.</p>
-<h2 id="hur-berakningen-fungerar">Hur beräkningen fungerar</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="hur-berakningen-fungerar">Hur beräkningen fungerar</h2>
 <p>Formeln utgår från ett enkelt glidande medelvärde över ett visst antal perioder — till exempel 20 — och förskjuter det bakåt med ungefär hälften av den perioden plus ett. Därefter subtraheras detta förskjutna medelvärde från stängningspriset för varje candle. Resultatet är en linje som pendlar över och under noll, vilket lyfter fram toppar och dalar som representerar kortsiktiga cykler, utan att trendens allmänna lutning stör avläsningen.</p>
 <h2 id="vad-dpo-linjen-avslojar">Vad DPO-linjen avslöjar</h2>
 <p>När DPO visar positiva värden ligger priset över det förskjutna medelvärdet, vilket indikerar ett styrkeläge inom den observerade kortsiktiga cykeln. När det visar negativa värden ligger priset under medelvärdet, vilket indikerar svaghet inom samma cykel. Indikatorns praktiska värde ligger i att hjälpa till att identifiera den ungefärliga längden på dessa cykler — genom att räkna hur många perioder som skiljer en topp från nästa i DPO — vilket till exempel kan vägleda det förväntade intervallet mellan en entré och nästa i en cykelbaserad strategi.</p>
-<h2 id="ett-exempel-med-siffror">Ett exempel med siffror</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ett-exempel-med-siffror">Ett exempel med siffror</h2>
 <p>Anta en tillgång med ett enkelt glidande medelvärde över 20 perioder, förskjutet 11 perioder bakåt, som för närvarande ligger på 45,00 kr. Om stängningspriset för den senaste candlen ligger på 47,25 kr blir DPO-värdet vid den punkten 47,25 − 45,00 = 2,25, ett positivt värde som visar att priset ligger 2,25 kr över det förskjutna referensmedelvärdet. Om samma beräkning några veckor senare ger -1,80 visar det att den kortsiktiga cykeln har gått från styrka till svaghet inom den observerade perioden — en upplysning som är betydligt svårare att upptäcka genom att bara titta på det råa priset i en sammanhängande uppåttrend.</p>
 <h2 id="varfor-dpo-inte-lampar-sig-for-att-lasa-trend">Varför DPO inte lämpar sig för att läsa trend</h2>
 <p>Just för att beräkningen medvetet tar bort trenden bör DPO inte användas för att avgöra om en tillgång befinner sig i en upp- eller nedgång på lång sikt — för det ändamålet är traditionella trendindikatorer fortfarande mer lämpliga. En annan sak att tänka på är tidsförskjutningen: eftersom medelvärdet som används i beräkningen är förskjutet bakåt tenderar DPO att ligga "efter" den senaste candlen, vilket förstärker dess roll som verktyg för att identifiera tidigare cykler, inte som en förhandssignal för nästa rörelse.</p>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Var artikeln till hjälp?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Bli först med att betygsätta.</p>
             </div>
-            <section class="ap__coment" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Vi har tagit emot din kommentar. Den visas här när redaktionen har godkänt den." data-erro="Det gick inte att skicka just nu. Försök igen om en stund." data-vazio="Inga kommentarer ännu. Bli först med att kommentera." data-idioma="sv">
               <h2>Kommentarer</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Inga kommentarer ännu. Bli först med att kommentera.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lämna en kommentar</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ditt namn" aria-label="Ditt namn" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ditt namn (valfritt)" aria-label="Ditt namn (valfritt)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Din kommentar" aria-label="Din kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Skicka kommentar</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>Relaterade artiklar</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/sv/blog/vad-ar-adx-indikatorn-och-hur-fungerar-den/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är ADX-indikatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/vad-ar-adx-indikatorn-och-hur-fungerar-den/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är ADX-indikatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
             <a class="bq__card" href="/sv/blog/vad-ar-stokastiska-oscillatorn-och-hur-fungerar-den/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Stokastiska Oscillatorn och hur fungerar den</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
-            <a class="bq__card" href="/sv/blog/vad-ar-average-true-range-atr-och-hur-berakna/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Average True Range (ATR) och hur man beräknar det</span><span class="bq__meta">2026-09-24 · 4 min läsning</span></a>
+            <a class="bq__card" href="/sv/blog/vad-ar-average-true-range-atr-och-hur-berakna/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Vad är Average True Range (ATR) och hur man beräknar det</span><span class="bq__meta">2026-09-24 · 6 min läsning</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

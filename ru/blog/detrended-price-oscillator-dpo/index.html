@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -219,11 +219,11 @@
             <p>Большинство трендовых индикаторов создано для отслеживания цены в реальном времени. Осциллятор цены без тренда, известный по аббревиатуре DPO (от английского <em>Detrended Price Oscillator</em>), намеренно делает противоположное: он убирает долгосрочный тренд с графика, чтобы показать только краткосрочные и среднесрочные циклы, скрытые за ним.</p>
 <h2 id="проблема-которую-пытается-решить-dpo">Проблема, которую пытается решить DPO</h2>
 <p>Когда актив находится в сильном восходящем тренде, обычно он формирует небольшие пики и впадины внутри этого общего роста. Глядя только на сырую цену, трудно визуально отделить эти малые циклы от фонового движения. DPO решает эту проблему, сравнивая текущую цену со скользящей средней, сдвинутой назад во времени, устраняя большую часть компонента долгосрочного тренда из уравнения.</p>
-<h2 id="как-работает-расчет">Как работает расчёт</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="как-работает-расчет">Как работает расчёт</h2>
 <p>Формула берёт простую скользящую среднюю за определённое число периодов — например, 20 — и сдвигает её назад примерно на половину этого периода плюс один. Затем эта сдвинутая средняя вычитается из цены закрытия каждой свечи. Результат — линия, колеблющаяся выше и ниже нуля, выделяющая пики и впадины, представляющие краткосрочные циклы, без общего наклона тренда, мешающего прочтению.</p>
 <h2 id="что-показывает-линия-dpo">Что показывает линия DPO</h2>
 <p>Когда DPO находится в положительных значениях, цена выше сдвинутой средней, указывая на момент силы внутри наблюдаемого краткосрочного цикла. Когда он в отрицательных значениях, цена ниже этой средней, указывая на слабость внутри того же цикла. Практическая ценность индикатора — помощь в определении приблизительной длительности этих циклов, подсчитывая, сколько периодов разделяет один пик DPO от другого, что может ориентировать, например, ожидаемый интервал между входами в стратегии, основанной на циклах.</p>
-<h2 id="пример-с-числами">Пример с числами</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="пример-с-числами">Пример с числами</h2>
 <p>Предположим, актив с простой скользящей средней за 20 периодов, сдвинутой на 11 периодов назад, сейчас на уровне 45,00 руб. Если цена закрытия последней свечи составляет 47,25 руб., значение DPO в этой точке составляет 47,25 − 45,00 = 2,25 — положительное значение, указывающее, что цена на 2,25 руб. выше сдвинутой референсной средней. Если несколько недель спустя тот же расчёт даёт -1,80, это показывает, что краткосрочный цикл перешёл от силы к слабости в рамках того наблюдаемого периода — информация, которую гораздо труднее заметить, глядя только на сырую цену в рамках непрерывного восходящего тренда.</p>
 <h2 id="почему-dpo-не-подходит-для-чтения-тренда">Почему DPO не подходит для чтения тренда</h2>
 <p>Именно потому что его расчёт намеренно убирает тренд, DPO не следует использовать для решения, находится ли актив в росте или падении в долгосрочной перспективе — для этого традиционные трендовые индикаторы остаются более подходящими. Ещё один момент внимания — временной сдвиг: поскольку средняя, используемая в расчёте, сдвинута назад, DPO имеет тенденцию «запаздывать» относительно последней свечи, что подчёркивает его роль как инструмента выявления прошлых циклов, а не опережающего сигнала следующего движения.</p>
@@ -250,12 +250,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Была ли статья полезной?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Оцените первым.</p>
             </div>
-            <section class="ap__coment" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
+            <section class="ap__coment" data-anonimo="Аноним" data-enviado="Мы получили ваш комментарий. Он появится здесь после проверки редакцией." data-erro="Сейчас не удалось отправить. Попробуйте чуть позже." data-vazio="Комментариев пока нет. Будьте первым." data-idioma="ru">
               <h2>Комментарии</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Комментариев пока нет. Будьте первым.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Оставить комментарий</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ваше имя" aria-label="Ваше имя" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ваше имя (необязательно)" aria-label="Ваше имя (необязательно)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ваш комментарий" aria-label="Ваш комментарий"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Отправить</button>
@@ -267,9 +267,9 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
             <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 4 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
           </div>
         </aside>
       </div>
@@ -336,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -217,11 +217,11 @@
 <p>Bu basitleştirilmiş biçim, tam olarak anlaşılması kolay göründüğü için yeni başlayanları cezbeder: bir varlık seçersiniz, fiyatın belirli bir saate kadar yükseleceğine ya da düşeceğine bahis oynarsınız ve işlemi onaylamadan önce bile kazancın ya da kaybın tam olarak ne olacağını bilirsiniz. Ama bu görünürdeki basitlik, işlem yapmadan önce ayrıntılı olarak anlaşılması gereken bir risk mekaniğini gizler.</p>
 <h2 id="sozlesme-pratikte-nasıl-calısır">Sözleşme Pratikte Nasıl Çalışır</h2>
 <p>EUR/USD paritesinin 1,0850'den kote edildiğini ve fiyatın beş dakika içinde bu seviyenin üzerinde olacağına inandığınızı varsayalım. Bu tahmine R$ 100,00 yatırırsınız, isabet durumunda %80 ilan edilmiş bir getiri ile. Beş dakika sonunda fiyat 1,0855'te ise — sadece 5 puan yukarıda bile olsa — R$ 180,00 alırsınız (yatırılan R$ 100,00 artı R$ 80,00 getiri). Fiyat 1,0849'da kapanırsa, giriş değerinin sadece 1 puan altında bile olsa, R$ 100,00'ün tamamını kaybedersiniz. Hareketin büyüklüğü önemli değildir: önemli olan tek şey, piyasanın giriş fiyatının hangi tarafında kapandığıdır.</p>
-<h2 id="getiri-neden-asla-simetrik-degildir">Getiri Neden Asla Simetrik Değildir</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="getiri-neden-asla-simetrik-degildir">Getiri Neden Asla Simetrik Değildir</h2>
 <p>Yukarıdaki örnekte, isabet durumundaki kazancın (yatırılan tutarın %80'i) hata durumundaki kayıptan (yatırılan tutarın %100'ü) daha düşük olduğuna dikkat edin. Bu asimetri yapısaldır: ürünün onu sunan taraf için sürdürülebilir olması için, isabet halinde ödenen getirinin ortalama olarak hatada kaybedilen tutardan daha düşük olması gerekir. Pratikte bu, yazı tura atmakla aynı şansa sahip olan %50'lik bir isabet oranının, birçok işlem boyunca başa baş kalmak için artık yeterli olmadığı anlamına gelir. Hesabı tekrar yapalım: R$ 100,00'lük 10 işlemde 5 isabet ve 5 hata ile, 5 × R$ 80,00 = R$ 400,00 kazanır ve 5 × R$ 100,00 = R$ 500,00 kaybederdiniz; yarısında isabet etmenize rağmen R$ 100,00 zararla sonuçlanırdı.</p>
 <h2 id="kısa-vadenin-rolu">Kısa Vadenin Rolü</h2>
 <p>Binary opsiyonlar genellikle saniyelerden dakikalara kadar çok kısa vadelerde sunulur, bu da her bir işlemin sonucu üzerinde şansın etkisini artırır. Vade ne kadar kısaysa, herhangi bir teknik ya da temel analizin doğrulanması için o kadar az zaman kalır ve sonuç, gerçek bir trend yerine fiyatın çok kısa vadeli gürültüsü üzerine bir bahise o kadar çok yaklaşır.</p>
-<h2 id="geleneksel-bir-opsiyondan-farkı">Geleneksel Bir Opsiyondan Farkı</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="geleneksel-bir-opsiyondan-farkı">Geleneksel Bir Opsiyondan Farkı</h2>
 <p>Geleneksel bir opsiyonun (call veya put türünde) değeri, varlığın hareketiyle ve vadeye kalan süreyle orantılı olarak değişir — fiyat pozisyon lehine ne kadar hareket ederse opsiyon o kadar değerlenir ve pozisyonu vadeden önce o anki piyasa değerinden kapatmak mümkündür. Binary opsiyonda bu orantılı değişim ve genellikle vadeden önce ara bir değerle çıkma imkanı yoktur: sonuç yalnızca sözleşme kapandığında belirlenir ve her zaman hep ya da hiçtir.</p>
 <h2 id="islem-yapmadan-once-dikkate-alınması-gerekenler">İşlem Yapmadan Önce Dikkate Alınması Gerekenler</h2>
 <ul>
@@ -247,12 +247,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Bu makale faydalı oldu mu?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">İlk değerlendiren siz olun.</p>
             </div>
-            <section class="ap__coment" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
+            <section class="ap__coment" data-anonimo="Anonim" data-enviado="Yorumunuzu aldık. Ekip onayladıktan sonra burada görünecek." data-erro="Şu anda gönderilemedi. Biraz sonra tekrar deneyin." data-vazio="Henüz yorum yok. İlk yorumu siz yapın." data-idioma="tr">
               <h2>Yorumlar</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Henüz yorum yok. İlk yorumu siz yapın.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Yorum bırakın</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Adınız" aria-label="Adınız" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Adınız (isteğe bağlı)" aria-label="Adınız (isteğe bağlı)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Yorumunuz" aria-label="Yorumunuz"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Yorumu gönder</button>
@@ -264,7 +264,7 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/binary-opsiyonlar-pratikte-nasil-calisir/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary opsiyonlar pratikte nasıl çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/binary-opsiyonlar-pratikte-nasil-calisir/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary opsiyonlar pratikte nasıl çalışır</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/binary-opsiyonlar-adim-adim-rehber-ve-risk-yonetimi/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary Opsiyonlar: Pratik Adım Adım Rehber ve Risk Yönetimi</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
             <a class="bq__card" href="/tr/blog/dijital-opsiyonlar-nasil-calisir-ve-risk-nasil-hesaplanir/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dijital Opsiyonlar: Nasıl Çalışır ve Gerçek Risk Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 4 dk okuma</span></a>
           </div>
@@ -333,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

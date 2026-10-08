@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -221,11 +221,11 @@
 <p>يُحسب الخط الرئيسي، المسمى %K، كالتالي: %K = [(الإغلاق الحالي − أدنى قاع للفترة) ÷ (أعلى قمة للفترة − أدنى قاع للفترة)] × 100. تتراوح النتيجة دائمًا بين 0 و100.</p>
 <p>مثال عملي: خلال 14 فترة، كانت القمة 132.50 ريال برازيلي والقاع 125.00 ريال برازيلي — مدى قدره 7.50 ريال برازيلي. إذا كان الإغلاق الحالي عند 130.00 ريال برازيلي، يكون الحساب: (130.00 − 125.00) ÷ 7.50 × 100 = 5.00 ÷ 7.50 × 100 = 66.67. قيمة %K هي 66.67، مما يُظهر أن الإغلاق عند ثلثي أعلى النطاق الحديث — لا هو ممتد ولا هو منهك.</p>
 <p>الخط الثاني، %D، هو مجرد متوسط متحرك لـ3 فترات لـ%K، يُستخدم لتلطيف النتيجة وتقليل الإشارات الخاطئة.</p>
-<h2 id="مناطق-التشبع-الشراي-ي-والبيعي">مناطق التشبع الشرائي والبيعي</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="مناطق-التشبع-الشراي-ي-والبيعي">مناطق التشبع الشرائي والبيعي</h2>
 <p>وفقًا للاصطلاح، تشير القيم فوق 80 إلى التشبع الشرائي — أغلق السعر قرب قمة النطاق الحديث — وتشير القيم دون 20 إلى التشبع البيعي، قرب قاع النطاق. هذا لا يعني "بع لأنه تجاوز 80" أو "اشتر لأنه تجاوز 20": في اتجاه قوي، يمكن أن يبقى الستوكاستيك ملتصقًا بالقمة (أو القاع) لعدة شموع متتالية، والتصرف ضد هذا الاتجاه فقط لأن المؤشر ممتد عادة ما يكلّف كثيرًا.</p>
 <h2 id="التقاطعات-بين-k-و-d">التقاطعات بين %K و%D</h2>
 <p>الإشارة الأكثر استخدامًا في المدى القصير هي تقاطع الخطين ضمن المناطق القصوى: عندما يتقاطع %K مع %D من الأسفل إلى الأعلى ضمن منطقة التشبع البيعي (أدنى من 20)، يُقرأ كعودة محتملة لقوة الشراء؛ وعندما يتقاطع من الأعلى إلى الأسفل ضمن منطقة التشبع الشرائي (فوق 80)، يُقرأ كعودة محتملة لقوة البيع. خارج هذه المناطق، يكون لنفس التقاطع وزن أقل بكثير.</p>
-<h2 id="التباعدات-الا-شارة-الا-قوى">التباعدات: الإشارة الأقوى</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="التباعدات-الا-شارة-الا-قوى">التباعدات: الإشارة الأقوى</h2>
 <p>استخدام أكثر تقدمًا هو مقارنة رسم السعر برسم الستوكاستيك. إذا سجّل السعر قمة جديدة، لكن الستوكاستيك سجّل قمة أدنى من السابقة، فهذا تباعد هبوطي — تفقد حركة الصعود زخمها حتى لو كان السعر لا يزال يرتفع. المنطق العكسي صحيح لتباعد صعودي عند قيعان السعر. لا تعطي التباعدات اللحظة الدقيقة للدخول، لكنها تنبّه إلى أن الاتجاه الحالي قد يكون قريبًا من النهاية.</p>
 <h2 id="ضبط-الفترات-للعمليات-السريعة">ضبط الفترات للعمليات السريعة</h2>
 <p>الفترة القياسية للستوكاستيك هي 14، لكن من يتداول على رسوم بيانية لدقيقة أو 5 دقائق عادة ما يقللها إلى 5 أو 9 فترات، مما يجعل المؤشر أكثر حساسية ويستجيب بشكل أسرع للتذبذبات. الأثر الجانبي هو مزيد من الإشارات الخاطئة، لأن المؤشر يبدأ بالاستجابة لضوضاء صغيرة في السعر. طريقة شائعة للتعويض عن ذلك هي طلب تأكيد من شمعة ثانية قبل الدخول، بدلًا من التداول في لحظة التقاطع بالضبط.</p>
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="هل كان هذا المقال مفيدًا؟"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">كن أول من يقيّم.</p>
             </div>
-            <section class="ap__coment" data-enviado="استلمنا تعليقك. سيظهر هنا بعد موافقة الفريق." data-erro="تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل." data-vazio="لا توجد تعليقات بعد. كن أول من يعلّق." data-idioma="ar">
+            <section class="ap__coment" data-anonimo="مجهول" data-enviado="استلمنا تعليقك. سيظهر هنا بعد موافقة الفريق." data-erro="تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل." data-vazio="لا توجد تعليقات بعد. كن أول من يعلّق." data-idioma="ar">
               <h2>التعليقات</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">لا توجد تعليقات بعد. كن أول من يعلّق.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">اترك تعليقًا</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="اسمك" aria-label="اسمك" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="اسمك (اختياري)" aria-label="اسمك (اختياري)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="تعليقك" aria-label="تعليقك"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">إرسال التعليق</button>
@@ -269,9 +269,9 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
             <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 4 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

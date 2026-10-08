@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -221,11 +221,11 @@
 <p>Die Hauptlinie, genannt %K, wird so berechnet: %K = [(aktueller Schlusskurs − niedrigstes Tief der Periode) ÷ (höchstes Hoch der Periode − niedrigstes Tief der Periode)] × 100. Das Ergebnis liegt immer zwischen 0 und 100.</p>
 <p>Praktisches Beispiel: In 14 Perioden lag das Hoch bei R$ 132,50 und das Tief bei R$ 125,00 — eine Spanne von R$ 7,50. Liegt der aktuelle Schlusskurs bei R$ 130,00, ergibt sich die Berechnung: (130,00 − 125,00) ÷ 7,50 × 100 = 5,00 ÷ 7,50 × 100 = 66,67. Der %K-Wert beträgt 66,67, was zeigt, dass der Schlusskurs bei zwei Dritteln des oberen Randes der jüngsten Spanne liegt — weder überdehnt noch erschöpft.</p>
 <p>Die zweite Linie, %D, ist nur ein 3-Perioden-gleitender-Durchschnitt von %K, genutzt, um das Ergebnis zu glätten und Fehlsignale zu verringern.</p>
-<h2 id="uberkauft-und-uberverkauft-zonen">Überkauft- und Überverkauft-Zonen</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="uberkauft-und-uberverkauft-zonen">Überkauft- und Überverkauft-Zonen</h2>
 <p>Konventionell zeigen Werte über 80 überkauft an — der Preis schloss nahe dem oberen Rand der jüngsten Spanne — und Werte unter 20 zeigen überverkauft an, nahe dem unteren Rand der Spanne. Das bedeutet nicht "verkaufen, weil er über 80 ist" oder "kaufen, weil er unter 20 ist": In einem starken Trend kann der Stochastik viele Kerzen hintereinander am oberen (oder unteren) Rand kleben bleiben, und gegen diesen Trend zu handeln, nur weil der Indikator überdehnt ist, kommt meist teuer zu stehen.</p>
 <h2 id="kreuzungen-zwischen-k-und-d">Kreuzungen zwischen %K und %D</h2>
 <p>Das kurzfristig meistgenutzte Signal ist die Kreuzung der beiden Linien innerhalb der Extremzonen: Kreuzt %K %D von unten nach oben innerhalb der überverkauften Zone (unter 20), wird das als mögliche zurückkehrende Kaufkraft gelesen; kreuzt es von oben nach unten innerhalb der überkauften Zone (über 80), wird das als mögliche zurückkehrende Verkaufskraft gelesen. Außerhalb dieser Zonen hat dieselbe Kreuzung deutlich weniger Gewicht.</p>
-<h2 id="divergenzen-das-starkste-signal">Divergenzen: das stärkste Signal</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="divergenzen-das-starkste-signal">Divergenzen: das stärkste Signal</h2>
 <p>Eine fortgeschrittenere Nutzung ist der Vergleich der Preisstruktur mit der Struktur des Stochastik. Bildet der Preis ein neues Hoch, aber der Stochastik ein niedrigeres Hoch als das vorherige, ist das eine bärische Divergenz — die Aufwärtsbewegung verliert an Kraft, selbst wenn der Preis noch steigt. Dieselbe Überlegung gilt umgekehrt für eine bullische Divergenz bei Preistiefs. Divergenzen geben nicht den exakten Einstiegszeitpunkt, warnen aber, dass der aktuelle Trend nahe seinem Ende sein könnte.</p>
 <h2 id="die-perioden-fur-schnelle-operationen-anpassen">Die Perioden für schnelle Operationen anpassen</h2>
 <p>Die Standardperiode des Stochastik ist 14, aber wer 1- oder 5-Minuten-Charts handelt, reduziert meist auf 5 oder 9 Perioden, was den Indikator empfindlicher macht und schneller auf Schwankungen reagieren lässt. Der Nebeneffekt sind mehr Fehlsignale, da der Indikator beginnt, auf kleines Preisrauschen zu reagieren. Eine gängige Möglichkeit, das auszugleichen, ist, eine Bestätigung durch eine zweite Kerze zu verlangen, bevor man einsteigt, statt genau im Moment der Kreuzung zu handeln.</p>
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="War dieser Artikel hilfreich?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Geben Sie die erste Bewertung ab.</p>
             </div>
-            <section class="ap__coment" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
+            <section class="ap__coment" data-anonimo="Anonym" data-enviado="Wir haben Ihren Kommentar erhalten. Er erscheint hier nach Freigabe durch die Redaktion." data-erro="Senden gerade nicht möglich. Bitte gleich noch einmal versuchen." data-vazio="Noch keine Kommentare. Schreiben Sie den ersten." data-idioma="de">
               <h2>Kommentare</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Noch keine Kommentare. Schreiben Sie den ersten.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Kommentar schreiben</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Ihr Name" aria-label="Ihr Name" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Ihr Name (optional)" aria-label="Ihr Name (optional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Ihr Kommentar" aria-label="Ihr Kommentar"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Kommentar senden</button>
@@ -269,9 +269,9 @@
         <aside class="ap__rel">
           <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-der-adx-indikator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der ADX-Indikator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
             <a class="bq__card" href="/de/blog/was-ist-der-stochastik-oszillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Stochastik-Oszillator ist und wie er funktioniert</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 4 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/was-ist-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Was der Average True Range (ATR) ist und wie man ihn berechnet</span><span class="bq__meta">24.09.2026 · 6 Min. Lesezeit</span></a>
           </div>
         </aside>
       </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/es/blog/griegas-de-las-opciones-para-principiantes/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-28T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Opciones",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">4 min de lectura</span></span>
+              <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">5 min de lectura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
             </div>
-            <p class="ap__atual">Actualizado el: <time datetime="2026-09-28">28 de septiembre de 2026</time></p>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-10-08">8 de octubre de 2026</time></p>
             <span class="bq__tag">Opciones</span>
             <h1>Las griegas de las opciones para principiantes</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Redacción de Análisis</strong><small>Sección de Duotide</small></span></div>
@@ -218,13 +218,13 @@
           <div class="ap__texto article">
             
 <p>Quien empieza a estudiar opciones suele toparse rápido con cuatro palabras que parecen griego de verdad: delta, gamma, theta y vega. Son, en la práctica, medidas que muestran cómo reacciona el precio de una opción ante diferentes factores, como el movimiento del activo subyacente, el paso del tiempo y el cambio en la volatilidad. Entender qué mide cada una ayuda a evaluar una operación con opciones antes de entrar, en vez de descubrir después por qué el precio del contrato se movió de una forma inesperada.</p>
-<h2 id="delta-cuanto-se-mueve-la-opcion-junto-con-el-activo">Delta: cuánto se mueve la opción junto con el activo</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/gregas-das-opcoes-para-iniciantes.svg" alt="Gráfico: GOOGL, diario, del 01/06/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: GOOGL, diario, del 01/06/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure><h2 id="delta-cuanto-se-mueve-la-opcion-junto-con-el-activo">Delta: cuánto se mueve la opción junto con el activo</h2>
 <p>El delta mide la sensibilidad del precio de la opción a una variación en el precio del activo subyacente. Una opción de compra con delta de 0,60, por ejemplo, tiende a subir cerca de R$ 0,60 por cada alza de R$ 1,00 en el activo subyacente, manteniendo constantes los demás factores. Las opciones de compra tienen delta positivo, entre 0 y 1. Las opciones de venta tienen delta negativo, entre -1 y 0. Cuanto más dentro del dinero esté la opción, más se acerca el delta a 1 o -1, y cuanto más fuera del dinero, más cerca de cero.</p>
-<h2 id="gamma-la-velocidad-de-cambio-del-delta">Gamma: la velocidad de cambio del delta</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="gamma-la-velocidad-de-cambio-del-delta">Gamma: la velocidad de cambio del delta</h2>
 <p>Si el delta muestra la dirección, el gamma muestra qué tan rápido puede cambiar esa dirección cuando se mueve el precio del activo. Un gamma alto significa que el delta de la opción puede variar bastante con pequeños movimientos del activo subyacente, algo que suele ocurrir con opciones cercanas al precio de ejercicio y próximas al vencimiento. Esto importa porque una posición con gamma elevado puede cambiar de perfil de riesgo rápidamente, exigiendo más atención que una posición con gamma bajo.</p>
 <h2 id="theta-el-costo-de-mantener-la-opcion-a-lo-largo-del-tiempo">Theta: el costo de mantener la opción a lo largo del tiempo</h2>
 <p>El theta mide cuánto valor tiende a perder la opción por día, solo por el paso del tiempo, manteniendo constantes los demás factores. Este efecto se conoce como decaimiento temporal. Para quien compra opciones, el theta trabaja en contra de la posición: cada día que pasa sin que el activo se mueva lo suficiente reduce el valor del contrato. Para quien vende opciones, el theta trabaja a favor, lo que explica por qué las estrategias de venta de opciones suelen describirse como apuestas al tiempo, y no solo a la dirección del precio.</p>
-<h2 id="vega-sensibilidad-al-cambio-en-la-volatilidad">Vega: sensibilidad al cambio en la volatilidad</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="vega-sensibilidad-al-cambio-en-la-volatilidad">Vega: sensibilidad al cambio en la volatilidad</h2>
 <p>El vega mide cuánto cambia el precio de la opción cuando sube o baja la volatilidad implícita del mercado, sin que el precio del activo subyacente necesite moverse. En períodos de incertidumbre, como antes de un resultado de empresa o una decisión de tasas, la volatilidad implícita tiende a subir, lo que puede encarecer las opciones incluso sin movimiento inmediato en el precio del activo. Después del evento, la volatilidad suele caer de forma abrupta, un efecto llamado aplastamiento de volatilidad, que puede reducir el valor de la opción aunque el activo se haya movido en la dirección esperada.</p>
 <h2 id="un-ejemplo-numerico-juntando-delta-y-gamma">Un ejemplo numérico juntando delta y gamma</h2>
 <p>Supongamos una opción de compra negociada a R$ 2,00, con delta de 0,40 y gamma de 0,05, sobre un activo cotizado a R$ 50,00. Si el activo sube R$ 1,00, a R$ 51,00, el nuevo precio estimado de la opción queda cerca de R$ 2,40, usando solo el delta. Pero el gamma de 0,05 indica que el propio delta también sube, pasando de 0,40 a cerca de 0,45 después de ese movimiento. Esto significa que, si el activo sube otro R$ 1,00 después de eso, la opción debería reaccionar de forma un poco más fuerte de lo que reaccionó en el primer alza. Este efecto acumulado es el motivo por el cual posiciones con gamma elevado pueden parecer tranquilas y, de repente, empezar a moverse con mucha más fuerza de lo esperado.</p>
@@ -240,7 +240,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Actualizado el: <time datetime="2026-09-28">28 sept 2026</time></p>
+              <p>Actualizado el: <time datetime="2026-10-08">8 oct 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -252,12 +252,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="¿Te resultó útil este artículo?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sé el primero en valorarlo.</p>
             </div>
-            <section class="ap__coment" data-enviado="Recibimos tu comentario. Aparecerá aquí cuando el equipo lo apruebe." data-erro="No se pudo enviar ahora. Inténtalo de nuevo en unos instantes." data-vazio="Aún no hay comentarios. Sé el primero en comentar." data-idioma="es">
+            <section class="ap__coment" data-anonimo="Anónimo" data-enviado="Recibimos tu comentario. Aparecerá aquí cuando el equipo lo apruebe." data-erro="No se pudo enviar ahora. Inténtalo de nuevo en unos instantes." data-vazio="Aún no hay comentarios. Sé el primero en comentar." data-idioma="es">
               <h2>Comentarios</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Aún no hay comentarios. Sé el primero en comentar.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Deja tu comentario</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Tu nombre (opcional)" aria-label="Tu nombre (opcional)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Tu comentario" aria-label="Tu comentario"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Enviar comentario</button>
@@ -269,7 +269,7 @@
         <aside class="ap__rel">
           <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/es/blog/como-funcionan-las-opciones-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo funcionan las opciones binarias, en la práctica</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/como-funcionan-las-opciones-binarias/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cómo funcionan las opciones binarias, en la práctica</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/opciones-binarias-paso-a-paso-y-gestion-de-riesgo/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opciones binarias: paso a paso práctico y gestión de riesgo</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/opciones-digitales-como-funcionan/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Opciones digitales: cómo funcionan y cómo calcular el riesgo</span><span class="bq__meta">24/09/2026 · 4 min de lectura</span></a>
           </div>
@@ -338,6 +338,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

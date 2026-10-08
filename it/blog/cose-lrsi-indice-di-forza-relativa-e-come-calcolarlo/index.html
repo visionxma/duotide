@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -222,7 +222,7 @@
 <p><strong>RS = media dei guadagni / media delle perdite</strong></p>
 <p>Poi, l'RS viene convertito nella scala da 0 a 100 usando la formula:</p>
 <p><strong>RSI = 100 - [100 / (1 + RS)]</strong></p>
-<h2 id="un-esempio-risolto-a-mano">Un esempio risolto a mano</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="un-esempio-risolto-a-mano">Un esempio risolto a mano</h2>
 <p>Per semplificare il calcolo, vedi un esempio con solo 5 variazioni di prezzo, invece delle 14 normalmente usate, solo per illustrare il calcolo. Supponi le seguenti chiusure giornaliere di un'azione: R$ 10,00; R$ 10,20; R$ 10,15; R$ 10,40; R$ 10,30; R$ 10,50.</p>
 <p>Le variazioni tra una chiusura e la successiva sono state:</p>
 <ul>
@@ -236,7 +236,7 @@
 <p>Un RSI vicino a 81 indica che i guadagni recenti hanno dominato chiaramente sulle perdite in questo periodo semplificato, mettendo l'indicatore in una lettura di ipercomprato.</p>
 <h2 id="come-interpretare-i-livelli-di-ipercomprato-e-ipervenduto">Come interpretare i livelli di ipercomprato e ipervenduto</h2>
 <p>La lettura tradizionale considera valori sopra 70 come ipercomprato, suggerendo che il movimento rialzista potrebbe essere esteso, e valori sotto 30 come ipervenduto, suggerendo lo stesso per un movimento ribassista. Questi numeri non sono un segnale automatico di acquisto o vendita. In un forte trend rialzista, l'RSI può restare sopra 70 per molto tempo, e vendere ogni volta che incrocia questo livello può significare uscire da un trend che aveva ancora molto spazio per continuare.</p>
-<h2 id="divergenza-quando-prezzo-e-rsi-sono-in-disaccordo">Divergenza: quando prezzo e RSI sono in disaccordo</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="divergenza-quando-prezzo-e-rsi-sono-in-disaccordo">Divergenza: quando prezzo e RSI sono in disaccordo</h2>
 <p>Una divergenza avviene quando il prezzo forma un nuovo massimo, ma l'RSI forma un massimo più basso del precedente, suggerendo che il movimento rialzista sta perdendo forza sotto la superficie, anche se il prezzo sta ancora salendo. Lo stesso vale al contrario, con il prezzo che fa un minimo più basso mentre l'RSI fa un minimo più alto. La divergenza è un avviso di possibile perdita di forza del movimento, non una garanzia di inversione immediata.</p>
 <h2 id="errori-comuni-nell-usare-l-rsi">Errori comuni nell'usare l'RSI</h2>
 <ul>
@@ -267,12 +267,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Questo articolo ti è stato utile?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Sii il primo a valutare.</p>
             </div>
-            <section class="ap__coment" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
+            <section class="ap__coment" data-anonimo="Anonimo" data-enviado="Abbiamo ricevuto il tuo commento. Comparirà qui dopo l’approvazione della redazione." data-erro="Impossibile inviare ora. Riprova tra poco." data-vazio="Ancora nessun commento. Scrivi tu il primo." data-idioma="it">
               <h2>Commenti</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ancora nessun commento. Scrivi tu il primo.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Lascia un commento</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Il tuo nome" aria-label="Il tuo nome" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Il tuo nome (facoltativo)" aria-label="Il tuo nome (facoltativo)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Il tuo commento" aria-label="Il tuo commento"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Invia commento</button>
@@ -284,9 +284,9 @@
         <aside class="ap__rel">
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-lindicatore-adx-e-come-funziona/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'indicatore ADX e come funziona</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/cose-loscillatore-stocastico-e-come-funziona/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Oscillatore Stocastico e come funziona</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Average True Range (ATR) e come calcolarlo</span><span class="bq__meta">24/09/2026 · 4 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/cose-laverage-true-range-atr-e-come-calcolarlo/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cos'è l'Average True Range (ATR) e come calcolarlo</span><span class="bq__meta">24/09/2026 · 6 min di lettura</span></a>
           </div>
         </aside>
       </div>
@@ -353,6 +353,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

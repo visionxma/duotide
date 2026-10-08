@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/fr/blog/calculateur-de-stop-loss-avec-atr/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-27T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Gestion du risque",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">4 min de lecture</span></span>
+              <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">5 min de lecture</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
             </div>
-            <p class="ap__atual">Mis à jour le: <time datetime="2026-09-27">27 septembre 2026</time></p>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
             <span class="bq__tag">Gestion du risque</span>
             <h1>Calculateur de stop loss avec l'ATR : définir la distance</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Rubrique Risque et comportement</strong><small>Rubrique Duotide</small></span></div>
@@ -216,9 +216,9 @@
           </aside>
           <div class="ap__texto article">
             <p>Une des questions les plus courantes chez ceux qui débutent en trading est à quelle distance placer le stop loss. Le placer trop près augmente le risque d'être stoppé par une oscillation normale de l'actif. Le placer trop loin augmente la perte quand l'opération tourne mal. Une façon pratique de répondre à cette question est d'utiliser l'ATR, l'Average True Range, comme référence de volatilité récente pour calculer la distance du stop.</p>
-<h2 id="ce-que-mesure-l-atr">Ce que mesure l'ATR</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-stop-loss-com-atr.svg" alt="Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre.</figcaption></figure><h2 id="ce-que-mesure-l-atr">Ce que mesure l'ATR</h2>
 <p>L'ATR mesure la taille moyenne du mouvement de prix sur un certain nombre de périodes, généralement 14. Il n'indique pas de direction, seulement l'ampleur habituelle du mouvement de l'actif. Pour chaque bougie, on calcule le True Range, qui est la plus grande valeur parmi ces trois options : la différence entre le plus haut et le plus bas de la bougie actuelle, la différence entre le plus haut actuel et la clôture précédente, et la différence entre le plus bas actuel et la clôture précédente. L'ATR est la moyenne de ces valeurs sur la période choisie.</p>
-<h2 id="la-formule-du-stop-base-sur-l-atr">La formule du stop basé sur l'ATR</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="la-formule-du-stop-base-sur-l-atr">La formule du stop basé sur l'ATR</h2>
 <p><strong>Distance du stop = ATR x multiplicateur</strong></p>
 <p>Pour une opération à l'achat : <strong>Stop = prix d'entrée - distance du stop</strong></p>
 <p>Pour une opération à la vente : <strong>Stop = prix d'entrée + distance du stop</strong></p>
@@ -233,7 +233,7 @@
 <li>Taille de la position = R$ 200,00 / R$ 2,40 = 83 actions, environ</li>
 </ul>
 <p>Avec cette position, si le prix baisse jusqu'à R$ 47,60, la perte est proche des R$ 200,00 planifiés, avant frais de courtage. Un objectif de référence de 2R, soit deux fois le risque assumé, se situerait autour de R$ 54,80, mais ce n'est qu'une référence mathématique, pas une garantie que le prix ira jusque-là.</p>
-<h2 id="l-atr-ne-remplace-pas-la-structure-du-graphique">L'ATR ne remplace pas la structure du graphique</h2>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="l-atr-ne-remplace-pas-la-structure-du-graphique">L'ATR ne remplace pas la structure du graphique</h2>
 <p>L'ATR répond à la question de savoir combien cet actif bouge habituellement. Il ne répond pas à la question de savoir où mon idée d'entrée est erronée. Cette seconde question vient de l'analyse graphique, comme un plus bas précédent ou une zone de support. La séquence recommandée est : d'abord marquer le niveau qui invalide l'opération, ensuite mesurer la distance entre l'entrée et ce niveau, et seulement après comparer cette distance avec l'ATR pour voir si elle a du sens compte tenu de la volatilité récente. Si la distance structurelle est bien inférieure à ce que suggère l'ATR, le stop peut être trop serré pour le bruit normal de l'actif.</p>
 <h2 id="il-n-existe-pas-de-multiplicateur-parfait">Il n'existe pas de multiplicateur parfait</h2>
 <p>Un multiplicateur bas crée un stop plus proche et une position plus grande pour le même risque en reais, mais reste plus exposé aux oscillations habituelles. Un multiplicateur élevé crée un stop plus éloigné et une position plus petite, réduisant les sorties dues au bruit, mais exigeant que le prix parcoure une plus grande distance pour atteindre le même résultat en multiples de risque. Le multiplicateur idéal dépend de l'actif, de l'unité de temps tradée et du type de setup, et il vaut la peine de tester différentes valeurs sur l'historique avant d'adopter un chiffre fixe pour toutes les opérations.</p>
@@ -247,7 +247,7 @@
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
             </div>
             <div class="ap__fim">
-              <p>Mis à jour le: <time datetime="2026-09-27">27 sept. 2026</time></p>
+              <p>Mis à jour le: <time datetime="2026-10-08">8 oct. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -259,12 +259,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="Cet article vous a-t-il été utile ?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">Soyez le premier à noter.</p>
             </div>
-            <section class="ap__coment" data-enviado="Nous avons reçu votre commentaire. Il apparaîtra ici après validation par l’équipe." data-erro="Envoi impossible pour le moment. Réessayez dans un instant." data-vazio="Aucun commentaire pour l’instant. Soyez le premier à commenter." data-idioma="fr">
+            <section class="ap__coment" data-anonimo="Anonyme" data-enviado="Nous avons reçu votre commentaire. Il apparaîtra ici après validation par l’équipe." data-erro="Envoi impossible pour le moment. Réessayez dans un instant." data-vazio="Aucun commentaire pour l’instant. Soyez le premier à commenter." data-idioma="fr">
               <h2>Commentaires</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">Aucun commentaire pour l’instant. Soyez le premier à commenter.</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">Laisser un commentaire</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="Votre nom" aria-label="Votre nom" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="Votre nom (facultatif)" aria-label="Votre nom (facultatif)" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="Votre commentaire" aria-label="Votre commentaire"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">Envoyer le commentaire</button>
@@ -277,7 +277,7 @@
           <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/comment-utiliser-stop-loss-et-take-profit-en-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment utiliser stop loss et take profit en forex</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/strategie-martingale-en-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stratégie martingale en trading : fonctionnement et risques</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/strategie-martingale-en-trading/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stratégie martingale en trading : fonctionnement et risques</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/quand-cloturer-une-operation-signaux-de-sortie/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Quand clôturer une opération : les signaux de sortie</span><span class="bq__meta">24/09/2026 · 4 min de lecture</span></a>
           </div>
         </aside>
@@ -345,6 +345,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

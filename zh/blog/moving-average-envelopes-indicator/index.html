@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -69,7 +69,7 @@
       "url": "https://duotide.com.br/zh/blog/moving-average-envelopes-indicator/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-09-28T09:00:00-03:00",
+      "dateModified": "2026-10-08T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-02.webp",
       "articleSection": "技术指标",
       "author": {
@@ -188,10 +188,10 @@
         <header class="ap__cab" id="topo">
           <div class="ap__info">
             <div class="ap__linha">
-              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 4 分钟</span></span>
+              <span><time datetime="2026-09-24">2026年9月24日</time><span class="ap__sep">阅读 5 分钟</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span>
             </div>
-            <p class="ap__atual">更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+            <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">技术指标</span>
             <h1>包络线指标：移动平均带实战</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>分析栏目</strong><small>Duotide 栏目</small></span></div>
@@ -214,13 +214,13 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>包络线（Envelopes）指标的逻辑与布林带类似，但方式更简单：它不是根据价格的标准差来计算带宽距离，而是在移动平均线上下使用一个固定的百分比。结果是形成一条跟随均线移动的通道，价格大多数时间都在其中运行。</p><p>在这篇文章中，你将了解包络线是如何计算的，如何进行设置，以及如何利用价格触及边界的情况来识别可能的价格过度波动。</p><h2 id="包络线是如何计算的">包络线是如何计算的</h2><p>计算首先从一条简单或指数移动平均线开始，通常使用中等周期，比如20。在此基础上，上轨是在均线数值上加上一个固定百分比得到的，下轨则是减去同样的百分比得到的。如果某资产的20周期移动平均线为R$ 40,00，设定的百分比为2.5%，那么上轨为R$ 41,00，下轨为R$ 39,00。</p><p>与布林带不同的是，布林带会随着资产波动性的变化自动扩大或收窄，而包络线的两条轨道始终与均线保持相同的百分比距离，除非交易者自己手动调整这个百分比。</p><h2 id="触及轨道通常意味着什么">触及轨道通常意味着什么</h2><p>当价格触及或突破上轨时，被解读为该资产已经向上大幅偏离其近期均线——可能是短期的过度买入。当价格触及或突破下轨时，信号则相反：可能是过度卖出。</p><p>最常见的解读是向均值回归：在触及某条轨道之后，价格往往会朝中间的移动平均线方向回归，许多交易者正是想要捕捉这段回归行情。这种解读在没有强劲趋势、在相对稳定的区间内波动的市场中效果最好。</p><h2 id="调整轨道的百分比">调整轨道的百分比</h2><p>理想的百分比因资产而异，直接取决于每种资产典型的波动性。一种历史上波动性较大的资产，可能需要更大的百分比，比如5%，才能让轨道的触及真正代表行情的过度波动，而不只是日常的正常波动。一种更稳定的资产，可能用更小的百分比，比如1.5%或2%，效果更好。</p><p>为波动性较大的资产设置过小的百分比，会导致价格过于频繁地触及轨道，从而降低这些信号作为真实行情过度波动指示的价值。</p><h2 id="警惕强劲趋势">警惕强劲趋势</h2><p>与任何基于均值回归的指标一样，包络线在强劲趋势期间可能产生具有误导性的信号。在持续的上涨行情中，价格可能连续多根K线紧贴上轨运行，而不回归均线——在这种情况下把每次触及都解读为卖出信号的人，就有反复逆着一个仍然强劲的趋势操作的风险。</p><p>因此，在把触及轨道当作入场触发条件之前，值得先检查趋势背景：在横盘市场中，均值回归的解读往往更有效；在强劲趋势中，触及轨道更多是可能暂停的警示，而不是完全反转的信号。</p><h2 id="将包络线与成交量或动量结合使用">将包络线与成交量或动量结合使用</h2><p>过滤包络线信号的一种方法，是观察触及轨道那一刻的成交量。触及上轨时成交量正在减少，说明买方力量已经开始减弱，从而强化了可能回归均线的判断。而触及轨道时成交量正在增加，则可能说明尽管价格已经远离均线，行情仍有力量继续。</p><p>像RSI这样的动量振荡指标，也可以作为额外的确认：触及上轨的同时RSI处于超买状态，强化了过度波动的判断；而同样的触及若伴随RSI处于中性水平，则需要在假设行情会反转之前更加谨慎。</p><h2 id="在实践中使用包络线">在实践中使用包络线</h2><p>在Duotide上，可以同时调整移动平均线的周期和轨道的百分比，在特定资产上测试不同的组合，直到找到最能反映该市场历史行为的设置。与任何均值回归指标一样，包络线最好与图表背景的解读结合使用，不应作为唯一的入场依据单独使用，因为任何操作都带有真实的亏损风险。</p>
+            <p>包络线（Envelopes）指标的逻辑与布林带类似，但方式更简单：它不是根据价格的标准差来计算带宽距离，而是在移动平均线上下使用一个固定的百分比。结果是形成一条跟随均线移动的通道，价格大多数时间都在其中运行。</p><p>在这篇文章中，你将了解包络线是如何计算的，如何进行设置，以及如何利用价格触及边界的情况来识别可能的价格过度波动。</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-envelopes-moving-average.svg" alt="图表：GOOGL，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：GOOGL，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="包络线是如何计算的">包络线是如何计算的</h2><p>计算首先从一条简单或指数移动平均线开始，通常使用中等周期，比如20。在此基础上，上轨是在均线数值上加上一个固定百分比得到的，下轨则是减去同样的百分比得到的。如果某资产的20周期移动平均线为R$ 40,00，设定的百分比为2.5%，那么上轨为R$ 41,00，下轨为R$ 39,00。</p><p>与布林带不同的是，布林带会随着资产波动性的变化自动扩大或收窄，而包络线的两条轨道始终与均线保持相同的百分比距离，除非交易者自己手动调整这个百分比。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="触及轨道通常意味着什么">触及轨道通常意味着什么</h2><p>当价格触及或突破上轨时，被解读为该资产已经向上大幅偏离其近期均线——可能是短期的过度买入。当价格触及或突破下轨时，信号则相反：可能是过度卖出。</p><p>最常见的解读是向均值回归：在触及某条轨道之后，价格往往会朝中间的移动平均线方向回归，许多交易者正是想要捕捉这段回归行情。这种解读在没有强劲趋势、在相对稳定的区间内波动的市场中效果最好。</p><h2 id="调整轨道的百分比">调整轨道的百分比</h2><p>理想的百分比因资产而异，直接取决于每种资产典型的波动性。一种历史上波动性较大的资产，可能需要更大的百分比，比如5%，才能让轨道的触及真正代表行情的过度波动，而不只是日常的正常波动。一种更稳定的资产，可能用更小的百分比，比如1.5%或2%，效果更好。</p><p>为波动性较大的资产设置过小的百分比，会导致价格过于频繁地触及轨道，从而降低这些信号作为真实行情过度波动指示的价值。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="警惕强劲趋势">警惕强劲趋势</h2><p>与任何基于均值回归的指标一样，包络线在强劲趋势期间可能产生具有误导性的信号。在持续的上涨行情中，价格可能连续多根K线紧贴上轨运行，而不回归均线——在这种情况下把每次触及都解读为卖出信号的人，就有反复逆着一个仍然强劲的趋势操作的风险。</p><p>因此，在把触及轨道当作入场触发条件之前，值得先检查趋势背景：在横盘市场中，均值回归的解读往往更有效；在强劲趋势中，触及轨道更多是可能暂停的警示，而不是完全反转的信号。</p><h2 id="将包络线与成交量或动量结合使用">将包络线与成交量或动量结合使用</h2><p>过滤包络线信号的一种方法，是观察触及轨道那一刻的成交量。触及上轨时成交量正在减少，说明买方力量已经开始减弱，从而强化了可能回归均线的判断。而触及轨道时成交量正在增加，则可能说明尽管价格已经远离均线，行情仍有力量继续。</p><p>像RSI这样的动量振荡指标，也可以作为额外的确认：触及上轨的同时RSI处于超买状态，强化了过度波动的判断；而同样的触及若伴随RSI处于中性水平，则需要在假设行情会反转之前更加谨慎。</p><h2 id="在实践中使用包络线">在实践中使用包络线</h2><p>在Duotide上，可以同时调整移动平均线的周期和轨道的百分比，在特定资产上测试不同的组合，直到找到最能反映该市场历史行为的设置。与任何均值回归指标一样，包络线最好与图表背景的解读结合使用，不应作为唯一的入场依据单独使用，因为任何操作都带有真实的亏损风险。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
-              <p>更新于: <time datetime="2026-09-28">2026年9月28日</time></p>
+              <p>更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> 次浏览</span></span><button class="ap__compartilhar" type="button">分享 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -232,12 +232,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -249,9 +249,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -318,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>

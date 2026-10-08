@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081231">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081305">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -213,7 +213,7 @@
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>在技术分析中最具视觉直观性的趋势指标中，有抛物线SAR，它由工程师J. Welles Wilder创建——他也是RSI和ATR的作者。在图表上，它表现为一系列位于K线上方或下方的点，仅凭这个位置本身就已经传达了大部分信息：价格下方的点表示上升趋势，价格上方的点表示下降趋势。</p><p>SAR这个缩写来自“Stop and Reverse”（停止并反转），这本身就说明了该指标最初的设计意图：标示出平掉一个仓位并考虑开立相反操作的时机。</p><h2 id="该指标是如何计算的">该指标是如何计算的</h2><p>抛物线SAR的计算使用三个要素：上一周期的SAR值、极值点（EP，趋势中最近出现的最高价或最低价）以及加速因子（AF），它从0.02开始，每当出现一个新的极值点时就增加0.02，直到标准上限0.20。</p><p>公式为：新SAR = 前SAR + AF × (EP − 前SAR)。这意味着，在一轮趋势刚开始时，SAR移动得很慢，而随着加速因子的增大，这些点会越来越快地贴近价格——这正是该指标名字中“抛物线”形态的由来。</p><h2 id="一个数值示例">一个数值示例</h2><p>假设某股票处于上升趋势，前一天的SAR为R$ 41,00，极值点（该趋势迄今为止的最高价）为R$ 45,00，经过两次新高之后，加速因子为0,04。新的SAR为：</p><p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16。</p><p>第二天，如果该股票创出R$ 46,00的新高，极值点就升到这个数值，加速因子升到0,06。下一个SAR就是R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45。请注意，这个点每次出现新高后都会上升得更快，“追赶”着价格。</p><h2 id="该指标何时会发出反转信号">该指标何时会发出反转信号</h2><p>只要价格保持在点位线上方，SAR就会随着趋势继续上升。一旦价格收盘低于SAR的值，该指标就会反转：点位开始出现在K线上方，加速因子重新回到0,02，极值点开始根据最近的最低价重新计算，此时针对的是下降趋势。</p><p>正是这种反转——名字中“停止并反转”的含义——许多交易者既把它当作平掉多头仓位的信号，也根据所采用的策略，把它当作可能的做空入场信号。</p><h2 id="优点与局限">优点与局限</h2><p>抛物线SAR在趋势明确且持久的市场中表现良好，此时各个点位能跟随行情，不产生太多假信号。问题出现在没有明确方向的市场中：由于该指标始终“开启”，随每一次波动而切换位置，它可能连续产生多个未能得到确认的反转信号，这种表现被称为锯齿效应（whipsaw）。</p><p>因此，大多数交易者会把SAR与一个趋势指标结合使用，比如一条更长周期的移动平均线，只有当SAR的信号与市场更大的方向一致时才采用。Duotide平台允许将抛物线SAR与其他指标一起绘制在同一张图表上，这方便了在做出任何决定之前进行这种比较。</p><h2 id="调整加速因子">调整加速因子</h2><p>大多数平台都允许修改加速因子默认的0,02（步长）和0,20（上限）数值。将步长减小到0,01会让该指标反应变慢，产生更少的反转信号，但在趋势真正改变时也会延迟出场。将步长增大到0,03或更高则相反：SAR对价格的反应更快，更贴近K线运行，代价是在动荡的市场中产生更多假信号。</p><p>不存在一个普遍最佳的设置——选择取决于所操作的资产和图表周期。一种历史上波动性更大的资产，通常更适合用较小的步长，以过滤掉一部分噪音；一种趋势更平缓、更稳定的资产，则可能用默认值就表现不错。在把任何调整应用到真实操作之前，先在历史数据上测试不同的设置，有助于理解该指标在正在分析的特定资产上的表现。</p><p>与任何技术指标一样，抛物线SAR处理的是过去的价格数据，并不能保证市场未来的表现。在进入一笔操作之前，始终要确定好仓位大小和止损，并把该指标的信号当作分析的起点，而不是自动的买入或卖出指令。</p>
+            <p>在技术分析中最具视觉直观性的趋势指标中，有抛物线SAR，它由工程师J. Welles Wilder创建——他也是RSI和ATR的作者。在图表上，它表现为一系列位于K线上方或下方的点，仅凭这个位置本身就已经传达了大部分信息：价格下方的点表示上升趋势，价格上方的点表示下降趋势。</p><p>SAR这个缩写来自“Stop and Reverse”（停止并反转），这本身就说明了该指标最初的设计意图：标示出平掉一个仓位并考虑开立相反操作的时机。</p><h2 id="该指标是如何计算的">该指标是如何计算的</h2><p>抛物线SAR的计算使用三个要素：上一周期的SAR值、极值点（EP，趋势中最近出现的最高价或最低价）以及加速因子（AF），它从0.02开始，每当出现一个新的极值点时就增加0.02，直到标准上限0.20。</p><p>公式为：新SAR = 前SAR + AF × (EP − 前SAR)。这意味着，在一轮趋势刚开始时，SAR移动得很慢，而随着加速因子的增大，这些点会越来越快地贴近价格——这正是该指标名字中“抛物线”形态的由来。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="一个数值示例">一个数值示例</h2><p>假设某股票处于上升趋势，前一天的SAR为R$ 41,00，极值点（该趋势迄今为止的最高价）为R$ 45,00，经过两次新高之后，加速因子为0,04。新的SAR为：</p><p>R$ 41,00 + 0,04 × (R$ 45,00 − R$ 41,00) = R$ 41,00 + 0,04 × R$ 4,00 = R$ 41,00 + R$ 0,16 = R$ 41,16。</p><p>第二天，如果该股票创出R$ 46,00的新高，极值点就升到这个数值，加速因子升到0,06。下一个SAR就是R$ 41,16 + 0,06 × (R$ 46,00 − R$ 41,16) = R$ 41,16 + 0,06 × R$ 4,84 = R$ 41,16 + R$ 0,29 = R$ 41,45。请注意，这个点每次出现新高后都会上升得更快，“追赶”着价格。</p><h2 id="该指标何时会发出反转信号">该指标何时会发出反转信号</h2><p>只要价格保持在点位线上方，SAR就会随着趋势继续上升。一旦价格收盘低于SAR的值，该指标就会反转：点位开始出现在K线上方，加速因子重新回到0,02，极值点开始根据最近的最低价重新计算，此时针对的是下降趋势。</p><p>正是这种反转——名字中“停止并反转”的含义——许多交易者既把它当作平掉多头仓位的信号，也根据所采用的策略，把它当作可能的做空入场信号。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="优点与局限">优点与局限</h2><p>抛物线SAR在趋势明确且持久的市场中表现良好，此时各个点位能跟随行情，不产生太多假信号。问题出现在没有明确方向的市场中：由于该指标始终“开启”，随每一次波动而切换位置，它可能连续产生多个未能得到确认的反转信号，这种表现被称为锯齿效应（whipsaw）。</p><p>因此，大多数交易者会把SAR与一个趋势指标结合使用，比如一条更长周期的移动平均线，只有当SAR的信号与市场更大的方向一致时才采用。Duotide平台允许将抛物线SAR与其他指标一起绘制在同一张图表上，这方便了在做出任何决定之前进行这种比较。</p><h2 id="调整加速因子">调整加速因子</h2><p>大多数平台都允许修改加速因子默认的0,02（步长）和0,20（上限）数值。将步长减小到0,01会让该指标反应变慢，产生更少的反转信号，但在趋势真正改变时也会延迟出场。将步长增大到0,03或更高则相反：SAR对价格的反应更快，更贴近K线运行，代价是在动荡的市场中产生更多假信号。</p><p>不存在一个普遍最佳的设置——选择取决于所操作的资产和图表周期。一种历史上波动性更大的资产，通常更适合用较小的步长，以过滤掉一部分噪音；一种趋势更平缓、更稳定的资产，则可能用默认值就表现不错。在把任何调整应用到真实操作之前，先在历史数据上测试不同的设置，有助于理解该指标在正在分析的特定资产上的表现。</p><p>与任何技术指标一样，抛物线SAR处理的是过去的价格数据，并不能保证市场未来的表现。在进入一笔操作之前，始终要确定好仓位大小和止损，并把该指标的信号当作分析的起点，而不是自动的买入或卖出指令。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
@@ -231,12 +231,12 @@
               <div class="ap__estrelas" role="radiogroup" aria-label="这篇文章对您有帮助吗？"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
               <p class="ap__avaliar-info" aria-live="polite">成为第一个评分的人。</p>
             </div>
-            <section class="ap__coment" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
+            <section class="ap__coment" data-anonimo="匿名" data-enviado="已收到您的评论，审核通过后将显示在这里。" data-erro="暂时无法提交，请稍后再试。" data-vazio="还没有评论，欢迎抢先发表。" data-idioma="zh-CN">
               <h2>评论</h2>
               <ol class="ap__coment-lista"><li class="ap__coment-vazio">还没有评论，欢迎抢先发表。</li></ol>
               <form class="ap__coment-form">
                 <p class="ap__coment-tit">发表评论</p>
-                <input name="nome" type="text" maxlength="60" required placeholder="您的名字" aria-label="您的名字" autocomplete="name">
+                <input name="nome" type="text" maxlength="60" placeholder="您的名字（选填）" aria-label="您的名字（选填）" autocomplete="name">
                 <textarea name="texto" maxlength="2000" rows="4" required placeholder="您的评论" aria-label="您的评论"></textarea>
                 <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
                 <button class="btn btn--primary" type="submit">提交评论</button>
@@ -248,9 +248,9 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
             <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 4 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
@@ -317,6 +317,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081231" defer></script>
+  <script src="/assets/js/main.js?v=202610081305" defer></script>
 </body>
 </html>
