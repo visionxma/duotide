@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>Calculateur de stop loss avec l'ATR : définir la distance | Blog Duotide</title>
-  <meta name="description" content="Apprenez la formule du stop basé sur l'ATR, un exemple résolu en reais avec la taille de position et pourquoi le multiplicateur n'est pas fixe.">
+  <title>Stop loss avec l'ATR : comment calculer la distance du stop | Blog Duotide</title>
+  <meta name="description" content="La formule du stop par l'ATR, le calcul avec des cotations réelles de l'ether, la taille de la position pour chaque multiplicateur et les erreurs.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/calculateur-de-stop-loss-avec-atr/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-stop-loss-com-atr/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Calculateur de stop loss avec l'ATR : définir la distance">
-  <meta property="og:description" content="Apprenez la formule du stop basé sur l'ATR, un exemple résolu en reais avec la taille de position et pourquoi le multiplicateur n'est pas fixe.">
+  <meta property="og:title" content="Stop loss avec l'ATR : comment calculer la distance du stop">
+  <meta property="og:description" content="La formule du stop par l'ATR, le calcul avec des cotations réelles de l'ether, la taille de la position pour chaque multiplicateur et les erreurs.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/calculateur-de-stop-loss-avec-atr/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Calculateur de stop loss avec l'ATR : définir la distance">
-  <meta name="twitter:description" content="Apprenez la formule du stop basé sur l'ATR, un exemple résolu en reais avec la taille de position et pourquoi le multiplicateur n'est pas fixe.">
+  <meta name="twitter:title" content="Stop loss avec l'ATR : comment calculer la distance du stop">
+  <meta name="twitter:description" content="La formule du stop par l'ATR, le calcul avec des cotations réelles de l'ether, la taille de la position pour chaque multiplicateur et les erreurs.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,8 +64,8 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/calculateur-de-stop-loss-avec-atr/#artigo",
-      "headline": "Calculateur de stop loss avec l'ATR : définir la distance",
-      "description": "Apprenez la formule du stop basé sur l'ATR, un exemple résolu en reais avec la taille de position et pourquoi le multiplicateur n'est pas fixe.",
+      "headline": "Stop loss avec l'ATR : comment calculer la distance du stop",
+      "description": "La formule du stop par l'ATR, le calcul avec des cotations réelles de l'ether, la taille de la position pour chaque multiplicateur et les erreurs.",
       "url": "https://duotide.com.br/fr/blog/calculateur-de-stop-loss-avec-atr/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Calculateur de stop loss avec l'ATR : définir la distance",
+          "name": "Stop loss avec l'ATR : comment calculer la distance du stop",
           "item": "https://duotide.com.br/fr/blog/calculateur-de-stop-loss-avec-atr/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
-        <li><span aria-current="page">Calculateur de stop loss avec l'ATR : définir la distance</span></li>
+        <li><span aria-current="page">Stop loss avec l'ATR : comment calculer la distance du stop</span></li>
       </ol>
       <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
@@ -193,7 +193,7 @@
             </div>
             <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
             <span class="bq__tag">Gestion du risque</span>
-            <h1>Calculateur de stop loss avec l'ATR : définir la distance</h1>
+            <h1>Stop loss avec l'ATR : comment calculer la distance du stop</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Rubrique Risque et comportement</strong><small>Rubrique Duotide</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -204,44 +204,65 @@
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
                 <li><a href="#ce-que-mesure-l-atr">Ce que mesure l'ATR</a></li>
-                <li><a href="#la-formule-du-stop-base-sur-l-atr">La formule du stop basé sur l'ATR</a></li>
-                <li><a href="#exemple-resolu-en-reais">Exemple résolu en reais</a></li>
-                <li><a href="#l-atr-ne-remplace-pas-la-structure-du-graphique">L'ATR ne remplace pas la structure du graphique</a></li>
-                <li><a href="#il-n-existe-pas-de-multiplicateur-parfait">Il n'existe pas de multiplicateur parfait</a></li>
-                <li><a href="#attention-aux-gaps-et-a-l-execution">Attention aux gaps et à l'exécution</a></li>
-                <li><a href="#un-dernier-rappel-avant-de-trader">Un dernier rappel avant de trader</a></li>
+                <li><a href="#comment-calculer-le-stop-avec-l-atr">Comment calculer le stop avec l'ATR</a></li>
+                <li><a href="#exemple-reel-l-atr-de-l-ether-en-2026">Exemple réel : l'ATR de l'ether en 2026</a></li>
+                <li><a href="#comment-utiliser-le-stop-avec-l-atr">Comment utiliser le stop avec l'ATR</a></li>
+                <li><a href="#erreurs-courantes-dans-l-utilisation-du-stop-avec-l-atr">Erreurs courantes dans l'utilisation du stop avec l'ATR</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Une des questions les plus courantes chez ceux qui débutent en trading est à quelle distance placer le stop loss. Le placer trop près augmente le risque d'être stoppé par une oscillation normale de l'actif. Le placer trop loin augmente la perte quand l'opération tourne mal. Une façon pratique de répondre à cette question est d'utiliser l'ATR, l'Average True Range, comme référence de volatilité récente pour calculer la distance du stop.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-stop-loss-com-atr.svg" alt="Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre.</figcaption></figure><h2 id="ce-que-mesure-l-atr">Ce que mesure l'ATR</h2>
-<p>L'ATR mesure la taille moyenne du mouvement de prix sur un certain nombre de périodes, généralement 14. Il n'indique pas de direction, seulement l'ampleur habituelle du mouvement de l'actif. Pour chaque bougie, on calcule le True Range, qui est la plus grande valeur parmi ces trois options : la différence entre le plus haut et le plus bas de la bougie actuelle, la différence entre le plus haut actuel et la clôture précédente, et la différence entre le plus bas actuel et la clôture précédente. L'ATR est la moyenne de ces valeurs sur la période choisie.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/ris-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="la-formule-du-stop-base-sur-l-atr">La formule du stop basé sur l'ATR</h2>
-<p><strong>Distance du stop = ATR x multiplicateur</strong></p>
-<p>Pour une opération à l'achat : <strong>Stop = prix d'entrée - distance du stop</strong></p>
-<p>Pour une opération à la vente : <strong>Stop = prix d'entrée + distance du stop</strong></p>
-<h2 id="exemple-resolu-en-reais">Exemple résolu en reais</h2>
-<p>Supposons une opération à l'achat sur une action négociée à R$ 50,00, avec un ATR journalier de R$ 1,20 et un multiplicateur de 2. La distance du stop est :</p>
-<ul>
-<li>Distance = R$ 1,20 x 2 = R$ 2,40</li>
-<li>Stop = R$ 50,00 - R$ 2,40 = R$ 47,60</li>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Le stop avec l'ATR se situe à une distance égale à l'ATR multiplié par un facteur, généralement entre 1,5 et 3 : à l'achat, stop = entrée − ATR × multiplicateur. Avec l'ether à 2 706,42 $ et un ATR de 90,78 le 1er octobre 2026, un stop de 2 ATR se situerait à 2 524,86 $. La taille de la position découle du risque accepté divisé par cette distance, et ainsi le stop s'ajuste à la volatilité du moment.</p></div>
+            <p>Une des questions les plus courantes pour qui commence à trader est à quelle distance placer le stop loss. Trop près, il est touché par une oscillation normale de l'actif. Trop loin, la perte devient importante quand l'opération échoue. L'ATR (Average True Range, ou amplitude moyenne vraie) donne une référence objective : combien l'actif a bougé par jour, en moyenne, ces dernières semaines.</p>
+<p>Dans ce guide, tous les chiffres viennent des cotations quotidiennes réelles de l'ether (ETH/USDT sur Binance) entre avril et octobre 2026, avec un ATR de 14 périodes.</p>
+<h2 id="ce-que-mesure-l-atr">Ce que mesure l'ATR</h2>
+<p>L'ATR mesure la taille moyenne du mouvement de prix sur un certain nombre de périodes, généralement 14. Il n'indique pas de direction, seulement l'amplitude. Pour chaque bougie, on calcule le True Range, le plus grand de trois valeurs : plus haut moins plus bas, distance entre le plus haut et la clôture précédente, et distance entre le plus bas et la clôture précédente. L'ATR est la moyenne de ces valeurs, lissée par la méthode de Wilder.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-calculer-le-stop-avec-l-atr">Comment calculer le stop avec l'ATR</h2>
+<ul class="check-list">
+<li><strong>Distance du stop</strong> = ATR × multiplicateur</li>
+<li><strong>Achat :</strong> stop = prix d'entrée − distance</li>
+<li><strong>Vente :</strong> stop = prix d'entrée + distance</li>
+<li><strong>Taille de la position</strong> = risque en argent ÷ distance du stop</li>
 </ul>
-<p>Supposons maintenant un compte de R$ 20.000,00, avec un risque maximal de 1% par opération, soit R$ 200,00. La taille de la position se calcule en divisant le risque en reais par la distance du stop :</p>
-<ul>
-<li>Taille de la position = R$ 200,00 / R$ 2,40 = 83 actions, environ</li>
+<h3>L'ATR calculé avec des données réelles</h3>
+<p>Le 7 octobre 2026, l'ether a eu un plus haut de 2 699,80 $, un plus bas de 2 538,06 $, et la clôture précédente était de 2 697,49 $. Les trois distances : 161,74 (plus haut − plus bas), 2,31 (plus haut − clôture précédente) et 159,43 (plus bas − clôture précédente). Le True Range est 161,74. Avec l'ATR précédent à 80,86, le nouvel ATR devient (80,86 × 13 + 161,74) ÷ 14 = <strong>86,64</strong>, soit 3,37 % de la clôture de 2 574,14 $.</p>
+<h3>Exemple résolu : entrée le 1er octobre 2026</h3>
+<p>Supposons un achat à la clôture du 1er octobre, à 2 706,42 $, avec un ATR de 90,78 ce jour-là, sur un compte de 10 000 $ avec un risque maximal de 1 % par opération (100 $).</p>
+<ul class="check-list">
+<li><strong>1 × ATR :</strong> distance 90,78 → stop à 2 615,64 $ → position de 100 ÷ 90,78 = 1,10 ETH (environ 2 981 $)</li>
+<li><strong>1,5 × ATR :</strong> distance 136,17 → stop à 2 570,25 $ → position de 0,73 ETH</li>
+<li><strong>2 × ATR :</strong> distance 181,56 → stop à 2 524,86 $ → position de 0,55 ETH (environ 1 491 $)</li>
+<li><strong>3 × ATR :</strong> distance 272,34 → stop à 2 434,08 $ → position de 0,37 ETH (environ 994 $)</li>
 </ul>
-<p>Avec cette position, si le prix baisse jusqu'à R$ 47,60, la perte est proche des R$ 200,00 planifiés, avant frais de courtage. Un objectif de référence de 2R, soit deux fois le risque assumé, se situerait autour de R$ 54,80, mais ce n'est qu'une référence mathématique, pas une garantie que le prix ira jusque-là.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="l-atr-ne-remplace-pas-la-structure-du-graphique">L'ATR ne remplace pas la structure du graphique</h2>
-<p>L'ATR répond à la question de savoir combien cet actif bouge habituellement. Il ne répond pas à la question de savoir où mon idée d'entrée est erronée. Cette seconde question vient de l'analyse graphique, comme un plus bas précédent ou une zone de support. La séquence recommandée est : d'abord marquer le niveau qui invalide l'opération, ensuite mesurer la distance entre l'entrée et ce niveau, et seulement après comparer cette distance avec l'ATR pour voir si elle a du sens compte tenu de la volatilité récente. Si la distance structurelle est bien inférieure à ce que suggère l'ATR, le stop peut être trop serré pour le bruit normal de l'actif.</p>
-<h2 id="il-n-existe-pas-de-multiplicateur-parfait">Il n'existe pas de multiplicateur parfait</h2>
-<p>Un multiplicateur bas crée un stop plus proche et une position plus grande pour le même risque en reais, mais reste plus exposé aux oscillations habituelles. Un multiplicateur élevé crée un stop plus éloigné et une position plus petite, réduisant les sorties dues au bruit, mais exigeant que le prix parcoure une plus grande distance pour atteindre le même résultat en multiples de risque. Le multiplicateur idéal dépend de l'actif, de l'unité de temps tradée et du type de setup, et il vaut la peine de tester différentes valeurs sur l'historique avant d'adopter un chiffre fixe pour toutes les opérations.</p>
-<h2 id="attention-aux-gaps-et-a-l-execution">Attention aux gaps et à l'exécution</h2>
-<p>Le calcul suppose que la position sera clôturée exactement au prix du stop. En pratique, les gaps, les actualités et les marchés à faible liquidité peuvent faire que l'exécution se produise bien loin du prix planifié, en particulier sur des actifs qui ferment pendant la nuit ou le week-end. L'ATR aide à dimensionner le risque attendu dans des conditions normales, mais n'élimine pas le risque d'une exécution pire que prévu dans des moments de tension sur le marché.</p>
-<h2 id="un-dernier-rappel-avant-de-trader">Un dernier rappel avant de trader</h2>
-<p>Définissez le multiplicateur avant de voir la taille de position qui en résulte, et non l'inverse. Choisir le multiplicateur juste pour arriver à une taille de position qui paraît confortable inverse la logique de la gestion du risque : c'est le stop qui devrait définir la taille de la position, et non la taille désirée qui devrait définir le stop.</p>
-
+<p>Dans tous les cas, si le stop est exécuté au prix prévu, la perte est d'environ 100 $. Ce qui change, c'est la taille de la position et la probabilité que le stop soit touché.</p>
+<h2 id="exemple-reel-l-atr-de-l-ether-en-2026">Exemple réel : l'ATR de l'ether en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-stop-loss-com-atr.svg" alt="Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre.</figcaption></figure>
+<p>Sur la période du graphique, l'ether est passé de 2 140,35 $ à 2 574,14 $, avec un plus bas de 1 505,68 $ le 6 juin et un plus haut de 2 807,34 $ le 21 septembre. Trois moments montrent pourquoi le stop par ATR s'adapte mieux qu'une distance fixe.</p>
+<h3>Octobre : le multiplicateur a décidé le résultat</h3>
+<p>Dans l'opération du 1er octobre, le prix a évolué latéralement pendant cinq jours et a fortement chuté le 7 octobre, avec un plus bas de 2 538,06 $. Les stops de 1 et 1,5 ATR ont été touchés ce jour-là. Celui de 2 ATR, à 2 524,86 $, est resté 13,20 $ sous le plus bas et était toujours en place à la clôture du 7 octobre. Cela ne veut pas dire que 2 ATR est le bon chiffre : c'est ce qui s'est passé dans cette opération, à cette période.</p>
+<h3>Avril et août : la même règle, des distances très différentes</h3>
+<p>Le 14 avril, l'ATR a atteint 112,51, la plus haute valeur de la période, 4,84 % du prix de 2 322,44 $. Le 18 août, il est tombé à 46,24, le plus bas, seulement 2,41 % du prix de 1 917,85 $. Un stop fixe de 100 $ aurait été trop large en août et trop serré en avril ; le stop de 2 ATR se situait à 225 $ dans un cas et à 92 $ dans l'autre.</p>
+<h3>19 août : l'ATR a du retard</h3>
+<p>Le lendemain du plus bas ATR, l'ether a bondi : plus haut de 2 333,65 $ et clôture de 2 252,80 $, en hausse de 17,5 %. Une vente ouverte le 18 août avec un stop de 2 ATR, à 2 010,33 $, aurait été touchée dès le début du mouvement. L'ATR n'a augmenté qu'après, à 73,48 le même jour et 97,54 le 25 août. Une faible volatilité dans l'indicateur ne garantit pas une faible volatilité demain.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-utiliser-le-stop-avec-l-atr">Comment utiliser le stop avec l'ATR</h2>
+<h3>Commencez par la structure du graphique</h3>
+<p>L'ATR répond à combien l'actif a l'habitude de bouger ; il ne dit pas où votre idée est erronée. Marquez d'abord le niveau qui invalide l'opération, comme un creux précédent, et utilisez l'ATR pour vérifier si la distance a du sens. Si le stop technique est à moins de 1 ATR, il est probablement trop serré pour le bruit normal.</p>
+<h3>Choisissez le multiplicateur avant de voir la position</h3>
+<p>Définissez le multiplicateur selon le type d'opération et l'échéance, et calculez la position seulement après. Choisir le multiplicateur pour obtenir une taille confortable inverse la logique de la gestion du risque.</p>
+<h3>Utilisez aussi l'ATR pour le stop suiveur</h3>
+<p>Un stop qui suit le prix à 2 ou 3 ATR du plus haut le plus récent protège le profit dans une tendance sans être si proche qu'il sorte à chaque repli.</p>
+<h3>Limites</h3>
+<p>Le calcul suppose une exécution au prix du stop. Les gaps, les actualités et les mouvements rapides peuvent exécuter bien plus loin. Et l'ATR est calculé avec des prix passés : il réagit après que la volatilité a changé, comme le 19 août.</p>
+<h2 id="erreurs-courantes-dans-l-utilisation-du-stop-avec-l-atr">Erreurs courantes dans l'utilisation du stop avec l'ATR</h2>
+<ul class="check-list">
+<li>Utiliser le même multiplicateur pour tout actif et toute échéance sans le tester.</li>
+<li>Placer le stop selon l'ATR en ignorant les supports, résistances et la structure du graphique.</li>
+<li>Garder la même taille de position avec un multiplicateur plus grand, ce qui augmente le risque en argent.</li>
+<li>Calculer le True Range uniquement comme plus haut moins plus bas, en oubliant les gaps.</li>
+<li>Penser que le multiplicateur qui a fonctionné dans une opération fonctionnera toujours : les exemples ci-dessus décrivent ce qui s'est passé, pas ce qui va se passer.</li>
+</ul>
+<p>Pour pratiquer sans risquer d'argent, utilisez le compte démo et, à chaque opération, notez l'ATR du jour, le multiplicateur choisi, la taille de la position et si le stop a été touché. Après quelques dizaines d'opérations, comparez les résultats par multiplicateur : ce registre montre quelle distance convient à l'actif et à l'échéance que vous tradez.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
@@ -345,6 +366,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

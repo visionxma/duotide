@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>How to Calculate Pip Value in Forex, Step by Step | Blog Duotide</title>
-  <meta name="description" content="Learn to calculate pip value on any forex pair, with the formula, a table by position size, and worked examples in reais.">
+  <meta name="description" content="What a pip is, the pip value formula, a table by lot size, and examples with real EUR/USD, USD/JPY, and USD/BRL prices, plus common mistakes.">
   <link rel="canonical" href="https://duotide.com.br/en/blog/how-to-calculate-pip-value-in-forex/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-pip-como-calcular/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
   <meta property="og:title" content="How to Calculate Pip Value in Forex, Step by Step">
-  <meta property="og:description" content="Learn to calculate pip value on any forex pair, with the formula, a table by position size, and worked examples in reais.">
+  <meta property="og:description" content="What a pip is, the pip value formula, a table by lot size, and examples with real EUR/USD, USD/JPY, and USD/BRL prices, plus common mistakes.">
   <meta property="og:url" content="https://duotide.com.br/en/blog/how-to-calculate-pip-value-in-forex/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/terra.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Calculate Pip Value in Forex, Step by Step">
-  <meta name="twitter:description" content="Learn to calculate pip value on any forex pair, with the formula, a table by position size, and worked examples in reais.">
+  <meta name="twitter:description" content="What a pip is, the pip value formula, a table by lot size, and examples with real EUR/USD, USD/JPY, and USD/BRL prices, plus common mistakes.">
   <meta name="twitter:label1" content="Written by">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Reading time">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,7 +65,7 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/en/blog/how-to-calculate-pip-value-in-forex/#artigo",
       "headline": "How to Calculate Pip Value in Forex, Step by Step",
-      "description": "Learn to calculate pip value on any forex pair, with the formula, a table by position size, and worked examples in reais.",
+      "description": "What a pip is, the pip value formula, a table by lot size, and examples with real EUR/USD, USD/JPY, and USD/BRL prices, plus common mistakes.",
       "url": "https://duotide.com.br/en/blog/how-to-calculate-pip-value-in-forex/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -203,18 +203,67 @@
             <nav class="ap__indice" aria-label="Contents">
               <p class="ap__indice-tit">Contents</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#what-a-pip-is-and-how-big-it-is">What a pip is and how big it is</a></li>
-                <li><a href="#the-basic-formula">The basic formula</a></li>
-                <li><a href="#quick-reference-table">Quick reference table</a></li>
-                <li><a href="#worked-example-eur-usd">Worked example: EUR/USD</a></li>
-                <li><a href="#worked-example-usd-jpy">Worked example: USD/JPY</a></li>
-                <li><a href="#why-this-matters-more-than-just-counting-pips">Why this matters more than just counting pips</a></li>
+                <li><a href="#what-a-pip-is">What a pip is</a></li>
+                <li><a href="#how-to-calculate-pip-value">How to calculate pip value</a></li>
+                <li><a href="#real-example-eur-usd-in-pips-in-2026">Real example: EUR/USD in pips in 2026</a></li>
+                <li><a href="#how-to-use-pip-value">How to use pip value</a></li>
+                <li><a href="#common-mistakes-when-calculating-pip-value">Common mistakes when calculating pip value</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Every forex trader has heard or said the phrase I made 40 pips today. It sounds precise, but it says almost nothing on its own. Forty pips on a small position might be worth just a few reais; the same forty pips on a larger position might be worth hundreds. The pip distance shows the price move. The pip value shows the real impact on the account.</p><p>Knowing how to calculate pip value before entering a trade is what lets you turn my stop is 25 pips away into my stop represents R$ 130 of risk — and it's that second number that really matters for deciding position size.</p><figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-pip-como-calcular.svg" alt="Chart: EUR/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: EUR/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="what-a-pip-is-and-how-big-it-is">What a pip is and how big it is</h2><p>A pip is the smallest relevant price change in most currency pairs. For most pairs, including EUR/USD and GBP/USD, a pip equals 0.0001. For pairs involving the Japanese yen, like USD/JPY, a pip equals 0.01 — a hundred times bigger at the decimal level, which tends to confuse beginners.</p><figure class="ap__ilustra"><img src="/assets/img/blog/mer-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="the-basic-formula">The basic formula</h2><p>Pip value comes from the position size multiplied by the pip size:</p><p>Pip value = position size × pip size</p><p>If the pair is quoted in a currency different from the account's currency, an extra conversion step is needed using the exchange rate between the two.</p><h2 id="quick-reference-table">Quick reference table</h2><p>For pairs quoted in dollars, with an account also in dollars, the table below works as a quick check:</p><ul><li><strong>1 standard lot</strong> (100,000 units) — pip is worth about $10.</li><li><strong>0.10 lot, or 1 mini lot</strong> (10,000 units) — pip is worth about $1.</li><li><strong>0.01 lot, or 1 micro lot</strong> (1,000 units) — pip is worth about $0.10.</li></ul><p>Converting to reais at a hypothetical USD/BRL rate of 5.00, these values equal approximately R$ 50, R$ 5, and R$ 0.50 per pip, respectively. This table is useful as a sanity check: if the platform shows a very different value for EUR/USD, it's worth checking whether the selected pair, lot size, or account currency are correct.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="worked-example-eur-usd">Worked example: EUR/USD</h2><p>A trader trades 0.10 lot of EUR/USD, equivalent to 10,000 euros of exposure, with a dollar-denominated account. The pip size is 0.0001. The pip value is:</p><p>10,000 × 0.0001 = $1 per pip</p><p>With a 25-pip stop, the trade's total risk is:</p><p>25 × $1 = $25, equivalent to about R$ 125 at the example exchange rate</p><p>Since the dollar is both the pair's quote currency and the account's currency, no extra conversion step is needed.</p><h2 id="worked-example-usd-jpy">Worked example: USD/JPY</h2><p>Pairs with the yen are usually where manual calculations fail. USD/JPY, trading near 150.00, uses a pip of 0.01, not 0.0001. A trader opens a 0.10 lot (10,000 dollars of exposure):</p><p>Pip value in yen = 10,000 × 0.01 = 1,000 yen per pip</p><p>Converting to dollars, dividing by the 150.00 rate:</p><p>1,000 ÷ 150.00 = about $6.67 per pip</p><p>A 25-pip stop on this position isn't worth $25 — it's worth approximately 25 × $6.67 = $166.75, almost seven times more than the simplified calculation would suggest. Assuming that 0.10 lot always equals $1 per pip works reasonably well for EUR/USD and GBP/USD on a dollar account, but it's a costly mistake on yen pairs or cross pairs.</p><h2 id="why-this-matters-more-than-just-counting-pips">Why this matters more than just counting pips</h2><p>The workflow of someone who manages risk consistently always follows the same order: first choose the entry scenario, then define where the stop invalidates the idea, then measure the stop distance in pips, calculate the pip value for the planned position size, and only then check whether the total risk fits within the account's limit. If the calculated risk is too big, the answer is almost never to artificially tighten the stop — the correct answer is to reduce the position size, keeping the stop at the level that makes technical sense.</p><p>Ignoring this calculation is a quiet way of taking on more risk than intended. Two trades can look identical on the chart — same entry, same stop in pips, same pair — and still have a completely different financial impact, just because the position size changed. Before confirming any order on Duotide or any other platform, it's worth making a habit of doing this math quickly: multiply the position size by the pip size, convert if needed, and only then compare the result with how much you're willing to lose on that trade. It's a calculation that takes less than a minute and avoids unpleasant surprises when the stop is actually hit.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Quick answer</p><p>Pip value is the position size multiplied by the pip size (0.0001 on most pairs and 0.01 on yen pairs), converted to the account currency. On EUR/USD, 0.10 lot is worth US$ 1 per pip, about R$ 4.98 at the October 7, 2026 dollar rate. On USD/JPY, 1 lot is worth ¥ 1,000 per pip, about US$ 6.32, not US$ 10.</p></div>
+            <p>Every forex trader has heard the phrase “I made 40 pips today.” It sounds precise, but it says almost nothing on its own. Forty pips on a small position are worth a few reais; the same forty pips on a larger position can be worth hundreds. The pip distance shows the price move; the pip value shows the impact on the account.</p>
+<p>Knowing how to calculate pip value is what turns “my stop is 25 pips away” into “my stop represents R$ 124.54 of risk.” In this guide, every example uses the real closing quotes from October 7, 2026 (Yahoo Finance): EUR/USD at 1.1254, USD/JPY at 158.30, and the dollar at R$ 4.9814.</p>
+<h2 id="what-a-pip-is">What a pip is</h2>
+<p>A pip is the standard unit of price change in currency pairs. In most pairs, like EUR/USD and GBP/USD, a pip is 0.0001, the fourth decimal place. In pairs with the yen, like USD/JPY, a pip is 0.01, the second decimal place. Many platforms show one extra digit, the pipette, worth a tenth of a pip.</p>
+<p>If EUR/USD goes from 1.1254 to 1.1279, it moved 25 pips. If USD/JPY goes from 158.30 to 158.55, it also moved 25 pips.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/mer-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-calculate-pip-value">How to calculate pip value</h2>
+<ul class="check-list">
+<li><strong>Pip value in the quote currency</strong> = position size × pip size</li>
+<li><strong>Convert to the account currency</strong>, if different, using the exchange rate between the two</li>
+</ul>
+<p>The quote currency is the second one in the pair: the dollar in EUR/USD, the yen in USD/JPY. A standard lot has 100,000 units of the first currency; 0.10 lot, 10,000; 0.01 lot, 1,000.</p>
+<h3>Reference table for EUR/USD</h3>
+<p>In EUR/USD, the quote currency is already the dollar, so pip value doesn't depend on the pair's rate. Converting to reais at the October 7, 2026 dollar rate:</p>
+<ul class="check-list">
+<li><strong>1 lot</strong> (100,000) → 100,000 × 0.0001 = US$ 10 per pip = <strong>R$ 49.81</strong></li>
+<li><strong>0.10 lot</strong> (10,000) → US$ 1 per pip = <strong>R$ 4.98</strong></li>
+<li><strong>0.01 lot</strong> (1,000) → US$ 0.10 per pip = <strong>R$ 0.50</strong></li>
+</ul>
+<h3>Worked example: EUR/USD</h3>
+<p>A trader opens 0.10 lot of EUR/USD with a 25-pip stop. The pip is worth US$ 1, so the risk is 25 × US$ 1 = US$ 25. In reais: 25 × 4.9814 = <strong>R$ 124.54</strong>.</p>
+<h3>Worked example: USD/JPY</h3>
+<p>Pairs with the yen are where manual calculations fail most. On 1 lot of USD/JPY, the pip is worth 100,000 × 0.01 = ¥ 1,000. To convert to dollars, divide by the rate: 1,000 ÷ 158.30 = <strong>US$ 6.32 per pip</strong>, not US$ 10.</p>
+<p>With 0.10 lot, the pip is worth ¥ 100, or US$ 0.63. A 25-pip stop costs 25 × 0.63 = US$ 15.79, or <strong>R$ 78.67</strong>. The same position and the same stop from the EUR/USD example cost 37% less here. Anyone who assumes “0.10 lot always equals US$ 1 per pip” gets the math wrong, and the size of the error changes every time the yen's rate changes.</p>
+<h2 id="real-example-eur-usd-in-pips-in-2026">Real example: EUR/USD in pips in 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/calculadora-de-pip-como-calcular.svg" alt="Chart: EUR/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: EUR/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure>
+<p>The chart shows daily EUR/USD from April 1 to October 7, 2026. Measured in pips, the period looks like this:</p>
+<ul class="check-list">
+<li>From the 1.1574 close on April 1 to the 1.1254 close on October 7, the pair fell <strong>321 pips</strong>. On 0.10 lot, that's US$ 321, or R$ 1,599.03.</li>
+<li>From the 1.1851 high on April 17 to the 1.1162 low in early October, that's <strong>689 pips</strong>.</li>
+<li>The average daily range, from high to low, was 49.1 pips over the chart's 136 sessions and 54.7 pips over the 20 sessions through October 7.</li>
+</ul>
+<p>The last number is the most useful for anyone setting stops. A 25-pip stop on EUR/USD was less than half the range of an ordinary day at that point: it can get hit by a normal swing without the trade idea being wrong.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-use-pip-value">How to use pip value</h2>
+<h3>Size the position by the risk</h3>
+<p>The flow is always the same: decide where the stop invalidates the idea, measure the distance in pips, decide how much you're willing to lose, and only then calculate the size. With a R$ 5,000 account and 1% risk (R$ 50), a 25-pip stop on EUR/USD allows up to 50 ÷ (25 × 4.9814) = 0.40 of the 0.10 lot value, or about 0.04 lot.</p>
+<h3>Compare trades on different pairs</h3>
+<p>Convert everything to the account currency before comparing. 25 pips on EUR/USD and 25 pips on USD/JPY don't cost the same.</p>
+<h3>Check the platform</h3>
+<p>If the platform shows a value very different from the table above for EUR/USD, check the pair, lot size, and account currency before sending the order.</p>
+<h3>Limitations</h3>
+<p>Pip value in reais changes every day with the exchange rate, and on pairs where the quote currency isn't the account's, it also changes with the pair itself. Spread and commissions don't enter the pip calculation, but they do affect the result.</p>
+<h2 id="common-mistakes-when-calculating-pip-value">Common mistakes when calculating pip value</h2>
+<ul class="check-list">
+<li>Using 0.0001 as the pip on yen pairs, where the pip is 0.01.</li>
+<li>Assuming US$ 10 per lot on any pair.</li>
+<li>Forgetting to convert to the account currency.</li>
+<li>Confusing the pip with the pipette in the fifth decimal place.</li>
+<li>Rounding the stop to fit the risk, instead of reducing the position.</li>
+</ul>
+<p>To practice without risking money, do the pip math before every order on a demo account and note the risk in reais next to it. Within a few weeks, “25 pips” will mean a concrete amount to you, and that amount is what protects the account. The market numbers above describe what happened, not what will happen.</p>
             <div class="bq-post__cta">
               <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
@@ -318,6 +367,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

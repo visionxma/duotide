@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>Bollinger Bands: What They Are and How They Work | Blog Duotide</title>
-  <meta name="description" content="Understand the math behind Bollinger Bands, what the volatility squeeze is, and why touching a band doesnt mean automatic reversal.">
+  <title>Bollinger Bands: What They Are, How to Calculate and Use Them | Blog Duotide</title>
+  <meta name="description" content="What Bollinger Bands are, the step-by-step math with real gold prices, the squeeze, walking the band, and the most common mistakes.">
   <link rel="canonical" href="https://duotide.com.br/en/blog/bollinger-bands-what-they-are-and-how-they-work/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/bandas-de-bollinger-como-funcionam/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Bollinger Bands: What They Are and How They Work">
-  <meta property="og:description" content="Understand the math behind Bollinger Bands, what the volatility squeeze is, and why touching a band doesnt mean automatic reversal.">
+  <meta property="og:title" content="Bollinger Bands: What They Are, How to Calculate and Use Them">
+  <meta property="og:description" content="What Bollinger Bands are, the step-by-step math with real gold prices, the squeeze, walking the band, and the most common mistakes.">
   <meta property="og:url" content="https://duotide.com.br/en/blog/bollinger-bands-what-they-are-and-how-they-work/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bollinger Bands: What They Are and How They Work">
-  <meta name="twitter:description" content="Understand the math behind Bollinger Bands, what the volatility squeeze is, and why touching a band doesnt mean automatic reversal.">
+  <meta name="twitter:title" content="Bollinger Bands: What They Are, How to Calculate and Use Them">
+  <meta name="twitter:description" content="What Bollinger Bands are, the step-by-step math with real gold prices, the squeeze, walking the band, and the most common mistakes.">
   <meta name="twitter:label1" content="Written by">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Reading time">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,8 +64,8 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/en/blog/bollinger-bands-what-they-are-and-how-they-work/#artigo",
-      "headline": "Bollinger Bands: What They Are and How They Work",
-      "description": "Understand the math behind Bollinger Bands, what the volatility squeeze is, and why touching a band doesnt mean automatic reversal.",
+      "headline": "Bollinger Bands: What They Are, How to Calculate and Use Them",
+      "description": "What Bollinger Bands are, the step-by-step math with real gold prices, the squeeze, walking the band, and the most common mistakes.",
       "url": "https://duotide.com.br/en/blog/bollinger-bands-what-they-are-and-how-they-work/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Bollinger Bands: What They Are and How They Work",
+          "name": "Bollinger Bands: What They Are, How to Calculate and Use Them",
           "item": "https://duotide.com.br/en/blog/bollinger-bands-what-they-are-and-how-they-work/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/en/">Home</a></li>
         <li><a href="/en/blog/">Blog</a></li>
-        <li><span aria-current="page">Bollinger Bands: What They Are and How They Work</span></li>
+        <li><span aria-current="page">Bollinger Bands: What They Are, How to Calculate and Use Them</span></li>
       </ol>
       <a class="ap__voltar" href="/en/blog/">Back</a>
     </div>
@@ -193,7 +193,7 @@
             </div>
             <p class="ap__atual">Updated: <time datetime="2026-10-08">October 8, 2026</time></p>
             <span class="bq__tag">Indicators</span>
-            <h1>Bollinger Bands: What They Are and How They Work</h1>
+            <h1>Bollinger Bands: What They Are, How to Calculate and Use Them</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Analysis Desk</strong><small>Duotide desk</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,18 +203,66 @@
             <nav class="ap__indice" aria-label="Contents">
               <p class="ap__indice-tit">Contents</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#how-the-calculation-works">How the calculation works</a></li>
-                <li><a href="#what-the-standard-deviation-is-capturing">What the standard deviation is capturing</a></li>
-                <li><a href="#why-touching-a-band-isn-t-an-automatic-signal">Why touching a band isn't an automatic signal</a></li>
-                <li><a href="#the-squeeze-when-the-bands-tighten">The squeeze: when the bands tighten</a></li>
-                <li><a href="#adjusting-the-parameters">Adjusting the parameters</a></li>
-                <li><a href="#using-the-bands-with-judgment">Using the bands with judgment</a></li>
+                <li><a href="#what-bollinger-bands-are">What Bollinger Bands are</a></li>
+                <li><a href="#how-to-calculate-bollinger-bands">How to calculate Bollinger Bands</a></li>
+                <li><a href="#real-example-bollinger-bands-on-gold-in-2026">Real example: Bollinger Bands on gold in 2026</a></li>
+                <li><a href="#how-to-use-bollinger-bands">How to use Bollinger Bands</a></li>
+                <li><a href="#common-mistakes-when-using-bollinger-bands">Common mistakes when using Bollinger Bands</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Created by John Bollinger in the 1980s, Bollinger Bands belong to a small group of indicators that adjust themselves to an asset's volatility, instead of using a fixed price distance. That makes them useful in both calm and turbulent markets, as long as you understand what they actually measure.</p><p>The indicator is made up of three lines: a central moving average and two bands — upper and lower — built from the price's standard deviation around that average. The spacing between the bands increases when volatility rises, and shrinks when it falls.</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="Chart: Ouro, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Ouro, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="how-the-calculation-works">How the calculation works</h2><p>The standard setup uses a 20-period simple moving average as the central line, with the bands positioned two standard deviations away:</p><ul><li><strong>Middle band</strong>: 20-period simple moving average.</li><li><strong>Upper band</strong>: 20-period average + (2 × standard deviation of the last 20 periods).</li><li><strong>Lower band</strong>: 20-period average − (2 × standard deviation of the last 20 periods).</li></ul><p>Suppose an asset's 20-period average is at R$ 60.00 and the standard deviation for that same period is R$ 3.00. The upper band would sit at R$ 66.00 (60.00 + 2 × 3.00) and the lower one at R$ 54.00 (60.00 − 2 × 3.00). If, during a more volatile period, the standard deviation rises to R$ 5.00, the bands widen to R$ 70.00 and R$ 50.00, even with the central average staying in the same place.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="what-the-standard-deviation-is-capturing">What the standard deviation is capturing</h2><p>Standard deviation is a statistical measure of dispersion: the more recent prices have varied around the average, the higher the value. That's why the bands breathe — widening during periods of bigger moves and narrowing when the price starts to move very little.</p><h2 id="why-touching-a-band-isn-t-an-automatic-signal">Why touching a band isn't an automatic signal</h2><p>A common mistake is treating a touch on the upper band as a sell signal and a touch on the lower band as a buy signal, as if the bands were a fixed ceiling and floor. They aren't. In a strong uptrend, the price can hug the upper band for several candles in a row without that meaning a reversal — Bollinger himself called this behavior a sign of trend strength, not exhaustion.</p><p>The more robust reading looks at how the price behaves relative to the bands over time, not at a single isolated touch. A price that touches the upper band and immediately closes back inside it, forming a reversal candle, carries a different signal than a price that breaks through the band and keeps moving away from it candle after candle.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="the-squeeze-when-the-bands-tighten">The squeeze: when the bands tighten</h2><p>One of the best-known uses of the indicator is identifying the so-called squeeze — the moment when the bands narrow considerably, signaling historically low volatility. Squeeze periods tend to precede stronger moves, though the indicator doesn't say which way that move will lean.</p><p>One example: if the distance between an asset's bands drops to its lowest level in three months, this indicates the market is compressed, usually ahead of a volatility expansion. Traders who trade this pattern usually wait for a breakout on one side of the range, with volume, to define the direction of the entry — instead of trying to guess the side before the breakout happens.</p><h2 id="adjusting-the-parameters">Adjusting the parameters</h2><p>The 20-period setting and the 2-standard-deviation multiplier are the market standard, but they aren't a fixed rule. Shorter periods (like 10) make the bands more sensitive to recent moves, useful for shorter-term trades. Smaller multipliers (like 1.5) narrow the bands and generate more touches, at the cost of more false signals.</p><h2 id="using-the-bands-with-judgment">Using the bands with judgment</h2><p>Bollinger Bands work best as a reading of relative volatility and trend context rather than as a standalone buy or sell trigger. Combined with a momentum indicator, such as the RSI or Stochastic, and with attention to price behavior — not just the touch on the line — they help form a fuller reading of the market, always keeping in mind that no band guarantees the price will reverse at the expected point.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Quick answer</p><p>Bollinger Bands are three lines around the price: a 20-period simple moving average in the middle, and two bands set 2 standard deviations away, above and below. They widen when volatility rises and narrow when it falls. Touching or closing outside a band <strong>is not an automatic reversal signal</strong>: in a strong trend, the price can hug the band for several days.</p></div>
+            <p>Created by John Bollinger in the 1980s, Bollinger Bands belong to a small group of indicators that adjust themselves to an asset's volatility, instead of using a fixed price distance. That's why they show up on almost every charting platform, from forex to stocks. In this guide, instead of made-up numbers, we use real daily gold quotes (the GC=F futures contract, in dollars per ounce, from Yahoo Finance) between April and October 2026 to show how the indicator is calculated and what it actually showed.</p>
+<p>The core idea is simple: price spends most of its time close to its recent average, and the bands show how far it typically strays from that average. What changes from one market to another, and from one week to the next, is that distance.</p>
+<h2 id="what-bollinger-bands-are">What Bollinger Bands are</h2>
+<p>The indicator is made up of three lines. The middle one is a simple moving average, usually over 20 periods. The other two sit above and below it, at a distance of two standard deviations from the closing price over that same period.</p>
+<p>Standard deviation is a statistical measure of dispersion: the more recent closes have varied around the average, the higher the value. That's why the bands breathe. They widen when the market speeds up and narrow when the price settles into a tight range. On a daily chart, 20 periods is roughly a month of trading sessions; on a 1-hour chart, the last 20 hours.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-calculate-bollinger-bands">How to calculate Bollinger Bands</h2>
+<p>The standard setup has three steps:</p>
+<ul class="check-list">
+<li><strong>Middle band:</strong> simple average of the last 20 closes.</li>
+<li><strong>Standard deviation:</strong> calculated over those same 20 closes.</li>
+<li><strong>Upper and lower bands:</strong> middle band plus and minus 2 standard deviations.</li>
+</ul>
+<h3>Example with real gold data</h3>
+<p>On October 7, 2026, gold closed at US$ 4,140.70. The average of the previous 20 closes (including that day) was US$ 4,289.74, and the standard deviation of those 20 closes was about US$ 100.91.</p>
+<ul class="check-list">
+<li>Upper band = 4,289.74 + 2 × 100.91 = <strong>US$ 4,491.56</strong></li>
+<li>Lower band = 4,289.74 − 2 × 100.91 = <strong>US$ 4,087.92</strong></li>
+<li>Band width = (4,491.56 − 4,087.92) ÷ 4,289.74 = <strong>9.41%</strong> of the average</li>
+</ul>
+<p>Width as a percentage is the most useful measure for comparing different moments. On April 1, 2026, right after a turbulent stretch, it reached 24.5%. On August 4, 2026, it fell to 4.50%, the lowest of the entire chart window. Same asset, same setup, bands five times tighter.</p>
+<h2 id="real-example-bollinger-bands-on-gold-in-2026">Real example: Bollinger Bands on gold in 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="Chart: Ouro, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Ouro, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure>
+<p>Between April 1 and October 7, 2026, gold went from US$ 4,813.10 to US$ 4,140.70, a drop of 13.97%, with a high of US$ 4,917.70 on April 17 and a low of US$ 3,955.40 on June 30. Three stretches of the chart show clearly what the indicator does and doesn't do.</p>
+<h3>June: closing below the lower band didn't mark the bottom</h3>
+<p>On June 9, 2026, gold closed at US$ 4,286.40, below the lower band. Anyone treating that as a buy signal because it looked cheap watched the price keep falling: there were further closes below the band on June 10, June 11, and June 24, and on June 24 the close was US$ 4,008.80, 6.5% below the first signal. The period's low only came on June 30. Closing outside the band shows the drop was strong, not that it's over.</p>
+<h3>July and August: the squeeze before the breakout</h3>
+<p>From mid-July through early August, band width stayed near 5%, with closes stuck between US$ 3,992.10 and US$ 4,152.60. On August 4, the width hit a low of 4.50%. The next day, August 5, gold closed at US$ 4,305.20, up 3.7% from the day before and above the upper band. The move continued: on August 24, the close was US$ 4,697.80, 13.1% above the August 4 close. The squeeze warned that volatility was too low; the direction only became clear at the breakout.</p>
+<h3>August: walking the upper band</h3>
+<p>Between August 5 and August 11, gold closed above the upper band for five sessions in a row. Selling on every touch, on the idea that the band is a ceiling, would have meant fighting a rally that still had two more weeks to run. Bollinger himself described this walk along the band as a sign of strength, not exhaustion.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-use-bollinger-bands">How to use Bollinger Bands</h2>
+<h3>Measure relative volatility</h3>
+<p>Band width tells you whether the market is calmer or more agitated than normal for that asset. Widths near the low of the past few months signal compression; widths near the high, an already-stretched market.</p>
+<h3>Trade the squeeze with confirmation</h3>
+<p>Traders who use the squeeze usually wait for a close outside one of the bands, preferably with volume, to define the side, instead of trying to guess the direction before the breakout. A stop on the other side of the compression range limits the loss when the breakout is false.</p>
+<h3>Read the move back inside the bands</h3>
+<p>A touch on the band followed by a close back inside, with a reversal candle, carries different information than a price that closes outside and keeps moving away. In a sideways market, the move back inside tends to bring the price back toward the middle average; in a trend, it may just be a pause.</p>
+<h3>Adjust the parameters carefully</h3>
+<p>Shorter periods (10, for example) make the bands more sensitive; smaller multipliers (1.5) narrow the channel and generate more touches, with more false signals. Change one parameter at a time and test it first.</p>
+<h3>Limitations</h3>
+<p>The bands use only past price and don't indicate direction. The standard deviation also reacts to a single extreme day, which suddenly widens the bands and keeps them wide for 20 periods, until that day drops out of the calculation.</p>
+<h2 id="common-mistakes-when-using-bollinger-bands">Common mistakes when using Bollinger Bands</h2>
+<ul class="check-list">
+<li>Treating the upper band as a sell order and the lower band as a buy order, without looking at the trend.</li>
+<li>Entering before the squeeze breaks out, trying to guess the direction.</li>
+<li>Comparing band width between different assets as if it were the same scale.</li>
+<li>Using the indicator alone, without support, resistance, volume, or an oscillator like the RSI.</li>
+<li>Forgetting that the examples above describe what happened, not what will happen.</li>
+</ul>
+<p>To practice without risking money, open the chart of the asset you follow on a demo account, add Bollinger Bands (20, 2), and note, over a few weeks, the band width and what the price did after each close outside them. That record shows how the indicator behaves in your market, not in a textbook example.</p>
             <div class="bq-post__cta">
               <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
@@ -318,6 +366,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

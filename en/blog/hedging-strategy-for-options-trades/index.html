@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>Hedging in Trading: How to Protect One Trade With Another Position | Blog Duotide</title>
-  <meta name="description" content="How hedging works in short-term trades, with a complete numerical example and criteria for knowing when this protection makes sense.">
+  <title>Hedging in Trading: What It Is and How to Protect a Position | Blog Duotide</title>
+  <meta name="description" content="What hedging is, how to set up protection with a real USD/BRL example from October 2026, how much it costs, and the most common mistakes.">
   <link rel="canonical" href="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-de-hedge-para-operacoes-de-opcoes/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Hedging in Trading: How to Protect One Trade With Another Position">
-  <meta property="og:description" content="How hedging works in short-term trades, with a complete numerical example and criteria for knowing when this protection makes sense.">
+  <meta property="og:title" content="Hedging in Trading: What It Is and How to Protect a Position">
+  <meta property="og:description" content="What hedging is, how to set up protection with a real USD/BRL example from October 2026, how much it costs, and the most common mistakes.">
   <meta property="og:url" content="https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hedging in Trading: How to Protect One Trade With Another Position">
-  <meta name="twitter:description" content="How hedging works in short-term trades, with a complete numerical example and criteria for knowing when this protection makes sense.">
+  <meta name="twitter:title" content="Hedging in Trading: What It Is and How to Protect a Position">
+  <meta name="twitter:description" content="What hedging is, how to set up protection with a real USD/BRL example from October 2026, how much it costs, and the most common mistakes.">
   <meta name="twitter:label1" content="Written by">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Reading time">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,8 +64,8 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/#artigo",
-      "headline": "Hedging in Trading: How to Protect One Trade With Another Position",
-      "description": "How hedging works in short-term trades, with a complete numerical example and criteria for knowing when this protection makes sense.",
+      "headline": "Hedging in Trading: What It Is and How to Protect a Position",
+      "description": "What hedging is, how to set up protection with a real USD/BRL example from October 2026, how much it costs, and the most common mistakes.",
       "url": "https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Hedging in Trading: How to Protect One Trade With Another Position",
+          "name": "Hedging in Trading: What It Is and How to Protect a Position",
           "item": "https://duotide.com.br/en/blog/hedging-strategy-for-options-trades/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/en/">Home</a></li>
         <li><a href="/en/blog/">Blog</a></li>
-        <li><span aria-current="page">Hedging in Trading: How to Protect One Trade With Another Position</span></li>
+        <li><span aria-current="page">Hedging in Trading: What It Is and How to Protect a Position</span></li>
       </ol>
       <a class="ap__voltar" href="/en/blog/">Back</a>
     </div>
@@ -193,7 +193,7 @@
             </div>
             <p class="ap__atual">Updated: <time datetime="2026-10-08">October 8, 2026</time></p>
             <span class="bq__tag">Strategies</span>
-            <h1>Hedging in Trading: How to Protect One Trade With Another Position</h1>
+            <h1>Hedging in Trading: What It Is and How to Protect a Position</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Analysis Desk</strong><small>Duotide desk</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,17 +203,18 @@
             <nav class="ap__indice" aria-label="Contents">
               <p class="ap__indice-tit">Contents</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#the-principle-behind-hedging">The principle behind hedging</a></li>
-                <li><a href="#an-example-with-round-numbers">An example with round numbers</a></li>
-                <li><a href="#when-it-makes-sense-to-use-a-hedge">When it makes sense to use a hedge</a></li>
-                <li><a href="#when-the-hedge-hurts-more-than-it-helps">When the hedge hurts more than it helps</a></li>
-                <li><a href="#how-to-test-before-applying-it-day-to-day">How to test before applying it day to day</a></li>
+                <li><a href="#what-hedging-is">What hedging is</a></li>
+                <li><a href="#how-to-calculate-a-hedge-s-result">How to calculate a hedge's result</a></li>
+                <li><a href="#real-example-the-dollar-against-the-real-in-october-2026">Real example: the dollar against the real in October 2026</a></li>
+                <li><a href="#how-to-use-a-hedge">How to use a hedge</a></li>
+                <li><a href="#common-mistakes-when-hedging">Common mistakes when hedging</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Hedge is a word that comes up all the time in finance and tends to be treated as something complicated, reserved for big funds. In practice, the logic is simple: instead of betting everything on a single direction, you open a second position that protects part of the result if the market moves against the first one. The goal isn't to profit twice — it's to reduce the size of the damage when the market reading turns out wrong.</p><p>This idea applies to stocks, currencies, commodities, and also very short-term trades. The common thread is always the same: buying some form of insurance, even if it costs part of the original trade's potential profit.</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="Chart: USD/BRL, daily, 05/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: USD/BRL, daily, 05/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="the-principle-behind-hedging">The principle behind hedging</h2><p>A classic hedge combines two positions with opposite results on the same asset, or on assets that move in a similar way. If the first position bets on a currency rising and the second bets on the same currency falling, the final result depends on how much the price moved and the relative size of each position — not simply on who won and who lost.</p><p>There are two common ways to set up this protection. The first is the simultaneous hedge: opening both sides at practically the same time, usually because the market reading is split between two likely scenarios. The second is the adjustment hedge: opening the second position after the first is already at a loss, to cap a maximum loss and keep the result from worsening if the price keeps moving in the opposite direction.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="an-example-with-round-numbers">An example with round numbers</h2><p>Suppose a R$ 200.00 trade betting on the dollar rising against the real, with an 85% payout if correct and a 30-minute expiration. With 10 minutes left, economic news changes the scenario and the price starts moving against the position. Instead of simply waiting for the result, you open a second R$ 100.00 trade betting on the dollar falling, with the same 85% payout.</p><p>There are two possible outcomes. If the dollar closes higher, the first trade pays R$ 170.00 in profit (85% of R$ 200.00) and the second loses the R$ 100.00 invested — a net result of R$ 70.00 in gain. If the dollar closes lower, the first trade loses the R$ 200.00 and the second pays R$ 85.00 in profit (85% of R$ 100.00) — a net result of R$ 115.00 in loss. Compared with doing nothing — losing the full R$ 200.00 if the dollar fell —, the hedge reduced the loss by R$ 85.00 in the bad scenario, at the cost of reducing the gain in the good scenario.</p><h2 id="when-it-makes-sense-to-use-a-hedge">When it makes sense to use a hedge</h2><ul><li>When relevant news comes up in the middle of an already open trade and the remaining time doesn't allow closing the position safely.</li><li>When the technical reading has split between two scenarios and reducing total exposure matters more than trying to nail the exact direction.</li><li>When the goal is to protect a winning streak for the day, accepting a smaller result instead of risking giving it all back on a single trade.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="when-the-hedge-hurts-more-than-it-helps">When the hedge hurts more than it helps</h2><p>Hedging has a cost — it usually reduces the possible profit, because the two positions generally don't share the same percentage payout in every scenario. Using a hedge every time a trade starts going badly, out of reflex, is different from using a hedge as part of a plan defined before entering the market. In the first case, the hedge becomes a way of denying the loss; in the second, it's a risk management tool. The difference lies in deciding the criteria for using it before trading, not in the heat of the moment.</p><h2 id="how-to-test-before-applying-it-day-to-day">How to test before applying it day to day</h2><p>Before using a hedge with real money, it's worth simulating the four possible scenarios of a trade — small rise, big rise, small drop, big drop — and calculating the net result of each one, with and without the second position. Tools like Duotide show each asset's payout before the trade is opened, which makes it easier to do this math in advance, instead of deciding in the middle of the trade under pressure. Hedging doesn't eliminate risk: it redistributes risk across scenarios, and it's up to the trader to decide whether that trade-off makes sense for their capital and their plan.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Quick answer</p><p>Hedging means opening a second position that gains when the main one loses, to limit the damage if the market moves against you. It works like insurance: it reduces the loss in the bad scenario, but it also reduces the gain in the good scenario, by the same proportion. It makes sense when the criteria for using it are set before the trade, not as a reaction to a loss.</p></div>
+            <p>Hedge is a word that comes up constantly in finance and tends to be treated as something only big funds do. The logic, though, is simple: instead of letting the whole result depend on a single direction, you open a second position that gains when the first one loses. The goal isn't to profit twice, it's to limit the damage when your read on the market turns out wrong.</p><p>In this guide we use real daily quotes for the US dollar against the Brazilian real (USD/BRL) between May and October 2026, including the dollar's 4.3% drop on October 6, to show how much a hedge protects and how much it costs.</p><h2 id="what-hedging-is">What hedging is</h2><p>A hedge is a protective position: a second trade, in the same asset or in one that moves in a similar way, set up to offset part of the loss on the main trade. It works like insurance. You pay for it, either in profit you give up or in trading costs, and in exchange you reduce the worst possible outcome.</p><p>There are two common ways to set up this protection:</p><ul class="check-list"><li><strong>Simultaneous hedge:</strong> both legs are opened together, usually because there's an event ahead (a rate decision, an inflation reading) and you want to reduce exposure without closing the position entirely.</li><li><strong>Adjustment hedge:</strong> the second position is opened after the first one is already moving against you, to lock in the maximum loss if price keeps going the same way.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-calculate-a-hedge-s-result">How to calculate a hedge's result</h2><p>The math is always the same: the main position's result plus the protective position's result, in each scenario. The protected proportion (the hedge size divided by the main position's size) is what determines how much of the loss and how much of the gain get cut.</p><h2 id="real-example-the-dollar-against-the-real-in-october-2026">Real example: the dollar against the real in October 2026</h2><figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="Chart: USD/BRL, daily, 05/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: USD/BRL, daily, 05/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><p>The chart shows USD/BRL from May 1, 2026 (R$4.97) to October 7, 2026 (R$4.98). For most of the period the dollar traded between R$4.88 (the low on May 12) and R$5.25 (the high on July 1). Two real situations show both sides of a hedge.</p><h3>The October 6 drop: the hedge protecting</h3><p>Suppose a long position of US$10,000 opened at the October 2 close, at R$5.2226. On October 6 the dollar closed at R$4.9967, a drop of R$0.2259 per dollar.</p><ul class="check-list"><li>Without a hedge: 10,000 × −0.2259 = <strong>−R$2,259.00</strong></li><li>With a 50% hedge (a short of US$5,000 opened at the same price): the long loses R$2,259.00 and the short gains 5,000 × 0.2259 = R$1,129.50</li><li>Result with the hedge: <strong>−R$1,129.50</strong>, half the loss</li></ul><h3>The late-September rally: the hedge charging its price</h3><p>Now the opposite scenario. From September 23 (R$5.0999) to September 29 (R$5.2229) the dollar rose R$0.1230. The same US$10,000 long position would have gained R$1,230.00. With the US$5,000 short as protection, the short would lose R$615.00 and the result would drop to <strong>R$615.00</strong>. That's the cost of the insurance: the hedge cuts the loss and the gain in the same proportion.</p><p>Notice one detail: with both legs in the same asset and at the same price, a 50% hedge gives exactly the same result as simply trading US$5,000 from the start, but paying entry and exit costs on both legs. That's why many professionals simply reduce position size instead, when the protection is in the same asset.</p><h3>Fixed-return trades</h3><p>In short-term trades with a fixed return, the math changes because the loss is the full amount and the gain is a percentage. With R$200 on the dollar rising and an 85% return, hedged with R$100 on the dollar falling at the same return: if the dollar rises, the first trade pays R$170 and the second loses R$100, a net result of +R$70; if the dollar falls, the first trade loses R$200 and the second pays R$85, a net result of −R$115. Compared to losing the full R$200, the hedge cut the loss by R$85 but also cut the gain from R$170 to R$70. Since the return is less than 100%, both legs together always cost more than they pay out if they're the same size.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-use-a-hedge">How to use a hedge</h2><h3>Ahead of a known event</h3><p>When there's an important release coming up and you don't want to close the position entirely, partial protection softens the shock. Decide the proportion before the event, not during it.</p><h3>To lock in a maximum loss</h3><p>In an adjustment hedge, the second position freezes the loss from that point on. The honest question to ask is whether it wouldn't be simpler, and cheaper, to just close the trade.</p><h3>With correlated assets</h3><p>It's also possible to protect a position with a different asset that tends to move together with it, like using an index to hedge a stock portfolio. The protection stays imperfect, because correlation changes over time, and the hedge can fail on exactly the day it's needed most.</p><h3>Limitations</h3><p>A hedge doesn't eliminate risk: it redistributes the outcome across scenarios. Each leg carries spread costs and, in some markets, position-holding costs. And a hedge opened by reflex, every time a trade starts going badly, is often just a way of postponing the decision to accept the loss.</p><h2 id="common-mistakes-when-hedging">Common mistakes when hedging</h2><ul class="check-list"><li>Opening the protection in the heat of the moment, with no criteria set before the entry.</li><li>Forgetting that a hedge cuts the gain by the same proportion it cuts the loss.</li><li>Hedging in the same asset and paying double costs for a result equal to a smaller position.</li><li>In fixed-return trades, opening opposite legs of the same size, which guarantees a net loss.</li><li>Relying on a correlation between assets without checking whether it has held up in recent months.</li><li>Treating the examples above as predictions: they describe what happened with the dollar on those specific dates.</li></ul><p>To practice without risking money, set up a position with and without protection on a demo account, and write down, for each scenario (a small rally, a big rally, a small drop, a big drop), the net result of each version. Logging those numbers for a few weeks shows whether the insurance you're paying for actually makes sense for your plan.</p>
             <div class="bq-post__cta">
               <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
@@ -317,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

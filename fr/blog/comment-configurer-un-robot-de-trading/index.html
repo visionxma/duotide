@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>Comment configurer un robot de trading étape par étape | Blog Duotide</title>
-  <meta name="description" content="Voyez les étapes pour construire un robot de trading, de la définition des règles aux tests, et les précautions avant de trader réellement.">
+  <title>Comment configurer un robot de trading pas à pas | Blog Duotide</title>
+  <meta name="description" content="Étapes pour configurer un robot de trading : règles, stop, taille de position et tests, avec un exemple réel de moyennes mobiles sur l'ether.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/comment-configurer-un-robot-de-trading/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-configurar-um-robo-de-trading/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Comment configurer un robot de trading étape par étape">
-  <meta property="og:description" content="Voyez les étapes pour construire un robot de trading, de la définition des règles aux tests, et les précautions avant de trader réellement.">
+  <meta property="og:title" content="Comment configurer un robot de trading pas à pas">
+  <meta property="og:description" content="Étapes pour configurer un robot de trading : règles, stop, taille de position et tests, avec un exemple réel de moyennes mobiles sur l'ether.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/comment-configurer-un-robot-de-trading/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Comment configurer un robot de trading étape par étape">
-  <meta name="twitter:description" content="Voyez les étapes pour construire un robot de trading, de la définition des règles aux tests, et les précautions avant de trader réellement.">
+  <meta name="twitter:title" content="Comment configurer un robot de trading pas à pas">
+  <meta name="twitter:description" content="Étapes pour configurer un robot de trading : règles, stop, taille de position et tests, avec un exemple réel de moyennes mobiles sur l'ether.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,8 +64,8 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/comment-configurer-un-robot-de-trading/#artigo",
-      "headline": "Comment configurer un robot de trading étape par étape",
-      "description": "Voyez les étapes pour construire un robot de trading, de la définition des règles aux tests, et les précautions avant de trader réellement.",
+      "headline": "Comment configurer un robot de trading pas à pas",
+      "description": "Étapes pour configurer un robot de trading : règles, stop, taille de position et tests, avec un exemple réel de moyennes mobiles sur l'ether.",
       "url": "https://duotide.com.br/fr/blog/comment-configurer-un-robot-de-trading/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Comment configurer un robot de trading étape par étape",
+          "name": "Comment configurer un robot de trading pas à pas",
           "item": "https://duotide.com.br/fr/blog/comment-configurer-un-robot-de-trading/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
-        <li><span aria-current="page">Comment configurer un robot de trading étape par étape</span></li>
+        <li><span aria-current="page">Comment configurer un robot de trading pas à pas</span></li>
       </ol>
       <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
@@ -193,7 +193,7 @@
             </div>
             <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
             <span class="bq__tag">Stratégies</span>
-            <h1>Comment configurer un robot de trading étape par étape</h1>
+            <h1>Comment configurer un robot de trading pas à pas</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Rubrique Analyse</strong><small>Rubrique Duotide</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,17 +203,72 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#etape-1-definissez-la-strategie-en-regles-claires">Étape 1 : définissez la stratégie en règles claires</a></li>
-                <li><a href="#etape-2-choisissez-la-plateforme-et-le-langage">Étape 2 : choisissez la plateforme et le langage</a></li>
-                <li><a href="#etape-3-faites-le-backtest-avec-des-donnees-historiques">Étape 3 : faites le backtest avec des données historiques</a></li>
-                <li><a href="#etape-4-testez-sur-un-compte-demo-avant-le-capital-reel">Étape 4 : testez sur un compte démo avant le capital réel</a></li>
-                <li><a href="#comment-mettre-le-robot-en-fonctionnement-en-toute-securite">Comment mettre le robot en fonctionnement en toute sécurité</a></li>
+                <li><a href="#ce-qu-un-robot-de-trading-doit-avoir">Ce qu'un robot de trading doit avoir</a></li>
+                <li><a href="#comment-configurer-le-robot-etape-par-etape">Comment configurer le robot, étape par étape</a></li>
+                <li><a href="#exemple-reel-le-robot-a-moyennes-sur-l-ether-en-2026">Exemple réel : le robot à moyennes sur l'ether en 2026</a></li>
+                <li><a href="#comment-tester-le-robot-avant-de-l-activer">Comment tester le robot avant de l'activer</a></li>
+                <li><a href="#erreurs-courantes-lors-de-la-configuration-d-un-robot-de-tra">Erreurs courantes lors de la configuration d'un robot de trading</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Un robot de trading est, au fond, un ensemble de règles écrites en code qui achète et vend des actifs automatiquement quand certaines conditions sont remplies. La promesse est tentante : trader sans avoir besoin de rester devant l'écran et sans laisser l'émotion interférer dans la décision. Mais construire un robot qui fonctionne vraiment exige plus de planification que la plupart des gens l'imaginent.</p><p>Ce guide présente les étapes pour configurer un robot de trading, de la définition de la stratégie aux tests finaux, ainsi que les précautions qui évitent qu'il ne devienne une machine à perdre de l'argent en pilote automatique.</p><figure class="ap__grafico"><img src="/assets/graficos/como-configurar-um-robo-de-trading.svg" alt="Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre.</figcaption></figure><h2 id="etape-1-definissez-la-strategie-en-regles-claires">Étape 1 : définissez la stratégie en règles claires</h2><p>Avant de penser au code, écrivez votre stratégie en phrases simples et objectives. Par exemple : acheter quand la moyenne mobile de 9 périodes croise au-dessus de la moyenne de 21 périodes, et vendre quand le prix baisse de 2% en dessous du prix d'entrée. Si vous ne pouvez pas décrire la stratégie sans ambiguïté par écrit, le robot non plus ne pourra pas l'exécuter de façon cohérente.</p><p>À cette étape, définissez aussi les trois piliers de tout système automatisé : la condition d'entrée, la condition de sortie avec profit et la condition de sortie avec perte (le stop). Un robot sans stop défini n'est pas une stratégie automatisée, c'est un risque automatisé.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="etape-2-choisissez-la-plateforme-et-le-langage">Étape 2 : choisissez la plateforme et le langage</h2><p>Il existe essentiellement deux chemins : utiliser un constructeur visuel, où vous construisez la logique avec des blocs et des menus, sans écrire de code, ou programmer le robot dans un langage comme Python, qui donne plus de liberté, mais exige des connaissances techniques. Pour les débutants, les plateformes visuelles sont plus rapides pour valider une idée simple avant d'investir du temps dans la programmation.</p><h3>Tester la logique avant d'automatiser</h3><p>Une erreur courante est de se lancer directement dans la programmation du robot sans d'abord vérifier manuellement, sur un graphique historique, si la stratégie aurait fonctionné ces dernières semaines. Ce test manuel, rapide et fait à l'œil nu, évite de perdre du temps à automatiser une règle qui échouait déjà sur le papier.</p><h2 id="etape-3-faites-le-backtest-avec-des-donnees-historiques">Étape 3 : faites le backtest avec des données historiques</h2><p>Le backtest est le processus consistant à faire tourner votre stratégie sur des données de prix passées pour voir comment elle se serait comportée. Un backtest bien fait prend en compte les coûts de transaction, le spread entre achat et vente, et une période assez longue pour inclure des moments de marché calme et des moments de forte volatilité.</p><p>Imaginez un robot testé avec R$ 10.000 de capital initial, risquant 2% par opération (R$ 200). Sur 100 opérations simulées, avec 55% de réussite et un ratio risque-rendement de 1 pour 1,5, le résultat attendu serait d'environ 21 opérations gagnantes de plus que perdantes, multipliées par le gain moyen — un exercice de mathématiques qui n'a de sens que lorsque les chiffres du backtest sont réalistes, et non gonflés par la chance sur la période choisie.</p><ul><li>Utilisez au moins un ou deux ans de données historiques, si disponibles.</li><li>Incluez les coûts de transaction et le spread dans le calcul.</li><li>Méfiez-vous des résultats trop parfaits : ils peuvent indiquer une erreur dans le test.</li><li>Réservez une partie des données pour valider en dehors de la période utilisée pour l'ajustement.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="etape-4-testez-sur-un-compte-demo-avant-le-capital-reel">Étape 4 : testez sur un compte démo avant le capital réel</h2><p>Même après un backtest satisfaisant, le robot doit tourner sur un compte démo, avec des données de marché en direct, mais sans argent réel, pendant une période raisonnable. C'est à cette étape qu'apparaissent des problèmes que le backtest ne capture pas, comme des retards d'exécution, des pannes de connexion ou le comportement du robot face à des actualités de dernière minute.</p><h3>Surveillance continue</h3><p>Un robot de trading n'est pas un projet qu'on configure une fois et qu'on oublie. Des changements dans le comportement du marché peuvent rendre une stratégie rentable incohérente. Réservez du temps chaque semaine pour revoir les résultats, en comparant la performance réelle avec ce que le backtest prévoyait.</p><h2 id="comment-mettre-le-robot-en-fonctionnement-en-toute-securite">Comment mettre le robot en fonctionnement en toute sécurité</h2><p>En passant à un compte réel, commencez avec un petit capital, suffisant pour valider que l'exécution en direct correspond à ce qui a été testé, mais assez petit pour qu'une erreur de configuration ne cause pas de préjudice grave. Augmentez le capital alloué progressivement, à mesure que l'historique réel confirme ce qui a été observé dans les tests.</p><p>Quelle que soit la plateforme utilisée pour exécuter les ordres, le robot est un outil de discipline, pas une garantie de profit. Il élimine l'hésitation émotionnelle au moment d'appuyer sur le bouton, mais reste exposé au risque de marché comme toute autre forme d'opération, et les pertes font partie du processus même avec un système bien construit.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Pour configurer un robot de trading, écrivez des règles objectives d'entrée et de sortie, définissez un stop proportionnel à la volatilité de l'actif et calculez la taille de chaque position selon la perte que vous acceptez. Ensuite, testez la règle sur des données historiques et sur un compte démo avant d'utiliser de l'argent réel. Le robot exécute exactement ce qui a été configuré, y compris les erreurs.</p></div>
+            <p>Un robot de trading est un ensemble de règles écrites de façon à ce qu'un programme puisse les exécuter seul : quand la condition X se produit, achetez ; quand la condition Y se produit, vendez. Il ne pense pas, n'interprète pas les nouvelles et ne sait pas si le marché a changé de comportement. Il fait exactement ce qui lui a été ordonné, y compris les erreurs.</p>
+<p>Dans ce guide, nous construisons un robot simple du début à la fin et le testons avec les cotations quotidiennes réelles de l'ether (ETH/USDT sur Binance) entre avril et octobre 2026. L'objectif n'est pas de vendre la règle, mais de montrer où la configuration fait la différence : le stop et la taille de la position ont pesé davantage sur le résultat que le signal d'entrée.</p>
+<h2 id="ce-qu-un-robot-de-trading-doit-avoir">Ce qu'un robot de trading doit avoir</h2>
+<p>Avant tout code ou constructeur visuel, écrivez la stratégie en phrases qui ne laissent aucun doute. Tout robot a besoin de quatre éléments :</p>
+<ul class="check-list">
+<li><strong>Condition d'entrée :</strong> ce qui doit se produire pour ouvrir l'opération.</li>
+<li><strong>Condition de sortie avec gain :</strong> un objectif, un signal contraire ou un stop qui suit le prix.</li>
+<li><strong>Condition de sortie avec perte (stop) :</strong> le point où l'idée est fausse. Un robot sans stop n'est pas une stratégie automatisée, c'est un risque automatisé.</li>
+<li><strong>Taille de la position :</strong> combien acheter à chaque signal, calculé à partir de ce que vous acceptez de perdre.</li>
+</ul>
+<p>Si vous ne pouvez pas expliquer la règle à quelqu'un d'autre sans utiliser le mot « ça dépend », le robot ne pourra pas l'exécuter non plus.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-configurer-le-robot-etape-par-etape">Comment configurer le robot, étape par étape</h2>
+<h3>Étape 1 : la règle d'entrée et de sortie</h3>
+<p>Notre exemple utilise deux moyennes mobiles exponentielles sur le graphique journalier : celle à 9 périodes (rapide) et celle à 21 (lente). Le robot achète à la clôture du jour où la moyenne à 9 croise au-dessus de celle à 21 et vend à la clôture du jour où elle croise en dessous. C'est une règle courante dans le matériel d'introduction précisément parce qu'elle est facile à programmer.</p>
+<h3>Étape 2 : le stop, mesuré par la volatilité</h3>
+<p>Une configuration très répandue est le stop fixe à 2 % en dessous de l'entrée. Le problème est que 2 % peut être peu ou beaucoup, selon l'actif. Une meilleure façon est de mesurer la volatilité avec l'ATR (amplitude moyenne réelle) à 14 périodes et de placer le stop à un multiple de celui-ci, par exemple 2 ATR.</p>
+<h3>Étape 3 : la taille de la position</h3>
+<p>Avec le stop défini, la taille découle d'un calcul simple : taille = montant que vous acceptez de perdre ÷ distance jusqu'au stop. Avec les chiffres réels du signal du 7 avril 2026 :</p>
+<ul class="check-list">
+<li>Prix d'entrée : <strong>US$ 2 240,01</strong> ; ATR à 14 jours le même jour : <strong>US$ 108,02</strong> (4,82 % du prix).</li>
+<li>Stop à 2 ATR : 2 × 108,02 = US$ 216,04 → stop à <strong>US$ 2 023,97</strong>.</li>
+<li>Compte de US$ 10 000 risquant 1 % par opération : perte maximale de <strong>US$ 100</strong>.</li>
+<li>Taille : 100 ÷ 216,04 = <strong>0,46 ETH</strong>, soit environ US$ 1 036,85 de position.</li>
+</ul>
+<p>Remarquez que la position représentait environ 10 % du compte, et non le compte entier. C'est ce qui rend supportable une série de pertes.</p>
+<h3>Étape 4 : coûts et exécution</h3>
+<p>Configurez dans le test des frais par opération (par exemple, 0,1 % à l'achat et 0,1 % à la vente, valeur hypothétique) et un certain écart entre le prix du signal et le prix exécuté. Les stratégies qui négocient beaucoup peuvent voir tout le gain consommé par des coûts qui n'apparaissent pas sur le graphique.</p>
+<h2 id="exemple-reel-le-robot-a-moyennes-sur-l-ether-en-2026">Exemple réel : le robot à moyennes sur l'ether en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/como-configurar-um-robo-de-trading.svg" alt="Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : ETH/USDT, quotidien, du 01/04/2026 au 07/10/2026. Données : Binance. Analyse propre.</figcaption></figure>
+<p>Sur le graphique, la ligne bleue est la moyenne exponentielle à 9 jours et l'orange, celle à 21. Entre le 1er avril et le 7 octobre 2026, l'ETH est passé de US$ 2 140,35 à US$ 2 574,14 (hausse de 20,27 %), avec un minimum de US$ 1 505,68 le 6 juin et un maximum de US$ 2 807,34 le 21 septembre. Les moyennes se sont croisées seulement trois fois sur la période, et chaque croisement enseigne quelque chose de différent.</p>
+<h3>Avril : le stop de 2 % aurait sorti le robot le jour suivant</h3>
+<p>Le croisement haussier du 7 avril a ordonné d'acheter à US$ 2 240,01. Avec un stop fixe de 2 %, la sortie se situerait à US$ 2 195,21, et le minimum du 8 avril a été de US$ 2 179,78 : le robot aurait été stoppé en un jour. Avec un stop à 2 ATR (US$ 2 023,97), l'opération a survécu, car le plus bas minimum jusqu'à la sortie a été US$ 2 157,31, le 9 avril. Le prix a atteint US$ 2 464,91 le 17 avril (10,04 % au-dessus de l'entrée).</p>
+<h3>Mai : le signal de sortie a rendu presque tout le gain</h3>
+<p>Le croisement baissier n'est venu que le 14 mai, avec l'ETH à US$ 2 283,25. L'opération s'est terminée avec un gain brut de 1,93 %, bien moins que les 10,04 % que le prix a offerts à un moment. Les moyennes mobiles sortent en retard par construction ; qui veut protéger une partie du gain a besoin d'une autre règle, comme un stop suiveur ou un objectif partiel. Dans les 10 jours suivant ce croisement baissier, l'ETH a encore baissé de 8,03 %.</p>
+<h3>Juillet : la même leçon du stop, et une tendance longue</h3>
+<p>Le croisement haussier du 5 juillet a ordonné d'acheter à US$ 1 785,65. À nouveau, le stop de 2 % (US$ 1 749,94) aurait été atteint le jour suivant, avec le minimum du 6 juillet à US$ 1 728,95. Le stop à 2 ATR se situait à US$ 1 623,77 (ATR de US$ 80,94, soit 4,53 % du prix) et n'a pas été touché : le plus bas minimum après l'entrée a été US$ 1 713,44, le 8 juillet. Jusqu'au 7 octobre, il n'y a pas eu de croisement baissier, et la position ouverte accumulait une hausse de 44,16 %.</p>
+<p>Avec le stop de 2 %, les deux achats seraient devenus deux petites pertes. Avec le stop mesuré par la volatilité, ils se sont terminés par un petit gain et un grand gain. Même signal d'entrée, résultats opposés. Cela décrit ce qui s'est passé sur ce segment de l'ETH ; sur une autre période, la même règle peut perdre.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-tester-le-robot-avant-de-l-activer">Comment tester le robot avant de l'activer</h2>
+<h3>Backtest sur plusieurs périodes</h3>
+<p>Trois signaux en six mois est un échantillon trop petit pour toute conclusion. Faites tourner la règle sur plusieurs années de données, incluant des phases de hausse, de baisse et de latéralisation, et notez le taux de réussite, le gain moyen, la perte moyenne et la plus longue série de pertes.</p>
+<h3>Compte démo avant l'argent réel</h3>
+<p>Après le backtest, laissez le robot fonctionner sur un compte démo pendant quelques semaines. C'est là qu'apparaissent les problèmes que le test historique ne montre pas : ordre qui ne s'exécute pas, connexion qui tombe, signal déclenché deux fois.</p>
+<h3>Surveillance continue</h3>
+<p>Robot activé ne veut pas dire robot oublié. Définissez une limite de perte quotidienne ou mensuelle qui, si elle est atteinte, désactive l'automatisation jusqu'à ce que vous révisiez ce qui a changé.</p>
+<h3>Limites</h3>
+<p>Un robot ne fait qu'exécuter ce qui a été programmé. Il ne réagit pas aux nouvelles, ne perçoit pas quand le marché passe d'une tendance à une latéralisation (phase où les croisements de moyennes ont tendance à générer des entrées et sorties successives avec perte) et peut répéter une erreur des centaines de fois avant que quelqu'un ne le remarque.</p>
+<h2 id="erreurs-courantes-lors-de-la-configuration-d-un-robot-de-tra">Erreurs courantes lors de la configuration d'un robot de trading</h2>
+<ul class="check-list">
+<li>Activer le robot sans stop ou avec un stop qui ignore la volatilité de l'actif, comme les 2 % qui auraient été atteints en un jour dans l'exemple ci-dessus.</li>
+<li>Utiliser tout le compte à chaque opération, au lieu de calculer la taille selon la perte acceptable.</li>
+<li>Ajuster les paramètres jusqu'à ce que le backtest soit parfait : la règle se met alors à décrire le passé et échoue dans le futur.</li>
+<li>Oublier les frais et l'écart d'exécution dans le test.</li>
+<li>Conclure que la règle fonctionne sur la base de quelques signaux. Les exemples ci-dessus montrent ce qui s'est passé, pas ce qui va se passer.</li>
+</ul>
+<p>Pour vous entraîner sans risquer d'argent, montez cette même règle sur un compte démo, avec un stop par ATR et une taille calculée selon la perte acceptable, et enregistrez chaque opération dans un tableau : date, prix d'entrée, stop, sortie et motif. Après quelques dizaines d'opérations, vos propres chiffres diront plus sur la règle que n'importe quelle promesse de robot tout fait.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 R$ virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
@@ -249,7 +304,7 @@
           <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/croisement-de-moyennes-mobiles-exponentielles-ema/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Croisement de moyennes mobiles exponentielles (EMA) en trading</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/comment-choisir-lecheance-dune-operation/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment choisir l'échéance d'une opération</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/comment-choisir-lecheance-dune-operation/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Comment choisir l'échéance (expiration) d'une opération</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/meilleurs-indicateurs-pour-le-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Les meilleurs indicateurs pour le day trading</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
           </div>
         </aside>
@@ -317,6 +372,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

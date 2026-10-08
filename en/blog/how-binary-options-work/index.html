@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>How Binary Options Work, in Practice | Blog Duotide</title>
-  <meta name="description" content="Understand how a binary options trade works, why the risk is high, and see a complete, detailed numerical example.">
+  <title>How Binary Options Work: Payout, Risk, and a Real Example | Blog Duotide</title>
+  <meta name="description" content="How a binary option works, how payout sets the break-even win rate, and what 135 real GBP/USD days show about that risk.">
   <link rel="canonical" href="https://duotide.com.br/en/blog/how-binary-options-work/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-funcionam-as-opcoes-binarias/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="How Binary Options Work, in Practice">
-  <meta property="og:description" content="Understand how a binary options trade works, why the risk is high, and see a complete, detailed numerical example.">
+  <meta property="og:title" content="How Binary Options Work: Payout, Risk, and a Real Example">
+  <meta property="og:description" content="How a binary option works, how payout sets the break-even win rate, and what 135 real GBP/USD days show about that risk.">
   <meta property="og:url" content="https://duotide.com.br/en/blog/how-binary-options-work/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How Binary Options Work, in Practice">
-  <meta name="twitter:description" content="Understand how a binary options trade works, why the risk is high, and see a complete, detailed numerical example.">
+  <meta name="twitter:title" content="How Binary Options Work: Payout, Risk, and a Real Example">
+  <meta name="twitter:description" content="How a binary option works, how payout sets the break-even win rate, and what 135 real GBP/USD days show about that risk.">
   <meta name="twitter:label1" content="Written by">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Reading time">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,8 +64,8 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/en/blog/how-binary-options-work/#artigo",
-      "headline": "How Binary Options Work, in Practice",
-      "description": "Understand how a binary options trade works, why the risk is high, and see a complete, detailed numerical example.",
+      "headline": "How Binary Options Work: Payout, Risk, and a Real Example",
+      "description": "How a binary option works, how payout sets the break-even win rate, and what 135 real GBP/USD days show about that risk.",
       "url": "https://duotide.com.br/en/blog/how-binary-options-work/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "How Binary Options Work, in Practice",
+          "name": "How Binary Options Work: Payout, Risk, and a Real Example",
           "item": "https://duotide.com.br/en/blog/how-binary-options-work/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/en/">Home</a></li>
         <li><a href="/en/blog/">Blog</a></li>
-        <li><span aria-current="page">How Binary Options Work, in Practice</span></li>
+        <li><span aria-current="page">How Binary Options Work: Payout, Risk, and a Real Example</span></li>
       </ol>
       <a class="ap__voltar" href="/en/blog/">Back</a>
     </div>
@@ -193,7 +193,7 @@
             </div>
             <p class="ap__atual">Updated: <time datetime="2026-10-08">October 8, 2026</time></p>
             <span class="bq__tag">Options</span>
-            <h1>How Binary Options Work, in Practice</h1>
+            <h1>How Binary Options Work: Payout, Risk, and a Real Example</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Analysis Desk</strong><small>Duotide desk</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,16 +203,65 @@
             <nav class="ap__indice" aria-label="Contents">
               <p class="ap__indice-tit">Contents</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#how-a-binary-options-trade-works">How a binary options trade works</a></li>
-                <li><a href="#why-the-risk-is-higher-than-it-looks">Why the risk is higher than it looks</a></li>
-                <li><a href="#a-complete-numerical-example">A complete numerical example</a></li>
-                <li><a href="#precautions-before-trading">Precautions before trading</a></li>
+                <li><a href="#what-a-binary-option-is">What a binary option is</a></li>
+                <li><a href="#how-to-calculate-the-break-even-win-rate">How to calculate the break-even win rate</a></li>
+                <li><a href="#real-example-135-days-of-gbp-usd">Real example: 135 days of GBP/USD</a></li>
+                <li><a href="#how-to-evaluate-binary-options-carefully">How to evaluate binary options carefully</a></li>
+                <li><a href="#common-mistakes-in-binary-options">Common mistakes in binary options</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Binary options are often described as the simplest way to trade the financial markets, and in a sense that's true: instead of buying an asset and later deciding when to sell it, the trader simply picks a price direction and a time frame, and the outcome is determined automatically once that time frame ends. The simplicity of the mechanics, however, hides a high-risk product that deserves careful understanding before any real trade.</p><p>In this article, you'll see how a binary options trade works in practice, why the risk is bigger than it first appears, and a complete numerical example to understand exactly what's at stake in each trade.</p><figure class="ap__grafico"><img src="/assets/graficos/como-funcionam-as-opcoes-binarias.svg" alt="Chart: GBP/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: GBP/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="how-a-binary-options-trade-works">How a binary options trade works</h2><p>A binary option has only two possible outcomes, which is where the name comes from. The trader picks an asset, such as a currency pair or a stock, decides whether they believe the price will rise or fall by a set time, and chooses the amount they want to invest in that trade. Before confirming, the chosen platform shows what the payout would be if the trade is correct.</p><p>When the trade's time frame ends, there are only two scenarios: the price closed on the side the trader predicted, and they get the invested amount back plus the agreed payout; or the price closed on the opposite side, and the invested amount is lost entirely. There's no middle ground, and no way to exit the trade early to reduce a loss, which is quite different from buying a stock or a traditional futures contract.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="why-the-risk-is-higher-than-it-looks">Why the risk is higher than it looks</h2><p>The time factor is what makes this product especially risky. Instead of just assessing the price direction, the trader also needs to get the exact timing right for that direction to play out, within a short time frame that can be a matter of minutes. A correct call on direction that only plays out a few minutes after the trade's time frame ends still results in a total loss of the invested amount.</p><p>On top of that, the all-or-nothing outcome removes any possibility of partial risk management. In a traditional trade, you can scale down a losing position before the loss grows. In a binary option, once the trade is confirmed, the outcome is already determined by how the price behaves until expiration, with no room for adjustment along the way.</p><h2 id="a-complete-numerical-example">A complete numerical example</h2><p>Suppose a R$ 50 trade, with a hypothetical 80% payout set by the platform before confirmation. If the price closes in the predicted direction, the trader gets back the R$ 50 invested plus R$ 40 in payout (80% of R$ 50), for a total of R$ 90 in the account. If the price closes in the opposite direction, the R$ 50 invested is lost in full.</p><p>It's worth noting the asymmetry in this outcome: to break even after a losing trade, you'd need a bigger win than simply matching the same amount, because the loss is 100% of what was invested while the gain, in this example, was 80%. An alternating sequence of wins and losses therefore tends to produce a negative net result over time, even when the win rate looks reasonable at first glance.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="precautions-before-trading">Precautions before trading</h2><p>Since the outcome of each trade is decided within a short, binary time frame, the amount invested in each trade deserves extra attention. Setting a fixed limit per trade, small relative to total capital, and a daily loss limit before you start trading are practices that help prevent a bad run of results from eating into a disproportionate share of your available capital.</p><p>Binary options trading, like any trading in the financial markets, carries real risk of loss and shouldn't be treated as a guaranteed source of income. Before trading with real money on a platform like Duotide, it's worth fully understanding how the time frame, direction, and payout of each trade are set, and testing your own reasoning with small amounts, in line with how much you're willing to lose without affecting other areas of your financial life.</p><p>Another important precaution is avoiding trading right after a loss in an attempt to recover the lost amount with a bigger trade than planned. This behavior, known as chasing losses, tends to increase the size of losses rather than reduce them, precisely because the decision stops following a plan and starts being driven by frustration over the previous outcome. Keeping the same amount per trade, regardless of the previous trade's outcome, is one of the simplest ways to keep this product under control.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Quick answer</p><p>In a binary option, the trader picks whether an asset's price will be above or below the entry price at the end of a fixed time frame. A correct call pays a fixed percentage (the payout, usually 70% to 90%); a wrong call loses the entire entry amount. With an 85% payout, you need to win <strong>at least 54.1% of the time</strong> just to break even, which makes the product high-risk.</p></div>
+            <p>Binary options are often presented as the simplest way to trade: instead of deciding when to enter and when to exit, the trader just picks a direction and a time frame. When the time frame ends, the result is automatic. The mechanics really are simple, but the math behind them works against the trader, and understanding that math is the first step before any trade.</p>
+<p>In this guide we explain the mechanics, calculate the win rate needed to break even, and use real daily GBP/USD closes (British pound against the US dollar, Yahoo Finance) from April to October 2026 to show what that math means in practice.</p>
+<h2 id="what-a-binary-option-is">What a binary option is</h2>
+<p>A binary option is a contract with only two possible outcomes. The trader picks an asset, an entry amount, and an expiration time, which can range from a few seconds to a few days, and answers one question: by the end of that time, will the price be above or below the entry price?</p>
+<ul class="check-list">
+<li><strong>Right call:</strong> gets back the amount invested plus a fixed percentage, called the payout, usually between 70% and 90%.</li>
+<li><strong>Wrong call:</strong> loses the entire amount invested.</li>
+<li><strong>Size of the move doesn't matter:</strong> the price can move one pip or a hundred pips in your favor, the gain is the same.</li>
+</ul>
+<p>It's this asymmetry, winning less than what's risked on each correct call, that defines the product's risk.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-calculate-the-break-even-win-rate">How to calculate the break-even win rate</h2>
+<p>With an 85% payout, a R$ 100 entry pays R$ 85 in profit on a win and takes R$ 100 on a loss. To break even, the gains need to cover the losses:</p>
+<ul class="check-list">
+<li>Break-even rate = loss ÷ (gain + loss)</li>
+<li>Break-even rate = 100 ÷ (85 + 100) = 100 ÷ 185 = <strong>54.1%</strong></li>
+<li>With an 80% payout: 100 ÷ 180 = <strong>55.6%</strong></li>
+<li>With a 70% payout: 100 ÷ 170 = <strong>58.8%</strong></li>
+</ul>
+<p>In other words, winning more often than losing isn't enough. You need to win well more than half the time, consistently, just to avoid losing money. In a short-term move that behaves a lot like a coin toss, that's very hard to do.</p>
+<h2 id="real-example-135-days-of-gbp-usd">Real example: 135 days of GBP/USD</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/como-funcionam-as-opcoes-binarias.svg" alt="Chart: GBP/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: GBP/USD, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure>
+<p>The chart shows daily GBP/USD candles from April 1, 2026 (1.32433) to October 7, 2026 (1.32668). Six months later, the pair was practically in the same place: up 0.18%. Along the way, it went from a low of 1.31430 on June 24 to a high of 1.36750 on August 21. Imagine a daily binary option of R$ 100 per day, with an 85% payout, betting on the direction of the next day's close.</p>
+<h3>Always betting on a rise</h3>
+<p>Among the 135 pairs of consecutive closes, the pair closed above the previous day 64 times and below it 71 times. Someone always betting on a rise would have 64 wins (64 × R$ 85 = R$ 5,440) and 71 losses (71 × R$ 100 = R$ 7,100): a loss of <strong>R$ 1,660</strong>.</p>
+<h3>Always betting on a drop, the direction that happened most</h3>
+<p>Even picking, after the fact, the side that won most often, the math still ends in the red: 71 wins (R$ 6,035) against 64 losses (R$ 6,400), a loss of <strong>R$ 365</strong>. The win rate was 52.6%, below the 54.1% that an 85% payout requires.</p>
+<h3>July: six straight drops</h3>
+<p>From July 17 to July 24, GBP/USD closed lower for six straight days, going from 1.35413 on July 16 to 1.33127 on July 24, about 229 pips. Someone betting on a rise every day waiting for the turn would have lost six entries in a row. Someone using martingale, doubling the bet after each loss (R$ 100, 200, 400, 800, 1,600, and 3,200), would have lost R$ 6,300 trying to recover R$ 100. Streaks like that aren't rare over 135 days.</p>
+<p>One last detail that teaches a lot: testing different rules on the same period, one of them, always betting against the previous day's direction, would have won 56.7% of the time. This isn't a strategy that's been discovered. When many rules are tested on the same data, some will always seem to work by chance, and nothing guarantees it will repeat in the next period.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-evaluate-binary-options-carefully">How to evaluate binary options carefully</h2>
+<h3>Do the payout math before anything else</h3>
+<p>Before any chart analysis, calculate the win rate that breaks even with the payout on offer. If you don't have a long, recorded track record showing you win above that rate, the expected result is negative.</p>
+<h3>Be wary of very short time frames</h3>
+<p>In expirations of 1 minute or less, price movement is dominated by noise. Indicators and chart patterns have too little time to make sense, and the outcome gets even closer to a coin flip.</p>
+<h3>Check who's offering the product</h3>
+<p>In Brazil, the CVM (the securities regulator) has already published alerts about companies offering binary options to the public without authorization to operate in the country. In several other countries the product is banned or restricted for retail investors. Knowing who is on the other side of the trade is part of assessing the risk.</p>
+<h3>Limitations of the example</h3>
+<p>The example uses daily closes and a fixed 85% payout. With shorter time frames and lower payouts, the break-even rate rises. The results describe what happened with GBP/USD in that period, not what will happen in another one.</p>
+<h2 id="common-mistakes-in-binary-options">Common mistakes in binary options</h2>
+<ul class="check-list">
+<li>Thinking that winning more than half the time is enough: with an 85% payout, you need to clear 54.1%.</li>
+<li>Using martingale to recover losses: a streak of six losses, like July's on GBP/USD, multiplies the loss by 63.</li>
+<li>Trusting strategies tested only on the past: with many rules tested, some will always work by chance.</li>
+<li>Trading second-long expirations as if they were technical analysis.</li>
+<li>Ignoring who offers the product and under what regulation.</li>
+<li>Risking money you'll need: the loss on every wrong call is 100% of the entry amount.</li>
+</ul>
+<p>If you want to understand the mechanics on your own, use only a demo account and log every trade with date, direction, time frame, and result. After 100 trades, compare your win rate with the payout's break-even rate. That number is worth more than any promise of a ready-made signal.</p>
             <div class="bq-post__cta">
               <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
@@ -249,7 +298,7 @@
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/en/blog/binary-options-step-by-step-and-risk-management/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary Options: A Practical Step-by-Step Guide and Risk Management</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
             <a class="bq__card" href="/en/blog/digital-options-how-they-work/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Digital Options: How They Work and How to Calculate the Real Risk</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
-            <a class="bq__card" href="/en/blog/5-tips-to-trade-more-efficiently/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 Tips for Trading More Efficiently With Time and Capital</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
+            <a class="bq__card" href="/en/blog/5-tips-to-trade-more-efficiently/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">5 tips to trade more efficiently with your time and capital</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
           </div>
         </aside>
       </div>
@@ -316,6 +365,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

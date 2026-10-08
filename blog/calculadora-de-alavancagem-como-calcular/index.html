@@ -56,7 +56,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -217,7 +217,7 @@
           <div class="ap__texto article">
             <div class="ap__resposta"><p class="ap__resposta-tit">Resposta rápida</p><p>A margem necessária é o valor da posição dividido pela alavancagem: uma posição de US$ 11.254 com alavancagem de 1:30 exige US$ 375,13. A alavancagem disponível muda só a margem bloqueada; quem define o risco é o tamanho da posição e a distância até o stop. Por isso o número que importa é a <strong>alavancagem efetiva</strong>, o valor da posição dividido pelo saldo da conta.</p></div>
             <p>Alavancagem é o mecanismo que permite controlar uma posição maior do que o dinheiro depositado, usando uma fração desse valor como margem. Ela existe em forex, criptomoedas, CFDs, commodities e índices, e em todos esses casos a fórmula central é a mesma.</p>
-<p>O ponto que mais gera confusão é achar que a alavancagem, sozinha, define o risco da operação. Não define. Ela muda quanto capital fica bloqueado para abrir a posição; o tamanho da posição e a distância até o stop é que definem quanto se ganha ou se perde. Neste guia, os exemplos usam cotações reais: EUR/USD e USD/BRL de 06/10/2026 (Yahoo Finance) e ETH/USDT de outubro e agosto de 2026 (Binance).</p>
+<p>O ponto que mais gera confusão é achar que a alavancagem, sozinha, define o risco da operação. Não define. Ela muda quanto capital fica bloqueado para abrir a posição; o tamanho da posição e a distância até o stop é que definem quanto se ganha ou se perde. Neste guia, os exemplos usam cotações reais: EUR/USD e USD/BRL de 07/10/2026 (Yahoo Finance) e ETH/USDT de outubro e agosto de 2026 (Binance).</p>
 <h2 id="o-que-e-alavancagem">O que é alavancagem</h2>
 <p>Uma alavancagem de 1:30 significa que cada 1 unidade de margem controla 30 unidades de posição. A corretora exige a margem como garantia e devolve esse valor quando a posição é encerrada, somado ou descontado do resultado.</p>
 <p>Existem duas alavancagens diferentes, e é importante não confundi-las:</p>
@@ -233,7 +233,7 @@
 </ul>
 <p>Repare que a alavancagem disponível aparece só na primeira linha. A perda no stop não depende dela.</p>
 <h2 id="exemplo-real-em-forex-eur-usd">Exemplo real em forex: EUR/USD</h2>
-<p>Em 06/10/2026 o EUR/USD fechou a 1,1254 e o dólar a R$ 4,9814. Um trader com conta de R$ 5.000 abre 0,10 lote de EUR/USD, ou seja, 10.000 euros, com stop de 30 pips.</p>
+<p>Em 07/10/2026 o EUR/USD fechou a 1,1254 e o dólar a R$ 4,9814. Um trader com conta de R$ 5.000 abre 0,10 lote de EUR/USD, ou seja, 10.000 euros, com stop de 30 pips.</p>
 <ul class="check-list">
 <li>Valor da posição = 10.000 × 1,1254 = <strong>US$ 11.254</strong>, ou 11.254 × 4,9814 = <strong>R$ 56.060,68</strong></li>
 <li>Alavancagem efetiva = 56.060,68 ÷ 5.000 = <strong>11,21 vezes</strong></li>
@@ -245,7 +245,7 @@
 <li><strong>1:30</strong> → US$ 375,13 (R$ 1.868,69).</li>
 <li><strong>1:100</strong> → US$ 112,54 (R$ 560,61).</li>
 </ul>
-<p>A margem bloqueada muda bastante. O risco no stop continua R$ 149,44 nos três casos, e a alavancagem efetiva continua 11,21 vezes, porque a posição e o stop não mudaram. Para dar escala: nos 20 pregões até 06/10, a amplitude média diária do EUR/USD foi de 54,7 pips, então um stop de 30 pips cabe com folga dentro de um dia comum.</p>
+<p>A margem bloqueada muda bastante. O risco no stop continua R$ 149,44 nos três casos, e a alavancagem efetiva continua 11,21 vezes, porque a posição e o stop não mudaram. Para dar escala: nos 20 pregões até 07/10, a amplitude média diária do EUR/USD foi de 54,7 pips, então um stop de 30 pips cabe com folga dentro de um dia comum.</p>
 <figure class="ap__ilustra"><img src="/assets/img/blog/ris-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="exemplo-real-em-cripto-eth-usdt">Exemplo real em cripto: ETH/USDT</h2>
 <p>Em 06/10/2026 o ether fechou a US$ 2.697,49. Uma posição comprada de 0,5 ETH vale US$ 1.348,75. Com alavancagem de 1:10, a margem é de US$ 134,87.</p>
 <p>No dia seguinte, 07/10, o ether fechou a US$ 2.574,14, queda de 4,57%. A perda foi de 0,5 × (2.697,49 − 2.574,14) = <strong>US$ 61,68</strong>. Em relação à posição, 4,57%; em relação à margem, 45,7%. A alavancagem não aumentou a perda em dólares, mas fez uma queda comum de um dia consumir quase metade do dinheiro reservado para a operação.</p>
@@ -371,6 +371,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

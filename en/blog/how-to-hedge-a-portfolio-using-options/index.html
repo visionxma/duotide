@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>How to Hedge a Portfolio Using Options: Hedging in Practice | Blog Duotide</title>
-  <meta name="description" content="How to use put options to protect a long position, with a complete numerical example of the hedge's cost and result.">
+  <title>How to Hedge a Portfolio Using Options: Puts in Practice | Blog Duotide</title>
+  <meta name="description" content="How to use puts to protect stocks: insurance cost, maximum loss, and result calculated with real Nvidia quotes from 2026, plus common mistakes.">
   <link rel="canonical" href="https://duotide.com.br/en/blog/how-to-hedge-a-portfolio-using-options/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-proteger-uma-carteira-usando-opcoes/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="How to Hedge a Portfolio Using Options: Hedging in Practice">
-  <meta property="og:description" content="How to use put options to protect a long position, with a complete numerical example of the hedge's cost and result.">
+  <meta property="og:title" content="How to Hedge a Portfolio Using Options: Puts in Practice">
+  <meta property="og:description" content="How to use puts to protect stocks: insurance cost, maximum loss, and result calculated with real Nvidia quotes from 2026, plus common mistakes.">
   <meta property="og:url" content="https://duotide.com.br/en/blog/how-to-hedge-a-portfolio-using-options/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How to Hedge a Portfolio Using Options: Hedging in Practice">
-  <meta name="twitter:description" content="How to use put options to protect a long position, with a complete numerical example of the hedge's cost and result.">
+  <meta name="twitter:title" content="How to Hedge a Portfolio Using Options: Puts in Practice">
+  <meta name="twitter:description" content="How to use puts to protect stocks: insurance cost, maximum loss, and result calculated with real Nvidia quotes from 2026, plus common mistakes.">
   <meta name="twitter:label1" content="Written by">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Reading time">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,8 +64,8 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/en/blog/how-to-hedge-a-portfolio-using-options/#artigo",
-      "headline": "How to Hedge a Portfolio Using Options: Hedging in Practice",
-      "description": "How to use put options to protect a long position, with a complete numerical example of the hedge's cost and result.",
+      "headline": "How to Hedge a Portfolio Using Options: Puts in Practice",
+      "description": "How to use puts to protect stocks: insurance cost, maximum loss, and result calculated with real Nvidia quotes from 2026, plus common mistakes.",
       "url": "https://duotide.com.br/en/blog/how-to-hedge-a-portfolio-using-options/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Hedge a Portfolio Using Options: Hedging in Practice",
+          "name": "How to Hedge a Portfolio Using Options: Puts in Practice",
           "item": "https://duotide.com.br/en/blog/how-to-hedge-a-portfolio-using-options/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/en/">Home</a></li>
         <li><a href="/en/blog/">Blog</a></li>
-        <li><span aria-current="page">How to Hedge a Portfolio Using Options: Hedging in Practice</span></li>
+        <li><span aria-current="page">How to Hedge a Portfolio Using Options: Puts in Practice</span></li>
       </ol>
       <a class="ap__voltar" href="/en/blog/">Back</a>
     </div>
@@ -193,7 +193,7 @@
             </div>
             <p class="ap__atual">Updated: <time datetime="2026-10-08">October 8, 2026</time></p>
             <span class="bq__tag">Options</span>
-            <h1>How to Hedge a Portfolio Using Options: Hedging in Practice</h1>
+            <h1>How to Hedge a Portfolio Using Options: Puts in Practice</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Analysis Desk</strong><small>Duotide desk</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,18 +203,18 @@
             <nav class="ap__indice" aria-label="Contents">
               <p class="ap__indice-tit">Contents</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#the-scenario-a-portfolio-exposed-to-a-drop">The scenario: a portfolio exposed to a drop</a></li>
-                <li><a href="#setting-up-the-protection-with-puts">Setting up the protection with puts</a></li>
-                <li><a href="#how-the-result-plays-out-in-different-scenarios">How the result plays out in different scenarios</a></li>
-                <li><a href="#what-the-hedge-actually-delivers">What the hedge actually delivers</a></li>
-                <li><a href="#when-it-makes-sense-to-consider-this-type-of-protection">When it makes sense to consider this type of protection</a></li>
-                <li><a href="#adjusting-the-size-of-the-protection-to-the-risk-you-want-to">Adjusting the size of the protection to the risk you want to cover</a></li>
+                <li><a href="#what-a-protective-put-is">What a protective put is</a></li>
+                <li><a href="#how-to-calculate-the-hedge-s-cost-and-maximum-loss">How to calculate the hedge's cost and maximum loss</a></li>
+                <li><a href="#real-example-the-hedge-on-nvidia-in-2026">Real example: the hedge on Nvidia in 2026</a></li>
+                <li><a href="#how-to-use-options-to-protect-a-portfolio">How to use options to protect a portfolio</a></li>
+                <li><a href="#common-mistakes-when-hedging-a-portfolio-with-options">Common mistakes when hedging a portfolio with options</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Hedging is the name given to any trade made with the goal of reducing the risk of another existing position, not of generating profit on its own. In the options market, the most common form of hedge for someone holding stock is the use of protective puts — insurance with a defined price against the asset falling.</p><figure class="ap__grafico"><img src="/assets/graficos/como-proteger-uma-carteira-usando-opcoes.svg" alt="Chart: Nvidia, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Nvidia, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="the-scenario-a-portfolio-exposed-to-a-drop">The scenario: a portfolio exposed to a drop</h2><p>Suppose you hold 500 shares of a company, bought at R$ 40.00 each, totaling R$ 20,000.00 invested. You believe in the company's long-term potential, but fear a sharp short-term drop because of a specific event — a quarterly earnings release, for example. Selling the shares would mean giving up the long-term position; doing nothing means accepting the full risk of the drop. Hedging with options offers a middle ground.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="setting-up-the-protection-with-puts">Setting up the protection with puts</h2><p>You buy 5 put contracts (covering the 500 shares, considering lots of 100 shares each), with a strike of R$ 38.00 and a premium of R$ 1.00 per share, totaling R$ 500.00 in cost (500 shares × R$ 1.00). This premium is the price of the insurance: regardless of what happens, you've already spent that R$ 500.00.</p><h2 id="how-the-result-plays-out-in-different-scenarios">How the result plays out in different scenarios</h2><p>If the stock falls to R$ 30.00, your stock position loses R$ 5,000.00 (500 × R$ 10.00). But the puts, with a R$ 38.00 strike, are worth at least R$ 8.00 each (38 − 30), generating a gain of R$ 4,000.00 (500 × R$ 8.00) that offsets much of the loss on the stock. Deducting the R$ 500.00 premium paid, the net loss on the combined trade comes to R$ 1,500.00, much smaller than the R$ 5,000.00 you would have lost without the protection.</p><p>If, on the other hand, the stock rises to R$ 46.00, your stock position gains R$ 3,000.00 (500 × R$ 6.00). The puts expire worthless, and you lose only the R$ 500.00 premium paid for them. The net result comes to a R$ 2,500.00 gain — smaller than the R$ 3,000.00 without protection, but still positive. That R$ 500.00 difference is, in practice, the cost of the insurance, paid regardless of whether the scenario plays out or not.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="what-the-hedge-actually-delivers">What the hedge actually delivers</h2><p>Notice that the hedge doesn't eliminate the risk of loss — in the drop to R$ 30.00, you still lost R$ 1,500.00 net, just a much smaller amount than without the protection. What it does is cap the maximum possible loss at a value known in advance, trading part of the upside potential (the premium cost) for that predictability in the worst-case scenario. It's a risk management decision, not a way to eliminate market uncertainty.</p><h2 id="when-it-makes-sense-to-consider-this-type-of-protection">When it makes sense to consider this type of protection</h2><ul><li>Before events with the potential to generate high, concentrated volatility, like an earnings release.</li><li>When you don't want to give up a long-term position, but recognize elevated short-term risk.</li><li>When the premium cost, calculated in money, is compatible with the amount of protection you're seeking — a hedge that's too expensive may not be worth it relative to the risk being protected against.</li></ul><p>Using options to hedge a portfolio requires understanding that this protection has a certain cost and a conditional benefit — it only "pays back" the premium, and more, if the downside scenario actually materializes. Even so, for anyone who wants to keep a long-term position without being fully exposed to a specific short-term event, it's a concrete tool, with a result you can calculate even before applying it.</p><h2 id="adjusting-the-size-of-the-protection-to-the-risk-you-want-to">Adjusting the size of the protection to the risk you want to cover</h2><p>It doesn't always make sense to protect 100% of the position. Buying puts for only half of the 500 shares, for example, cuts the premium cost in half, but also cuts the compensation received in case of a drop in half. This decision depends on how much risk you're willing to leave uncovered: partial protection costs less and still reduces the impact of the worst-case scenario, without eliminating exposure entirely — a middle ground many investors prefer over the cost of full protection.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Quick answer</p><p>To hedge a portfolio with options, the most common way is to buy puts on the stock you hold: they guarantee the right to sell at the strike until expiry. The premium paid is the cost of the insurance and defines, along with the strike, the maximum possible loss. The hedge doesn't eliminate the loss: it limits its size, covers only the contracted period, and costs money even when the decline never comes.</p></div>
+            <p>A hedge is any trade made to reduce the risk of another position you already hold, not to generate profit on its own. In the options market, the most common hedge for anyone holding stock is the <strong>protective put</strong>: insurance with a known price against declines in the asset.</p><p>In this guide, the price path is real: we use daily quotes for Nvidia stock (NVDA) between April and October 2026. The option premiums are <strong>illustrative</strong>, because an option's actual price depends on implied volatility and time to expiry on the day you buy it. The goal is to show the mechanics using a market move that actually happened.</p><h2 id="what-a-protective-put-is">What a protective put is</h2><p>A put gives the buyer the right to sell the asset at a fixed price, the strike, until expiry. Anyone holding 500 shares who buys puts for 500 shares guarantees that, until that date, they can sell each share at the strike, no matter how far the price falls. In exchange, they pay a premium, which is the cost of the insurance and isn't returned.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-calculate-the-hedge-s-cost-and-maximum-loss">How to calculate the hedge's cost and maximum loss</h2><p>Three calculations sum up the protection:</p><ul class="check-list"><li><strong>Insurance cost</strong> = premium × number of shares protected.</li><li><strong>Maximum loss</strong> = (current price − strike) × quantity + insurance cost.</li><li><strong>Put value at expiry</strong> = strike − stock price, if positive; otherwise, zero.</li></ul><h3>Example with Nvidia on May 14, 2026</h3><p>A portfolio holds 500 Nvidia shares. On May 14 the stock closed at US$235.74, so the position was worth US$117,870. The owner doesn't want to sell, but fears a decline over the following two months.</p><ul class="check-list"><li>Buys puts for 500 shares, strike of US$220, expiring July 17, 2026, with an illustrative premium of US$6.00 per share.</li><li>Insurance cost: 500 × 6.00 = <strong>US$3,000</strong>, or 2.5% of the position.</li><li>Maximum loss until expiry: (235.74 − 220) × 500 + 3,000 = 7,870 + 3,000 = <strong>US$10,870</strong>, or 9.2% of the position.</li></ul><h2 id="real-example-the-hedge-on-nvidia-in-2026">Real example: the hedge on Nvidia in 2026</h2><figure class="ap__grafico"><img src="/assets/graficos/como-proteger-uma-carteira-usando-opcoes.svg" alt="Chart: Nvidia, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Nvidia, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><p>The chart shows Nvidia from April to October 2026. The stock rose from US$175.75 to US$237.47 over the period, but had a significant decline along the way. Three moments show what the hedge does and doesn't do:</p><h3>May to July: the insurance that paid off</h3><p>At expiry, on July 17, Nvidia closed at US$202.81. The shares lost 500 × (235.74 − 202.81) = <strong>US$16,465</strong>. Each put was worth 220 − 202.81 = 17.19, or US$8,595 in total. Result for the hedged portfolio: −16,465 + 8,595 − 3,000 = <strong>−US$10,870</strong>, exactly the maximum loss calculated in May. Without the hedge, the loss would have been 14.0% of the position; with it, 9.2%.</p><h3>July: the decline after expiry</h3><p>The protection ended on July 17, but the decline didn't: on July 29 the stock closed at US$190.01, 19.4% below May 14. Anyone who didn't renew the protection was exposed to that part of the move. The hedge only covers the period you paid for.</p><h3>August to September: the insurance that went unused</h3><p>Suppose a new hedge on August 21, with the stock at US$214.72: puts with a strike of US$200, expiring September 18, with an illustrative premium of US$5.00, costing US$2,500. At expiry Nvidia was at US$222.27, the puts expired worthless, and the shares gained 500 × 7.55 = US$3,775. Result: 3,775 − 2,500 = <strong>US$1,275</strong>, much less than without the protection. That's the cost of insurance that never gets used. These are past facts and hypothetical premiums, not a forecast.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-use-options-to-protect-a-portfolio">How to use options to protect a portfolio</h2><h3>Choose the strike by the loss you accept</h3><p>A strike closer to the current price protects sooner, but costs more. A farther strike is cheaper, but you absorb the decline down to it on your own. The right question is: how much of the position am I willing to lose before the insurance starts paying out?</p><h3>Match the expiry to the risk you're worried about</h3><p>If the worry is an earnings release three weeks out, an expiry shortly after it is enough. Longer terms cost more, and, as the July example showed, no term covers what happens after expiry.</p><h3>Protect only part of the position</h3><p>Buying puts for half the shares cuts the cost in half, and the payout on a decline too. It's a common middle ground for anyone who wants to soften the worst case without paying for the full insurance.</p><h3>Finance part of the insurance</h3><p>A variation is selling a call with a strike above the current price to pay for part of the put, building what's called a collar. The cost drops, but the upside gets capped at the strike of the call you sold.</p><h3>Limitations</h3><p>Options can have thin liquidity at distant strikes and expiries, with a wide gap between the buy and sell price. The premium rises when the market gets nervous, exactly when the protection seems most needed. And hedging all the time can eat up a large part of the portfolio's return over the years.</p><h2 id="common-mistakes-when-hedging-a-portfolio-with-options">Common mistakes when hedging a portfolio with options</h2><ul class="check-list"><li>Forgetting that the premium is a certain cost, while the payout depends on the decline actually happening.</li><li>Choosing an expiry too short and ending up unprotected when the decline continues.</li><li>Buying puts for a different quantity than the position without realizing it.</li><li>Hedging all the time, at any premium, without comparing the cost with the risk.</li><li>Confusing a hedge with a bet on a decline and buying more puts than the position calls for.</li></ul><p>To practice without risking money, set up a position in a demo account or spreadsheet for a stock you follow, simulate buying puts at two different strikes, and log, through expiry, how much each protection cost and how much it paid out. That log shows in practice how much the insurance is worth to you.</p>
             <div class="bq-post__cta">
               <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
@@ -249,7 +249,7 @@
         <aside class="ap__rel">
           <h2>Related articles</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/en/blog/how-binary-options-work/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">How Binary Options Work, in Practice</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
+            <a class="bq__card" href="/en/blog/how-binary-options-work/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">How Binary Options Work: Payout, Risk, and a Real Example</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
             <a class="bq__card" href="/en/blog/binary-options-step-by-step-and-risk-management/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Binary Options: A Practical Step-by-Step Guide and Risk Management</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
             <a class="bq__card" href="/en/blog/digital-options-how-they-work/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Digital Options: How They Work and How to Calculate the Real Risk</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
           </div>
@@ -318,6 +318,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>

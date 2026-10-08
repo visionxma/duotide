@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>布林带：是什么、如何运作 | Blog Duotide</title>
-  <meta name="description" content="了解布林带背后的计算方式、什么是波动率收窄（squeeze），以及为什么触碰轨道并不意味着自动反转。">
+  <title>布林带：是什么、如何计算、如何使用 | Blog Duotide</title>
+  <meta name="description" content="什么是布林带，用黄金的真实报价逐步演示计算过程，以及挤压、沿带行进和最常见的错误。">
   <link rel="canonical" href="https://duotide.com.br/zh/blog/bollinger-bands-how-they-work/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/bandas-de-bollinger-como-funcionam/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="布林带：是什么、如何运作">
-  <meta property="og:description" content="了解布林带背后的计算方式、什么是波动率收窄（squeeze），以及为什么触碰轨道并不意味着自动反转。">
+  <meta property="og:title" content="布林带：是什么、如何计算、如何使用">
+  <meta property="og:description" content="什么是布林带，用黄金的真实报价逐步演示计算过程，以及挤压、沿带行进和最常见的错误。">
   <meta property="og:url" content="https://duotide.com.br/zh/blog/bollinger-bands-how-they-work/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-02.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="布林带：是什么、如何运作">
-  <meta name="twitter:description" content="了解布林带背后的计算方式、什么是波动率收窄（squeeze），以及为什么触碰轨道并不意味着自动反转。">
+  <meta name="twitter:title" content="布林带：是什么、如何计算、如何使用">
+  <meta name="twitter:description" content="什么是布林带，用黄金的真实报价逐步演示计算过程，以及挤压、沿带行进和最常见的错误。">
   <meta name="twitter:label1" content="作者">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="阅读时间">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610081333">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610081757">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,8 +64,8 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/zh/blog/bollinger-bands-how-they-work/#artigo",
-      "headline": "布林带：是什么、如何运作",
-      "description": "了解布林带背后的计算方式、什么是波动率收窄（squeeze），以及为什么触碰轨道并不意味着自动反转。",
+      "headline": "布林带：是什么、如何计算、如何使用",
+      "description": "什么是布林带，用黄金的真实报价逐步演示计算过程，以及挤压、沿带行进和最常见的错误。",
       "url": "https://duotide.com.br/zh/blog/bollinger-bands-how-they-work/",
       "inLanguage": "zh-CN",
       "datePublished": "2026-09-24T09:00:00-03:00",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "布林带：是什么、如何运作",
+          "name": "布林带：是什么、如何计算、如何使用",
           "item": "https://duotide.com.br/zh/blog/bollinger-bands-how-they-work/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/zh/">首页</a></li>
         <li><a href="/zh/blog/">博客</a></li>
-        <li><span aria-current="page">布林带：是什么、如何运作</span></li>
+        <li><span aria-current="page">布林带：是什么、如何计算、如何使用</span></li>
       </ol>
       <a class="ap__voltar" href="/zh/blog/">返回</a>
     </div>
@@ -193,7 +193,7 @@
             </div>
             <p class="ap__atual">更新于: <time datetime="2026-10-08">2026年10月8日</time></p>
             <span class="bq__tag">技术指标</span>
-            <h1>布林带：是什么、如何运作</h1>
+            <h1>布林带：是什么、如何计算、如何使用</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>分析栏目</strong><small>Duotide 栏目</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,18 +203,66 @@
             <nav class="ap__indice" aria-label="目录">
               <p class="ap__indice-tit">目录</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#计算方式是如何运作的">计算方式是如何运作的</a></li>
-                <li><a href="#标准差在捕捉什么">标准差在捕捉什么</a></li>
-                <li><a href="#为什么触碰轨道不是自动信号">为什么触碰轨道不是自动信号</a></li>
-                <li><a href="#收窄-squeeze-轨道变紧的时候">收窄（squeeze）：轨道变紧的时候</a></li>
-                <li><a href="#调整参数">调整参数</a></li>
-                <li><a href="#有条理地使用轨道">有条理地使用轨道</a></li>
+                <li><a href="#什么是布林带">什么是布林带</a></li>
+                <li><a href="#如何计算布林带">如何计算布林带</a></li>
+                <li><a href="#真实案例-2026年黄金布林带">真实案例：2026年黄金布林带</a></li>
+                <li><a href="#如何使用布林带">如何使用布林带</a></li>
+                <li><a href="#使用布林带的常见错误">使用布林带的常见错误</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>返回顶部</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>布林带由约翰·布林格（John Bollinger）在20世纪80年代创立，属于少数能够根据资产波动率自我调整、而不是使用固定价格距离的指标之一。这使它在平静和剧烈波动的市场中都很有用，前提是要理解它真正衡量的是什么。</p><p>该指标由三条线组成：一条中间均线，以及基于价格围绕该均线标准差构建的两条外轨——上轨和下轨。当波动率上升时，轨道之间的间距扩大；波动率下降时，间距缩小。</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="图表：Ouro，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Ouro，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="计算方式是如何运作的">计算方式是如何运作的</h2><p>标准设置使用20周期的简单移动平均线作为中轨，上下轨的位置则是加减两倍标准差：</p><ul><li><strong>中轨</strong>：20周期简单移动平均线。</li><li><strong>上轨</strong>：20周期均线 +（2 × 最近20个周期的标准差）。</li><li><strong>下轨</strong>：20周期均线 −（2 × 最近20个周期的标准差）。</li></ul><p>假设某资产20周期均线为60.00雷亚尔，同期标准差为3.00雷亚尔。上轨将是66.00雷亚尔（60.00 + 2 × 3.00），下轨为54.00雷亚尔（60.00 − 2 × 3.00）。如果在波动更剧烈的时期，标准差升至5.00雷亚尔，即使中轨位置不变，轨道也会扩大到70.00雷亚尔和50.00雷亚尔。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="标准差在捕捉什么">标准差在捕捉什么</h2><p>标准差是一种统计学上的离散度量：近期价格围绕均线的变动幅度越大，数值就越高。这就是为什么轨道会“呼吸”——在行情波动加剧时张开，在价格趋于平稳时收拢。</p><h2 id="为什么触碰轨道不是自动信号">为什么触碰轨道不是自动信号</h2><p>一个常见的错误，是把触及上轨当作卖出信号，把触及下轨当作买入信号，仿佛轨道是固定不变的天花板和地板。它们并不是。在强劲的上升趋势中，价格可能连续多根K线贴着上轨运行，这并不意味着反转——布林格本人就把这种行为称为趋势力量的信号，而不是衰竭的信号。</p><p>更稳健的解读方式是关注价格相对轨道的长期表现，而不是某一次孤立的触碰。价格触及上轨后立刻收回轨道内部、形成一根反转K线，与价格突破轨道后一根接一根K线持续远离轨道，这两种情况所携带的信号是不同的。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="收窄-squeeze-轨道变紧的时候">收窄（squeeze）：轨道变紧的时候</h2><p>这个指标最广为人知的用法之一，是识别所谓的收窄现象——轨道显著变窄的时刻，标志着历史性的低波动率。收窄期往往是更强行情出现之前的先兆，尽管指标本身并不能说明行情会朝哪个方向发展。</p><p>举个例子：如果某资产轨道之间的距离降到过去三个月以来的最低水平，这表明市场正被压缩，通常预示着波动率即将扩大。交易这种形态的交易者通常会等待价格伴随成交量突破区间的一侧，以确定入场方向，而不是在突破发生之前就试图猜测方向。</p><h2 id="调整参数">调整参数</h2><p>20周期和2倍标准差的乘数是市场的标准配置，但并非固定规则。更短的周期（例如10）会让轨道对近期行情更敏感，适合更短线的交易。更小的乘数（例如1.5）会让轨道更窄，产生更多触碰，但代价是虚假信号也更多。</p><h2 id="有条理地使用轨道">有条理地使用轨道</h2><p>布林带作为相对波动率和趋势背景的解读工具，效果要好于作为单独的买卖触发信号。把它与一个动能指标（如RSI或随机指标）结合使用，同时关注价格的表现——而不仅仅是触碰轨道线本身——有助于形成更完整的市场解读，同时始终记住，没有任何轨道能保证价格会在预期的点位反转。</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">快速回答</p><p>布林带是围绕价格的三条线：中间是一条20周期的简单移动平均线，上下两条带与之相距2个标准差。它们在波动性上升时张开，在波动性下降时收窄。触及或收盘跌出某条带<strong>并不是自动的反转信号</strong>：在强势趋势中，价格可能会连续多日贴着某条带行进。</p></div>
+            <p>由约翰·布林格于1980年代创立，布林带属于一小类能够根据资产波动性自动调整的指标，而不是使用固定的价格距离。正因如此，它几乎出现在所有图表平台上，从外汇到股票都不例外。本文不使用虚构的数字，而是采用黄金期货合约（GC=F，以美元/盎司计价，数据来自雅虎财经）在2026年4月至10月间的真实每日报价，来展示该指标的计算方式以及它实际显示出的情况。</p>
+<p>核心思路很简单：价格大部分时间都停留在其近期均值附近，而布林带则显示它通常会偏离均值多远。不同市场、不同周期之间变化的，正是这个距离。</p>
+<h2 id="什么是布林带">什么是布林带</h2>
+<p>该指标由三条线组成。中间的一条是简单移动平均线，通常取20个周期。另外两条线分别位于其上方和下方，与同一周期内收盘价的两个标准差相距。</p>
+<p>标准差是衡量离散程度的统计指标：近期收盘价围绕均值波动得越大，该值就越大。这就是为什么布林带会呼吸：当市场加速时它们张开，当价格波动变小时它们收窄。在日线图上，20个周期大约相当于一个月的交易日；在1小时图上，则是最近的20个小时。</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="如何计算布林带">如何计算布林带</h2>
+<p>标准设置分为三步：</p>
+<ul class="check-list">
+<li><strong>中轨：</strong>最近20个收盘价的简单平均值。</li>
+<li><strong>标准差：</strong>基于同样这20个收盘价计算。</li>
+<li><strong>上轨和下轨：</strong>中轨加减2个标准差。</li>
+</ul>
+<h3>使用黄金真实数据的例子</h3>
+<p>2026年10月7日黄金收于4,140.70美元。此前20个收盘价（包括当天）的平均值为4,289.74美元，这20个收盘价的标准差约为100.91美元。</p>
+<ul class="check-list">
+<li>上轨 = 4,289.74 + 2 × 100.91 = <strong>4,491.56美元</strong></li>
+<li>下轨 = 4,289.74 − 2 × 100.91 = <strong>4,087.92美元</strong></li>
+<li>带宽 = (4,491.56 − 4,087.92) ÷ 4,289.74 = 均值的<strong>9.41%</strong></li>
+</ul>
+<p>以百分比表示的带宽是比较不同时期的最有用指标。2026年4月1日，也就是一段剧烈波动期之后，这一数值达到24.5%。而到2026年8月4日，它降到4.50%，是整个图表窗口内的最低值。同一资产、同一设置，带宽却收窄了五倍。</p>
+<h2 id="真实案例-2026年黄金布林带">真实案例：2026年黄金布林带</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="图表：Ouro，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Ouro，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure>
+<p>在2026年4月1日至10月7日期间，黄金从4,813.10美元跌至4,140.70美元，跌幅13.97%，期间最高价为4,917.70美元（4月17日），最低价为3,955.40美元（6月30日）。图表中的三段走势很好地展示了该指标能做什么、不能做什么。</p>
+<h3>6月：收盘低于下轨并未标示底部</h3>
+<p>2026年6月9日黄金收于4,286.40美元，低于下轨。若把这视为“便宜就买”的买入信号，随后会看到价格继续下跌：6月10日、6月11日和6月24日又出现了低于下轨的收盘价，6月24日的收盘价为4,008.80美元，比第一次信号低6.5%。这段时期的最低点直到6月30日才出现。收盘价跌出带外说明跌势很强，并不意味着跌势已经结束。</p>
+<h3>7月和8月：突破前的挤压</h3>
+<p>从7月中旬到8月初，带宽一直接近5%，收盘价被限制在3,992.10美元至4,152.60美元之间。8月4日带宽触及4.50%的最低值。第二天，即8月5日，黄金收于4,305.20美元，比前一天上涨3.7%，并突破上轨。这一走势持续延伸：8月24日收盘价为4,697.80美元，比8月4日的收盘价高13.1%。挤压发出了波动性过低的警示；而方向只有在突破时才变得明朗。</p>
+<h3>8月：沿上轨行进</h3>
+<p>在8月5日至8月11日期间，黄金连续五个交易日收于上轨之上。如果把上轨当作天花板，每次触及就卖出，那就会与随后又延续了两周的上涨行情对着做。布林格本人就把这种沿带行进的走势描述为强势的信号，而不是衰竭的信号。</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="如何使用布林带">如何使用布林带</h2>
+<h3>衡量相对波动性</h3>
+<p>带宽显示该市场相对于该资产的正常水平是更平静还是更活跃。带宽接近近几个月最低值，表明处于压缩状态；带宽接近最高值，则表明市场已经被拉得很开。</p>
+<h3>配合确认信号交易挤压</h3>
+<p>使用挤压策略的人通常会等待收盘价突破其中一条轨道，最好伴随成交量放大，以此确定方向，而不是在突破之前猜测方向。在压缩区间的另一侧设置止损，可以在假突破发生时限制损失。</p>
+<h3>解读回归带内的走势</h3>
+<p>触及某条轨道后紧接着出现带有反转K线的收盘回归带内，所传递的信息与收盘价跌出带外并持续远离的情况截然不同。在横盘市场中，回归带内往往会把价格带回中轨；而在趋势行情中，它可能只是一次暂停。</p>
+<h3>谨慎调整参数</h3>
+<p>较短的周期（例如10）会让带更敏感；较小的乘数（1.5）会收窄通道，带来更多触碰，也带来更多虚假信号。每次只改变一个参数，并先做测试。</p>
+<h3>局限性</h3>
+<p>布林带只使用过去的价格，并不指示方向。标准差也会对单一极端的一天做出反应，使带突然张开，并在该天退出计算窗口之前的20个周期内都保持张开状态。</p>
+<h2 id="使用布林带的常见错误">使用布林带的常见错误</h2>
+<ul class="check-list">
+<li>把上轨当作卖出指令、把下轨当作买入指令，而不看趋势。</li>
+<li>在挤压突破之前就试图猜测方向而提前进场。</li>
+<li>把不同资产之间的带宽当作同一尺度来比较。</li>
+<li>单独使用该指标，没有结合支撑、阻力、成交量或像RSI这样的震荡指标。</li>
+<li>忘记上述例子描述的是已经发生的事，不是将要发生的事。</li>
+</ul>
+<p>要在不冒真金白银风险的情况下练习，可以在模拟账户中打开你关注的资产图表，添加布林带（20，2），并在几周内记录带宽的变化，以及每次收盘价跌出带外之后价格的表现。这份记录会显示该指标在你所交易的市场中的实际表现，而不是书本上的例子。</p>
             <div class="bq-post__cta">
               <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
@@ -318,6 +366,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610081333" defer></script>
+  <script src="/assets/js/main.js?v=202610081757" defer></script>
 </body>
 </html>
