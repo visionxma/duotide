@@ -70,7 +70,21 @@ function sumario(corpo) {
   });
   return { html, itens };
 }
-const slugSobre = pasta => { try { return (fs.readFileSync(path.join(RAIZ, '.i18n', pasta, 'sobre.html'), 'utf8').match(/<!--slug-->([^<]*)/) || [, 'sobre'])[1].trim(); } catch (e) { return 'sobre'; } };
+// Editorias que assinam os artigos (pela categoria em pt), com ícone e cor próprios.
+const ED = JSON.parse(fs.readFileSync(path.join(__dirname, 'editorias.json'), 'utf8'));
+const ICONES = {
+  mercado: '<path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',
+  analise: '<path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/>',
+  risco: '<path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  cripto: '<circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-width="2"/><path d="M10 8h3.2a2 2 0 0 1 0 4H10m0 0h3.6a2 2 0 0 1 0 4H10m0-8v8m1.5-9.5v1.5m0 8v1.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>',
+  iniciante: '<path d="M3 9.5 12 5l9 4.5-9 4.5z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7 11.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-3.5M21 9.5V14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>'
+};
+function editoria(catPt, pasta) {
+  const k = Object.keys(ED.grupos).find(g => ED.grupos[g].cats.includes(catPt)) || 'analise';
+  const t = ED.textos[pasta] || ED.textos[''];
+  return { k, cor: ED.grupos[k].cor, nome: t[k][0], bio: t[k][1], funcao: t.funcao };
+}
+const selo = (e, tam) => `<span class="ap__avatar${tam > 60 ? ' ap__avatar--g' : ''}" style="background:${e.cor}" aria-hidden="true"><svg viewBox="0 0 24 24" width="${Math.round(tam * 0.5)}" height="${Math.round(tam * 0.5)}">${ICONES[e.k]}</svg></span>`;
 const OLHO = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const dataBR = d => d.split('-').reverse().join('/');
@@ -153,7 +167,7 @@ function gerar(pasta = '') {
     const ld = { '@context': 'https://schema.org', '@graph': [
       { '@type': 'BlogPosting', '@id': url + '#artigo', headline: a.titulo, description: a.descricao, url, inLanguage: idioma.codigo,
         datePublished: iso, dateModified: atualizado(a, pasta) + 'T09:00:00-03:00', image: SITE + a.img, articleSection: a.categoria,
-        author: { '@type': 'Organization', name: B.equipe || 'Duotide', url: SITE + home }, publisher: { '@id': SITE + '/#organization' },
+        author: { '@type': 'Organization', name: 'Duotide — ' + editoria(a.categoriaPt || a.categoria, pasta).nome, url: SITE + base(pasta) }, publisher: { '@id': SITE + '/#organization' },
         mainEntityOfPage: url, isPartOf: { '@id': SITE + base(pasta) + '#blog' } },
       { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: C.nav.home, item: SITE + home },
@@ -164,8 +178,9 @@ function gerar(pasta = '') {
     const T = TXT[pasta] || TXT[''];
     const sm = sumario(a.corpo);
     const atual = atualizado(a, pasta);
-    const autor = esc(B.equipe || 'Duotide');
-    const avatar = '<img class="ap__avatar" src="/assets/img/marca-duotide.png" alt="" width="56" height="56" loading="lazy" decoding="async">';
+    const ed = editoria(a.categoriaPt || a.categoria, pasta);
+    const autor = esc(ed.nome);
+    const avatar = selo(ed, 56);
     const vis = cls => `<span class="ap__vis${cls}" data-visitas hidden>${OLHO}<b></b><span class="sr-only"> ${esc(T.visitas)}</span></span>`;
     const main = `<nav class="breadcrumb" aria-label="${esc(aria)}">
     <div class="container ap__trilha">
@@ -190,7 +205,7 @@ function gerar(pasta = '') {
             <p class="ap__atual">${esc(T.atualizado)}: <time datetime="${atual}">${fmtLonga(atual, idioma.codigo)}</time></p>
             <span class="bq__tag">${esc(a.categoria || 'Blog')}</span>
             <h1>${esc(a.titulo)}</h1>
-            <div class="ap__autor">${avatar}<span><strong>${autor}</strong><small>${esc(T.funcao)}</small></span></div>
+            <div class="ap__autor">${avatar}<span><strong>${autor}</strong><small>${esc(ed.funcao)}</small></span></div>
           </div>
           <figure class="ap__capa"><img src="${a.img}" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         </header>
@@ -216,9 +231,8 @@ ${a.fonte ? `            <p class="artigo__fonte">${esc(B.fonte || '')} <a href=
               <div class="ap__acoes">${vis(' ap__vis--pilula')}<button class="ap__compartilhar" type="button">${esc(T.compartilhar)} <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
-              <img class="ap__avatar ap__avatar--g" src="/assets/img/marca-duotide.png" alt="" width="96" height="96" loading="lazy" decoding="async">
-              <div><strong>${autor}</strong><p>${esc(T.bio)}</p></div>
-              <a class="btn ap__equipe" href="${home}${slugSobre(pasta)}/">${esc(T.equipe_btn)}</a>
+              ${selo(ed, 96)}
+              <div><strong>${autor}</strong><p>${esc(ed.bio)}</p></div>
             </div>
           </div>
         </div>
