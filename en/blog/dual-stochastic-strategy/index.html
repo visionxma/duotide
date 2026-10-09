@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>One of the problems with using only one stochastic oscillator is the number of signals it can generate in more volatile markets, many of them contradicting each other over short spans of time. The dual stochastic strategy tries to solve this by combining two oscillators with different settings: a slower one, used as a context filter, and a faster one, used to find the exact entry moment.</p><p>In this article, you'll understand how to build this combination, the logic behind it, and a practical example of how to interpret the two oscillators together.</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-dual-stochastic.svg" alt="Chart: Apple, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Apple, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="why-use-two-stochastics-instead-of-one">Why use two stochastics instead of one</h2><p>A stochastic set with a short period reacts quickly to price changes, which is useful for precise entry points, but it also generates many overbought and oversold signals that lead nowhere, especially during strong trends. A stochastic with a longer period moves more smoothly, reflecting longer-term momentum, but reacts too slowly to be used alone as an entry trigger.</p><p>The idea behind the dual stochastic is to use both speeds at the same time: the slow stochastic defines the context — which direction it makes sense to trade in favor of — and the fast stochastic points to the more precise moment within that context.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="setting-up-the-two-oscillators">Setting up the two oscillators</h2><p>A common setup uses a slow stochastic, with a longer period (for example, 21 periods, with additional smoothing), to capture the asset's underlying momentum, and a fast stochastic, with a short period (for example, 5 periods), for entry signals. The exact choice of periods can vary depending on the timeframe and asset traded, but the logic of one slow and one fast stays the same.</p><p>On the chart, the slow stochastic usually sits below the price chart, and the fast one just below it, allowing you to compare the two visually candle by candle.</p><h2 id="how-to-read-them-together">How to read them together</h2><p>The basic reading works like this: first, look at the slow stochastic. If it's coming out of an oversold zone (below 20) and turning back up, the underlying context favors buy trades. Only then look at the fast stochastic, looking for an entry signal compatible with that context — for example, a bullish crossover of the %K and %D lines on the fast stochastic, also coming from an oversold zone.</p><p>When the two oscillators agree — the slow one showing a favorable context and the fast one giving the entry signal within that context — the trade has, in theory, more support than if either one were used alone. If the fast one gives a buy signal but the slow one is still in overbought territory or falling, that divergence is a reason for more caution before entering.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="practical-reading-example">Practical reading example</h2><p>Imagine an asset trading at R$ 33.20, with the slow stochastic rising from 18 to 25, coming out of the oversold zone. At that moment, the fast stochastic crosses upward at 15, also within the oversold zone. This combination suggests a possible buy entry, with the stop a bit below the recent low and the target set at the next relevant resistance on the chart.</p><h2 id="precautions-when-applying-the-strategy">Precautions when applying the strategy</h2><p>Even with two oscillators agreeing, the dual stochastic shouldn't be used in isolation, without considering the chart's broader context, such as the trend on a higher timeframe and nearby support and resistance levels. The strategy reduces the number of contradictory signals, but doesn't eliminate false signals, especially in very sideways markets or during unexpected news.</p><h2 id="putting-it-into-practice">Putting it into practice</h2><p>On Duotide, you can set up two stochastic oscillators with different periods on the same chart and test this combination before applying it with real amounts. It's worth logging the results of the observed signals for a while, adjusting the periods according to the chosen asset's behavior. As with any indicator-based strategy, there's real risk of loss, and the size of each position should be compatible with that risk.</p><p>Another way to apply the same idea is to use a single stochastic period, but on two different timeframes of the same asset — for example, a 4-hour chart for context and a 15-minute chart for entry timing. The underlying logic is the same as the classic dual stochastic: a longer time frame sets the preferred direction, and a shorter one refines the entry point within that direction, which helps avoid entries against the asset's prevailing move at that moment.</p>
             <div class="bq-post__cta">
-              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
+              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with US$10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Related articles</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/en/blog/exponential-moving-average-ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Exponential Moving Average (EMA) Crossover in Trading</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
-            <a class="bq__card" href="/en/blog/how-to-choose-a-trades-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">How to Choose the Time Frame (Expiration) of a Trade</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
-            <a class="bq__card" href="/en/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">The Best Indicators for Day Traders</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
+            <a class="bq__card" href="/en/blog/exponential-moving-average-ema-crossover-trading/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Exponential Moving Average (EMA) Crossover in Trading</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
+            <a class="bq__card" href="/en/blog/how-to-choose-a-trades-expiration/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">How to Choose the Time Frame (Expiration) of a Trade</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
+            <a class="bq__card" href="/en/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">The Best Indicators for Day Traders</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Ready to put it into practice?</h2>
+          <p class="ap-lp__sub">Open your account and practice on the demo account with US$10,000 in virtual funds, without risking money.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create account</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Try the demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Secure platform</strong><span>Protected login and identity verification</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Multilingual support</strong><span>Help available every day</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Free demo account</strong><span>US$10,000 virtual to practice</span></li>
+          </ul>
+          <p class="ap-lp__risco">Trading involves the risk of losing the capital invested.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

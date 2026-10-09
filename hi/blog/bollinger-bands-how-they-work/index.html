@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>1980 के दशक में जॉन बोलिंगर द्वारा बनाए गए बोलिंगर बैंड्स उन चुनिंदा इंडिकेटरों में शामिल हैं जो प्राइस की एक तय दूरी के बजाय एसेट की वोलैटिलिटी के हिसाब से खुद को समायोजित करते हैं। यही बात इन्हें शांत और उथल-पुथल भरे, दोनों तरह के बाजारों में उपयोगी बनाती है, बशर्ते यह समझ हो कि ये असल में क्या नापते हैं।</p><p>यह इंडिकेटर तीन लाइनों से बनता है: एक केंद्रीय मूविंग एवरेज और दो बैंड — ऊपरी और निचली — जो इस एवरेज के इर्द-गिर्द प्राइस के स्टैंडर्ड डेविएशन से बनाई जाती हैं। वोलैटिलिटी बढ़ने पर बैंड के बीच की दूरी बढ़ती है, और घटने पर यह दूरी घट जाती है।</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="चार्ट: Ouro, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।" width="960" height="540" loading="lazy" decoding="async"><figcaption>चार्ट: Ouro, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।</figcaption></figure><h2 id="गणन-क-स-क-म-करत-ह">गणना कैसे काम करती है</h2><p>स्टैंडर्ड सेटिंग केंद्रीय लाइन के रूप में 20-पीरियड का सिंपल मूविंग एवरेज इस्तेमाल करती है, जिसमें बैंड दो गुना स्टैंडर्ड डेविएशन की दूरी पर रखे जाते हैं:</p><ul><li><strong>केंद्रीय बैंड</strong>: 20-पीरियड का सिंपल मूविंग एवरेज।</li><li><strong>ऊपरी बैंड</strong>: 20-पीरियड का एवरेज + (2 × पिछले 20 पीरियड का स्टैंडर्ड डेविएशन)।</li><li><strong>निचला बैंड</strong>: 20-पीरियड का एवरेज − (2 × पिछले 20 पीरियड का स्टैंडर्ड डेविएशन)।</li></ul><p>मान लीजिए किसी एसेट का 20-पीरियड एवरेज R$ 60.00 है और इसी अवधि का स्टैंडर्ड डेविएशन R$ 3.00 है। ऊपरी बैंड R$ 66.00 (60.00 + 2 × 3.00) पर होगा और निचला बैंड R$ 54.00 (60.00 − 2 × 3.00) पर। अगर किसी ज्यादा अस्थिर दौर में स्टैंडर्ड डेविएशन बढ़कर R$ 5.00 हो जाए, तो बैंड खुलकर R$ 70.00 और R$ 50.00 हो जाते हैं, भले ही केंद्रीय एवरेज उसी जगह रहे।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="स-ट-डर-ड-ड-व-एशन-असल-म-क-य-पकड-त-ह">स्टैंडर्ड डेविएशन असल में क्या पकड़ता है</h2><p>स्टैंडर्ड डेविएशन बिखराव नापने का एक सांख्यिकीय पैमाना है: हाल की कीमतें एवरेज के इर्द-गिर्द जितनी ज्यादा बदली हैं, यह वैल्यू उतनी ही ज्यादा होगी। यही वजह है कि ये बैंड सांस लेते हुए दिखते हैं — ज्यादा हलचल के समय खुलते हैं और जब कीमत कम उतार-चढ़ाव दिखाने लगती है तो सिकुड़ जाते हैं।</p><h2 id="ब-ड-क-छ-न-अपन-आप-स-ग-नल-क-य-नह-ह">बैंड को छूना अपने आप सिग्नल क्यों नहीं है</h2><p>एक आम गलती ऊपरी बैंड को छूने को बिक्री का सिग्नल और निचले बैंड को छूने को खरीद का सिग्नल मानना है, जैसे कि बैंड एक तय छत और फर्श हों। ये ऐसे नहीं हैं। एक मजबूत तेजी वाले ट्रेंड में, कीमत लगातार कई कैंडल तक ऊपरी बैंड से चिपकी रह सकती है, बिना इसका मतलब रिवर्सल हुए — खुद बोलिंगर इस व्यवहार को थकान का नहीं, बल्कि ट्रेंड की मजबूती का संकेत मानते थे।</p><p>ज्यादा भरोसेमंद रीडिंग समय के साथ बैंड के मुकाबले कीमत के व्यवहार को देखती है, न कि किसी एक अकेले टच को। जो कीमत ऊपरी बैंड को छूकर तुरंत उसके अंदर वापस बंद हो जाए, एक रिवर्सल कैंडल बनाते हुए, वह उस कीमत से अलग सिग्नल देती है जो बैंड को तोड़कर कैंडल दर कैंडल उससे दूर होती जाती है।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="स-क-व-ज-जब-ब-ड-स-क-ड-त-ह">स्क्वीज़: जब बैंड सिकुड़ते हैं</h2><p>इस इंडिकेटर के सबसे जाने-माने इस्तेमालों में से एक तथाकथित स्क्वीज़ की पहचान करना है — वह पल जब बैंड काफी संकरे हो जाते हैं, जो ऐतिहासिक रूप से कम वोलैटिलिटी का संकेत देता है। स्क्वीज़ के दौर आमतौर पर ज्यादा मजबूत मूवमेंट से पहले आते हैं, हालांकि इंडिकेटर यह नहीं बताता कि यह मूवमेंट किस दिशा में झुकेगा।</p><p>एक उदाहरण: अगर किसी एसेट के बैंड के बीच की दूरी पिछले तीन महीनों के सबसे निचले स्तर पर आ जाए, तो यह बताता है कि बाजार संकुचित है, जो आमतौर पर वोलैटिलिटी बढ़ने से पहले होता है। इस पैटर्न पर ट्रेड करने वाले ट्रेडर आमतौर पर एंट्री की दिशा तय करने के लिए वॉल्यूम के साथ रेंज के किसी एक तरफ के ब्रेकआउट का इंतजार करते हैं — इसके बजाय कि ब्रेकआउट होने से पहले ही दिशा का अंदाजा लगाया जाए।</p><h2 id="प-र-म-टर-क-सम-य-ज-त-करन">पैरामीटर को समायोजित करना</h2><p>20 का पीरियड और 2 स्टैंडर्ड डेविएशन का मल्टीप्लायर बाजार का मानक है, लेकिन कोई तय नियम नहीं है। छोटी अवधि (जैसे 10) बैंड को हाल की मूवमेंट के प्रति ज्यादा संवेदनशील बना देती है, जो कम अवधि के ट्रेड के लिए उपयोगी है। छोटे मल्टीप्लायर (जैसे 1.5) बैंड को संकरा कर देते हैं और ज्यादा टच पैदा करते हैं, लेकिन इसकी कीमत ज्यादा फॉल्स सिग्नल के रूप में चुकानी पड़ती है।</p><h2 id="समझद-र-स-ब-ड-इस-त-म-ल-करन">समझदारी से बैंड इस्तेमाल करना</h2><p>बोलिंगर बैंड्स एक अकेले खरीद या बिक्री के गैटट्रिगर के मुकाबले सापेक्ष वोलैटिलिटी और ट्रेंड के संदर्भ की रीडिंग के रूप में बेहतर काम करते हैं। RSI या स्टोकास्टिक जैसे मोमेंटम इंडिकेटर के साथ मिलाकर, और सिर्फ लाइन को छूने के बजाय कीमत के व्यवहार पर ध्यान देकर, ये बाजार की ज्यादा पूरी रीडिंग बनाने में मदद करते हैं, हमेशा यह याद रखते हुए कि कोई भी बैंड यह गारंटी नहीं देता कि कीमत उम्मीद के मुताबिक पॉइंट पर पलट जाएगी।</p>
             <div class="bq-post__cta">
-              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और R$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
+              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और US$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">मुफ़्त अकाउंट बनाएँ</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>संबंधित लेख</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">अभ्यास के लिए तैयार?</h2>
+          <p class="ap-lp__sub">खाता खोलें और 10,000 अमेरिकी डॉलर की वर्चुअल राशि के साथ डेमो खाते में अभ्यास करें, बिना पैसे जोखिम में डाले।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">खाता बनाएँ</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">डेमो आज़माएँ</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>सुरक्षित प्लेटफ़ॉर्म</strong><span>सुरक्षित लॉगिन और पहचान सत्यापन</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>कई भाषाओं में सहायता</strong><span>हर दिन मदद</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>मुफ़्त डेमो खाता</strong><span>अभ्यास के लिए 10,000 डॉलर वर्चुअल</span></li>
+          </ul>
+          <p class="ap-lp__risco">ट्रेडिंग में निवेश की गई पूंजी खोने का जोखिम होता है।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

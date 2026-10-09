@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Grafikte tek bir hareketli ortalama kullanmak fiyatın yönünü görmeye zaten yardımcı olur, ama yanıtsız bir soru bırakır: tam olarak ne zaman girmeli? Fiyatın ortalamayı tek başına kesmesini beklemek, genellikle geç sinyaller, ya da daha kötüsü, fiyat trend belirlemeden ortalamaya yakın her salındığında sahte sinyaller üretir.</p><p>Trend trader'larının en çok kullandığı çözüm, aynı grafiğe biri hızlı biri yavaş iki hareketli ortalama koymak ve fiyat ile ortalama arasındaki kesişim yerine bu ikisi arasındaki kesişimi işlem yapmaktır. Bu basit ayarlama, sahte sinyal sayısını büyük ölçüde azaltır ve trendin gücü hakkında anında görsel bir fikir de verir.</p><figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-duas-medias-moveis-como-combinar.svg" alt="Grafik: Nvidia, günlük, 02.02.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: Nvidia, günlük, 02.02.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz.</figcaption></figure><h2 id="iki-ortalamanın-kesisimi-nasıl-calısır">İki ortalamanın kesişimi nasıl çalışır</h2><p>Mantık, örneğin biri 9 periyot (hızlı), diğeri 21 periyot (yavaş) olmak üzere farklı periyotlardaki iki ortalamayı kullanır. Hızlı ortalama yavaşın üzerine çıktığında, altın kesişim veya golden cross olarak adlandırılır ve olası bir yükseliş başlangıcının sinyalidir. Hızlı ortalama yavaşın altına indiğinde, death cross olarak adlandırılır ve olası bir düşüş başlangıcının sinyalidir. İki ortalama arasındaki mesafe de önemlidir: iyice açıldıklarında trend güçlüdür; birbirine yapışık gittiklerinde piyasa kararsızdır.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="iki-ortalamanın-periyotlarını-secmek">İki ortalamanın periyotlarını seçmek</h2><p>Evrensel olarak doğru bir kombinasyon yoktur — seçim, grafik vadesine ve işlem stiline bağlıdır. Yaygın kombinasyonlar arasında daha kısa vadeli işlemler için 9 ve 21 periyot, orta vadeli pozisyonlar için 20 ve 50, ve yatırımcılar tarafından bir varlığın genel senaryosunu belirlemek için sıkça kullanılan uzun vadeli trend analizi için 50 ve 200 bulunur. Daha kısa ortalamalar daha hızlı tepki verir ama daha fazla sahte sinyal üretir; daha uzun ortalamalar teyit için daha uzun sürer, ama gürültüyü daha iyi filtreler.</p><h2 id="rakamlarla-pratik-ornek">Rakamlarla pratik örnek</h2><p>R$ 15,00 civarında işlem gören, 20 periyotluk ortalaması R$ 14,60'ta ve 50 periyotluk ortalaması R$ 14,80'de olan — ikisi de birbirine yakın, kararsızlığa işaret eden — bir hisse düşünün. İki hafta boyunca fiyat yükselir ve 20 periyotluk ortalama, fiyat R$ 15,40'tayken 50 periyotluğun üzerine çıkar. Bu giriş sinyalidir.</p><p>Trader R$ 15,40'tan alır, stop loss'u R$ 14,70'e (artık destek gibi işlev gören 50 periyotluk ortalamanın biraz altına) belirler ve önceki bir dirence dayanarak R$ 17,00'de bir hedef projelendirir. Risk hisse başına R$ 0,70'dir ve potansiyel kazanç R$ 1,60'tır — yaklaşık 2,3'e 1'lik bir oran, yani hedef alınan riskin iki katından fazladır.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="trendsiz-piyasaların-sorunu">Trendsiz piyasaların sorunu</h2><p>Herhangi bir ortalama kesişimi stratejisinin en büyük riski, belirlenmiş bir trendi olmayan, yatay bir piyasada işlem yapmaktır. Bu koşullarda, iki ortalama kısa zaman aralıklarında tekrar tekrar kesişir ve whipsaw olarak bilinen bir sahte sinyaller dizisi üretir — her giriş, hızla ters bir sinyal tarafından takip edilir ve küçük, tekrarlayan zararlarla sonuçlanır.</p><h2 id="sahte-sinyaller-nasıl-filtrelenir">Sahte sinyaller nasıl filtrelenir</h2><ul><li>Kesişimi geçerli saymadan önce minimum bir değer talep ederek, ADX gibi bir trend gücü göstergesi kullanın.</li><li>Kesişim anında iki ortalama arasında minimum bir mesafe talep edin, neredeyse yapışık oldukları kesişimleri göz ardı edin.</li><li>Kesişimi daha büyük bir zaman dilimi grafiğinin bağlamıyla birleştirin: günlük grafik yatay seyir gösteriyorsa, 15 dakikalık grafikteki kesişimler daha az güvenilir olma eğilimindedir.</li><li>Hiçbir filtrenin sahte sinyalleri %100 ortadan kaldırmadığını kabul edin — amaç sıklığı azaltmaktır, riski ortadan kaldırmak değil.</li></ul><h2 id="her-seyi-basit-bir-rutinde-bir-araya-getirmek">Her şeyi basit bir rutinde bir araya getirmek</h2><p>Bu stratejiyi uygulamanın pratik bir yolu, günün kapanışında günlük grafiği gözden geçirmek, iki ortalamanın bir kesişime yakın olup olmadığını gözlemlemek ve ancak o zaman varlığı takip eden günlerde daha yakından izlemektir. Bu, henüz oluşmamış bir sinyal ararken grafiği sürekli kontrol etmekten kaçınmayı sağlar.</p><p>Hareketli ortalamalara dayanan herhangi bir sistem gibi, iki ortalamanın kesişimi de ne olacağına değil, fiyatta zaten olana tepki verir — bu yüzden iyi filtrelenmiş sinyallerde bile her zaman zarar riski vardır. İster Duotide'de ister başka bir platformda olsun, gerçek sermaye uygulamadan önce farklı periyot kombinasyonlarını bir demo hesapta test etmek, takip ettiğiniz varlığa ve grafik vadesine en uygun kombinasyonu bulmaya yardımcı olur.</p>
             <div class="bq-post__cta">
-              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 USD sanal bakiyeli demo hesapta test edin.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de üstel hareketli ortalama (EMA) kesişimi</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/day-trade-icin-en-iyi-gostergeler/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Day Trade Yapanlar İçin En İyi Göstergeler</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/trading-de-usteldik-hareketli-ortalama-ema-kesisimi/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Trading'de üstel hareketli ortalama (EMA) kesişimi</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/day-trade-icin-en-iyi-gostergeler/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Day Trade Yapanlar İçin En İyi Göstergeler</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Uygulamaya hazır mısınız?</h2>
+          <p class="ap-lp__sub">Hesabınızı açın ve 10.000 ABD doları sanal bakiyeyle demo hesapta, para riske atmadan pratik yapın.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Hesap aç</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Demoyu dene</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Güvenli platform</strong><span>Korumalı giriş ve kimlik doğrulama</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Çok dilli destek</strong><span>Her gün yardım</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Ücretsiz demo hesap</strong><span>Pratik için 10.000 USD sanal</span></li>
+          </ul>
+          <p class="ap-lp__risco">İşlem yapmak, yatırılan sermayeyi kaybetme riski taşır.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

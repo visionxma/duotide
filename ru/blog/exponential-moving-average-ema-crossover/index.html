@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Пересечение экспоненциальных скользящих средних — одна из самых часто преподаваемых стратегий для начинающих в техническом анализе, и не без причины: ее легко визуализировать, легко автоматизировать, и она не зависит от субъективной интерпретации графического паттерна. Центральная идея — использовать две EMA с разными периодами и наблюдать момент, когда одна пересекает другую.</p><p>Выбор в пользу EMA, а не простой скользящей средней, не случаен. Поскольку EMA придает больший вес недавним ценам, она реагирует быстрее на изменения направления — что особенно важно в стратегии, зависящей именно от точного момента пересечения двух линий.</p><figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-medias-moveis-exponenciais-ema.svg" alt="График: Ouro, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ." width="960" height="540" loading="lazy" decoding="async"><figcaption>График: Ouro, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ.</figcaption></figure><h2 id="как-работает-стратегия">Как работает стратегия</h2><p>Самый распространенный формат использует две EMA, одну короче, другую длиннее — например, 9 и 21 период:</p><ul><li><strong>Бычье пересечение</strong>: короткая EMA пересекает длинную EMA снизу вверх, предполагая, что недавний импульс становится сильнее базового среднего.</li><li><strong>Медвежье пересечение</strong>: короткая EMA пересекает длинную EMA сверху вниз, предполагая ослабление предыдущего восходящего импульса.</li></ul><p>Логика в том, что когда краткосрочная средняя оказывается выше долгосрочной, недавние цены тянут среднюю вверх сильнее, чем более отдаленная история, — косвенный сигнал того, что тренд может менять направление.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="пример-с-цифрами">Пример с цифрами</h2><p>Представьте актив, у которого EMA за 9 периодов находится на уровне 74,20 руб., а EMA за 21 период — на уровне 74,80 руб., при этом цена растет на последних свечах. Если через две свечи EMA за 9 периодов поднимается до 75,10 руб., а EMA за 21 период находится на уровне 74,90 руб., произошло бычье пересечение: короткая средняя превысила длинную. Это точка, которую стратегия рассматривает как сигнал на покупку.</p><p>Обратный путь — EMA за 9 периодов, пересекающая EMA за 21 период сверху вниз, — дал бы сигнал на выход или продажу, в зависимости от того, как построена стратегия.</p><h2 id="задержка-это-цена-которую-приходится-платить">Задержка — это цена, которую приходится платить</h2><p>Как и любая скользящая средняя, EMA реагирует на то, что уже произошло, а не на то, что произойдет. Пересечение подтверждается только после того, как цена уже сдвинулась достаточно, чтобы изменить относительное положение двух линий. Это значит, что часть движения уже осталась позади к моменту появления сигнала — стратегия меняет предсказание на подтверждение, и это напрямую сказывается на размере потенциальной прибыли каждого входа.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="где-метод-часто-дает-сбои">Где метод часто дает сбой</h2><p>На рынках без четкого тренда, колеблющихся в узком диапазоне, две EMA переплетаются, многократно пересекаясь за короткие промежутки времени. Каждое пересечение порождает сигнал, но цена не проходит достаточное расстояние в указанном направлении, прежде чем развернуться и создать противоположное пересечение. Результат — серия небольших убытков, эффект «пилы» (whipsaw), который обычно разъедает счета тех, кто торгует каждое пересечение без дополнительного фильтра.</p><p>Один из способов снизить эту проблему — сочетать пересечение с фильтром силы тренда, таким как ADX: требование, чтобы ADX был выше определенного уровня, прежде чем считать пересечение действительным, помогает отсеять значительную часть сигналов, генерируемых на рынках без выраженного направления.</p><h2 id="настроика-периодов-средних">Настройка периодов средних</h2><p>Более короткие сочетания, такие как 5 и 13, дают сигналы раньше, но и порождают больше ложных сигналов. Более длинные сочетания, такие как 21 и 55, дольше подтверждаются, зато лучше фильтруют краткосрочный шум. Не существует универсально превосходящей комбинации — идеальный выбор зависит от того, на какой срок вы планируете держать сделку и сколько задержки подтверждения вы готовы принять в обмен на меньшее число ложных сигналов.</p><h2 id="использование-пересечения-с-умом">Использование пересечения с умом</h2><p>Пересечение EMA работает лучше как часть системы с дополнительными фильтрами — силой тренда, объемом или контекстом поддержки и сопротивления, — чем как изолированное правило, применяемое без исключений. Оно автоматизирует часть решения, но не заменяет необходимость управления риском: даже лучший набор периодов все равно будет с некоторой частотой давать ложные сигналы, особенно на боковых рынках.</p>
             <div class="bq-post__cta">
-              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными R$ 10 000.</p>
+              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными 10 000 долларов США.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть бесплатный счёт</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/how-to-choose-the-expiration-of-a-trade/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Как выбрать срок (экспирацию) сделки</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Лучшие индикаторы для дневных трейдеров</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/dual-stochastic-strategy/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Стратегия двойного стохастика: как сочетать два осциллятора</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/how-to-choose-the-expiration-of-a-trade/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Как выбрать срок (экспирацию) сделки</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Лучшие индикаторы для дневных трейдеров</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/dual-stochastic-strategy/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Стратегия двойного стохастика: как сочетать два осциллятора</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Готовы попробовать на практике?</h2>
+          <p class="ap-lp__sub">Откройте счёт и тренируйтесь на демо-счёте с виртуальными 10 000 долларов США, не рискуя деньгами.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть счёт</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Попробовать демо</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Безопасная платформа</strong><span>Защищённый вход и проверка личности</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Поддержка на разных языках</strong><span>Помощь каждый день</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Бесплатный демо-счёт</strong><span>10 000 USD виртуально для практики</span></li>
+          </ul>
+          <p class="ap-lp__risco">Торговля связана с риском потери вложенного капитала.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>RSI, বা আপেক্ষিক শক্তি সূচকের মতো জনপ্রিয় ইনডিকেটর খুব কমই আছে। এটি বেশিরভাগ চার্টিং প্ল্যাটফর্মে পাওয়া যায়, কনফিগার করা সহজ, এবং এর মৌলিক পাঠ — ওভারবট ও ওভারসোল্ড — সাধারণত একজন নতুন ট্রেডার প্রথম দিকে যা শেখেন তার একটি। কিন্তু RSI শুধু ৭০-এর উপরে না ৩০-এর নিচে আছে তা দেখার চেয়েও বেশি কিছু।</p><p>এই নিবন্ধে আপনি জানবেন RSI কীভাবে গণনা করা হয়, কীভাবে সঠিকভাবে এটি কনফিগার করবেন এবং এর প্রধান পাঠগুলো কীভাবে ব্যবহার করবেন, যার মধ্যে ইনডিকেটর ও মূল্যের মধ্যকার ডাইভারজেন্সও অন্তর্ভুক্ত।</p><figure class="ap__grafico"><img src="/assets/graficos/indice-de-forca-relativa-rsi-guia.svg" alt="চার্ট: Apple, দৈনিক, ০২/০৩/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Yahoo Finance। নিজস্ব বিশ্লেষণ।" width="960" height="540" loading="lazy" decoding="async"><figcaption>চার্ট: Apple, দৈনিক, ০২/০৩/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Yahoo Finance। নিজস্ব বিশ্লেষণ।</figcaption></figure><h2 id="rsi-ক-এব-এট-ক-ভ-ব-গণন-কর-হয">RSI কী এবং এটি কীভাবে গণনা করা হয়</h2><p>RSI একটি নির্দিষ্ট সময়কালে, সাধারণত ১৪টি ক্যান্ডেলে, মূল্য পরিবর্তনের গতি ও তীব্রতা পরিমাপ করে এবং এর ফলাফল ০ থেকে ১০০-এর মধ্যে একটি মান হয়। এই গণনা সেই সময়কালে গড় লাভের সঙ্গে গড় ক্ষতির তুলনা করে: ক্ষতির তুলনায় লাভের অনুপাত যত বেশি হয়, RSI তত ১০০-এর কাছাকাছি থাকে; ক্ষতির অনুপাত যত বেশি হয়, তত ০-এর কাছাকাছি থাকে।</p><p>সরলীকৃত আকারে, সূত্রটি হলো RSI = 100 − [100 / (1 + FR)], যেখানে FR হলো আপেক্ষিক শক্তি, যা নির্বাচিত সময়কালে গড় লাভকে গড় ক্ষতি দিয়ে ভাগ করে গণনা করা হয়। যদি সর্বশেষ ১৪টি ক্যান্ডেলে, ঊর্ধ্বমুখী ক্যান্ডেল প্রতি গড় লাভ R$ ০,৮০ হয় এবং নিম্নমুখী ক্যান্ডেল প্রতি গড় ক্ষতি R$ ০,৪০ হয়, তাহলে আপেক্ষিক শক্তি হবে ২ (০,৮০ কে ০,৪০ দিয়ে ভাগ করে), যার ফলে RSI প্রায় ৬৭ হবে — এখনও ওভারবট অঞ্চলের নিচে, কিন্তু ইতিমধ্যে ক্রেতাদের প্রাধান্য নির্দেশ করছে।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="rsi-এর-সময-ক-ল-কনফ-গ-র-কর">RSI-এর সময়কাল কনফিগার করা</h2><p>১৪ ক্যান্ডেলের ডিফল্ট সময়কাল শুরুর পয়েন্ট হিসেবে ভালো কাজ করে, কিন্তু এটি কোনো স্থায়ী নিয়ম নয়। ৭-এর মতো ছোট সময়কাল RSI-কে বেশি সংবেদনশীল করে তোলে, যা বেশি ঘন ঘন ওভারবট ও ওভারসোল্ড সংকেত তৈরি করে — যা স্বল্পমেয়াদী ট্রেডে কাজে লাগতে পারে, কিন্তু বেশি মিথ্যা সংকেতও তৈরি করে। ২১-এর মতো দীর্ঘ সময়কাল ইনডিকেটরকে মসৃণ করে এবং সংকেতের সংখ্যা কমায়, যা সম্ভাব্যভাবে বেশি নির্ভরযোগ্য করে তোলে, তবে বেশি বিলম্বিত।</p><p>সময়কাল নির্বাচন টাইমফ্রেম ও ট্রেডিং স্টাইলের সঙ্গে সামঞ্জস্যপূর্ণ হওয়া উচিত: যারা মিনিট চার্টে ট্রেড করেন তারা সাধারণত ছোট সময়কাল পছন্দ করেন, আর যারা দৈনিক বা সাপ্তাহিক চার্টে ট্রেড করেন তারা সাধারণত ১৪-এর ডিফল্ট রাখেন বা এই সংখ্যা আরও বাড়ান।</p><h2 id="ওভ-রবট-ও-ওভ-রস-ল-ড">ওভারবট ও ওভারসোল্ড</h2><p>RSI-এর সবচেয়ে পরিচিত পাঠ রেফারেন্স হিসেবে ৭০ এবং ৩০ লাইন ব্যবহার করে: ৭০-এর উপরের মান ওভারবট অবস্থা নির্দেশ করে, যা বোঝায় ঊর্ধ্বগতি প্রসারিত হয়ে থাকতে পারে; ৩০-এর নিচের মান ওভারসোল্ড নির্দেশ করে, যা বোঝায় পতন অতিরিক্ত হতে পারে। এই পাঠগুলোর মানে এই নয় যে মূল্য তৎক্ষণাৎ উল্টে যাবে — একটি শক্তিশালী ট্রেন্ডে, RSI যেকোনো সংশোধনের আগে দীর্ঘ সময় ধরে ৭০-এর উপরে (বা ৩০-এর নিচে) থাকতে পারে।</p><p>তাই, বিশেষত শক্তিশালী ও দীর্ঘস্থায়ী ট্রেন্ডযুক্ত অ্যাসেটের ক্ষেত্রে, এই অঞ্চলগুলো ট্রেন্ডের বিপরীতে স্বয়ংক্রিয় এন্ট্রি ট্রিগার হিসেবে না হয়ে বরং সতর্কতা সংকেত হিসেবে বেশি কার্যকর।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ড-ইভ-রজ-ন-স-rsi-এর-সবচ-য-উন-নত-প-ঠ">ডাইভারজেন্স: RSI-এর সবচেয়ে উন্নত পাঠ</h2><p>মূল্য ও RSI যখন বিপরীত দিকে চলে তখন একটি ডাইভারজেন্স ঘটে। যদি মূল্য নতুন উচ্চতায় পৌঁছায়, কিন্তু RSI আগেরটির চেয়ে নিচু একটি উচ্চতায় পৌঁছায়, এটি একটি বিয়ারিশ ডাইভারজেন্স: মূল্য বাড়া সত্ত্বেও, এই বৃদ্ধির পেছনের মোমেন্টাম দুর্বল হয়ে যাচ্ছে, যা একটি রিভার্সাল বা অন্তত ট্রেন্ডে একটি বিরতির পূর্বাভাস হতে পারে।</p><p>এর বিপরীতটিও সত্য: মূল্য যখন আরও নিচু তলদেশে পৌঁছায় এবং RSI আরও উঁচু তলদেশে পৌঁছায়, এটি একটি বুলিশ ডাইভারজেন্স, যা বোঝায় মূল্য এখনও কমতে থাকা সত্ত্বেও বিক্রয় চাপ শক্তি হারাচ্ছে। ডাইভারজেন্স সাধারণত সাধারণ ওভারবট ও ওভারসোল্ড পাঠের চেয়ে বেশি শক্তিশালী সংকেত, কিন্তু তবুও কোনো ট্রেড যুক্তিসঙ্গত করার আগে মূল্যের নিজস্ব নিশ্চিতকরণ প্রয়োজন।</p><h2 id="ব-স-তব-rsi-ব-যবহ-র-কর">বাস্তবে RSI ব্যবহার করা</h2><p>RSI একটি ট্রেন্ড পাঠের সঙ্গে মিলিয়ে ব্যবহার করলে সবচেয়ে ভালো কাজ করে: এর ওভারবট ও ওভারসোল্ড পাঠ বৃহত্তর ট্রেন্ডের পক্ষে ব্যবহার করা, বিপক্ষে নয়, সাধারণত বেশি সামঞ্জস্যপূর্ণ ফলাফল দেয়। ডুওটাইডে, RSI-এর সময়কাল সামঞ্জস্য করা এবং সেই বাজারের আচরণ সবচেয়ে ভালোভাবে প্রতিফলিত করে এমন সেটিং খুঁজে পাওয়া পর্যন্ত বিভিন্ন অ্যাসেটে আলাদা কনফিগারেশন পরীক্ষা করা সম্ভব। অতীত মূল্যের ওপর ভিত্তি করে তৈরি যেকোনো ইনডিকেটরের মতোই, RSI সঠিকতার নিশ্চয়তা দেয় না, এবং প্রতিটি ট্রেডে প্রকৃত ক্ষতির ঝুঁকি থাকে।</p>
             <div class="bq-post__cta">
-              <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+              <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং US$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>সম্পর্কিত নিবন্ধ</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/what-is-average-true-range/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">অ্যাভারেজ ট্রু রেঞ্জ (ATR) কী এবং কীভাবে গণনা করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-average-true-range/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">অ্যাভারেজ ট্রু রেঞ্জ (ATR) কী এবং কীভাবে গণনা করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">অনুশীলনে প্রস্তুত?</h2>
+          <p class="ap-lp__sub">অ্যাকাউন্ট খুলুন এবং 10,000 মার্কিন ডলারের ভার্চুয়াল ব্যালেন্স দিয়ে ডেমো অ্যাকাউন্টে অনুশীলন করুন, টাকার ঝুঁকি ছাড়াই।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">অ্যাকাউন্ট খুলুন</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ডেমো চেষ্টা করুন</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>নিরাপদ প্ল্যাটফর্ম</strong><span>সুরক্ষিত লগইন ও পরিচয় যাচাই</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>বহু ভাষায় সহায়তা</strong><span>প্রতিদিন সহায়তা</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>বিনামূল্যে ডেমো অ্যাকাউন্ট</strong><span>অনুশীলনের জন্য 10,000 ডলার ভার্চুয়াল</span></li>
+          </ul>
+          <p class="ap-lp__risco">ট্রেডিংয়ে বিনিয়োগকৃত মূলধন হারানোর ঝুঁকি রয়েছে।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

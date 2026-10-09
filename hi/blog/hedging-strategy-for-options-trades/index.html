@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>हेज एक ऐसा शब्द है जो फाइनेंस में हर जगह दिखता है और अक्सर इसे कुछ जटिल माना जाता है, जो सिर्फ बड़े फंडों के लिए है। असल में, इसका तर्क सीधा है: पूरी रकम एक ही दिशा में लगाने के बजाय, आप एक दूसरी पोजीशन खोलते हैं जो नतीजे के कुछ हिस्से को तब सुरक्षित करती है जब बाजार पहली पोजीशन के खिलाफ चला जाए। मकसद दो बार मुनाफा कमाना नहीं है — मकसद है नुकसान का आकार कम करना जब बाजार की रीडिंग गलत साबित हो।</p><p>यह विचार शेयरों, मुद्राओं, कमोडिटी और बहुत कम समय के ट्रेडों पर भी लागू होता है। सामान्य बात हमेशा एक ही रहती है: एक तरह का बीमा खरीदना, भले ही इसकी कीमत मूल ट्रेड के संभावित मुनाफे का कुछ हिस्सा हो।</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="चार्ट: USD/BRL, दैनिक, 01/05/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।" width="960" height="540" loading="lazy" decoding="async"><figcaption>चार्ट: USD/BRL, दैनिक, 01/05/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।</figcaption></figure><h2 id="ह-ज-क-प-छ-क-स-द-ध-त">हेज के पीछे का सिद्धांत</h2><p>एक क्लासिक हेज एक ही एसेट पर, या ऐसे एसेट्स पर जो एक जैसा व्यवहार करते हैं, विपरीत नतीजों वाली दो पोजीशन को जोड़ता है। अगर पहली पोजीशन किसी मुद्रा की तेजी पर दांव लगाती है और दूसरी उसी मुद्रा की गिरावट पर, तो अंतिम नतीजा इस पर निर्भर करता है कि कीमत कितनी बदली और हर पोजीशन का सापेक्ष आकार क्या था — सिर्फ इस पर नहीं कि किसने जीता और किसने हारा।</p><p>इस सुरक्षा को बनाने के दो सामान्य तरीके हैं। पहला है एक साथ किया गया हेज: दोनों पोजीशन लगभग एक ही समय पर खोलना, आमतौर पर इसलिए क्योंकि बाजार की रीडिंग दो संभावित परिदृश्यों के बीच बंटी हुई है। दूसरा है समायोजन वाला हेज: पहली पोजीशन के पहले से नुकसान में होने के बाद दूसरी पोजीशन खोलना, ताकि अधिकतम नुकसान तय हो जाए और अगर कीमत विपरीत दिशा में चलती रहे तो नतीजा और खराब न हो।</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ग-ल-स-ख-य-ओ-व-ल-एक-उद-हरण">गोल संख्याओं वाला एक उदाहरण</h2><p>मान लीजिए एक R$ 200,00 का ट्रेड डॉलर की रियल के मुकाबले तेजी पर दांव लगाता है, जिसमें सही होने पर 85% रिटर्न मिलता है और यह 30 मिनट में खत्म होता है। 10 मिनट बचे होने पर, एक आर्थिक खबर परिदृश्य बदल देती है और कीमत पोजीशन के खिलाफ चलने लगती है। नतीजे का इंतजार करने के बजाय, आप डॉलर की गिरावट पर दांव लगाते हुए एक दूसरा R$ 100,00 का ट्रेड खोलते हैं, जिसमें वही 85% रिटर्न है।</p><p>यहां दो संभावित नतीजे हैं। अगर डॉलर तेजी के साथ बंद होता है, तो पहला ट्रेड R$ 170,00 का मुनाफा देता है (R$ 200,00 का 85%) और दूसरा ट्रेड लगाए गए R$ 100,00 गंवा देता है — यानी कुल मिलाकर R$ 70,00 का फायदा। अगर डॉलर गिरावट के साथ बंद होता है, तो पहला ट्रेड R$ 200,00 गंवा देता है और दूसरा R$ 85,00 का मुनाफा देता है (R$ 100,00 का 85%) — यानी कुल मिलाकर R$ 115,00 का नुकसान। कुछ न करने की तुलना में — यानी डॉलर गिरने पर पूरे R$ 200,00 गंवा देना —, हेज ने खराब परिदृश्य में नुकसान को R$ 85,00 कम कर दिया, इसकी कीमत अच्छे परिदृश्य में कम मुनाफे के रूप में चुकानी पड़ी।</p><h2 id="ह-ज-क-इस-त-म-ल-कब-सह-म-यन-रखत-ह">हेज का इस्तेमाल कब सही मायने रखता है</h2><ul><li>जब पहले से खुले किसी ट्रेड के बीच में कोई अहम खबर आती है और बचा हुआ समय पोजीशन को सुरक्षित रूप से बंद करने के लिए काफी नहीं है।</li><li>जब टेक्निकल रीडिंग दो परिदृश्यों के बीच बंट जाती है और कुल एक्सपोजर कम करना, सही दिशा का सटीक अंदाजा लगाने की कोशिश से ज्यादा मायने रखता है।</li><li>जब मकसद दिन के मुनाफों की एक श्रृंखला को सुरक्षित रखना है, और एक ही ट्रेड में सब कुछ गंवाने का जोखिम लेने के बजाय छोटा नतीजा स्वीकार करना है।</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ह-ज-कब-मदद-स-ज-य-द-न-कस-न-पह-च-त-ह">हेज कब मदद से ज्यादा नुकसान पहुंचाता है</h2><p>हेज की एक कीमत होती है — यह आमतौर पर संभावित मुनाफे को कम कर देता है, क्योंकि दोनों पोजीशन आमतौर पर हर परिदृश्य में एक जैसा प्रतिशत रिटर्न नहीं देतीं। जब भी कोई ट्रेड खराब चलने लगे तो रिफ्लेक्स के तौर पर हेज का इस्तेमाल करना, बाजार में उतरने से पहले तय की गई योजना के हिस्से के तौर पर हेज का इस्तेमाल करने से अलग बात है। पहली स्थिति में, हेज नुकसान को नकारने का एक तरीका बन जाता है; दूसरी स्थिति में, यह रिस्क मैनेजमेंट का एक औजार है। फर्क इसमें है कि इस्तेमाल के मापदंड ट्रेड करने से पहले तय किए जाएं, न कि उस पल की गर्मी में।</p><h2 id="र-ज-मर-र-म-ल-ग-करन-स-पहल-इस-क-स-परख">रोज़मर्रा में लागू करने से पहले इसे कैसे परखें</h2><p>असली पैसे से हेज का इस्तेमाल करने से पहले, एक ट्रेड के चार संभावित परिदृश्यों को — छोटी तेजी, बड़ी तेजी, छोटी गिरावट, बड़ी गिरावट — सिम्युलेट करना और दूसरी पोजीशन के साथ और उसके बिना हर एक का कुल नतीजा निकालना अच्छा रहता है। Duotide जैसे टूल्स ट्रेड खुलने से पहले हर एसेट का रिटर्न दिखाते हैं, जिससे यह हिसाब पहले से लगाना आसान हो जाता है, न कि ट्रेड के बीच में दबाव में फैसला लेना। हेज जोखिम को खत्म नहीं करता: यह जोखिम को परिदृश्यों के बीच फिर से बांटता है, और यह तय करना ट्रेड करने वाले पर निर्भर है कि यह अदला-बदली उसकी पूंजी और उसकी योजना के लिए सही मायने रखती है या नहीं।</p>
             <div class="bq-post__cta">
-              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और R$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
+              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और US$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">मुफ़्त अकाउंट बनाएँ</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>संबंधित लेख</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/hi/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ट्रेडिंग में एक्सपोनेंशियल मूविंग एवरेज (EMA) का क्रॉसओवर</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">किसी ट्रेड का प्रारंभ (एक्सपायरी) कैसे चुनें</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">डे ट्रेड करने वालों के लिए सबसे अच्छे इंडिकेटर</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/ema-crossover-trading/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ट्रेडिंग में एक्सपोनेंशियल मूविंग एवरेज (EMA) का क्रॉसओवर</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/how-to-choose-trade-expiration/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">किसी ट्रेड का प्रारंभ (एक्सपायरी) कैसे चुनें</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">डे ट्रेड करने वालों के लिए सबसे अच्छे इंडिकेटर</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">अभ्यास के लिए तैयार?</h2>
+          <p class="ap-lp__sub">खाता खोलें और 10,000 अमेरिकी डॉलर की वर्चुअल राशि के साथ डेमो खाते में अभ्यास करें, बिना पैसे जोखिम में डाले।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">खाता बनाएँ</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">डेमो आज़माएँ</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>सुरक्षित प्लेटफ़ॉर्म</strong><span>सुरक्षित लॉगिन और पहचान सत्यापन</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>कई भाषाओं में सहायता</strong><span>हर दिन मदद</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>मुफ़्त डेमो खाता</strong><span>अभ्यास के लिए 10,000 डॉलर वर्चुअल</span></li>
+          </ul>
+          <p class="ap-lp__risco">ट्रेडिंग में निवेश की गई पूंजी खोने का जोखिम होता है।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

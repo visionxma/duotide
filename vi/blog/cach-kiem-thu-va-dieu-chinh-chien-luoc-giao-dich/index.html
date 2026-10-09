@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -214,7 +214,7 @@
           <div class="ap__texto article">
             <p>Sau khi xác định hồ sơ trader phù hợp với bạn — thời gian có sẵn, khả năng chịu rủi ro, vốn và tính cách —, bước tiếp theo là thử thách chiến lược đã chọn trước khi giao dịch với số tiền đáng kể. Đây là bước mà nhiều người nhảy thẳng vào tiền thật, bị thúc đẩy bởi sự nôn nóng muốn bắt đầu, và cuối cùng phải trả giá để học những bài học mà một bài kiểm tra đơn giản đã có thể chỉ ra miễn phí.</p><p>Đây là phần hai của hướng dẫn về cách chọn một chiến lược giao dịch. Ở đây trọng tâm là thực hành: cách kiểm thử một chiến lược trên lịch sử, cách điều chỉnh rủi ro dựa trên bài kiểm tra đó, và cách biết, với tiêu chí rõ ràng, khi nào nên đổi chiến lược.</p><figure class="ap__grafico"><img src="/assets/graficos/como-testar-e-ajustar-sua-estrategia.svg" alt="Biểu đồ: S&amp;P 500, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: S&amp;P 500, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="mot-backtest-đon-gian-khong-can-lap-trinh">Một backtest đơn giản, không cần lập trình</h2><p>Backtest chỉ đơn giản là áp dụng các quy tắc của chiến lược vào dữ liệu đã xảy ra, để xem nó đã hoạt động như thế nào. Không cần phần mềm đắt tiền để bắt đầu: một biểu đồ lịch sử và một bảng tính đã đủ. Chọn tài sản, xác định các quy tắc chính xác cho vào lệnh và thoát lệnh (ví dụ, mua khi giá cắt lên trên đường trung bình động 20 giai đoạn, và thoát với mục tiêu 2% hoặc dừng lỗ 1%), và đi qua thủ công sáu đến mười hai tháng gần nhất của biểu đồ, ghi lại mỗi tín hiệu mà quy tắc đó sẽ tạo ra.</p><p>Ghi lại, với mỗi tín hiệu, liệu kết quả sẽ dương hay âm và bao nhiêu. Với 30 đến 40 tín hiệu được ghi lại, đã có thể tính hai chỉ số đơn giản: tỷ lệ thắng (bao nhiêu giao dịch sẽ dương, chia cho tổng số) và kết quả trung bình mỗi giao dịch. Một chiến lược với tỷ lệ thắng 40%, chẳng hạn, vẫn có thể có lãi nếu lợi nhuận trung bình lớn hơn thua lỗ.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-đieu-chinh-rui-ro-sau-bai-kiem-tra">Cách điều chỉnh rủi ro sau bài kiểm tra</h2><p>Backtest cũng dùng để hiệu chỉnh quy mô vị thế. Giả sử vốn R$ 2.000 và một quy tắc mạo hiểm 1% mỗi giao dịch, tương đương R$ 20. Nếu bài kiểm tra cho thấy một chuỗi lên đến năm lần thua liên tiếp trong giai đoạn phân tích, nên mô phỏng kịch bản đó: năm lần thua R$ 20 cộng lại thành R$ 100, khoảng 5% vốn. Nếu số tiền này có vẻ có thể quản lý được, rủi ro 1% mỗi giao dịch nằm trong mức hợp lý cho hồ sơ đó; nếu có vẻ quá nặng, đã đến lúc giảm rủi ro cho mỗi giao dịch trước khi giao dịch bằng tiền thật.</p><p>Điều chỉnh này không chỉ thực hiện một lần. Khi vốn thay đổi, hoặc khi biến động của tài sản tăng hoặc giảm, giá trị rủi ro cho mỗi giao dịch cần được tính toán lại, luôn là một tỷ lệ phần trăm cố định của vốn hiện tại, không bao giờ là một số tiền cố định trở nên lỗi thời theo thời gian.</p><h2 id="khi-nao-nen-đoi-chien-luoc-voi-tieu-chi-ro-rang">Khi nào nên đổi chiến lược, với tiêu chí rõ ràng</h2><p>Đổi chiến lược mỗi khi một giao dịch thất bại là một trong những sai lầm phổ biến nhất của người mới bắt đầu, và thường làm kết quả tệ hơn, vì người đó không bao giờ tích lũy đủ tín hiệu để đánh giá bất cứ điều gì một cách nghiêm túc. Tiêu chí để đổi chiến lược nên mang tính thống kê, không phải cảm tính: nếu sau 30 hoặc 40 giao dịch tuân theo quy tắc một cách nghiêm ngặt mà kết quả tích lũy vẫn âm, và không có thay đổi đáng kể nào trong điều kiện thị trường, thì lúc đó mới hợp lý để xem lại hoặc thay thế chiến lược.</p><p>Cũng nên đổi khi điều kiện thị trường thay đổi về mặt cấu trúc: một chiến lược được thiết kế cho thị trường có xu hướng, chẳng hạn, có xu hướng tạo ra kết quả kém trong các giai đoạn đi ngang kéo dài, và cố chấp với nó trong kịch bản đó khác với việc chiến lược đơn giản là sai.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ghi-chep-đe-hoc-tu-chinh-lich-su-cua-ban">Ghi chép để học từ chính lịch sử của bạn</h2><p>Duy trì một bản ghi cho mỗi giao dịch — tài sản, ngày, lý do vào lệnh, kết quả và một ghi chú về việc có tuân theo nghiêm ngặt hay không — là điều biến nhiều tháng giao dịch thành sự học hỏi thực sự. Không có bản ghi này, mỗi sai lầm lặp lại vì không ai có cách xác định mẫu hình. Với bản ghi, có thể trả lời các câu hỏi cụ thể, như liệu các khoản lỗ có tập trung vào một khung giờ nhất định, một loại tài sản nhất định, hay ngay sau một khoản lãi lớn, khi sự tự tin có xu hướng tăng nhiều hơn mức nên có.</p><p>Kiểm thử, điều chỉnh và ghi chép không phải là các bước làm một lần rồi quên: đó là một chu trình liên tục. Mỗi chuỗi giao dịch — dù trên cổ phiếu, tiền tệ hay chỉ số, kể cả trên các nền tảng như Duotide — tạo ra dữ liệu mới để xem lại rủi ro và xác nhận, hoặc không, rằng chiến lược đã chọn ở phần đầu của hướng dẫn này vẫn còn hợp lý với hồ sơ của bạn.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -247,12 +247,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Giao cắt đường trung bình động mũ (EMA) trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/cach-chon-ky-han-het-han-cho-mot-giao-dich/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách chọn kỳ hạn (thời hạn) cho một giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/nhung-chi-bao-tot-nhat-cho-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Những chỉ báo tốt nhất cho người giao dịch day trade</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Giao cắt đường trung bình động mũ (EMA) trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-chon-ky-han-het-han-cho-mot-giao-dich/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cách chọn kỳ hạn (thời hạn) cho một giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/nhung-chi-bao-tot-nhat-cho-day-trade/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Những chỉ báo tốt nhất cho người giao dịch day trade</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -316,6 +332,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

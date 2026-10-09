@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>อินดิเคเตอร์ Envelopes ใช้ตรรกะคล้ายกับ Bollinger Bands แต่ในรูปแบบที่ง่ายกว่า แทนที่จะคำนวณระยะห่างของแบนด์จากค่าเบี่ยงเบนมาตรฐานของราคา มันใช้เปอร์เซ็นต์คงที่เหนือและใต้ค่าเฉลี่ยเคลื่อนที่ ผลลัพธ์คือแชนแนลที่เคลื่อนตามค่าเฉลี่ย ซึ่งราคามักเคลื่อนไหวอยู่ภายในนั้นเป็นส่วนใหญ่</p><p>ในบทความนี้คุณจะเข้าใจวิธีคำนวณ Envelopes วิธีตั้งค่า และวิธีใช้จุดที่ราคาแตะแบนด์เพื่อระบุความเป็นไปได้ที่ราคาจะเคลื่อนไหวเกินปกติ</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-envelopes-moving-average.svg" alt="กราฟ: GOOGL รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: GOOGL รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="ว-ธ-คำนวณ-envelopes">วิธีคำนวณ Envelopes</h2><p>การคำนวณเริ่มจากค่าเฉลี่ยเคลื่อนที่แบบธรรมดาหรือแบบเอ็กซ์โพเนนเชียล โดยมักใช้ช่วงเวลาปานกลาง เช่น 20 จากนั้นแบนด์บนคำนวณโดยบวกเปอร์เซ็นต์คงที่เข้ากับค่าเฉลี่ย และแบนด์ล่างคำนวณโดยลบเปอร์เซ็นต์เดียวกันนี้ออก หากค่าเฉลี่ยเคลื่อนที่ 20 ช่วงเวลาของสินทรัพย์หนึ่งอยู่ที่ R$ 40,00 และเปอร์เซ็นต์ที่ตั้งไว้คือ 2,5% แบนด์บนจะอยู่ที่ R$ 41,00 และแบนด์ล่างอยู่ที่ R$ 39,00</p><p>ต่างจาก Bollinger Bands ที่ขยายหรือแคบลงโดยอัตโนมัติตามความผันผวนของสินทรัพย์ที่เปลี่ยนไป แบนด์ของ Envelopes จะรักษาระยะห่างเป็นเปอร์เซ็นต์จากค่าเฉลี่ยไว้เท่าเดิมเสมอ เว้นแต่เทรดเดอร์จะปรับเปอร์เซ็นต์นี้ด้วยตัวเอง</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="การแตะแบนด-ม-กบ-งช-อะไร">การแตะแบนด์มักบ่งชี้อะไร</h2><p>เมื่อราคาแตะหรือทะลุแบนด์บน จะถูกตีความว่าสินทรัพย์เคลื่อนออกจากค่าเฉลี่ยล่าสุดไปมากในทิศทางขึ้น ซึ่งอาจเป็นสัญญาณของการซื้อมากเกินไปในระยะสั้น เมื่อแตะหรือทะลุแบนด์ล่าง สัญญาณจะตรงข้ามกัน คืออาจเป็นการขายมากเกินไป</p><p>การตีความที่พบบ่อยที่สุดคือการกลับสู่ค่าเฉลี่ย หลังจากแตะแบนด์ใดแบนด์หนึ่ง ราคามักจะมีแนวโน้มกลับไปยังค่าเฉลี่ยเคลื่อนที่ตรงกลาง และการเคลื่อนไหวกลับนี้เองที่เทรดเดอร์หลายคนพยายามจับ การตีความแบบนี้ทำงานได้ดีกว่าในตลาดที่ไม่มีแนวโน้มแข็งแกร่ง แกว่งอยู่ภายในกรอบที่ค่อนข้างคงที่</p><h2 id="การปร-บเปอร-เซ-นต-ของแบนด">การปรับเปอร์เซ็นต์ของแบนด์</h2><p>เปอร์เซ็นต์ที่เหมาะสมแตกต่างกันมากในแต่ละสินทรัพย์ และขึ้นอยู่โดยตรงกับความผันผวนปกติของแต่ละตัว สินทรัพย์ที่มีความผันผวนสูงในอดีตอาจต้องการเปอร์เซ็นต์ที่มากกว่า เช่น 5% เพื่อให้การแตะแบนด์แสดงถึงการเคลื่อนไหวเกินปกติจริงๆ ไม่ใช่แค่ความผันผวนปกติในแต่ละวัน สินทรัพย์ที่มั่นคงกว่าอาจทำงานได้ดีกว่าด้วยเปอร์เซ็นต์ที่น้อยกว่า เช่น 1,5% หรือ 2%</p><p>การตั้งเปอร์เซ็นต์ที่เล็กเกินไปสำหรับสินทรัพย์ที่ผันผวนทำให้ราคาแตะแบนด์บ่อยเกินไป ซึ่งลดคุณค่าของสัญญาณเหล่านี้ในฐานะตัวบ่งชี้การเคลื่อนไหวเกินปกติที่แท้จริง</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ระว-งแนวโน-มท-แข-งแกร-ง">ระวังแนวโน้มที่แข็งแกร่ง</h2><p>เช่นเดียวกับอินดิเคเตอร์ใดๆ ที่อิงตามการกลับสู่ค่าเฉลี่ย Envelopes สามารถสร้างสัญญาณหลอกได้ระหว่างแนวโน้มที่แข็งแกร่ง ในช่วงขาขึ้นที่ต่อเนื่อง ราคาอาจเคลื่อนแนบชิดกับแบนด์บนต่อเนื่องกันหลายแท่งเทียนโดยไม่กลับไปยังค่าเฉลี่ย และผู้ที่ตีความทุกการแตะว่าเป็นสัญญาณขายในสถานการณ์นี้มีความเสี่ยงที่จะเทรดสวนทางกับแนวโน้มที่ยังคงแข็งแกร่งซ้ำแล้วซ้ำเล่า</p><p>ด้วยเหตุนี้ ควรตรวจสอบบริบทของแนวโน้มก่อนใช้การแตะแบนด์เป็นตัวกระตุ้นในการเข้าเทรด ในตลาดไซด์เวย์ การตีความแบบกลับสู่ค่าเฉลี่ยมักทำงานได้ดีกว่า ในแนวโน้มที่แข็งแกร่ง การแตะแบนด์เป็นเพียงสัญญาณเตือนว่าอาจมีการหยุดพักมากกว่าจะเป็นสัญญาณกลับตัวแบบสมบูรณ์</p><h2 id="การใช-envelopes-ร-วมก-บปร-มาณการซ-อขายหร-อโมเมนต-ม">การใช้ Envelopes ร่วมกับปริมาณการซื้อขายหรือโมเมนตัม</h2><p>วิธีหนึ่งในการกรองสัญญาณของ Envelopes คือการสังเกตปริมาณการซื้อขายในช่วงที่ราคาแตะแบนด์ การแตะแบนด์บนพร้อมปริมาณการซื้อขายที่ลดลงบ่งชี้ว่าแรงซื้อกำลังหมดแรงแล้ว ซึ่งเสริมการตีความว่าอาจมีการกลับสู่ค่าเฉลี่ย ในขณะที่การแตะแบนด์พร้อมปริมาณการซื้อขายที่เพิ่มขึ้นอาจบ่งชี้ว่าการเคลื่อนไหวยังมีแรงที่จะดำเนินต่อไป แม้จะอยู่ห่างจากค่าเฉลี่ยก็ตาม</p><p>ออสซิลเลเตอร์โมเมนตัม เช่น RSI ก็สามารถใช้เป็นการยืนยันเพิ่มเติมได้ การแตะแบนด์บนพร้อมกับ RSI อยู่ในโซนซื้อมากเกินไปช่วยเสริมสมมติฐานของการเคลื่อนไหวเกินปกติ ในขณะที่การแตะแบบเดียวกันกับ RSI อยู่ในระดับกลางต้องการความระมัดระวังมากขึ้นก่อนสรุปว่าการเคลื่อนไหวจะกลับตัว</p><h2 id="การใช-envelopes-ในทางปฏ-บ-ต">การใช้ Envelopes ในทางปฏิบัติ</h2><p>ใน Duotide สามารถปรับได้ทั้งช่วงเวลาของค่าเฉลี่ยเคลื่อนที่และเปอร์เซ็นต์ของแบนด์ ทดสอบการผสมผสานต่างๆ ในสินทรัพย์เฉพาะจนกว่าจะพบการตั้งค่าที่สะท้อนพฤติกรรมในอดีตของตลาดนั้นได้ดีที่สุด เช่นเดียวกับอินดิเคเตอร์ประเภทการกลับสู่ค่าเฉลี่ยใดๆ Envelopes ทำงานได้ดีที่สุดเมื่อใช้ร่วมกับการอ่านบริบทของกราฟ และไม่ควรใช้เดี่ยวๆ เป็นเกณฑ์เดียวในการเข้าเทรด เนื่องจากการเทรดทุกครั้งมีความเสี่ยงในการขาดทุนจริง</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>คำว่าอัลกอริทึมการเทรดมักฟังดูซับซ้อนกว่าที่เป็นจริง แท้จริงแล้วอัลกอริทึมก็คือลำดับของกฎเชิงตรรกะที่ตัดสินใจว่าเมื่อไรควรซื้อ เมื่อไรควรขาย และควรเสี่ยงเท่าไร โดยไม่ต้องพึ่งสัญชาตญาณในขณะนั้น มันอาจเรียบง่ายเพียงกฎการตัดกันของเส้นค่าเฉลี่ยเคลื่อนที่ หรือซับซ้อนอย่างแบบจำลองทางสถิติที่มีตัวแปรนับสิบตัว</p><p>ในบทความนี้ คุณจะได้เข้าใจว่าอัลกอริทึมการเทรดคืออะไร ประเภทหลัก ๆ ที่เทรดเดอร์รายย่อยใช้ และวิธีประเมินว่าคุ้มค่าที่จะสร้างหรือใช้อัลกอริทึมหนึ่งหรือไม่</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-algoritmo-de-trading.svg" alt="กราฟ: Apple รายวัน ตั้งแต่ 02/01/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: Apple รายวัน ตั้งแต่ 02/01/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="ความแตกต-างระหว-างอ-ลกอร-ท-ม-กลย-ทธ-และโรบอท">ความแตกต่างระหว่างอัลกอริทึม กลยุทธ์ และโรบอท</h2><p>เป็นเรื่องปกติที่จะสับสนสามคำนี้ แต่มันไม่ใช่คำพ้องความหมาย กลยุทธ์คือแนวคิดโดยรวม เช่น ซื้อสินทรัพย์ที่อยู่ในแนวโน้มขาขึ้นและทะลุแนวต้านไปแล้ว อัลกอริทึมคือแนวคิดนี้ที่ถูกแปลงเป็นกฎที่แม่นยำและทดสอบได้ พร้อมตัวเลขที่ชัดเจน เช่น ใช้เส้นค่าเฉลี่ยเคลื่อนที่ช่วงไหน เปอร์เซ็นต์การทะลุแนวเท่าไร ขนาดของจุดตัดขาดทุนเท่าไร ส่วนโรบอทคือโปรแกรมคอมพิวเตอร์ที่ทำงานตามอัลกอริทึมนี้โดยอัตโนมัติ โดยไม่ต้องมีการแทรกแซงจากมนุษย์</p><p>คุณสามารถมีกลยุทธ์และดำเนินการด้วยตนเองได้ โดยใช้อัลกอริทึมในหัวกับทุกการเทรด โดยไม่เคยต้องเขียนโปรแกรมโรบอทเลย เทรดเดอร์ที่มีประสบการณ์หลายคนทำแบบนี้จริง ๆ คือใช้ตรรกะของอัลกอริทึม แต่กดปุ่มซื้อและขายด้วยมือของตัวเอง</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ประเภทของอ-ลกอร-ท-มการเทรดท-พบบ-อย">ประเภทของอัลกอริทึมการเทรดที่พบบ่อย</h2><h3>ประเภทตามแนวโน้ม (Trend followers)</h3><p>ซื้อเมื่อราคาปรับขึ้นอย่างต่อเนื่อง และขายเมื่อแนวโน้มขาขึ้นเริ่มอ่อนแรง โดยมักใช้เส้นค่าเฉลี่ยเคลื่อนที่หรืออินดิเคเตอร์วัดความแข็งแกร่งของแนวโน้มเป็นตัวอ้างอิง</p><h3>การกลับสู่ค่าเฉลี่ย (Mean reversion)</h3><p>ตั้งอยู่บนสมมติฐานว่าราคามีแนวโน้มกลับไปหาค่าเฉลี่ยในอดีตหลังจากเคลื่อนไหวมากเกินไป โดยซื้อเมื่อสินทรัพย์ร่วงลงเร็วเกินไป และขายเมื่อราคาขึ้นเกินกว่าที่อัลกอริทึมพิจารณาว่าสมเหตุสมผล</p><h3>การเก็งกำไรส่วนต่างราคา (Arbitrage)</h3><p>มองหาส่วนต่างราคาเล็กน้อยของสินทรัพย์เดียวกันระหว่างโบรกเกอร์หรือตลาดที่แตกต่างกัน โดยซื้อในที่ที่ถูกกว่าและขายในที่ที่แพงกว่าเกือบพร้อมกัน อัลกอริทึมประเภทนี้มักต้องใช้เงินทุนมากขึ้นและการดำเนินการที่รวดเร็วมากเพื่อให้เกิดผลจริง</p><h2 id="ว-ธ-ประเม-นอ-ลกอร-ท-มก-อนนำไปใช">วิธีประเมินอัลกอริทึมก่อนนำไปใช้</h2><p>เกณฑ์แรกคือความชัดเจนของกฎ อัลกอริทึมที่ดีสามารถอธิบายได้ในไม่กี่ประโยค โดยไม่เปิดช่องให้ตีความตามความรู้สึกส่วนตัว เกณฑ์ที่สองคือประวัติการทดสอบ ซึ่งทำด้วยข้อมูลในช่วงเวลาที่ยาวนานพอที่จะครอบคลุมทั้งช่วงตลาดดีและตลาดแย่</p><p>ตัวอย่างตัวเลขช่วยให้เข้าใจความสำคัญของอัตราส่วนความเสี่ยงต่อผลตอบแทนของอัลกอริทึมได้ดีขึ้น สมมติอัลกอริทึมหนึ่งมีอัตราชนะ 45% เสี่ยง R$ 100 ต่อการเทรดที่ขาดทุน และได้กำไรเฉลี่ย R$ 180 ต่อการเทรดที่ชนะ ผลลัพธ์ที่คาดหวังต่อการเทรดจะเท่ากับ (0,45 x R$ 180) − (0,55 x R$ 100) = R$ 81 − R$ 55 = R$ 26 เป็นบวก แม้จะแพ้มากกว่าครึ่งหนึ่งของจำนวนครั้งก็ตาม สิ่งนี้แสดงให้เห็นว่าทำไมอัตราชนะเพียงอย่างเดียวจึงไม่ได้บอกอะไรเกี่ยวกับคุณภาพของอัลกอริทึม อัตราส่วนระหว่างกำไรและขาดทุนเฉลี่ยก็สำคัญไม่แพ้กัน</p><ul><li>กฎที่ชัดเจน ไม่คลุมเครือทั้งจุดเข้าและจุดออก</li><li>ประวัติการทดสอบในช่วงเวลานาน ครอบคลุมทั้งตลาดขาขึ้นและขาลง</li><li>อัตราส่วนความเสี่ยงต่อผลตอบแทนที่ชัดเจน ไม่ใช่แค่อัตราชนะ</li><li>รวมต้นทุนการเทรดไว้ในการคำนวณผลลัพธ์ที่คาดหวังด้วย</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ข-อควรระว-งเม-อใช-อ-ลกอร-ท-มสำเร-จร-ป">ข้อควรระวังเมื่อใช้อัลกอริทึมสำเร็จรูป</h2><p>มีอัลกอริทึมสำเร็จรูปวางขายพร้อมคำสัญญาว่าจะให้ผลลัพธ์ที่สม่ำเสมอ ก่อนที่จะเลือกใช้ตัวใดตัวหนึ่ง ให้ขอประวัติการเทรดทั้งหมด ไม่ใช่แค่สรุปช่วงเดือนที่ทำกำไรได้ และตรวจสอบว่าช่วงเวลาที่ใช้ทดสอบครอบคลุมช่วงตลาดที่ยากลำบาก เช่น การร่วงลงอย่างรุนแรงหรือความผันผวนสูงหรือไม่</p><p>ไม่ว่าอัลกอริทึมจะดำเนินการด้วยมือหรือโดยโรบอท แพลตฟอร์มที่ใช้ในการส่งคำสั่ง เช่น Duotide ไม่มีผลต่อคุณภาพของกฎเบื้องหลังกลยุทธ์นั้น อัลกอริทึมที่ออกแบบมาไม่ดีย่อมก่อให้เกิดผลขาดทุนไม่ว่าจะใช้บนแพลตฟอร์มใดก็ตาม</p><h2 id="ว-ธ-เร-มสร-างอ-ลกอร-ท-มของค-ณเอง">วิธีเริ่มสร้างอัลกอริทึมของคุณเอง</h2><p>เขียนแนวคิดการเทรดของคุณออกมาเป็นกฎตัวเลขง่าย ๆ ทดสอบด้วยมือบนกราฟย้อนหลังก่อนที่จะเขียนโปรแกรมใด ๆ และพิจารณาเรื่องการทำงานอัตโนมัติหลังจากยืนยันด้วยข้อมูลจริงแล้วว่าตรรกะนั้นสมเหตุสมผล นอกจากนี้ควรทบทวนอัลกอริทึมเป็นระยะ เพราะชุดกฎที่เคยได้ผลดีเมื่อหกเดือนก่อนอาจสูญเสียประสิทธิภาพได้หากพฤติกรรมตลาดเปลี่ยนไป ดังนั้นการติดตามผลลัพธ์จริงเทียบกับที่คาดหวังจึงเป็นส่วนหนึ่งของงาน ไม่ใช่ขั้นตอนที่เลือกทำก็ได้</p><p>พึงระลึกไว้ว่าไม่มีอัลกอริทึมใด ไม่ว่าจะสร้างมาดีเพียงใด ที่จะขจัดความเสี่ยงของการขาดทุนได้ทั้งหมด มันเพียงจัดระเบียบวิธีที่ความเสี่ยงนั้นถูกรับไว้เท่านั้น วินัยในการปฏิบัติตามกฎ แม้ในช่วงที่ขาดทุนต่อเนื่องซึ่งอยู่ในขอบเขตที่คาดการณ์ทางสถิติไว้ มักมีน้ำหนักต่อผลลัพธ์สุดท้ายมากกว่าความซับซ้อนทางเทคนิคของอัลกอริทึมเอง</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/ema-crossover-trading-strategy/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">การตัดกันของค่าเฉลี่ยเคลื่อนที่แบบเอ็กซ์โพเนนเชียล (EMA) ในการเทรด</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">วิธีเลือกระยะเวลา (วันหมดอายุ) ของการเทรด</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ที่ดีที่สุดสำหรับผู้ที่เดย์เทรด</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/ema-crossover-trading-strategy/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">การตัดกันของค่าเฉลี่ยเคลื่อนที่แบบเอ็กซ์โพเนนเชียล (EMA) ในการเทรด</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">วิธีเลือกระยะเวลา (วันหมดอายุ) ของการเทรด</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ที่ดีที่สุดสำหรับผู้ที่เดย์เทรด</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>В отличие от большинства индикаторов, Average True Range (ATR) не пытается предсказать никакое направление. Он измеряет только одно: насколько актив обычно движется в абсолютном значении за период. Это линейка волатильности, а не сигнал покупки или продажи.</p><p>Созданный Дж. Уэллсом Уайлдером, тем же автором ADX и RSI, ATR встречается почти в каждой стратегии, где нужно определить размер стопа или позиции на основе реального поведения актива, а не произвольно выбранного фиксированного значения.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-average-true-range-atr.svg" alt="График: Ouro, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ." width="960" height="540" loading="lazy" decoding="async"><figcaption>График: Ouro, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ.</figcaption></figure><h2 id="почему-простои-среднеи-от-максимума-минус-минимум-недостаточ">Почему простой средней от максимума минус минимум недостаточно</h2><p>Если бы вы просто вычитали минимум из максимума каждой свечи, вы бы упустили важную деталь: гэпы. Представьте, что актив закрыл предыдущую сессию на 50,00 руб. и открыл следующую сессию уже на 46,00 руб., затем торгуясь между 45,50 руб. и 46,80 руб. Изменение внутри свечи (максимум минус минимум) составило всего 1,30 руб. Но реальное движение с предыдущего закрытия составило 4,50 руб. Игнорирование этого занижает реальную волатильность актива.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="как-рассчитать-true-range">Как рассчитать True Range</h2><p>Чтобы исправить эту проблему, True Range (TR) каждой свечи — наибольшее значение из трех расчетов:</p><ul><li>Максимум текущей свечи минус минимум текущей свечи;</li><li>Максимум текущей свечи минус закрытие предыдущей свечи (по модулю);</li><li>Минимум текущей свечи минус закрытие предыдущей свечи (по модулю).</li></ul><p>В примере выше TR было бы наибольшим значением из 1,30 (46,80 − 45,50), 3,20 (|46,80 − 50,00|) и 4,50 (|45,50 − 50,00|). То есть TR = 4,50 руб. — число, реально захватывающее размер движения, включая гэп.</p><h2 id="от-true-range-к-atr">От True Range к ATR</h2><p>ATR — сглаженная средняя True Range за период, обычно 14 свечей. Первое значение обычно является простой средней первых 14 TR. После этого применяется сглаживание Уайлдера:</p><p><strong>ATR сегодня = ((ATR предыдущий × 13) + TR сегодня) ÷ 14</strong></p><p>Предположим, вчерашний ATR был на уровне 2,00 руб., а сегодняшний TR составил 4,50 руб., следуя предыдущему примеру:</p><p><strong>ATR сегодня = ((2,00 × 13) + 4,50) ÷ 14 = (26,00 + 4,50) ÷ 14 = 30,50 ÷ 14 ≈ 2,18 руб.</strong></p><p>Обратите внимание, как одна свеча сильного движения не заставляет ATR резко подскочить — он растет постепенно, потому что несет вес 13 предыдущих периодов. Это намеренно: ATR измеряет повторяющуюся волатильность, а не изолированный пик.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="для-чего-он-служит-на-практике">Для чего он служит на практике</h2><p>Самое распространенное применение ATR — определение размера стоп-лосса и позиции пропорционально поведению самого актива, вместо использования фиксированного числа пунктов или рублей для любого рынка.</p><p>Пример: если ATR актива на уровне 2,18 руб., стоп-лосс, размещенный на расстоянии 1,5 ATR от входа, оказался бы на 3,27 руб. от цены входа (2,18 × 1,5). На более волатильном активе с ATR 8,00 руб. тот же множитель 1,5 ATR дал бы стоп в 12,00 руб. — намного шире, потому что сам актив движется сильнее изо дня в день. Использование того же фиксированного расстояния стопа в обоих случаях имело бы мало смысла: на более спокойном активе стоп оказался бы слишком широким, на более волатильном — слишком узким и подверженным срабатыванию от простого рыночного шума.</p><h2 id="atr-не-говорит-куда-поидет-цена">ATR не говорит, куда пойдет цена</h2><p>Частая ошибка — попытка использовать ATR как сигнал входа: высокий ATR не указывает ни на рост, ни на падение, только на большее движение. Сильное падение на 10% и сильный рост на 10% могут дать похожие чтения True Range, поскольку расчет использует абсолютные значения. Поэтому ATR обычно появляется рядом с другим индикатором или трендовым чтением, никогда изолированно как триггер сделки.</p><h2 id="применение-atr-в-повседневнои-практике">Применение ATR в повседневной практике</h2><p>ATR работает лучше как инструмент управления риском, чем как сигнал входа. Он помогает ответить на практические вопросы: пропорционален ли этот стоп текущей волатильности актива? Имеет ли смысл этот размер позиции, учитывая, насколько обычно колеблется цена? При таком использовании индикатор снижает вероятность срабатывания стопа от простого шума, обычного для актива, хотя ни одна техника управления не устраняет риск полностью — она лишь помогает соразмерить его более последовательно.</p>
             <div class="bq-post__cta">
-              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными R$ 10 000.</p>
+              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными 10 000 долларов США.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть бесплатный счёт</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Стохастик и Parabolic SAR: как сочетать три индикатора</span><span class="bq__meta">24.09.2026 · 7 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Стохастик и Parabolic SAR: как сочетать три индикатора</span><span class="bq__meta">24.09.2026 · 7 мин чтения</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Готовы попробовать на практике?</h2>
+          <p class="ap-lp__sub">Откройте счёт и тренируйтесь на демо-счёте с виртуальными 10 000 долларов США, не рискуя деньгами.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть счёт</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Попробовать демо</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Безопасная платформа</strong><span>Защищённый вход и проверка личности</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Поддержка на разных языках</strong><span>Помощь каждый день</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Бесплатный демо-счёт</strong><span>10 000 USD виртуально для практики</span></li>
+          </ul>
+          <p class="ap-lp__risco">Торговля связана с риском потери вложенного капитала.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

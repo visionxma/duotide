@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Unlike most indicators, the Average True Range (ATR) doesn't try to predict any direction. It measures a single thing: how much an asset usually moves, in absolute value, within a period. It's a volatility ruler, not a buy or sell signal.</p><p>Created by J. Welles Wilder, the same author of the ADX and the RSI, the ATR shows up in almost every strategy that needs to size a stop or a position based on the asset's real behavior, instead of a fixed value chosen arbitrarily.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-average-true-range-atr.svg" alt="Chart: Ouro, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Ouro, daily, 04/01/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="why-a-simple-high-minus-low-average-isn-t-enough">Why a simple high-minus-low average isn't enough</h2><p>If you only subtracted the low from the high of each candle, you'd miss an important detail: gaps. Imagine an asset closed the previous session at R$ 50.00 and opened the next session already at R$ 46.00, then trading between R$ 45.50 and R$ 46.80. The change within the candle (high minus low) was only R$ 1.30. But the real move since the previous close was R$ 4.50. Ignoring that underestimates the asset's real volatility.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-calculate-the-true-range">How to calculate the True Range</h2><p>To fix this problem, the True Range (TR) of each candle is the largest value among three calculations:</p><ul><li>Current candle's high minus current candle's low;</li><li>Current candle's high minus previous candle's close (absolute value);</li><li>Current candle's low minus previous candle's close (absolute value).</li></ul><p>In the example above, the TR would be the largest value among 1.30 (46.80 − 45.50), 3.20 (|46.80 − 50.00|), and 4.50 (|45.50 − 50.00|). So, TR = R$ 4.50 — the number that actually captures the size of the move, including the gap.</p><h2 id="from-true-range-to-atr">From True Range to ATR</h2><p>The ATR is a smoothed average of the True Range over a period, usually 14 candles. The first value is usually the simple average of the first 14 TRs. After that, Wilder's smoothing is applied:</p><p><strong>Today's ATR = ((Previous ATR × 13) + Today's TR) ÷ 14</strong></p><p>Suppose yesterday's ATR was R$ 2.00 and today's TR came in at R$ 4.50, following the previous example:</p><p><strong>Today's ATR = ((2.00 × 13) + 4.50) ÷ 14 = (26.00 + 4.50) ÷ 14 = 30.50 ÷ 14 ≈ R$ 2.18</strong></p><p>Notice how a single strong-move candle doesn't send the ATR spiking all at once — it rises gradually, because it carries the weight of the 13 previous periods. That's intentional: the ATR measures recurring volatility, not an isolated spike.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="what-it-s-actually-used-for">What it's actually used for</h2><p>The most common use of the ATR is sizing the stop-loss and position size proportionally to the asset's own behavior, instead of using a fixed number of points or money for any market.</p><p>An example: if an asset's ATR is R$ 2.18, a stop-loss placed at 1.5 ATR from the entry would sit R$ 3.27 away from the entry price (2.18 × 1.5). On a more volatile asset, with an ATR of R$ 8.00, the same 1.5 ATR multiple would result in a R$ 12.00 stop — much wider, because that asset itself moves more day to day. Using the same fixed stop distance in both cases would make little sense: on the calmer asset, the stop would be too wide; on the more volatile one, too tight and prone to being hit by simple market noise.</p><h2 id="the-atr-doesn-t-say-where-the-price-is-going">The ATR doesn't say where the price is going</h2><p>A common mistake is trying to use the ATR as an entry signal — a high ATR doesn't indicate a rally or a decline, just a bigger move. A sharp 10% drop and a sharp 10% rally can generate similar True Range readings, since the calculation uses absolute values. Because of that, the ATR usually shows up alongside another indicator or a trend reading, never alone as a trade trigger.</p><h2 id="bringing-the-atr-into-daily-use">Bringing the ATR into daily use</h2><p>The ATR works best as a risk management tool than as an entry signal. It helps answer practical questions: is this stop proportional to the asset's current volatility? Does this position size make sense given how much the price usually swings? Used this way, the indicator reduces the chance of a stop being hit by simple noise common to the asset, although no management technique eliminates risk entirely — it only helps size it more consistently.</p>
             <div class="bq-post__cta">
-              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
+              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with US$10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Related articles</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/en/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">What the ADX Indicator Is and How It Works</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
-            <a class="bq__card" href="/en/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">What the Stochastic Oscillator Is and How It Works</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
-            <a class="bq__card" href="/en/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic, and Parabolic SAR: How to Combine the Three</span><span class="bq__meta">09/24/2026 · 7 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What the ADX Indicator Is and How It Works</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What the Stochastic Oscillator Is and How It Works</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
+            <a class="bq__card" href="/en/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic, and Parabolic SAR: How to Combine the Three</span><span class="bq__meta">09/24/2026 · 7 min read</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Ready to put it into practice?</h2>
+          <p class="ap-lp__sub">Open your account and practice on the demo account with US$10,000 in virtual funds, without risking money.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create account</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Try the demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Secure platform</strong><span>Protected login and identity verification</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Multilingual support</strong><span>Help available every day</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Free demo account</strong><span>US$10,000 virtual to practice</span></li>
+          </ul>
+          <p class="ap-lp__risco">Trading involves the risk of losing the capital invested.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

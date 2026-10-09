@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>1980'lerde John Bollinger tarafından geliştirilen Bollinger Bantları, sabit bir fiyat mesafesi kullanmak yerine varlığın oynaklığına kendiliğinden uyum sağlayan küçük bir gösterge grubunun parçasıdır. Bu özellik, gerçekte neyi ölçtükleri anlaşıldığı sürece, hem sakin hem de hareketli piyasalarda kullanışlı olmalarını sağlar.</p><p>Gösterge üç çizgiden oluşur: merkezi bir hareketli ortalama ve bu ortalama etrafındaki fiyatın standart sapmasından oluşturulan iki bant — üst ve alt. Bantlar arasındaki mesafe oynaklık arttığında genişler, azaldığında daralır.</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz.</figcaption></figure><h2 id="hesaplama-nasıl-calısır">Hesaplama nasıl çalışır</h2><p>Standart ayar, merkez çizgi olarak 20 periyotluk basit hareketli ortalamayı kullanır ve bantlar bu ortalamadan iki standart sapma uzaklıkta konumlandırılır:</p><ul><li><strong>Merkez bant</strong>: 20 periyotluk basit hareketli ortalama.</li><li><strong>Üst bant</strong>: 20 periyotluk ortalama + (2 × son 20 periyodun standart sapması).</li><li><strong>Alt bant</strong>: 20 periyotluk ortalama − (2 × son 20 periyodun standart sapması).</li></ul><p>Bir varlığın 20 periyotluk ortalamasının R$ 60,00 ve aynı dönemin standart sapmasının R$ 3,00 olduğunu varsayalım. Üst bant R$ 66,00 (60,00 + 2 × 3,00), alt bant ise R$ 54,00 (60,00 − 2 × 3,00) olur. Daha oynak bir dönemde standart sapma R$ 5,00'a yükselirse, merkez ortalama aynı yerde kalsa bile bantlar R$ 70,00 ve R$ 50,00'a doğru açılır.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="standart-sapma-tam-olarak-neyi-yakalıyor">Standart sapma tam olarak neyi yakalıyor</h2><p>Standart sapma bir dağılım istatistiğidir: son dönemdeki fiyatlar ortalama etrafında ne kadar çok değişmişse, değer o kadar büyük olur. Bantların nefes almasının nedeni budur — hareketin arttığı dönemlerde açılır, fiyat az dalgalanmaya başladığında daralır.</p><h2 id="banda-degmek-neden-otomatik-bir-sinyal-degil">Banda değmek neden otomatik bir sinyal değil</h2><p>Yaygın bir hata, üst banda değmeyi satış sinyali, alt banda değmeyi ise alım sinyali olarak ele almaktır; sanki bantlar sabit bir tavan ve tabanmış gibi. Oysa değiller. Güçlü bir yükseliş trendinde fiyat, herhangi bir dönüş anlamına gelmeden art arda birçok mum boyunca üst banda yapışık şekilde ilerleyebilir — Bollinger'ın kendisi bu davranışı yorgunluk değil, trend gücü sinyali olarak nitelendiriyordu.</p><p>Daha sağlam bir okuma, tek bir izole dokunuşa değil, fiyatın zaman içinde bantlara göre nasıl davrandığına bakar. Üst banda dokunup hemen ardından tekrar bandın içine kapanarak bir dönüş mumu oluşturan bir fiyat, bandı kırıp mum mum ondan uzaklaşmaya devam eden bir fiyattan farklı bir sinyal taşır.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="squeeze-bantlar-sıkıstıgında">Squeeze: bantlar sıkıştığında</h2><p>Göstergenin en bilinen kullanımlarından biri, bantların oldukça daraldığı ve tarihsel olarak düşük oynaklığa işaret ettiği an olan squeeze'i tespit etmektir. Squeeze dönemleri genellikle daha güçlü hareketlerden önce gelir, ancak gösterge bu hareketin hangi yöne eğileceğini söylemez.</p><p>Bir örnek: bir varlığın bantları arasındaki mesafe son üç ayın en düşük seviyesine düşerse, bu genellikle bir oynaklık genişlemesinden önce piyasanın sıkıştığını gösterir. Bu düzeni işleyen traderlar, kırılma gerçekleşmeden önce hangi tarafa geçileceğini tahmin etmeye çalışmak yerine, giriş yönünü belirlemek için genellikle hacimle birlikte aralığın bir tarafının kırılmasını beklerler.</p><h2 id="parametreleri-ayarlamak">Parametreleri ayarlamak</h2><p>20 periyot ve 2 standart sapma çarpanı piyasa standardıdır, ancak sabit bir kural değildir. Daha kısa periyotlar (10 gibi) bantları son hareketlere daha duyarlı hale getirir ve daha kısa vadeli işlemler için kullanışlıdır. Daha küçük çarpanlar (1,5 gibi) bantları daraltır ve daha fazla yanlış sinyal pahasına daha fazla dokunuş üretir.</p><h2 id="bantları-isabetli-kullanmak">Bantları isabetli kullanmak</h2><p>Bollinger Bantları, izole bir alım ya da satım tetikleyicisi olmaktan çok, göreceli oynaklık ve trend bağlamı okuması olarak daha iyi çalışır. RSI veya Stokastik gibi bir momentum göstergesiyle birleştirildiğinde ve sadece çizgiye dokunmaya değil fiyatın davranışına da dikkat edildiğinde, piyasanın daha eksiksiz bir okumasını oluşturmaya yardımcı olurlar; hiçbir bandın fiyatın beklenen noktada döneceğini garanti etmediğini her zaman akılda tutarak.</p>
             <div class="bq-post__cta">
-              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 USD sanal bakiyeli demo hesapta test edin.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Uygulamaya hazır mısınız?</h2>
+          <p class="ap-lp__sub">Hesabınızı açın ve 10.000 ABD doları sanal bakiyeyle demo hesapta, para riske atmadan pratik yapın.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Hesap aç</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Demoyu dene</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Güvenli platform</strong><span>Korumalı giriş ve kimlik doğrulama</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Çok dilli destek</strong><span>Her gün yardım</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Ücretsiz demo hesap</strong><span>Pratik için 10.000 USD sanal</span></li>
+          </ul>
+          <p class="ap-lp__risco">İşlem yapmak, yatırılan sermayeyi kaybetme riski taşır.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>涡旋指标（Vortex）的诞生灵感在技术分析工具中相当罕见：它的创造者Etienne Botes和Douglas Siepman，借鉴了奥地利发明家Viktor Schauberger关于水流的观察，提出金融市场的走势可能与自然界中观察到的涡旋模式相似。实际上，最终得到的是一个由两条线组成的趋势指标，其解读方式比这个类比听起来要简单得多。</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-vortex-como-configurar-e-usar.svg" alt="图表：Ouro，日线，2026/03/02 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Ouro，日线，2026/03/02 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="计算背后的思路">计算背后的思路</h2><p>涡旋指标衡量的是当前K线最低价与前一根K线最高价之间的距离（上涨动向），以及当前K线最高价与前一根K线最低价之间的距离（下跌动向）。这两个距离中的一个相对于另一个越大，对应方向的行情就越强。这两个数值经过一段周期（默认14）的平滑处理后，形成该指标的两条线：VI+（上涨动向）和VI-（下跌动向）。</p><p>计算中还考虑了每根K线的真实波幅——与ATR和ADX使用的是同一概念——这有助于该指标即使在K线之间出现跳空时也能捕捉到行情。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="如何设置">如何设置</h2><p>涡旋指标属于动量指标（或趋势指标，视平台而定）类别，默认对两条主线都使用14周期。超买和超卖水平通常分别设置为1.1和0.9，不过这两个水平在该指标的解读中所占的比重，低于VI+和VI-两条线之间的交叉。</p><h2 id="如何解读信号">如何解读信号</h2><ul><li><strong>上涨信号：</strong>VI+线原本低于VI-线，向上穿越并保持在其上方——表明上涨动向已占据主导。</li><li><strong>下跌信号：</strong>VI-线原本低于VI+线，向上穿越并保持在其上方——表明下跌动向已占据主导。</li><li><strong>两线之间的距离：</strong>交叉之后VI+和VI-之间的间距越大，当前趋势就被认为越强。</li></ul><p>举个例子：在某货币对中，VI-线已在VI+线上方持续数周（下降趋势），随后VI+线向上穿越VI-线，并且在接下来的K线中两线之间的距离开始扩大。这种组合——交叉加上距离扩大——被解读为趋势方向确实已经改变的确认，而不只是可能在下一根K线就反转的孤立交叉。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="并非每次交叉都该变成一次入场">并非每次交叉都该变成一次入场</h2><p>VI+和VI-之间的交叉不应被当作自动的买入或卖出指令，而应视为提醒你更仔细关注该资产的信号：检查价格近期的表现，评估附近是否存在重要的支撑或阻力，然后才考虑按指示方向入场。在没有明确趋势的市场中，交叉往往会在短时间内反复出现，却没有产生可以把握的行情——这与几乎所有趋势指标在横盘市场中都会出现的假信号问题相同。</p><h2 id="将涡旋指标与其他指标结合使用">将涡旋指标与其他指标结合使用</h2><p>由于涡旋指标只衡量趋势，把它与性质不同的指标结合使用，比与另一个本质上衡量同样内容的趋势指标结合更有帮助。MACD和ADX通常被认为是不错的搭配：MACD强化了动量的判断，而ADX有助于确认涡旋交叉所显示的趋势力度，是否真的足够强劲，值得作为入场的理由。</p><h2 id="风险管理依然不可或缺">风险管理依然不可或缺</h2><p>与任何趋势指标一样，涡旋指标并不总是准确，基于它构建的策略应当在入场前就设定止损，并在合适的情况下设定明确的止盈目标。无论背后的逻辑多么精巧，没有任何工具能一直给出正确的信号——以其他方式对待涡旋指标，就是无视任何趋势策略在大量操作中真实的表现方式。</p><p>在把该指标用于真实操作之前，还值得在不同资产和周期上进行测试：在股票日线图上表现良好的14周期设置，由于两个市场在波动性和行为上的差异，未必能在某个货币对的日内图上产生同样的结果。</p>
             <div class="bq-post__cta">
-              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 美元虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">准备好动手实践了吗？</h2>
+          <p class="ap-lp__sub">开设账户，在模拟账户中用 10,000 美元虚拟资金练习，无需冒真金白银的风险。</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">开设账户</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">试用模拟账户</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>安全的平台</strong><span>受保护的登录与身份验证</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>多语言支持</strong><span>每天都有人帮助</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>免费模拟账户</strong><span>10,000 美元虚拟资金练习</span></li>
+          </ul>
+          <p class="ap-lp__risco">交易存在损失投资本金的风险。</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

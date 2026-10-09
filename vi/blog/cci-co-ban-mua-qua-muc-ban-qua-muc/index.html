@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Trong số các dao động chỉ báo được dùng trong phân tích kỹ thuật, CCI (Commodity Channel Index, hay Chỉ số Kênh Hàng hóa) có một lợi thế: nó không bị giới hạn trong một biên độ cố định như RSI hay stochastic. Điều đó có nghĩa là khi giá có một chuyển động bất thường, CCI cũng vượt ra ngoài mức bình thường, và chính đặc điểm này khiến nó hữu ích để nhận diện các thời điểm mạnh mẽ hoặc kiệt sức của thị trường.</p><p>Dù tên gọi gợi nhắc đến hàng hóa, chỉ báo này được Donald Lambert tạo ra vào những năm 1980 với mục đích áp dụng cho thị trường đó, nhưng ngày nay được dùng cho cổ phiếu, tiền tệ, chỉ số và bất kỳ tài sản nào được giao dịch trên biểu đồ.</p><figure class="ap__grafico"><img src="/assets/graficos/cci-basico-sobrecompra-sobrevenda.svg" alt="Biểu đồ: Ouro, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Ouro, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="cach-tinh-cci">Cách tính CCI</h2><p>Công thức bắt đầu từ giá điển hình của mỗi giai đoạn, được tính là trung bình giữa giá cao nhất, thấp nhất và giá đóng cửa: Giá Điển Hình = (Cao nhất + Thấp nhất + Đóng cửa) ÷ 3. Sau đó, tính đường trung bình động đơn giản của giá điển hình này trong một số giai đoạn (mức phổ biến nhất là 20) và độ lệch tuyệt đối trung bình so với đường trung bình đó. CCI khi đó là: (Giá Điển Hình hiện tại − Trung bình Giá Điển Hình) ÷ (0,015 × Độ Lệch Trung Bình).</p><p>Hằng số 0,015 được Lambert chọn để trong điều kiện thị trường bình thường, khoảng 70 đến 80% giá trị của CCI nằm trong khoảng −100 đến +100. Chính biên độ này được dùng làm tham chiếu để diễn giải chỉ báo.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="mot-vi-du-đa-giai">Một ví dụ đã giải</h2><p>Giả sử năm giai đoạn với các giá điển hình sau: 10, 12, 11, 13 và 15. Trung bình của các giá trị này là (10+12+11+13+15) ÷ 5 = 12,2. Độ lệch tuyệt đối của mỗi giá trị so với trung bình là: 2,2; 0,2; 1,2; 0,8; và 2,8. Trung bình của các độ lệch này là (2,2+0,2+1,2+0,8+2,8) ÷ 5 = 1,44.</p><p>Áp dụng công thức cho giai đoạn gần nhất, với giá điển hình bằng 15: CCI = (15 − 12,2) ÷ (0,015 × 1,44) = 2,8 ÷ 0,0216 ≈ 129,6. Vì giá trị này ở trên +100, chỉ báo đang báo hiệu tình trạng mua quá mức — giá đã tăng đủ mạnh để cách xa đáng kể so với mức trung bình gần đây của nó.</p><h2 id="cach-dien-giai-mua-qua-muc-va-ban-qua-muc">Cách diễn giải mua quá mức và bán quá mức</h2><p>Khi CCI vượt qua +100, thị trường đang trong một chuyển động tăng mạnh hơn bình thường đối với tài sản đó, đặc trưng cho tình trạng mua quá mức. Khi CCI cắt xuống dưới −100, chuyển động giảm đang mạnh hơn bình thường, đặc trưng cho tình trạng bán quá mức. Điều quan trọng cần hiểu là mua quá mức không tự động có nghĩa là giá sẽ giảm — nó cũng có thể là dấu hiệu của một xu hướng mạnh đang tiếp tục mở rộng.</p><p>Vì vậy, cách sử dụng phổ biến nhất không phải là giao dịch ngược lại CCI ngay khi nó vượt qua +100 hoặc −100, mà là quan sát thời điểm nó quay trở lại trong biên độ. Một CCI tăng lên trên +100 rồi sau đó cắt xuống trở lại dưới mức này thường cho thấy động lực tăng đang mất sức, gợi ý sự thận trọng cho ai đang mua vào hoặc một cơ hội có thể có cho một giao dịch ngắn hạn theo hướng ngược lại. Lập luận tương tự cũng đúng cho việc cắt lên trở lại trên −100, sau khi chỉ báo đã ở dưới mức này.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ap-dung-trong-cac-giao-dich-ngan-han">Áp dụng trong các giao dịch ngắn hạn</h2><p>Trong các giao dịch ngắn hạn, CCI thường được quan sát cùng với biểu đồ giá để tránh các tín hiệu đơn lẻ. Một quy trình đơn giản là: xác định khi CCI cắt lên trên +100 hoặc xuống dưới −100, chờ đợi sự cắt trở lại trong biên độ và, chỉ khi đó, tìm kiếm xác nhận bằng một mẫu hình nến hoặc một mức hỗ trợ và kháng cự gần đó trước khi quyết định vào lệnh.</p><ul><li>CCI trên +100: thời điểm sức mua vượt mức bình thường.</li><li>CCI dưới −100: thời điểm sức bán vượt mức bình thường.</li><li>CCI quay trở lại trong biên độ −100/+100: dấu hiệu chuyển động có thể đang mất đà.</li><li>Các giai đoạn ngắn hơn (như 14) khiến CCI nhạy hơn và có nhiều tín hiệu hơn; các giai đoạn dài hơn (như 20 hoặc 30) giảm nhiễu, nhưng làm chậm việc đọc tín hiệu.</li></ul><h2 id="nhung-han-che-can-nho">Những hạn chế cần nhớ</h2><p>Như bất kỳ dao động chỉ báo nào, CCI có thể duy trì trong vùng mua quá mức hoặc bán quá mức khá lâu trong các xu hướng mạnh, điều này tạo ra tín hiệu sai cho ai cố gắng giao dịch ngược chiều chuyển động quá sớm. Nó hoạt động tốt hơn khi dùng để xác nhận một phân tích khác thay vì làm tín hiệu vào lệnh đơn lẻ, và không có cấu hình giai đoạn nào khiến nó trở nên hoàn hảo tuyệt đối. Cũng cần nhớ rằng kết quả trong quá khứ không đảm bảo sẽ lặp lại trong tương lai, và mọi giao dịch đều có rủi ro mất vốn — kiểm tra chỉ báo trên tài khoản demo trước khi dùng với tiền thật giúp hiểu hành vi của nó trên các tài sản khác nhau.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

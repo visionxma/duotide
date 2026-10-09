@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Awesome Oscillator (AO) छोटी और मध्यम अवधि के चार्ट ट्रेड करने वालों में सबसे लोकप्रिय मोमेंटम इंडिकेटर में से एक है। ट्रेडर बिल विलियम्स द्वारा बनाया गया, यह देखने में मदद करता है कि कीमत की मौजूदा चाल के पीछे की ताकत बढ़ रही है या घट रही है, जो सिर्फ यह देखने से अलग है कि कीमत बढ़ रही है या गिर रही है।</p><p>इस लेख में आप जानेंगे कि AO की गणना कैसे होती है, यह चार्ट पर कैसे दिखता है, और व्यवहार में इसे पढ़ने की तीन लोकप्रिय तकनीकें, साथ में तर्क समझने के लिए एक संख्यात्मक उदाहरण।</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-awesome-oscillator-guia.svg" alt="चार्ट: ETH/USDT, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Binance। अपना विश्लेषण।" width="960" height="540" loading="lazy" decoding="async"><figcaption>चार्ट: ETH/USDT, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Binance। अपना विश्लेषण।</figcaption></figure><h2 id="awesome-oscillator-क-य-ह-और-इसक-गणन-क-स-ह-त-ह">Awesome Oscillator क्या है और इसकी गणना कैसे होती है</h2><p>AO एक हिस्टोग्राम है जो कीमत के चार्ट के नीचे रहता है, जो हरे और लाल बार से बना होता है जो शून्य लाइन के ऊपर और नीचे दोलन करते हैं। इसका फॉर्मूला सीधा है: यह कैंडल के मध्य बिंदु (अधिकतम जोड़ न्यूनतम, दो से भाग) के 5 पीरियड के सिंपल मूविंग एवरेज में से उसी मध्य बिंदु के 34 पीरियड के सिंपल मूविंग एवरेज को घटाता है।</p><p>व्यवहार में: AO = MA5(मध्य बिंदु) − MA34(मध्य बिंदु)। अगर छोटा एवरेज लंबे एवरेज से ऊपर है, तो नतीजा पॉजिटिव है और बार हरा दिखता है; अगर नीचे है, तो नतीजा नेगेटिव है और बार लाल दिखता है। मान लीजिए मध्य बिंदु का 5 पीरियड का एवरेज R$ 27,40 पर है और 34 पीरियड का एवरेज R$ 26,90 पर है। इस कैंडल में AO की वैल्यू R$ 0,50 पॉजिटिव होगी — यह संकेत कि छोटी अवधि का मोमेंटम लंबी अवधि से ज्यादा मजबूत है।</p><p>ध्यान दें कि AO अकेले बंद होने की कीमत को नहीं देखता: यह बाजार की दो अलग-अलग रफ्तार की तुलना करता है। यही तुलना है जो अक्सर कीमत के पुष्टि करने से पहले ही चाल की ताकत में बदलाव पहचानने देती है।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="तकन-क-1-श-न-य-ल-इन-क-क-र-सओवर">तकनीक 1 — शून्य लाइन का क्रॉसओवर</h2><p>AO की सबसे सीधी रीडिंग यह देखना है कि हिस्टोग्राम कब नेगेटिव से पॉजिटिव में क्रॉस करता है (बार लाल से हरे हो जाते हैं) या इसका उल्टा। शून्य लाइन से ऊपर की ओर क्रॉसओवर बताता है कि छोटी अवधि की खरीद ताकत ने लंबी अवधि की बिक्री ताकत को पीछे छोड़ दिया है, और आमतौर पर इसे संभावित तेजी के सिग्नल के तौर पर पढ़ा जाता है। नीचे की ओर क्रॉसओवर का उल्टा मतलब होता है।</p><p>यह तकनीक तब बेहतर काम करती है जब इसे एसेट के बड़े ट्रेंड के साथ मिलाया जाए: पहले से स्थापित तेजी के ट्रेंड के भीतर ऊपर की ओर क्रॉसओवर, बिना किसी तय दिशा के साइडवेज चल रहे बाजार में उसी सिग्नल से ज्यादा भरोसेमंद होता है।</p><h2 id="तकन-क-2-प-र-स-सर">तकनीक 2 — पिरे (सॉसर)</h2><p>सॉसर पैटर्न तब दिखता है जब हिस्टोग्राम, शून्य लाइन के एक तरफ होते हुए (उदाहरण के लिए पॉजिटिव), लगातार तीन बार बनाता है: पहला ऊंचा, दूसरा छोटा (ताकत में एक पल की गिरावट) और तीसरा फिर बढ़कर दूसरे को पार कर जाता है। यह शक्ल किसी तश्तरी जैसी दिखती है और बताती है कि मोमेंटम में एक छोटा विराम पहले ही पार हो चुका है, बिना हिस्टोग्राम को शून्य लाइन क्रॉस करने की जरूरत के।</p><p>यह उन ट्रेडरों की इस्तेमाल की जाने वाली तकनीक है जो AO द्वारा पहले से दिखाए जा रहे ट्रेंड के पक्ष में, पूरे क्रॉसओवर का इंतजार किए बिना, तेज एंट्री चाहते हैं — लेकिन, ज्यादा पहले आने वाला सिग्नल होने की वजह से, यह गलत सिग्नल का ज्यादा जोखिम भी उठाता है।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="तकन-क-3-द-च-ट-य-ट-व-न-प-क-स">तकनीक 3 — दो चोटियां (ट्विन पीक्स)</h2><p>दो चोटियों वाला पैटर्न संभावित रिवर्सल की एक रीडिंग है। हिस्टोग्राम के पॉजिटिव हिस्से में, यह तब होता है जब तेजी की दो चोटियां बनती हैं, दूसरी पहली से नीचे, और उनके बीच एक गड्ढा होता है जो शून्य लाइन के नीचे नहीं जाता। दोनों चोटियों के बीच ताकत का यह घटना, भले ही हिस्टोग्राम नेगेटिव न हुआ हो, तेजी के ट्रेंड के कमजोर होने की चेतावनी के तौर पर पढ़ा जाता है। इसका उल्टा, नेगेटिव तरफ, गिरावट के ट्रेंड के संभावित अंत की चेतावनी देता है।</p><p>एक ही दिशा में दो चालों की तीव्रता की तुलना करने की वजह से, यह तकनीक सॉसर की तुलना में थोड़ा देर से दिखने की प्रवृत्ति रखती है, लेकिन आमतौर पर कम गलत सिग्नल देती है।</p><h2 id="र-जमर-र-म-awesome-oscillator-क-स-इस-त-म-ल-कर">रोजमर्रा में Awesome Oscillator कैसे इस्तेमाल करें</h2><p>इन तीनों में से किसी भी तकनीक को अकेले, ऑटोमैटिक एंट्री ट्रिगर के तौर पर इस्तेमाल नहीं किया जाना चाहिए। AO पुष्टि के तौर पर बेहतर काम करता है: पहले चार्ट के कॉन्टेक्स्ट को देखा जाता है — ट्रेंड, सबसे नजदीकी सपोर्ट और रेजिस्टेंस लेवल — और तभी हिस्टोग्राम को देखा जाता है यह पुष्टि करने के लिए कि मोमेंटम उस रीडिंग का समर्थन करता है या उसके विपरीत है।</p><p>यह याद रखने लायक है कि मूविंग एवरेज से गणना होने की वजह से, AO कीमत के हाल के अतीत पर रिएक्ट करता है और कभी भी भविष्य का पक्का अंदाजा नहीं लगाता। Duotide पर, किसी भी असली रकम लगाने से पहले Awesome Oscillator को कीमत के चार्ट के साथ प्लॉट करना और अलग-अलग एसेट व टाइमफ्रेम में इन तीनों तकनीकों को परखना संभव है।</p><p>किसी ट्रेड में उतरने से पहले, हमेशा तय करें कि अगर AO का सिग्नल पुष्टि न हो तो आप कितना नुकसान गंवाने को तैयार हैं। ट्रेडिंग में जोखिम शामिल है, और कोई भी इंडिकेटर — यहां तक कि Awesome Oscillator भी — नुकसान की संभावना को खत्म नहीं करता।</p>
             <div class="bq-post__cta">
-              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और R$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
+              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और US$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">मुफ़्त अकाउंट बनाएँ</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>संबंधित लेख</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">अभ्यास के लिए तैयार?</h2>
+          <p class="ap-lp__sub">खाता खोलें और 10,000 अमेरिकी डॉलर की वर्चुअल राशि के साथ डेमो खाते में अभ्यास करें, बिना पैसे जोखिम में डाले।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">खाता बनाएँ</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">डेमो आज़माएँ</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>सुरक्षित प्लेटफ़ॉर्म</strong><span>सुरक्षित लॉगिन और पहचान सत्यापन</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>कई भाषाओं में सहायता</strong><span>हर दिन मदद</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>मुफ़्त डेमो खाता</strong><span>अभ्यास के लिए 10,000 डॉलर वर्चुअल</span></li>
+          </ul>
+          <p class="ap-lp__risco">ट्रेडिंग में निवेश की गई पूंजी खोने का जोखिम होता है।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

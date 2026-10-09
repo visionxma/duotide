@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>কোনো ফিল্টার ছাড়া একটি প্রাইস চার্ট দেখা ক্লান্তিকর হতে পারে: অসংখ্য ছোট ছোট ওঠানামা মনোযোগের জন্য প্রতিযোগিতা করে, ফলে এত শব্দের (নয়েজ) পেছনে থাকা প্রকৃত গুরুত্বপূর্ণ গতিবিধি দেখা কঠিন হয়ে পড়ে। জিগজ্যাগ ঠিক এই দৃষ্টিগত সমস্যা সমাধানের জন্যই তৈরি, যা শুধু চার্টের উল্লেখযোগ্য চূড়া ও তলদেশগুলোকে যুক্ত করে সরলরেখা আঁকে, মাঝখানে যা থাকে তা উপেক্ষা করে।</p><p>এই নিবন্ধে ব্যাখ্যা করা হয়েছে জিগজ্যাগ কীভাবে ঠিক করে কোনটা শব্দ আর কোনটা গুরুত্বপূর্ণ গতিবিধি, বাস্তবে এটি কী কাজে লাগে, এবং কেন একে এন্ট্রি সংকেত তৈরির টুল হিসেবে গুলিয়ে ফেলা উচিত নয়।</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="চার্ট: Ibovespa, দৈনিক, ০২/০৩/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Yahoo Finance। নিজস্ব বিশ্লেষণ।" width="960" height="540" loading="lazy" decoding="async"><figcaption>চার্ট: Ibovespa, দৈনিক, ০২/০৩/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Yahoo Finance। নিজস্ব বিশ্লেষণ।</figcaption></figure><h2 id="জ-গজ-য-গ-ক-ভ-ব-ঠ-ক-কর-ক-দ-খ-ব">জিগজ্যাগ কীভাবে ঠিক করে কী দেখাবে</h2><p>ইনডিকেটরটি একটি সর্বনিম্ন ভেরিয়েশন সীমা দিয়ে কনফিগার করা হয়, যা মূল্যের শতাংশ বা পয়েন্ট সংখ্যায় নির্ধারিত হয়। এই সীমার চেয়ে ছোট যেকোনো গতিবিধি উপেক্ষা করা হয়, এবং জিগজ্যাগ তখনই নতুন লাইন আঁকে যখন মূল্য সর্বশেষ চিহ্নিত চূড়া বা তলদেশ থেকে এই সীমা অতিক্রম করার মতো যথেষ্ট পরিমাণে সরে যায়। উদাহরণস্বরূপ, ৫% সীমা দিয়ে, ট্রেন্ডের মাঝখানে ২% ওঠানামা ইনডিকেটরে একেবারেই দেখা যায় না — এটি ছবিতে যুক্ত হয় শুধু তখনই যখন সঞ্চিত গতিবিধি নির্ধারিত ৫% অতিক্রম করে।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="জ-গজ-য-গ-আসল-ক-স-র-জন-য-উপয-গ">জিগজ্যাগ আসলে কীসের জন্য উপযোগী</h2><h3>গুরুত্বপূর্ণ চূড়া ও তলদেশ চিহ্নিত করা</h3><p>স্বল্পমেয়াদী শব্দ সরিয়ে ফেললে, অ্যাসেটের ইতিহাসে সত্যিকারের গুরুত্বপূর্ণ রিভার্সাল পয়েন্টগুলো কোথায় তা দেখা সহজ হয়ে যায় — এই তথ্য ছোট ছোট ওঠানামায় ভরা একটি চার্টে অনুমান করার চেয়ে বেশি আত্মবিশ্বাসের সঙ্গে সাপোর্ট ও রেজিস্ট্যান্স লাইন আঁকতে সহায়ক।</p><h3>চার্ট প্যাটার্ন পড়তে সহায়তা করা</h3><p>ডাবল টপ, হেড অ্যান্ড শোল্ডার বা ট্রেন্ড চ্যানেলের মতো প্যাটার্নগুলো জিগজ্যাগ ছোট শব্দ বাদ দেওয়ার পর আরও স্পষ্ট হয়ে ওঠে, যা একটি ভিজ্যুয়াল কাঠামো হিসেবে কাজ করে যার ওপর এই প্যাটার্নগুলো আরও স্পষ্টভাবে চিহ্নিত করা যায়, এমনকি যারা টেকনিক্যাল অ্যানালাইসিসে ওয়েভ কাউন্ট নিয়ে পড়াশোনা করেন তাদের জন্যও। এই ফিল্টার ছাড়া, চার্টের কোন অংশ মূল গতিবিধি প্রতিনিধিত্ব করছে আর কোনটি শুধু তার মধ্যে একটি সংশোধন, তা দৃষ্টিগতভাবে আলাদা করা আরও অনেক কঠিন হতো।</p><h3>পূর্ববর্তী গতিবিধির পরিসর পরিমাপ করা</h3><p>যেহেতু জিগজ্যাগের প্রতিটি লাইন একটি চূড়াকে একটি তলদেশের সঙ্গে (বা তার বিপরীতে) যুক্ত করে, এটি দ্রুত পরিমাপ করা সহজ করে দেয় যে অ্যাসেটটি চার্টের প্রতিটি অংশে কত পয়েন্ট বা কত শতাংশ সরেছে, যা একই আকারের অতীত গতিবিধির ভিত্তিতে লক্ষ্যমাত্রার প্রত্যাশা নির্ধারণ করতে সহায়তা করে।</p><h2 id="জ-গজ-য-গ-র-সবচ-য-গ-র-ত-বপ-র-ণ-স-ম-বদ-ধত">জিগজ্যাগের সবচেয়ে গুরুত্বপূর্ণ সীমাবদ্ধতা</h2><p>জিগজ্যাগ এমন একটি ইনডিকেটর যা পেছনের দিকে তাকায়: এটি কোনো চূড়া বা তলদেশ তখনই নিশ্চিত করে যখন মূল্য বিপরীত দিকে যথেষ্ট পরিমাণে সরে গিয়ে প্রমাণ করে যে সেই পয়েন্টটি আসলেই একটি রিভার্সাল ছিল। এর অর্থ হলো ইনডিকেটরের শেষ লাইনটি নতুন ক্যান্ডেল তৈরি হওয়ার সাথে সাথে পরিবর্তিত বা পুনরায় আঁকা হতে পারে — সবেমাত্র চূড়ান্ত মনে হওয়া চূড়াটি মূল্য বাড়তে থাকলে অস্তিত্বহীন হয়ে যেতে পারে। এই কারণে, জিগজ্যাগকে সরাসরি এন্ট্রি ট্রিগার হিসেবে ব্যবহার করা ঝুঁকিপূর্ণ: যে মুহূর্তে সংকেতটি স্পষ্টভাবে দেখা যায়, তখন এটি যে গতিবিধি বর্ণনা করছে তা ইতিমধ্যে ঘটে গেছে। এটি জিগজ্যাগকে পূর্বাভাসের ইনডিকেটরের চেয়ে পশ্চাদ্দৃষ্টির (রেট্রোস্পেকটিভ) টুলের মতো বেশি করে তোলে।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="স-ব-দনশ-লত-র-প-য-র-ম-ট-র-ক-ভ-ব-স-মঞ-জস-য-করব-ন">সংবেদনশীলতার প্যারামিটার কীভাবে সামঞ্জস্য করবেন</h2><ul><li>একটি ছোট সীমা (যেমন ১% বা ২%) বেশি বিস্তারিত দেখায়, কিন্তু আবারও প্রচুর স্বল্পমেয়াদী শব্দ অন্তর্ভুক্ত করে।</li><li>একটি বড় সীমা (যেমন ৮% বা ১০%) চার্টকে অনেকটা সরল করে দেয়, কিন্তু স্বল্পমেয়াদী ট্রেডের জন্য গুরুত্বপূর্ণ রিভার্সালগুলো উপেক্ষা করতে পারে।</li><li>আদর্শ সমন্বয় নির্ভর করে অ্যাসেট ও চার্টের সময়সীমার ওপর: বেশি অস্থির অ্যাসেটে সাধারণত অতিরিক্ত শব্দ এড়াতে বড় সীমার প্রয়োজন হয়, আর বেশি স্থিতিশীল অ্যাসেটের ক্ষেত্রে এর উল্টোটা প্রযোজ্য।</li></ul><h2 id="জ-গজ-য-গ-ক-ভ-ব-দ-য-ত-বশ-লভ-ব-ব-যবহ-র-করব-ন">জিগজ্যাগ কীভাবে দায়িত্বশীলভাবে ব্যবহার করবেন</h2><p>জিগজ্যাগ ব্যবহারের সবচেয়ে ভালো উপায় হলো একে ভিজ্যুয়াল অ্যানালাইসিস ও ঐতিহাসিক পর্যালোচনার টুল হিসেবে ব্যবহার করা, এন্ট্রি ট্রিগার হিসেবে নয়। ট্রেড শুরু করার প্রকৃত মুহূর্ত নির্ধারণ করতে এটি যে চূড়া ও তলদেশ তুলে ধরে তার পাঠকে RSI-এর মতো একটি মোমেন্টাম ইনডিকেটর বা ভলিউম বিশ্লেষণের সঙ্গে একত্র করুন। ইতিমধ্যে ঘটে যাওয়া তথ্যের ওপর ভিত্তি করে তৈরি যেকোনো টুলের মতোই, জিগজ্যাগ পরবর্তী গতিবিধির পূর্বাভাস দেয় না, এবং দৃষ্টিগতভাবে আরও সুসংগঠিত চার্ট সত্ত্বেও ক্ষতির ঝুঁকি রয়ে যায় — এটিকে আপনার বিশ্লেষণ রুটিনে অন্তর্ভুক্ত করার আগে ডেমো অ্যাকাউন্টে এর আচরণ অধ্যয়ন করা মূল্যবান।</p>
             <div class="bq-post__cta">
-              <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+              <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং US$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>সম্পর্কিত নিবন্ধ</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/what-is-average-true-range/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">অ্যাভারেজ ট্রু রেঞ্জ (ATR) কী এবং কীভাবে গণনা করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-the-adx-indicator-and-how-does-it-work/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX ইনডিকেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-the-stochastic-oscillator-and-how-does-it-work/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">স্টোকাস্টিক অসিলেটর কী এবং এটি কীভাবে কাজ করে</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/what-is-average-true-range/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">অ্যাভারেজ ট্রু রেঞ্জ (ATR) কী এবং কীভাবে গণনা করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">অনুশীলনে প্রস্তুত?</h2>
+          <p class="ap-lp__sub">অ্যাকাউন্ট খুলুন এবং 10,000 মার্কিন ডলারের ভার্চুয়াল ব্যালেন্স দিয়ে ডেমো অ্যাকাউন্টে অনুশীলন করুন, টাকার ঝুঁকি ছাড়াই।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">অ্যাকাউন্ট খুলুন</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ডেমো চেষ্টা করুন</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>নিরাপদ প্ল্যাটফর্ম</strong><span>সুরক্ষিত লগইন ও পরিচয় যাচাই</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>বহু ভাষায় সহায়তা</strong><span>প্রতিদিন সহায়তা</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>বিনামূল্যে ডেমো অ্যাকাউন্ট</strong><span>অনুশীলনের জন্য 10,000 ডলার ভার্চুয়াল</span></li>
+          </ul>
+          <p class="ap-lp__risco">ট্রেডিংয়ে বিনিয়োগকৃত মূলধন হারানোর ঝুঁকি রয়েছে।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

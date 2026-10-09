@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Trước khi học bất kỳ chỉ báo hay chiến lược nào, có một kỹ năng cơ bản hơn thường bị bỏ quên: biết đọc các con số xuất hiện trong một báo giá. Đối với người mới bắt đầu, một màn hình đầy các giá trị nhấp nháy có thể trông rối rắm hơn thực tế của nó — phần lớn thông tin này tuân theo một khuôn mẫu đơn giản, một khi bạn hiểu mỗi trường đại diện cho điều gì.</p><figure class="ap__grafico"><img src="/assets/graficos/como-entender-uma-cotacao-de-mercado.svg" alt="Biểu đồ: EUR/USD, khung ngày, từ 01/06/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: EUR/USD, khung ngày, từ 01/06/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="bid-va-ask-hai-mat-cua-moi-muc-gia">Bid và ask: hai mặt của mọi mức giá</h2><p>Mọi tài sản được giao dịch thực ra luôn có hai mức giá cùng lúc, không chỉ một:</p><ul><li><strong>Bid (mua)</strong>: mức giá cao nhất mà ai đó sẵn sàng trả cho tài sản tại thời điểm đó.</li><li><strong>Ask (bán)</strong>: mức giá thấp nhất mà ai đó sẵn sàng bán tài sản tại thời điểm đó.</li></ul><p>Khi bạn mua theo giá thị trường, bạn trả theo giá ask. Khi bán theo giá thị trường, bạn nhận theo giá bid. Điều này có nghĩa là, nếu mua rồi bán ngay lập tức liên tiếp, không có bất kỳ biến động giá nào ở giữa, bạn đã chịu một khoản lỗ nhỏ — chênh lệch giữa hai mức giá đó.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ini-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="spread-la-gi">Spread là gì</h2><p>Chênh lệch giữa bid và ask được gọi là spread, và hoạt động như một chi phí được tích hợp sẵn trong mỗi giao dịch. Một ví dụ: nếu bid của một tài sản là R$ 24,80 và ask là R$ 24,84, spread là R$ 0,04. Trong một giao dịch 100 đơn vị, điều này đại diện cho R$ 4,00 chênh lệch giữa mua và bán cùng một thời điểm.</p><p>Các tài sản được giao dịch nhiều hơn, với nhiều người mua bán liên tục, thường có spread nhỏ hơn. Các tài sản kém thanh khoản hơn, hoặc được giao dịch ngoài giờ thông thường, có xu hướng có spread rộng hơn — một trong những lý do khiến giao dịch vào những giờ thanh khoản thấp thường tốn kém hơn cho mỗi giao dịch.</p><h2 id="gia-cuoi-cung-gia-cao-nhat-thap-nhat-va-gia-mo-cua">Giá cuối cùng, giá cao nhất, thấp nhất và giá mở cửa</h2><p>Ngoài bid và ask, hầu hết các báo giá còn có thêm bốn con số tham chiếu khác:</p><ul><li><strong>Giá cuối cùng (hay last)</strong>: giá của giao dịch gần nhất đã khớp, không phải lúc nào cũng bằng bid hoặc ask ngay khoảnh khắc sau đó.</li><li><strong>Giá mở cửa</strong>: mức giá đầu tiên được giao dịch trong giai đoạn đang phân tích (ngày, tuần, tháng).</li><li><strong>Giá cao nhất và thấp nhất</strong>: các giá trị cao nhất và thấp nhất đã được giao dịch trong cùng giai đoạn đó.</li></ul><p>So sánh giá cuối cùng với giá mở cửa cho thấy tài sản đang tăng hay giảm kể từ đầu giai đoạn. So sánh giá cuối cùng với giá cao nhất và thấp nhất cho thấy nó đang ở vị trí nào trong biên độ giao dịch của ngày hôm đó — thông tin tương tự như những gì Dao động Stochastic tính toán một cách tự động.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="bien-đong-phan-tram-con-so-ma-moi-nguoi-nhin-đau-tien">Biến động phần trăm: con số mà mọi người nhìn đầu tiên</h2><p>Biến động phần trăm cho thấy giá đã thay đổi bao nhiêu so với một mốc tham chiếu, thường là giá đóng cửa của giai đoạn trước. Công thức rất đơn giản:</p><p><strong>Biến động % = ((Giá hiện tại − Giá tham chiếu) ÷ Giá tham chiếu) × 100</strong></p><p>Ví dụ: nếu một tài sản đóng cửa phiên trước ở mức R$ 50,00 và hiện đang được giao dịch ở R$ 51,50, biến động sẽ là: ((51,50 − 50,00) ÷ 50,00) × 100 = (1,50 ÷ 50,00) × 100 = 3%. Một mức giảm xuống R$ 48,50 trong cùng kịch bản sẽ dẫn đến biến động -3%, dùng cùng phép tính với dấu đảo ngược.</p><h2 id="khoi-luong-bao-nhieu-giao-dich-đung-sau-muc-gia-đo">Khối lượng: bao nhiêu giao dịch đứng sau mức giá đó</h2><p>Khối lượng cho thấy số lượng đơn vị được giao dịch trong một giai đoạn nhất định. Một chuyển động giá đi kèm khối lượng trên mức trung bình có xu hướng mang nhiều sự chắc chắn hơn so với cùng chuyển động đó với khối lượng thấp, vì nó phản ánh nhiều người tham gia đồng thuận với mức giá mới đó hơn.</p><h2 id="ket-hop-cac-con-so-thanh-mot-cach-đoc">Kết hợp các con số thành một cách đọc</h2><p>Một báo giá đầy đủ kể một câu chuyện nhỏ: giá xuất phát từ đâu (mở cửa), đã đến đâu ở hai thái cực (cao nhất và thấp nhất), hiện đang ở đâu so với hai thái cực đó, đã thay đổi bao nhiêu phần trăm, và với khối lượng giao dịch nào đứng sau đó. Học cách đọc các con số này cùng nhau, thay vì chỉ nhìn giá hiện tại một cách riêng lẻ, là bước đầu tiên trước bất kỳ phân tích nâng cao nào hơn — và nên nhớ rằng, trong bất kỳ giao dịch thực tế nào, spread giữa bid và ask là một chi phí cần được tính đến ngay từ đầu.</p><p>Theo thời gian, việc đọc một báo giá đầy đủ không còn là một bài tập có ý thức nữa mà diễn ra gần như tự động, giống như cách đọc giờ trên một chiếc đồng hồ kim. Cho đến lúc đó, nên duy trì thói quen kiểm tra từng con số này trước khi quyết định bất cứ điều gì, thay vì chỉ phản ứng với mức giá đang nhấp nháy trên màn hình.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/nhung-cuon-sach-can-doc-cho-nguoi-moi-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Những cuốn sách cần đọc cho người mới bắt đầu trading</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/cong-cu-giao-dich-cach-chon-dung-cong-cu/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Công cụ giao dịch: cách chọn đúng công cụ</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/an-toan-la-tren-het-cach-tranh-lua-dao-trong-giao-dich/"><img src="/assets/img/duotide-app-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">An toàn là trên hết: cách tránh lừa đảo trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/nhung-cuon-sach-can-doc-cho-nguoi-moi-trading/"><img src="/assets/img/mini/duotide-abrir-conta.webp" srcset="/assets/img/mini/duotide-abrir-conta.webp 480w, /assets/img/duotide-abrir-conta.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Những cuốn sách cần đọc cho người mới bắt đầu trading</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cong-cu-giao-dich-cach-chon-dung-cong-cu/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Công cụ giao dịch: cách chọn đúng công cụ</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/an-toan-la-tren-het-cach-tranh-lua-dao-trong-giao-dich/"><img src="/assets/img/mini/duotide-app-04.webp" srcset="/assets/img/mini/duotide-app-04.webp 480w, /assets/img/duotide-app-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">An toàn là trên hết: cách tránh lừa đảo trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

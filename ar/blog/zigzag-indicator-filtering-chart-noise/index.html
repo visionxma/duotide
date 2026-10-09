@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>النظر إلى رسم بياني للسعر دون أي تصفية يمكن أن يكون مرهقًا: عشرات الارتفاعات والانخفاضات الصغيرة تتنافس على الانتباه، ما يصعّب رؤية الحركة المهمة فعليًا وراء كل هذه الضوضاء. يوجد ZigZag تحديدًا لحل هذه المشكلة البصرية، برسم خطوط مستقيمة تربط فقط القمم والقيعان المهمة في الرسم البياني، متجاهلة ما يقع في المنتصف.</p><p>يشرح هذا المقال كيف يقرر ZigZag ما هو ضوضاء وما هو حركة مهمة، وما فائدته عمليًا، ولماذا لا ينبغي الخلط بينه وبين مولد إشارات دخول.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="الرسم البياني: Ibovespa، يومي، من 02‏/03‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص." width="960" height="540" loading="lazy" decoding="async"><figcaption>الرسم البياني: Ibovespa، يومي، من 02‏/03‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص.</figcaption></figure><h2 id="كيف-يقرر-zigzag-ما-يعرضه">كيف يقرر ZigZag ما يعرضه</h2><p>يُضبط المؤشر بحد أدنى للتغير، محدد كنسبة مئوية من السعر أو كعدد من النقاط. تُتجاهل أي حركة أصغر من هذا الحد، ولا يرسم ZigZag خطًا جديدًا إلا عندما يتحرك السعر بما يكفي لتجاوز هذا العتبة انطلاقًا من آخر قمة أو قاع محدد. مثلاً، بحد 5%، لا يظهر تذبذب بنسبة 2% في منتصف اتجاه في المؤشر إطلاقًا — لا يدخل في الرسم إلا عندما تتجاوز الحركة المتراكمة نسبة 5% المحددة.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="لماذا-zigzag-مفيد-فعلا">لماذا ZigZag مفيد فعلاً</h2><h3>تحديد القمم والقيعان المهمة</h3><p>بإزالة ضوضاء المدى القصير، يصبح أسهل رؤية أين توجد نقاط الانعكاس التي كانت مهمة فعلاً في تاريخ الأصل — معلومة مفيدة لرسم خطوط الدعم والمقاومة بثقة أكبر من محاولة تخمين ذلك في رسم بياني مليء بتذبذبات صغيرة.</p><h3>دعم قراءة الأنماط البيانية</h3><p>تصبح أنماط مثل القمة المزدوجة، أو الرأس والكتفين، أو قنوات الاتجاه أكثر وضوحًا عندما يكون ZigZag قد أزال الضوضاء الصغيرة بالفعل، عاملاً كهيكل بصري يمكن من خلاله تحديد هذه الأنماط بوضوح أكبر، بما في ذلك لمن يدرس عد الموجات في التحليل الفني. دون هذا المرشح، سيكون أصعب بكثير الفصل بصريًا بين الجزء من الرسم البياني الذي يمثل الحركة الرئيسية والجزء الذي هو مجرد تصحيح ضمنها.</p><h3>قياس مدى الحركات السابقة</h3><p>بما أن كل خط في ZigZag يربط قمة بقاع (أو العكس)، فإنه يسهل قياس عدد النقاط أو النسبة المئوية التي تحرك بها الأصل بسرعة في كل جزء من الرسم البياني، ما يساعد على معايرة توقعات الهدف بناءً على حركات سابقة بحجم مشابه.</p><h2 id="الحد-الا-هم-لـ-zigzag">الحد الأهم لـ ZigZag</h2><p>ZigZag مؤشر ينظر إلى الوراء: لا يؤكد قمة أو قاعًا إلا بعد أن يكون السعر قد تحرك بما يكفي في الاتجاه المعاكس لإثبات أن تلك النقطة كانت فعلاً انعكاسًا. هذا يعني أن الخط الأخير للمؤشر يمكن أن يتغير، أو يُعاد رسمه، مع تشكل شموع جديدة — القمة التي بدت نهائية قبل قليل قد تختفي إذا استمر السعر بالارتفاع. لهذا السبب، استخدام ZigZag كمحفز دخول مباشر أمر خطير: لحظة ظهور الإشارة بوضوح، تكون الحركة التي يصفها قد حدثت بالفعل. هذا يجعل ZigZag أشبه بأداة استعادية منه بمؤشر استباقي.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="كيفية-ضبط-معيار-الحساسية">كيفية ضبط معيار الحساسية</h2><ul><li>حد صغير (مثلاً، 1% أو 2%) يُظهر تفاصيل أكثر، لكنه يعيد تضمين قدر كبير من ضوضاء المدى القصير.</li><li>حد أكبر (مثلاً، 8% أو 10%) يبسط الرسم البياني كثيرًا، لكنه قد يتجاهل انعكاسات مهمة للصفقات ذات المدى الأقصر.</li><li>يعتمد الضبط المثالي على الأصل والإطار الزمني للرسم البياني: الأصول الأكثر تقلبًا تتطلب عادة حدًا أكبر لتجنب توليد ضوضاء مفرطة، والعكس صحيح للأصول الأكثر استقرارًا.</li></ul><h2 id="كيفية-استخدام-zigzag-بمسو-ولية">كيفية استخدام ZigZag بمسؤولية</h2><p>أفضل طريقة للاستفادة من ZigZag هي كأداة تحليل بصري ودراسة تاريخية، لا كمحفز دخول. اجمع قراءة القمم والقيعان التي يبرزها مع مؤشر زخم، مثل RSI، أو مع قراءة الحجم، لتحديد اللحظة الفعلية للدخول في صفقة. مثل أي أداة قائمة على بيانات حدثت بالفعل، لا يتنبأ ZigZag بالحركة التالية، ومخاطرة الخسارة تظل قائمة حتى مع رسم بياني أكثر تنظيمًا بصريًا — يجدر دراسة سلوكه في حساب تجريبي قبل إدماجه في روتين تحليلك.</p>
             <div class="bq-post__cta">
-              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 دولار أمريكي.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">هل أنت مستعد للتطبيق العملي؟</h2>
+          <p class="ap-lp__sub">افتح حسابك وتدرّب على الحساب التجريبي برصيد افتراضي قدره 10,000 دولار، دون المخاطرة بأموالك.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">إنشاء حساب</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">جرّب الحساب التجريبي</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>منصة آمنة</strong><span>تسجيل دخول محمي والتحقق من الهوية</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>دعم بعدة لغات</strong><span>مساعدة متاحة كل يوم</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>حساب تجريبي مجاني</strong><span>10,000 دولار افتراضية للتدريب</span></li>
+          </ul>
+          <p class="ap-lp__risco">ينطوي التداول على خطر خسارة رأس المال المستثمر.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

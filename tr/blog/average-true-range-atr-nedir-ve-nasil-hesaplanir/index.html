@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Çoğu göstergeden farklı olarak, Average True Range (ATR) herhangi bir yön öngörmeye çalışmaz. Sadece tek bir şeyi ölçer: bir varlığın belirli bir periyot içinde mutlak değer olarak ne kadar hareket etme eğiliminde olduğunu. Bu bir alım veya satım sinyali değil, bir volatilite cetvelidir.</p><p>ADX ve RSI'ın da aynı yazarı olan J. Welles Wilder tarafından yaratılan ATR, keyfi olarak seçilmiş sabit bir değer yerine varlığın gerçek davranışına dayanarak bir stopun veya pozisyon büyüklüğünün ayarlanmasını gerektiren neredeyse her stratejide karşımıza çıkar.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-average-true-range-atr.svg" alt="Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz.</figcaption></figure><h2 id="neden-zirve-eksi-dip-in-basit-bir-ortalaması-yetmez">Neden zirve eksi dip'in basit bir ortalaması yetmez</h2><p>Sadece her mumun zirvesinden dibini çıkarsaydınız, önemli bir ayrıntıyı kaçırırdınız: gap'ler. Bir varlığın önceki seansı R$ 50,00'den kapattığını ve bir sonraki seansı zaten R$ 46,00'dan açtığını, ardından R$ 45,50 ile R$ 46,80 arasında işlem gördüğünü düşünün. Mum içindeki değişim (zirve eksi dip) sadece R$ 1,30'du. Ama önceki kapanıştan bu yana gerçek hareket R$ 4,50'ydi. Bunu göz ardı etmek, varlığın gerçek volatilitesini olduğundan az gösterir.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="true-range-nasıl-hesaplanır">True Range nasıl hesaplanır</h2><p>Bu sorunu düzeltmek için, her mumun True Range'i (TR) üç hesap arasındaki en büyük değerdir:</p><ul><li>Güncel mumun zirvesi eksi güncel mumun dibi;</li><li>Güncel mumun zirvesi eksi önceki mumun kapanışı (mutlak değer);</li><li>Güncel mumun dibi eksi önceki mumun kapanışı (mutlak değer).</li></ul><p>Yukarıdaki örnekte TR, 1,30 (46,80 − 45,50), 3,20 (|46,80 − 50,00|) ve 4,50 (|45,50 − 50,00|) arasındaki en büyük değer olurdu. Yani TR = R$ 4,50 — gap dahil hareketin gerçek büyüklüğünü gerçekten yakalayan sayı.</p><h2 id="true-range-den-atr-ye">True Range'den ATR'ye</h2><p>ATR, genelde 14 mum olmak üzere bir periyot boyunca True Range'in yumuşatılmış bir ortalamasıdır. İlk değer genelde ilk 14 TR'nin basit ortalamasıdır. Bundan sonra, Wilder yumuşatması uygulanır:</p><p><strong>Bugünün ATR'si = ((Önceki ATR × 13) + Bugünün TR'si) ÷ 14</strong></p><p>Dünkü ATR'nin R$ 2,00'de olduğunu ve önceki örneği takip ederek bugünün TR'sinin R$ 4,50 olduğunu varsayalım:</p><p><strong>Bugünün ATR'si = ((2,00 × 13) + 4,50) ÷ 14 = (26,00 + 4,50) ÷ 14 = 30,50 ÷ 14 ≈ R$ 2,18</strong></p><p>Güçlü hareketli tek bir mumun ATR'yi bir anda fırlatmadığına dikkat edin — kademeli olarak yükselir, çünkü önceki 13 periyodun ağırlığını taşır. Bu kasıtlıdır: ATR, izole bir zirveyi değil, tekrar eden volatiliteyi ölçer.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="pratikte-neye-yarar">Pratikte neye yarar</h2><p>ATR'nin en yaygın kullanımı, herhangi bir piyasa için sabit bir puan veya para birimi sayısı kullanmak yerine, stop-loss ve pozisyon büyüklüğünü varlığın kendi davranışıyla orantılı olarak ölçeklendirmektir.</p><p>Bir örnek: bir varlığın ATR'si R$ 2,18 ise, girişten 1,5 ATR uzaklığa konan bir stop-loss, giriş fiyatından R$ 3,27 uzakta olur (2,18 × 1,5). ATR'si R$ 8,00 olan daha volatil bir varlıkta, aynı 1,5 ATR çarpanı R$ 12,00'lik bir stop ile sonuçlanır — çok daha geniş, çünkü varlığın kendisi günlük olarak daha fazla hareket eder. Her iki durumda da aynı sabit stop mesafesini kullanmak pek mantıklı olmazdı: daha sakin varlıkta stop çok geniş kalırdı; daha volatil olanda ise çok dar olur ve basit piyasa gürültüsü tarafından tetiklenmeye açık olurdu.</p><h2 id="atr-fiyatın-nereye-gidecegini-soylemez">ATR fiyatın nereye gideceğini söylemez</h2><p>Yaygın bir hata, ATR'yi giriş sinyali olarak kullanmaya çalışmaktır — yüksek bir ATR ne yükseliş ne de düşüş gösterir, sadece daha büyük bir hareketi gösterir. Yüzde 10'luk güçlü bir düşüş ve yüzde 10'luk güçlü bir yükseliş, hesaplama mutlak değerler kullandığı için benzer True Range okumaları üretebilir. Bu yüzden ATR normalde başka bir göstergenin veya trend okumasının yanında görünür, asla tek başına bir işlem tetiği olarak değil.</p><h2 id="atr-yi-gunluk-hayata-tasımak">ATR'yi günlük hayata taşımak</h2><p>ATR, bir giriş sinyalinden çok bir risk yönetim aracı olarak daha iyi çalışır. Pratik sorulara cevap vermeye yardımcı olur: bu stop, varlığın güncel volatilitesiyle orantılı mı? Fiyatın normalde ne kadar dalgalandığı göz önüne alındığında, bu pozisyon büyüklüğü mantıklı mı? Bu şekilde kullanılan gösterge, bir stopun varlığa özgü basit gürültü tarafından tetiklenme şansını azaltır, ancak hiçbir yönetim tekniği riski tamamen ortadan kaldırmaz — sadece onu daha tutarlı bir şekilde ölçeklendirmeye yardımcı olur.</p>
             <div class="bq-post__cta">
-              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 USD sanal bakiyeli demo hesapta test edin.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/macd-stokastik-ve-parabolic-sar-nasil-birlestirilir/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stokastik ve Parabolic SAR: Üçünü Nasıl Birleştirmeli</span><span class="bq__meta">24.09.2026 · 7 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/macd-stokastik-ve-parabolic-sar-nasil-birlestirilir/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stokastik ve Parabolic SAR: Üçünü Nasıl Birleştirmeli</span><span class="bq__meta">24.09.2026 · 7 dk okuma</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Uygulamaya hazır mısınız?</h2>
+          <p class="ap-lp__sub">Hesabınızı açın ve 10.000 ABD doları sanal bakiyeyle demo hesapta, para riske atmadan pratik yapın.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Hesap aç</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Demoyu dene</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Güvenli platform</strong><span>Korumalı giriş ve kimlik doğrulama</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Çok dilli destek</strong><span>Her gün yardım</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Ücretsiz demo hesap</strong><span>Pratik için 10.000 USD sanal</span></li>
+          </ul>
+          <p class="ap-lp__risco">İşlem yapmak, yatırılan sermayeyi kaybetme riski taşır.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Üstel hareketli ortalamaların kesişimi, teknik analize yeni başlayanlara en çok öğretilen stratejilerden biridir ve bunun iyi bir nedeni vardır: görselleştirmesi kolay, otomatikleştirmesi kolaydır ve grafik örüntüsünün öznel yorumuna bağlı değildir. Ana fikir, farklı periyotlarda iki EMA kullanmak ve birinin diğerini kestiği anı gözlemlemektir.</p><p>Basit hareketli ortalama yerine EMA seçimi tesadüfi değildir. EMA son fiyatlara daha fazla ağırlık verdiğinden, yön değişikliklerine daha hızlı tepki verir — tam olarak iki çizgi arasındaki kesişim anına bağlı olan bir stratejide özellikle önemli bir özellik.</p><figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-medias-moveis-exponenciais-ema.svg" alt="Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz.</figcaption></figure><h2 id="strateji-nasıl-isler">Strateji nasıl işler</h2><p>En yaygın biçim, biri daha kısa diğeri daha uzun olan iki EMA kullanır — örneğin 9 ve 21 periyot:</p><ul><li><strong>Yükseliş kesişimi</strong>: kısa EMA, uzun EMA'nın altından üstüne çıkar, bu da son momentumun altta yatan ortalamadan daha güçlü hale geldiğini öne sürer.</li><li><strong>Düşüş kesişimi</strong>: kısa EMA, uzun EMA'nın üstünden altına iner, bu da önceki yükseliş momentumunun zayıfladığını öne sürer.</li></ul><p>Bunun arkasındaki mantık, kısa vadeli ortalama uzun vadelinin üzerine çıktığında, son fiyatların ortalamayı daha uzak geçmişten daha güçlü şekilde yukarı çektiğidir — trendin yön değiştiriyor olabileceğine dair dolaylı bir sinyal.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="rakamlarla-bir-ornek">Rakamlarla bir örnek</h2><p>9 periyotluk EMA'nın R$ 74,20'de ve 21 periyotluk EMA'nın R$ 74,80'de olduğu, fiyatın son mumlarda yükseldiği bir varlık düşünün. İki mum sonra, 9 periyotluk EMA R$ 75,10'a yükselirse ve 21 periyotluk R$ 74,90'daysa, yükseliş kesişimi gerçekleşmiştir: kısa ortalama uzun ortalamanın üzerine geçmiştir. Strateji bunu alım giriş sinyali olarak ele alır.</p><p>Ters yol — 9 periyotluk EMA'nın 21 periyotluğun altına inmesi — stratejinin nasıl kurulduğuna bağlı olarak çıkış veya satış sinyali üretirdi.</p><h2 id="gecikme-odenmesi-gereken-bedeldir">Gecikme ödenmesi gereken bedeldir</h2><p>Herhangi bir hareketli ortalama gibi, EMA da ne olacağına değil, zaten olana tepki verir. Kesişim, ancak fiyat iki çizgi arasındaki göreceli konumu tersine çevirmeye yetecek kadar hareket ettikten sonra teyit edilir. Bu, sinyal göründüğünde hareketin bir kısmının zaten geride kaldığı anlamına gelir — strateji tahmini teyitle değiştirir ve bunun her girişin potansiyel kâr büyüklüğü üzerinde doğrudan bir maliyeti vardır.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="yontemin-sıkca-basarısız-oldugu-yer">Yöntemin sıkça başarısız olduğu yer</h2><p>Net bir trendi olmayan, dar bir aralıkta yanlara salınan piyasalarda, iki EMA iç içe geçer ve kısa zaman aralıklarında tekrar tekrar kesişir. Her kesişim bir sinyal üretir, ama fiyat, ters kesişimi üretecek şekilde tersine dönmeden önce belirtilen yönde yeterince ilerlemez. Sonuç, ek bir filtre olmadan her kesişimi işlem yapan hesapları genellikle aşındıran tesourada etkisinin (whipsaw) yarattığı bir dizi küçük zarardır.</p><p>Bu sorunu azaltmanın bir yolu, kesişimi ADX gibi bir trend gücü filtresiyle birleştirmektir: bir kesişimi geçerli saymadan önce ADX'in belirli bir seviyenin üzerinde olmasını şart koşmak, yönü belirlenmemiş piyasalarda üretilen sinyallerin büyük bir kısmını elemeye yardımcı olur.</p><h2 id="ortalamaların-periyotlarını-ayarlamak">Ortalamaların periyotlarını ayarlamak</h2><p>5 ve 13 gibi daha kısa kombinasyonlar daha erken sinyaller üretir, ama daha fazla sahte sinyal de üretir. 21 ve 55 gibi daha uzun kombinasyonlar teyit için daha uzun sürer, ama kısa vadeli gürültüyü daha iyi filtreleme eğilimindedir. Evrensel olarak üstün bir kombinasyon yoktur — ideal olan, işlemi ne kadar süre tutmayı planladığınıza ve daha az sahte sinyal karşılığında ne kadar teyit gecikmesini kabul etmeye razı olduğunuza bağlıdır.</p><h2 id="kesisimi-kriterle-kullanmak">Kesişimi kriterle kullanmak</h2><p>EMA kesişimi, istisnasız uygulanan izole bir kural olmaktan çok, trend gücü, hacim veya destek ve direnç bağlamı gibi ek filtreleri olan bir sistemin parçası olarak daha iyi işler. Kararın bir kısmını otomatikleştirir, ama risk yönetimi ihtiyacının yerini almaz: en iyi periyot kombinasyonu bile, özellikle yatay piyasalarda, hâlâ bir miktar sıklıkla sahte sinyaller üretecektir.</p>
             <div class="bq-post__cta">
-              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 USD sanal bakiyeli demo hesapta test edin.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/day-trade-icin-en-iyi-gostergeler/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Day Trade Yapanlar İçin En İyi Göstergeler</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/cift-stokastik-stratejisi-iki-osilator-nasil-birlestirilir/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Çift stokastik stratejisi: iki osilatör nasıl birleştirilir</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/bir-islemin-vadesi-nasil-secilir/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Bir İşlemin Vadesi (Sona Erme Süresi) Nasıl Seçilir</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/day-trade-icin-en-iyi-gostergeler/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Day Trade Yapanlar İçin En İyi Göstergeler</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/cift-stokastik-stratejisi-iki-osilator-nasil-birlestirilir/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Çift stokastik stratejisi: iki osilatör nasıl birleştirilir</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Uygulamaya hazır mısınız?</h2>
+          <p class="ap-lp__sub">Hesabınızı açın ve 10.000 ABD doları sanal bakiyeyle demo hesapta, para riske atmadan pratik yapın.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Hesap aç</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Demoyu dene</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Güvenli platform</strong><span>Korumalı giriş ve kimlik doğrulama</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Çok dilli destek</strong><span>Her gün yardım</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Ücretsiz demo hesap</strong><span>Pratik için 10.000 USD sanal</span></li>
+          </ul>
+          <p class="ap-lp__risco">İşlem yapmak, yatırılan sermayeyi kaybetme riski taşır.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

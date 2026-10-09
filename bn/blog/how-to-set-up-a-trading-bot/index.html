@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>একটি ট্রেডিং বট মূলত কোড দিয়ে লেখা নিয়মের একটি সেট যা নির্দিষ্ট শর্ত পূরণ হলে স্বয়ংক্রিয়ভাবে সম্পদ কেনে ও বেচে। প্রতিশ্রুতিটি লোভনীয়: স্ক্রিনের সামনে না থেকে এবং সিদ্ধান্তে আবেগকে হস্তক্ষেপ করতে না দিয়ে অপারেট করা। কিন্তু সত্যিই কাজ করা একটি বট তৈরি করতে বেশিরভাগ মানুষের কল্পনার চেয়ে বেশি পরিকল্পনা প্রয়োজন।</p><p>এই গাইড কৌশল নির্ধারণ থেকে চূড়ান্ত পরীক্ষা পর্যন্ত একটি ট্রেডিং বট কনফিগার করার ধাপগুলো দেখায়, এবং সেই সতর্কতাগুলো যা একে অটোপাইলটে অর্থ হারানোর একটি মেশিনে পরিণত হওয়া থেকে আটকায়।</p><figure class="ap__grafico"><img src="/assets/graficos/como-configurar-um-robo-de-trading.svg" alt="চার্ট: ETH/USDT, দৈনিক, ০১/০৪/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Binance। নিজস্ব বিশ্লেষণ।" width="960" height="540" loading="lazy" decoding="async"><figcaption>চার্ট: ETH/USDT, দৈনিক, ০১/০৪/২০২৬ থেকে ০৭/১০/২০২৬। ডেটা: Binance। নিজস্ব বিশ্লেষণ।</figcaption></figure><h2 id="ধ-প-১-ক-শলট-স-পষ-ট-ন-য-ম-ন-র-ধ-রণ-কর-ন">ধাপ ১: কৌশলটি স্পষ্ট নিয়মে নির্ধারণ করুন</h2><p>কোড নিয়ে ভাবার আগে, আপনার কৌশলটি সহজ ও নির্দিষ্ট বাক্যে লিখুন। উদাহরণস্বরূপ: 9 পিরিয়ডের মুভিং এভারেজ 21 পিরিয়ডের গড়ের উপরে ক্রস করলে কেনা, এবং দাম প্রবেশের দামের 2% নিচে পড়লে বিক্রি করা। যদি আপনি টেক্সটে অস্পষ্টতা ছাড়া কৌশলটি বর্ণনা করতে না পারেন, বটও একে সামঞ্জস্যপূর্ণভাবে কার্যকর করতে পারবে না।</p><p>এই ধাপে, যেকোনো স্বয়ংক্রিয় সিস্টেমের তিনটি স্তম্ভও নির্ধারণ করুন: প্রবেশের শর্ত, লাভসহ প্রস্থানের শর্ত, এবং ক্ষতিসহ প্রস্থানের শর্ত (স্টপ)। স্টপ ছাড়া একটি বট একটি স্বয়ংক্রিয় কৌশল নয়, এটি একটি স্বয়ংক্রিয় ঝুঁকি।</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ধ-প-২-প-ল-য-টফর-ম-এব-ভ-ষ-ব-ছ-ন-ন">ধাপ ২: প্ল্যাটফর্ম এবং ভাষা বেছে নিন</h2><p>মূলত দুটি পথ আছে: একটি ভিজ্যুয়াল বিল্ডার ব্যবহার করা, যেখানে আপনি কোড না লিখে ব্লক ও মেনু দিয়ে লজিক তৈরি করেন, অথবা পাইথনের মতো একটি ভাষায় বট প্রোগ্রাম করা, যা বেশি স্বাধীনতা দেয়, কিন্তু টেকনিক্যাল জ্ঞান দাবি করে। যারা শুরু করছেন তাদের জন্য, প্রোগ্রামিংয়ে সময় বিনিয়োগ করার আগে একটি সহজ ধারণা যাচাই করতে ভিজ্যুয়াল প্ল্যাটফর্মগুলো দ্রুততর।</p><h3>স্বয়ংক্রিয় করার আগে লজিক পরীক্ষা করা</h3><p>একটি সাধারণ ভুল হলো কৌশলটি সাম্প্রতিক সপ্তাহগুলোতে কাজ করত কিনা তা একটি ঐতিহাসিক চার্টে ম্যানুয়ালি যাচাই না করেই বট প্রোগ্রাম করা শুরু করা। এই দ্রুত, নিজের চোখে করা ম্যানুয়াল পরীক্ষা এমন একটি নিয়ম স্বয়ংক্রিয় করতে সময় নষ্ট করা এড়ায় যা কাগজেই ইতিমধ্যে ব্যর্থ হয়েছিল।</p><h2 id="ধ-প-৩-ঐত-হ-স-ক-ড-ট-দ-য-ব-য-কট-স-ট-কর-ন">ধাপ ৩: ঐতিহাসিক ডেটা দিয়ে ব্যাকটেস্ট করুন</h2><p>ব্যাকটেস্ট হলো আপনার কৌশলটি অতীতের মূল্য ডেটার উপর চালানোর প্রক্রিয়া, এটি কীভাবে আচরণ করত তা দেখতে। একটি ভালোভাবে করা ব্যাকটেস্ট অপারেশনের খরচ, ক্রয় ও বিক্রয়ের মধ্যে স্প্রেড এবং শান্ত বাজার মুহূর্ত ও উচ্চ অস্থিরতার মুহূর্ত উভয়ই অন্তর্ভুক্ত করার জন্য যথেষ্ট দীর্ঘ একটি সময়কাল বিবেচনা করে।</p><p>R$ 10.000 প্রাথমিক মূলধন দিয়ে পরীক্ষা করা একটি বট কল্পনা করুন, প্রতি অপারেশনে 2% ঝুঁকি নিয়ে (R$ 200)। 100টি সিমুলেটেড অপারেশনে, 55% সাফল্যের হার এবং 1-এর জন্য 1,5 ঝুঁকি-প্রতিদান অনুপাতসহ, প্রত্যাশিত ফলাফল হবে আনুমানিক 21টি বেশি বিজয়ী অপারেশন হারানো অপারেশনের চেয়ে, গড় লাভ দিয়ে গুণ করা — একটি গাণিতিক ব্যায়াম যা তখনই অর্থবহ হয় যখন ব্যাকটেস্টের সংখ্যাগুলো বাস্তবসম্মত হয়, এবং নির্বাচিত সময়কালে ভাগ্য দ্বারা স্ফীত না হয়।</p><ul><li>উপলব্ধ থাকলে অন্তত এক বা দুই বছরের ঐতিহাসিক ডেটা ব্যবহার করুন।</li><li>হিসাবে অপারেশনের খরচ এবং স্প্রেড অন্তর্ভুক্ত করুন।</li><li>অতিরিক্ত নিখুঁত ফলাফলে সন্দেহ করুন: এটি পরীক্ষায় ত্রুটি নির্দেশ করতে পারে।</li><li>সমন্বয়ে ব্যবহৃত সময়কালের বাইরে যাচাই করার জন্য ডেটার একটি অংশ আলাদা রাখুন।</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ধ-প-৪-প-রক-ত-ম-লধন-র-আগ-ড-ম-অ-য-ক-উন-ট-পর-ক-ষ-কর-ন">ধাপ ৪: প্রকৃত মূলধনের আগে ডেমো অ্যাকাউন্টে পরীক্ষা করুন</h2><p>একটি সন্তোষজনক ব্যাকটেস্টের পরেও, বটটিকে লাইভ বাজার ডেটাসহ কিন্তু প্রকৃত টাকা ছাড়া একটি যুক্তিসঙ্গত সময়ের জন্য একটি ডেমো অ্যাকাউন্টে চালানো উচিত। এই পর্যায়েই সেইসব সমস্যা দেখা দেয় যা ব্যাকটেস্ট ধরতে পারে না, যেমন এক্সিকিউশন বিলম্ব, সংযোগ ব্যর্থতা বা শেষ মুহূর্তের সংবাদে বটের আচরণ।</p><h3>ক্রমাগত পর্যবেক্ষণ</h3><p>একটি ট্রেডিং বট এমন একটি প্রকল্প নয় যা একবার কনফিগার করে ভুলে যাওয়া যায়। বাজারের আচরণের পরিবর্তন একটি লাভজনক কৌশলকে অসামঞ্জস্যপূর্ণে পরিণত করতে পারে। ব্যাকটেস্ট যা পূর্বাভাস দিয়েছিল তার সঙ্গে প্রকৃত পারফরম্যান্স তুলনা করে ফলাফল পর্যালোচনার জন্য সাপ্তাহিক সময় সংরক্ষণ করুন।</p><h2 id="বটট-ন-র-পদ-ক-ভ-ব-অপ-র-শন-আনব-ন">বটটি নিরাপদে কীভাবে অপারেশনে আনবেন</h2><p>একটি বাস্তব অ্যাকাউন্টে স্থানান্তর করার সময়, ছোট মূলধন দিয়ে শুরু করুন, লাইভ এক্সিকিউশন পরীক্ষা করা অনুযায়ী কাজ করছে তা যাচাই করার জন্য যথেষ্ট, কিন্তু একটি কনফিগারেশন ত্রুটি গুরুতর ক্ষতির কারণ না হওয়ার জন্য যথেষ্ট ছোট। প্রকৃত ইতিহাস পরীক্ষায় যা দেখা গিয়েছিল তা নিশ্চিত করার সঙ্গে সঙ্গে, বরাদ্দকৃত মূলধন ধীরে ধীরে বাড়ান।</p><p>অর্ডার কার্যকর করতে ব্যবহৃত প্ল্যাটফর্ম নির্বিশেষে, বটটি শৃঙ্খলার একটি টুল, লাভের নিশ্চয়তা নয়। এটি বোতাম টেপার সময় আবেগপ্রবণ দ্বিধা দূর করে, কিন্তু অন্য যেকোনো ধরনের অপারেশনের মতোই বাজারের ঝুঁকির সাপেক্ষে থাকে, এবং একটি ভালোভাবে তৈরি সিস্টেমেও ক্ষতি প্রক্রিয়ার একটি অংশ থেকে যায়।</p>
             <div class="bq-post__cta">
-              <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং R$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
+              <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং US$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>সম্পর্কিত নিবন্ধ</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/bn/blog/ema-crossover-trading-technique/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ট্রেডিংয়ে এক্সপোনেনশিয়াল মুভিং এভারেজ (EMA) ক্রসওভার</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/choosing-a-trading-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">কীভাবে একটি ট্রেডের মেয়াদ (এক্সপায়ারি) বেছে নেবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/the-best-technical-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">যারা ডে ট্রেড করেন তাদের জন্য সেরা ইনডিকেটর</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/ema-crossover-trading-technique/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ট্রেডিংয়ে এক্সপোনেনশিয়াল মুভিং এভারেজ (EMA) ক্রসওভার</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/choosing-a-trading-expiration/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">কীভাবে একটি ট্রেডের মেয়াদ (এক্সপায়ারি) বেছে নেবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/the-best-technical-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">যারা ডে ট্রেড করেন তাদের জন্য সেরা ইনডিকেটর</span><span class="bq__meta">২৪/০৯/২০২৬ · 6 মিনিটে পড়ুন</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">অনুশীলনে প্রস্তুত?</h2>
+          <p class="ap-lp__sub">অ্যাকাউন্ট খুলুন এবং 10,000 মার্কিন ডলারের ভার্চুয়াল ব্যালেন্স দিয়ে ডেমো অ্যাকাউন্টে অনুশীলন করুন, টাকার ঝুঁকি ছাড়াই।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">অ্যাকাউন্ট খুলুন</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ডেমো চেষ্টা করুন</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>নিরাপদ প্ল্যাটফর্ম</strong><span>সুরক্ষিত লগইন ও পরিচয় যাচাই</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>বহু ভাষায় সহায়তা</strong><span>প্রতিদিন সহায়তা</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>বিনামূল্যে ডেমো অ্যাকাউন্ট</strong><span>অনুশীলনের জন্য 10,000 ডলার ভার্চুয়াল</span></li>
+          </ul>
+          <p class="ap-lp__risco">ট্রেডিংয়ে বিনিয়োগকৃত মূলধন হারানোর ঝুঁকি রয়েছে।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

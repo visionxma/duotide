@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Awesome Oscillator (AO) เป็นหนึ่งในอินดิเคเตอร์โมเมนตัมที่ได้รับความนิยมมากที่สุดในหมู่เทรดเดอร์ที่เทรดกราฟระยะสั้นและระยะกลาง สร้างโดยเทรดเดอร์ Bill Williams มันช่วยให้เห็นว่าแรงเบื้องหลังการเคลื่อนไหวของราคาในปัจจุบันกำลังเพิ่มขึ้นหรือลดลง ซึ่งแตกต่างจากการดูเพียงว่าราคากำลังขึ้นหรือลง</p><p>ในบทความนี้คุณจะเข้าใจวิธีคำนวณ AO วิธีที่มันปรากฏบนกราฟ และสามเทคนิคยอดนิยมในการตีความมันในทางปฏิบัติ พร้อมตัวอย่างตัวเลขเพื่อให้เข้าใจแนวคิดชัดเจนขึ้น</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-awesome-oscillator-guia.svg" alt="กราฟ: ETH/USDT รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Binance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: ETH/USDT รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Binance วิเคราะห์เอง</figcaption></figure><h2 id="awesome-oscillator-ค-ออะไรและคำนวณอย-างไร">Awesome Oscillator คืออะไรและคำนวณอย่างไร</h2><p>AO เป็นฮิสโตแกรมที่อยู่ใต้กราฟราคา ประกอบด้วยแท่งสีเขียวและสีแดงที่แกว่งขึ้นลงเหนือและใต้เส้นศูนย์ สูตรคำนวณนั้นง่าย คือนำค่าเฉลี่ยเคลื่อนที่อย่างง่าย 5 ช่วงเวลาของจุดกึ่งกลางแท่งเทียน (ราคาสูงสุดบวกราคาต่ำสุด หารด้วยสอง) ลบด้วยค่าเฉลี่ยเคลื่อนที่อย่างง่าย 34 ช่วงเวลาของจุดกึ่งกลางเดียวกันนี้</p><p>ในทางปฏิบัติ: AO = MA5(จุดกึ่งกลาง) − MA34(จุดกึ่งกลาง) หากค่าเฉลี่ยระยะสั้นอยู่เหนือค่าเฉลี่ยระยะยาว ผลลัพธ์จะเป็นบวกและแท่งจะเป็นสีเขียว หากอยู่ต่ำกว่า ผลลัพธ์จะเป็นลบและแท่งจะเป็นสีแดง สมมติว่าค่าเฉลี่ย 5 ช่วงเวลาของจุดกึ่งกลางอยู่ที่ R$ 27,40 และค่าเฉลี่ย 34 ช่วงเวลาอยู่ที่ R$ 26,90 ค่า AO ในแท่งเทียนนั้นจะเป็น R$ 0,50 บวก ซึ่งเป็นสัญญาณว่าโมเมนตัมระยะสั้นแข็งแกร่งกว่าโมเมนตัมระยะยาว</p><p>สังเกตว่า AO ไม่ได้ดูราคาปิดแบบเดี่ยวๆ แต่มันเปรียบเทียบความเร็วสองแบบที่แตกต่างกันของตลาด การเปรียบเทียบนี้เองที่ช่วยให้ระบุการเปลี่ยนแปลงของแรงในการเคลื่อนไหวได้ บ่อยครั้งก่อนที่ราคาจะยืนยัน</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="เทคน-คท-1-การต-ดเส-นศ-นย">เทคนิคที่ 1 — การตัดเส้นศูนย์</h2><p>การอ่านค่า AO ที่ตรงไปตรงมาที่สุดคือสังเกตว่าฮิสโตแกรมตัดจากลบเป็นบวกเมื่อไร (แท่งเปลี่ยนจากสีแดงเป็นสีเขียว) หรือในทางกลับกัน การตัดขึ้นเหนือเส้นศูนย์บ่งชี้ว่าแรงซื้อระยะสั้นแซงหน้าแรงขายระยะยาวแล้ว และมักถูกตีความว่าเป็นสัญญาณของการขึ้นที่เป็นไปได้ การตัดลงมีการตีความตรงกันข้าม</p><p>เทคนิคนี้ทำงานได้ดีที่สุดเมื่อใช้ร่วมกับแนวโน้มใหญ่ของสินทรัพย์ การตัดขึ้นภายในแนวโน้มขาขึ้นที่ตั้งตัวแล้วมักน่าเชื่อถือกว่าสัญญาณเดียวกันในตลาดที่ไม่มีทิศทางชัดเจน เคลื่อนไหวแบบไซด์เวย์</p><h2 id="เทคน-คท-2-จานรอง-saucer">เทคนิคที่ 2 — จานรอง (Saucer)</h2><p>รูปแบบจานรองปรากฏขึ้นเมื่อฮิสโตแกรม ขณะอยู่ด้านใดด้านหนึ่งของเส้นศูนย์ (เช่น ด้านบวก) สร้างแท่งติดต่อกันสามแท่ง แท่งแรกสูงกว่า แท่งที่สองต่ำกว่า (การลดลงของแรงชั่วขณะ) และแท่งที่สามกลับขึ้นมาอีกครั้งและสูงกว่าแท่งที่สอง รูปแบบนี้คล้ายจานรองและบ่งชี้ว่าการหยุดพักเล็กน้อยของโมเมนตัมได้ผ่านพ้นไปแล้ว โดยที่ฮิสโตแกรมไม่จำเป็นต้องตัดผ่านเส้นศูนย์</p><p>เป็นเทคนิคที่ใช้โดยผู้ที่ต้องการเข้าเทรดเร็วขึ้น ตามทิศทางแนวโน้มที่ AO แสดงอยู่แล้ว โดยไม่ต้องรอการตัดเส้นแบบสมบูรณ์ แต่เนื่องจากเป็นสัญญาณที่เกิดก่อน มันก็มีความเสี่ยงของสัญญาณหลอกมากขึ้นเช่นกัน</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="เทคน-คท-3-สองยอด-twin-peaks">เทคนิคที่ 3 — สองยอด (Twin Peaks)</h2><p>รูปแบบสองยอดเป็นการตีความถึงความเป็นไปได้ของการกลับตัว ในด้านบวกของฮิสโตแกรม รูปแบบนี้เกิดขึ้นเมื่อมีการสร้างยอดขึ้นสองยอด โดยยอดที่สองต่ำกว่ายอดแรก และมีหุบเขาระหว่างสองยอดที่ไม่ลดลงต่ำกว่าเส้นศูนย์ การสูญเสียแรงระหว่างสองยอดนี้ แม้ฮิสโตแกรมจะไม่กลับเป็นลบ ถูกตีความว่าเป็นสัญญาณเตือนความอ่อนแอของแนวโน้มขาขึ้น ภาพสะท้อนในด้านลบเตือนถึงความเป็นไปได้ที่แนวโน้มขาลงจะสิ้นสุดลง</p><p>เนื่องจากเป็นการเปรียบเทียบความเข้มข้นของการเคลื่อนไหวสองครั้งในทิศทางเดียวกัน เทคนิคนี้มักปรากฏช้ากว่ารูปแบบจานรองเล็กน้อย แต่มักสร้างสัญญาณหลอกน้อยกว่า</p><h2 id="ว-ธ-ใช-awesome-oscillator-ในช-ว-ตประจำว-น">วิธีใช้ Awesome Oscillator ในชีวิตประจำวัน</h2><p>ไม่ควรใช้เทคนิคใดในสามเทคนิคนี้เดี่ยวๆ เป็นตัวกระตุ้นอัตโนมัติในการเข้าเทรด AO ทำงานได้ดีที่สุดในฐานะเครื่องมือยืนยัน โดยก่อนอื่นให้สังเกตบริบทของกราฟ แนวโน้ม ระดับแนวรับและแนวต้านที่ใกล้ที่สุด แล้วจึงค่อยดูฮิสโตแกรมเพื่อยืนยันว่าโมเมนตัมสนับสนุนหรือขัดแย้งกับการตีความนั้น</p><p>ควรจำไว้ว่าเนื่องจาก AO คำนวณด้วยค่าเฉลี่ยเคลื่อนที่ มันจึงตอบสนองต่ออดีตอันใกล้ของราคา และไม่เคยคาดการณ์อนาคตได้อย่างแน่นอน ใน Duotide สามารถพล็อต Awesome Oscillator ควบคู่กับกราฟราคาและทดสอบสามเทคนิคนี้ในสินทรัพย์และกรอบเวลาต่างๆ ก่อนนำไปใช้กับเงินจริง</p><p>กำหนดไว้เสมอ ก่อนเข้าเทรด ว่าคุณยอมขาดทุนได้มากแค่ไหนหากสัญญาณของ AO ไม่ได้รับการยืนยัน การเทรดมีความเสี่ยง และไม่มีอินดิเคเตอร์ใด รวมถึง Awesome Oscillator ที่จะขจัดความเป็นไปได้ในการขาดทุนได้</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

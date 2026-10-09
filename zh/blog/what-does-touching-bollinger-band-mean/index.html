@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -218,7 +218,7 @@
           <div class="ap__texto article">
             <p>布林带几乎出现在所有图表平台上，很多新手交易者很快就学会了一条简化的规则：价格触及上轨，可能会跌；价格触及下轨，可能会涨。这种简化的解读，忽略了这个指标的核心要点——它本质上是统计学的，而不是一个现成的买入或卖出信号。</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-sao-as-bandas-de-bollinger.svg" alt="图表：S&amp;P 500，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：S&amp;P 500，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="布林带背后的计算方式">布林带背后的计算方式</h2><p>中轨是一条简单移动平均线，通常为20周期。上轨和下轨的计算方法，是在这条均线基础上加上或减去价格相对于均线的标准差的若干倍，通常是两倍：</p><p><strong>中轨 = 20周期简单移动平均线</strong></p><p><strong>上轨 = 中轨 + (2 x 标准差)</strong></p><p><strong>下轨 = 中轨 − (2 x 标准差)</strong></p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="一个数值示例">一个数值示例</h2><p>假设某股票20周期移动平均线为R$ 48,00，近期标准差为R$ 1,50。两条轨道的计算如下：</p><ul><li>上轨 = R$ 48,00 + (2 x R$ 1,50) = R$ 51,00</li><li>下轨 = R$ 48,00 − (2 x R$ 1,50) = R$ 45,00</li></ul><p>这在均线周围形成了一个从R$ 45,00到R$ 51,00的通道。由于计算使用了标准差，它会自我调整：如果该资产的波动性增加，标准差就会增大，两条轨道就会远离均线。如果波动性下降，两条轨道就会靠拢。</p><h2 id="触及轨道真正意味着什么">触及轨道真正意味着什么</h2><p>从统计学角度来说，使用两倍标准差是为了在假设价格接近正态分布的前提下，让通道能够涵盖大部分正常的价格波动。但在实际中，价格触及或突破轨道的频率，比这个理论假设所暗示的要高，因为市场的表现并不完全符合理想的统计分布。触及上轨意味着价格相对于自身近期均线已经被拉伸，并不意味着接下来一定会下跌。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="挤压-当两条轨道收窄时">挤压：当两条轨道收窄时</h2><p>当波动性在一段时间内下降时，两条轨道会明显靠拢，形成通常所说的“挤压”（squeeze）。这种收窄往往预示着即将出现更大幅度的行情，但并不表明未来行情的方向。挤压之后既可能出现向上突破，也可能出现向下突破，该指标本身无法预判会是哪一种。</p><h2 id="强劲趋势中价格沿轨道运行">强劲趋势中价格沿轨道运行</h2><p>在强劲的上升趋势中，价格连续多根K线紧贴或反复触及上轨的情况很常见，这并不意味着即将反转。在强劲趋势期间，每次价格触及上轨就卖出的交易者，往往会累积亏损，因为他们是在对抗主导行情，而不是识别出真正的力量衰竭。轨道在明确趋势中的表现，与在横盘市场中的表现不同，把这两种情境一概而论是一个常见的错误。</p><h2 id="区间市场与趋势市场的区别">区间市场与趋势市场的区别</h2><p>在没有明确方向、在区间内波动的市场中，触及上轨或下轨往往是行情可能耗尽更有用的信号，因为在这种情境下，价格历史上会回归到均线附近。而在一个趋势明确的市场中，轨道更适合作为衡量与均线距离的参考，而不是反转的触发条件。在决定如何使用触及轨道这一信号之前，值得先判断该资产是处于趋势中还是横盘中。</p><h2 id="调整周期和倍数">调整周期和倍数</h2><p>20周期加两倍标准差的默认设置是一个不错的起点，但并非一成不变的铁律。更短的周期会让轨道对近期波动性的变化更敏感，反应更快，但通道本身的形态也会有更多波动。更长的周期会平滑这些变化，代价是对该资产波动性真正的改变反应更慢。同样，增大标准差的倍数会拓宽通道，减少价格触及轨道的次数，而减小倍数则效果相反。在特定资产的历史数据上测试不同的组合，有助于理解哪种调整最适合所打算进行的操作类型。</p><h2 id="从这里能带到图表上的启示">从这里能带到图表上的启示</h2><p>布林带描述的是波动性和相对于均线的统计距离，而不是自动的反转预测。把这个指标与趋势背景、支撑和阻力结合使用，往往比把每次触及轨道都当作孤立的入场信号，能产生更有用的判断。</p>
             <div class="bq-post__cta">
-              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 美元虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
@@ -251,12 +251,28 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">准备好动手实践了吗？</h2>
+          <p class="ap-lp__sub">开设账户，在模拟账户中用 10,000 美元虚拟资金练习，无需冒真金白银的风险。</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">开设账户</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">试用模拟账户</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>安全的平台</strong><span>受保护的登录与身份验证</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>多语言支持</strong><span>每天都有人帮助</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>免费模拟账户</strong><span>10,000 美元虚拟资金练习</span></li>
+          </ul>
+          <p class="ap-lp__risco">交易存在损失投资本金的风险。</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -320,6 +336,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

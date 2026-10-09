@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>ดัชนีความแข็งขันสัมพัทธ์ หรือที่รู้จักกันในชื่อย่อ RVI (จาก Relative Vigor Index) เป็นอินดิเคเตอร์โมเมนตัมที่พยายามตอบคำถามง่ายๆ ข้อหนึ่ง คือแรงที่ผลักราคาขึ้นหรือลงนั้นมีแรงหนุนจริงหรือเป็นเพียงการกระตุกชั่วคราว ต่างจากค่าเฉลี่ยเคลื่อนที่ที่ดูเพียงว่าราคากำลังไปทางไหน RVI ดูที่<em>วิธีที่</em>แท่งเทียนก่อตัวขึ้น โดยเปรียบเทียบราคาปิดกับราคาเปิดและเชื่อมโยงส่วนต่างนี้กับขนาดทั้งหมดของช่วงเวลานั้น</p><p>ตรรกะเบื้องหลังนี้มาจากการสังเกตว่า ในแนวโน้มขาขึ้นที่แข็งแรง ราคามักจะปิดใกล้จุดสูงสุดของแท่งเทียน ในแนวโน้มขาลง สิ่งตรงข้ามจะเกิดขึ้น คือราคาปิดใกล้จุดต่ำสุด เมื่อสิ่งนี้หยุดเกิดขึ้น แม้ราคาจะยังคงขึ้นหรือลงอยู่ RVI ก็บ่งชี้ไปแล้วว่าแรงของการเคลื่อนไหวกำลังอ่อนแอลง</p><figure class="ap__grafico"><img src="/assets/graficos/indice-de-vigor-relativo-rvi-como-usar.svg" alt="กราฟ: Microsoft รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: Microsoft รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="ว-ธ-คำนวณ-rvi">วิธีคำนวณ RVI</h2><p>สูตรพื้นฐานสำหรับแท่งเทียนเดียวคือ RVI = (ราคาปิด − ราคาเปิด) ÷ (ราคาสูงสุด − ราคาต่ำสุด) ผลลัพธ์จะอยู่ระหว่าง -1 ถึง 1 ค่าที่ใกล้ 1 แสดงถึงแท่งเทียนที่มีแรงซื้อแข็งแกร่ง โดยราคาปิดอยู่ใกล้จุดสูงสุดมาก ค่าที่ใกล้ -1 บ่งชี้สิ่งตรงข้าม คือแรงขายที่ครอบงำ</p><p>ในทางปฏิบัติ ไม่มีใครใช้ค่าจากแท่งเทียนเดียวเดี่ยวๆ เพราะสัญญาณรบกวนจะมากเกินไป ด้วยเหตุนี้ เวอร์ชันที่ใช้ในแพลตฟอร์มวิเคราะห์จึงทำให้การคำนวณนี้นุ่มนวลขึ้นด้วยค่าเฉลี่ยเคลื่อนที่แบบธรรมดา มักเป็น 10 ช่วงเวลา ทั้งในตัวเศษและตัวส่วน ผลลัพธ์คือเส้นที่มั่นคงกว่า พร้อมกับเส้นที่สอง เรียกว่าเส้นสัญญาณ ซึ่งมักเป็นค่าเฉลี่ยถ่วงน้ำหนัก 4 ช่วงเวลาของ RVI เอง การตัดกันระหว่างสองเส้นนี้เองที่เทรดเดอร์ส่วนใหญ่สังเกต</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ว-ธ-ต-ความส-ญญาณ">วิธีตีความสัญญาณ</h2><p>สัญญาณที่พบบ่อยที่สุดคือการตัดกัน เมื่อ RVI ตัดขึ้นเหนือเส้นสัญญาณ เทรดเดอร์หลายคนมองว่าเป็นสัญญาณว่าแรงซื้อกำลังได้พื้นที่เพิ่ม การตัดในทิศทางตรงข้ามบ่งชี้สิ่งตรงกันข้าม การตัดกันเหล่านี้ทำงานได้ดีที่สุดเมื่อยืนยันการเคลื่อนไหวที่มีอยู่แล้วในกราฟราคา ไม่ใช่ใช้เป็นตัวกระตุ้นเดี่ยวๆ</p><p>การใช้แบบที่สอง ซึ่งมีคุณค่ามากกว่าสำหรับผู้ที่มีประสบการณ์อยู่บ้าง คือไดเวอร์เจนซ์ หากราคาของสินทรัพย์ทำจุดสูงสุดใหม่ แต่ RVI ทำจุดสูงสุดที่ต่ำกว่าครั้งก่อน นี่คือไดเวอร์เจนซ์ขาลง ราคาขึ้นแต่แรงขับเคลื่อนเบื้องหลังการขึ้นลดลง ตรรกะตรงข้ามใช้ได้กับจุดต่ำสุดเช่นกัน ราคาทำจุดต่ำสุดที่ต่ำกว่าในขณะที่ RVI ขึ้นเป็นสัญญาณว่าแรงขายอาจกำลังหมดลง</p><h2 id="ต-วอย-างต-วเลข">ตัวอย่างตัวเลข</h2><p>ลองนึกภาพหุ้นตัวหนึ่งเปิดตลาดที่ R$ 38,00 ระหว่างวันแกว่งอยู่ระหว่างจุดต่ำสุด R$ 37,80 และจุดสูงสุด R$ 39,50 ปิดที่ R$ 39,20 เมื่อใช้สูตรของแท่งเทียนเดียว: (39,20 − 38,00) ÷ (39,50 − 37,80) = 1,20 ÷ 1,70 = 0,70 ค่านี้เพียงค่าเดียวก็แสดงให้เห็นแท่งเทียนที่แข็งแกร่งแล้ว โดยราคาปิดอยู่ใกล้จุดสูงสุดของวันมาก หากในวันต่อมาราคายังคงขึ้นต่อไปแต่อัตราส่วนที่คำนวณได้นี้ลดลงเหลือ 0,50 แล้ว 0,30 นั่นแสดงถึงแรงที่ลดลงแม้ราคาจะยังขึ้นอยู่ เป็นสัญญาณเตือนว่าแนวโน้มอาจกำลังหมดเชื้อเพลิงก่อนที่จะกลับตัวในกราฟด้วยซ้ำ</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ข-อผ-ดพลาดท-พบบ-อยและข-อควรระว-งในการใช-rvi">ข้อผิดพลาดที่พบบ่อยและข้อควรระวังในการใช้ RVI</h2><p>ข้อผิดพลาดแรกคือการมองว่า RVI เป็นอินดิเคเตอร์คาดการณ์ล่วงหน้าที่สมบูรณ์แบบ โดยธรรมชาติของมัน มันเป็นอินดิเคเตอร์ยืนยันและวัดแรง ไม่ใช่การคาดการณ์แท่งเทียนถัดไป ข้อผิดพลาดที่สองคือการใช้มันเดี่ยวๆ เช่นเดียวกับออสซิลเลเตอร์ที่อิงราคาใดๆ มันสามารถสร้างสัญญาณหลอกได้ในตลาดที่ไม่มีทิศทางชัดเจน แกว่งไปมารอบเส้นสัญญาณโดยไม่มีอะไรสำคัญเกิดขึ้นกับราคา ด้วยเหตุนี้ เทรดเดอร์หลายคนจึงใช้ RVI ร่วมกับการอ่านแนวโน้มที่กว้างขึ้น เช่น ค่าเฉลี่ยเคลื่อนที่ที่มีช่วงเวลานานกว่า โดยใช้ออสซิลเลเตอร์เพียงเพื่อจับจังหวะการเข้าเทรดภายในทิศทางที่ระบุไว้แล้ว</p><p>ควรจำไว้ด้วยว่าไม่มีอินดิเคเตอร์ทางเทคนิคใดรับประกันผลลัพธ์ RVI ช่วยจัดระเบียบการอ่านแรงและความอ่อนแอของการเคลื่อนไหว แต่ตลาดสามารถทำให้สัญญาณใดๆ ไม่เป็นจริงได้ทุกเมื่อ และการเทรดมักมีความเสี่ยงในการขาดทุนเสมอ</p><h2 id="นำ-rvi-ไปใช-จร-ง">นำ RVI ไปใช้จริง</h2><p>สำหรับผู้เริ่มต้น วิธีง่ายๆ ในการทดสอบอินดิเคเตอร์นี้คือสังเกตสินทรัพย์ที่คุณติดตามอยู่แล้ว และบันทึกเป็นเวลาหนึ่งสัปดาห์ถึงการตัดกันระหว่าง RVI และเส้นสัญญาณ เปรียบเทียบกับสิ่งที่เกิดขึ้นกับราคาในเวลาต่อมา วิธีนี้สร้างข้อมูลอ้างอิงส่วนตัวว่าอินดิเคเตอร์ทำงานอย่างไรกับสินทรัพย์ตัวนั้นโดยเฉพาะ ก่อนคิดจะใช้มันในการตัดสินใจจริง ในแพลตฟอร์มอย่าง Duotide สามารถเพิ่ม RVI เข้าไปในกราฟและดูพฤติกรรมนี้เคียงข้างกับราคาได้ ซึ่งช่วยให้การศึกษาแบบนี้ง่ายขึ้นมากก่อนการเทรดใดๆ</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

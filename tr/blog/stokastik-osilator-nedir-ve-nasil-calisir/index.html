@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Stokastik Osilatör basit bir fikirden yola çıkar: tutarlı bir yükselişte fiyat genelde son işlem aralığının tepesine yakın kapanır. Tutarlı bir düşüşte ise dibine yakın kapanma eğilimindedir. Gösterge bu gözlemi 0 ile 100 arasında bir ölçeğe dönüştürür ve son kapanışın, belirli sayıda mumun zirve ve dip aralığı içinde nerede olduğunu gösterir.</p><p>1950'lerde George Lane tarafından yaratılan Stokastik, görselleştirilmesinin kolay olması ve piyasanın ritim değişikliklerine görece hızlı tepki vermesi nedeniyle en çok kullanılan osilatörler arasında yer almaya devam ediyor. Ama herhangi bir momentum göstergesi gibi, arkasındaki hesabı anladığınızda ortaya çıkan sınırlamaları vardır.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-oscilador-estocastico.svg" alt="Grafik: EUR/USD, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: EUR/USD, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz.</figcaption></figure><h2 id="k-formulu">%K formülü</h2><p>Göstergenin ana çizgisi olan %K şu formülü izler:</p><p><strong>%K = 100 × (Güncel kapanış − Periyodun en düşük dibi) ÷ (Periyodun en yüksek zirvesi − Periyodun en düşük dibi)</strong></p><p>Bir varlığın son 14 mumunda zirvenin R$ 110,00 ve dibin R$ 90,00 olduğunu varsayalım. En son kapanış R$ 106,00 ise, hesap şöyle olur:</p><p><strong>%K = 100 × (106 − 90) ÷ (110 − 90) = 100 × 16 ÷ 20 = 80</strong></p><p>80'lik bir %K, fiyatın gözlemlenen fiyat aralığının üst yüzde 20'sinde kapandığı anlamına gelir — periyodun zirvesine yakın, ille de tarihi zirvede değil.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="d-neye-yarar">%D neye yarar</h2><p>Çoğu platform %K'yı, %K'nın (genelde 3 periyotluk) basit hareketli ortalaması olan ikinci bir çizgi olan %D ile birlikte çizer. %D, %K'nın ani dalgalanmalarını yumuşatır ve bir sinyal çizgisi olarak çalışır: %K, %D'yi aşağıdan yukarı kestiğinde bazı traderlar alıcı gücün girdiğini görür; yukarıdan aşağı kestiğinde satıcı gücü.</p><p>%D'yi hesaplamadan önce %K'nın kendisine ekstra bir yumuşatma uygulamak da yaygındır — buna yavaş Stokastik denir — bu da biraz daha yavaş tepki verme pahasına yanlış sinyalleri azaltır.</p><h2 id="asırı-alım-ve-asırı-satım-abartıya-dikkat">Aşırı alım ve aşırı satım: abartıya dikkat</h2><p>En sık bahsedilen bölgeler 80'in üzeri (aşırı alım) ve 20'nin altıdır (aşırı satım). Klasik hata, bunu otomatik bir satış veya alım emri olarak ele almaktır. Güçlü bir yükseliş trendinde, %K art arda birçok mum boyunca 80'in üzerinde yapışık kalabilir ve gösterge gerildi diye satmak, hala nefesi olan bir hareketten çıkmak anlamına gelir.</p><ul><li><strong>%K 80'in üzerinde</strong>: fiyat son aralığın tepesine yakın kapanıyor — otomatik bir dönüş sinyali değil, alıcı güç.</li><li><strong>%K 20'nin altında</strong>: fiyat son aralığın dibine yakın kapanıyor — aynı uyarıyla, satıcı güç.</li><li><strong>Uyumsuzluk</strong>: fiyat daha yüksek bir zirve yaparken %K daha düşük bir zirve yaptığında (veya tersi), fiyat hala ilerlese bile momentum güç kaybediyor demektir.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="gosterge-nerede-daha-iyi-calısır">Gösterge nerede daha iyi çalışır</h2><p>Stokastik, güçlü ve uzun süreli trendlerden çok, destek ve direnç arasında salınan, belirli bir bant içinde hareket eden piyasalarda daha iyi davranma eğilimindedir. Yatay bir bantta, 20 ve 80 uç noktalarına yakın %K ve %D kesişimleri dönüş noktalarını daha sık işaretleme eğilimindedir. Güçlü bir trendde, ideal olan göstergeyi trendin sonunu tahmin etmeye çalışmak için değil, ana hareket içindeki düzeltmeleri ölçmek için kullanmaktır.</p><p>Pratik bir örnek: yükseliş trendindeki bir döviz çiftinde, %K'yı 90'dan 20'ye yakın bir seviyeye götüren bir gerileme, özellikle grafiğin zirve ve dip yapısı yükselişe devam ediyorsa, sadece hareketin sağlıklı bir duraklaması olabilir. Sadece osilatör sıfırlandı diye satmak, daha büyük bağlamı göz ardı eder.</p><h2 id="parcaları-birlestirmek">Parçaları birleştirmek</h2><p>Stokastik Osilatör, tek başına olmaktan çok daha geniş bir okumanın parçası olarak daha iyi çalışır. Onu grafiğin ana trendiyle, destek ve direnç seviyeleriyle veya trend gücünü ölçen başka bir göstergeyle birleştirmek, sadece 20 veya 80'i kesen bir sayıya bağlı olacak girişleri filtrelemeye yardımcı olur. Herhangi bir teknik analiz aracı gibi, okumanın kalitesini artırır ama bir işlemin ters gitme riskini ortadan kaldırmaz — pozisyon yönetimi ve kayıp sınırı, girişteki sinyal ne kadar net görünürse görünsün, sürecin gerekli bir parçası olmaya devam eder.</p>
             <div class="bq-post__cta">
-              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 USD sanal bakiyeli demo hesapta test edin.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/macd-stokastik-ve-parabolic-sar-nasil-birlestirilir/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stokastik ve Parabolic SAR: Üçünü Nasıl Birleştirmeli</span><span class="bq__meta">24.09.2026 · 7 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/macd-stokastik-ve-parabolic-sar-nasil-birlestirilir/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stokastik ve Parabolic SAR: Üçünü Nasıl Birleştirmeli</span><span class="bq__meta">24.09.2026 · 7 dk okuma</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Uygulamaya hazır mısınız?</h2>
+          <p class="ap-lp__sub">Hesabınızı açın ve 10.000 ABD doları sanal bakiyeyle demo hesapta, para riske atmadan pratik yapın.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Hesap aç</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Demoyu dene</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Güvenli platform</strong><span>Korumalı giriş ve kimlik doğrulama</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Çok dilli destek</strong><span>Her gün yardım</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Ücretsiz demo hesap</strong><span>Pratik için 10.000 USD sanal</span></li>
+          </ul>
+          <p class="ap-lp__risco">İşlem yapmak, yatırılan sermayeyi kaybetme riski taşır.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

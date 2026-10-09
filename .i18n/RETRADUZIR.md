@@ -4,7 +4,7 @@ A página abaixo foi reescrita em português. O arquivo em
 `/Users/alexandrehenrique/duotide/.i18n/fonte/` já está atualizado; a tradução antiga
 no seu idioma ficou velha e o verificador vai acusá-la.
 
-Página a retraduzir: `duotide-conta-demo.html` (conta demo, reescrita no formato demo x conta real). Mantenha "R$ 10.000" como valor (é em reais, não converta).
+Página a retraduzir: `duotide-conta-demo.html` (conta demo, reescrita no formato demo x conta real). O saldo da conta demo é em dólar: "US$ 10.000" (use o formato do idioma, ex.: en "US$10,000"); não converta para reais.
 
 Regras — além de tudo o que está em `INSTRUCOES-TRADUCAO.md`, que continua valendo:
 

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>ينظر كثيرون إلى ADX متوقعين أن يخبرهم ما إذا كان السعر سيرتفع أو ينخفض. ليس هذا ما يفيد فيه. يقيس مؤشر الاتجاه المتوسط (ADX، بالاختصار الإنجليزي) قوة الحركة فقط، تاركًا الاتجاه لخطين آخرين يأتيان عادة معه في اللوحة نفسها.</p><p>هذا الخلط شائع لأن المؤشر يتراوح من 0 إلى 100، مشابهًا لمذبذب عادي. لكن يمكن أن يظهر ADX عند 30 في ارتفاع قوي كما في انخفاض قوي بنفس الطريقة. فهم هذا الفرق يتجنب دخولات خاطئة منذ البداية.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-indicador-adx.svg" alt="الرسم البياني: Nvidia، يومي، من 02‏/03‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص." width="960" height="540" loading="lazy" decoding="async"><figcaption>الرسم البياني: Nvidia، يومي، من 02‏/03‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص.</figcaption></figure><h2 id="الخطوط-الثلاثة-للنظام">الخطوط الثلاثة للنظام</h2><p>لا يأتي ADX بمفرده أبدًا. إنه جزء من مجموعة ثلاثة خطوط ابتكرها جي ويلز وايلدر:</p><ul><li><strong>+DI</strong>: يقيس مدى هيمنة الحركة الصاعدة على الفترة المدروسة.</li><li><strong>-DI</strong>: يقيس مدى هيمنة الحركة الهابطة على نفس الفترة.</li><li><strong>ADX</strong>: يُظهر حجم الفرق بين +DI وDI-، أي قوة الاتجاه الرابح.</li></ul><p>عندما يكون +DI فوق DI-، يكون السوق قد مال للأعلى بثبات أكبر. وعندما يكون DI- فوق، يكون ضغط البيع أكثر إصرارًا. يرتفع ADX عندما يزداد هذا الفرق وينخفض عندما يتقارب الخطان مجددًا.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="كيف-يعمل-الحساب">كيف يعمل الحساب</h2><p>تبدأ العملية بمقارنة أعلى وأدنى سعر لكل شمعة بالشمعة السابقة، ضمن ما يُسمى المدى الحقيقي (الذي يراعي أيضًا الفجوات). ينتج هذا الفرق الحركة الاتجاهية الموجبة والسالبة، التي بعد تنعيمها (عادة على 14 فترة) تشكل +DI وDI-.</p><p>انطلاقًا من ذلك، يُحسب مؤشر الاتجاه (DX):</p><p><strong>DX = 100 × |+DI − (-DI)| ÷ (+DI + (-DI))</strong></p><p>ADX هو المتوسط المنعّم لـDX عبر الوقت. لست بحاجة لإجراء هذا الحساب يدويًا — أي منصة رسوم بيانية ترسم المؤشر تلقائيًا — لكن فهم المعادلة يساعد على تفسير لماذا يتفاعل ADX بتأخير: فهو يؤكد القوة فقط بعد أن تكون الحركة قد بدأت بالفعل.</p><h2 id="كيفية-قراءة-مقياس-adx">كيفية قراءة مقياس ADX</h2><ul><li><strong>تحت 20</strong>: اتجاه ضعيف أو سوق جانبي.</li><li><strong>بين 20 و25</strong>: قد يكون اتجاه في طور التكون.</li><li><strong>بين 25 و40</strong>: اتجاه راسخ بالفعل.</li><li><strong>فوق 40</strong>: اتجاه قوي؛ يجدر التحقق من أن السعر ليس ممتدًا أكثر من اللازم.</li></ul><p>هذه النطاقات مراجع، لا حدود صارمة. ADX عند 24 وآخر عند 26 لا يصفان عالمين مختلفين. ما يهم هو ميل الخط والعلاقة بين +DI وDI- حوله.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="مثال-بالا-رقام">مثال بالأرقام</h2><p>تخيل زوج عملات يكون فيه، في يوم معين، +DI عند 32 وDI- عند 12، مع ارتفاع ADX من 18 إلى 27 على مدى أسبوعين. القراءة: اكتسبت الحركة الصاعدة قوة باستمرار، والفرق بين المشترين والبائعين يتزايد — لا مجرد ذروة معزولة.</p><p>الآن غيّر السيناريو: ADX عند 26، لكن DI- عند 34 و+DI عند 15. رقم ADX مشابه للمثال السابق، إلا أن ضغط البيع هو المتحكم الآن. هذا يُظهر لماذا يكون النظر فقط إلى قيمة ADX، دون الخطوط الاتجاهية، نصف قراءة.</p><h2 id="ا-خطاء-شاي-عة-عند-استخدام-adx">أخطاء شائعة عند استخدام ADX</h2><p>ليس انخفاض ADX إشارة تلقائية على انعكاس — يمكن أن يشير ببساطة إلى أن الاتجاه فقد وتيرته، لكن السعر لا يزال يتبع نفس الاتجاه لفترة أطول. خطأ آخر هو تداول تقاطعات +DI وDI- عندما يكون ADX منخفضًا: في هذه الظروف، يكون السوق عادة جانبيًا، وتميل التقاطعات إلى التكرار دون توليد حركة حقيقية، مجرد ما يُسمى بضوضاء النطاق الجانبي.</p><p>إحدى طرق استخدام ADX بمعيار أوضح هي التعامل معه كمرشح قبل تطبيق استراتيجية أخرى. إذا كنت تتبع الاتجاهات بالمتوسطات المتحركة، مثلاً، يمكن أن تشترط ADX فوق 25 قبل اعتبار إشارة صالحة، مستبعدًا الدخولات في أسواق بلا اتجاه واضح.</p><h2 id="دمج-adx-في-عمليتك">دمج ADX في عمليتك</h2><p>عمليًا، يعمل ADX بشكل أفضل كمرشح سياق منه كمحفز دخول. يساعد على الإجابة عن سؤال يسبق قرار الشراء أو البيع: هل هذا السوق يتجه فعلاً، أم أحاول تطبيق استراتيجية اتجاه في بيئة جانبية؟ عند دمجه مع +DI وDI- للاتجاه، وتحليل الدعم والمقاومة للتوقيت، يكتسب المؤشر فائدة حقيقية. بمفرده، يروي نصف القصة فقط — وكما في أي صفقة في السوق المالي، لا يلغي أي مزيج من المؤشرات المخاطرة بالكامل.</p>
             <div class="bq-post__cta">
-              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 دولار أمريكي.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/macd-stochastic-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD والاستوكاستيك وParabolic SAR: كيفية الجمع بين الثلاثة</span><span class="bq__meta">24‏/09‏/2026 · 7 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/macd-stochastic-parabolic-sar-how-to-combine/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD والاستوكاستيك وParabolic SAR: كيفية الجمع بين الثلاثة</span><span class="bq__meta">24‏/09‏/2026 · 7 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">هل أنت مستعد للتطبيق العملي؟</h2>
+          <p class="ap-lp__sub">افتح حسابك وتدرّب على الحساب التجريبي برصيد افتراضي قدره 10,000 دولار، دون المخاطرة بأموالك.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">إنشاء حساب</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">جرّب الحساب التجريبي</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>منصة آمنة</strong><span>تسجيل دخول محمي والتحقق من الهوية</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>دعم بعدة لغات</strong><span>مساعدة متاحة كل يوم</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>حساب تجريبي مجاني</strong><span>10,000 دولار افتراضية للتدريب</span></li>
+          </ul>
+          <p class="ap-lp__risco">ينطوي التداول على خطر خسارة رأس المال المستثمر.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

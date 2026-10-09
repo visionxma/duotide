@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Diciptakan oleh John Bollinger pada tahun 1980-an, Bollinger Bands termasuk dalam kelompok kecil indikator yang menyesuaikan diri secara otomatis terhadap volatilitas aset, alih-alih menggunakan jarak harga tetap. Ini membuatnya berguna baik di pasar yang tenang maupun yang bergejolak, asalkan dipahami apa yang sebenarnya diukurnya.</p><p>Indikator ini terdiri dari tiga garis: satu moving average tengah dan dua band — atas dan bawah — dibangun dari deviasi standar harga di sekitar rata-rata tersebut. Jarak antar band membesar ketika volatilitas naik, dan mengecil ketika volatilitas turun.</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="Grafik: Ouro, harian, 01/04/2026 sampai 07/10/2026. Data: Yahoo Finance. Analisis sendiri." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: Ouro, harian, 01/04/2026 sampai 07/10/2026. Data: Yahoo Finance. Analisis sendiri.</figcaption></figure><h2 id="cara-kerja-perhitungannya">Cara Kerja Perhitungannya</h2><p>Konfigurasi standar menggunakan moving average sederhana 20 periode sebagai garis tengah, dengan band diposisikan pada jarak dua kali deviasi standar:</p><ul><li><strong>Band tengah</strong>: moving average sederhana 20 periode.</li><li><strong>Band atas</strong>: rata-rata 20 periode + (2 × deviasi standar 20 periode terakhir).</li><li><strong>Band bawah</strong>: rata-rata 20 periode − (2 × deviasi standar 20 periode terakhir).</li></ul><p>Misalkan rata-rata 20 periode sebuah aset berada di R$ 60,00 dan deviasi standar periode yang sama adalah R$ 3,00. Band atas akan berada di R$ 66,00 (60,00 + 2 × 3,00) dan band bawah di R$ 54,00 (60,00 − 2 × 3,00). Jika, pada periode yang lebih volatil, deviasi standar naik menjadi R$ 5,00, band akan melebar menjadi R$ 70,00 dan R$ 50,00, meski rata-rata tengah tetap di tempat yang sama.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="apa-yang-ditangkap-oleh-deviasi-standar">Apa yang Ditangkap oleh Deviasi Standar</h2><p>Deviasi standar adalah ukuran statistik dispersi: semakin banyak harga terkini bervariasi di sekitar rata-rata, semakin besar nilainya. Karena itulah band ini “bernapas” — melebar pada momen pergerakan lebih besar dan menyempit ketika harga mulai berosilasi sedikit.</p><h2 id="mengapa-menyentuh-band-bukan-sinyal-otomatis">Mengapa Menyentuh Band Bukan Sinyal Otomatis</h2><p>Kesalahan umum adalah memperlakukan sentuhan pada band atas sebagai sinyal jual dan sentuhan pada band bawah sebagai sinyal beli, seolah-olah band itu adalah atap dan lantai yang tetap. Band ini bukan itu. Dalam tren naik yang kuat, harga bisa berjalan menempel pada band atas selama beberapa candle berturut-turut, tanpa itu berarti pembalikan — Bollinger sendiri menyebut perilaku ini sebagai sinyal kekuatan tren, bukan kelelahan.</p><p>Pembacaan yang lebih kuat melihat perilaku harga terhadap band sepanjang waktu, bukan satu sentuhan tunggal yang berdiri sendiri. Harga yang menyentuh band atas dan segera menutup kembali ke dalamnya, membentuk candle reversal, membawa sinyal yang berbeda dari harga yang menembus band dan terus menjauh darinya candle demi candle.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="squeeze-ketika-band-menyempit">Squeeze: Ketika Band Menyempit</h2><p>Salah satu penggunaan indikator ini yang paling dikenal adalah mengidentifikasi apa yang disebut squeeze — momen ketika band menyempit cukup jauh, menandakan volatilitas yang secara historis rendah. Periode squeeze cenderung mendahului pergerakan yang lebih kuat, meski indikator ini tidak mengatakan ke arah mana pergerakan itu akan condong.</p><p>Contoh: jika jarak antara band sebuah aset turun ke level terendah dalam tiga bulan terakhir, ini menunjukkan bahwa pasar sedang terkompresi, biasanya sebelum ekspansi volatilitas. Trader yang bertransaksi pada pola ini biasanya menunggu breakout dari salah satu sisi rentang, disertai volume, untuk menentukan arah entry — alih-alih mencoba menebak sisi mana sebelum breakout terjadi.</p><h2 id="menyesuaikan-parameter">Menyesuaikan Parameter</h2><p>Periode 20 dan pengali 2 deviasi standar adalah standar pasar, tetapi bukan aturan tetap. Periode lebih pendek (seperti 10) membuat band lebih sensitif terhadap pergerakan terkini, berguna untuk transaksi jangka lebih pendek. Pengali lebih kecil (seperti 1,5) mempersempit band dan menghasilkan lebih banyak sentuhan, dengan biaya lebih banyak sinyal palsu.</p><h2 id="menggunakan-band-dengan-kriteria">Menggunakan Band dengan Kriteria</h2><p>Bollinger Bands bekerja lebih baik sebagai pembacaan volatilitas relatif dan konteks tren daripada sebagai pemicu beli atau jual yang berdiri sendiri. Dipadukan dengan indikator momentum, seperti RSI atau Stochastic, dan dengan perhatian pada perilaku harga — bukan hanya sentuhan pada garis —, band ini membantu membentuk pembacaan pasar yang lebih lengkap, selalu diingat bahwa tidak ada band yang menjamin harga akan berbalik pada titik yang diharapkan.</p>
             <div class="bq-post__cta">
-              <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual R$ 10.000.</p>
+              <p><strong>Berlatih sebelum mengambil risiko.</strong> Buat akun Duotide dan uji ide Anda di akun demo dengan dana virtual US$10.000.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun gratis</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Artikel terkait</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/id/blog/apa-itu-indikator-adx-dan-cara-kerjanya/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Indikator ADX dan Cara Kerjanya</span><span class="bq__meta">24/09/2026 · 6 menit baca</span></a>
-            <a class="bq__card" href="/id/blog/apa-itu-osilator-stokastik-dan-cara-kerjanya/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Osilator Stokastik dan Cara Kerjanya</span><span class="bq__meta">24/09/2026 · 5 menit baca</span></a>
-            <a class="bq__card" href="/id/blog/apa-itu-average-true-range-atr-dan-cara-menghitung/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Average True Range (ATR) dan Cara Menghitungnya</span><span class="bq__meta">24/09/2026 · 6 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/apa-itu-indikator-adx-dan-cara-kerjanya/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Indikator ADX dan Cara Kerjanya</span><span class="bq__meta">24/09/2026 · 6 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/apa-itu-osilator-stokastik-dan-cara-kerjanya/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Osilator Stokastik dan Cara Kerjanya</span><span class="bq__meta">24/09/2026 · 5 menit baca</span></a>
+            <a class="bq__card" href="/id/blog/apa-itu-average-true-range-atr-dan-cara-menghitung/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Apa itu Average True Range (ATR) dan Cara Menghitungnya</span><span class="bq__meta">24/09/2026 · 6 menit baca</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Siap mempraktikkannya?</h2>
+          <p class="ap-lp__sub">Buka akun dan berlatih di akun demo dengan dana virtual US$10.000, tanpa mempertaruhkan uang.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Buat akun</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-id" target="_blank" rel="noopener sponsored nofollow">Coba demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Platform aman</strong><span>Login terlindungi dan verifikasi identitas</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Dukungan multibahasa</strong><span>Bantuan setiap hari</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Akun demo gratis</strong><span>US$10.000 virtual untuk berlatih</span></li>
+          </ul>
+          <p class="ap-lp__risco">Trading memiliki risiko kehilangan modal yang diinvestasikan.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

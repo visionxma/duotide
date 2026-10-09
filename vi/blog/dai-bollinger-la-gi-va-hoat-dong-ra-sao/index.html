@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Được John Bollinger tạo ra vào những năm 1980, Dải Bollinger thuộc một nhóm nhỏ các chỉ báo tự điều chỉnh theo biến động của tài sản, thay vì dùng một khoảng cách giá cố định. Điều này khiến chúng hữu ích cả trong thị trường yên tĩnh lẫn sôi động, miễn là hiểu được chúng thực sự đo lường điều gì.</p><p>Chỉ báo này được hình thành từ ba đường: một đường trung bình động ở giữa và hai dải — trên và dưới — được xây dựng từ độ lệch chuẩn của giá quanh đường trung bình đó. Khoảng cách giữa các dải tăng lên khi biến động tăng, và giảm khi biến động giảm.</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-de-bollinger-como-funcionam.svg" alt="Biểu đồ: Ouro, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Ouro, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="cong-thuc-tinh-hoat-đong-nhu-the-nao">Công thức tính hoạt động như thế nào</h2><p>Cấu hình mặc định dùng một đường trung bình động đơn giản 20 phiên làm đường trung tâm, với các dải đặt cách hai lần độ lệch chuẩn:</p><ul><li><strong>Dải trung tâm</strong>: đường trung bình động đơn giản 20 phiên.</li><li><strong>Dải trên</strong>: trung bình 20 phiên + (2 × độ lệch chuẩn của 20 phiên gần nhất).</li><li><strong>Dải dưới</strong>: trung bình 20 phiên − (2 × độ lệch chuẩn của 20 phiên gần nhất).</li></ul><p>Giả sử đường trung bình 20 phiên của một tài sản đang ở R$ 60,00 và độ lệch chuẩn của cùng giai đoạn đó là R$ 3,00. Dải trên sẽ ở R$ 66,00 (60,00 + 2 × 3,00) và dải dưới ở R$ 54,00 (60,00 − 2 × 3,00). Nếu, trong một giai đoạn biến động hơn, độ lệch chuẩn tăng lên R$ 5,00, các dải mở rộng ra R$ 70,00 và R$ 50,00, ngay cả khi đường trung tâm vẫn ở cùng vị trí.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="đo-lech-chuan-đang-nam-bat-đieu-gi">Độ lệch chuẩn đang nắm bắt điều gì</h2><p>Độ lệch chuẩn là một thước đo thống kê về độ phân tán: giá gần đây dao động càng nhiều quanh đường trung bình, giá trị càng lớn. Đó là lý do các dải "thở" — mở ra trong những thời điểm chuyển động nhiều hơn và khép lại khi giá dao động ít.</p><h2 id="vi-sao-cham-dai-khong-phai-tin-hieu-tu-đong">Vì sao chạm dải không phải tín hiệu tự động</h2><p>Một sai lầm phổ biến là xem việc chạm dải trên là tín hiệu bán và chạm dải dưới là tín hiệu mua, như thể các dải là một trần và sàn cố định. Chúng không phải vậy. Trong một xu hướng tăng mạnh, giá có thể đi sát dải trên qua nhiều cây nến liên tiếp, mà điều đó không có nghĩa là đảo chiều — chính Bollinger gọi hành vi này là tín hiệu của sức mạnh xu hướng, không phải sự kiệt sức.</p><p>Cách đọc vững chắc hơn là nhìn vào hành vi của giá so với các dải theo thời gian, không phải một lần chạm đơn lẻ. Một mức giá chạm dải trên rồi ngay lập tức đóng cửa quay trở lại bên trong, tạo thành một cây nến đảo chiều, mang một tín hiệu khác so với một mức giá phá vỡ dải và tiếp tục rời xa nó qua từng cây nến.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="squeeze-khi-cac-dai-thu-hep-lai">Squeeze: khi các dải thu hẹp lại</h2><p>Một trong những cách dùng nổi tiếng nhất của chỉ báo này là xác định cái gọi là squeeze — thời điểm mà các dải thu hẹp đáng kể, báo hiệu biến động đang ở mức thấp trong lịch sử. Các giai đoạn squeeze có xu hướng đi trước những chuyển động mạnh hơn, dù chỉ báo không cho biết chuyển động đó sẽ nghiêng về phía nào.</p><p>Một ví dụ: nếu khoảng cách giữa các dải của một tài sản giảm xuống mức thấp nhất trong ba tháng gần nhất, điều đó cho thấy thị trường đang bị nén, thường trước một đợt mở rộng biến động. Các trader giao dịch theo mô hình này thường chờ cú phá vỡ ở một trong hai phía của biên độ, kèm khối lượng, để xác định hướng vào lệnh — thay vì cố đoán bên nào trước khi cú phá vỡ xảy ra.</p><h2 id="đieu-chinh-cac-tham-so">Điều chỉnh các tham số</h2><p>Chu kỳ 20 và hệ số nhân 2 độ lệch chuẩn là chuẩn thị trường, nhưng không phải quy tắc cố định. Các chu kỳ ngắn hơn (như 10) khiến các dải nhạy cảm hơn với các chuyển động gần đây, hữu ích cho các giao dịch ngắn hạn hơn. Các hệ số nhân nhỏ hơn (như 1,5) thu hẹp các dải và tạo ra nhiều lần chạm hơn, đánh đổi bằng nhiều tín hiệu giả hơn.</p><h2 id="su-dung-cac-dai-mot-cach-co-tieu-chi">Sử dụng các dải một cách có tiêu chí</h2><p>Dải Bollinger hoạt động tốt hơn như một cách đọc biến động tương đối và bối cảnh xu hướng hơn là một yếu tố kích hoạt mua hoặc bán đơn lẻ. Kết hợp với một chỉ báo động lượng, như RSI hoặc Stochastic, và chú ý đến hành vi của giá — không chỉ việc chạm vào đường — chúng giúp hình thành một cách đọc thị trường toàn diện hơn, luôn nhớ rằng không dải nào đảm bảo giá sẽ đảo chiều ở điểm dự kiến.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

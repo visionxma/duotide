@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Khác với phần lớn các chỉ báo, Average True Range (ATR) không cố dự đoán hướng đi nào cả. Nó chỉ đo một điều duy nhất: một tài sản thường di chuyển bao nhiêu, tính theo giá trị tuyệt đối, trong một chu kỳ. Đây là một thước đo độ biến động, không phải tín hiệu mua hay bán.</p><p>Được tạo ra bởi J. Welles Wilder, cùng tác giả của ADX và RSI, ATR xuất hiện trong hầu như mọi chiến lược cần xác định kích thước điểm dừng lỗ hoặc khối lượng vị thế dựa trên hành vi thực tế của tài sản, thay vì một giá trị cố định được chọn tùy tiện.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-average-true-range-atr.svg" alt="Biểu đồ: Ouro, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Ouro, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="vi-sao-chi-lay-gia-cao-nhat-tru-gia-thap-nhat-la-chua-đu">Vì sao chỉ lấy giá cao nhất trừ giá thấp nhất là chưa đủ</h2><p>Nếu bạn chỉ lấy giá thấp nhất trừ giá cao nhất của mỗi cây nến, bạn sẽ bỏ lỡ một chi tiết quan trọng: khoảng trống giá (gap). Hãy tưởng tượng một tài sản đóng cửa phiên trước ở R$ 50,00 và mở cửa phiên tiếp theo đã ở R$ 46,00, sau đó giao dịch giữa R$ 45,50 và R$ 46,80. Biến động trong cây nến (giá cao nhất trừ giá thấp nhất) chỉ là R$ 1,30. Nhưng biến động thực sự kể từ lần đóng cửa trước là R$ 4,50. Bỏ qua điều này sẽ đánh giá thấp độ biến động thực sự của tài sản.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-tinh-true-range">Cách tính True Range</h2><p>Để khắc phục vấn đề này, True Range (TR) của mỗi cây nến là giá trị lớn nhất trong ba phép tính:</p><ul><li>Giá cao nhất của cây nến hiện tại trừ giá thấp nhất của cây nến hiện tại;</li><li>Giá cao nhất của cây nến hiện tại trừ giá đóng cửa của cây nến trước đó (lấy giá trị tuyệt đối);</li><li>Giá thấp nhất của cây nến hiện tại trừ giá đóng cửa của cây nến trước đó (lấy giá trị tuyệt đối).</li></ul><p>Trong ví dụ trên, TR sẽ là giá trị lớn nhất trong số 1,30 (46,80 − 45,50), 3,20 (|46,80 − 50,00|) và 4,50 (|45,50 − 50,00|). Tức là, TR = R$ 4,50 — con số thực sự nắm bắt được độ lớn của biến động, bao gồm cả khoảng trống giá.</p><h2 id="tu-true-range-đen-atr">Từ True Range đến ATR</h2><p>ATR là một đường trung bình đã làm mượt của True Range qua một chu kỳ, thường là 14 cây nến. Giá trị đầu tiên thường là trung bình đơn giản của 14 TR đầu tiên. Sau đó, áp dụng phép làm mượt của Wilder:</p><p><strong>ATR hôm nay = ((ATR hôm trước × 13) + TR hôm nay) ÷ 14</strong></p><p>Giả sử ATR của hôm qua là R$ 2,00 và TR của hôm nay là R$ 4,50, theo ví dụ trước đó:</p><p><strong>ATR hôm nay = ((2,00 × 13) + 4,50) ÷ 14 = (26,00 + 4,50) ÷ 14 = 30,50 ÷ 14 ≈ R$ 2,18</strong></p><p>Hãy để ý cách một cây nến biến động mạnh duy nhất không làm ATR tăng vọt ngay lập tức — nó tăng dần dần, vì mang theo trọng số của 13 chu kỳ trước đó. Điều này là có chủ đích: ATR đo độ biến động lặp lại, không phải một đỉnh đơn lẻ.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="dung-đe-lam-gi-trong-thuc-te">Dùng để làm gì trong thực tế</h2><p>Cách dùng phổ biến nhất của ATR là xác định kích thước điểm dừng lỗ và khối lượng vị thế theo tỷ lệ với hành vi của chính tài sản đó, thay vì dùng một số điểm hoặc số tiền cố định cho bất kỳ thị trường nào.</p><p>Một ví dụ: nếu ATR của một tài sản là R$ 2,18, một điểm dừng lỗ đặt cách điểm vào lệnh 1,5 ATR sẽ cách R$ 3,27 so với giá vào lệnh (2,18 × 1,5). Với một tài sản biến động mạnh hơn, có ATR là R$ 8,00, cùng bội số 1,5 ATR sẽ cho ra một điểm dừng lỗ R$ 12,00 — rộng hơn nhiều, vì bản thân tài sản đó di chuyển nhiều hơn hằng ngày. Dùng cùng một khoảng cách dừng lỗ cố định trong cả hai trường hợp sẽ không hợp lý: với tài sản yên tĩnh hơn, điểm dừng lỗ sẽ quá rộng; với tài sản biến động mạnh hơn, quá hẹp và dễ bị chạm chỉ vì nhiễu bình thường của thị trường.</p><h2 id="atr-khong-cho-biet-gia-se-đi-ve-đau">ATR không cho biết giá sẽ đi về đâu</h2><p>Một sai lầm phổ biến là cố dùng ATR làm tín hiệu vào lệnh — một ATR cao không cho biết tăng hay giảm, chỉ cho biết biến động lớn hơn. Một đợt giảm mạnh 10% và một đợt tăng mạnh 10% có thể tạo ra các giá trị True Range tương tự nhau, vì phép tính dùng giá trị tuyệt đối. Vì vậy ATR thường xuất hiện cùng với một chỉ báo khác hoặc một cách đọc xu hướng, không bao giờ đứng một mình như cơ chế kích hoạt giao dịch.</p><h2 id="đua-atr-vao-cong-viec-hang-ngay">Đưa ATR vào công việc hằng ngày</h2><p>ATR hoạt động tốt hơn như một công cụ quản lý rủi ro hơn là một tín hiệu vào lệnh. Nó giúp trả lời những câu hỏi thực tế: điểm dừng lỗ này có tương xứng với độ biến động hiện tại của tài sản không? Khối lượng vị thế này có hợp lý với mức độ giá thường dao động không? Dùng theo cách này, chỉ báo giúp giảm khả năng một điểm dừng lỗ bị chạm chỉ vì nhiễu bình thường của tài sản, dù không kỹ thuật quản lý nào loại bỏ hoàn toàn rủi ro — nó chỉ giúp xác định khối lượng rủi ro một cách nhất quán hơn.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/macd-stochastic-parabolic-sar-cach-ket-hop/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic và Parabolic SAR: cách kết hợp cả ba</span><span class="bq__meta">24/09/2026 · 7 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/macd-stochastic-parabolic-sar-cach-ket-hop/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic và Parabolic SAR: cách kết hợp cả ba</span><span class="bq__meta">24/09/2026 · 7 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

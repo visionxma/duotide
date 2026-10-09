@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>ในบรรดาอินดิเคเตอร์ที่สร้างโดยนักวิเคราะห์และนักสถิติ Tushar Chande, Chande Forecast Oscillator หรือ CFO เป็นหนึ่งในตัวที่รู้จักน้อยที่สุดนอกวงการเทคนิค แต่มีแนวคิดที่น่าสนใจ แทนที่จะดูเพียงเส้นค่าเฉลี่ยเคลื่อนที่แบบง่าย มันใช้การถดถอยเชิงเส้นเพื่อคำนวณมูลค่า "ที่คาดหวัง" ของราคา แล้วเปรียบเทียบมูลค่านี้กับราคาจริง</p><p>ในบทความนี้คุณจะได้เข้าใจตรรกะเบื้องหลัง CFO วิธีตีความ และวิธีที่มันสามารถเสริมอินดิเคเตอร์แนวโน้มและโมเมนตัมอื่น ๆ ได้</p><figure class="ap__grafico"><img src="/assets/graficos/oscilador-de-previsao-de-chande.svg" alt="กราฟ: Microsoft รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: Microsoft รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="แนวค-ดเบ-องหล-งอ-นด-เคเตอร-น">แนวคิดเบื้องหลังอินดิเคเตอร์นี้</h2><p>การถดถอยเชิงเส้นที่ใช้กับชุดข้อมูลราคา จะลากเส้นตรงที่เหมาะสมที่สุดกับการเคลื่อนไหวล่าสุดของสินทรัพย์นั้น เป็นวิธีทางสถิติในการบอกว่า "หากแนวโน้มนี้ดำเนินต่อไปแบบเดิมเป๊ะ ๆ นี่จะเป็นราคาที่คาดว่าจะเกิดขึ้นถัดไป" CFO ใช้เส้นนี้เพื่อคำนวณมูลค่าคาดการณ์สำหรับแท่งเทียนปัจจุบัน แล้ววัดส่วนต่างเป็นเปอร์เซ็นต์ระหว่างมูลค่าที่คาดการณ์นี้กับราคาปิดจริง</p><p>เมื่อราคาจริงสูงกว่ามูลค่าที่คาดการณ์จากการถดถอย CFO จะเป็นบวก บ่งชี้ว่าตลาดกำลังเดินหน้าเร็วกว่าที่แนวโน้มเชิงเส้นล่าสุดชี้ไว้ เมื่อราคาต่ำกว่าที่คาดการณ์ CFO จะเป็นลบ บ่งชี้การเดินหน้าที่ช้ากว่าที่คาดไว้ หรือการร่วงลง</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ว-ธ-คำนวณทำงานอย-างไรในทางปฏ-บ-ต">วิธีคำนวณทำงานอย่างไรในทางปฏิบัติ</h2><p>สมมติการถดถอยเชิงเส้นที่คำนวณจาก 14 แท่งเทียนล่าสุดของสินทรัพย์หนึ่งคาดการณ์ราคาที่คาดหวังไว้ที่ R$ 48,00 สำหรับแท่งเทียนปัจจุบัน แต่ราคาปิดจริงคือ R$ 49,44 ส่วนต่างเป็นเปอร์เซ็นต์จะอยู่ที่ประมาณ 3% [(49,44 − 48,00) / 48,00 × 100] และนั่นจะเป็นค่า CFO ในแท่งเทียนนี้ คือ +3</p><p>CFO ที่เป็นบวกและเพิ่มขึ้นเรื่อย ๆ บ่งชี้ว่าราคากำลังห่างออกไปทางบนจากแนวโน้มเชิงเส้นล่าสุดของมัน ซึ่งอาจบ่งชี้ได้ทั้งการเคลื่อนไหวที่มีแรงจริงหรือการยืดตัวที่มักถูกแก้ไข ตรงนี้เองที่การตีความร่วมกับองค์ประกอบอื่นของกราฟเข้ามามีบทบาท</p><h2 id="จ-ดต-ดเส-นศ-นย">จุดตัดเส้นศูนย์</h2><p>เช่นเดียวกับออสซิลเลเตอร์อื่น CFO มีเส้นศูนย์ตรงกลาง การตัดจากลบเป็นบวกบ่งชี้ว่าราคาเริ่มเหนือกว่าการคาดการณ์เชิงเส้นล่าสุดของตัวเอง ซึ่งมักถูกตีความว่าเป็นสัญญาณของแรงซื้อที่กำลังเพิ่มพื้นที่ การตัดในทิศทางตรงข้าม จากบวกเป็นลบ บ่งชี้สิ่งตรงกันข้าม</p><p>จุดตัดเหล่านี้มักทำงานได้ดีกว่าในฐานะการยืนยันการเคลื่อนไหวที่กำลังดำเนินอยู่แล้ว มากกว่าสัญญาณล่วงหน้าของการกลับตัว เนื่องจากการคำนวณขึ้นอยู่กับแนวโน้มเชิงเส้นของช่วงก่อนหน้า</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="การเล-อกช-วงเวลาของการถดถอย">การเลือกช่วงเวลาของการถดถอย</h2><p>ช่วงเวลาที่ใช้คำนวณการถดถอยเชิงเส้นก็มีอิทธิพลอย่างมากต่อการอ่านค่า CFO เช่นกัน ช่วงเวลาสั้น เช่น 5 หรือ 9 แท่งเทียน ทำให้อินดิเคเตอร์ไวต่อการเปลี่ยนแปลงล่าสุดมากขึ้น สร้างจุดตัดและความผันผวนบ่อยขึ้น มีประโยชน์สำหรับผู้ที่เทรดระยะสั้นกว่า แต่ก็เสี่ยงต่อเสียงรบกวนมากกว่าด้วย ช่วงเวลาที่ยาวกว่า เช่น 20 หรือ 30 แท่งเทียน ทำให้เส้นการถดถอยเรียบขึ้นและทำให้ CFO ตอบสนองช้าลง สะท้อนแนวโน้มที่มั่นคงกว่า</p><p>ไม่มีช่วงเวลาตายตัวที่เป็นสากล วิธีที่ดีที่สุดคือทดสอบค่าต่าง ๆ กับสินทรัพย์เดียวกัน และสังเกตว่าการตั้งค่าแบบใดให้ผลการอ่านที่สมเหตุสมผลกับพฤติกรรมในอดีตของตลาดนั้น แทนที่จะคัดลอกช่วงเวลามาตรฐานของอินดิเคเตอร์อื่นมาใช้เฉย ๆ</p><h2 id="ไดเวอร-เจนซ-ใน-cfo">ไดเวอร์เจนซ์ใน CFO</h2><p>เช่นเดียวกับใน RSI สามารถสังเกตไดเวอร์เจนซ์ระหว่าง CFO กับราคาได้ หากราคาทำจุดสูงสุดใหม่ แต่ CFO ให้ค่าที่ต่ำกว่าจุดสูงสุดครั้งก่อน นั่นบ่งชี้ว่าแม้ราคาจะขึ้น แต่มันกำลังห่างจากแนวโน้มเชิงเส้นล่าสุดของมันน้อยลงเรื่อย ๆ ซึ่งเป็นสัญญาณของการสูญเสียแรงที่อาจเกิดขึ้นก่อนการปรับฐาน</p><h2 id="การผสมผสาน-cfo-ก-บอ-นด-เคเตอร-อ-น">การผสมผสาน CFO กับอินดิเคเตอร์อื่น</h2><p>เนื่องจากเป็นอินดิเคเตอร์ที่อิงการถดถอยเชิงเส้น CFO มักตอบสนองในลักษณะคล้ายกับอินดิเคเตอร์แนวโน้ม ดังนั้นจึงไม่ค่อยสมเหตุสมผลที่จะใช้มันคู่กับเส้นค่าเฉลี่ยเคลื่อนที่หลายเส้น เพราะสัญญาณจะซ้ำซ้อนกัน มันทำงานได้ดีกว่าเมื่อเสริมด้วยอินดิเคเตอร์ปริมาณหรือความผันผวน ซึ่งนำมิติที่ต่างออกไปมาสู่การวิเคราะห์</p><p>ใน Duotide ควรทดสอบ CFO ในช่วงเวลาการถดถอยที่แตกต่างกัน และเปรียบเทียบผลการอ่านกับพฤติกรรมจริงของราคาในสินทรัพย์ที่คุณติดตามอยู่แล้ว ก่อนที่จะนำมันมาเป็นส่วนหนึ่งของกลยุทธ์ เช่นเดียวกับอินดิเคเตอร์ทางสถิติใดที่อิงข้อมูลในอดีต CFO คาดการณ์แนวโน้มที่อาจไม่เป็นจริงตามนั้น และการตัดสินใจเข้าเทรดทุกครั้งต้องพิจารณาความเสี่ยงที่แท้จริงของการขาดทุนในการเทรดนั้นด้วย</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

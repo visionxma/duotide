@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -217,7 +217,7 @@
           <div class="ap__texto article">
             <p>RSI, या रिलेटिव स्ट्रेंथ इंडेक्स, टेक्निकल एनालिसिस में सबसे ज्यादा इस्तेमाल होने वाले मोमेंटम इंडिकेटर में से एक है। यह किसी एसेट के हाल के मुनाफे की ताकत की हाल के नुकसान की ताकत से तुलना करता है, 0 और 100 के बीच एक नंबर पैदा करते हुए जो यह पहचानने में मदद करता है कि कोई चाल कब बहुत ज्यादा खिंच चुकी हो सकती है।</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-rsi-indice-de-forca-relativa.svg" alt="चार्ट: BTC/USDT, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Binance। अपना विश्लेषण।" width="960" height="540" loading="lazy" decoding="async"><figcaption>चार्ट: BTC/USDT, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Binance। अपना विश्लेषण।</figcaption></figure><h2 id="rsi-क-फ-र-म-ल">RSI का फॉर्मूला</h2><p>गणना पीरियड की एक तय संख्या में, आमतौर पर 14, मुनाफे के औसत और नुकसान के औसत से शुरू होती है। इन एवरेज से, RS कहलाने वाली रिलेटिव स्ट्रेंथ निकाली जाती है:</p><p><strong>RS = मुनाफे का औसत / नुकसान का औसत</strong></p><p>इसके बाद, इस फॉर्मूले का इस्तेमाल करके RS को 0 से 100 की स्केल में बदला जाता है:</p><p><strong>RSI = 100 - [100 / (1 + RS)]</strong></p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ह-थ-स-हल-क-य-गय-एक-उद-हरण">हाथ से हल किया गया एक उदाहरण</h2><p>हिसाब को आसान बनाने के लिए, आमतौर पर इस्तेमाल होने वाली 14 कीमत के बदलावों के बजाय, सिर्फ 5 बदलावों वाला एक उदाहरण देखें, सिर्फ गणना समझाने के लिए। मान लीजिए एक शेयर के दैनिक बंद होने की कीमतें इस तरह हैं: R$ 10,00; R$ 10,20; R$ 10,15; R$ 10,40; R$ 10,30; R$ 10,50।</p><p>एक बंद होने और अगली के बीच बदलाव थे:</p><ul><li>दिन 2: +R$ 0,20 (मुनाफा)</li><li>दिन 3: -R$ 0,05 (नुकसान)</li><li>दिन 4: +R$ 0,25 (मुनाफा)</li><li>दिन 5: -R$ 0,10 (नुकसान)</li><li>दिन 6: +R$ 0,20 (मुनाफा)</li></ul><p>तीनों मुनाफों को जोड़कर 5 बदलावों से भाग देने पर मुनाफे का औसत होगा (0,20 + 0,25 + 0,20) / 5 = 0,13। दोनों नुकसान को जोड़कर 5 बदलावों से भाग देने पर नुकसान का औसत होगा (0,05 + 0,10) / 5 = 0,03। रिलेटिव स्ट्रेंथ होगी RS = 0,13 / 0,03 = 4,33। अंतिम फॉर्मूला लगाते हुए: RSI = 100 - [100 / (1 + 4,33)] = 100 - 18,76 = <strong>81,24</strong>।</p><p>81 के करीब का RSI दिखाता है कि इस सरल किए गए पीरियड में हाल के मुनाफे साफ तौर पर नुकसान पर हावी रहे, जो इंडिकेटर को ओवरबॉट की रीडिंग में डालता है।</p><h2 id="ओवरब-ट-और-ओवरस-ल-ड-ल-वल-क-क-स-पढ">ओवरबॉट और ओवरसोल्ड लेवल को कैसे पढ़ें</h2><p>पारंपरिक रीडिंग 70 से ऊपर की वैल्यू को ओवरबॉट मानती है, यह सुझाव देते हुए कि तेजी की चाल खिंच चुकी हो सकती है, और 30 से नीचे की वैल्यू को ओवरसोल्ड, गिरावट की चाल के लिए भी यही सुझाव देते हुए। ये नंबर ऑटोमैटिक खरीद या बिक्री का सिग्नल नहीं हैं। किसी मजबूत तेजी के ट्रेंड में, RSI काफी देर तक 70 से ऊपर रह सकता है, और हर बार जब यह इस लेवल को क्रॉस करे तब बेचना, एक ऐसे ट्रेंड से बाहर निकलना हो सकता है जिसमें अभी भी आगे बढ़ने की काफी गुंजाइश थी।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ड-इवर-ज-स-जब-क-मत-और-rsi-असहमत-ह-त-ह">डाइवर्जेंस: जब कीमत और RSI असहमत होते हैं</h2><p>डाइवर्जेंस तब होता है जब कीमत नई ऊंचाई बनाती है, लेकिन RSI पिछली से नीची ऊंचाई बनाता है, यह सुझाव देते हुए कि तेजी की चाल पर्दे के पीछे दम खो रही है, भले ही कीमत अभी भी बढ़ रही हो। इसका उल्टा भी सही है, कीमत नीची न्यूनतम बना रही हो जबकि RSI ऊंची न्यूनतम बनाए। डाइवर्जेंस चाल की संभावित कमजोरी की एक चेतावनी है, तुरंत रिवर्सल की गारंटी नहीं।</p><h2 id="rsi-इस-त-म-ल-करत-समय-आम-गलत-य">RSI इस्तेमाल करते समय आम गलतियां</h2><ul><li>बड़े ट्रेंड के कॉन्टेक्स्ट को नजरअंदाज करते हुए, 70 या 30 के हर क्रॉसओवर को ऑटोमैटिक एंट्री सिग्नल मानना।</li><li>सपोर्ट, रेजिस्टेंस या चार्ट की सामान्य बनावट को जांचे बिना, अकेले RSI इस्तेमाल करना।</li><li>अलग-अलग एसेट के RSI की तुलना करना जैसे कोई एक ही नंबर किसी भी वोलैटिलिटी कॉन्टेक्स्ट में एक ही मतलब रखता हो।</li><li>टाइमफ्रेम को नजरअंदाज करना: 5 मिनट के चार्ट पर निकाला गया RSI डेली चार्ट पर उसी इंडिकेटर से काफी अलग चीज़ मापता है।</li></ul><h2 id="अलग-अलग-ट-इमफ-र-म-म-rsi">अलग-अलग टाइमफ्रेम में RSI</h2><p>एक ही एसेट इस्तेमाल किए गए चार्ट के हिसाब से काफी अलग RSI रीडिंग दिखा सकता है। 5 मिनट की कैंडल पर निकाला गया RSI बेहद छोटी अवधि के दोलनों पर रिएक्ट करता है और एक ही दिन में कई बार ओवरबॉट और ओवरसोल्ड के बीच बदल सकता है। वहीं डेली या साप्ताहिक कैंडल पर निकाला गया RSI ज्यादा धीरे चलने की प्रवृत्ति रखता है और आमतौर पर लंबी अवधि की चाल दर्शाता है। RSI की रीडिंग की किसी तय नियम से तुलना करने से पहले, यह पक्का करना फायदेमंद है कि चुना गया टाइमफ्रेम योजना बनाए गए ट्रेड के प्रकार के लिए सही मायने रखता है, चाहे वह तेज डे ट्रेड हो या कई दिनों की पोजीशन।</p><h2 id="rsi-क-ज-य-द-ज-म-म-द-र-स-क-स-इस-त-म-ल-कर">RSI को ज्यादा जिम्मेदारी से कैसे इस्तेमाल करें</h2><p>RSI अकेले एंट्री ट्रिगर के तौर पर नहीं, बल्कि एक बड़ी एनालिसिस के भीतर एक टुकड़े के तौर पर बेहतर काम करता है। RSI की रीडिंग को बड़े टाइमफ्रेम के ट्रेंड के साथ, सपोर्ट-रेजिस्टेंस लेवल के साथ, और इन लेवल के करीब कीमत के रिएक्शन के साथ मिलाना, आमतौर पर सिर्फ किसी तय नंबर के क्रॉसओवर इस्तेमाल करने से ज्यादा भरोसेमंद रीडिंग देता है। किसी भी टेक्निकल इंडिकेटर की तरह, RSI कीमत के पिछले व्यवहार को बताता है और यह गारंटी नहीं देता कि आगे क्या होगा।</p>
             <div class="bq-post__cta">
-              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और R$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
+              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और US$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">मुफ़्त अकाउंट बनाएँ</a>
             </div>
             <div class="ap__fim">
@@ -250,12 +250,28 @@
         <aside class="ap__rel">
           <h2>संबंधित लेख</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">अभ्यास के लिए तैयार?</h2>
+          <p class="ap-lp__sub">खाता खोलें और 10,000 अमेरिकी डॉलर की वर्चुअल राशि के साथ डेमो खाते में अभ्यास करें, बिना पैसे जोखिम में डाले।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">खाता बनाएँ</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">डेमो आज़माएँ</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>सुरक्षित प्लेटफ़ॉर्म</strong><span>सुरक्षित लॉगिन और पहचान सत्यापन</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>कई भाषाओं में सहायता</strong><span>हर दिन मदद</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>मुफ़्त डेमो खाता</strong><span>अभ्यास के लिए 10,000 डॉलर वर्चुअल</span></li>
+          </ul>
+          <p class="ap-lp__risco">ट्रेडिंग में निवेश की गई पूंजी खोने का जोखिम होता है।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -319,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

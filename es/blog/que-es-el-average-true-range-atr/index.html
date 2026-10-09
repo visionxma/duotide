@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>A diferencia de la mayoría de los indicadores, el Average True Range (ATR) no intenta predecir ninguna dirección. Mide una sola cosa: cuánto suele moverse un activo, en valor absoluto, dentro de un período. Es una regla de volatilidad, no una señal de compra o venta.</p><p>Creado por J. Welles Wilder, el mismo autor del ADX y del RSI, el ATR aparece en casi toda estrategia que necesita definir el tamaño de un stop o el tamaño de una posición con base en el comportamiento real del activo, en lugar de un valor fijo elegido de forma arbitraria.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-average-true-range-atr.svg" alt="Gráfico: Ouro, diario, del 01/04/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: Ouro, diario, del 01/04/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure><h2 id="por-que-un-promedio-simple-de-maximo-menos-minimo-no-basta">Por qué un promedio simple de máximo menos mínimo no basta</h2><p>Si solo restaras el mínimo del máximo de cada vela, perderías un detalle importante: los gaps. Imagina que un activo cerró la sesión anterior a R$ 50,00 y abrió la sesión siguiente ya a R$ 46,00, negociando después entre R$ 45,50 y R$ 46,80. La variación dentro de la vela (máximo menos mínimo) fue de apenas R$ 1,30. Pero el movimiento real desde el cierre anterior fue de R$ 4,50. Ignorar esto subestima la volatilidad real del activo.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-calcular-el-true-range">Cómo calcular el True Range</h2><p>Para corregir este problema, el True Range (TR) de cada vela es el mayor valor entre tres cálculos:</p><ul><li>Máximo de la vela actual menos mínimo de la vela actual;</li><li>Máximo de la vela actual menos cierre de la vela anterior (en valor absoluto);</li><li>Mínimo de la vela actual menos cierre de la vela anterior (en valor absoluto).</li></ul><p>En el ejemplo anterior, el TR sería el mayor valor entre 1,30 (46,80 − 45,50), 3,20 (|46,80 − 50,00|) y 4,50 (|45,50 − 50,00|). Es decir, TR = R$ 4,50, el número que realmente captura el tamaño del movimiento, incluido el gap.</p><h2 id="del-true-range-al-atr">Del True Range al ATR</h2><p>El ATR es un promedio suavizado del True Range a lo largo de un período, normalmente 14 velas. El primer valor suele ser el promedio simple de los primeros 14 TR. Después de eso, se aplica el suavizado de Wilder:</p><p><strong>ATR de hoy = ((ATR anterior × 13) + TR de hoy) ÷ 14</strong></p><p>Supongamos que el ATR de ayer estaba en R$ 2,00 y el TR de hoy quedó en R$ 4,50, siguiendo el ejemplo anterior:</p><p><strong>ATR de hoy = ((2,00 × 13) + 4,50) ÷ 14 = (26,00 + 4,50) ÷ 14 = 30,50 ÷ 14 ≈ R$ 2,18</strong></p><p>Observa cómo una sola vela de movimiento fuerte no dispara el ATR de golpe: sube de forma gradual, porque carga el peso de los 13 períodos anteriores. Esto es intencional: el ATR mide volatilidad recurrente, no un pico aislado.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="para-que-sirve-en-la-practica">Para qué sirve en la práctica</h2><p>El uso más común del ATR es dimensionar el stop loss y el tamaño de posición de forma proporcional al comportamiento del propio activo, en lugar de usar un número fijo de puntos o de dinero para cualquier mercado.</p><p>Un ejemplo: si el ATR de un activo está en R$ 2,18, un stop loss colocado a 1,5 ATR de distancia de la entrada quedaría a R$ 3,27 del precio de entrada (2,18 × 1,5). En un activo más volátil, con ATR de R$ 8,00, el mismo múltiplo de 1,5 ATR resultaría en un stop de R$ 12,00, bastante más amplio, porque el propio activo se mueve más en el día a día. Usar la misma distancia fija de stop en ambos casos tendría poco sentido: en el activo más tranquilo, el stop quedaría demasiado amplio; en el más volátil, demasiado ajustado y expuesto a ser alcanzado por simple ruido de mercado.</p><h2 id="el-atr-no-dice-hacia-donde-va-el-precio">El ATR no dice hacia dónde va el precio</h2><p>Un error común es intentar usar el ATR como señal de entrada: un ATR alto no indica subida ni bajada, solo un movimiento mayor. Una caída fuerte del 10% y una subida fuerte del 10% pueden generar lecturas de True Range parecidas, ya que el cálculo usa valores absolutos. Por eso el ATR normalmente aparece junto a otro indicador o a una lectura de tendencia, nunca solo como gatillo de operación.</p><h2 id="llevando-el-atr-al-dia-a-dia">Llevando el ATR al día a día</h2><p>El ATR funciona mejor como herramienta de gestión de riesgo que como señal de entrada. Ayuda a responder preguntas prácticas: ¿este stop es proporcional a la volatilidad actual del activo? ¿Este tamaño de posición tiene sentido dado lo que suele oscilar el precio? Usado así, el indicador reduce la probabilidad de que un stop sea alcanzado por el simple ruido habitual del activo, aunque ninguna técnica de gestión elimina el riesgo por completo, solo ayuda a dimensionarlo de forma más consistente.</p>
             <div class="bq-post__cta">
-              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con R$ 10.000 virtuales.</p>
+              <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con 10.000 US$ virtuales.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/es/blog/que-es-el-indicador-adx/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qué es el indicador ADX y cómo funciona</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
-            <a class="bq__card" href="/es/blog/que-es-el-oscilador-estocastico/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Qué es el Oscilador Estocástico y cómo funciona</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
-            <a class="bq__card" href="/es/blog/macd-estocastico-y-parabolic-sar-como-combinar/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Estocástico y Parabolic SAR: cómo combinar los tres</span><span class="bq__meta">24/09/2026 · 7 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/que-es-el-indicador-adx/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qué es el indicador ADX y cómo funciona</span><span class="bq__meta">24/09/2026 · 6 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/que-es-el-oscilador-estocastico/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qué es el Oscilador Estocástico y cómo funciona</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/macd-estocastico-y-parabolic-sar-como-combinar/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Estocástico y Parabolic SAR: cómo combinar los tres</span><span class="bq__meta">24/09/2026 · 7 min de lectura</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">¿Listo para ponerlo en práctica?</h2>
+          <p class="ap-lp__sub">Abre tu cuenta y practica en la cuenta demo con 10.000 US$ virtuales, sin arriesgar dinero.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Probar la demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Plataforma segura</strong><span>Acceso protegido y verificación de identidad</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Soporte multilingüe</strong><span>Atención todos los días</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Cuenta demo gratis</strong><span>10.000 US$ virtuales para practicar</span></li>
+          </ul>
+          <p class="ap-lp__risco">Operar implica riesgo de perder el capital invertido.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

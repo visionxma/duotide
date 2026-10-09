@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Hedge là một từ xuất hiện liên tục trong tài chính và thường bị coi là điều gì đó phức tạp, chỉ dành riêng cho các quỹ lớn. Trong thực tế, logic rất đơn giản: thay vì đặt cược tất cả vào một hướng duy nhất, bạn mở một vị thế thứ hai bảo vệ một phần kết quả nếu thị trường di chuyển ngược lại vị thế đầu tiên. Mục tiêu không phải là kiếm lời hai lần — mà là giảm quy mô thiệt hại khi cách đọc thị trường sai.</p><p>Ý tưởng này áp dụng cho cổ phiếu, tiền tệ, hàng hóa và cả các giao dịch rất ngắn hạn. Điểm chung luôn giống nhau: mua một loại bảo hiểm nào đó, ngay cả khi điều đó tốn một phần lợi nhuận tiềm năng của giao dịch ban đầu.</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="Biểu đồ: USD/BRL, khung ngày, từ 01/05/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: USD/BRL, khung ngày, từ 01/05/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="nguyen-tac-đang-sau-hedge">Nguyên tắc đằng sau hedge</h2><p>Một hedge cổ điển kết hợp hai vị thế với kết quả trái ngược nhau trên cùng một tài sản, hoặc trên các tài sản di chuyển tương tự nhau. Nếu vị thế đầu tiên đặt cược vào việc một đồng tiền tăng và vị thế thứ hai đặt cược vào việc cùng đồng tiền đó giảm, kết quả cuối cùng phụ thuộc vào mức độ giá đã di chuyển và quy mô tương đối của mỗi vị thế — không đơn giản chỉ là ai thắng và ai thua.</p><p>Có hai cách phổ biến để xây dựng lớp bảo vệ này. Cách đầu tiên là hedge đồng thời: mở cả hai phía gần như cùng lúc, thường vì cách đọc thị trường đang chia giữa hai kịch bản có khả năng xảy ra. Cách thứ hai là hedge điều chỉnh: mở vị thế thứ hai sau khi vị thế đầu tiên đã đang lỗ, để chốt một khoản lỗ tối đa và không để kết quả tệ hơn nếu giá tiếp tục theo hướng ngược lại.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="mot-vi-du-voi-con-so-tron">Một ví dụ với con số tròn</h2><p>Giả sử một giao dịch R$ 200,00 đặt cược vào việc đô la tăng so với real, với lợi nhuận 85% nếu đúng và đáo hạn sau 30 phút. Còn 10 phút nữa, một tin tức kinh tế làm thay đổi kịch bản và giá bắt đầu đi ngược lại vị thế. Thay vì đơn giản chờ kết quả, bạn mở một giao dịch thứ hai R$ 100,00 đặt cược vào việc đô la giảm, với cùng mức lợi nhuận 85%.</p><p>Có hai kết quả có thể xảy ra. Nếu đô la đóng cửa tăng, giao dịch đầu tiên trả R$ 170,00 lợi nhuận (85% của R$ 200,00) và giao dịch thứ hai mất R$ 100,00 đã đầu tư — kết quả ròng là R$ 70,00 lãi. Nếu đô la đóng cửa giảm, giao dịch đầu tiên mất R$ 200,00 và giao dịch thứ hai trả R$ 85,00 lợi nhuận (85% của R$ 100,00) — kết quả ròng là R$ 115,00 lỗ. So sánh với việc không làm gì — mất toàn bộ R$ 200,00 nếu đô la giảm —, hedge đã giảm thiệt hại R$ 85,00 trong kịch bản xấu, với cái giá là giảm lợi nhuận trong kịch bản tốt.</p><h2 id="khi-nao-nen-dung-hedge">Khi nào nên dùng hedge</h2><ul><li>Khi một tin tức quan trọng xuất hiện giữa lúc một giao dịch đã mở và thời gian còn lại không cho phép đóng vị thế một cách an toàn.</li><li>Khi cách đọc kỹ thuật bị chia giữa hai kịch bản và giảm tổng mức tiếp xúc quan trọng hơn cố gắng đoán đúng hướng chính xác.</li><li>Khi mục tiêu là bảo vệ một chuỗi lãi trong ngày, chấp nhận một kết quả nhỏ hơn thay vì mạo hiểm mất tất cả trong một giao dịch duy nhất.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="khi-hedge-gay-hai-nhieu-hon-la-giup-ich">Khi hedge gây hại nhiều hơn là giúp ích</h2><p>Hedge có chi phí — thường làm giảm lợi nhuận có thể có, vì hai vị thế thường không chia sẻ cùng tỷ lệ lợi nhuận phần trăm trong mỗi kịch bản. Dùng hedge mỗi khi một giao dịch bắt đầu diễn biến xấu, theo phản xạ, khác với việc dùng hedge như một phần của kế hoạch đã xác định trước khi vào thị trường. Trong trường hợp đầu, hedge trở thành một cách phủ nhận khoản lỗ; trong trường hợp thứ hai, nó là một công cụ quản lý rủi ro. Sự khác biệt nằm ở việc quyết định các tiêu chí sử dụng trước khi giao dịch, chứ không phải trong lúc nóng vội.</p><h2 id="cach-kiem-thu-truoc-khi-ap-dung-hang-ngay">Cách kiểm thử trước khi áp dụng hàng ngày</h2><p>Trước khi dùng hedge với tiền thật, nên mô phỏng bốn kịch bản có thể xảy ra của một giao dịch — tăng nhỏ, tăng lớn, giảm nhỏ, giảm lớn — và tính kết quả ròng của mỗi kịch bản, có và không có vị thế thứ hai. Các công cụ như Duotide hiển thị lợi nhuận của mỗi tài sản trước khi mở giao dịch, giúp thực hiện phép tính này trước, thay vì quyết định giữa chừng giao dịch dưới áp lực. Hedge không loại bỏ rủi ro: nó phân bổ lại rủi ro giữa các kịch bản, và người giao dịch phải quyết định liệu sự đánh đổi đó có hợp lý với vốn và kế hoạch của mình hay không.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Giao cắt đường trung bình động mũ (EMA) trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/cach-chon-ky-han-het-han-cho-mot-giao-dich/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách chọn kỳ hạn (thời hạn) cho một giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/nhung-chi-bao-tot-nhat-cho-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Những chỉ báo tốt nhất cho người giao dịch day trade</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Giao cắt đường trung bình động mũ (EMA) trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-chon-ky-han-het-han-cho-mot-giao-dich/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cách chọn kỳ hạn (thời hạn) cho một giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/nhung-chi-bao-tot-nhat-cho-day-trade/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Những chỉ báo tốt nhất cho người giao dịch day trade</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

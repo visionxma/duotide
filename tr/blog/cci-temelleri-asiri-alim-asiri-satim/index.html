@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Teknik analizde kullanılan osilatörler arasında CCI'nin (Commodity Channel Index, Emtia Kanalı Endeksi) bir avantajı vardır: RSI veya Stokastik gibi sabit bir aralıkla sınırlı değildir. Bu, fiyat sıra dışı bir hareket yaptığında CCI'nin de sıra dışı bir değere çıkması anlamına gelir ve onu piyasadaki güç veya tükenme anlarını tespit etmek için kullanışlı kılan tam olarak bu özelliktir.</p><p>Adı emtiayı çağrıştırsa da, gösterge Donald Lambert tarafından 1980'lerde bu piyasa düşünülerek geliştirildi, ancak bugün hisse senetlerinde, para birimlerinde, endekslerde ve grafikte işlem gören her varlıkta uygulanıyor.</p><figure class="ap__grafico"><img src="/assets/graficos/cci-basico-sobrecompra-sobrevenda.svg" alt="Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz." width="960" height="540" loading="lazy" decoding="async"><figcaption>Grafik: Ouro, günlük, 01.04.2026 – 07.10.2026. Veri: Yahoo Finance. Kendi analizimiz.</figcaption></figure><h2 id="cci-nasıl-hesaplanır">CCI nasıl hesaplanır</h2><p>Formül, her periyodun tipik fiyatından yola çıkar; bu, en yüksek, en düşük ve kapanış arasındaki ortalama olarak hesaplanır: Tipik Fiyat = (En Yüksek + En Düşük + Kapanış) ÷ 3. Ardından, bu tipik fiyatın belirli sayıda periyot boyunca (en yaygın standart 20'dir) basit hareketli ortalaması ve bu ortalamaya göre ortalama mutlak sapma hesaplanır. CCI daha sonra şöyledir: (Mevcut Tipik Fiyat − Tipik Fiyat Ortalaması) ÷ (0,015 × Ortalama Sapma).</p><p>0,015 sabiti, Lambert tarafından normal piyasa koşullarında CCI değerlerinin yaklaşık yüzde 70 ila 80'inin −100 ile +100 arasında kalması için seçilmiştir. Göstergeyi yorumlamak için referans olarak kullanılan tam olarak bu aralıktır.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cozulmus-bir-ornek">Çözülmüş bir örnek</h2><p>Şu tipik fiyatlara sahip beş periyot düşünelim: 10, 12, 11, 13 ve 15. Bu değerlerin ortalaması (10+12+11+13+15) ÷ 5 = 12,2'dir. Her değerin ortalamaya göre mutlak sapması şöyledir: 2,2; 0,2; 1,2; 0,8; ve 2,8. Bu sapmaların ortalaması (2,2+0,2+1,2+0,8+2,8) ÷ 5 = 1,44'tür.</p><p>Formülü tipik fiyatı 15 olan en son periyoda uyguladığımızda: CCI = (15 − 12,2) ÷ (0,015 × 1,44) = 2,8 ÷ 0,0216 ≈ 129,6. Bu değer +100'ün üzerinde olduğundan, gösterge bir aşırı alım koşulu sinyali veriyor — fiyat, son ortalamasından oldukça uzaklaşacak kadar güçlü bir şekilde yükselmiş.</p><h2 id="asırı-alım-ve-asırı-satım-nasıl-yorumlanır">Aşırı alım ve aşırı satım nasıl yorumlanır</h2><p>CCI +100'ü aştığında, piyasa o varlık için normalden daha güçlü bir yükseliş hareketindedir, bu da aşırı alımı karakterize eder. −100'ün altına geçtiğinde ise düşüş hareketi normalden daha güçlüdür, bu da aşırı satımı karakterize eder. Aşırı alımın otomatik olarak fiyatın düşeceği anlamına gelmediğini anlamak önemlidir — genişlemeye devam eden güçlü bir trendin sinyali de olabilir.</p><p>Bu yüzden en yaygın kullanım, CCI +100 veya −100'ü aşar aşmaz ona karşı işlem yapmak değil, aralığın içine geri döndüğü anı gözlemlemektir. +100'ün üzerine çıkıp sonra bu seviyenin altına tekrar geçen bir CCI, genellikle yükseliş momentumunun güç kaybettiğini gösterir; bu da alış pozisyonunda olanlar için dikkat veya ters yönde kısa vadeli bir işlem için olası bir fırsat önerir. Aynı ters mantık, göstergenin −100'ün altında kaldıktan sonra tekrar bu seviyenin üzerine geçmesi için de geçerlidir.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="kısa-vadeli-islemlerde-uygulamak">Kısa vadeli işlemlerde uygulamak</h2><p>Kısa vadeli işlemlerde CCI, izole sinyallerden kaçınmak için genellikle fiyat grafiğiyle birlikte gözlemlenir. Basit bir yol izlemek şudur: CCI'nin ne zaman +100'ün üzerine veya −100'ün altına geçtiğini belirlemek, aralığın içine geri dönüşünü beklemek ve ancak o zaman girişe karar vermeden önce bir mum formasyonu veya yakındaki bir destek ve direnç seviyesiyle doğrulama aramak.</p><ul><li>+100'ün üzerinde CCI: normalin ötesinde alıcı gücü anı.</li><li>−100'ün altında CCI: normalin ötesinde satıcı gücü anı.</li><li>CCI'nin −100/+100 aralığına dönüşü: hareketin nefesini kaybedebileceğinin sinyali.</li><li>Daha kısa periyotlar (14 gibi) CCI'yi daha duyarlı hale getirir ve daha fazla sinyal üretir; daha uzun periyotlar (20 veya 30 gibi) gürültüyü azaltır, ancak okumayı geciktirir.</li></ul><h2 id="hatırlanması-gereken-sınırlamalar">Hatırlanması gereken sınırlamalar</h2><p>Diğer tüm osilatörler gibi, CCI de güçlü trendler sırasında uzun süre aşırı alım veya aşırı satım bölgesinde kalabilir; bu da harekete karşı çok erken işlem yapmaya çalışanlar için yanlış sinyaller üretir. En iyi başka bir analizin doğrulaması olarak çalışır, izole bir giriş tetikleyicisi olarak değil, ve hiçbir periyot ayarı onu yanılmaz kılmaz. Geçmiş sonuçların gelecekte tekrarlanmayı garanti etmediğini ve her işlemin sermaye kaybı riski taşıdığını da hatırlamakta fayda var — göstergeyi gerçek parayla kullanmadan önce demo hesapta test etmek, farklı varlıklardaki davranışını anlamaya yardımcı olur.</p>
             <div class="bq-post__cta">
-              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 R$ sanal bakiyeli demo hesapta test edin.</p>
+              <p><strong>Risk almadan önce pratik yapın.</strong> Duotide hesabınızı açın ve fikirlerinizi 10.000 USD sanal bakiyeli demo hesapta test edin.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Ücretsiz hesap aç</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>İlgili makaleler</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
-            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/adx-gostergesi-nedir-ve-nasil-calisir/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX Göstergesi Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/stokastik-osilator-nedir-ve-nasil-calisir/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Stokastik Osilatör Nedir ve Nasıl Çalışır</span><span class="bq__meta">24.09.2026 · 5 dk okuma</span></a>
+            <a class="bq__card" href="/tr/blog/average-true-range-atr-nedir-ve-nasil-hesaplanir/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) Nedir ve Nasıl Hesaplanır</span><span class="bq__meta">24.09.2026 · 6 dk okuma</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Uygulamaya hazır mısınız?</h2>
+          <p class="ap-lp__sub">Hesabınızı açın ve 10.000 ABD doları sanal bakiyeyle demo hesapta, para riske atmadan pratik yapın.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Hesap aç</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-tr" target="_blank" rel="noopener sponsored nofollow">Demoyu dene</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Güvenli platform</strong><span>Korumalı giriş ve kimlik doğrulama</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Çok dilli destek</strong><span>Her gün yardım</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Ücretsiz demo hesap</strong><span>Pratik için 10.000 USD sanal</span></li>
+          </ul>
+          <p class="ap-lp__risco">İşlem yapmak, yatırılan sermayeyi kaybetme riski taşır.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

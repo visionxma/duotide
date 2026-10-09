@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>使用移动平均线的人最头疼的问题之一就是滞后：由于是基于过去的价格计算的，趋势转折的信号总是在行情已经开始之后才姗姗来迟。重心指标（Center of Gravity）由工程师兼分析师John Ehlers开发，正是为了减少这种滞后，它借用了物理学中的一个概念，来更提前地计算可能的转折点。</p><p>在这篇文章中，你将了解重心指标背后的逻辑、它在图表上的表现形式，以及它在哪种市场中效果最好。</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-centro-de-gravidade.svg" alt="图表：EUR/USD，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：EUR/USD，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="重心-概念在价格上的应用">“重心”概念在价格上的应用</h2><p>在物理学中，一组重物的重心是它们之间的平衡点。Ehlers将这一概念改造后应用于一系列价格：该指标不是计算简单平均值，而是为分析周期内的每个价格赋予不同的权重，越近期的价格权重越大。结果得到一个表现得像近期走势平衡中心的数值，但它对变化的反应比传统均线更快。</p><p>这个数值乘以−1后被绘制为一个振荡指标，同时配有该指标本身延迟一个周期的版本，作为信号线——原理与MACD有些类似，但计算基础不同。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="如何解读两条线的交叉">如何解读两条线的交叉</h2><p>解读重心指标最常见的方式，是观察主线与其延迟信号线之间的交叉。当主线向上穿越信号线时，被解读为可能开始一轮上涨行情；向下穿越时，则被解读为可能开始一轮下跌行情。</p><p>由于该指标被设计用来减少滞后，这些交叉往往会比同一资产上用简单移动平均线计算出的等效交叉更早出现——但“更早一点”并不意味着完美：该指标同样会产生假信号，尤其是在没有明确方向的市场中。</p><h2 id="重心指标在哪种情况下表现最好">重心指标在哪种情况下表现最好</h2><p>与Ehlers创造的其他指标一样，重心指标是为了那些在一定区间内相对规律地循环、涨跌交替的市场设计的，而不是为了强劲且持久的趋势市场。在一个横盘资产上，比如在R$ 22,00和R$ 25,00之间波动，该指标的交叉往往能更一致地与该区间内的短期转折相吻合。</p><p>而在一轮强劲且持久的趋势中，该指标可能会更频繁地产生与趋势相反的交叉，原因很简单：它正试图在一个当下其实并没有真正转向的背景下预判转折。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="将重心指标与其他工具结合使用">将重心指标与其他工具结合使用</h2><p>由于重心指标是一种前瞻性指标，它最适合作为背景判断的补充——例如，一个更长周期的趋势指标，或者通过直观判断确认该资产确实呈周期性横盘走势，而不是处于趋势之中。</p><p>如果不加这层背景过滤，单独使用该指标往往会产生逆着强劲趋势操作的信号，而这类操作通常是风险最高的。把它与一个简单的趋势检查结合起来，有助于过滤掉相当一部分质量较低的信号。</p><h2 id="调整计算周期">调整计算周期</h2><p>重心指标也允许调整计算中所考虑的价格数量，方式与移动平均线的周期类似。更短的周期会让指标反应更快，但也更容易在对长周期操作者没有实际意义的小幅波动中产生交叉。更长的周期会让这种反应更平滑，使指标的表现更接近带有一定滞后的均线，但滞后程度仍然小于同等周期的简单移动平均线。</p><p>值得在同一资产上测试不止一个周期后再决定使用哪一个，观察产生的交叉是否与价格过去实际形成的周期相吻合，而不仅仅是符合计算背后的理论。</p><h2 id="付诸实践">付诸实践</h2><p>在Duotide上，可以在不同资产上测试重心指标，观察它在横盘阶段和趋势阶段历史上的表现，这有助于判断在什么情况下该更信任或更不信任它产生的交叉信号。与任何前瞻性指标一样，它能减少滞后，但无法消除不确定性：任何基于它的操作都应设定明确的止损，并考虑真实存在的亏损风险。</p>
             <div class="bq-post__cta">
-              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 美元虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是真实波幅均值（ATR），如何计算</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">准备好动手实践了吗？</h2>
+          <p class="ap-lp__sub">开设账户，在模拟账户中用 10,000 美元虚拟资金练习，无需冒真金白银的风险。</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">开设账户</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">试用模拟账户</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>安全的平台</strong><span>受保护的登录与身份验证</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>多语言支持</strong><span>每天都有人帮助</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>免费模拟账户</strong><span>10,000 美元虚拟资金练习</span></li>
+          </ul>
+          <p class="ap-lp__risco">交易存在损失投资本金的风险。</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

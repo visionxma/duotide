@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Ai đã biết dao động Stochastic sẽ nhận ra phần lớn KDJ ngay lập tức: các đường K và D được tính theo cùng cách như %K và %D của Stochastic truyền thống. Sự khác biệt nằm ở đường thứ ba, đường J, làm thay đổi cách diễn giải sự hội tụ và phân kỳ giữa bên mua và bên bán.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-kdj-uma-variacao-do-estocastico.svg" alt="Biểu đồ: GBP/USD, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: GBP/USD, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="moi-chu-cai-đai-dien-cho-đieu-gi">Mỗi chữ cái đại diện cho điều gì</h2><ul><li><strong>K</strong>: tương đương với %K của Stochastic — cho biết giá đóng cửa nằm ở đâu trong biên độ cao nhất và thấp nhất gần đây.</li><li><strong>D</strong>: tương đương với %D — một đường trung bình động của K, làm mượt đường này và đóng vai trò tham chiếu tín hiệu.</li><li><strong>J</strong>: đại diện cho sự phân kỳ giữa giá trị của D và giá trị của K, thường được tính là J = 3×K − 2×D. Nó khuếch đại biến động của hai đường còn lại, thậm chí vượt qua giới hạn 0 và 100 vào những thời điểm hội tụ hoặc phân kỳ mạnh.</li></ul><p>Một ví dụ: nếu K đang ở 78 và D đang ở 65, đường J sẽ ở mức 3×78 − 2×65 = 234 − 130 = 104 — vượt trên mức trần 100 giới hạn K và D. Hành vi này là bình thường đối với đường J và chính là điều khiến nó nhạy hơn với những thay đổi đột ngột so với hai đường còn lại.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-dien-giai-ba-đuong-cung-nhau">Cách diễn giải ba đường cùng nhau</h2><p>Cũng như ở Stochastic, các mức tham chiếu phổ biến nhất là 20 (bán quá mức) và 80 (mua quá mức). Cách đọc của KDJ bổ sung thêm vị trí tương đối giữa ba đường: khi cả ba hội tụ trên vùng mua quá mức, với đường K ở trên D và D ở trên J đảo ngược (hoặc theo thứ tự màu sắc của nền tảng), cách đọc truyền thống là khả năng áp lực bán đang hình thành. Ngược lại, khi hội tụ dưới vùng bán quá mức, gợi ý khả năng áp lực mua đang hình thành.</p><h2 id="mot-vi-du-ve-cach-đoc-thuc-te">Một ví dụ về cách đọc thực tế</h2><p>Hãy tưởng tượng một tài sản mà K, D và J hội tụ ở một vùng trên 80, với đường J tăng mạnh hơn K và D trong những cây nến gần nhất — dấu hiệu cho thấy biến động tăng đã mất đà nhanh chóng. Nếu, ở những cây nến tiếp theo, sự hội tụ này tan rã khi cả ba đường cùng chuyển hướng xuống, điều đó củng cố cách đọc về sự suy yếu của lực mua, hơn bất kỳ đường nào trong ba đường thể hiện riêng lẻ.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="noi-kdj-co-xu-huong-that-bai">Nơi KDJ có xu hướng thất bại</h2><p>Như bất kỳ chỉ báo nào thuộc họ này, KDJ hoạt động kém hơn ở những thị trường không có xu hướng rõ ràng (thị trường đi ngang), nơi ba đường liên tục cắt nhau mà giá không di chuyển nhất quán theo hướng đã báo hiệu. Vì phản ứng mạnh hơn Stochastic truyền thống, đường J có xu hướng tạo ra càng nhiều tín hiệu nhanh và không có tính tiếp diễn hơn ở những thị trường như vậy — điều đòi hỏi thận trọng hơn, chứ không phải ít hơn, khi dùng nó như một cơ chế kích hoạt vào lệnh đơn lẻ.</p><h2 id="ket-hop-kdj-voi-cac-chi-bao-khac">Kết hợp KDJ với các chỉ báo khác</h2><p>Một cách làm được khuyến nghị là kết hợp KDJ với một chỉ báo sức mạnh xu hướng, như ADX, và một chỉ báo độ biến động, như ATR. ADX giúp xác định thị trường có đang trong xu hướng hay không — thông tin mà riêng KDJ không cung cấp — và ATR giúp xác định khối lượng rủi ro của giao dịch theo mức độ tài sản thường di chuyển, vì KDJ có xu hướng hoạt động kém đúng vào những giai đoạn độ biến động thấp và thị trường đi ngang.</p><h2 id="su-dung-chi-bao-mot-cach-co-can-cu">Sử dụng chỉ báo một cách có căn cứ</h2><p>KDJ hoạt động tốt hơn khi đóng vai trò như một phiên bản nhạy hơn của Stochastic, hữu ích để nắm bắt những thay đổi động lượng sớm hơn một chút so với hai đường truyền thống, hơn là làm người thay thế hoàn toàn cho một phân tích rộng hơn về biểu đồ. Như với bất kỳ chỉ báo cực trị nào, không tín hiệu nào của KDJ đảm bảo chính xác, và một giao dịch dựa trên nó vẫn phụ thuộc vào quản lý rủi ro và một điểm dừng lỗ được xác định rõ ràng để không chỉ phụ thuộc vào cách đọc của chỉ báo.</p><p>Cũng nên điều chỉnh chu kỳ mặc định của KDJ (thường là 9) theo tài sản và khung thời gian giao dịch: chu kỳ ngắn hơn khiến đường J nhạy hơn nữa, hữu ích cho các giao dịch nhanh, trong khi chu kỳ dài hơn làm mượt hành vi này và có xu hướng tạo ra ít tín hiệu hơn, nhưng nhất quán hơn theo thời gian, điều thường có lợi cho người giao dịch dài hạn hơn và ưu tiên ít nhiễu hơn là tín hiệu nhanh hơn.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

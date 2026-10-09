@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>एनवेलप्स इंडिकेटर बोलिंगर बैंड जैसा तर्क फॉलो करता है, लेकिन एक ज्यादा सीधे तरीके से: बैंड की दूरी कीमत के स्टैंडर्ड डिविएशन के आधार पर निकालने के बजाय, यह किसी मूविंग एवरेज के ऊपर और नीचे एक तय प्रतिशत इस्तेमाल करता है। नतीजा एक ऐसा चैनल है जो एवरेज को फॉलो करता है, जिसके भीतर कीमत ज्यादातर समय चलती रहती है।</p><p>इस लेख में आप जानेंगे कि एनवेलप्स की गणना कैसे होती है, इसे कैसे सेट करें, और कीमत के संभावित अतिरेक को पहचानने के लिए बैंड के छूने का इस्तेमाल कैसे करें।</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-envelopes-moving-average.svg" alt="चार्ट: GOOGL, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।" width="960" height="540" loading="lazy" decoding="async"><figcaption>चार्ट: GOOGL, दैनिक, 01/04/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।</figcaption></figure><h2 id="एनव-लप-स-क-गणन-क-स-ह-त-ह">एनवेलप्स की गणना कैसे होती है</h2><p>गणना एक सिंपल या एक्सपोनेंशियल मूविंग एवरेज से शुरू होती है, आमतौर पर 20 जैसे मध्यम पीरियड के साथ। इससे, ऊपरी बैंड एवरेज की वैल्यू में एक तय प्रतिशत जोड़कर निकाला जाता है, और निचला बैंड इसी प्रतिशत को घटाकर निकाला जाता है। अगर किसी एसेट का 20 पीरियड का मूविंग एवरेज R$ 40,00 पर है और सेट किया गया प्रतिशत 2,5% है, तो ऊपरी बैंड R$ 41,00 पर होगा और निचला बैंड R$ 39,00 पर।</p><p>बोलिंगर बैंड से अलग, जो एसेट की वोलैटिलिटी बदलने के साथ अपने आप चौड़े या संकरे हो जाते हैं, एनवेलप्स के बैंड हमेशा एवरेज से वही प्रतिशत दूरी बनाए रखते हैं, जब तक कि खुद ट्रेडर इस प्रतिशत को मैन्युअल रूप से समायोजित न करे।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ब-ड-क-छ-न-आमत-र-पर-क-य-दर-श-त-ह">बैंड को छूना आमतौर पर क्या दर्शाता है</h2><p>जब कीमत ऊपरी बैंड को छूती है या पार करती है, तो इसे इस संकेत के तौर पर पढ़ा जाता है कि एसेट अपने हाल के एवरेज से काफी दूर चला गया है, ऊपर की ओर — एक संभावित छोटी अवधि का ओवरबॉट। जब यह निचले बैंड को छूती है या पार करती है, तो सिग्नल उल्टा होता है: एक संभावित ओवरसोल्ड।</p><p>सबसे आम रीडिंग मीन रिवर्जन की है: किसी बैंड को छूने के बाद, कीमत बीच की मूविंग एवरेज की तरफ वापस लौटने की प्रवृत्ति रखेगी, और यही वापसी की चाल है जिसे कई ट्रेडर पकड़ने की कोशिश करते हैं। इस तरह की रीडिंग बिना मजबूत ट्रेंड वाले बाजारों में बेहतर काम करती है, जो एक अपेक्षाकृत स्थिर रेंज के भीतर दोलन कर रहे हों।</p><h2 id="ब-ड-क-प-रत-शत-क-सम-य-ज-त-करन">बैंड के प्रतिशत को समायोजित करना</h2><p>आदर्श प्रतिशत एक एसेट से दूसरे में काफी अलग होता है, और यह सीधे हर एक की सामान्य वोलैटिलिटी पर निर्भर करता है। ऐतिहासिक रूप से ज्यादा अस्थिर एसेट को शायद 5% जैसे ज्यादा प्रतिशत की जरूरत हो, ताकि बैंड को छूना वाकई चाल के अतिरेक को दर्शाए, न कि सिर्फ रोजमर्रा का सामान्य दोलन। एक ज्यादा स्थिर एसेट 1,5% या 2% जैसे छोटे प्रतिशत के साथ बेहतर काम कर सकता है।</p><p>किसी अस्थिर एसेट के लिए बहुत छोटा प्रतिशत सेट करने से कीमत बहुत बार बैंड को छूती है, जिससे असली चाल के अतिरेक के संकेत के तौर पर इन सिग्नल की वैल्यू कम हो जाती है।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="मजब-त-ट-र-ड-स-स-वध-न-रह">मजबूत ट्रेंड से सावधान रहें</h2><p>मीन रिवर्जन पर आधारित किसी भी इंडिकेटर की तरह, एनवेलप्स मजबूत ट्रेंड के दौरान गुमराह करने वाले सिग्नल दे सकता है। लगातार तेजी में, कीमत कई कैंडल तक ऊपरी बैंड से चिपकी चल सकती है, बिना एवरेज की तरफ वापस आए — और जो इस स्थिति में हर छूने को बिक्री के सिग्नल के तौर पर पढ़ता है, वह बार-बार एक ऐसे ट्रेंड के खिलाफ ट्रेड करने का जोखिम उठाता है जो अभी भी मजबूत बना हुआ है।</p><p>इसीलिए, बैंड के छूने को एंट्री ट्रिगर के तौर पर इस्तेमाल करने से पहले ट्रेंड के कॉन्टेक्स्ट को जांचना फायदेमंद है: साइडवेज बाजारों में, रिवर्जन की रीडिंग बेहतर काम करने की प्रवृत्ति रखती है; मजबूत ट्रेंड में, यह छूना पूरे रिवर्सल के सिग्नल से ज्यादा संभावित रुकावट की चेतावनी के तौर पर काम करता है।</p><h2 id="एनव-लप-स-क-व-ल-य-म-य-म-म-टम-क-स-थ-म-ल-न">एनवेलप्स को वॉल्यूम या मोमेंटम के साथ मिलाना</h2><p>एनवेलप्स के सिग्नल फिल्टर करने का एक तरीका बैंड छूने के पल पर वॉल्यूम देखना है। घटते वॉल्यूम के साथ ऊपरी बैंड को छूना बताता है कि खरीद की ताकत पहले ही दम तोड़ रही है, जो मीन में संभावित वापसी की रीडिंग को मजबूत करता है। वहीं बढ़ते वॉल्यूम के साथ बैंड को छूना बता सकता है कि चाल में अभी भी जारी रहने की ताकत है, भले ही यह एवरेज से दूर हो।</p><p>RSI जैसा कोई मोमेंटम ऑसिलेटर भी अतिरिक्त पुष्टि के तौर पर काम कर सकता है: ओवरबॉट में RSI के साथ ऊपरी बैंड को छूना अतिरेक की परिकल्पना को मजबूत करता है, जबकि न्यूट्रल लेवल पर RSI के साथ वही छूना, चाल के पलटने की धारणा बनाने से पहले ज्यादा सावधानी की मांग करता है।</p><h2 id="व-यवह-र-म-एनव-लप-स-क-इस-त-म-ल">व्यवहार में एनवेलप्स का इस्तेमाल</h2><p>Duotide पर, मूविंग एवरेज का पीरियड और बैंड का प्रतिशत दोनों समायोजित करना संभव है, खास एसेट में अलग-अलग कॉम्बिनेशन परखते हुए जब तक वह सेटिंग न मिल जाए जो उस बाजार के ऐतिहासिक व्यवहार को सबसे बेहतर दर्शाती हो। किसी भी मीन रिवर्जन इंडिकेटर की तरह, एनवेलप्स चार्ट के कॉन्टेक्स्ट की रीडिंग के साथ मिलाने पर बेहतर काम करता है, और इसे अकेले एंट्री के इकलौते मापदंड के तौर पर इस्तेमाल नहीं किया जाना चाहिए, क्योंकि हर ट्रेड में नुकसान का असली जोखिम शामिल है।</p>
             <div class="bq-post__cta">
-              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और R$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
+              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और US$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">मुफ़्त अकाउंट बनाएँ</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>संबंधित लेख</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">अभ्यास के लिए तैयार?</h2>
+          <p class="ap-lp__sub">खाता खोलें और 10,000 अमेरिकी डॉलर की वर्चुअल राशि के साथ डेमो खाते में अभ्यास करें, बिना पैसे जोखिम में डाले।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">खाता बनाएँ</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">डेमो आज़माएँ</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>सुरक्षित प्लेटफ़ॉर्म</strong><span>सुरक्षित लॉगिन और पहचान सत्यापन</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>कई भाषाओं में सहायता</strong><span>हर दिन मदद</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>मुफ़्त डेमो खाता</strong><span>अभ्यास के लिए 10,000 डॉलर वर्चुअल</span></li>
+          </ul>
+          <p class="ap-lp__risco">ट्रेडिंग में निवेश की गई पूंजी खोने का जोखिम होता है।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

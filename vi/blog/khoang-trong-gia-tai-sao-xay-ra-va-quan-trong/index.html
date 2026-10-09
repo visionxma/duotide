@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Một gap xảy ra khi giá mở cửa của một tài sản cách xa rõ rệt so với giá đóng cửa của giai đoạn trước, mà không có giao dịch nào được ghi nhận trong khoảng đó. Trên biểu đồ, nó xuất hiện như một khoảng trống giữa một cây nến và cây tiếp theo — vì vậy có tên gọi, từ tiếng Anh cho “khoảng trống” hoặc “lỗ hổng”.</p><p>Gap phổ biến hơn ở các thị trường đóng cửa trong một giai đoạn (cổ phiếu, chẳng hạn, không giao dịch 24 giờ) so với các thị trường hoạt động liên tục, như phần lớn ngoại hối. Hiểu tại sao chúng xảy ra giúp xử lý tốt hơn rủi ro mà chúng mang lại.</p><figure class="ap__grafico"><img src="/assets/graficos/gaps-de-preco-por-que-acontecem.svg" alt="Biểu đồ: Microsoft, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Microsoft, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="tai-sao-gia-nhay-thay-vi-đi-tung-buoc">Tại sao giá nhảy thay vì đi từng bước</h2><p>Ngoài giờ giao dịch bình thường, tin tức vẫn tiếp tục xảy ra: kết quả kinh doanh hàng quý, quyết định lãi suất, dữ liệu kinh tế, sự kiện chính trị. Vì không ai có thể giao dịch ngay lập tức khi thị trường đóng cửa, tất cả thông tin này tích lũy lại và được xử lý cùng một lúc khi phiên giao dịch mở lại. Giá mở cửa đã phản ánh thông tin mới này, ngay cả khi không có giao dịch nào diễn ra ở giữa — đó là lý do có bước nhảy.</p><p>Một ví dụ đơn giản: một tài sản đóng cửa ở R$ 68,00. Sau khi đóng cửa, công ty công bố kết quả kinh doanh hàng quý vượt xa dự đoán. Trong phiên tiếp theo, tài sản mở cửa ở R$ 74,50, không có giao dịch nào được ghi nhận giữa R$ 68,00 và R$ 74,50 — khoảng cách này chính là gap.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="bon-loai-gap">Bốn loại gap</h2><ul><li><strong>Gap thông thường</strong>: xảy ra trong một biên độ giao dịch không có xu hướng rõ ràng, thường do khối lượng thấp hoặc tin tức tác động nhỏ. Thường được lấp đầy nhanh chóng, tức là giá quay trở lại giao dịch trong biên độ trước đó trong thời gian ngắn.</li><li><strong>Gap phá vỡ (breakaway)</strong>: xuất hiện ở đầu một chuyển động mới, thường phá vỡ một vùng tích lũy kéo dài, và thường đi kèm khối lượng cao. Báo hiệu bắt đầu xu hướng, không chỉ là nhiễu.</li><li><strong>Gap tiếp diễn (hay gap chạy trốn)</strong>: xuất hiện giữa một xu hướng đang diễn ra, củng cố chuyển động hiện có. Thường cho thấy xu hướng vẫn còn sức mạnh.</li><li><strong>Gap kiệt sức</strong>: xuất hiện gần cuối một chuyển động kéo dài, thường là động lực cuối cùng trước một đợt đảo chiều. Khác với gap tiếp diễn, loại này có xu hướng nhanh chóng được lấp đầy sau đó.</li></ul><h2 id="tai-sao-đieu-nay-quan-trong-voi-nguoi-giao-dich">Tại sao điều này quan trọng với người giao dịch</h2><p>Gap ảnh hưởng trực tiếp đến quản lý rủi ro theo hai cách thực tế. Cách đầu tiên là chính mức dừng lỗ: một lệnh dừng lỗ, trên lý thuyết, được thực hiện ở một mức giá cụ thể, nhưng nếu thị trường mở cửa với một gap vượt qua mức đó, việc thực thi có thể xảy ra cách xa hơn nhiều so với kế hoạch — một vấn đề được gọi là trượt giá (slippage). Một mức dừng lỗ được nghĩ ra để giới hạn khoản lỗ ở R$ 2,00 mỗi cổ phiếu có thể, trong một kịch bản gap, dẫn đến khoản lỗ R$ 5,00 hoặc hơn, vì không có giao dịch nào ở mức giá chính xác của lệnh dừng.</p><p>Cách thứ hai là chính việc tính toán các chỉ báo biến động, như ATR, cần tính đến gap để không đánh giá thấp chuyển động thực sự của tài sản — đây chính xác là lý do tại sao phép tính True Range dùng khoảng cách giữa giá đóng cửa trước và giá cao nhất hoặc thấp nhất hiện tại, chứ không chỉ biến động bên trong cây nến.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="khai-niem-lap-đay-gap">Khái niệm lấp đầy gap</h2><p>Một hành vi thường được quan sát là giá quay lại lấp đầy gap, giao dịch trở lại trong khoảng giá đã bị bỏ qua lúc mở cửa. Điều này không phải lúc nào cũng xảy ra, cũng không theo một khoảng thời gian có thể dự đoán trước, nhưng đủ phổ biến để trở thành tham chiếu của một số trader: một số coi việc lấp đầy như mục tiêu cho một giao dịch ngược lại gap, đặc biệt ở các gap thông thường và kiệt sức, về mặt thống kê có xu hướng đóng nhiều hơn so với các gap phá vỡ và tiếp diễn.</p><h2 id="xu-ly-gap-trong-thuc-te">Xử lý gap trong thực tế</h2><p>Tránh bất ngờ với gap là vấn đề quản lý rủi ro nhiều hơn là dự đoán. Điều này bao gồm định lượng vị thế xem xét rằng mức dừng lỗ có thể không được thực hiện đúng mức giá đã xác định, tránh đòn bẩy quá mức ở các tài sản thường mở cửa với các gap quan trọng (quanh kết quả kinh doanh hàng quý, chẳng hạn), và nhận diện loại gap trước khi quyết định liệu nó có đại diện cho cơ hội hay chỉ là nhiễu cần bỏ qua. Như trong bất kỳ tình huống thị trường bất thường nào, sự cẩn trọng thêm trong quản lý mang lại lợi ích nhiều hơn cố gắng đoán hướng của gap tiếp theo, đặc biệt ở những tài sản và ngày mà khả năng xảy ra một sự kiện tin tức quan trọng được biết trước.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/mau-hinh-vai-dau-vai-cach-nhan-dien-dao-chieu/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Mẫu hình Vai-Đầu-Vai: cách nhận diện sự đảo chiều</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/thoai-lui-fibonacci-trong-giao-dich-vi-du-thuc-te/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Thoái lui Fibonacci trong giao dịch: một ví dụ thực tế</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/3-mo-hinh-nen-thuong-that-bai/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">3 mô hình nến thường thất bại</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/mau-hinh-vai-dau-vai-cach-nhan-dien-dao-chieu/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Mẫu hình Vai-Đầu-Vai: cách nhận diện sự đảo chiều</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/thoai-lui-fibonacci-trong-giao-dich-vi-du-thuc-te/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Thoái lui Fibonacci trong giao dịch: một ví dụ thực tế</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/3-mo-hinh-nen-thuong-that-bai/"><img src="/assets/img/mini/duotide-vale-a-pena.webp" srcset="/assets/img/mini/duotide-vale-a-pena.webp 480w, /assets/img/duotide-vale-a-pena.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">3 mô hình nến thường thất bại</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

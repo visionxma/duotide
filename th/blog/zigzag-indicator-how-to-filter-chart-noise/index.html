@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>การดูกราฟราคาโดยไม่มีตัวกรองเลยอาจเหนื่อยล้า เพราะการขึ้นลงเล็กๆ นับสิบครั้งแย่งความสนใจ ทำให้ยากที่จะเห็นการเคลื่อนไหวที่สำคัญจริงๆ ท่ามกลางสัญญาณรบกวนมากมาย ZigZag มีขึ้นเพื่อแก้ปัญหาทางสายตานี้โดยเฉพาะ ด้วยการลากเส้นตรงเชื่อมเฉพาะจุดสูงสุดและต่ำสุดที่มีนัยสำคัญของกราฟ โดยละเลยสิ่งที่อยู่ระหว่างทาง</p><p>บทความนี้อธิบายว่า ZigZag ตัดสินอย่างไรว่าอะไรเป็นสัญญาณรบกวนและอะไรเป็นการเคลื่อนไหวที่สำคัญ มันมีประโยชน์อย่างไรในทางปฏิบัติ และทำไมไม่ควรสับสนว่ามันเป็นตัวสร้างสัญญาณเข้าเทรด</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="กราฟ: Ibovespa รายวัน ตั้งแต่ 02/03/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: Ibovespa รายวัน ตั้งแต่ 02/03/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="zigzag-ต-ดส-นใจแสดงอะไรอย-างไร">ZigZag ตัดสินใจแสดงอะไรอย่างไร</h2><p>อินดิเคเตอร์นี้ตั้งค่าด้วยขีดจำกัดขั้นต่ำของการเปลี่ยนแปลง ซึ่งกำหนดเป็นเปอร์เซ็นต์ของราคาหรือจำนวนจุด การเคลื่อนไหวใดที่น้อยกว่าขีดจำกัดนี้จะถูกละเลย และ ZigZag จะลากเส้นใหม่ก็ต่อเมื่อราคาเคลื่อนไหวมากพอที่จะเกินขีดจำกัดนี้นับจากจุดสูงสุดหรือต่ำสุดล่าสุดที่ระบุไว้ ตัวอย่างเช่น ด้วยขีดจำกัด 5% ความผันผวน 2% กลางแนวโน้มจะไม่ปรากฏในอินดิเคเตอร์เลย จะปรากฏในภาพวาดก็ต่อเมื่อการเคลื่อนไหวสะสมเกิน 5% ที่กำหนดไว้</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="zigzag-ม-ประโยชน-จร-งๆ-อย-างไร">ZigZag มีประโยชน์จริงๆ อย่างไร</h2><h3>ระบุจุดสูงสุดและต่ำสุดที่สำคัญ</h3><p>การกำจัดสัญญาณรบกวนระยะสั้นทำให้เห็นได้ง่ายขึ้นว่าจุดกลับตัวที่สำคัญจริงๆ ในประวัติของสินทรัพย์อยู่ตรงไหน ซึ่งเป็นข้อมูลที่มีประโยชน์ในการวาดเส้นแนวรับและแนวต้านด้วยความมั่นใจมากกว่าการพยายามเดาจากกราฟที่เต็มไปด้วยความผันผวนเล็กๆ</p><h3>สนับสนุนการอ่านรูปแบบกราฟ</h3><p>รูปแบบต่างๆ เช่น double top, head and shoulders หรือแชนแนลแนวโน้ม จะเห็นได้ชัดเจนขึ้นเมื่อ ZigZag กำจัดสัญญาณรบกวนเล็กๆ ออกไปแล้ว ทำหน้าที่เป็นโครงร่างทางสายตาที่ช่วยให้ระบุรูปแบบเหล่านี้ได้ชัดเจนขึ้น รวมถึงสำหรับผู้ที่ศึกษาการนับคลื่นในการวิเคราะห์ทางเทคนิค หากไม่มีตัวกรองนี้ จะยากกว่ามากที่จะแยกด้วยสายตาว่าขาไหนของกราฟคือการเคลื่อนไหวหลักและขาไหนเป็นเพียงการปรับฐานภายในนั้น</p><h3>วัดขนาดของการเคลื่อนไหวในอดีต</h3><p>เนื่องจากแต่ละเส้นของ ZigZag เชื่อมจุดสูงสุดกับจุดต่ำสุด (หรือกลับกัน) มันช่วยให้วัดได้อย่างรวดเร็วว่าสินทรัพย์เคลื่อนไหวไปกี่จุดหรือกี่เปอร์เซ็นต์ในแต่ละขาของกราฟ ซึ่งช่วยปรับความคาดหวังของเป้าหมายโดยอิงจากการเคลื่อนไหวในอดีตที่มีขนาดใกล้เคียงกัน</p><h2 id="ข-อจำก-ดท-สำค-ญท-ส-ดของ-zigzag">ข้อจำกัดที่สำคัญที่สุดของ ZigZag</h2><p>ZigZag เป็นอินดิเคเตอร์ที่มองย้อนหลัง มันยืนยันจุดสูงสุดหรือต่ำสุดได้ก็ต่อเมื่อราคาเคลื่อนไหวไปในทิศทางตรงข้ามมากพอที่จะพิสูจน์ว่าจุดนั้นเป็นการกลับตัวจริง นั่นหมายความว่าเส้นล่าสุดของอินดิเคเตอร์อาจเปลี่ยนแปลงหรือวาดใหม่ได้เมื่อแท่งเทียนใหม่ก่อตัวขึ้น จุดสูงสุดที่ดูเหมือนแน่นอนเมื่อครู่อาจหายไปได้หากราคายังคงขึ้นต่อไป ด้วยเหตุนี้ การใช้ ZigZag เป็นตัวกระตุ้นเข้าเทรดโดยตรงจึงมีความเสี่ยง เพราะในขณะที่สัญญาณปรากฏชัดเจน การเคลื่อนไหวที่มันอธิบายได้เกิดขึ้นไปแล้ว สิ่งนี้ทำให้ ZigZag คล้ายกับเครื่องมือย้อนอดีตมากกว่าอินดิเคเตอร์เชิงคาดการณ์</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ว-ธ-ปร-บพาราม-เตอร-ความไว">วิธีปรับพารามิเตอร์ความไว</h2><ul><li>ขีดจำกัดเล็ก (เช่น 1% หรือ 2%) แสดงรายละเอียดมากขึ้น แต่กลับรวมสัญญาณรบกวนระยะสั้นเข้ามาอีกครั้ง</li><li>ขีดจำกัดใหญ่ (เช่น 8% หรือ 10%) ทำให้กราฟง่ายขึ้นมาก แต่อาจละเลยการกลับตัวที่สำคัญสำหรับการเทรดระยะสั้นกว่า</li><li>การปรับที่เหมาะสมขึ้นอยู่กับสินทรัพย์และกรอบเวลาของกราฟ สินทรัพย์ที่ผันผวนมากกว่ามักต้องการขีดจำกัดที่ใหญ่กว่าเพื่อไม่ให้เกิดสัญญาณรบกวนมากเกินไป และในทางกลับกันสำหรับสินทรัพย์ที่มั่นคงกว่า</li></ul><h2 id="ว-ธ-ใช-zigzag-อย-างม-ความร-บผ-ดชอบ">วิธีใช้ ZigZag อย่างมีความรับผิดชอบ</h2><p>วิธีที่ดีที่สุดในการใช้ประโยชน์จาก ZigZag คือเป็นเครื่องมือวิเคราะห์ทางสายตาและศึกษาประวัติศาสตร์ ไม่ใช่เป็นตัวกระตุ้นเข้าเทรด ใช้การอ่านจุดสูงสุดและต่ำสุดที่มันเน้นร่วมกับอินดิเคเตอร์โมเมนตัม เช่น RSI หรือการอ่านปริมาณการซื้อขาย เพื่อตัดสินใจช่วงเวลาจริงในการเข้าเทรด เช่นเดียวกับเครื่องมือใดๆ ที่อิงจากข้อมูลที่เกิดขึ้นแล้ว ZigZag ไม่ได้คาดการณ์การเคลื่อนไหวถัดไป และความเสี่ยงในการขาดทุนยังคงมีอยู่แม้กราฟจะดูเป็นระเบียบทางสายตามากขึ้น ควรศึกษาพฤติกรรมของมันในบัญชีทดลองก่อนนำมาใช้ในกิจวัตรการวิเคราะห์ของคุณ</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

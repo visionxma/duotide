@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>ออสซิลเลเตอร์สโตแคสติกเริ่มจากแนวคิดง่าย ๆ ในช่วงขาขึ้นที่ต่อเนื่อง ราคามักปิดใกล้จุดสูงสุดของช่วงการซื้อขายล่าสุด ในช่วงขาลงที่ต่อเนื่อง มักปิดใกล้จุดต่ำสุด อินดิเคเตอร์นี้แปลงข้อสังเกตนี้ให้เป็นสเกล 0 ถึง 100 แสดงว่าราคาปิดล่าสุดอยู่ตรงไหนภายในช่วงราคาสูงสุดและต่ำสุดของจำนวนแท่งเทียนที่กำหนด</p><p>สร้างโดย George Lane ในทศวรรษ 1950 สโตแคสติกยังคงเป็นหนึ่งในออสซิลเลเตอร์ที่ใช้กันมากที่สุด เพราะมองเห็นได้ง่ายและตอบสนองต่อการเปลี่ยนจังหวะของตลาดค่อนข้างเร็ว แต่เช่นเดียวกับอินดิเคเตอร์โมเมนตัมใด ๆ มันมีข้อจำกัดที่จะปรากฏชัดก็ต่อเมื่อคุณเข้าใจการคำนวณเบื้องหลังมัน</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-oscilador-estocastico.svg" alt="กราฟ: EUR/USD รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: EUR/USD รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="ส-ตรของ-k">สูตรของ %K</h2><p>เส้นหลักของอินดิเคเตอร์นี้เรียกว่า %K มีสูตรดังนี้:</p><p><strong>%K = 100 × (ราคาปิดปัจจุบัน − ราคาต่ำสุดของช่วง) ÷ (ราคาสูงสุดของช่วง − ราคาต่ำสุดของช่วง)</strong></p><p>สมมติว่าในช่วง 14 แท่งเทียนล่าสุดของสินทรัพย์หนึ่ง ราคาสูงสุดอยู่ที่ R$ 110,00 และราคาต่ำสุดอยู่ที่ R$ 90,00 หากราคาปิดล่าสุดคือ R$ 106,00 การคำนวณจะเป็นดังนี้:</p><p><strong>%K = 100 × (106 − 90) ÷ (110 − 90) = 100 × 16 ÷ 20 = 80</strong></p><p>%K ที่ 80 หมายความว่าราคาปิดอยู่ใน 20% บนสุดของช่วงราคาที่สังเกตได้ ใกล้จุดสูงสุดของช่วงเวลานั้น ไม่จำเป็นต้องเป็นจุดสูงสุดในประวัติศาสตร์</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="d-ม-ไว-ทำอะไร">%D มีไว้ทำอะไร</h2><p>แพลตฟอร์มส่วนใหญ่จะวาด %K คู่กับเส้นที่สอง คือ %D ซึ่งเป็นค่าเฉลี่ยเคลื่อนที่แบบง่ายของ %K (โดยทั่วไป 3 ช่วง) %D ช่วยทำให้ความผันผวนฉับพลันของ %K เรียบขึ้น และทำหน้าที่เป็นเส้นสัญญาณ เมื่อ %K ตัดขึ้นเหนือ %D เทรดเดอร์บางคนมองว่าแรงซื้อกำลังเข้ามา เมื่อตัดลงต่ำกว่า มองว่าเป็นแรงขาย</p><p>นอกจากนี้ยังเป็นเรื่องปกติที่จะทำให้ %K เองเรียบขึ้นอีกชั้นก่อนคำนวณ %D ซึ่งเรียกว่าสโตแคสติกแบบช้า (slow stochastic) วิธีนี้ช่วยลดสัญญาณปลอมโดยแลกกับการตอบสนองที่ช้าลงเล็กน้อย</p><h2 id="สภาวะซ-อมากไปและขายมากไป-ระว-งการต-ความเก-นจร-ง">สภาวะซื้อมากไปและขายมากไป ระวังการตีความเกินจริง</h2><p>โซนที่ถูกอ้างถึงบ่อยที่สุดคือเหนือ 80 (ซื้อมากเกินไป) และต่ำกว่า 20 (ขายมากเกินไป) ข้อผิดพลาดคลาสสิกคือการมองสิ่งนี้เป็นคำสั่งขายหรือซื้ออัตโนมัติ ในแนวโน้มขาขึ้นที่แข็งแกร่ง %K อาจค้างอยู่เหนือ 80 ต่อเนื่องหลายแท่งเทียน และการขายเพียงเพราะอินดิเคเตอร์ยืดตัวมากหมายความว่าคุณกำลังออกจากการเคลื่อนไหวที่ยังมีแรงเหลืออยู่</p><ul><li><strong>%K สูงกว่า 80</strong>: ราคาปิดใกล้จุดสูงสุดของช่วงล่าสุด แสดงแรงซื้อ ไม่ใช่สัญญาณกลับตัวอัตโนมัติ</li><li><strong>%K ต่ำกว่า 20</strong>: ราคาปิดใกล้จุดต่ำสุดของช่วงล่าสุด แสดงแรงขาย โดยมีข้อควรระวังเดียวกัน</li><li><strong>ไดเวอร์เจนซ์</strong>: เมื่อราคาทำจุดสูงสุดใหม่ที่สูงกว่า แต่ %K ทำจุดสูงสุดที่ต่ำกว่า (หรือตรงกันข้าม) แสดงว่าโมเมนตัมกำลังอ่อนแรงลงแม้ราคาจะยังคงเดินหน้าต่อไป</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="อ-นด-เคเตอร-น-ทำงานได-ด-ท-ส-ดท-ไหน">อินดิเคเตอร์นี้ทำงานได้ดีที่สุดที่ไหน</h2><p>สโตแคสติกมักทำงานได้ดีกว่าในตลาดที่แกว่งตัวอยู่ในกรอบที่กำหนดไว้ สลับไปมาระหว่างแนวรับและแนวต้าน มากกว่าในแนวโน้มที่แข็งแกร่งและยาวนาน ในกรอบไซด์เวย์ จุดตัดของ %K และ %D ใกล้ขอบสุดโต่งที่ 20 และ 80 มักทำเครื่องหมายจุดกลับตัวได้บ่อยกว่า ในแนวโน้มที่แข็งแกร่ง ทางที่ดีคือใช้อินดิเคเตอร์นี้เพื่อวัดการปรับฐานภายในการเคลื่อนไหวหลัก ไม่ใช่เพื่อพยายามทำนายจุดจบของแนวโน้ม</p><p>ตัวอย่างในทางปฏิบัติ ในคู่สกุลเงินที่อยู่ในแนวโน้มขาขึ้น การย่อตัวที่ทำให้ %K ลดลงจาก 90 มาใกล้ 20 อาจเป็นเพียงการพักตัวที่ดีของการเคลื่อนไหว โดยเฉพาะหากโครงสร้างจุดสูงสุดและต่ำสุดของกราฟยังคงสูงขึ้นต่อเนื่อง การขายเพียงเพราะออสซิลเลเตอร์ลงมาถึงศูนย์จะละเลยบริบทที่ใหญ่กว่า</p><h2 id="การรวมท-กส-วนเข-าด-วยก-น">การรวมทุกส่วนเข้าด้วยกัน</h2><p>ออสซิลเลเตอร์สโตแคสติกทำงานได้ดีที่สุดเมื่อเป็นส่วนหนึ่งของการอ่านที่กว้างขึ้น มากกว่าใช้เพียงลำพัง การผสมผสานกับแนวโน้มหลักของกราฟ ระดับแนวรับแนวต้าน หรืออินดิเคเตอร์อื่นที่วัดความแข็งแกร่งของแนวโน้ม ช่วยกรองการเข้าเทรดที่จะพึ่งพาเพียงตัวเลขที่ตัดผ่าน 20 หรือ 80 เท่านั้น เช่นเดียวกับเครื่องมือวิเคราะห์ทางเทคนิคใด ๆ มันช่วยเพิ่มคุณภาพการอ่าน แต่ไม่ได้ขจัดความเสี่ยงที่การเทรดจะผิดพลาด การบริหารสถานะและการจำกัดการขาดทุนยังคงเป็นส่วนที่จำเป็นของกระบวนการ ไม่ว่าสัญญาณจะดูชัดเจนแค่ไหนในขณะที่เข้าเทรด</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/macd-stochastic-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic และ Parabolic SAR วิธีใช้สามตัวนี้ร่วมกัน</span><span class="bq__meta">24/09/2569 · อ่าน 7 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/macd-stochastic-parabolic-sar-how-to-combine/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic และ Parabolic SAR วิธีใช้สามตัวนี้ร่วมกัน</span><span class="bq__meta">24/09/2569 · อ่าน 7 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

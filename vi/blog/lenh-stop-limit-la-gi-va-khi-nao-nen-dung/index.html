@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Trong số các loại lệnh có sẵn trên một nền tảng giao dịch, lệnh stop-limit thường gây băn khoăn vì kết hợp hai khái niệm trong một: một cơ chế kích hoạt (stop) và một mức giá giới hạn cho việc khớp lệnh (limit). Hiểu sự khác biệt giữa loại lệnh này và một lệnh stop thông thường giúp tránh bất ngờ, đặc biệt trong những thời điểm thị trường biến động mạnh.</p><p>Bài viết này giải thích lệnh stop-limit là gì, cách nó hoạt động trong thực tế và vì sao, trong một số tình huống, nó có thể đơn giản là không được khớp.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-ordem-stop-limit.svg" alt="Biểu đồ: Tesla, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Tesla, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="lenh-stop-limit-la-gi">Lệnh stop-limit là gì</h2><p>Một lệnh stop-limit có hai mức giá được xác định: giá kích hoạt (stop), kích hoạt lệnh khi thị trường chạm đến, và giá giới hạn (limit), xác định mức giá tối đa (đối với lệnh mua) hoặc tối thiểu (đối với lệnh bán) có thể chấp nhận để khớp lệnh. Khi giá thị trường chạm đến mức stop, lệnh chuyển thành một lệnh giới hạn với mức giá đã xác định, thay vì được khớp theo bất kỳ mức giá nào có sẵn vào thời điểm đó.</p><p>Điều này khác với một lệnh stop đơn giản (còn gọi là stop thị trường), khi được kích hoạt sẽ được khớp theo mức giá tốt nhất có sẵn tại thời điểm đó, bất kể là mức nào, không có bất kỳ giới hạn bảo vệ nào về giá trị cuối cùng của việc khớp lệnh.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ini-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="mot-vi-du-thuc-te-ve-cach-hoat-đong">Một ví dụ thực tế về cách hoạt động</h2><p>Hãy tưởng tượng một cổ phiếu đang giao dịch ở R$ 60, và bạn muốn tự bảo vệ trước một đợt giảm, nhưng cũng không muốn bán với mức giá thấp hơn nhiều so với dự kiến, trong trường hợp thị trường giảm mạnh. Bạn xác định một lệnh stop-limit với stop ở R$ 57 và giới hạn ở R$ 56,50. Nếu giá giảm xuống R$ 57, lệnh được kích hoạt và trở thành một lệnh bán với mức giá tối thiểu R$ 56,50.</p><p>Nếu thị trường có thanh khoản tốt, lệnh có khả năng sẽ được khớp gần R$ 56,50 hoặc R$ 57. Nhưng nếu giá lao dốc nhanh, nhảy từ R$ 57 xuống R$ 54 mà không đi qua các mức giá trung gian có đủ thanh khoản, lệnh stop-limit có thể không được khớp, vì nó từ chối bán dưới R$ 56,50, ngay cả khi thị trường đã ở mức R$ 54.</p><h2 id="su-khac-biet-then-chot-so-voi-lenh-stop-thi-truong">Sự khác biệt then chốt so với lệnh stop thị trường</h2><p>Một lệnh stop thị trường, trong cùng kịch bản, sẽ được khớp ngay cả khi giá nhảy thẳng xuống R$ 54, vì nó không có giới hạn giá, chỉ có cơ chế kích hoạt. Điều này đảm bảo việc khớp lệnh, nhưng với cái giá là chấp nhận bất kỳ mức giá nào có sẵn vào thời điểm đó, có thể tệ hơn nhiều so với dự kiến ở những thị trường rất biến động.</p><ul><li>Stop-limit đảm bảo một mức giá khớp lệnh tối thiểu (hoặc tối đa), nhưng có thể không được khớp.</li><li>Stop thị trường đảm bảo việc khớp lệnh, nhưng không kiểm soát được mức giá cuối cùng.</li><li>Khoảng cách giữa stop và limit cần tính đến độ biến động bình thường của tài sản.</li><li>Ở những thị trường thanh khoản thấp, rủi ro không được khớp lệnh lớn hơn.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/ini-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-xac-đinh-khoang-cach-giua-stop-va-limit">Cách xác định khoảng cách giữa stop và limit</h2><p>Không có một khoảng cách đúng duy nhất giữa giá stop và giá giới hạn: nó phụ thuộc vào độ biến động của tài sản đang giao dịch. Một tài sản thường biến động 0,5% chỉ trong vài giây trong giai đoạn biến động cao có thể cần một khoảng cách lớn hơn giữa stop và limit, so với một tài sản ổn định hơn, để giảm khả năng lệnh không được khớp.</p><h3>Khi nào stop-limit thường phù hợp hơn</h3><p>Lệnh stop-limit có xu hướng hoạt động tốt hơn trên các tài sản thanh khoản cao và ở những thị trường không có những bước nhảy giá lớn (gap). Ở những tài sản có tính lịch sử dễ xảy ra biến động đột ngột và mạnh, rủi ro lệnh đơn giản là không được khớp, để lại vị thế mở mà không có bảo vệ, cần được tính đến khi quyết định dùng loại lệnh nào.</p><h2 id="cach-chon-giua-stop-limit-va-stop-thi-truong-trong-thuc-te">Cách chọn giữa stop-limit và stop thị trường trong thực tế</h2><p>Nếu ưu tiên là đảm bảo việc bảo vệ được thực thi, ngay cả khi chấp nhận một mức giá tệ hơn trong một kịch bản cực đoan, lệnh stop thị trường thường phù hợp hơn. Nếu ưu tiên là kiểm soát chính xác mức giá tối thiểu hoặc tối đa chấp nhận được, ngay cả với rủi ro lệnh không được khớp trong một biến động rất nhanh, lệnh stop-limit hợp lý hơn. Trong cả hai trường hợp, việc xác định biện pháp bảo vệ trước khi mở vị thế vẫn là điều thiết yếu cho một cách quản lý rủi ro có trách nhiệm.</p><p>Nên xem lại định kỳ khoảng cách giữa stop và limit khi độ biến động của tài sản thay đổi theo thời gian. Một khoảng cách hợp lý trong một giai đoạn yên tĩnh hơn có thể trở nên không đủ vào những thời điểm có tin tức quan trọng, làm tăng rủi ro lệnh không được khớp đúng vào lúc biện pháp bảo vệ cần thiết nhất.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/cach-hieu-mot-bao-gia-thi-truong/"><img src="/assets/img/capas/blog-como-escolher-uma-corretora.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách hiểu một báo giá thị trường</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/nhung-cuon-sach-can-doc-cho-nguoi-moi-trading/"><img src="/assets/img/duotide-abrir-conta.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Những cuốn sách cần đọc cho người mới bắt đầu trading</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/cong-cu-giao-dich-cach-chon-dung-cong-cu/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Công cụ giao dịch: cách chọn đúng công cụ</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-hieu-mot-bao-gia-thi-truong/"><img src="/assets/img/mini/capas/blog-como-escolher-uma-corretora.webp" srcset="/assets/img/mini/capas/blog-como-escolher-uma-corretora.webp 480w, /assets/img/capas/blog-como-escolher-uma-corretora.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cách hiểu một báo giá thị trường</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/nhung-cuon-sach-can-doc-cho-nguoi-moi-trading/"><img src="/assets/img/mini/duotide-abrir-conta.webp" srcset="/assets/img/mini/duotide-abrir-conta.webp 480w, /assets/img/duotide-abrir-conta.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Những cuốn sách cần đọc cho người mới bắt đầu trading</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cong-cu-giao-dich-cach-chon-dung-cong-cu/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Công cụ giao dịch: cách chọn đúng công cụ</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

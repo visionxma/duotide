@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Khi giá của một tài sản bị mắc kẹt trong một biên độ trong một thời gian và, đột nhiên, phá vỡ biên độ đó với sức mạnh, nhiều trader nhìn thấy ở đó sự khởi đầu của một chuyển động mới. Đây là logic đằng sau chiến lược breakout, một trong những cách tiếp cận phổ biến nhất trong số các trader ngắn và trung hạn, chính vì nó đơn giản để hiểu, dù khó để thực hiện tốt.</p><p>Bài viết này giải thích điều gì đặc trưng cho một cú phá vỡ (breakout), cách xây dựng một chiến lược dựa trên đó và, quan trọng nhất, cách giảm số lượng tín hiệu sai, vốn là rủi ro lớn nhất của loại giao dịch này.</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-breakout-como-funciona.svg" alt="Biểu đồ: Ibovespa, khung ngày, từ 01/06/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Ibovespa, khung ngày, từ 01/06/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="breakout-la-gi">Breakout là gì</h2><p>Một breakout xảy ra khi giá của một tài sản vượt qua một mức từng đóng vai trò là giới hạn, dù là kháng cự (một trần mà giá không thể vượt qua) hay hỗ trợ (một sàn mà giá không thể phá vỡ xuống dưới). Ý tưởng đằng sau chiến lược này là, khi phá vỡ giới hạn đó, tài sản có xu hướng tiếp tục di chuyển theo cùng hướng, thu hút thêm người mua hoặc người bán đến mức giá mới.</p><p>Các mức hỗ trợ và kháng cự này thường hình thành sau khi giá kiểm định cùng một vùng nhiều lần mà không thể phá vỡ, tạo ra một dạng tích lũy lệnh mua hoặc bán ở đó. Khi cú phá vỡ cuối cùng xảy ra, việc giải phóng các lệnh tích lũy này có thể đẩy nhanh chuyển động.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-xac-đinh-mot-breakout-chat-luong-hon">Cách xác định một breakout chất lượng hơn</h2><h3>Khối lượng trên mức trung bình</h3><p>Một cú phá vỡ đi kèm khối lượng giao dịch cao hơn nhiều so với mức trung bình gần đây thường đáng tin cậy hơn một cú phá vỡ với khối lượng yếu, vì nó cho thấy sự tham gia lớn hơn của người mua hoặc người bán trong quyết định đó.</p><h3>Tích lũy trước đó</h3><p>Giá càng dành nhiều thời gian kiểm định cùng một vùng mà không phá vỡ được, khối lượng lệnh được giải phóng khi cú phá vỡ cuối cùng xảy ra càng có xu hướng lớn hơn, điều này có thể tạo ra một chuyển động mạnh hơn sau đó.</p><h3>Xác nhận đóng cửa</h3><p>Nhiều trader thích chờ cây nến đóng cửa trên (hoặc dưới) mức đã bị phá vỡ, thay vì vào lệnh ngay khi giá chạm đường đó, chính là để giảm số lượng các cú phá vỡ sai quay trở lại trong biên độ trước khi đóng cửa.</p><h2 id="van-đe-cua-cac-cu-pha-vo-sai">Vấn đề của các cú phá vỡ sai</h2><p>Không phải mọi breakout đều được xác nhận. Rất thường thấy giá phá vỡ một mức, thu hút người mua (hoặc người bán), rồi sau đó quay trở lại trong biên độ trước đó, để lại cho ai vào lệnh khi phá vỡ một giao dịch thua lỗ. Hiện tượng này, được gọi là phá vỡ sai, là lý do chính khiến các chiến lược breakout, dù đơn giản, vẫn đòi hỏi một kế hoạch dừng lỗ được xác định rõ ràng.</p><ul><li>Ưu tiên các cú phá vỡ với khối lượng trên mức trung bình gần đây.</li><li>Cân nhắc chờ xác nhận đóng cửa trước khi vào lệnh.</li><li>Xác định mức dừng lỗ ngay dưới (hoặc trên) mức đã bị phá vỡ.</li><li>Chấp nhận rằng một phần các cú phá vỡ sẽ là sai: đó là một phần của chiến lược.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="mot-vi-du-tinh-rui-ro-trong-giao-dich">Một ví dụ tính rủi ro trong giao dịch</h2><p>Giả sử một cổ phiếu bị mắc kẹt giữa R$ 48 và R$ 52 trong vài tuần, và giá phá vỡ R$ 52 với khối lượng mạnh. Một trader quyết định mua ở R$ 52,50, đặt mức dừng lỗ ở R$ 50,50 (hơi thấp hơn giữa biên độ trước đó), khoảng cách R$ 2 mỗi cổ phiếu. Với tài khoản R$ 15.000 và rủi ro tối đa 2% mỗi giao dịch (R$ 300), vị thế tối đa sẽ là R$ 300 ÷ R$ 2 = 150 cổ phiếu, tổng cộng R$ 7.875 đã đầu tư.</p><p>Nếu mục tiêu thoát lệnh là R$ 57,50 (lãi R$ 5 mỗi cổ phiếu, tức 150 x R$ 5 = R$ 750), tỷ lệ rủi ro-lợi nhuận của giao dịch sẽ là R$ 300 mạo hiểm cho R$ 750 tiềm năng lợi nhuận, tỷ lệ khoảng 1 trên 2,5, được coi là thuận lợi ngay cả khi chiến lược đúng ít hơn một nửa số lần.</p><h2 id="cach-ap-dung-chien-luoc-breakout-trong-thuc-te">Cách áp dụng chiến lược breakout trong thực tế</h2><p>Chọn các tài sản có lịch sử tích lũy rõ ràng, chờ khối lượng trên mức trung bình và xác nhận đóng cửa trước khi vào lệnh, và luôn xác định mức dừng lỗ trước khi mở vị thế, không bao giờ sau đó. Chấp nhận từ trước rằng một phần các giao dịch sẽ là phá vỡ sai: mục tiêu không phải là đúng mọi lần, mà là giữ rủi ro nhỏ ở những lần sai và để những lần đúng nắm bắt một chuyển động lớn hơn, luôn nhớ rằng bất kỳ chiến lược giao dịch nào cũng có rủi ro thực sự về mất vốn.</p><p>Ghi chép bằng văn bản mỗi cú phá vỡ đã giao dịch, kể cả những lần thất bại, và xem lại lịch sử này định kỳ. Theo thời gian, ghi chép này cho thấy chiến lược breakout hoạt động tốt nhất ở những tài sản và khung giờ nào cho hồ sơ của bạn, cho phép điều chỉnh dựa trên dữ liệu thực tế, không chỉ dựa trên cảm giác rằng thị trường đã phá vỡ mạnh mẽ.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Giao cắt đường trung bình động mũ (EMA) trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/cach-chon-ky-han-het-han-cho-mot-giao-dich/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách chọn kỳ hạn (thời hạn) cho một giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/nhung-chi-bao-tot-nhat-cho-day-trade/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Những chỉ báo tốt nhất cho người giao dịch day trade</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/giao-cat-duong-trung-binh-dong-mu-ema-trong-giao-dich/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Giao cắt đường trung bình động mũ (EMA) trong giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-chon-ky-han-het-han-cho-mot-giao-dich/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cách chọn kỳ hạn (thời hạn) cho một giao dịch</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/nhung-chi-bao-tot-nhat-cho-day-trade/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Những chỉ báo tốt nhất cho người giao dịch day trade</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

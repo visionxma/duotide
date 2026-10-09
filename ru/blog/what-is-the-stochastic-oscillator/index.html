@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Стохастический осциллятор исходит из простой идеи: при устойчивом росте цена обычно закрывается близко к верхней границе недавнего торгового диапазона. При устойчивом падении обычно закрывается близко к нижней границе. Индикатор превращает это наблюдение в шкалу от 0 до 100, показывая, где находится последнее закрытие внутри диапазона максимумов и минимумов определенного числа свечей.</p><p>Созданный Джорджем Лейном в 1950-х годах, Стохастик остается одним из самых используемых осцилляторов, потому что его легко визуализировать, и он относительно быстро реагирует на изменения ритма рынка. Но, как и любой индикатор моментума, у него есть ограничения, проявляющиеся только когда вы понимаете лежащий в его основе расчет.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-oscilador-estocastico.svg" alt="График: EUR/USD, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ." width="960" height="540" loading="lazy" decoding="async"><figcaption>График: EUR/USD, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ.</figcaption></figure><h2 id="формула-k">Формула %K</h2><p>Главная линия индикатора, называемая %K, следует этой формуле:</p><p><strong>%K = 100 × (Текущее закрытие − Наименьший минимум периода) ÷ (Наибольший максимум периода − Наименьший минимум периода)</strong></p><p>Предположим, за последние 14 свечей актива максимум составил 110,00 руб., а минимум — 90,00 руб. Если самое недавнее закрытие было 106,00 руб., расчет таков:</p><p><strong>%K = 100 × (106 − 90) ÷ (110 − 90) = 100 × 16 ÷ 20 = 80</strong></p><p>%K на уровне 80 означает, что цена закрылась в верхних 20% наблюдаемого ценового диапазона — близко к максимуму периода, не обязательно на историческом максимуме.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="для-чего-служит-d">Для чего служит %D</h2><p>Большинство платформ отображают %K вместе со второй линией, %D, являющейся простой скользящей средней %K (обычно за 3 периода). %D сглаживает резкие колебания %K и работает как сигнальная линия: когда %K пересекает %D снизу вверх, некоторые трейдеры видят входящую покупательную силу; когда пересекает сверху вниз — силу продавцов.</p><p>Также распространено применение дополнительного сглаживания к самому %K перед расчетом %D — так называемый медленный Стохастик, — что снижает число ложных сигналов ценой немного более медленной реакции.</p><h2 id="перекупленность-и-перепроданность-осторожно-с-преувеличением">Перекупленность и перепроданность: осторожно с преувеличением</h2><p>Самые упоминаемые зоны — выше 80 (перекупленность) и ниже 20 (перепроданность). Классическая ошибка — рассматривать это как автоматический приказ на продажу или покупку. При сильном восходящем тренде %K может оставаться выше 80 много свечей подряд, и продажа только потому, что индикатор растянут, означает выход из движения, у которого еще был запал.</p><ul><li><strong>%K выше 80</strong>: цена закрывается близко к верхней границе недавнего диапазона — сила покупателей, не автоматический сигнал разворота.</li><li><strong>%K ниже 20</strong>: цена закрывается близко к нижней границе недавнего диапазона — сила продавцов, с той же оговоркой.</li><li><strong>Дивергенция</strong>: когда цена формирует более высокий максимум, но %K формирует более низкий максимум (или наоборот), моментум теряет силу, даже если цена еще продвигается.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="где-индикатор-работает-лучше-всего">Где индикатор работает лучше всего</h2><p>Стохастик обычно лучше ведет себя на рынках, колеблющихся внутри определенного диапазона, чередуя поддержку и сопротивление, чем при сильных и продолжительных трендах. На боковом диапазоне пересечения %K и %D вблизи крайних значений 20 и 80 обычно отмечают точки разворота чаще. При сильном тренде идеально использовать индикатор для измерения коррекций внутри основного движения, а не для попытки предсказать конец тренда.</p><p>Практический пример: на валютной паре в восходящем тренде откат, приводящий %K с 90 до близких к 20, может представлять просто здоровую паузу в движении, особенно если структура максимумов и минимумов графика продолжает расти. Продажа только потому, что осциллятор обнулился, игнорировала бы более крупный контекст.</p><h2 id="собираем-все-вместе">Собираем всё вместе</h2><p>Стохастический осциллятор работает лучше как часть более широкого чтения, чем изолированно. Сочетание его с основным трендом графика, уровнями поддержки и сопротивления или другим индикатором, измеряющим силу тренда, помогает отфильтровать входы, зависящие только от числа, пересекающего 20 или 80. Как и любой инструмент технического анализа, он повышает качество чтения, но не устраняет риск неудачной сделки — управление позицией и лимит убытка по-прежнему остаются необходимой частью процесса, независимо от того, насколько ясным кажется сигнал в момент входа.</p>
             <div class="bq-post__cta">
-              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными R$ 10 000.</p>
+              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными 10 000 долларов США.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть бесплатный счёт</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Стохастик и Parabolic SAR: как сочетать три индикатора</span><span class="bq__meta">24.09.2026 · 7 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Стохастик и Parabolic SAR: как сочетать три индикатора</span><span class="bq__meta">24.09.2026 · 7 мин чтения</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Готовы попробовать на практике?</h2>
+          <p class="ap-lp__sub">Откройте счёт и тренируйтесь на демо-счёте с виртуальными 10 000 долларов США, не рискуя деньгами.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть счёт</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Попробовать демо</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Безопасная платформа</strong><span>Защищённый вход и проверка личности</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Поддержка на разных языках</strong><span>Помощь каждый день</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Бесплатный демо-счёт</strong><span>10 000 USD виртуально для практики</span></li>
+          </ul>
+          <p class="ap-lp__risco">Торговля связана с риском потери вложенного капитала.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

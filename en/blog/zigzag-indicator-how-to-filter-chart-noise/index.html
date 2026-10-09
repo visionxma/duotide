@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Looking at an unfiltered price chart can be exhausting: dozens of small ups and downs compete for attention, making it hard to see the truly relevant move behind all that noise. The ZigZag exists precisely to solve this visual problem, drawing straight lines that connect only the chart's significant highs and lows, ignoring what falls in between.</p><p>This article explains how the ZigZag decides what's noise and what's relevant movement, what it's actually useful for in practice, and why it shouldn't be confused with an entry-signal generator.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="Chart: Ibovespa, daily, 03/02/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Ibovespa, daily, 03/02/2026 to 10/07/2026. Data: Yahoo Finance. Own analysis.</figcaption></figure><h2 id="how-the-zigzag-decides-what-to-show">How the ZigZag decides what to show</h2><p>The indicator is configured with a minimum change threshold, defined as a percentage of the price or a number of points. Any move smaller than that threshold is ignored, and the ZigZag only draws a new line when the price moves enough to exceed that threshold from the last identified high or low. For example, with a 5% threshold, a 2% swing in the middle of a trend simply doesn't show up on the indicator — it only enters the drawing once the accumulated move exceeds the defined 5%.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="what-the-zigzag-is-actually-useful-for">What the ZigZag is actually useful for</h2><h3>Identifying relevant highs and lows</h3><p>By removing short-term noise, it becomes easier to see where the reversal points that truly mattered in the asset's history are — useful information for drawing support and resistance lines with more confidence than trying to guess it on a chart full of small swings.</p><h3>Supporting chart pattern reading</h3><p>Patterns like double top, head and shoulders, or trend channels become more evident once the ZigZag has already eliminated the smaller noise, working as a visual skeleton on which these patterns can be identified more clearly, including for those who study wave counting in technical analysis. Without this filter, it would be much harder to visually separate which leg of the chart represents the main move and which is just a correction within it.</p><h3>Measuring the size of past moves</h3><p>Since each ZigZag line connects a high to a low (or vice versa), it makes it easy to quickly measure how many points or what percentage the asset moved on each leg of the chart, which helps calibrate target expectations based on past moves of similar size.</p><h2 id="the-zigzag-s-most-important-limitation">The ZigZag's most important limitation</h2><p>The ZigZag is an indicator that looks backward: it only confirms a high or low after the price has already moved enough in the opposite direction to prove that point was indeed a reversal. This means the indicator's last line can change, or repaint, as new candles form — the high that seemed definitive a moment ago can stop existing if the price keeps rising. For that reason, using the ZigZag as a direct entry trigger is risky: by the time the signal appears clearly, the move it describes has already happened. This makes the ZigZag more of a retrospective tool than an anticipatory indicator.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-adjust-the-sensitivity-parameter">How to adjust the sensitivity parameter</h2><ul><li>A small threshold (for example, 1% or 2%) shows more detail, but brings back a lot of short-term noise.</li><li>A larger threshold (for example, 8% or 10%) simplifies the chart a lot, but can ignore reversals relevant for shorter-term trades.</li><li>The ideal setting depends on the asset and the chart timeframe: more volatile assets generally need a larger threshold to avoid excessive noise, and the opposite applies to more stable assets.</li></ul><h2 id="how-to-use-the-zigzag-responsibly">How to use the ZigZag responsibly</h2><p>The best way to take advantage of the ZigZag is as a visual analysis and historical study tool, not as an entry trigger. Combine the reading of the highs and lows it highlights with a momentum indicator, like the RSI, or with a volume reading, to decide the actual moment to enter a trade. Like any tool based on data that has already occurred, the ZigZag doesn't predict the next move, and the risk of loss remains present even with a visually more organized chart — it's worth studying its behavior on a demo account before incorporating it into your analysis routine.</p>
             <div class="bq-post__cta">
-              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with R$ 10,000 in virtual funds.</p>
+              <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with US$10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Related articles</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/en/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">What the ADX Indicator Is and How It Works</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
-            <a class="bq__card" href="/en/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">What the Stochastic Oscillator Is and How It Works</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
-            <a class="bq__card" href="/en/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">What Average True Range (ATR) Is and How to Calculate It</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What the ADX Indicator Is and How It Works</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What the Stochastic Oscillator Is and How It Works</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What Average True Range (ATR) Is and How to Calculate It</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Ready to put it into practice?</h2>
+          <p class="ap-lp__sub">Open your account and practice on the demo account with US$10,000 in virtual funds, without risking money.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create account</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Try the demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Secure platform</strong><span>Protected login and identity verification</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Multilingual support</strong><span>Help available every day</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Free demo account</strong><span>US$10,000 virtual to practice</span></li>
+          </ul>
+          <p class="ap-lp__risco">Trading involves the risk of losing the capital invested.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

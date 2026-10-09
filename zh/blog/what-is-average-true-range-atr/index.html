@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>与大多数指标不同，真实波幅均值（ATR）并不试图预测任何方向。它只衡量一件事：某资产在一段周期内通常以绝对值计算移动多少。它是一把衡量波动性的尺子，而不是买入或卖出的信号。</p><p>ATR由J. Welles Wilder创建，此人也是ADX和RSI的作者，几乎出现在每一个需要根据资产真实表现来确定止损大小或仓位大小的策略中，而不是使用一个随意选定的固定数值。</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-average-true-range-atr.svg" alt="图表：Ouro，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Ouro，日线，2026/04/01 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="为什么简单的-最高价减最低价-还不够">为什么简单的“最高价减最低价”还不够</h2><p>如果你只是用每根K线的最高价减去最低价，就会遗漏一个重要的细节：跳空。假设某资产前一个交易日以R$ 50,00收盘，第二个交易日一开盘就是R$ 46,00，随后在R$ 45,50和R$ 46,80之间交易。K线内部的波幅（最高价减最低价）只有R$ 1,30。但自上一次收盘以来的真实变动却是R$ 4,50。忽视这一点，会低估该资产真实的波动性。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="如何计算真实波幅">如何计算真实波幅</h2><p>为了解决这个问题，每根K线的真实波幅（TR）取以下三个计算结果中的最大值：</p><ul><li>当前K线最高价减去当前K线最低价；</li><li>当前K线最高价减去前一根K线收盘价（取绝对值）；</li><li>当前K线最低价减去前一根K线收盘价（取绝对值）。</li></ul><p>在上面的例子中，TR就是1.30（46,80 − 45,50）、3.20（|46,80 − 50,00|）和4.50（|45,50 − 50,00|）三者中的最大值。也就是说，TR = R$ 4,50——这才是真正捕捉到包括跳空在内的行情幅度的数字。</p><h2 id="从真实波幅到atr">从真实波幅到ATR</h2><p>ATR是真实波幅在一段周期内（通常为14根K线）的平滑平均值。第一个数值通常是前14个TR的简单平均值。此后，就应用Wilder的平滑公式：</p><p><strong>今日ATR = ((前一日ATR × 13) + 今日TR) ÷ 14</strong></p><p>假设昨天的ATR为R$ 2,00，按照前面的例子，今天的TR为R$ 4,50：</p><p><strong>今日ATR = ((2,00 × 13) + 4,50) ÷ 14 = (26,00 + 4,50) ÷ 14 = 30,50 ÷ 14 ≈ R$ 2,18</strong></p><p>请注意，一根强劲行情的K线并不会让ATR一下子飙升——它是逐渐上升的，因为它承载着此前13个周期的权重。这是刻意设计的：ATR衡量的是反复出现的波动性，而不是一次孤立的峰值。</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="在实践中有什么用">在实践中有什么用</h2><p>ATR最常见的用途，是按照资产自身的表现，按比例设定止损和仓位大小，而不是对任何市场都使用固定的点数或金额。</p><p>举个例子：如果某资产的ATR为R$ 2,18，一个设在距入场点1.5倍ATR处的止损，就会距入场价R$ 3,27（2,18 × 1,5）。而在一个波动性更大、ATR为R$ 8,00的资产上，同样1.5倍ATR的倍数会得出R$ 12,00的止损——宽得多，因为这个资产本身日常波动就更大。在这两种情况下都使用同样固定的止损距离没有多大意义：在更平静的资产上，止损会显得太宽；在波动更大的资产上，止损则太紧，容易被单纯的市场噪音触发。</p><h2 id="atr不能告诉你价格会往哪个方向走">ATR不能告诉你价格会往哪个方向走</h2><p>一个常见的错误是试图把ATR当作入场信号——ATR高既不表示看涨也不表示看跌，只表示波动更大。一次剧烈的10%下跌和一次剧烈的10%上涨，可能产生相似的真实波幅读数，因为计算使用的是绝对值。因此，ATR通常与另一个指标或趋势判断一起出现，从不单独作为操作的触发条件。</p><h2 id="把atr应用到日常操作中">把ATR应用到日常操作中</h2><p>ATR更适合作为风险管理工具，而不是入场信号。它有助于回答一些实际问题：这个止损是否与资产当前的波动性成比例？考虑到价格通常的波动幅度，这个仓位大小是否合理？以这种方式使用，该指标能降低止损被该资产常见噪音触发的可能性，尽管没有任何风险管理技巧能完全消除风险——它只是帮助更一致地衡量风险的大小。</p>
             <div class="bq-post__cta">
-              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 美元虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD、随机指标与抛物线SAR：如何组合使用</span><span class="bq__meta">2026/09/24 · 阅读 7 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是ADX指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">什么是随机振荡指标，它是如何运作的</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/macd-stochastic-and-parabolic-sar-how-to-combine/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD、随机指标与抛物线SAR：如何组合使用</span><span class="bq__meta">2026/09/24 · 阅读 7 分钟</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">准备好动手实践了吗？</h2>
+          <p class="ap-lp__sub">开设账户，在模拟账户中用 10,000 美元虚拟资金练习，无需冒真金白银的风险。</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">开设账户</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">试用模拟账户</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>安全的平台</strong><span>受保护的登录与身份验证</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>多语言支持</strong><span>每天都有人帮助</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>免费模拟账户</strong><span>10,000 美元虚拟资金练习</span></li>
+          </ul>
+          <p class="ap-lp__risco">交易存在损失投资本金的风险。</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

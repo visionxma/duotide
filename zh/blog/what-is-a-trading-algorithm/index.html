@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>“交易算法”这个词听起来往往比它实际的样子更复杂。归根结底，算法只是一系列逻辑规则，用来决定何时买入、何时卖出、承担多大风险，而不依赖于当下的直觉。它可以简单到只是一条均线交叉规则，也可以复杂到包含数十个变量的统计模型。</p><p>在这篇文章中，你将了解什么是交易算法、个人交易者常用的主要类型，以及如何评估是否值得构建或使用一个算法。</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-algoritmo-de-trading.svg" alt="图表：Apple，日线，2026/01/02 至 2026/10/07。数据：Yahoo Finance。自行分析。" width="960" height="540" loading="lazy" decoding="async"><figcaption>图表：Apple，日线，2026/01/02 至 2026/10/07。数据：Yahoo Finance。自行分析。</figcaption></figure><h2 id="算法-策略和机器人之间的区别">算法、策略和机器人之间的区别</h2><p>这三个术语常常被混为一谈，但它们并不是同义词。策略是总体的想法，例如，买入处于上升趋势并突破阻力位的资产。算法则是把这个想法转化为精确、可测试的规则，带有具体的数字：用哪个周期的移动平均线，突破多少个百分比，止损设多大。而机器人则是自动执行这个算法的计算机程序，无需人工干预。</p><p>你可以拥有一个策略，并手动执行它，在每笔操作中凭记忆应用这个算法，而从不编写任何机器人程序。许多经验丰富的交易者正是这样做的：使用算法的逻辑，但用自己的手按下买入和卖出的按钮。</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="常见的交易算法类型">常见的交易算法类型</h2><h3>趋势跟踪型</h3><p>当价格持续上涨时买入，当上升趋势失去力量时卖出，通常以移动平均线或趋势强度指标作为参考。</p><h3>均值回归型</h3><p>基于价格在经历过度行情后往往会回归历史均值的原则，在资产下跌过快时买入，在上涨超出算法认为合理的范围时卖出。</p><h3>套利型</h3><p>寻找同一资产在不同经纪商或不同市场之间的微小价格差异，在价格较低的地方买入，几乎同时在价格较高的地方卖出。这类算法通常需要更大的资金和极快的执行速度才能可行。</p><h2 id="使用一个算法之前该如何评估它">使用一个算法之前该如何评估它</h2><p>第一个标准是规则的清晰度：一个好的算法能用几句话描述清楚，不留下主观解释的空间。第二个标准是测试的历史记录，需要用足够长的时间段的数据进行测试，涵盖市场好坏两种时期。</p><p>一个数值示例有助于理解算法盈亏比的重要性。假设一个算法的胜率为45%，每笔亏损操作损失R$ 100，每笔盈利操作平均获利R$ 180。那么每笔操作的预期结果为(0.45 x R$ 180) − (0.55 x R$ 100) = R$ 81 − R$ 55 = 正R$ 26，即便一半以上的操作都判断错误。这说明为什么胜率本身并不能说明一个算法的质量：盈利和亏损的平均比例同样重要。</p><ul><li>规则清晰，入场和出场没有模糊地带。</li><li>测试历史涵盖较长时期，包括市场上涨和下跌的阶段。</li><li>明确的盈亏比，而不仅仅是胜率。</li><li>预期结果的计算中包含了操作成本。</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="采用现成算法时需要注意的事项">采用现成算法时需要注意的事项</h2><p>市场上有一些现成出售的算法，承诺能带来稳定的结果。在采用任何一种之前，要求查看完整的操作历史，而不只是几个月的盈利摘要，并核实测试期是否包含了市场困难的时期，比如剧烈下跌或高波动阶段。</p><p>无论算法是手动执行还是由机器人执行，像Duotide这样用来下单的平台，都不会干预策略背后规则的质量。一个设计不良的算法在任何平台上都会造成亏损。</p><h2 id="如何开始构建自己的算法">如何开始构建自己的算法</h2><p>把你的交易想法写成简单的数字规则，在编写任何程序之前先在历史图表上手动测试，只有在用真实数据确认了这个逻辑确实合理之后，才考虑将其自动化。同时也值得定期审查这个算法：一套六个月前运作良好的规则，如果市场行为发生了变化，可能会失去效力，因此将实际结果与预期进行对比，是工作的一部分，而不是可有可无的步骤。</p><p>请记住，无论构建得多么出色，没有任何算法能够消除亏损的风险——它只是把承担这种风险的方式系统化了。即使在统计上预期之内的连续亏损中，也能坚持遵守规则的纪律，通常比算法本身的技术复杂程度对最终结果的影响更大。</p>
             <div class="bq-post__cta">
-              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 雷亚尔虚拟资金的模拟账户中检验您的想法。</p>
+              <p><strong>先练习，再冒险。</strong> 开设 Duotide 账户，在拥有 10,000 美元虚拟资金的模拟账户中检验您的想法。</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">免费开户</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>相关文章</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
-            <a class="bq__card" href="/zh/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">日内交易者最实用的指标</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/ema-crossover-trading/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">指数移动平均线（EMA）交叉在交易中的应用</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/how-to-choose-trade-expiration/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">如何选择一笔交易的期限（到期时间）</span><span class="bq__meta">2026/09/24 · 阅读 5 分钟</span></a>
+            <a class="bq__card" href="/zh/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">日内交易者最实用的指标</span><span class="bq__meta">2026/09/24 · 阅读 6 分钟</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">准备好动手实践了吗？</h2>
+          <p class="ap-lp__sub">开设账户，在模拟账户中用 10,000 美元虚拟资金练习，无需冒真金白银的风险。</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">开设账户</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-zh" target="_blank" rel="noopener sponsored nofollow">试用模拟账户</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>安全的平台</strong><span>受保护的登录与身份验证</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>多语言支持</strong><span>每天都有人帮助</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>免费模拟账户</strong><span>10,000 美元虚拟资金练习</span></li>
+          </ul>
+          <p class="ap-lp__risco">交易存在损失投资本金的风险。</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

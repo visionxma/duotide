@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>เมื่อใครก็ตามเปิดกราฟเป็นครั้งแรกและเห็นเส้นสองเส้นล้อมรอบราคาเหมือนทางเดิน มักสับสนระหว่างอินดิเคเตอร์ STARC (Stoller Average Range Channel) กับ Bollinger Bands ในทางสายตาทั้งสองดูคล้ายกัน มีเส้นกลางและแบนด์สองเส้น เส้นหนึ่งอยู่เหนือและอีกเส้นอยู่ใต้ราคา แต่วิธีที่แต่ละตัวคำนวณแบนด์เหล่านี้เปลี่ยนพฤติกรรมของสัญญาณไปมาก และการเลือกอินดิเคเตอร์ผิดสำหรับสไตล์ของคุณอาจก่อให้เกิดการเข้าเทรดที่แย่ได้</p><p>บทความนี้อธิบายความแตกต่างในการสร้างระหว่างสองตัวนี้ แสดงว่าสถานการณ์ใดที่แต่ละตัวทำงานได้ดีกว่า และให้ตัวอย่างวิธีใช้ร่วมกับกฎการบริหารความเสี่ยง</p><figure class="ap__grafico"><img src="/assets/graficos/bandas-starc-ou-bandas-de-bollinger-qual-usar.svg" alt="กราฟ: Nvidia รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: Nvidia รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="แต-ละอ-นด-เคเตอร-คำนวณอย-างไร">แต่ละอินดิเคเตอร์คำนวณอย่างไร</h2><h3>Bollinger Bands</h3><p>Bollinger Bands เริ่มจากเส้นค่าเฉลี่ยเคลื่อนที่แบบธรรมดา โดยทั่วไป 20 ช่วง แล้วบวกและลบสองเท่าของค่าเบี่ยงเบนมาตรฐานของราคาในช่วงนั้น เนื่องจากค่าเบี่ยงเบนมาตรฐานวัดการกระจายตัวของราคารอบค่าเฉลี่ย แบนด์จึงห่างออกจากกันเมื่อความผันผวนสูงขึ้นและเข้าใกล้กันเมื่อตลาดนิ่งมากขึ้น การเคลื่อนไหวเปิดและปิดนี้เรียกว่า squeeze</p><h3>STARC Bands</h3><p>STARC ก็ใช้เส้นค่าเฉลี่ยเคลื่อนที่แบบธรรมดาเป็นเส้นกลางเช่นกัน แต่แบนด์บนและล่างสร้างขึ้นโดยการบวกและลบตัวคูณของ ATR (Average True Range) ไม่ใช่ค่าเบี่ยงเบนมาตรฐาน เนื่องจาก ATR วัดขนาดเฉลี่ยของแท่งราคา (รวมถึงช่องว่างราคา) STARC Bands มักตอบสนองต่อการเปลี่ยนแปลงความผันผวนอย่างราบรื่นและสม่ำเสมอกว่า โดยไม่มีการเคลื่อนไหวฉับพลันที่บางครั้งปรากฏใน Bollinger Bands</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ในทางปฏ-บ-ต-ส-งท-เปล-ยนไปสำหร-บผ-เทรด">ในทางปฏิบัติ สิ่งที่เปลี่ยนไปสำหรับผู้เทรด</h2><p>เนื่องจากค่าเบี่ยงเบนมาตรฐานไวต่อจุดพุ่งของราคาที่โดดเดี่ยวมากกว่า Bollinger Bands มักเปิดและปิดเร็วกว่า ซึ่งมีประโยชน์สำหรับผู้ที่ต้องการระบุช่วงความผันผวนต่ำที่มักเกิดก่อนการเคลื่อนไหวที่รุนแรงได้อย่างรวดเร็ว ในขณะที่ STARC ซึ่งอิงจาก ATR ให้ช่องที่มั่นคงกว่า ซึ่งช่วยเทรดเดอร์ที่ชอบเทรดภายในกรอบราคาที่กำหนดไว้ ซื้อใกล้แบนด์ล่างและขายใกล้แบนด์บนในตลาดที่ไม่มีแนวโน้มชัดเจน</p><h2 id="ต-วอย-างเปร-ยบเท-ยบท-งสอง">ตัวอย่างเปรียบเทียบทั้งสอง</h2><p>สมมติสินทรัพย์หนึ่งซื้อขายที่ R$ 25,00 พร้อมเส้นค่าเฉลี่ยเคลื่อนที่ 20 ช่วงอยู่ที่ R$ 25,00 เช่นกัน ใน Bollinger Bands ด้วยค่าเบี่ยงเบนมาตรฐาน R$ 0,80 แบนด์จะอยู่ที่ R$ 26,60 (บน) และ R$ 23,40 (ล่าง) ใน STARC ด้วย ATR ที่ R$ 0,60 และตัวคูณ 2 แบนด์จะอยู่ที่ R$ 26,20 และ R$ 23,80 เป็นช่องที่แคบกว่าเล็กน้อยและมีโอกาสน้อยกว่าที่จะขยายตัวกะทันหันเพราะแท่งเทียนที่ยาวกว่าเพียงแท่งเดียว</p><p>หากราคาแตะที่ R$ 23,80 (แบนด์ล่างของ STARC) แต่ยังไม่ถึง R$ 23,40 ของ Bollinger เทรดเดอร์ที่ใช้ STARC ก็จะได้สัญญาณซื้อที่เป็นไปได้แล้ว ในขณะที่ผู้ใช้ Bollinger ยังคงรอ</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ว-ธ-ต-ดส-นใจว-าจะใช-แบบไหน">วิธีตัดสินใจว่าจะใช้แบบไหน</h2><ul><li>หากจุดสนใจของคุณคือระบุการหดตัวของความผันผวนก่อนการทะลุแนว Bollinger Bands มักตรงประเด็นกว่า</li><li>หากคุณเทรดในตลาดที่แกว่งตัวในกรอบและชอบช่องที่มั่นคงกว่า โดยไม่มีการขยายตัวกะทันหันบ่อย ๆ STARC มักมีพฤติกรรมที่ดีกว่า</li><li>ไม่มีตัวใดในสองตัวที่ทำนายอนาคตได้ ทั้งสองอธิบายพฤติกรรมล่าสุดของราคา จึงทำงานได้ดีที่สุดเมื่อผสมกับอินดิเคเตอร์จังหวะ เช่น RSI หรือการอ่านแนวรับแนวต้าน</li><li>ทดสอบทั้งสองตัวกับสินทรัพย์และช่วงเวลาเดียวกันก่อนเลือก ความแตกต่างของพฤติกรรมเปลี่ยนไปตามสินทรัพย์และกรอบเวลา</li></ul><h2 id="ข-อจำก-ดท-ใช-ได-ก-บท-งสองอ-นด-เคเตอร">ข้อจำกัดที่ใช้ได้กับทั้งสองอินดิเคเตอร์</h2><p>STARC ถูกสร้างขึ้นโดยนักวิเคราะห์ Manning Stoller เพื่อเป็นทางเลือกแทน Bollinger Bands แต่ไม่มีตัวใดในสองตัวแก้ปัญหาความเสี่ยงหลักของการเทรดแบนด์ความผันผวนได้ ในแนวโน้มที่แข็งแกร่ง ราคาอาจเดินเกาะติดแบนด์บนหรือล่างต่อเนื่องหลายแท่งเทียน โดยไม่ได้หมายถึงการกลับตัวเลย ผู้ที่ซื้อทุกครั้งที่ราคาแตะแบนด์ล่างโดยไม่ตรวจสอบบริบทของแนวโน้ม มีความเสี่ยงที่จะซื้อระหว่างการร่วงลงที่ยังจะดำเนินต่อไป</p><p>อีกจุดสำคัญคือกรอบเวลาของกราฟ แบนด์ที่คำนวณในกราฟ 1 นาทีตอบสนองแตกต่างอย่างมากจากแบนด์เดียวกันในกราฟรายวัน เพราะทั้งค่าเบี่ยงเบนมาตรฐานและ ATR ขึ้นอยู่กับช่วงเวลาที่เลือกโดยตรง การปรับช่วงเวลาของค่าเฉลี่ย (เช่น ทดสอบ 14, 20 หรือ 30) และตัวคูณของแบนด์เป็นส่วนหนึ่งของกระบวนการค้นหาการตั้งค่าที่อธิบายพฤติกรรมของสินทรัพย์ที่คุณติดตามได้ดีที่สุด</p><h2 id="นำไปใช-จร-ง">นำไปใช้จริง</h2><p>ไม่มีอินดิเคเตอร์ใดถูกหรือผิดระหว่าง STARC และ Bollinger มีแต่สิ่งที่เข้ากับสไตล์การเทรดของคุณมากกว่า วิธีที่ดีคือเปิดทั้งสองอินดิเคเตอร์พร้อมกันในบัญชีทดลองบน Duotide ใช้กับสินทรัพย์ที่คุณมักติดตาม และสังเกตตลอดสองสามสัปดาห์ว่าตัวไหนคาดการณ์การเคลื่อนไหวที่คุณตั้งใจจะจับได้ดีกว่า ควรจำไว้ว่าแบนด์ความผันผวนใดก็ตามเป็นเครื่องมือช่วยเหลือ ไม่ใช่การรับประกันความแม่นยำ และการควบคุมความเสี่ยงผ่านสต็อปลอสยังคงขาดไม่ได้ในกลยุทธ์ใดที่อิงช่องเหล่านี้</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

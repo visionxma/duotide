@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>من بين المؤشرات التي ابتكرها المحلل والإحصائي توشار تشاندي، يُعد مذبذب تشاندي للتنبؤ (Chande Forecast Oscillator، أو CFO) من أقلها شهرة خارج الأوساط الفنية المتخصصة، لكنه يحمل فكرة مثيرة للاهتمام: بدلًا من النظر فقط إلى المتوسطات المتحركة البسيطة، يستخدم الانحدار الخطي لحساب قيمة "متوقعة" للسعر ويقارن هذه القيمة بالسعر الفعلي.</p><p>في هذا المقال ستفهم المنطق وراء CFO، وكيفية تفسيره، وكيف يمكن أن يكمّل مؤشرات أخرى للاتجاه والزخم.</p><figure class="ap__grafico"><img src="/assets/graficos/oscilador-de-previsao-de-chande.svg" alt="الرسم البياني: Microsoft، يومي، من 01‏/04‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص." width="960" height="540" loading="lazy" decoding="async"><figcaption>الرسم البياني: Microsoft، يومي، من 01‏/04‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص.</figcaption></figure><h2 id="الفكرة-وراء-المو-شر">الفكرة وراء المؤشر</h2><p>الانحدار الخطي، عند تطبيقه على سلسلة من الأسعار، يرسم الخط المستقيم الأنسب لحركة ذلك الأصل الأخيرة — إنها طريقة إحصائية لقول "إذا استمر هذا الاتجاه بالضبط كما هو، فهذا سيكون السعر المتوقع التالي". يستخدم CFO هذا الخط لحساب قيمة توقع للشمعة الحالية، ثم يقيس الفرق النسبي بين هذه القيمة المتوقعة وسعر الإغلاق الفعلي.</p><p>عندما يكون السعر الفعلي أعلى من القيمة المتوقعة بالانحدار، يصبح CFO موجبًا، مما يشير إلى أن السوق يتقدم بسرعة أكبر مما اقترحه الاتجاه الخطي الحديث. وعندما يكون السعر أدنى من المتوقع، يصبح CFO سالبًا، مشيرًا إلى تقدم أبطأ من المتوقع، أو إلى انخفاض.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="كيف-يعمل-الحساب-عملي-ا">كيف يعمل الحساب عمليًا</h2><p>افترض أن الانحدار الخطي المحسوب باستخدام آخر 14 شمعة لأصل ما يُسقط سعرًا متوقعًا قدره 48.00 ريال برازيلي للشمعة الحالية، لكن سعر الإغلاق الفعلي هو 49.44 ريال برازيلي. سيكون الفرق النسبي حوالي 3% [(49.44 − 48.00) / 48.00 × 100]، وهذه ستكون قيمة CFO في تلك الشمعة: +3.</p><p>يشير CFO الموجب والمتزايد إلى أن السعر يبتعد نحو الأعلى عن اتجاهه الخطي الحديث — وهو ما قد يدل على حركة قوة حقيقية أو على امتداد يميل إلى أن يُصحَّح. هنا يأتي دور التفسير المدمج مع عناصر أخرى من الرسم البياني.</p><h2 id="تقاطع-خط-الصفر">تقاطع خط الصفر</h2><p>كغيره من المذبذبات، لدى CFO خط صفر مركزي. التقاطع من السالب إلى الموجب يشير إلى أن السعر بدأ يتجاوز إسقاطه الخطي الحديث، وهو ما يُقرأ عادة كإشارة على اكتساب قوة الشراء لمساحة. التقاطع العكسي، من الموجب إلى السالب، يوحي بالعكس.</p><p>تميل هذه التقاطعات إلى العمل بشكل أفضل كتأكيد لحركة قائمة بالفعل أكثر من كونها إشارة مبكرة للانعكاس، بما أن الحساب يعتمد على الاتجاه الخطي للفترات السابقة.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="اختيار-فترة-الانحدار">اختيار فترة الانحدار</h2><p>الفترة المستخدمة لحساب الانحدار الخطي تؤثر أيضًا بشكل كبير على قراءة CFO. الفترة القصيرة، مثل 5 أو 9 شموع، تجعل المؤشر أكثر حساسية للتغيرات الحديثة، وتولّد تقاطعات وتذبذبات بتكرار أكبر، مفيدة لمن يتداول بآجال أقصر، لكنها أيضًا أكثر عرضة للضوضاء. الفترة الأطول، مثل 20 أو 30 شمعة، تُلطّف خط الانحدار وتجعل CFO يستجيب بشكل أبطأ، معكسًا اتجاهات أكثر رسوخًا.</p><p>لا توجد فترة ثابتة عالمية: الأفضل هو اختبار قيم مختلفة على نفس الأصل وملاحظة أي إعداد ينتج قراءات منطقية أمام السلوك التاريخي لذلك السوق، بدلًا من مجرد نسخ الفترة القياسية لمؤشر آخر.</p><h2 id="التباعدات-في-cfo">التباعدات في CFO</h2><p>كما في RSI، من الممكن ملاحظة تباعدات بين CFO والسعر. إذا سجّل السعر قمة جديدة، لكن CFO سجّل قراءة أقل من القمة السابقة، فهذا يوحي بأنه رغم ارتفاع السعر، فإنه يبتعد بشكل متناقص عن اتجاهه الخطي الحديث — إشارة على فقدان الزخم قد تسبق تصحيحًا.</p><h2 id="الجمع-بين-cfo-ومو-شرات-ا-خرى">الجمع بين CFO ومؤشرات أخرى</h2><p>بما أنه مؤشر مبني على الانحدار الخطي، يميل CFO إلى الاستجابة بشكل مشابه لمؤشرات الاتجاه، لذا لا يكون منطقيًا عادة استخدامه إلى جانب عدة متوسطات متحركة مختلفة — ستصبح الإشارة زائدة عن الحاجة. يعمل بشكل أفضل مكمَّلًا بمؤشر حجم أو تقلب، يجلبان بُعدًا مختلفًا للتحليل.</p><p>في Duotide، يستحق الأمر اختبار CFO في فترات انحدار مختلفة ومقارنة قراءته بالسلوك الفعلي للسعر في أصول تتابعها بالفعل، قبل دمجه كجزء من استراتيجية. كأي مؤشر إحصائي مبني على بيانات ماضية، يُسقط CFO اتجاهًا قد لا يتحقق، ويجب أن يأخذ كل قرار دخول بعين الاعتبار المخاطرة الفعلية لخسارة العملية.</p>
             <div class="bq-post__cta">
-              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 دولار أمريكي.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو مؤشر ADX وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو المذبذب العشوائي (الاستوكاستيك) وكيف يعمل</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ما هو Average True Range (ATR) وكيفية حسابه</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">هل أنت مستعد للتطبيق العملي؟</h2>
+          <p class="ap-lp__sub">افتح حسابك وتدرّب على الحساب التجريبي برصيد افتراضي قدره 10,000 دولار، دون المخاطرة بأموالك.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">إنشاء حساب</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">جرّب الحساب التجريبي</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>منصة آمنة</strong><span>تسجيل دخول محمي والتحقق من الهوية</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>دعم بعدة لغات</strong><span>مساعدة متاحة كل يوم</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>حساب تجريبي مجاني</strong><span>10,000 دولار افتراضية للتدريب</span></li>
+          </ul>
+          <p class="ap-lp__risco">ينطوي التداول على خطر خسارة رأس المال المستثمر.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

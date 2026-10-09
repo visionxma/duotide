@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>إحدى مشكلات استخدام مذبذب استوكاستيك واحد فقط هي كمية الإشارات التي يمكن أن يولدها في الأسواق الأكثر اضطرابًا، والكثير منها متناقض في فترات زمنية قصيرة. تحاول استراتيجية الاستوكاستيك المزدوج حل هذه المشكلة بالجمع بين مذبذبين بإعدادين مختلفين: أحدهما أبطأ، يُستخدم كمرشح للسياق، والآخر أسرع، يُستخدم لإيجاد اللحظة الدقيقة للدخول.</p><p>في هذا المقال ستفهم كيفية بناء هذا المزيج، والمنطق وراءه، ومثالاً عمليًا عن كيفية تفسير المذبذبين معًا.</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-dual-stochastic.svg" alt="الرسم البياني: Apple، يومي، من 01‏/04‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص." width="960" height="540" loading="lazy" decoding="async"><figcaption>الرسم البياني: Apple، يومي، من 01‏/04‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص.</figcaption></figure><h2 id="لماذا-نستخدم-مذبذبي-استوكاستيك-بدلا-من-واحد">لماذا نستخدم مذبذبي استوكاستيك بدلاً من واحد</h2><p>المذبذب المضبوط بفترة قصيرة يتفاعل بسرعة مع تغيرات السعر، وهو ما يفيد في نقاط دخول دقيقة، لكنه يولد أيضًا كثيرًا من إشارات التشبع الشرائي والبيعي التي لا تؤدي إلى أي مكان، خاصة خلال الاتجاهات القوية. أما المذبذب بفترة أطول فيتحرك بشكل أكثر سلاسة، عاكسًا زخم مدى أطول، لكنه يتفاعل ببطء شديد ليُستخدم وحده كمحفز للدخول.</p><p>فكرة الاستوكاستيك المزدوج هي استخدام السرعتين في آن واحد: يحدد المذبذب البطيء السياق — لصالح أي اتجاه من المنطقي التداول — ويشير المذبذب السريع إلى اللحظة الأدق ضمن هذا السياق.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ضبط-المذبذبين">ضبط المذبذبين</h2><p>الإعداد الشائع يستخدم مذبذبًا بطيئًا، بفترة أطول (مثلاً، 21 فترة، مع تنعيم إضافي)، لالتقاط زخم الأصل الأساسي، ومذبذبًا سريعًا، بفترة قصيرة (مثلاً، 5 فترات)، لإشارات الدخول. يمكن أن يختلف اختيار الفترات بدقة حسب الإطار الزمني والأصل المتداول، لكن منطق البطيء والسريع يبقى ثابتًا.</p><p>في الرسم البياني، عادة ما يقع المذبذب البطيء أسفل رسم الأسعار، والسريع أسفله مباشرة، ما يتيح مقارنة الاثنين بصريًا شمعة بشمعة.</p><h2 id="كيفية-تفسير-المذبذبين-مع-ا">كيفية تفسير المذبذبين معًا</h2><p>تعمل القراءة الأساسية كالتالي: أولاً يُلاحظ المذبذب البطيء. إذا كان يخرج من منطقة تشبع بيعي (أقل من 20) ويعود للأعلى، فإن السياق الأساسي يفضل صفقات الشراء. عندها فقط يُلاحظ المذبذب السريع، بحثًا عن إشارة دخول متوافقة مع هذا السياق — مثلاً، تقاطع صعودي لخطي %K و%D للمذبذب السريع، قادم أيضًا من منطقة تشبع بيعي.</p><p>عندما يتفق المذبذبان — البطيء يُظهر السياق المواتي والسريع يعطي إشارة الدخول ضمن هذا السياق — تحظى الصفقة، نظريًا، بدعم أكبر مما لو استُخدم أي منهما بمفرده. إذا أعطى السريع إشارة شراء، لكن البطيء لا يزال في منطقة تشبع شرائي أو ينخفض، فإن هذا التباين سبب لتوخي حذر أكبر قبل الدخول.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="مثال-عملي-على-القراءة">مثال عملي على القراءة</h2><p>تخيل أصلًا يُتداول عند R$ 33.20، مع ارتفاع المذبذب البطيء من 18 إلى 25، خارجًا من منطقة التشبع البيعي. في هذه اللحظة، يتقاطع المذبذب السريع من الأسفل إلى الأعلى عند 15، أيضًا ضمن منطقة التشبع البيعي. يشير هذا المزيج إلى دخول شراء محتمل، بوقف خسارة أسفل القاع الأخير قليلاً وهدف محدد بأقرب مقاومة مهمة في الرسم البياني.</p><h2 id="احتياطات-عند-تطبيق-الاستراتيجية">احتياطات عند تطبيق الاستراتيجية</h2><p>حتى مع اتفاق المذبذبين، لا ينبغي استخدام الاستوكاستيك المزدوج بمعزل عن السياق الأوسع للرسم البياني، مثل اتجاه إطار زمني أعلى ومستويات الدعم والمقاومة القريبة. تقلل الاستراتيجية من عدد الإشارات المتناقضة، لكنها لا تلغي الإشارات الخاطئة، خاصة في الأسواق شديدة التذبذب الجانبي أو مع أخبار غير متوقعة.</p><h2 id="التطبيق-العملي">التطبيق العملي</h2><p>على Duotide، يمكن ضبط مذبذبي استوكاستيك بفترتين مختلفتين على الرسم البياني نفسه واختبار هذا المزيج قبل تطبيقه بقيم حقيقية. يجدر تسجيل نتائج الإشارات الملاحظة لفترة، مع تعديل الفترات وفقًا لسلوك الأصل المختار. وكما في أي استراتيجية قائمة على المؤشرات، توجد مخاطرة حقيقية للخسارة، ويجب أن يكون حجم كل صفقة متناسبًا مع هذه المخاطرة.</p><p>طريقة أخرى لتطبيق الفكرة نفسها هي استخدام فترة استوكاستيك واحدة، لكن في إطارين زمنيين مختلفين لنفس الأصل — مثلاً، رسم بياني لـ4 ساعات للسياق ورسم بياني لـ15 دقيقة لتوقيت الدخول. المنطق الأساسي هو نفسه في الاستوكاستيك المزدوج الكلاسيكي: يحدد المدى الأطول الاتجاه المفضل، ويُحسّن المدى الأقصر نقطة الدخول ضمن هذا الاتجاه، ما يساعد على تجنب الدخول ضد الحركة السائدة للأصل في تلك اللحظة.</p>
             <div class="bq-post__cta">
-              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 ريال برازيلي.</p>
+              <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 دولار أمريكي.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/ema-crossover-in-trading/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">تقاطع المتوسطات المتحركة الأسية (EMA) في التداول</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">كيفية اختيار مدة (انتهاء) الصفقة</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/best-indicators-for-day-trading/"><img src="/assets/img/duotide-app-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">أفضل المؤشرات لمن يمارس التداول اليومي</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/ema-crossover-in-trading/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">تقاطع المتوسطات المتحركة الأسية (EMA) في التداول</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">كيفية اختيار مدة (انتهاء) الصفقة</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">أفضل المؤشرات لمن يمارس التداول اليومي</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">هل أنت مستعد للتطبيق العملي؟</h2>
+          <p class="ap-lp__sub">افتح حسابك وتدرّب على الحساب التجريبي برصيد افتراضي قدره 10,000 دولار، دون المخاطرة بأموالك.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">إنشاء حساب</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">جرّب الحساب التجريبي</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>منصة آمنة</strong><span>تسجيل دخول محمي والتحقق من الهوية</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>دعم بعدة لغات</strong><span>مساعدة متاحة كل يوم</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>حساب تجريبي مجاني</strong><span>10,000 دولار افتراضية للتدريب</span></li>
+          </ul>
+          <p class="ap-lp__risco">ينطوي التداول على خطر خسارة رأس المال المستثمر.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>बिना किसी फिल्टर के कीमत का चार्ट देखना थका देने वाला हो सकता है: दर्जनों छोटी तेजी और गिरावट ध्यान के लिए होड़ करती हैं, जिससे इतने शोर के पीछे असल में अहम चाल देखना मुश्किल हो जाता है। ZigZag ठीक इसी विजुअल समस्या को हल करने के लिए मौजूद है, यह सीधी लाइनें खींचता है जो चार्ट के सिर्फ अहम टॉप और बॉटम को जोड़ती हैं, बीच के रास्ते में जो कुछ है उसे नजरअंदाज करते हुए।</p><p>यह लेख बताता है कि ZigZag यह कैसे तय करता है कि क्या शोर है और क्या अहम चाल है, व्यवहार में यह किस काम आता है, और इसे एंट्री सिग्नल जनरेटर क्यों नहीं समझना चाहिए।</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="चार्ट: Ibovespa, दैनिक, 02/03/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।" width="960" height="540" loading="lazy" decoding="async"><figcaption>चार्ट: Ibovespa, दैनिक, 02/03/2026 से 07/10/2026 तक। डेटा: Yahoo Finance। अपना विश्लेषण।</figcaption></figure><h2 id="zigzag-यह-क-स-तय-करत-ह-क-क-य-द-ख-न-ह">ZigZag यह कैसे तय करता है कि क्या दिखाना है</h2><p>इंडिकेटर को बदलाव की एक न्यूनतम सीमा के साथ सेट किया जाता है, जो कीमत के प्रतिशत में या पॉइंट की संख्या में तय होती है। इस सीमा से छोटी कोई भी चाल नजरअंदाज कर दी जाती है, और ZigZag तभी एक नई लाइन खींचता है जब कीमत आखिरी पहचाने गए टॉप या बॉटम से इतनी हिल जाए कि यह सीमा पार हो जाए। उदाहरण के लिए, 5% की सीमा के साथ, ट्रेंड के बीच में 2% का दोलन इंडिकेटर में बिल्कुल नहीं दिखता — यह तभी ड्रॉइंग में शामिल होता है जब जमा हुई चाल तय 5% से आगे निकल जाए।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="zigzag-असल-म-क-स-क-म-आत-ह">ZigZag असल में किस काम आता है</h2><h3>अहम टॉप और बॉटम पहचानना</h3><p>छोटी अवधि के शोर को हटाकर, यह देखना आसान हो जाता है कि एसेट के इतिहास में वे रिवर्सल पॉइंट कहां हैं जो असल में मायने रखते थे — यह जानकारी छोटे-छोटे दोलनों से भरे चार्ट में अंदाजा लगाने की कोशिश करने से कहीं ज्यादा भरोसे के साथ सपोर्ट और रेजिस्टेंस लाइनें खींचने के काम आती है।</p><h3>चार्ट पैटर्न पढ़ने में मदद करना</h3><p>डबल टॉप, हेड-एंड-शोल्डर या ट्रेंड चैनल जैसे पैटर्न तब ज्यादा साफ दिखते हैं जब ZigZag पहले ही छोटे शोर को खत्म कर चुका हो, यह एक विजुअल ढांचे की तरह काम करता है जिस पर इन पैटर्न को ज्यादा साफ तरीके से पहचाना जा सकता है, यहां तक कि टेक्निकल एनालिसिस में वेव काउंटिंग सीखने वालों के लिए भी। इस फिल्टर के बिना, यह विजुअल तरीके से अलग करना कहीं ज्यादा मुश्किल होगा कि चार्ट की कौन-सी टांग मुख्य चाल दर्शाती है और कौन-सी सिर्फ उसके भीतर एक करेक्शन है।</p><h3>पिछली चालों की चौड़ाई मापना</h3><p>चूंकि ZigZag की हर लाइन एक टॉप को एक बॉटम से (या इसका उल्टा) जोड़ती है, यह जल्दी से मापने में मदद करता है कि एसेट चार्ट की हर टांग में कितने पॉइंट या कितने प्रतिशत हिला, जो मिलते-जुलते आकार की पिछली चालों के आधार पर लक्ष्य की उम्मीदों को तय करने में मदद करता है।</p><h2 id="zigzag-क-सबस-बड-स-म">ZigZag की सबसे बड़ी सीमा</h2><p>ZigZag एक ऐसा इंडिकेटर है जो पीछे देखता है: यह किसी टॉप या बॉटम की पुष्टि तभी करता है जब कीमत पहले ही उल्टी दिशा में इतना हिल चुकी हो कि साबित हो सके कि वह पॉइंट असल में एक रिवर्सल था। इसका मतलब है कि इंडिकेटर की आखिरी लाइन नई कैंडल बनने के साथ बदल सकती है, या दोबारा खींची जा सकती है — जो टॉप कुछ देर पहले तय लग रहा था, कीमत के बढ़ते रहने पर खत्म हो सकता है। इसी वजह से, ZigZag को सीधे एंट्री ट्रिगर के तौर पर इस्तेमाल करना जोखिम भरा है: जिस पल यह सिग्नल साफ तौर पर दिखता है, जिस चाल का यह वर्णन करता है वह पहले ही हो चुकी होती है। यह ZigZag को अंदाजा लगाने वाले इंडिकेटर से ज्यादा एक पीछे मुड़कर देखने वाले टूल जैसा बनाता है।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="स-व-दनश-लत-क-प-र-म-टर-क-क-स-सम-य-ज-त-कर">संवेदनशीलता के पैरामीटर को कैसे समायोजित करें</h2><ul><li>एक छोटी सीमा (उदाहरण के लिए, 1% या 2%) ज्यादा डिटेल दिखाती है, लेकिन फिर से काफी छोटी अवधि का शोर शामिल कर लेती है।</li><li>एक बड़ी सीमा (उदाहरण के लिए, 8% या 10%) चार्ट को काफी सरल बना देती है, लेकिन छोटी अवधि के ट्रेडों के लिए अहम रिवर्सल को नजरअंदाज कर सकती है।</li><li>आदर्श समायोजन एसेट और चार्ट की अवधि पर निर्भर करता है: ज्यादा अस्थिर एसेट को आमतौर पर ज्यादा शोर पैदा न करने के लिए बड़ी सीमा चाहिए होती है, और ज्यादा स्थिर एसेट के लिए इसका उल्टा सही है।</li></ul><h2 id="zigzag-क-ज-म-म-द-र-स-क-स-इस-त-म-ल-कर">ZigZag को जिम्मेदारी से कैसे इस्तेमाल करें</h2><p>ZigZag का फायदा उठाने का सबसे अच्छा तरीका इसे विजुअल एनालिसिस और ऐतिहासिक अध्ययन के टूल के तौर पर इस्तेमाल करना है, न कि एंट्री ट्रिगर के तौर पर। किसी ट्रेड में एंट्री का असली पल तय करने के लिए, इसके द्वारा हाइलाइट किए गए टॉप और बॉटम की रीडिंग को RSI जैसे मोमेंटम इंडिकेटर या वॉल्यूम की रीडिंग के साथ मिलाएं। पहले हो चुके डेटा पर आधारित किसी भी टूल की तरह, ZigZag अगली चाल का अंदाजा नहीं लगाता, और नुकसान का जोखिम चार्ट के विजुअल रूप से ज्यादा व्यवस्थित होने पर भी मौजूद रहता है — इसे अपनी एनालिसिस रूटीन में शामिल करने से पहले डेमो अकाउंट में इसका व्यवहार पढ़ना फायदेमंद है।</p>
             <div class="bq-post__cta">
-              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और R$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
+              <p><strong>जोखिम लेने से पहले अभ्यास करें।</strong> Duotide पर अकाउंट बनाएँ और US$ 10,000 के वर्चुअल बैलेंस वाले डेमो अकाउंट में अपने आइडिया आज़माएँ।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">मुफ़्त अकाउंट बनाएँ</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>संबंधित लेख</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
-            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ADX इंडिकेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">स्टोकैस्टिक ऑसिलेटर क्या है और यह कैसे काम करता है</span><span class="bq__meta">24/09/2026 · 5 मिनट में पढ़ें</span></a>
+            <a class="bq__card" href="/hi/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) क्या है और इसकी गणना कैसे करें</span><span class="bq__meta">24/09/2026 · 6 मिनट में पढ़ें</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">अभ्यास के लिए तैयार?</h2>
+          <p class="ap-lp__sub">खाता खोलें और 10,000 अमेरिकी डॉलर की वर्चुअल राशि के साथ डेमो खाते में अभ्यास करें, बिना पैसे जोखिम में डाले।</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">खाता बनाएँ</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-hi" target="_blank" rel="noopener sponsored nofollow">डेमो आज़माएँ</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>सुरक्षित प्लेटफ़ॉर्म</strong><span>सुरक्षित लॉगिन और पहचान सत्यापन</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>कई भाषाओं में सहायता</strong><span>हर दिन मदद</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>मुफ़्त डेमो खाता</strong><span>अभ्यास के लिए 10,000 डॉलर वर्चुअल</span></li>
+          </ul>
+          <p class="ap-lp__risco">ट्रेडिंग में निवेश की गई पूंजी खोने का जोखिम होता है।</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

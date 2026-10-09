@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Тот, кто занимается дневной торговлей, открывает и закрывает сделки в тот же день, что означает быстрые решения с малым временем на анализ каждой детали графика. В таком темпе загромождение экрана индикаторами обычно мешает больше, чем помогает: идеально иметь мало инструментов, хорошо понятных, быстро отвечающих на нужные вопросы.</p><p>В этой статье вы увидите, какие типы индикаторов обычно работают лучше в дневной торговле, и как собрать компактное сочетание без избыточности для торговли короткими интервалами времени.</p><figure class="ap__grafico"><img src="/assets/graficos/melhores-indicadores-para-day-trade.svg" alt="График: Nvidia, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ." width="960" height="540" loading="lazy" decoding="async"><figcaption>График: Nvidia, дневной, с 01.04.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ.</figcaption></figure><h2 id="экспоненциальные-скользящие-средние-для-быстрого-контекста">Экспоненциальные скользящие средние для быстрого контекста</h2><p>В дневной торговле экспоненциальная скользящая средняя (EMA) предпочтительнее простой средней, потому что она быстрее реагирует на последние изменения цены, что важно, когда решения нужно принимать за минуты. Распространенное сочетание — использование короткой EMA, например за 9 периодов, и более длинной, за 21 период, на одном графике: пока короткая выше длинной, краткосрочный уклон восходящий; когда пересекает вниз, уклон меняется.</p><p>Эти средние служат для быстрого ответа на первый вопрос любой сделки: в пользу какого направления имеет смысл торговать сейчас, на этом активе, на этом таймфрейме?</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="vwap-как-ориентир-справедливои-цены-дня">VWAP как ориентир справедливой цены дня</h2><p>VWAP (средневзвешенная по объему цена) показывает среднюю цену, по которой актив торговался за день, с учетом объема каждого ценового диапазона. Многие дневные трейдеры используют VWAP как ориентирную линию: цены выше нее указывают, что рынок в среднем платит дороже среднедневной цены; цены ниже указывают на обратное.</p><p>Этот ориентир особенно полезен для тех, кто ищет входы в пользу доминирующей силы дня, избегая покупки намного выше средней цены или продажи намного ниже нее, что увеличило бы риск сделки.</p><h2 id="осциллятор-моментума-для-таиминга-входа">Осциллятор моментума для тайминга входа</h2><p>После определения направления с помощью средних и ориентира цены с VWAP осциллятор, такой как RSI или стохастик, помогает уточнить момент входа, избегая покупки точно на вершине небольшого движения или продажи точно на дне. Чтение перепроданности внутри контекста роста, определенного средними, например, может указывать на более выгодную точку входа, чем простой вход сразу после пересечения цены со средней.</p><p>Важно использовать только один осциллятор моментума за раз — использование RSI и стохастика вместе, например, обычно лишь дважды подтверждает один и тот же сигнал, не добавляя новой информации.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="atr-для-калибровки-стопа-и-размера-позиции">ATR для калибровки стопа и размера позиции</h2><p>В дневной торговле торговля с фиксированным стопом в пунктах или копейках, без учета текущей волатильности, — распространенная ошибка. ATR (Average True Range) показывает среднюю амплитуду изменения актива за определенный период и служит ориентиром для стопа, соответствующего реальному поведению этого дня.</p><p>Если ATR за 14 периодов на 5-минутном графике составляет 0,35 руб., стоп в 0,05 руб., вероятно, будет достигнут просто обычным шумом между свечами, без какой-либо связи с тем, оказалась ли идея сделки верной или нет.</p><h2 id="объем-для-подтверждения-силы-движения">Объем для подтверждения силы движения</h2><p>Наконец, гистограмма объема помогает подтвердить, есть ли за движением реальное участие. Пробой небольшого внутридневного максимума, сопровождаемый объемом выше среднего, имеет больше шансов продолжиться, чем тот же пробой при слабом объеме, более распространенном в краткосрочных движениях внутри дня.</p><h2 id="собираем-финальное-сочетание">Собираем финальное сочетание</h2><p>Компактное сочетание без избыточности для дневной торговли могло бы включать: EMA 9 и 21 для направления, VWAP как ориентир справедливой цены, осциллятор моментума (RSI или стохастик, не оба) для тайминга входа, ATR для калибровки стопа и объем для подтверждения силы сигнала. Это уже покрывает четыре семейства индикаторов, не перегружая график.</p><p>На Duotide можно собрать именно это сочетание и протестировать его на разных активах и в разное время, прежде чем торговать реальными суммами. Дневная торговля связана с быстрыми и повторяющимися решениями в течение дня, что также умножает подверженность риску — поэтому наличие четких правил входа и выхода так же важно, как и сам выбор индикаторов.</p>
             <div class="bq-post__cta">
-              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными R$ 10 000.</p>
+              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными 10 000 долларов США.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть бесплатный счёт</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/exponential-moving-average-ema-crossover/"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Пересечение экспоненциальных скользящих средних (EMA) в трейдинге</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/how-to-choose-the-expiration-of-a-trade/"><img src="/assets/img/duotide-corretora-01.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Как выбрать срок (экспирацию) сделки</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/dual-stochastic-strategy/"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Стратегия двойного стохастика: как сочетать два осциллятора</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/exponential-moving-average-ema-crossover/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Пересечение экспоненциальных скользящих средних (EMA) в трейдинге</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/how-to-choose-the-expiration-of-a-trade/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Как выбрать срок (экспирацию) сделки</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/dual-stochastic-strategy/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Стратегия двойного стохастика: как сочетать два осциллятора</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Готовы попробовать на практике?</h2>
+          <p class="ap-lp__sub">Откройте счёт и тренируйтесь на демо-счёте с виртуальными 10 000 долларов США, не рискуя деньгами.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть счёт</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Попробовать демо</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Безопасная платформа</strong><span>Защищённый вход и проверка личности</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Поддержка на разных языках</strong><span>Помощь каждый день</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Бесплатный демо-счёт</strong><span>10 000 USD виртуально для практики</span></li>
+          </ul>
+          <p class="ap-lp__risco">Торговля связана с риском потери вложенного капитала.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

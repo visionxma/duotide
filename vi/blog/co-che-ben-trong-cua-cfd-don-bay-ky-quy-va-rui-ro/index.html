@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -217,7 +217,7 @@
           <div class="ap__texto article">
             <p>Một CFD (hợp đồng chênh lệch) là một thỏa thuận giữa hai bên — trader và sàn giao dịch — để trao đổi chênh lệch giữa giá trị của một tài sản tại thời điểm mở và tại thời điểm đóng vị thế. Không bên nào thực sự sở hữu tài sản đó: hợp đồng chỉ tồn tại để phản ánh sự biến động giá này. Hiểu cơ chế bên trong này giúp thấy rõ rủi ro đến từ đâu, thường lớn hơn những gì giao diện giao dịch đơn giản gợi ý.</p><figure class="ap__grafico"><img src="/assets/graficos/como-funcionam-os-cfds-por-dentro.svg" alt="Biểu đồ: S&amp;P 500, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: S&amp;P 500, khung ngày, từ 01/04/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="đon-bay-đen-tu-đau">Đòn bẩy đến từ đâu</h2><p>Đòn bẩy tồn tại vì sàn giao dịch chỉ yêu cầu một phần nhỏ của tổng giá trị vị thế làm bảo đảm — ký quỹ — thay vì toàn bộ giá trị. Nếu mức ký quỹ yêu cầu là 10% và bạn muốn kiểm soát một vị thế trị giá R$ 5.000,00, bạn cần ký gửi R$ 500,00. Tỷ lệ 10 trên 1 này chính là đòn bẩy: một chuyển động nhỏ trong giá của tài sản, tính trên tổng giá trị vị thế, tạo ra một kết quả tương ứng lớn hơn nhiều trên số tiền đã ký gửi.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="phep-tinh-cho-thay-hieu-ung-tu-trong-ra-ngoai">Phép tính cho thấy hiệu ứng từ trong ra ngoài</h2><p>Với vị thế R$ 5.000,00 trong ví dụ trên (ký quỹ R$ 500,00), một mức giảm chỉ 8% trong tài sản tạo ra khoản lỗ R$ 400,00 — 80% số ký quỹ đã gửi, dù tài sản chỉ giảm chưa đến một phần mười giá trị của nó. Một mức giảm 10% sẽ tiêu tốn toàn bộ ký quỹ. Hiệu ứng nhân này chính là cốt lõi khiến CFD trở thành một công cụ rủi ro cao: phần trăm biến động của tài sản và phần trăm biến động của vốn của bạn không còn là cùng một điều nữa.</p><h2 id="lenh-goi-ky-quy-la-gi">Lệnh gọi ký quỹ là gì</h2><p>Khi khoản lỗ của một vị thế tiến gần đến số tiền đã ký gửi làm ký quỹ, sàn giao dịch có thể phát hành một lệnh gọi ký quỹ — yêu cầu ký gửi thêm vốn để duy trì vị thế đang mở. Nếu điều này không xảy ra kịp thời, vị thế thường bị chính sàn giao dịch tự động đóng lại, ngay cả khi trái với ý muốn của trader, để tránh khoản lỗ vượt quá số vốn có sẵn trong tài khoản. Cơ chế này bảo vệ cả hai bên, nhưng có nghĩa là trader có thể bị buộc phải thoát khỏi một vị thế vào thời điểm tồi tệ nhất có thể, không có quyền kiểm soát thời điểm thoát lệnh đó.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="chi-phi-duy-tri-đon-bay-mo">Chi phí duy trì đòn bẩy mở</h2><p>Ngoài rủi ro về giá, giữ một CFD có đòn bẩy mở qua đêm thường tạo ra một chi phí tài trợ (phí gia hạn), vì trong thực tế, một phần giá trị của vị thế đang được tài trợ. Trong một vị thế R$ 5.000,00 với lãi suất hàng ngày 0,02%, chi phí là R$ 1,00 mỗi ngày — nhỏ nếu tính riêng lẻ, nhưng tích lũy trong các vị thế được giữ trong nhiều tuần hoặc tháng, bào mòn kết quả ngay cả khi giá tài sản không di chuyển nhiều.</p><h2 id="tai-sao-cfd-khuech-đai-loi-nhuan-va-thua-lo-nhu-nhau">Tại sao CFD khuếch đại lợi nhuận và thua lỗ như nhau</h2><p>Người ta thường nghe về tiềm năng lợi nhuận của đòn bẩy mà quên rằng nó hoạt động một cách đối xứng. Trong ví dụ trước, nếu tài sản tăng 8% thay vì giảm, lợi nhuận cũng sẽ là R$ 400,00 trên R$ 500,00 ký quỹ — lợi nhuận 80%. Đòn bẩy không chọn phe: nó nhân kết quả của bất kỳ chuyển động nào, theo hướng nó xảy ra, và chính vì vậy có thể mang lại lợi nhuận nhanh chóng và rút vốn với cùng tốc độ đó.</p><h2 id="tai-sao-thoi-han-hop-đong-it-quan-trong-hon-so-voi-cac-cong-">Tại sao thời hạn hợp đồng ít quan trọng hơn so với các công cụ khác</h2><p>Khác với một quyền chọn, có ngày đáo hạn và mất giá trị thời gian, một CFD có thể được giữ mở vô thời hạn — điều thay đổi là chi phí gia hạn, được tính mỗi ngày vị thế còn hoạt động. Điều này về lý thuyết khiến CFD linh hoạt cho nhiều thời hạn khác nhau, nhưng chính sự linh hoạt đó cũng có thể dẫn đến việc giữ một vị thế đang thua lỗ mở lâu hơn dự định, tích lũy chi phí gia hạn trên một khoản lỗ lẽ ra nên được đóng sớm hơn.</p><h2 id="rut-ra-đieu-gi-tu-co-che-nay">Rút ra điều gì từ cơ chế này</h2><p>Trước khi giao dịch CFD, nên mô phỏng các kịch bản giảm giá khác nhau của tài sản (không chỉ tăng giá) và tính xem điều đó sẽ đại diện cho bao nhiêu trên số ký quỹ đã gửi — chứ không phải trên tổng giá trị vị thế. Bài tập đơn giản này thường cho thấy rủi ro thực sự của một vị thế có đòn bẩy lớn hơn nhiều so với vẻ ngoài khi chỉ nhìn số tiền đầu tư trên màn hình. Hiểu cơ chế bên trong này, trước khi giao dịch, là điều phân biệt việc sử dụng đòn bẩy một cách có tính toán với việc đơn giản chấp nhận mức tối đa mà sàn giao dịch đưa ra mà không hiểu nó đại diện cho rủi ro gì.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -250,12 +250,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/cach-dung-stop-loss-va-take-profit-trong-forex/"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Cách dùng stop loss và take profit trong forex</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chiến lược martingale trong giao dịch: hoạt động và rủi ro</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/khi-nao-dong-mot-giao-dich-tin-hieu-thoat-lenh/"><img src="/assets/img/duotide-e-confiavel-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Khi nào nên đóng một giao dịch: tín hiệu thoát lệnh</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/cach-dung-stop-loss-va-take-profit-trong-forex/"><img src="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp" srcset="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp 480w, /assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cách dùng stop loss và take profit trong forex</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chien-luoc-martingale-trong-giao-dich-va-rui-ro/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Chiến lược martingale trong giao dịch: hoạt động và rủi ro</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/khi-nao-dong-mot-giao-dich-tin-hieu-thoat-lenh/"><img src="/assets/img/mini/duotide-e-confiavel-02.webp" srcset="/assets/img/mini/duotide-e-confiavel-02.webp 480w, /assets/img/duotide-e-confiavel-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Khi nào nên đóng một giao dịch: tín hiệu thoát lệnh</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -319,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

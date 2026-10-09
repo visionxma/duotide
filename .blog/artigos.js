@@ -62,6 +62,10 @@ function ilustrar(corpo, a) {
   let n = 0;
   return corpo.replace(/<h2/g, m => { n++; const k = n === 2 ? 0 : n === 4 ? 1 : -1; return k >= 0 && esc2[k] ? `<figure class="ap__ilustra"><img src="/assets/img/blog/${esc2[k]}.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure>` + m : m; });
 }
+const ICO_LP = [
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'];
 const desenhados = new Map(); // um SVG por artigo, compartilhado pelos 17 idiomas
 const TXT = JSON.parse(fs.readFileSync(path.join(__dirname, 'textos-artigo.json'), 'utf8'));
 const VISITAS = 'https://duotide-visitas.visionxma.workers.dev';
@@ -287,10 +291,24 @@ ${a.fonte ? `            <p class="artigo__fonte">${esc(B.fonte || '')} <a href=
         <aside class="ap__rel">
           <h2>${esc(T.relacionados)}</h2>
           <div class="bq__grade bq__grade--3">
-${outros.map(o => `            <a class="bq__card" href="${o.href}"><img src="${o.img}" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">${esc(o.titulo)}</span><span class="bq__meta">${fmtData(o.data, idioma.codigo)} · ${leitura(o.leitura)}</span></a>`).join('\n')}
+${outros.map(o => `            <a class="bq__card" href="${o.href}"><img src="${o.img.replace('/assets/img/', '/assets/img/mini/')}" srcset="${o.img.replace('/assets/img/', '/assets/img/mini/')} 480w, ${o.img} 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">${esc(o.titulo)}</span><span class="bq__meta">${fmtData(o.data, idioma.codigo)} · ${leitura(o.leitura)}</span></a>`).join('\n')}
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">${esc(T.lp.titulo)}</h2>
+          <p class="ap-lp__sub">${esc(T.lp.sub)}</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="${AFF}" target="_blank" rel="noopener sponsored nofollow">${esc(T.lp.conta)}</a>
+            <a class="btn ap-lp__demo" href="${AFF}" target="_blank" rel="noopener sponsored nofollow">${esc(T.lp.demo)}</a>
+          </div>
+          <ul class="ap-lp__selos">
+${T.lp.selos.map(([t, d], i) => `            <li>${ICO_LP[i]}<strong>${esc(t)}</strong><span>${esc(d)}</span></li>`).join('\n')}
+          </ul>
+          <p class="ap-lp__risco">${esc(T.lp.risco)}</p>
+        </div>
+      </section>
     </article>
   </main>`;
     let h = casca;

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>ผู้ที่เริ่มดูกราฟราคามักจะสังเกตเห็นปัญหาอย่างหนึ่งอย่างรวดเร็ว คือราคาไม่เคยขึ้นหรือลงเป็นเส้นตรง มันเคลื่อนไปข้างหน้า ย่อกลับเล็กน้อย เคลื่อนไปข้างหน้าอีกครั้ง และฟันเลื่อยของการเคลื่อนไหวเล็ก ๆ เหล่านี้ทำให้ยากที่จะมองเห็นว่าแนวโน้มที่แท้จริงกำลังมุ่งไปทางไหน มีเครื่องมือสองอย่างที่ช่วยแก้ปัญหานี้เมื่อใช้ร่วมกัน คืออินดิเคเตอร์ Zig Zag ซึ่งกำจัดสัญญาณรบกวนและเน้นการเคลื่อนไหวที่สำคัญ และการย่อของฟีโบนัชชี ซึ่งช่วยประมาณว่าการย่อภายในแนวโน้มจะไปได้ไกลแค่ไหนก่อนที่ราคาจะกลับไปสู่เส้นทางหลัก</p><p>ไม่มีเครื่องมือใดในสองอย่างนี้ที่ทำนายอนาคตได้เพียงลำพัง จุดแข็งของมันจะปรากฏขึ้นเมื่อตัวหนึ่งจัดระเบียบการอ่านภาพของกราฟ และอีกตัวหนึ่งชี้ไปยังโซนราคาที่มีโอกาสเกิดปฏิกิริยามากกว่า</p><figure class="ap__grafico"><img src="/assets/graficos/zig-zag-fibonacci-seguindo-tendencia.svg" alt="กราฟ: EUR/USD รายวัน ตั้งแต่ 02/03/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: EUR/USD รายวัน ตั้งแต่ 02/03/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="zig-zag-ทำอะไรก-นแน">Zig Zag ทำอะไรกันแน่</h2><p>Zig Zag เป็นอินดิเคเตอร์ที่ลากเส้นตรงเชื่อมจุดสูงสุดและจุดต่ำสุดที่สำคัญที่สุดของกราฟ โดยละเลยความผันผวนที่เล็กกว่า มันทำงานด้วยพารามิเตอร์ของการเปลี่ยนแปลงขั้นต่ำ โดยทั่วไปเป็นเปอร์เซ็นต์ เส้นใหม่จะถูกวาดขึ้นก็ต่อเมื่อราคาเคลื่อนไหวเกินเปอร์เซ็นต์นั้นจากจุดล่าสุดที่ทำเครื่องหมายไว้เท่านั้น หากคุณตั้งค่า Zig Zag ไว้ที่ 5% ตัวอย่างเช่น การปรับฐาน 2% ระหว่างขาขึ้นจะไม่ปรากฏในเส้นเลย</p><p>ผลลัพธ์คือกราฟที่สะอาดขึ้น ซึ่งง่ายขึ้นในการระบุขาขึ้นและขาลงที่ประกอบเป็นแนวโน้มหนึ่ง สิ่งสำคัญที่ต้องจำไว้คือข้อจำกัดที่รู้จักกันดีอย่างหนึ่ง คือส่วนล่าสุดของ Zig Zag จะถูกวาดใหม่เมื่อมีราคาใหม่เข้ามา เพราะอินดิเคเตอร์นี้จะยืนยันจุดสูงสุดหรือจุดต่ำสุดก็ต่อเมื่อการเคลื่อนไหวถัดไปเกิดขึ้นแล้วเท่านั้น ด้วยเหตุนี้ มันจึงมีประโยชน์ในการจัดระเบียบการอ่านสิ่งที่เกิดขึ้นไปแล้ว ไม่ใช่การสร้างสัญญาณเข้าเทรดในจังหวะที่กลับตัวพอดี</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="การย-อของฟ-โบน-ชช-เข-ามาเก-ยวข-องตรงไหน">การย่อของฟีโบนัชชีเข้ามาเกี่ยวข้องตรงไหน</h2><p>การย่อของฟีโบนัชชีมาจากการสังเกตว่า หลังจากการเคลื่อนไหวที่แข็งแกร่ง ราคามักจะคืนบางส่วนของระยะทางที่เดินมาก่อนที่จะดำเนินต่อไปในทิศทางเดิม ระดับที่ใช้มากที่สุดคือ 23,6%, 38,2%, 50%, 61,8% และ 78,6% ของระยะทางที่เดินระหว่างจุดเริ่มต้นและจุดสิ้นสุดของการเคลื่อนไหว</p><p>ในการลากระดับเหล่านี้ ต้องเลือกจุดสองจุด คือจุดเริ่มต้นและจุดสิ้นสุดของขาแนวโน้มหนึ่ง ตรงนี้เองที่ Zig Zag มีประโยชน์ เพราะมันได้แยกขาเหล่านี้ให้คุณไว้แล้ว ขจัดความสงสัยว่าความผันผวนเล็ก ๆ ตัวไหนที่ควรใช้เป็นจุดอ้างอิง</p><h2 id="ต-วอย-างในทางปฏ-บ-ต-ก-บค-eur-usd">ตัวอย่างในทางปฏิบัติกับคู่ EUR/USD</h2><p>ลองนึกภาพว่า Zig Zag แสดงขาขึ้นที่ชัดเจนในคู่ EUR/USD ออกจาก 1,0500 ไปที่ 1,0800 ซึ่งเป็นการเคลื่อนไหว 300 pips เมื่อนำฟีโบนัชชีมาใช้กับขานี้ ระดับ 61,8% จะอยู่ที่ 1,0800 ลบด้วย 61,8% ของ 300 pips นั่นคือ 1,0800 ลบด้วย 185,4 pips ซึ่งได้ประมาณ 1,0615 ส่วนระดับ 38,2% จะอยู่ใกล้ 1,0685</p><p>หากหลังจากจุดสูงสุดที่ 1,0800 ราคาเริ่มย่อกลับและเข้าใกล้ช่วงระหว่าง 1,0615 ถึง 1,0685 ทั้งสองระดับนี้จะถูกจับตาดูอย่างใกล้ชิด นี่คือบริเวณที่ในอดีต ตลาดมักจะพบผู้ซื้อใหม่อีกครั้ง หากแนวโน้มขาขึ้นยังคงแข็งแรงอยู่ นี่ไม่ใช่การรับประกันปฏิกิริยา แต่เป็นเพียงโซนที่มีความน่าจะเป็นสูงกว่าซึ่งสมควรได้รับการยืนยันจากสัญญาณอื่นก่อนการตัดสินใจใด ๆ</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ว-ธ-รวมท-งสองเข-าด-วยก-นในทางปฏ-บ-ต">วิธีรวมทั้งสองเข้าด้วยกันในทางปฏิบัติ</h2><p>ขั้นตอนการทำงานง่าย ๆ มีสามขั้นตอน ขั้นแรก ใช้ Zig Zag บนกราฟและสังเกตว่าขาแนวโน้มที่ชัดเจนล่าสุดคืออะไร จากจุดต่ำสุดที่สำคัญไปยังจุดสูงสุดที่สำคัญ (หรือตรงกันข้ามในแนวโน้มขาลง) ขั้นที่สอง ลากฟีโบนัชชีบนขานั้นโดยตรง จากจุดเริ่มต้นถึงจุดสิ้นสุด ขั้นที่สาม รอให้ราคาเข้าใกล้หนึ่งในระดับสำคัญ โดยทั่วไปคือ 38,2%, 50% หรือ 61,8% แล้วมองหาการยืนยันจากเครื่องมืออื่น เช่น รูปแบบแท่งเทียนกลับตัว การตัดกันของเส้นค่าเฉลี่ยเคลื่อนที่ หรือปริมาณการซื้อขายที่แข็งแกร่งขึ้นในบริเวณนั้น</p><p>ควรย้ำว่าการวิเคราะห์ประเภทนี้ช่วยจัดระเบียบว่าจะมองหาโอกาสที่ไหน แต่ไม่สามารถแทนที่การควบคุมความเสี่ยงได้ การกำหนดไว้ล่วงหน้าว่าคุณยอมรับความผิดพลาดได้แค่ไหน ผ่านสต็อป ยังคงจำเป็นเสมอ เพราะไม่มีระดับฟีโบนัชชีใดที่ตลาดเคารพตลอดเวลา</p><h2 id="ข-อควรระว-งในการใช-ช-ดผสมน">ข้อควรระวังในการใช้ชุดผสมนี้</h2><ul><li>Zig Zag เปลี่ยนเส้นล่าสุดเมื่อมีราคาใหม่เข้ามา อย่าปฏิบัติต่อจุดล่าสุดของมันว่าได้รับการยืนยันแล้ว</li><li>ฟีโบนัชชีทำงานได้ดีที่สุดในตลาดที่มีแนวโน้มชัดเจน ในตลาดที่เคลื่อนไหวออกด้านข้าง ระดับต่าง ๆ จะสูญเสียความสำคัญไป</li><li>ใช้สัญญาณมากกว่าหนึ่งอย่างเสมอก่อนเข้าเทรด การแตะระดับฟีโบนัชชีเพียงลำพังไม่ใช่เหตุผลที่เพียงพอ</li><li>ฝึกฝนการอ่านอินดิเคเตอร์ทั้งสองในบัญชีทดลองก่อนนำไปใช้ในการเทรดจริง Duotide ช่วยให้ฝึกการอ่านแบบนี้ได้โดยไม่ต้องเสี่ยงเงินทุน</li></ul><p>การผสมผสาน Zig Zag และฟีโบนัชชีเข้าด้วยกัน ท้ายที่สุดแล้วเป็นวิธีนำโครงสร้างมาสู่การอ่านที่หากไม่มีมันแล้วก็จะเป็นเพียงสัญชาตญาณเกี่ยวกับกราฟเท่านั้น เริ่มต้นด้วยการระบุขาแนวโน้มอย่างเป็นภววิสัย ลากระดับจากขาเหล่านั้น และปฏิบัติต่อแต่ละโซนของการย่อเป็นคำถามที่ต้องได้รับการยืนยัน ไม่ใช่คำตอบสำเร็จรูป</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">อินดิเคเตอร์ ADX คืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

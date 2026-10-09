@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>Chỉ báo Vortex ra đời từ một nguồn cảm hứng khá hiếm gặp trong các công cụ phân tích kỹ thuật: những người tạo ra nó, Etienne Botes và Douglas Siepman, dựa trên các quan sát của nhà phát minh người Áo Viktor Schauberger về dòng chảy của nước, cho rằng các biến động của thị trường tài chính có thể giống với các mô hình xoáy nước quan sát được trong tự nhiên. Trong thực tế, kết quả là một chỉ báo xu hướng với hai đường, đơn giản hơn để diễn giải so với những gì phép so sánh gợi ý.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-vortex-como-configurar-e-usar.svg" alt="Biểu đồ: Ouro, khung ngày, từ 02/03/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Ouro, khung ngày, từ 02/03/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="y-tuong-đang-sau-phep-tinh">Ý tưởng đằng sau phép tính</h2><p>Vortex đo khoảng cách giữa giá thấp nhất của cây nến hiện tại và giá cao nhất của cây nến trước đó (biến động tăng), và khoảng cách giữa giá cao nhất của cây nến hiện tại và giá thấp nhất của cây nến trước đó (biến động giảm). Khoảng cách nào trong hai khoảng cách này càng lớn hơn khoảng cách kia, biến động theo hướng tương ứng càng mạnh. Hai phép đo này, được làm mượt qua một chu kỳ (mặc định là 14), tạo thành hai đường của chỉ báo: VI+ (biến động tăng) và VI- (biến động giảm).</p><p>Phép tính cũng xét đến biên độ thực (true range) của mỗi cây nến — cùng khái niệm dùng trong ATR và ADX — điều này giúp chỉ báo nắm bắt được biến động ngay cả khi có khoảng trống giá giữa các cây nến.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-cai-đat">Cách cài đặt</h2><p>Vortex thuộc nhóm chỉ báo động lượng (hoặc xu hướng, tùy nền tảng) và sử dụng, theo mặc định, chu kỳ 14 cho hai đường chính. Các mức mua quá mức và bán quá mức thường được cài đặt ở 1,1 và 0,9, nhưng hai mức này có trọng lượng nhỏ hơn trong cách đọc của chỉ báo so với sự giao cắt giữa chính hai đường VI+ và VI-.</p><h2 id="cach-đoc-cac-tin-hieu">Cách đọc các tín hiệu</h2><ul><li><strong>Tín hiệu tăng</strong>: đường VI+ đang ở dưới VI-, cắt lên trên nó và duy trì ở trên — cho thấy biến động tăng đã chiếm ưu thế.</li><li><strong>Tín hiệu giảm</strong>: đường VI- đang ở dưới VI+, cắt lên trên nó và duy trì ở trên — cho thấy biến động giảm đã chiếm ưu thế.</li><li><strong>Khoảng cách giữa hai đường</strong>: khoảng cách giữa VI+ và VI- sau khi giao cắt càng lớn, xu hướng đang diễn ra càng được coi là mạnh.</li></ul><p>Một ví dụ: trong một cặp tiền tệ mà VI- đã ở trên VI+ trong nhiều tuần (xu hướng giảm), VI+ cắt lên trên VI- và khoảng cách giữa hai đường bắt đầu tăng ở những cây nến tiếp theo. Sự kết hợp này — giao cắt cộng với khoảng cách mở rộng — được đọc là xác nhận rằng xu hướng đã đổi hướng, chứ không chỉ là một lần giao cắt đơn lẻ có thể đảo ngược ở cây nến kế tiếp.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="khong-phai-moi-lan-giao-cat-đeu-nen-tro-thanh-mot-lenh-vao">Không phải mọi lần giao cắt đều nên trở thành một lệnh vào</h2><p>Một lần giao cắt giữa VI+ và VI- không nên được coi là lệnh mua hoặc bán tự động, mà là một lời mời gọi chú ý kỹ hơn đến tài sản: kiểm tra hành vi gần đây của giá, đánh giá xem có hỗ trợ hay kháng cự quan trọng gần đó hay không, và chỉ khi đó mới cân nhắc vào lệnh theo hướng đã chỉ ra. Ở những thị trường không có xu hướng rõ ràng, các lần giao cắt có xu hướng lặp lại nhiều lần trong thời gian ngắn, mà không tạo ra biến động có thể tận dụng — cùng vấn đề tín hiệu giả ảnh hưởng đến hầu như mọi chỉ báo xu hướng trong thị trường đi ngang.</p><h2 id="ket-hop-vortex-voi-cac-chi-bao-khac">Kết hợp Vortex với các chỉ báo khác</h2><p>Vì chỉ đo xu hướng, Vortex được hưởng lợi khi kết hợp với một chỉ báo có bản chất khác, thay vì một chỉ báo xu hướng khác về cơ bản đo cùng một thứ. MACD và ADX thường được nhắc đến như những công cụ bổ sung tốt: MACD củng cố cách đọc động lượng, còn ADX giúp xác nhận liệu sức mạnh của xu hướng mà cú giao cắt của Vortex báo hiệu có thực sự đủ quan trọng để biện minh cho một lệnh vào hay không.</p><h2 id="quan-ly-rui-ro-van-la-đieu-can-thiet">Quản lý rủi ro vẫn là điều cần thiết</h2><p>Như bất kỳ chỉ báo xu hướng nào, Vortex không phải lúc nào cũng đúng, và một chiến lược xây dựng dựa trên nó nên bao gồm điểm dừng lỗ và, khi hợp lý, một mục tiêu chốt lời được xác định trước khi vào lệnh. Không công cụ nào, dù logic đằng sau nó có tinh vi đến đâu, đưa ra tín hiệu đúng mọi lúc — và coi Vortex khác đi sẽ là bỏ qua cách một chiến lược xu hướng thực sự hoạt động qua rất nhiều giao dịch.</p><p>Cũng nên thử nghiệm chỉ báo trên nhiều tài sản và khung thời gian khác nhau trước khi tin tưởng dùng nó cho các giao dịch thật: một chu kỳ 14 hoạt động tốt trên biểu đồ hằng ngày của cổ phiếu có thể không tạo ra cùng kết quả trên biểu đồ trong ngày của một cặp tiền tệ, do sự khác biệt về độ biến động và hành vi giữa hai thị trường.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

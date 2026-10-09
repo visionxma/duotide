@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -216,7 +216,7 @@
           <div class="ap__texto article">
             <p>หลายคนดู ADX โดยคาดหวังว่ามันจะบอกได้ว่าราคาจะขึ้นหรือลง แต่นั่นไม่ใช่หน้าที่ของมัน Average Directional Index (ADX) วัดเพียงความแข็งแกร่งของการเคลื่อนไหวเท่านั้น ส่วนทิศทางปล่อยให้เป็นหน้าที่ของอีกสองเส้นที่มักมาด้วยกันในแผงเดียวกัน</p><p>ความสับสนนี้พบได้บ่อยเพราะอินดิเคเตอร์นี้มีค่าตั้งแต่ 0 ถึง 100 คล้ายกับออสซิลเลเตอร์ทั่วไป แต่ ADX ที่ 30 อาจปรากฏได้ทั้งในช่วงขาขึ้นที่แข็งแกร่งหรือขาลงที่แข็งแกร่งเหมือนกัน การเข้าใจความแตกต่างนี้ช่วยหลีกเลี่ยงการเข้าเทรดผิดตั้งแต่ต้น</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-o-indicador-adx.svg" alt="กราฟ: Nvidia รายวัน ตั้งแต่ 02/03/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: Nvidia รายวัน ตั้งแต่ 02/03/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="สามเส-นของระบบน">สามเส้นของระบบนี้</h2><p>ADX ไม่เคยมาเพียงลำพัง มันเป็นส่วนหนึ่งของชุดสามเส้นที่สร้างโดย J. Welles Wilder:</p><ul><li><strong>+DI</strong>: วัดว่าการเคลื่อนไหวขาขึ้นครอบงำช่วงเวลาที่วิเคราะห์มากแค่ไหน</li><li><strong>-DI</strong>: วัดว่าการเคลื่อนไหวขาลงครอบงำช่วงเวลาเดียวกันมากแค่ไหน</li><li><strong>ADX</strong>: แสดงขนาดของความแตกต่างระหว่าง +DI และ -DI กล่าวคือความแข็งแกร่งของแนวโน้มที่กำลังชนะอยู่</li></ul><p>เมื่อ +DI อยู่เหนือ -DI ตลาดมีแนวโน้มเอียงขึ้นอย่างสม่ำเสมอมากกว่า เมื่อ -DI อยู่เหนือกว่า แรงกดดันจากฝั่งขายมีความต่อเนื่องมากกว่า ADX จะสูงขึ้นเมื่อส่วนต่างนี้เพิ่มขึ้น และลดลงเมื่อสองเส้นนี้กลับมาใกล้กันอีกครั้ง</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ว-ธ-คำนวณทำงานอย-างไร">วิธีคำนวณทำงานอย่างไร</h2><p>กระบวนการเริ่มจากการเปรียบเทียบราคาสูงสุดและต่ำสุดของแต่ละแท่งเทียนกับแท่งเทียนก่อนหน้า ภายในสิ่งที่เรียกว่าช่วงราคาที่แท้จริง (ซึ่งพิจารณาช่องว่างราคาด้วย) ความแตกต่างนี้ก่อให้เกิดการเคลื่อนไหวเชิงทิศทางบวกและลบ ซึ่งหลังจากทำให้เรียบแล้ว (โดยทั่วไป 14 ช่วง) จะกลายเป็น +DI และ -DI</p><p>จากนั้นจึงคำนวณดัชนีทิศทาง (DX):</p><p><strong>DX = 100 × |+DI − (-DI)| ÷ (+DI + (-DI))</strong></p><p>ADX คือค่าเฉลี่ยที่ทำให้เรียบของ DX ตลอดช่วงเวลา คุณไม่จำเป็นต้องคำนวณด้วยมือ เพราะแพลตฟอร์มกราฟใด ๆ ก็วาดอินดิเคเตอร์นี้ให้อัตโนมัติ แต่การเข้าใจสูตรช่วยอธิบายว่าทำไม ADX จึงตอบสนองช้า มันยืนยันความแข็งแกร่งได้ก็ต่อเมื่อการเคลื่อนไหวเริ่มต้นไปแล้วเท่านั้น</p><h2 id="ว-ธ-อ-านสเกลของ-adx">วิธีอ่านสเกลของ ADX</h2><ul><li><strong>ต่ำกว่า 20</strong>: ทิศทางอ่อนแอหรือตลาดไซด์เวย์</li><li><strong>ระหว่าง 20 ถึง 25</strong>: แนวโน้มอาจกำลังก่อตัว</li><li><strong>ระหว่าง 25 ถึง 40</strong>: แนวโน้มก่อตัวแล้ว</li><li><strong>สูงกว่า 40</strong>: แนวโน้มแข็งแกร่ง ควรตรวจสอบว่าราคายืดตัวมากเกินไปหรือไม่</li></ul><p>ช่วงเหล่านี้เป็นเพียงจุดอ้างอิง ไม่ใช่เส้นแบ่งที่ตายตัว ADX ที่ 24 กับ 26 ไม่ได้บรรยายโลกที่ต่างกัน สิ่งที่สำคัญคือความชันของเส้นและความสัมพันธ์ระหว่าง +DI กับ -DI รอบ ๆ มัน</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ต-วอย-างด-วยต-วเลข">ตัวอย่างด้วยตัวเลข</h2><p>ลองนึกภาพคู่สกุลเงินหนึ่ง ในวันหนึ่ง +DI อยู่ที่ 32 และ -DI อยู่ที่ 12 โดย ADX เพิ่มขึ้นจาก 18 เป็น 27 ตลอดสองสัปดาห์ การตีความคือ การเคลื่อนไหวขาขึ้นได้รับแรงหนุนอย่างต่อเนื่อง และส่วนต่างระหว่างผู้ซื้อและผู้ขายกำลังเพิ่มขึ้น ไม่ใช่แค่จุดพีคเดี่ยว ๆ</p><p>ทีนี้ลองเปลี่ยนสถานการณ์ ADX อยู่ที่ 26 แต่ -DI อยู่ที่ 34 และ +DI อยู่ที่ 15 ตัวเลข ADX คล้ายกับตัวอย่างก่อนหน้า เพียงแต่ครั้งนี้ฝ่ายที่ควบคุมคือแรงกดดันจากฝั่งขาย นี่แสดงให้เห็นว่าทำไมการดูแค่ค่า ADX โดยไม่ดูเส้นทิศทางจึงเป็นการอ่านที่ไม่ครบถ้วน</p><h2 id="ข-อผ-ดพลาดท-พบบ-อยในการใช-adx">ข้อผิดพลาดที่พบบ่อยในการใช้ ADX</h2><p>ADX ที่ลดลงไม่ใช่สัญญาณการกลับตัวโดยอัตโนมัติ มันอาจบ่งชี้เพียงว่าแนวโน้มสูญเสียจังหวะ แต่ราคายังคงเดินหน้าไปในทิศทางเดิมต่อไปอีกได้ อีกข้อผิดพลาดหนึ่งคือการเทรดตามจุดตัดกันของ +DI และ -DI เมื่อ ADX อยู่ในระดับต่ำ ในสภาวะเช่นนี้ ตลาดมักอยู่ในแนวราบ และจุดตัดกันมักเกิดซ้ำ ๆ โดยไม่ก่อให้เกิดการเคลื่อนไหวจริง เป็นเพียงเสียงรบกวนของกรอบไซด์เวย์เท่านั้น</p><p>วิธีหนึ่งในการใช้ ADX อย่างมีหลักเกณฑ์มากขึ้นคือปฏิบัติต่อมันเป็นตัวกรองก่อนใช้กลยุทธ์อื่น หากคุณเทรดตามแนวโน้มด้วยเส้นค่าเฉลี่ยเคลื่อนที่ เป็นต้น คุณอาจกำหนดให้ ADX ต้องสูงกว่า 25 ก่อนพิจารณาว่าสัญญาณนั้นใช้ได้ เพื่อคัดกรองการเข้าเทรดในตลาดที่ไม่มีทิศทางชัดเจนออกไป</p><h2 id="การนำ-adx-เข-าส-กระบวนการของค-ณ">การนำ ADX เข้าสู่กระบวนการของคุณ</h2><p>ในทางปฏิบัติ ADX ทำงานได้ดีที่สุดในฐานะตัวกรองบริบทมากกว่าตัวกระตุ้นการเข้าเทรด มันช่วยตอบคำถามที่มาก่อนการตัดสินใจซื้อหรือขาย นั่นคือตลาดนี้กำลังมีแนวโน้มจริงหรือไม่ หรือฉันกำลังพยายามยัดกลยุทธ์ตามแนวโน้มเข้าไปในสภาพแวดล้อมที่เป็นไซด์เวย์ เมื่อรวมกับ +DI และ -DI เพื่อดูทิศทาง และการวิเคราะห์แนวรับแนวต้านเพื่อจับจังหวะ อินดิเคเตอร์นี้จะมีประโยชน์อย่างแท้จริง หากใช้เพียงลำพัง มันบอกได้เพียงครึ่งเดียวของเรื่องราวเท่านั้น และเช่นเดียวกับการเทรดใด ๆ ในตลาดการเงิน ไม่มีการผสมผสานอินดิเคเตอร์ใดที่ขจัดความเสี่ยงได้ทั้งหมด</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -249,12 +249,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
-            <a class="bq__card" href="/th/blog/macd-stochastic-parabolic-sar-how-to-combine/"><img src="/assets/img/duotide-app-03.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic และ Parabolic SAR วิธีใช้สามตัวนี้ร่วมกัน</span><span class="bq__meta">24/09/2569 · อ่าน 7 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ออสซิลเลเตอร์สโตแคสติกคืออะไร ทำงานอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) คืออะไร คำนวณอย่างไร</span><span class="bq__meta">24/09/2569 · อ่าน 6 นาที</span></a>
+            <a class="bq__card" href="/th/blog/macd-stochastic-parabolic-sar-how-to-combine/"><img src="/assets/img/mini/duotide-app-03.webp" srcset="/assets/img/mini/duotide-app-03.webp 480w, /assets/img/duotide-app-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">MACD, Stochastic และ Parabolic SAR วิธีใช้สามตัวนี้ร่วมกัน</span><span class="bq__meta">24/09/2569 · อ่าน 7 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -318,6 +334,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Смотреть на ценовой график без какого-либо фильтра может быть утомительно: десятки мелких подъемов и спадов конкурируют за внимание, затрудняя восприятие действительно значимого движения за всем этим шумом. ZigZag существует именно для решения этой визуальной проблемы, рисуя прямые линии, соединяющие только значимые максимумы и минимумы графика, игнорируя то, что находится между ними.</p><p>Эта статья объясняет, как ZigZag решает, что является шумом, а что значимым движением, для чего он полезен на практике и почему его не следует путать с генератором сигналов входа.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="График: Ibovespa, дневной, с 02.03.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ." width="960" height="540" loading="lazy" decoding="async"><figcaption>График: Ibovespa, дневной, с 02.03.2026 по 07.10.2026. Данные: Yahoo Finance. Собственный анализ.</figcaption></figure><h2 id="как-zigzag-решает-что-показывать">Как ZigZag решает, что показывать</h2><p>Индикатор настраивается с минимальным порогом изменения, определенным в процентах от цены или в числе пунктов. Любое движение меньше этого порога игнорируется, и ZigZag рисует новую линию только тогда, когда цена движется достаточно, чтобы превысить этот порог от последнего определенного максимума или минимума. Например, при пороге 5% колебание на 2% в середине тренда просто не появится на индикаторе — оно войдет в рисунок только когда накопленное движение превысит определенные 5%.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="для-чего-zigzag-реально-полезен">Для чего ZigZag реально полезен</h2><h3>Определение значимых максимумов и минимумов</h3><p>Убирая краткосрочный шум, легче увидеть, где находятся точки разворота, действительно важные в истории актива, — полезная информация для построения линий поддержки и сопротивления с большей уверенностью, чем при попытке угадать это на графике, полном мелких колебаний.</p><h3>Поддержка чтения графических паттернов</h3><p>Такие паттерны, как двойная вершина, голова-плечи или трендовые каналы, становятся более очевидными, когда ZigZag уже устранил меньший шум, работая как визуальный скелет, на основе которого эти паттерны можно определить более четко, в том числе для тех, кто изучает подсчет волн в техническом анализе. Без этого фильтра было бы намного сложнее визуально отделить, какая нога графика представляет основное движение, а какая — лишь коррекцию внутри него.</p><h3>Измерение амплитуды предыдущих движений</h3><p>Поскольку каждая линия ZigZag соединяет максимум с минимумом (или наоборот), он облегчает быстрое измерение того, на сколько пунктов или на какой процент актив двигался в каждой ноге графика, что помогает откалибровать ожидания цели на основе прошлых движений похожего размера.</p><h2 id="самое-важное-ограничение-zigzag">Самое важное ограничение ZigZag</h2><p>ZigZag — индикатор, смотрящий назад: он подтверждает максимум или минимум только после того, как цена уже достаточно сдвинулась в противоположном направлении, чтобы доказать, что эта точка действительно была разворотом. Это значит, что последняя линия индикатора может меняться или перерисовываться по мере формирования новых свечей — максимум, казавшийся окончательным недавно, может перестать существовать, если цена продолжит расти. По этой причине использование ZigZag как прямого триггера входа рискованно: к моменту, когда сигнал становится ясен, движение, которое он описывает, уже произошло. Это делает ZigZag больше похожим на инструмент ретроспективы, чем на индикатор предвосхищения.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="как-настроить-параметр-чувствительности">Как настроить параметр чувствительности</h2><ul><li>Малый порог (например, 1% или 2%) показывает больше деталей, но снова включает значительный краткосрочный шум.</li><li>Больший порог (например, 8% или 10%) значительно упрощает график, но может игнорировать значимые развороты для более краткосрочных сделок.</li><li>Идеальная настройка зависит от актива и таймфрейма: более волатильные активы обычно требуют большего порога, чтобы не порождать избыточный шум, и наоборот для более стабильных активов.</li></ul><h2 id="как-использовать-zigzag-ответственно">Как использовать ZigZag ответственно</h2><p>Лучший способ извлечь пользу из ZigZag — как инструмент визуального анализа и исторического изучения, а не как триггер входа. Сочетайте чтение выделенных им максимумов и минимумов с индикатором моментума, таким как RSI, или с чтением объема, чтобы определить реальный момент входа в сделку. Как и любой инструмент на основе уже произошедших данных, ZigZag не предсказывает следующее движение, и риск убытка сохраняется даже при более организованном визуально графике — стоит изучить его поведение на демо-счете, прежде чем включать его в свой распорядок анализа.</p>
             <div class="bq-post__cta">
-              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными R$ 10 000.</p>
+              <p><strong>Потренируйтесь, прежде чем рисковать.</strong> Откройте счёт в Duotide и проверьте свои идеи на демо-счёте с виртуальными 10 000 долларов США.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть бесплатный счёт</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Похожие статьи</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
-            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Что такое индикатор ADX и как он работает</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Стохастический осциллятор и как он работает</span><span class="bq__meta">24.09.2026 · 5 мин чтения</span></a>
+            <a class="bq__card" href="/ru/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Что такое Average True Range (ATR) и как его рассчитать</span><span class="bq__meta">24.09.2026 · 6 мин чтения</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Готовы попробовать на практике?</h2>
+          <p class="ap-lp__sub">Откройте счёт и тренируйтесь на демо-счёте с виртуальными 10 000 долларов США, не рискуя деньгами.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Открыть счёт</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ru" target="_blank" rel="noopener sponsored nofollow">Попробовать демо</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Безопасная платформа</strong><span>Защищённый вход и проверка личности</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Поддержка на разных языках</strong><span>Помощь каждый день</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Бесплатный демо-счёт</strong><span>10 000 USD виртуально для практики</span></li>
+          </ul>
+          <p class="ap-lp__risco">Торговля связана с риском потери вложенного капитала.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

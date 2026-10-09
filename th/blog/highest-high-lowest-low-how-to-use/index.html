@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>หนึ่งในอินดิเคเตอร์ที่เข้าใจง่ายที่สุด และเป็นเหตุผลที่ใช้กันแพร่หลาย คือจุดสูงสุดสูงสุด (highest high) และจุดต่ำสุดต่ำสุด (lowest low) ของจำนวนช่วงเวลาที่กำหนด แม้จะเรียบง่าย แต่มันเป็นพื้นฐานของระบบทะลุแนว (breakout) ที่เทรดเดอร์ในตลาดต่างๆ ใช้กันมาหลายทศวรรษ</p><p>ในบทความนี้คุณจะเข้าใจวิธีคำนวณอินดิเคเตอร์ทั้งสองตัวนี้ ทำไมมักใช้ร่วมกัน และวิธีนำไปใช้ในทางปฏิบัติเพื่อระบุการทะลุแนวของราคาที่เป็นไปได้</p><figure class="ap__grafico"><img src="/assets/graficos/maxima-e-minima-highest-high-lowest-low.svg" alt="กราฟ: S&amp;P 500 รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง" width="960" height="540" loading="lazy" decoding="async"><figcaption>กราฟ: S&amp;P 500 รายวัน ตั้งแต่ 01/04/2569 ถึง 07/10/2569 ข้อมูล: Yahoo Finance วิเคราะห์เอง</figcaption></figure><h2 id="highest-high-และ-lowest-low-ค-ออะไร">Highest High และ Lowest Low คืออะไร</h2><p>จุดสูงสุดสูงสุดของช่วงเวลาหนึ่งคือราคาสูงสุดที่มากที่สุดที่เคยทำได้ใน N แท่งเทียนล่าสุด หากคุณตั้งค่าอินดิเคเตอร์ไว้ที่ 20 ช่วงเวลา มันจะแสดงในทุกแท่งเทียนใหม่ว่าจุดสูงสุดสูงสุดใน 20 แท่งล่าสุดคือเท่าไร จุดต่ำสุดต่ำสุดทำงานในแบบเดียวกัน เพียงแต่มองหาราคาต่ำสุดที่น้อยที่สุดในช่วงเวลาเดียวกัน</p><p>ต่างจากค่าเฉลี่ยเคลื่อนที่ที่ทำให้ราคาเรียบขึ้น อินดิเคเตอร์ทั้งสองตัวนี้ทำเครื่องหมายขีดจำกัดสุดขั้วจริงที่ตลาดเคยทดสอบไปแล้วในช่วงเวลานั้น ด้วยเหตุนี้ พวกมันมักปรากฏบนกราฟเป็นเส้นแนวนอนสองเส้น (หรือเอียงเล็กน้อย) ที่ขึ้นเมื่อมีจุดสูงสุดใหม่และลงเมื่อมีจุดต่ำสุดใหม่ปรากฏขึ้น</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ว-ธ-คำนวณทำงานอย-างไรในทางปฏ-บ-ต">วิธีคำนวณทำงานอย่างไรในทางปฏิบัติ</h2><p>สมมติว่าใน 20 แท่งเทียนรายวันล่าสุดของสินทรัพย์หนึ่ง จุดสูงสุดสูงสุดคือ R$ 34,80 และจุดต่ำสุดต่ำสุดคือ R$ 29,50 ตราบใดที่ราคายังอยู่ภายในกรอบนี้ เส้นทั้งสองจะคงอยู่ที่ระดับเดิม เมื่อราคาปิดแท่งเทียนเหนือ R$ 34,80 เส้นจุดสูงสุดจะขึ้นเพื่อสะท้อนเพดานใหม่นี้ หากราคาปิดต่ำกว่า R$ 29,50 เส้นจุดต่ำสุดจะลงไปยังพื้นใหม่</p><p>ลักษณะนี้เองที่ทำให้อินดิเคเตอร์เหล่านี้มีประโยชน์ในการระบุการทะลุแนว การปิดใดๆ ที่เลยกรอบของ N ช่วงเวลาล่าสุดหมายถึง โดยนิยามแล้ว ราคาที่ตลาดไม่เคยไปถึงมานานพอสมควร</p><h2 id="การใช-อ-นด-เคเตอร-ท-งสองต-วร-วมก-น-แชนแนลทะล-แนว">การใช้อินดิเคเตอร์ทั้งสองตัวร่วมกัน: แชนแนลทะลุแนว</h2><p>เมื่อพล็อตร่วมกัน เส้นจุดสูงสุดและจุดต่ำสุดจะสร้างแชนแนลชนิดหนึ่งรอบราคา คล้ายกับ Donchian Channel ที่รู้จักกันดี แชนแนลนี้กำหนดขอบเขตของกรอบการซื้อขายล่าสุดด้วยสายตา และช่วยให้เห็นได้ง่ายขึ้นว่าราคากำลังติดอยู่แบบไซด์เวย์ระหว่างสองเส้น หรือกำลังอยู่ในกระบวนการทะลุแนว</p><p>ระบบทะลุแนวแบบคลาสสิกใช้ตรรกะนี้เป๊ะๆ คือซื้อเมื่อราคาปิดเหนือจุดสูงสุดสูงสุดของ N ช่วงเวลา และขาย (หรือปิดสถานะซื้อ) เมื่อราคาปิดต่ำกว่าจุดต่ำสุดต่ำสุดของช่วงเวลาเดียวกัน ระบบประเภทนี้เป็นที่รู้จักจากการที่กลุ่มเทรดเดอร์ที่ทำตามกฎกลไกของการทะลุแนวในตลาดต่างๆ ใช้ในช่วงทศวรรษ 1980 และ 1990</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ข-อควรระว-งในการเทรดการทะล-แนวของจ-ดส-งส-ดและจ-ดต-ำส-ด">ข้อควรระวังในการเทรดการทะลุแนวของจุดสูงสุดและจุดต่ำสุด</h2><p>ความเสี่ยงที่ใหญ่ที่สุดของสัญญาณประเภทนี้คือสิ่งที่เรียกว่าการทะลุแนวปลอม ราคาปิดเลยกรอบ ดึงดูดผู้ซื้อหรือผู้ขาย แต่จากนั้นก็กลับเข้าไปในแชนแนล ทำให้ผู้ที่เข้าเทรดตามการทะลุแนวขาดทุนอย่างรวดเร็ว ด้วยเหตุนี้ เทรดเดอร์หลายคนจึงต้องการการยืนยันเพิ่มเติม เช่น ปริมาณการซื้อขายที่สูงกว่าค่าเฉลี่ยในแท่งเทียนที่ทะลุแนว ก่อนที่จะถือว่าสัญญาณนั้นใช้ได้</p><p>ช่วงเวลาที่เลือก (N) ก็เปลี่ยนพฤติกรรมของอินดิเคเตอร์อย่างมากเช่นกัน ช่วงเวลาสั้น เช่น 10 สร้างการทะลุแนวบ่อยกว่า แต่ก็มีสัญญาณหลอกมากกว่าด้วย ช่วงเวลายาว เช่น 55 สร้างสัญญาณที่หายากกว่า แต่ในเชิงประวัติศาสตร์มีความสม่ำเสมอมากกว่า แลกกับการตอบสนองต่อการเปลี่ยนแปลงพฤติกรรมล่าสุดของสินทรัพย์ที่ช้ากว่า</p><h2 id="นำไปใช-ในการว-เคราะห-ของค-ณ">นำไปใช้ในการวิเคราะห์ของคุณ</h2><p>ก่อนใช้การทะลุแนวของจุดสูงสุดและจุดต่ำสุดเป็นตัวกระตุ้นการเข้าเทรด ควรสังเกตว่าสินทรัพย์ที่เลือกเคยมีพฤติกรรมอย่างไรกับสัญญาณประเภทนี้ในอดีต โดยทดสอบช่วงเวลาต่างๆ ใน Duotide เพื่อเข้าใจความถี่และคุณภาพของการทะลุแนวในสินทรัพย์ตัวนั้นโดยเฉพาะ การกำหนดขนาดสต็อปไว้ล่วงหน้า โดยอิงจากระยะห่างถึงเส้นตรงข้ามของแชนแนล ช่วยรักษาความเสี่ยงของการเทรดให้อยู่ในการควบคุม เนื่องจากไม่มีระบบทะลุแนวใดถูกต้องทุกครั้ง และความเป็นไปได้ในการขาดทุนเป็นส่วนหนึ่งของการเทรดในตลาดเสมอ</p><p>ควรเปรียบเทียบพฤติกรรมของจุดสูงสุดและจุดต่ำสุดในกรอบเวลาต่างๆ ของสินทรัพย์เดียวกันด้วย การทะลุแนวในกราฟรายวันมักมีน้ำหนักมากกว่าการทะลุแนวแบบเดียวกันในกราฟไม่กี่นาที เพียงเพราะมันสะท้อนกรอบการซื้อขายที่ถูกทดสอบมานานกว่าและโดยผู้เข้าร่วมตลาดมากกว่า การผสมผสานการอ่านระยะยาวนี้กับกรอบเวลาที่เล็กกว่าเพื่อปรับจุดเข้าที่แม่นยำ มักลดโอกาสที่จะเทรดการทะลุแนวที่ไม่มีแรงหนุนอยู่เบื้องหลังเลย</p>
             <div class="bq-post__cta">
-              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน R$ 10,000</p>
+              <p><strong>ฝึกก่อนเสี่ยงจริง</strong> เปิดบัญชี Duotide และทดสอบไอเดียของคุณในบัญชีทดลองด้วยเงินเสมือน US$ 10,000</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สมัครบัญชีฟรี</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>บทความที่เกี่ยวข้อง</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/th/blog/head-and-shoulders-pattern-how-to-identify/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">รูปแบบ Head and Shoulders: วิธีระบุการกลับตัว</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/fibonacci-retracement-a-practical-example/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">การย่อของฟีโบนัชชีในการเทรด: ตัวอย่างปฏิบัติ</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
-            <a class="bq__card" href="/th/blog/3-candlestick-patterns-that-often-fail/"><img src="/assets/img/duotide-vale-a-pena.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">3 รูปแบบแท่งเทียนที่มักล้มเหลว</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/head-and-shoulders-pattern-how-to-identify/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">รูปแบบ Head and Shoulders: วิธีระบุการกลับตัว</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/fibonacci-retracement-a-practical-example/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">การย่อของฟีโบนัชชีในการเทรด: ตัวอย่างปฏิบัติ</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
+            <a class="bq__card" href="/th/blog/3-candlestick-patterns-that-often-fail/"><img src="/assets/img/mini/duotide-vale-a-pena.webp" srcset="/assets/img/mini/duotide-vale-a-pena.webp 480w, /assets/img/duotide-vale-a-pena.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">3 รูปแบบแท่งเทียนที่มักล้มเหลว</span><span class="bq__meta">24/09/2569 · อ่าน 5 นาที</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">พร้อมลงมือปฏิบัติหรือยัง?</h2>
+          <p class="ap-lp__sub">เปิดบัญชีและฝึกในบัญชีทดลองด้วยเงินเสมือน 10,000 ดอลลาร์สหรัฐ โดยไม่ต้องเสี่ยงเงินจริง</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">สร้างบัญชี</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-th" target="_blank" rel="noopener sponsored nofollow">ลองบัญชีทดลอง</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>แพลตฟอร์มปลอดภัย</strong><span>ล็อกอินที่ปลอดภัยและยืนยันตัวตน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>ซัพพอร์ตหลายภาษา</strong><span>มีผู้ช่วยทุกวัน</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>บัญชีทดลองฟรี</strong><span>เงินเสมือน 10,000 ดอลลาร์ไว้ฝึก</span></li>
+          </ul>
+          <p class="ap-lp__risco">การเทรดมีความเสี่ยงที่จะสูญเสียเงินทุนที่ลงทุน</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>

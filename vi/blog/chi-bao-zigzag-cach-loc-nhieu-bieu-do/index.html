@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610082312">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -215,7 +215,7 @@
           <div class="ap__texto article">
             <p>Nhìn vào một biểu đồ giá không có bộ lọc nào có thể khá mệt mỏi: hàng chục lần tăng giảm nhỏ tranh giành sự chú ý, khiến khó nhận ra biến động thực sự quan trọng đằng sau nhiều nhiễu như vậy. ZigZag ra đời chính là để giải quyết vấn đề thị giác này, vẽ những đường thẳng chỉ nối các đỉnh và đáy quan trọng của biểu đồ, bỏ qua những gì nằm ở giữa.</p><p>Bài viết này giải thích cách ZigZag quyết định điều gì là nhiễu và điều gì là biến động quan trọng, nó thực sự dùng để làm gì, và vì sao không nên nhầm nó với một công cụ tạo tín hiệu vào lệnh.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-zigzag-como-filtrar-o-ruido-do-grafico.svg" alt="Biểu đồ: Ibovespa, khung ngày, từ 02/03/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích." width="960" height="540" loading="lazy" decoding="async"><figcaption>Biểu đồ: Ibovespa, khung ngày, từ 02/03/2026 đến 07/10/2026. Dữ liệu: Yahoo Finance. Tự phân tích.</figcaption></figure><h2 id="cach-zigzag-quyet-đinh-đieu-gi-se-hien-thi">Cách ZigZag quyết định điều gì sẽ hiển thị</h2><p>Chỉ báo được cài đặt với một ngưỡng biến động tối thiểu, xác định theo tỷ lệ phần trăm của giá hoặc theo số điểm. Bất kỳ biến động nào nhỏ hơn ngưỡng này đều bị bỏ qua, và ZigZag chỉ vẽ một đường mới khi giá di chuyển đủ để vượt qua ngưỡng đó tính từ đỉnh hoặc đáy được xác định gần nhất. Ví dụ, với ngưỡng 5%, một dao động 2% giữa một xu hướng đơn giản là không xuất hiện trên chỉ báo — nó chỉ được vẽ khi biến động tích lũy vượt qua 5% đã định.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="zigzag-thuc-su-huu-ich-đe-lam-gi">ZigZag thực sự hữu ích để làm gì</h2><h3>Xác định các đỉnh và đáy quan trọng</h3><p>Khi loại bỏ nhiễu ngắn hạn, sẽ dễ dàng hơn để nhận ra những điểm đảo chiều thực sự quan trọng trong lịch sử của tài sản — thông tin hữu ích để vẽ các đường hỗ trợ và kháng cự với sự tự tin hơn là cố đoán điều đó trên một biểu đồ đầy những dao động nhỏ.</p><h3>Hỗ trợ việc đọc các mô hình biểu đồ</h3><p>Các mô hình như đỉnh đôi, vai-đầu-vai hay kênh xu hướng trở nên rõ ràng hơn khi ZigZag đã loại bỏ nhiễu nhỏ, hoạt động như một khung xương trực quan để nhận diện các mô hình này rõ hơn, kể cả với những ai nghiên cứu đếm sóng trong phân tích kỹ thuật. Nếu không có bộ lọc này, sẽ khó hơn nhiều để phân biệt bằng mắt đoạn nào của biểu đồ đại diện cho biến động chính và đoạn nào chỉ là một sự điều chỉnh bên trong nó.</p><h3>Đo biên độ của các biến động trước đó</h3><p>Vì mỗi đường của ZigZag nối một đỉnh với một đáy (hoặc ngược lại), nó giúp dễ dàng đo nhanh xem tài sản đã di chuyển bao nhiêu điểm hoặc phần trăm ở mỗi đoạn của biểu đồ, điều này giúp hiệu chỉnh kỳ vọng về mục tiêu dựa trên những biến động trong quá khứ có quy mô tương tự.</p><h2 id="han-che-quan-trong-nhat-cua-zigzag">Hạn chế quan trọng nhất của ZigZag</h2><p>ZigZag là một chỉ báo nhìn về quá khứ: nó chỉ xác nhận một đỉnh hoặc đáy sau khi giá đã di chuyển đủ theo hướng ngược lại để chứng minh rằng điểm đó thực sự là một điểm đảo chiều. Điều này có nghĩa là đường cuối cùng của chỉ báo có thể thay đổi, hay vẽ lại, khi các cây nến mới hình thành — đỉnh trông có vẻ dứt khoát cách đây không lâu có thể không còn tồn tại nếu giá tiếp tục tăng. Vì lý do này, dùng ZigZag như một cơ chế kích hoạt vào lệnh trực tiếp là rủi ro: vào thời điểm tín hiệu xuất hiện rõ ràng, biến động mà nó mô tả đã xảy ra rồi. Điều này khiến ZigZag giống một công cụ nhìn lại hơn là một chỉ báo dự báo sớm.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cach-đieu-chinh-tham-so-đo-nhay">Cách điều chỉnh tham số độ nhạy</h2><ul><li>Một ngưỡng nhỏ (ví dụ, 1% hoặc 2%) hiển thị nhiều chi tiết hơn, nhưng lại bao gồm khá nhiều nhiễu ngắn hạn.</li><li>Một ngưỡng lớn hơn (ví dụ, 8% hoặc 10%) đơn giản hóa biểu đồ khá nhiều, nhưng có thể bỏ qua những điểm đảo chiều quan trọng đối với các giao dịch ngắn hạn hơn.</li><li>Điều chỉnh lý tưởng phụ thuộc vào tài sản và khung thời gian biểu đồ: các tài sản biến động mạnh hơn thường cần một ngưỡng lớn hơn để không tạo ra quá nhiều nhiễu, và điều ngược lại đúng với các tài sản ổn định hơn.</li></ul><h2 id="cach-su-dung-zigzag-mot-cach-co-trach-nhiem">Cách sử dụng ZigZag một cách có trách nhiệm</h2><p>Cách tốt nhất để tận dụng ZigZag là dùng nó như một công cụ phân tích trực quan và nghiên cứu lịch sử, không phải như một cơ chế kích hoạt vào lệnh. Kết hợp cách đọc các đỉnh và đáy mà nó làm nổi bật với một chỉ báo động lượng, như RSI, hoặc với việc đọc khối lượng, để quyết định thời điểm thực sự vào một giao dịch. Như bất kỳ công cụ nào dựa trên dữ liệu đã xảy ra, ZigZag không dự đoán biến động tiếp theo, và rủi ro thua lỗ vẫn hiện diện ngay cả khi biểu đồ được sắp xếp gọn gàng hơn về mặt hình ảnh — nên nghiên cứu hành vi của nó trên tài khoản demo trước khi đưa nó vào quy trình phân tích của bạn.</p>
             <div class="bq-post__cta">
-              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với R$ 10.000 tiền ảo.</p>
+              <p><strong>Luyện tập trước khi mạo hiểm.</strong> Mở tài khoản Duotide và thử ý tưởng của bạn trên tài khoản demo với 10.000 USD tiền ảo.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản miễn phí</a>
             </div>
             <div class="ap__fim">
@@ -248,12 +248,28 @@
         <aside class="ap__rel">
           <h2>Bài viết liên quan</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/duotide-corretora-02.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
-            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/duotide-corretora-04.webp" alt="" width="1024" height="512" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/chi-bao-adx-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Chỉ báo ADX là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/dao-dong-stochastic-la-gi-va-cach-hoat-dong/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Dao động Stochastic là gì và cách nó hoạt động</span><span class="bq__meta">24/09/2026 · 5 phút đọc</span></a>
+            <a class="bq__card" href="/vi/blog/average-true-range-atr-la-gi-va-cach-tinh/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Average True Range (ATR) là gì và cách tính</span><span class="bq__meta">24/09/2026 · 6 phút đọc</span></a>
           </div>
         </aside>
       </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Sẵn sàng thực hành?</h2>
+          <p class="ap-lp__sub">Mở tài khoản và luyện tập trên tài khoản demo với 10.000 USD ảo, không cần mạo hiểm tiền thật.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Tạo tài khoản</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-vi" target="_blank" rel="noopener sponsored nofollow">Dùng thử demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Nền tảng an toàn</strong><span>Đăng nhập bảo mật và xác minh danh tính</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Hỗ trợ đa ngôn ngữ</strong><span>Hỗ trợ mỗi ngày</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Tài khoản demo miễn phí</strong><span>10.000 USD ảo để luyện tập</span></li>
+          </ul>
+          <p class="ap-lp__risco">Giao dịch có rủi ro mất vốn đầu tư.</p>
+        </div>
+      </section>
     </article>
   </main>
   <footer class="site-footer">
@@ -317,6 +333,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610082312" defer></script>
+  <script src="/assets/js/main.js?v=202610092004" defer></script>
 </body>
 </html>
