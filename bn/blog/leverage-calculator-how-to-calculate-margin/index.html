@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>ট্রেডিংয়ে লিভারেজ ও প্রয়োজনীয় মার্জিন কীভাবে হিসাব করবেন | Blog Duotide</title>
-  <meta name="description" content="লিভারেজের সূত্র শিখুন, প্রয়োজনীয় মার্জিন ও প্রকৃত এক্সপোজারের মধ্যে পার্থক্য বুঝুন এবং ফরেক্স ও ক্রিপ্টোতে সম্পূর্ণ উদাহরণ দেখুন।">
+  <title>ট্রেডিংয়ে লিভারেজ ও মার্জিন কীভাবে হিসাব করবেন (প্রকৃত উদাহরণ সহ) | Blog Duotide</title>
+  <meta name="description" content="মার্জিনের ফর্মুলা, কার্যকর লিভারেজ এবং EUR/USD ও ইথারের প্রকৃত দাম দিয়ে উদাহরণ, দেখায় কেন পজিশনের আকার ঝুঁকি নির্ধারণ করে।">
   <link rel="canonical" href="https://duotide.com.br/bn/blog/leverage-calculator-how-to-calculate-margin/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/calculadora-de-alavancagem-como-calcular/">
@@ -32,18 +32,18 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="bn_BD">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="ট্রেডিংয়ে লিভারেজ ও প্রয়োজনীয় মার্জিন কীভাবে হিসাব করবেন">
-  <meta property="og:description" content="লিভারেজের সূত্র শিখুন, প্রয়োজনীয় মার্জিন ও প্রকৃত এক্সপোজারের মধ্যে পার্থক্য বুঝুন এবং ফরেক্স ও ক্রিপ্টোতে সম্পূর্ণ উদাহরণ দেখুন।">
+  <meta property="og:title" content="ট্রেডিংয়ে লিভারেজ ও মার্জিন কীভাবে হিসাব করবেন (প্রকৃত উদাহরণ সহ)">
+  <meta property="og:description" content="মার্জিনের ফর্মুলা, কার্যকর লিভারেজ এবং EUR/USD ও ইথারের প্রকৃত দাম দিয়ে উদাহরণ, দেখায় কেন পজিশনের আকার ঝুঁকি নির্ধারণ করে।">
   <meta property="og:url" content="https://duotide.com.br/bn/blog/leverage-calculator-how-to-calculate-margin/">
   <meta property="og:site_name" content="Duotide">
-  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
   <meta property="og:image:alt" content="Duotide — Duotide ব্লগ">
-  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ট্রেডিংয়ে লিভারেজ ও প্রয়োজনীয় মার্জিন কীভাবে হিসাব করবেন">
-  <meta name="twitter:description" content="লিভারেজের সূত্র শিখুন, প্রয়োজনীয় মার্জিন ও প্রকৃত এক্সপোজারের মধ্যে পার্থক্য বুঝুন এবং ফরেক্স ও ক্রিপ্টোতে সম্পূর্ণ উদাহরণ দেখুন।">
+  <meta name="twitter:title" content="ট্রেডিংয়ে লিভারেজ ও মার্জিন কীভাবে হিসাব করবেন (প্রকৃত উদাহরণ সহ)">
+  <meta name="twitter:description" content="মার্জিনের ফর্মুলা, কার্যকর লিভারেজ এবং EUR/USD ও ইথারের প্রকৃত দাম দিয়ে উদাহরণ, দেখায় কেন পজিশনের আকার ঝুঁকি নির্ধারণ করে।">
   <meta name="twitter:label1" content="লিখেছেন">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="পড়ার সময়">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610092059">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092337">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,13 +64,13 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/bn/blog/leverage-calculator-how-to-calculate-margin/#artigo",
-      "headline": "ট্রেডিংয়ে লিভারেজ ও প্রয়োজনীয় মার্জিন কীভাবে হিসাব করবেন",
-      "description": "লিভারেজের সূত্র শিখুন, প্রয়োজনীয় মার্জিন ও প্রকৃত এক্সপোজারের মধ্যে পার্থক্য বুঝুন এবং ফরেক্স ও ক্রিপ্টোতে সম্পূর্ণ উদাহরণ দেখুন।",
+      "headline": "ট্রেডিংয়ে লিভারেজ ও মার্জিন কীভাবে হিসাব করবেন (প্রকৃত উদাহরণ সহ)",
+      "description": "মার্জিনের ফর্মুলা, কার্যকর লিভারেজ এবং EUR/USD ও ইথারের প্রকৃত দাম দিয়ে উদাহরণ, দেখায় কেন পজিশনের আকার ঝুঁকি নির্ধারণ করে।",
       "url": "https://duotide.com.br/bn/blog/leverage-calculator-how-to-calculate-margin/",
       "inLanguage": "bn",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
-      "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
+      "dateModified": "2026-10-09T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "ঝুঁকি ব্যবস্থাপনা",
       "author": {
         "@type": "Organization",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "ট্রেডিংয়ে লিভারেজ ও প্রয়োজনীয় মার্জিন কীভাবে হিসাব করবেন",
+          "name": "ট্রেডিংয়ে লিভারেজ ও মার্জিন কীভাবে হিসাব করবেন (প্রকৃত উদাহরণ সহ)",
           "item": "https://duotide.com.br/bn/blog/leverage-calculator-how-to-calculate-margin/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/bn/">হোম</a></li>
         <li><a href="/bn/blog/">ব্লগ</a></li>
-        <li><span aria-current="page">ট্রেডিংয়ে লিভারেজ ও প্রয়োজনীয় মার্জিন কীভাবে হিসাব করবেন</span></li>
+        <li><span aria-current="page">ট্রেডিংয়ে লিভারেজ ও মার্জিন কীভাবে হিসাব করবেন (প্রকৃত উদাহরণ সহ)</span></li>
       </ol>
       <a class="ap__voltar" href="/bn/blog/">ফিরে যান</a>
     </div>
@@ -191,62 +191,37 @@
               <span><time datetime="2026-09-24">২৪ সেপ, ২০২৬</time><span class="ap__sep">5 মিনিটে পড়ুন</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> বার দেখা হয়েছে</span></span>
             </div>
-            <p class="ap__atual">হালনাগাদ: <time datetime="2026-10-08">৮ অক্টোবর, ২০২৬</time></p>
+            <p class="ap__atual">হালনাগাদ: <time datetime="2026-10-09">৯ অক্টোবর, ২০২৬</time></p>
             <span class="bq__tag">ঝুঁকি ব্যবস্থাপনা</span>
-            <h1>ট্রেডিংয়ে লিভারেজ ও প্রয়োজনীয় মার্জিন কীভাবে হিসাব করবেন</h1>
+            <h1>ট্রেডিংয়ে লিভারেজ ও মার্জিন কীভাবে হিসাব করবেন (প্রকৃত উদাহরণ সহ)</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>ঝুঁকি ও আচরণ বিভাগ</strong><small>Duotide বিভাগ</small></span></div>
           </div>
-          <figure class="ap__capa"><img src="/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         </header>
         <div class="ap__grade">
           <aside class="ap__lado">
             <nav class="ap__indice" aria-label="সূচিপত্র">
               <p class="ap__indice-tit">সূচিপত্র</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#স-র-বজন-ন-স-ত-র">সার্বজনীন সূত্র</a></li>
-                <li><a href="#য-স-খ-য-ট-সত-য-ই-গ-র-ত-বপ-র-ণ-ক-র-যকর-ল-ভ-র-জ">যে সংখ্যাটি সত্যিই গুরুত্বপূর্ণ: কার্যকর লিভারেজ</a></li>
-                <li><a href="#ফর-ক-স-উদ-হরণ-একই-পজ-শন-ভ-ন-ন-ভ-ন-ন-ল-ভ-র-জ">ফরেক্সে উদাহরণ: একই পজিশন, ভিন্ন ভিন্ন লিভারেজ</a></li>
-                <li><a href="#ক-র-প-ট-ক-র-ন-স-ত-উদ-হরণ">ক্রিপ্টোকারেন্সিতে উদাহরণ</a></li>
-                <li><a href="#এই-হ-স-ব-ব-স-তব-ক-ভ-ব-ব-যবহ-র-করব-ন">এই হিসাব বাস্তবে কীভাবে ব্যবহার করবেন</a></li>
+                <li><a href="#ল-ভ-র-জ-ক">লিভারেজ কী</a></li>
+                <li><a href="#ম-র-জ-ন-এব-ক-র-যকর-ল-ভ-র-জ-ক-ভ-ব-হ-স-ব-করব-ন">মার্জিন এবং কার্যকর লিভারেজ কীভাবে হিসাব করবেন</a></li>
+                <li><a href="#ফর-ক-স-প-রক-ত-উদ-হরণ-eur-usd">ফরেক্সে প্রকৃত উদাহরণ: EUR/USD</a></li>
+                <li><a href="#ক-র-প-ট-ত-প-রক-ত-উদ-হরণ-eth-usdt">ক্রিপ্টোতে প্রকৃত উদাহরণ: ETH/USDT</a></li>
+                <li><a href="#ব-স-তব-হ-স-বট-ক-ভ-ব-ব-যবহ-র-করব-ন">বাস্তবে হিসাবটি কীভাবে ব্যবহার করবেন</a></li>
+                <li><a href="#ল-ভ-র-জ-হ-স-ব-কর-র-স-ধ-রণ-ভ-ল">লিভারেজ হিসাব করার সাধারণ ভুল</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>উপরে ফিরে যান</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>লিভারেজ হলো এমন একটি প্রক্রিয়া যা মার্জিন হিসেবে জমা দেওয়া সেই মূল্যের একটি ভগ্নাংশ ব্যবহার করে বাজারে একটি বড় পজিশন নিয়ন্ত্রণ করতে দেয়, যা ব্রোকারের কাছে জমা করা হয়। এটি ফরেক্স, ক্রিপ্টোকারেন্সি, CFD, কমোডিটি এবং সূচকে বিদ্যমান, এবং এই সব ক্ষেত্রেই মূল সূত্রটি একই।</p>
-<p>সবচেয়ে বেশি বিভ্রান্তি সৃষ্টি করে এই ধারণা যে লিভারেজ নিজে থেকেই অপারেশনের ঝুঁকি নির্ধারণ করে। তা করে না। লিভারেজ পরিবর্তন করে পজিশন খুলতে কত মূলধন প্রয়োজন — এটি পজিশনটি যে বাজার গতির প্রতিনিধিত্ব করে তার আকার পরিবর্তন করে না।</p>
-<h2 id="স-র-বজন-ন-স-ত-র">সার্বজনীন সূত্র</h2>
-<p>একটি পজিশন খুলতে প্রয়োজনীয় মার্জিন এভাবে হিসাব করা হয়:</p>
-<p>প্রয়োজনীয় মার্জিন = পজিশনের মূল্য ÷ লিভারেজ</p>
-<p>যদি একটি পজিশনের মূল্য R$ 50.000 হয় এবং লিভারেজ 1:20 হয়, তাহলে প্রয়োজনীয় মার্জিন R$ 2.500। 1:100 লিভারেজ সহ, একই R$ 50.000 পজিশনের জন্য মাত্র R$ 500 মার্জিন প্রয়োজন। তবে উভয় ক্ষেত্রেই, পজিশনটি একটি R$ 50.000 পজিশনের মতোই আচরণ করতে থাকে — এই মূল্যই নির্ধারণ করে সম্পদের প্রতিটি শতাংশ পরিবর্তনে কত লাভ বা ক্ষতি হয়, জমা দেওয়া মার্জিন নয়।</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="য-স-খ-য-ট-সত-য-ই-গ-র-ত-বপ-র-ণ-ক-র-যকর-ল-ভ-র-জ">যে সংখ্যাটি সত্যিই গুরুত্বপূর্ণ: কার্যকর লিভারেজ</h2>
-<p>লিভারেজ সম্পর্কে বেশিরভাগ ব্যাখ্যা এখানেই থেমে যায়, কিন্তু একটি অংশ বাকি থেকে যায়: কার্যকর লিভারেজ, যা পজিশনের মোট মূল্যকে অ্যাকাউন্টের ব্যালেন্স দিয়ে ভাগ করে হিসাব করা হয়। একজন ট্রেডারের 1:500 লিভারেজে অ্যাক্সেস থাকতে পারে এবং তবুও ছোট পজিশন ব্যবহার করে রক্ষণশীলভাবে অপারেট করতে পারেন। আরেকজন ট্রেডার শুধু 1:10 ব্যবহার করেও অতিরিক্ত ঝুঁকি নিতে পারেন, শুধু নিজের অ্যাকাউন্টের আকারের তুলনায় অনেক বড় একটি পজিশন খুলে।</p>
-<p>যেকোনো লিভারেজড অপারেশনের আগে, চারটি প্রশ্নের উত্তর প্রয়োজন: পজিশনের মোট মূল্য কত, কত মার্জিন আটকে যাবে, ফলস্বরূপ কার্যকর লিভারেজ কত হবে, এবং দাম পরিকল্পিত স্টপে পৌঁছালে আনুমানিক ক্ষতি কত হবে।</p>
-<h2 id="ফর-ক-স-উদ-হরণ-একই-পজ-শন-ভ-ন-ন-ভ-ন-ন-ল-ভ-র-জ">ফরেক্সে উদাহরণ: একই পজিশন, ভিন্ন ভিন্ন লিভারেজ</h2>
-<p>R$ 5.000 অ্যাকাউন্ট নিয়ে একজন ট্রেডার 1,0850-এর কাছে EUR/USD-এর 0,10 লট খোলেন, 30 পিপসের স্টপ সহ। পজিশনের মূল্য প্রায় R$ 54.250 (উদাহরণের রেট অনুযায়ী রূপান্তরিত 10.000 ইউরো), এবং এই পজিশনে পিপের মূল্য প্রায় R$ 5। তাই, স্টপে ঝুঁকি R$ 150, নির্বাচিত লিভারেজ নির্বিশেষে।</p>
-<ul>
-<li><strong>লিভারেজ 1:10</strong> — প্রয়োজনীয় মার্জিন প্রায় R$ 5.425; কার্যকর লিভারেজ 10,85x; স্টপে ঝুঁকি R$ 150।</li>
-<li><strong>লিভারেজ 1:30</strong> — প্রয়োজনীয় মার্জিন প্রায় R$ 1.808; একই কার্যকর লিভারেজ; একই R$ 150 ঝুঁকি।</li>
-<li><strong>লিভারেজ 1:100</strong> — প্রয়োজনীয় মার্জিন প্রায় R$ 543; একই কার্যকর লিভারেজ; একই R$ 150 ঝুঁকি।</li>
-</ul>
-<p>তিনটি পরিস্থিতির মধ্যে আটকে থাকা মার্জিন যথেষ্ট পরিবর্তিত হয়। অপারেশনের আর্থিক ঝুঁকি একেবারেই পরিবর্তিত হয় না, কারণ পজিশনের আকার এবং স্টপের দূরত্ব অভিন্ন থেকে যায়। এটিই মূল শিক্ষা: লিভারেজ নির্ধারণ করে পজিশন খুলতে কত মূলধন সংরক্ষিত হবে; পজিশনের আকারই প্রকৃত ঝুঁকি এক্সপোজার নির্ধারণ করে।</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/ris-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ক-র-প-ট-ক-র-ন-স-ত-উদ-হরণ">ক্রিপ্টোকারেন্সিতে উদাহরণ</h2>
-<p>একই যুক্তি ফরেক্সের বাইরেও প্রযোজ্য। ধরুন বিটকয়েনের দাম R$ 350.000 এবং একজন ট্রেডার 1:10 লিভারেজ সহ 0,02 BTC-এর একটি পজিশন খোলেন। পজিশনের মূল্য হলো:</p>
-<p>0,02 × R$ 350.000 = R$ 7.000</p>
-<p>প্রয়োজনীয় মার্জিন হলো:</p>
-<p>R$ 7.000 ÷ 10 = R$ 700</p>
-<p>যদি বিটকয়েনের দাম পজিশনের বিপরীতে 5% কমে যায়, খরচের আগে আনুমানিক ক্ষতি হলো:</p>
-<p>R$ 7.000 × 5% = R$ 350</p>
-<p>আবারও, লিভারেজ একাই ক্ষতির আকার সিদ্ধান্ত নেয়নি। লেনদেনকৃত বিটকয়েনের পরিমাণ এবং দামের গতির আকারই ফলাফল নির্ধারণ করেছে। কম BTC এক্সপোজার কমাবে; একটি টাইট বা প্রশস্ত স্টপ সেই বিন্দু পরিবর্তন করবে যেখানে ক্ষতি বাস্তবায়িত হয় — কিন্তু এই কোনো চলকই লিভারেজ নিজে নয়।</p>
-<h2 id="এই-হ-স-ব-ব-স-তব-ক-ভ-ব-ব-যবহ-র-করব-ন">এই হিসাব বাস্তবে কীভাবে ব্যবহার করবেন</h2>
-<p>যেকোনো অপারেশনে লিভারেজ নির্বাচন করার আগে, সবচেয়ে নিরাপদ উপায় হলো প্রশ্নের ক্রম উল্টে দেওয়া: “কোন সর্বোচ্চ লিভারেজ পাওয়া যায়” জিজ্ঞাসা করার পরিবর্তে, জিজ্ঞাসা করুন “আমার মূলধন এবং আমি যে ঝুঁকি নিতে ইচ্ছুক তা বিবেচনায় নিয়ে আমি প্রকৃতপক্ষে কোন পজিশন মূল্যে এক্সপোজার চাই”। এই পজিশন মূল্য থেকে, প্রয়োজনীয় মার্জিন সূত্রের একটি ফলাফল হিসেবে আসে, শুরুর বিন্দু হিসেবে নয়।</p>
-<p>উচ্চ লিভারেজ লাভের সম্ভাবনা বাড়ায়, কিন্তু একই অনুপাতে ক্ষতির সম্ভাবনাও বাড়ায়, এবং বাজার দ্রুত পজিশনের বিপরীতে গেলে মার্জিন কল হতে পারে। এটি একটি হাতিয়ার, নিশ্চিত মুনাফার শর্টকাট নয় — ট্রেডিংয়ে যেকোনো লিভারেজ লেভেলে ক্ষতির ঝুঁকি জড়িত, এবং Duotide-এ হোক বা অন্য কোনো ট্রেডিং পরিবেশে, অপারেট করার আগে সবসময় প্ল্যাটফর্মে প্রতিটি ইনস্ট্রুমেন্টের নির্দিষ্ট মার্জিন শর্ত নিশ্চিত করা মূল্যবান।</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">সংক্ষিপ্ত উত্তর</p><p>প্রয়োজনীয় মার্জিন হলো পজিশনের মূল্য লিভারেজ দিয়ে ভাগ করা: 1:30 লিভারেজ সহ US$ 11,254-এর একটি পজিশনের জন্য US$ 375.13 প্রয়োজন। উপলভ্য লিভারেজ শুধু বন্দি মার্জিন পরিবর্তন করে; ঝুঁকি নির্ধারণ করে পজিশনের আকার এবং স্টপ পর্যন্ত দূরত্ব। এই কারণেই গুরুত্বপূর্ণ সংখ্যাটি হলো <strong>কার্যকর লিভারেজ</strong>, পজিশনের মূল্য অ্যাকাউন্ট ব্যালেন্স দিয়ে ভাগ করা।</p></div>
+            <p>লিভারেজ হলো সেই ব্যবস্থা যা জমা দেওয়া টাকার চেয়ে বড় একটি পজিশন নিয়ন্ত্রণ করতে দেয়, সেই মূল্যের একটি ভগ্নাংশ মার্জিন হিসেবে ব্যবহার করে। এটি ফরেক্স, ক্রিপ্টোকারেন্সি, CFD, কমোডিটি এবং সূচকে বিদ্যমান, এবং সব ক্ষেত্রেই কেন্দ্রীয় ফর্মুলা একই।</p><p>সবচেয়ে বেশি বিভ্রান্তি তৈরি করা বিষয়টি হলো মনে করা যে লিভারেজ, একা, অপারেশনের ঝুঁকি নির্ধারণ করে। করে না। এটি পরিবর্তন করে পজিশন খোলার জন্য কত ক্যাপিটাল বন্দি থাকে; পজিশনের আকার এবং স্টপ পর্যন্ত দূরত্বই নির্ধারণ করে কত লাভ বা ক্ষতি হয়। এই গাইডে, উদাহরণগুলো প্রকৃত দাম ব্যবহার করে: 07/10/2026-এর EUR/USD এবং USD/BRL (Yahoo Finance) এবং 2026-এর অক্টোবর ও আগস্টের ETH/USDT (Binance)।</p><h2 id="ল-ভ-র-জ-ক">লিভারেজ কী</h2><p>1:30 লিভারেজ মানে প্রতি 1 ইউনিট মার্জিন 30 ইউনিট পজিশন নিয়ন্ত্রণ করে। ব্রোকারেজ গ্যারান্টি হিসেবে মার্জিন দাবি করে এবং পজিশন বন্ধ হওয়ার সময় এই মূল্য ফিরিয়ে দেয়, ফলাফল থেকে যোগ বা বিয়োগ করে।</p><p>দুটি ভিন্ন লিভারেজ আছে, এবং এগুলো গুলিয়ে না ফেলা গুরুত্বপূর্ণ:</p><ul class="check-list"><li><strong>উপলভ্য লিভারেজ:</strong> অ্যাকাউন্ট যা সর্বাধিক অনুমতি দেয়, যেমন 1:30 বা 1:100। এটি দাবি করা মার্জিন নির্ধারণ করে।</li><li><strong>কার্যকর লিভারেজ:</strong> খোলা পজিশনের মোট মূল্য অ্যাকাউন্টের ব্যালেন্স দিয়ে ভাগ করা। এটি আসল এক্সপোজার নির্ধারণ করে।</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ম-র-জ-ন-এব-ক-র-যকর-ল-ভ-র-জ-ক-ভ-ব-হ-স-ব-করব-ন">মার্জিন এবং কার্যকর লিভারেজ কীভাবে হিসাব করবেন</h2><ul class="check-list"><li><strong>প্রয়োজনীয় মার্জিন</strong> = পজিশনের মূল্য ÷ লিভারেজ</li><li><strong>কার্যকর লিভারেজ</strong> = পজিশনের মূল্য ÷ অ্যাকাউন্ট ব্যালেন্স</li><li><strong>স্টপে ক্ষতি</strong> = পজিশনের আকার × স্টপ পর্যন্ত দূরত্ব</li></ul><p>খেয়াল করুন উপলভ্য লিভারেজ শুধু প্রথম লাইনে দেখা যায়। স্টপে ক্ষতি এর উপর নির্ভর করে না।</p><h2 id="ফর-ক-স-প-রক-ত-উদ-হরণ-eur-usd">ফরেক্সে প্রকৃত উদাহরণ: EUR/USD</h2><p>07/10/2026-এ EUR/USD বন্ধ হয়েছিল 1.1254-এ এবং ডলার R$ 4.9814-এ। R$ 5,000 অ্যাকাউন্ট সহ একজন ট্রেডার EUR/USD-এর 0.10 লট খোলেন, অর্থাৎ 10,000 ইউরো, 30 পিপস স্টপ সহ।</p><ul class="check-list"><li>পজিশনের মূল্য = 10,000 × 1.1254 = <strong>US$ 11,254</strong>, বা 11,254 × 4.9814 = <strong>R$ 56,060.68</strong></li><li>কার্যকর লিভারেজ = 56,060.68 ÷ 5,000 = <strong>11.21 গুণ</strong></li><li>পিপের মূল্য = 10,000 × 0.0001 = US$ 1; 30 পিপসের স্টপ = US$ 30 = <strong>R$ 149.44</strong>, বা অ্যাকাউন্টের 2.99%</li></ul><p>এখন উপলভ্য লিভারেজের তিনটি স্তরে প্রয়োজনীয় মার্জিন:</p><ul class="check-list"><li><strong>1:10</strong> → US$ 1,125.40 (R$ 5,606.07): অ্যাকাউন্ট ব্যালেন্সের চেয়ে বেশি, অর্ডারটি গ্রহণই হতো না।</li><li><strong>1:30</strong> → US$ 375.13 (R$ 1,868.69)।</li><li><strong>1:100</strong> → US$ 112.54 (R$ 560.61)।</li></ul><p>বন্দি মার্জিন অনেক পরিবর্তিত হয়। স্টপে ঝুঁকি তিনটি ক্ষেত্রেই R$ 149.44 থাকে, এবং কার্যকর লিভারেজ 11.21 গুণ থাকে, কারণ পজিশন এবং স্টপ পরিবর্তিত হয়নি। স্কেল দেওয়ার জন্য: 07/10 পর্যন্ত 20 ট্রেডিং সেশনে, EUR/USD-এর গড় দৈনিক পরিসীমা ছিল 54.7 পিপস, তাই 30 পিপসের একটি স্টপ একটি সাধারণ দিনের মধ্যে অনায়াসে খাপ খায়।</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ক-র-প-ট-ত-প-রক-ত-উদ-হরণ-eth-usdt">ক্রিপ্টোতে প্রকৃত উদাহরণ: ETH/USDT</h2><p>06/10/2026-এ ইথার বন্ধ হয়েছিল US$ 2,697.49-এ। 0.5 ETH-এর একটি কেনা পজিশনের মূল্য US$ 1,348.75। 1:10 লিভারেজ সহ, মার্জিন হলো US$ 134.87।</p><p>পরের দিন, 07/10, ইথার বন্ধ হয়েছিল US$ 2,574.14-এ, 4.57% পতন। ক্ষতি ছিল 0.5 × (2,697.49 − 2,574.14) = <strong>US$ 61.68</strong>। পজিশনের তুলনায়, 4.57%; মার্জিনের তুলনায়, 45.7%। লিভারেজ ডলারে ক্ষতি বাড়ায়নি, কিন্তু একটি সাধারণ এক দিনের পতনকে অপারেশনের জন্য সংরক্ষিত টাকার প্রায় অর্ধেক খরচ করিয়েছিল।</p><h3>যখন মুভমেন্ট মার্জিন অতিক্রম করে</h3><p>1:10 লিভারেজ সহ, মার্জিন পজিশনের বিরুদ্ধে প্রায় 10% মুভমেন্ট কভার করে, এবং ব্রোকারেজগুলো সাধারণত এর আগেই বন্ধ করে দেয়, মেইনটেন্যান্স মার্জিনের কারণে। 18/08/2026-এ ইথার বন্ধ হয়েছিল US$ 1,917.85-এ। পরের দিন, সর্বোচ্চ পৌঁছেছিল US$ 2,333.65-এ, 21.7% বৃদ্ধি, এবং ক্লোজিং ছিল US$ 2,252.80, 17.5% বৃদ্ধি। 18/08-এ US$ 95.89 মার্জিন সহ খোলা 0.5 ETH-এর একটি বিক্রি পজিশনের সর্বোচ্চে ক্ষতি হতো US$ 207.90, মার্জিনের দ্বিগুণেরও বেশি: বাস্তবে, এটি মাঝপথেই লিকুইডেট হয়ে যেতো।</p><h2 id="ব-স-তব-হ-স-বট-ক-ভ-ব-ব-যবহ-র-করব-ন">বাস্তবে হিসাবটি কীভাবে ব্যবহার করবেন</h2><h3>লিভারেজ দিয়ে নয়, ঝুঁকি দিয়ে শুরু করুন</h3><p>আপনি কতটা ক্ষতি মেনে নেবেন তা নির্ধারণ করুন (যেমন অ্যাকাউন্টের 1%), স্টপ কোথায় থাকবে, এবং তার থেকে, পজিশনের আকার। মার্জিন ফর্মুলার ফলাফল হিসেবে আসে, প্রারম্ভিক বিন্দু হিসেবে নয়।</p><h3>সব পজিশনের কার্যকর লিভারেজ দেখুন</h3><p>সব খোলা পজিশনের মূল্য যোগ করুন এবং ব্যালেন্স দিয়ে ভাগ করুন। প্রতিটি 11 গুণের দুটি অপারেশন একটি অ্যাকাউন্টকে 22 গুণ এক্সপোজড করে।</p><h3>স্টপকে অস্থিরতার সঙ্গে তুলনা করুন</h3><p>সম্পদের গড় দৈনিক পরিসীমার চেয়ে ছোট একটি স্টপ সাধারণ দোলাচলেই পৌঁছে যাবে। পরীক্ষা করতে ATR বা গড় পরিসীমা ব্যবহার করুন।</p><h3>সীমাবদ্ধতা</h3><p>উপরের হিসাবগুলো স্প্রেড, কমিশন এবং একদিন থেকে আরেক দিন পজিশন ধরে রাখার খরচ উপেক্ষা করে। গ্যাপ এবং দ্রুত বাজার পরিকল্পনার চেয়ে খারাপভাবে স্টপ কার্যকর করতে পারে, এবং মার্জিন ও লিকুইডেশনের নিয়ম প্রতিটি ইনস্ট্রুমেন্টে ভিন্ন: অপারেট করার আগে প্ল্যাটফর্মে শর্তাবলী যাচাই করুন।</p><h2 id="ল-ভ-র-জ-হ-স-ব-কর-র-স-ধ-রণ-ভ-ল">লিভারেজ হিসাব করার সাধারণ ভুল</h2><ul class="check-list"><li>মনে করা যে বেশি লিভারেজ একই পজিশনে বেশি ঝুঁকি মানে: ঝুঁকি পরিবর্তন করে পজিশনের আকার।</li><li>শুধু বিদ্যমান থাকার কারণে সব উপলভ্য লিভারেজ ব্যবহার করা।</li><li>অ্যাকাউন্টের মুদ্রায় পজিশনের মূল্য রূপান্তর করতে ভুলে যাওয়া।</li><li>পজিশনের তুলনায় ক্ষতি হিসাব করা এবং মার্জিন ও ব্যালেন্সের সঙ্গে তুলনা করতে ভুলে যাওয়া।</li><li>বিবেচনা না করে ক্রিপ্টোতে লিভারেজযুক্ত পজিশন খোলা যে একদিনে 10% বা তার বেশি মুভমেন্ট 2026-এ ইতিমধ্যে ঘটেছে।</li></ul><p>টাকা ঝুঁকি না নিয়ে অনুশীলন করতে, ডেমো অ্যাকাউন্টে প্রতিটি অপারেশনের আগে এই হিসাবগুলো করুন: পজিশনের মূল্য, মার্জিন, কার্যকর লিভারেজ এবং স্টপে ক্ষতি। ফলাফলের সঙ্গে সংখ্যাগুলো রেকর্ড করুন, এবং কয়েক সপ্তাহের মধ্যে আপনার কাছে আসলে কতটা ঝুঁকি নিচ্ছেন তার একটি সুনির্দিষ্ট ধারণা থাকবে। উপরের উদাহরণগুলো যা ঘটেছে তা বর্ণনা করে, যা ঘটবে তা নয়।</p>
             <div class="bq-post__cta">
               <p><strong>ঝুঁকি নেওয়ার আগে অনুশীলন করুন।</strong> Duotide-এ অ্যাকাউন্ট খুলুন এবং US$ 10,000 ভার্চুয়াল ব্যালান্সের ডেমো অ্যাকাউন্টে আপনার ধারণা পরীক্ষা করুন।</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-bn" target="_blank" rel="noopener sponsored nofollow">ফ্রি অ্যাকাউন্ট খুলুন</a>
             </div>
             <div class="ap__fim">
-              <p>হালনাগাদ: <time datetime="2026-10-08">৮ অক্টো, ২০২৬</time></p>
+              <p>হালনাগাদ: <time datetime="2026-10-09">৯ অক্টো, ২০২৬</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> বার দেখা হয়েছে</span></span><button class="ap__compartilhar" type="button">শেয়ার করুন <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -275,9 +250,9 @@
         <aside class="ap__rel">
           <h2>সম্পর্কিত নিবন্ধ</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/bn/blog/stop-loss-take-profit-forex/"><img src="/assets/img/mini/duotide-e-confiavel-02.webp" srcset="/assets/img/mini/duotide-e-confiavel-02.webp 480w, /assets/img/duotide-e-confiavel-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ফরেক্সে স্টপ লস এবং টেক প্রফিট কীভাবে ব্যবহার করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/martingale-strategy-in-trading/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ট্রেডিংয়ে মার্টিঙ্গেল কৌশল: কাজ ও ঝুঁকি</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
-            <a class="bq__card" href="/bn/blog/when-to-exit-a-trade-exit-signals/"><img src="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp" srcset="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp 480w, /assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">কখন একটি লেনদেন বন্ধ করবেন: প্রস্থানের সংকেত</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/stop-loss-take-profit-forex/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ফরেক্সে স্টপ লস এবং টেক প্রফিট কীভাবে ব্যবহার করবেন</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/martingale-strategy-in-trading/"><img src="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp" srcset="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp 480w, /assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">ট্রেডিংয়ে মার্টিঙ্গেল কৌশল: কাজ ও ঝুঁকি</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
+            <a class="bq__card" href="/bn/blog/when-to-exit-a-trade-exit-signals/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">কখন একটি লেনদেন বন্ধ করবেন: প্রস্থানের সংকেত</span><span class="bq__meta">২৪/০৯/২০২৬ · 5 মিনিটে পড়ুন</span></a>
           </div>
         </aside>
       </div>
@@ -360,6 +335,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610092059" defer></script>
+  <script src="/assets/js/main.js?v=202610092337" defer></script>
 </body>
 </html>
