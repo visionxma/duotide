@@ -167,7 +167,7 @@ function svg(g, cor) {
   for (let k = 0; k <= 5; k++) { const v = lo + (hi - lo) * k / 5, y = Y(v); out.push(`<line x1="${M.l}" x2="${W - M.r}" y1="${y}" y2="${y}" stroke="#eef1f4"/><text x="${W - M.r + 8}" y="${y + 4}" fill="#64748b">${fmt(v)}</text>`); }
   // datas
   const passos = Math.max(1, Math.round(n / 6));
-  for (let i = 0; i < n; i += passos) out.push(`<text x="${X(i)}" y="${H - 12}" fill="#64748b" text-anchor="${i === 0 ? 'start' : 'middle'}">${b[i].t.slice(5).split('-').reverse().join('/')}/${b[i].t.slice(2, 4)}</text>`);
+  for (let i = 0; i < n; i += passos) if (i === 0 || X(i) < W - M.r - 110) out.push(`<text x="${X(i)}" y="${H - 12}" fill="#64748b" text-anchor="${i === 0 ? 'start' : 'middle'}">${b[i].t.slice(5).split('-').reverse().join('/')}/${b[i].t.slice(2, 4)}</text>`);
   // velas (ou linha, se forem muitas)
   // câmbio do Yahoo traz abertura = fechamento do mesmo dia; num mercado que não fecha, a abertura real é o fechamento anterior
   const fx = /=X$/.test(g.ativo);
