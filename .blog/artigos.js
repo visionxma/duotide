@@ -102,6 +102,14 @@ const ICONES = {
   cripto: '<circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-width="2"/><path d="M10 8h3.2a2 2 0 0 1 0 4H10m0 0h3.6a2 2 0 0 1 0 4H10m0-8v8m1.5-9.5v1.5m0 8v1.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>',
   iniciante: '<path d="M3 9.5 12 5l9 4.5-9 4.5z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M7 11.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-3.5M21 9.5V14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>'
 };
+// Personagens editoriais declarados (fictícios): assinam por editoria e a caixa do autor avisa que são personagens.
+const PERS = fs.existsSync(path.join(__dirname, 'personagens.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'personagens.json'), 'utf8')) : null;
+const SITE_ID = /foxonivesting/.test(SITE) ? 'foxon' : /astroncorretora/.test(SITE) ? 'astron' : /corretoraavalon/.test(SITE) ? 'avalon' : 'duotide';
+const MARCA = { duotide: 'Duotide', foxon: 'Fox On', astron: 'Astron', avalon: 'Avalon' }[SITE_ID];
+function personagem(k) {
+  const slug = PERS && PERS[SITE_ID] && PERS[SITE_ID][k];
+  return slug && fs.existsSync(path.join(RAIZ, 'assets/img/autores', slug + '.webp')) ? { slug, nome: PERS.nomes[slug], foto: '/assets/img/autores/' + slug + '.webp' } : null;
+}
 function editoria(catPt, pasta) {
   const k = Object.keys(ED.grupos).find(g => ED.grupos[g].cats.includes(catPt)) || 'analise';
   const t = ED.textos[pasta] || ED.textos[''];
@@ -213,8 +221,12 @@ function gerar(pasta = '') {
     const sm = sumario(corpoArt);
     const atual = atualizado(a, pasta);
     const ed = editoria(a.categoriaPt || a.categoria, pasta);
-    const autor = esc(ed.nome);
-    const avatar = selo(ed, 56);
+    const pe = personagem(ed.k);
+    const autor = esc(pe ? pe.nome : ed.nome);
+    const fotoPe = (tam, cls) => `<img class="ap__avatar${cls}" src="${pe.foto}" alt="" width="${tam}" height="${tam}" loading="lazy" decoding="async">`;
+    const avatar = pe ? fotoPe(56, '') : selo(ed, 56);
+    const funcaoAutor = pe ? esc(T.personagem) + ' · ' + esc(ed.nome) : esc(ed.funcao);
+    const bioAutor = pe ? esc(T.aviso_ia.replace('{marca}', MARCA)) + ' ' + esc(ed.bio) : esc(ed.bio);
     const vis = cls => `<span class="ap__vis${cls}" data-visitas hidden>${OLHO}<b></b><span class="sr-only"> ${esc(T.visitas)}</span></span>`;
     const main = `<nav class="breadcrumb" aria-label="${esc(aria)}">
     <div class="container ap__trilha">
@@ -239,7 +251,7 @@ function gerar(pasta = '') {
             <p class="ap__atual">${esc(T.atualizado)}: <time datetime="${atual}">${fmtLonga(atual, idioma.codigo)}</time></p>
             <span class="bq__tag">${esc(a.categoria || 'Blog')}</span>
             <h1>${esc(a.titulo)}</h1>
-            <div class="ap__autor">${avatar}<span><strong>${autor}</strong><small>${esc(ed.funcao)}</small></span></div>
+            <div class="ap__autor">${avatar}<span><strong>${autor}</strong><small>${funcaoAutor}</small></span></div>
           </div>
           <figure class="ap__capa"><img src="${a.img}" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         </header>
@@ -266,8 +278,8 @@ ${a.fonte ? `            <p class="artigo__fonte">${esc(B.fonte || '')} <a href=
               <div class="ap__acoes">${vis(' ap__vis--pilula')}<button class="ap__compartilhar" type="button">${esc(T.compartilhar)} <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
-              ${selo(ed, 96)}
-              <div><strong>${autor}</strong><p>${esc(ed.bio)}</p></div>
+              ${pe ? fotoPe(96, ' ap__avatar--g') : selo(ed, 96)}
+              <div><strong>${autor}</strong><small class="ap__autor-tipo">${funcaoAutor}</small><p>${bioAutor}</p></div>
             </div>
             <div class="ap__avaliar" data-votos="${esc(T.votos)}" data-voto1="${esc(T.voto1)}" data-obrigado="${esc(T.obrigado)}" data-sem="${esc(T.sem_votos)}">
               <p class="ap__avaliar-tit">${esc(T.util)}</p>
