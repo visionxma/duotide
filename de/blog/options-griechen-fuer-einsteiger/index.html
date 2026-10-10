@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Options-Griechen für Einsteiger: Delta, Gamma, Theta und Vega | Blog Duotide</title>
-  <meta name="description" content="Verstehen Sie einfach, was die wichtigsten Options-Griechen messen, und sehen Sie ein Zahlenbeispiel, wie das Delta den Preis eines Kontrakts beeinflusst.">
+  <meta name="description" content="Was Delta, Gamma, Theta, Vega und Rho messen, mit Berechnung des Delta- und Gamma-Effekts bei echten Kursbewegungen der Alphabet-Aktie 2026.">
   <link rel="canonical" href="https://duotide.com.br/de/blog/options-griechen-fuer-einsteiger/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/gregas-das-opcoes-para-iniciantes/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="de_DE">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Options-Griechen für Einsteiger: Delta, Gamma, Theta und Vega">
-  <meta property="og:description" content="Verstehen Sie einfach, was die wichtigsten Options-Griechen messen, und sehen Sie ein Zahlenbeispiel, wie das Delta den Preis eines Kontrakts beeinflusst.">
+  <meta property="og:description" content="Was Delta, Gamma, Theta, Vega und Rho messen, mit Berechnung des Delta- und Gamma-Effekts bei echten Kursbewegungen der Alphabet-Aktie 2026.">
   <meta property="og:url" content="https://duotide.com.br/de/blog/options-griechen-fuer-einsteiger/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Options-Griechen für Einsteiger: Delta, Gamma, Theta und Vega">
-  <meta name="twitter:description" content="Verstehen Sie einfach, was die wichtigsten Options-Griechen messen, und sehen Sie ein Zahlenbeispiel, wie das Delta den Preis eines Kontrakts beeinflusst.">
+  <meta name="twitter:description" content="Was Delta, Gamma, Theta, Vega und Rho messen, mit Berechnung des Delta- und Gamma-Effekts bei echten Kursbewegungen der Alphabet-Aktie 2026.">
   <meta name="twitter:label1" content="Geschrieben von">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Lesezeit">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100322">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/de/blog/options-griechen-fuer-einsteiger/#artigo",
       "headline": "Options-Griechen für Einsteiger: Delta, Gamma, Theta und Vega",
-      "description": "Verstehen Sie einfach, was die wichtigsten Options-Griechen messen, und sehen Sie ein Zahlenbeispiel, wie das Delta den Preis eines Kontrakts beeinflusst.",
+      "description": "Was Delta, Gamma, Theta, Vega und Rho messen, mit Berechnung des Delta- und Gamma-Effekts bei echten Kursbewegungen der Alphabet-Aktie 2026.",
       "url": "https://duotide.com.br/de/blog/options-griechen-fuer-einsteiger/",
       "inLanguage": "de",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Optionen",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24. Sept. 2026</time><span class="ap__sep">5 Min. Lesezeit</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span>
             </div>
-            <p class="ap__atual">Aktualisiert am: <time datetime="2026-10-08">8. Oktober 2026</time></p>
+            <p class="ap__atual">Aktualisiert am: <time datetime="2026-10-10">10. Oktober 2026</time></p>
             <span class="bq__tag">Optionen</span>
             <h1>Options-Griechen für Einsteiger: Delta, Gamma, Theta und Vega</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Redaktionelle Figur · Ressort Analyse</small></span></div>
@@ -203,44 +203,83 @@
             <nav class="ap__indice" aria-label="Inhalt">
               <p class="ap__indice-tit">Inhalt</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#delta-wie-stark-sich-die-option-mit-dem-basiswert-bewegt">Delta: wie stark sich die Option mit dem Basiswert bewegt</a></li>
-                <li><a href="#gamma-die-geschwindigkeit-der-delta-anderung">Gamma: die Geschwindigkeit der Delta-Änderung</a></li>
-                <li><a href="#theta-die-kosten-die-option-uber-die-zeit-zu-halten">Theta: die Kosten, die Option über die Zeit zu halten</a></li>
-                <li><a href="#vega-empfindlichkeit-gegenuber-volatilitatsanderungen">Vega: Empfindlichkeit gegenüber Volatilitätsänderungen</a></li>
-                <li><a href="#ein-zahlenbeispiel-das-delta-und-gamma-zusammenbringt">Ein Zahlenbeispiel, das Delta und Gamma zusammenbringt</a></li>
-                <li><a href="#rho-der-griechenwert-den-wenige-einsteiger-beachten">Rho: der Griechenwert, den wenige Einsteiger beachten</a></li>
-                <li><a href="#wie-die-griechenwerte-zusammenwirken">Wie die Griechenwerte zusammenwirken</a></li>
-                <li><a href="#warum-das-fur-einsteiger-wichtig-ist">Warum das für Einsteiger wichtig ist</a></li>
+                <li><a href="#was-sind-die-options-griechen">Was sind die Options-Griechen</a></li>
+                <li><a href="#wie-man-den-effekt-von-delta-und-gamma-berechnet">Wie man den Effekt von Delta und Gamma berechnet</a></li>
+                <li><a href="#echtes-beispiel-zwei-bewegungen-von-alphabet-im-jahr-2026">Echtes Beispiel: zwei Bewegungen von Alphabet im Jahr 2026</a></li>
+                <li><a href="#wie-man-die-griechen-nutzt">Wie man die Griechen nutzt</a></li>
+                <li><a href="#haufige-fehler-mit-den-griechen">Häufige Fehler mit den Griechen</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Nach oben</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            
-<p>Wer beginnt, Optionen zu studieren, stößt schnell auf vier Wörter, die wie echtes Griechisch klingen: Delta, Gamma, Theta und Vega. Es sind in der Praxis Kennzahlen, die zeigen, wie der Preis einer Option auf verschiedene Faktoren reagiert, wie die Bewegung des Basiswerts, den Zeitverlauf und die Veränderung der Volatilität. Zu verstehen, was jede davon misst, hilft, eine Optionsoperation vor dem Einstieg zu bewerten, statt später herauszufinden, warum sich der Preis des Kontrakts unerwartet bewegt hat.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/gregas-das-opcoes-para-iniciantes.svg" alt="Chart: GOOGL, täglich, 01.06.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: GOOGL, täglich, 01.06.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung.</figcaption></figure><h2 id="delta-wie-stark-sich-die-option-mit-dem-basiswert-bewegt">Delta: wie stark sich die Option mit dem Basiswert bewegt</h2>
-<p>Das Delta misst die Empfindlichkeit des Optionspreises gegenüber einer Veränderung des Preises des Basiswerts. Eine Kaufoption mit einem Delta von 0,60 steigt zum Beispiel um etwa R$ 0,60 für jeden Anstieg von R$ 1,00 im Basiswert, bei sonst konstanten Faktoren. Kaufoptionen haben ein positives Delta zwischen 0 und 1. Verkaufsoptionen haben ein negatives Delta zwischen -1 und 0. Je mehr die Option im Geld ist, desto näher liegt das Delta bei 1 oder -1, und je mehr aus dem Geld, desto näher bei null.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="gamma-die-geschwindigkeit-der-delta-anderung">Gamma: die Geschwindigkeit der Delta-Änderung</h2>
-<p>Wenn das Delta die Richtung zeigt, zeigt das Gamma, wie schnell sich diese Richtung ändern kann, wenn sich der Preis des Vermögenswerts bewegt. Ein hohes Gamma bedeutet, dass sich das Delta der Option bei kleinen Bewegungen des Basiswerts stark verändern kann, was meist bei Optionen nahe dem Ausübungspreis und nahe dem Verfall passiert. Das ist wichtig, weil eine Position mit hohem Gamma ihr Risikoprofil schnell ändern kann und mehr Aufmerksamkeit erfordert als eine Position mit niedrigem Gamma.</p>
-<h2 id="theta-die-kosten-die-option-uber-die-zeit-zu-halten">Theta: die Kosten, die Option über die Zeit zu halten</h2>
-<p>Das Theta misst, wie viel Wert die Option pro Tag allein durch den Zeitverlauf verliert, bei sonst konstanten Faktoren. Dieser Effekt wird Zeitverfall genannt. Für Optionskäufer arbeitet das Theta gegen die Position: Jeder Tag, der vergeht, ohne dass sich der Vermögenswert genug bewegt, verringert den Wert des Kontrakts. Für Optionsverkäufer arbeitet das Theta zugunsten, was erklärt, warum Optionsverkaufsstrategien oft als Wetten auf die Zeit beschrieben werden, und nicht nur auf die Preisrichtung.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="vega-empfindlichkeit-gegenuber-volatilitatsanderungen">Vega: Empfindlichkeit gegenüber Volatilitätsänderungen</h2>
-<p>Das Vega misst, wie stark sich der Optionspreis ändert, wenn die implizite Volatilität des Marktes steigt oder fällt, ohne dass sich der Preis des Basiswerts bewegen muss. In Zeiten der Unsicherheit, wie vor einem Unternehmensergebnis oder einer Zinsentscheidung, steigt die implizite Volatilität tendenziell, was Optionen verteuern kann, selbst ohne unmittelbare Preisbewegung des Vermögenswerts. Nach dem Ereignis fällt die Volatilität meist abrupt, ein Effekt namens Volatility Crush, der den Wert der Option verringern kann, selbst wenn sich der Vermögenswert in die erwartete Richtung bewegt hat.</p>
-<h2 id="ein-zahlenbeispiel-das-delta-und-gamma-zusammenbringt">Ein Zahlenbeispiel, das Delta und Gamma zusammenbringt</h2>
-<p>Angenommen, eine Kaufoption wird zu R$ 2,00 gehandelt, mit einem Delta von 0,40 und einem Gamma von 0,05, auf einen Vermögenswert, der bei R$ 50,00 notiert. Steigt der Vermögenswert um R$ 1,00 auf R$ 51,00, liegt der neue geschätzte Optionspreis, nur anhand des Delta, bei etwa R$ 2,40. Aber das Gamma von 0,05 zeigt, dass auch das Delta selbst steigt, von 0,40 auf etwa 0,45 nach dieser Bewegung. Das bedeutet, dass die Option, wenn der Vermögenswert danach um weitere R$ 1,00 steigt, etwas stärker reagieren sollte, als sie beim ersten Anstieg reagiert hat. Dieser kumulative Effekt ist der Grund, warum Positionen mit hohem Gamma ruhig erscheinen können und sich plötzlich viel stärker zu bewegen beginnen als erwartet.</p>
-<h2 id="rho-der-griechenwert-den-wenige-einsteiger-beachten">Rho: der Griechenwert, den wenige Einsteiger beachten</h2>
-<p>Es gibt noch einen fünften Griechenwert namens Rho, der die Empfindlichkeit des Optionspreises gegenüber Zinsänderungen misst. Bei den meisten kurzfristigen Operationen ist der Effekt des Rho im Vergleich zu den anderen Faktoren klein, aber er gewinnt an Relevanz bei länger laufenden Optionen oder in Zeiten schneller Zinsänderungen. Es lohnt sich zu wissen, dass er existiert, auch wenn der Alltagsfokus meist auf Delta, Gamma, Theta und Vega liegt.</p>
-<h2 id="wie-die-griechenwerte-zusammenwirken">Wie die Griechenwerte zusammenwirken</h2>
-<p>Kein Griechenwert funktioniert isoliert. Eine Option kann ein für einen Anstieg des Vermögenswerts günstiges Delta haben und trotzdem an Wert verlieren, wenn das Theta den Gewinn schneller auffrisst, als der Preis steigt, oder wenn die Volatilität kurz nach dem Einstieg fällt. Bevor man eine Optionsoperation aufbaut, lohnt es sich zu fragen, nicht nur ob der Vermögenswert steigen oder fallen wird, sondern auch wie lange das dauern sollte und wie sich die implizite Volatilität in diesem Zeitraum tendenziell verhält.</p>
-<h2 id="warum-das-fur-einsteiger-wichtig-ist">Warum das für Einsteiger wichtig ist</h2>
-<p>Die Griechenwerte zu ignorieren macht die Operation nicht einfacher, es verbirgt nur Risiken, die trotzdem weiterhin bestehen. Ein Optionskäufer, der das Theta versteht, weiß, dass er eine relativ schnelle Bewegung braucht, um den Zeitverschleiß auszugleichen. Ein Optionsverkäufer, der das Gamma versteht, weiß, dass seine Position nahe dem Verfall deutlich riskanter werden kann. Der Handel mit Optionen birgt Risiko, einschließlich der Möglichkeit des vollständigen Verlusts des in den Kontrakt investierten Betrags, und die Griechenwerte zu verstehen ist ein praktischer Schritt, um dieses Risiko vor dem Einstieg zu bewerten, keine Erfolgsgarantie.</p>
-
+            <div class="ap__resposta"><p class="ap__resposta-tit">Kurze Antwort</p><p>Die Griechen messen, wie der Preis einer Option auf jeden Faktor reagiert: Das <strong>Delta</strong> misst die Reaktion auf den Preis des Basiswerts, das <strong>Gamma</strong> misst, wie stark sich das Delta ändert, das <strong>Theta</strong> misst den Wertverlust durch die Zeit, und das <strong>Vega</strong> misst die Reaktion auf die implizite Volatilität. Zusammen zeigen sie das Risiko der Position, bevor Sie einsteigen.</p></div>
+            <p>Wer anfängt, Optionen zu studieren, stößt schnell auf vier griechische Wörter: Delta, Gamma, Theta und Vega. Es sind Sensitivitätsmaße: Sie zeigen, wie der Preis einer Option auf die Bewegung des Basiswerts, den Lauf der Zeit und die Veränderung der Volatilität reagiert. Sie zu verstehen hilft, einen Trade vor dem Einstieg zu bewerten, statt erst nachher herauszufinden, warum sich der Kontrakt unerwartet bewegt hat.</p>
+<p>In diesem Leitfaden wenden wir Delta und Gamma auf zwei echte Bewegungen der Alphabet-Aktie (GOOGL) im Jahr 2026 an. Die Aktienkurse sind echt; die Werte der Griechen und der Prämien sind hypothetisch, gewählt, um die Berechnung zu veranschaulichen, weil sie vom spezifischen Kontrakt abhängen.</p>
+<h2 id="was-sind-die-options-griechen">Was sind die Options-Griechen</h2>
+<h3>Delta: wie stark die Option mit dem Basiswert läuft</h3>
+<p>Das Delta misst, wie stark sich der Preis der Option bei jeder Veränderung von 1,00 US$ im Basiswert tendenziell ändert, bei konstanten anderen Faktoren. Ein Call mit Delta von 0,60 steigt tendenziell um etwa 0,60 US$, wenn die Aktie um 1,00 US$ steigt. Calls haben ein Delta zwischen 0 und 1; Puts zwischen −1 und 0. Je tiefer im Geld, desto näher liegt das Delta an 1 oder −1; je weiter aus dem Geld, desto näher an null.</p>
+<h3>Gamma: die Geschwindigkeit der Delta-Änderung</h3>
+<p>Das Gamma misst, wie stark sich das Delta bei jeder Veränderung von 1,00 US$ im Basiswert ändert. Es ist bei Optionen nahe am Ausübungspreis und nahe am Verfall am größten. Hohes Gamma bedeutet, dass sich das Risikoprofil der Position schnell ändert.</p>
+<h3>Theta: die Kosten der Zeit</h3>
+<p>Das Theta misst, wie viel Wert die Option pro Tag allein durch den Lauf der Zeit tendenziell verliert. Ein Call mit Theta von −0,25 verliert etwa 0,25 US$ pro Tag, wenn sich sonst nichts ändert; in 10 Tagen 2,50 US$. Für Käufer von Optionen spielt das Theta dagegen; für Verkäufer dafür. Der Zerfall beschleunigt sich nahe dem Verfall.</p>
+<h3>Vega: Sensitivität gegenüber der Volatilität</h3>
+<p>Das Vega misst, wie stark sich der Preis der Option bei jedem Prozentpunkt Veränderung der impliziten Volatilität ändert. Vor Ereignissen wie Unternehmensergebnissen steigt die implizite Volatilität meist und macht Optionen teurer; danach fällt sie meist abrupt, was den Wert der Option verringern kann, selbst wenn sich der Basiswert in die erwartete Richtung bewegt hat.</p>
+<h3>Rho: die Griechen der Zinsen</h3>
+<p>Das Rho misst die Sensitivität gegenüber dem Zins. Bei kurzen Trades fällt es kaum ins Gewicht; es wird relevant bei langfristigen Optionen und in Phasen schneller Zinsänderungen.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="wie-man-den-effekt-von-delta-und-gamma-berechnet">Wie man den Effekt von Delta und Gamma berechnet</h2>
+<p>Für eine Bewegung von ΔS im Basiswert ist die ungefähre Veränderung der Option:</p>
+<ul class="check-list">
+<li><strong>Nur mit Delta:</strong> Veränderung ≈ Delta × ΔS</li>
+<li><strong>Mit Delta und Gamma:</strong> Veränderung ≈ Delta × ΔS + ½ × Gamma × ΔS²</li>
+<li><strong>Neues Delta</strong> ≈ Delta + Gamma × ΔS</li>
+</ul>
+<p>Die Näherung funktioniert am besten bei moderaten Bewegungen und ignoriert Theta und Vega, die sich im selben Zeitraum ebenfalls ändern.</p>
+<h2 id="echtes-beispiel-zwei-bewegungen-von-alphabet-im-jahr-2026">Echtes Beispiel: zwei Bewegungen von Alphabet im Jahr 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/gregas-das-opcoes-para-iniciantes.svg" alt="Chart: GOOGL, täglich, 01.06.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: GOOGL, täglich, 01.06.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung.</figcaption></figure>
+<p>Der Chart zeigt die Tageskerzen von GOOGL vom 01.06.2026 bis zum 07.10.2026. Die Aktie begann den Zeitraum bei 376,37 US$, hatte ein Tief von 314,90 US$ am 23.07., ein Hoch von 384,48 US$ am 05.08. und schloss am 07.10. bei 350,50 US$.</p>
+<h3>23. Juli: Rückgang um 7,1 % an einem Tag</h3>
+<p>Die Aktie schloss am 22.07. bei 342,09 US$ und am 23.07. bei 317,69 US$, ein Rückgang von 24,40 US$. Stellen Sie sich einen hypothetischen Call vor, der am 22.07. für 15,00 US$ gekauft wurde, mit einem Delta von 0,50 und einem Gamma von 0,01.</p>
+<ul class="check-list">
+<li>Nur mit Delta: 0,50 × (−24,40) = <strong>−12,20 US$</strong></li>
+<li>Gamma-Anpassung: ½ × 0,01 × 24,40² = <strong>+2,98 US$</strong></li>
+<li>Schätzung: −12,20 + 2,98 = <strong>−9,22 US$</strong>, Prämie von etwa 5,78 US$</li>
+<li>Neues Delta: 0,50 − 0,01 × 24,40 = <strong>0,26</strong></li>
+</ul>
+<p>Die Aktie fiel um 7,1 %; der hypothetische Call hätte etwa 61 % verloren. Das Gamma dämpfte den Verlust, weil das Delta mit dem fallenden Aktienkurs abnahm, aber die Hebelwirkung der Option wurde deutlich.</p>
+<h3>31. Juli: Anstieg um 6,7 % an einem Tag</h3>
+<p>Die Aktie schloss am 30.07. bei 333,66 US$ und am 31.07. bei 356,13 US$, ein Anstieg von 22,47 US$. Mit einem weiteren hypothetischen Call von 12,00 US$, Delta von 0,50 und Gamma von 0,01:</p>
+<ul class="check-list">
+<li>Nur mit Delta: 0,50 × 22,47 = <strong>11,24 US$</strong></li>
+<li>Gamma-Anpassung: ½ × 0,01 × 22,47² = <strong>2,52 US$</strong></li>
+<li>Schätzung: <strong>+13,76 US$</strong>, ein Anstieg der Prämie um etwa 115 %</li>
+<li>Neues Delta: 0,50 + 0,01 × 22,47 = <strong>0,72</strong></li>
+</ul>
+<p>Hier arbeitete das Gamma für den Käufer des Calls: Das Delta wuchs während des Anstiegs. Für den Verkäufer dieses Calls erhöhte dasselbe Gamma den Verlust. Die Beispiele beschreiben Bewegungen, die geschehen sind; sie zeigen nicht, was die Aktie als Nächstes tun wird.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="wie-man-die-griechen-nutzt">Wie man die Griechen nutzt</h2>
+<h3>Vor dem Kauf einer Option</h3>
+<p>Schauen Sie auf das Theta: Es sagt, wie viel die Zeit pro Tag kostet. Erwarten Sie eine langsame Bewegung, kann eine Option mit hohem Theta an Wert verlieren, bevor der Basiswert dort ankommt, wo Sie es erwarten.</p>
+<h3>Vor dem Verkauf einer Option</h3>
+<p>Schauen Sie auf das Gamma, besonders nahe am Verfall. Ein hohes Gamma lässt eine ruhige Position in wenigen Handelstagen zu einer sehr riskanten Position werden, wie der Anstieg vom 31.07. zeigte.</p>
+<h3>Vor Ereignissen</h3>
+<p>Schauen Sie auf das Vega und die implizite Volatilität. Teure Optionen vor einem Ergebnis zu kaufen und die Volatilität danach fallen zu sehen ist eine der häufigsten Arten, Geld zu verlieren, obwohl man die Richtung richtig hatte.</p>
+<h3>Grenzen</h3>
+<p>Die Griechen sind Schätzungen eines Modells und ändern sich ständig. Die Rechnung mit Delta und Gamma ist eine lokale Näherung; bei großen Bewegungen oder nahe am Verfall kann sich der tatsächliche Optionspreis deutlich davon entfernen.</p>
+<h2 id="haufige-fehler-mit-den-griechen">Häufige Fehler mit den Griechen</h2>
+<ul class="check-list">
+<li>Nur auf das Delta schauen und den Effekt von Zeit und Volatilität ignorieren.</li>
+<li>Optionen weit aus dem Geld mit niedrigem Delta kaufen und denken, sie seien billig.</li>
+<li>Optionen nahe am Verfall verkaufen, ohne das Gamma zu berücksichtigen.</li>
+<li>Die Richtung richtig haben und wegen des Rückgangs der impliziten Volatilität trotzdem verlieren.</li>
+<li>Vergessen, dass der Kauf von Optionen bedeuten kann, die gesamte gezahlte Prämie zu verlieren.</li>
+</ul>
+<p>Um zu üben, wählen Sie eine Option im Demokonto, notieren Sie Delta, Gamma, Theta und Vega am Tag des Einstiegs und vergleichen Sie Tag für Tag die geschätzte Veränderung mit der tatsächlichen Veränderung der Prämie. Diese Aufzeichnung zeigt schnell, wann die Näherungen funktionieren und wann nicht.</p>
             <div class="bq-post__cta">
               <p><strong>Üben, bevor Sie etwas riskieren.</strong> Eröffnen Sie Ihr Duotide-Konto und testen Sie Ihre Ideen im Demokonto mit 10.000 US-Dollar virtuellem Guthaben.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
             </div>
             <div class="ap__fim">
-              <p>Aktualisiert am: <time datetime="2026-10-08">8. Okt. 2026</time></p>
+              <p>Aktualisiert am: <time datetime="2026-10-10">10. Okt. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span><button class="ap__compartilhar" type="button">Teilen <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -270,7 +309,7 @@
           <h2>Ähnliche Artikel</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/de/blog/wie-binaere-optionen-funktionieren/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Wie binäre Optionen funktionieren: Payout, Risiko, Beispiel</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
-            <a class="bq__card" href="/de/blog/binaere-optionen-schritt-fuer-schritt-risikomanagement/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Binäre Optionen: praktische Schritt-für-Schritt-Anleitung und Risikomanagement</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
+            <a class="bq__card" href="/de/blog/binaere-optionen-schritt-fuer-schritt-risikomanagement/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Binäre Optionen Schritt für Schritt: Risikomanagement</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
             <a class="bq__card" href="/de/blog/digitale-optionen-wie-sie-funktionieren/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Digitale Optionen: wie sie funktionieren und wie man das reale Risiko berechnet</span><span class="bq__meta">24.09.2026 · 5 Min. Lesezeit</span></a>
           </div>
         </aside>
@@ -354,6 +393,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100322" defer></script>
+  <script src="/assets/js/main.js?v=202610100453" defer></script>
 </body>
 </html>

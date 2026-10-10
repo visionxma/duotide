@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Regla 3-5-7 en el trading: qué es y cómo aplicarla | Blog Duotide</title>
-  <meta name="description" content="Conoce la regla 3-5-7 de gestión de riesgo: límite de pérdida por operación, exposición total de la cartera y meta de ganancia, con ejemplo en reales.">
+  <meta name="description" content="La regla 3-5-7 limita el riesgo por operación, la exposición total y define la ganancia mínima. Mira el cálculo con el ATR real de BOVA11 y los errores.">
   <link rel="canonical" href="https://duotide.com.br/es/blog/regla-3-5-7-en-el-trading/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/regra-3-5-7-no-trading/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Regla 3-5-7 en el trading: qué es y cómo aplicarla">
-  <meta property="og:description" content="Conoce la regla 3-5-7 de gestión de riesgo: límite de pérdida por operación, exposición total de la cartera y meta de ganancia, con ejemplo en reales.">
+  <meta property="og:description" content="La regla 3-5-7 limita el riesgo por operación, la exposición total y define la ganancia mínima. Mira el cálculo con el ATR real de BOVA11 y los errores.">
   <meta property="og:url" content="https://duotide.com.br/es/blog/regla-3-5-7-en-el-trading/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguranca.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Regla 3-5-7 en el trading: qué es y cómo aplicarla">
-  <meta name="twitter:description" content="Conoce la regla 3-5-7 de gestión de riesgo: límite de pérdida por operación, exposición total de la cartera y meta de ganancia, con ejemplo en reales.">
+  <meta name="twitter:description" content="La regla 3-5-7 limita el riesgo por operación, la exposición total y define la ganancia mínima. Mira el cálculo con el ATR real de BOVA11 y los errores.">
   <meta name="twitter:label1" content="Escrito por">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tiempo de lectura">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100322">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/es/blog/regla-3-5-7-en-el-trading/#artigo",
       "headline": "Regla 3-5-7 en el trading: qué es y cómo aplicarla",
-      "description": "Conoce la regla 3-5-7 de gestión de riesgo: límite de pérdida por operación, exposición total de la cartera y meta de ganancia, con ejemplo en reales.",
+      "description": "La regla 3-5-7 limita el riesgo por operación, la exposición total y define la ganancia mínima. Mira el cálculo con el ATR real de BOVA11 y los errores.",
       "url": "https://duotide.com.br/es/blog/regla-3-5-7-en-el-trading/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguranca.webp",
       "articleSection": "Gestión de riesgo",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">5 min de lectura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
             </div>
-            <p class="ap__atual">Actualizado el: <time datetime="2026-10-08">8 de octubre de 2026</time></p>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-10-10">10 de octubre de 2026</time></p>
             <span class="bq__tag">Gestión de riesgo</span>
             <h1>Regla 3-5-7 en el trading: qué es y cómo aplicarla</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/camila-nascimento.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Camila Nascimento</strong><small>Personaje editorial · Redacción de Riesgo y Comportamiento</small></span></div>
@@ -203,22 +203,70 @@
             <nav class="ap__indice" aria-label="Contenido">
               <p class="ap__indice-tit">Contenido</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#el-primer-numero-3-de-riesgo-maximo-por-operacion">El primer número: 3% de riesgo máximo por operación</a></li>
-                <li><a href="#el-segundo-numero-5-de-exposicion-total-simultanea">El segundo número: 5% de exposición total simultánea</a></li>
-                <li><a href="#el-tercer-numero-meta-de-7-o-mas-en-las-ganancias">El tercer número: meta de 7% o más en las ganancias</a></li>
-                <li><a href="#como-aplicar-la-regla-3-5-7-en-el-dia-a-dia">Cómo aplicar la regla 3-5-7 en el día a día</a></li>
+                <li><a href="#que-es-la-regla-3-5-7">Qué es la regla 3-5-7</a></li>
+                <li><a href="#como-calcular-el-tamano-de-la-posicion-con-el-3">Cómo calcular el tamaño de la posición con el 3%</a></li>
+                <li><a href="#ejemplo-real-la-regla-aplicada-a-bova11">Ejemplo real: la regla aplicada a BOVA11</a></li>
+                <li><a href="#como-aplicar-el-5-y-el-7">Cómo aplicar el 5% y el 7%</a></li>
+                <li><a href="#errores-comunes-en-la-regla-3-5-7">Errores comunes en la regla 3-5-7</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Buena parte de los traders no pierde dinero por elegir los activos equivocados, sino por arriesgar demasiado en cada operación y no tener un límite claro para el total expuesto al mismo tiempo. La regla 3-5-7 es una forma simple de organizar esos límites en tres números fáciles de recordar, creando una estructura de gestión de riesgo que cualquier principiante puede aplicar sin planillas complicadas.</p><p>Este artículo explica qué significa cada uno de los tres números de la regla, cómo calcularlos en la práctica y por qué esta disciplina suele pesar más en el resultado final que la elección de la estrategia en sí.</p><figure class="ap__grafico"><img src="/assets/graficos/regra-3-5-7-no-trading.svg" alt="Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure><h2 id="el-primer-numero-3-de-riesgo-maximo-por-operacion">El primer número: 3% de riesgo máximo por operación</h2><p>El primer pilar de la regla define cuánto estás dispuesto a perder en una única operación, en caso de que se active el stop: como máximo 3% del capital total de la cuenta. Ese porcentaje se refiere al valor perdido si el precio toca el stop, no al tamaño total de la posición abierta.</p><p>Para calcular el tamaño de la posición con base en ese límite, usa la fórmula: tamaño de la posición = (capital de la cuenta x 0,03) ÷ (precio de entrada − precio del stop). Un ejemplo práctico: con una cuenta de R$ 10.000, el riesgo máximo por operación es R$ 300. Si un activo cuesta R$ 50 y el stop técnico queda en R$ 47 (una distancia de R$ 3), la posición máxima sería R$ 300 ÷ R$ 3 = 100 unidades, lo que representa R$ 5.000 invertidos, aun con el riesgo limitado a R$ 300.</p><h3>Por qué 3% y no más</h3><p>La lógica es estadística: con un riesgo del 3% por operación, una racha extrema de 10 pérdidas seguidas dejaría la cuenta con cerca del 74% del capital original, un escenario difícil, pero recuperable. Con un riesgo del 10% por operación, la misma racha de pérdidas prácticamente dejaría la cuenta en cero.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="el-segundo-numero-5-de-exposicion-total-simultanea">El segundo número: 5% de exposición total simultánea</h2><p>El segundo pilar limita cuánto capital puede estar en riesgo al mismo tiempo, sumando todas las operaciones abiertas. Esto evita el problema de la correlación: si abres tres operaciones distintas, cada una arriesgando 3%, pero todas en activos que suelen moverse juntos (por ejemplo, tres acciones del mismo sector), el riesgo real conjunto puede superar el 9%, aunque cada operación aislada parezca estar dentro del límite.</p><p>La regla sugiere mantener ese riesgo sumado de las operaciones abiertas en, como máximo, 5% del capital total, lo que limita naturalmente cuántas posiciones puedes tener al mismo tiempo, especialmente en activos correlacionados.</p><h2 id="el-tercer-numero-meta-de-7-o-mas-en-las-ganancias">El tercer número: meta de 7% o más en las ganancias</h2><p>El tercer pilar trata de la relación entre riesgo y retorno esperado: las operaciones ganadoras deben buscar una ganancia de al menos 7%, o una proporción equivalente a la pérdida máxima asumida. Si el riesgo por operación es del 3%, buscar retornos del 7% o más garantiza una relación riesgo-retorno favorable, cercana a 1 por 2,3.</p><p>Con esa proporción, incluso un trader que acierta menos de la mitad de las veces puede tener un resultado positivo en total. Supongamos 40 operaciones, con 45% de acierto: 18 ganadoras ganando 7% y 22 perdedoras perdiendo 3%. El resultado sumado sería (18 x 7%) − (22 x 3%) = 126% − 66% = 60% de ganancia acumulada en porcentaje de riesgo asumido, un ejemplo de cómo la matemática de la relación riesgo-retorno compensa una tasa de acierto por debajo del 50%.</p><ul><li>3%: riesgo máximo aceptado por operación individual.</li><li>5%: riesgo total máximo sumando todas las posiciones abiertas.</li><li>7%: meta mínima de ganancia en las operaciones ganadoras.</li><li>La disciplina en seguir los tres números importa más que cada número aislado.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-aplicar-la-regla-3-5-7-en-el-dia-a-dia">Cómo aplicar la regla 3-5-7 en el día a día</h2><p>Antes de abrir cualquier operación, calcula el tamaño de la posición con base en el límite del 3%, verifica que la suma de los riesgos de las posiciones ya abiertas no supere el 5% y solo entra en operaciones cuyo objetivo de ganancia potencial respete la proporción de al menos 7% de ganancia frente al riesgo asumido.</p><p>Vale la pena recordar que la regla 3-5-7 no garantiza ganancias ni elimina el riesgo de pérdida: solo estructura el tamaño de las apuestas para que una racha mala, que eventualmente va a ocurrir con cualquier estrategia, no comprometa la continuidad de la cuenta. El trading implica riesgo real de pérdida de capital, y ningún sistema de gestión cambia esa realidad.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Respuesta rápida</p><p>La regla 3-5-7 es un conjunto de límites de gestión de riesgo: arriesgar como máximo <strong>el 3% del capital por operación</strong>, mantener como máximo <strong>el 5% en riesgo sumando todas las posiciones abiertas</strong> y buscar ganancias de al menos <strong>el 7%</strong> en las operaciones ganadoras. No elige activos ni garantiza ganancia; sirve para que una racha de pérdidas no comprometa la cuenta.</p></div>
+            <p>Buena parte de los traders no pierde dinero por elegir los activos equivocados, sino por arriesgar demasiado en cada operación y no tener un límite para el total expuesto al mismo tiempo. La regla 3-5-7 organiza esos límites en tres números fáciles de recordar, sin planilla complicada.</p>
+<p>En este artículo explicamos cada número y hacemos las cuentas en reales con una cuenta de R$ 10.000 y las cotizaciones reales de BOVA11, el fondo que sigue al Ibovespa, entre abril y octubre de 2026.</p>
+<h2 id="que-es-la-regla-3-5-7">Qué es la regla 3-5-7</h2>
+<ul class="check-list">
+<li><strong>3%:</strong> riesgo máximo por operación, es decir, cuánto pierdes si se alcanza el stop.</li>
+<li><strong>5%:</strong> riesgo máximo sumado de todas las operaciones abiertas al mismo tiempo.</li>
+<li><strong>7%:</strong> ganancia mínima buscada en las operaciones ganadoras, para que superen con holgura a las perdedoras.</li>
+</ul>
+<p>Hay variaciones en la forma de describir el tercer número: algunas versiones hablan del 7% del capital, otras de ganancias al menos mayores que las pérdidas en cierta proporción. La idea común es la misma: la operación ganadora necesita valer mucho más de lo que cuesta la perdedora.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-calcular-el-tamano-de-la-posicion-con-el-3">Cómo calcular el tamaño de la posición con el 3%</h2>
+<p>El límite del 3% no es el tamaño de la posición; es la pérdida máxima. La fórmula conecta ambos:</p>
+<p><strong>Cantidad = (capital × 0,03) ÷ (precio de entrada − precio del stop)</strong></p>
+<p>Con R$ 10.000, el riesgo máximo es R$ 300. El stop queda donde la lectura técnica se invalida; aquí usamos 2 ATR por debajo de la entrada. El ATR mide la amplitud media diaria del activo en las últimas 14 sesiones.</p>
+<h2 id="ejemplo-real-la-regla-aplicada-a-bova11">Ejemplo real: la regla aplicada a BOVA11</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/regra-3-5-7-no-trading.svg" alt="Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure>
+<p>El gráfico muestra BOVA11 del 01/04 al 06/10/2026, con el ATR de 14 días abajo. El fondo pasó de R$ 184,18 a R$ 202,50 en el periodo, alza del 9,95%, con mínima de R$ 162,07 el 14/08 y máxima de R$ 207,00 el 05/10.</p>
+<h3>Agosto: una operación dentro de la regla</h3>
+<ul class="check-list">
+<li><strong>Entrada:</strong> 21/08/2026, en el cierre de R$ 168,33, algunos días después del mínimo del periodo.</li>
+<li><strong>ATR del día:</strong> R$ 2,68. Stop a 2 ATR = R$ 5,37 por debajo, en R$ 162,96.</li>
+<li><strong>Cantidad:</strong> 300 ÷ 5,37 = 55,9, redondeado hacia abajo: 55 cuotas, o R$ 9.258,15 de posición. Riesgo real: 55 × 5,37 = R$ 295,08, o 2,95% de la cuenta.</li>
+<li><strong>Objetivo del 7% del capital:</strong> R$ 700 ÷ 55 cuotas = R$ 12,73 por cuota, objetivo en R$ 181,06. Relación entre ganancia y riesgo: 12,73 ÷ 5,37 = 2,37.</li>
+</ul>
+<p>En el caso real, el menor mínimo después de la entrada fue R$ 166,49, por encima del stop, y el objetivo se alcanzó el 02/09, cuando el máximo llegó a R$ 183,36. Ganancia de cerca de R$ 700. Esto describe una operación que salió bien; la regla existe para que las que salen mal cuesten solo R$ 300.</p>
+<h3>Julio: cuando la cuenta no soporta la posición</h3>
+<p>El 21/07, el ATR estaba en R$ 2,24, el menor del periodo, con la cuota a R$ 170,34. Por la fórmula, 300 ÷ 4,49 daría 66 cuotas, o R$ 11.242,44, más que la cuenta entera. Sin apalancamiento, el máximo serían 58 cuotas, con un riesgo de cerca de R$ 260. En periodos calmados, el límite real pasa a ser el capital, y no el 3%.</p>
+<h3>Octubre: la volatilidad se duplica y la posición se encoge</h3>
+<p>BOVA11 cerró el 02/10 a R$ 190,00 y abrió el 05/10 a R$ 203,61, un salto del 7,2% entre una sesión y otra. El ATR subió a R$ 4,25 el 06/10. Con la cuota a R$ 202,50, el stop de 2 ATR quedaría a R$ 8,50 de distancia, y los mismos R$ 300 de riesgo permitirían solo 35 cuotas, o R$ 7.087,50. La regla mantiene el riesgo fijo y deja que la volatilidad decida el tamaño. Estos ejemplos muestran lo que pasó; no indican el próximo movimiento.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-aplicar-el-5-y-el-7">Cómo aplicar el 5% y el 7%</h2>
+<h3>El 5% de exposición total</h3>
+<p>Con la operación de agosto abierta, arriesgando R$ 295,08, queda espacio para arriesgar como máximo R$ 204,92 en otras posiciones, cerca del 2%. Atención a la correlación: una segunda compra en una acción grande del Ibovespa se mueve junto con BOVA11 y, en la práctica, aumenta la misma apuesta. Tres posiciones del 3% en activos que se mueven juntos pueden sumar un 9% de riesgo real.</p>
+<h3>Por qué 3% y no 10%</h3>
+<p>Diez pérdidas seguidas al 3% dejan la cuenta de R$ 10.000 en R$ 7.374,24, caída del 26,3%. Arriesgando el 10%, la misma secuencia lleva a R$ 3.486,78, caída del 65,1%. La primera es difícil, pero recuperable; la segunda compromete la capacidad de seguir.</p>
+<h3>La matemática del 7%</h3>
+<p>Con una ganancia del 7% en las ganadoras y una pérdida del 3% en las perdedoras, el punto de equilibrio es acertar 3 ÷ (3 + 7) = 30% de las operaciones. Con un 45% de acierto, la expectativa por operación sería 0,45 × 7 − 0,55 × 3 = 1,5% del capital. En 40 operaciones, 18 ganadoras y 22 perdedoras sumarían 126 − 66 = 60 puntos porcentuales, sin contar costos ni el efecto del interés compuesto.</p>
+<h3>Limitaciones</h3>
+<p>La regla no garantiza ganancia. El stop puede ejecutarse peor de lo planeado en saltos de precio, como el del 05/10. Objetivos del 7% del capital pueden ser demasiado lejanos para activos de baja volatilidad y forzar operaciones largas. Y el 3% todavía es alto para muchos perfiles: hay quien prefiere el 1% o el 2% por operación dentro de la misma estructura.</p>
+<h2 id="errores-comunes-en-la-regla-3-5-7">Errores comunes en la regla 3-5-7</h2>
+<ul class="check-list">
+<li>Confundir el 3% de riesgo con el 3% del capital invertido en la posición.</li>
+<li>Respetar el 3% en cada operación y olvidar sumar el riesgo de las posiciones abiertas.</li>
+<li>Ignorar la correlación entre activos que se mueven juntos.</li>
+<li>Redondear la cantidad hacia arriba y pasar el límite.</li>
+<li>Mover el stop después de la entrada, aumentando el riesgo real.</li>
+<li>Aceptar operaciones con un objetivo menor que el riesgo porque la señal parece buena.</li>
+</ul>
+<p>Para entrenar la regla, abre la cuenta demo con el mismo capital que piensas usar y, antes de cada operación, calcula la cantidad por el stop, suma el riesgo de las posiciones abiertas y revisa el objetivo. Registra todo durante algunas semanas: el registro muestra si logras respetar los tres números cuando el mercado se pone difícil.</p>
             <div class="bq-post__cta">
               <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con 10.000 US$ virtuales.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Actualizado el: <time datetime="2026-10-08">8 oct 2026</time></p>
+              <p>Actualizado el: <time datetime="2026-10-10">10 oct 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -247,9 +295,9 @@
         <aside class="ap__rel">
           <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en el forex</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en forex (con cálculo en pips)</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp" srcset="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp 480w, /assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Martingala en el trading: cómo funciona y por qué es tan arriesgada</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
-            <a class="bq__card" href="/es/blog/cuando-cerrar-una-operacion-senales-de-salida/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cuándo cerrar una operación: señales de salida</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/cuando-cerrar-una-operacion-senales-de-salida/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cuándo cerrar una operación: 5 señales de salida</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
           </div>
         </aside>
       </div>
@@ -332,6 +380,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100322" defer></script>
+  <script src="/assets/js/main.js?v=202610100453" defer></script>
 </body>
 </html>

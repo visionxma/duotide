@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>Guía de fundamentos de opciones: prima, ejercicio y vencimiento | Blog Duotide</title>
-  <meta name="description" content="Los conceptos esenciales para entender una opción tradicional de compra o venta, con ejemplo completo desde el inicio hasta el vencimiento.">
+  <title>Opciones para principiantes: prima, strike, ejercicio y vencimiento | Blog Duotide</title>
+  <meta name="description" content="Los fundamentos de una opción de compra o de venta, con el cálculo del valor intrínseco y el resultado al vencimiento usando precios reales del BOVA11.">
   <link rel="canonical" href="https://duotide.com.br/es/blog/guia-de-fundamentos-de-opciones-tradicionales/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/guia-de-fundamentos-de-opcoes-tradicionais/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="es_ES">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Guía de fundamentos de opciones: prima, ejercicio y vencimiento">
-  <meta property="og:description" content="Los conceptos esenciales para entender una opción tradicional de compra o venta, con ejemplo completo desde el inicio hasta el vencimiento.">
+  <meta property="og:title" content="Opciones para principiantes: prima, strike, ejercicio y vencimiento">
+  <meta property="og:description" content="Los fundamentos de una opción de compra o de venta, con el cálculo del valor intrínseco y el resultado al vencimiento usando precios reales del BOVA11.">
   <meta property="og:url" content="https://duotide.com.br/es/blog/guia-de-fundamentos-de-opciones-tradicionales/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Guía de fundamentos de opciones: prima, ejercicio y vencimiento">
-  <meta name="twitter:description" content="Los conceptos esenciales para entender una opción tradicional de compra o venta, con ejemplo completo desde el inicio hasta el vencimiento.">
+  <meta name="twitter:title" content="Opciones para principiantes: prima, strike, ejercicio y vencimiento">
+  <meta name="twitter:description" content="Los fundamentos de una opción de compra o de venta, con el cálculo del valor intrínseco y el resultado al vencimiento usando precios reales del BOVA11.">
   <meta name="twitter:label1" content="Escrito por">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tiempo de lectura">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100322">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,12 +64,12 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/es/blog/guia-de-fundamentos-de-opciones-tradicionales/#artigo",
-      "headline": "Guía de fundamentos de opciones: prima, ejercicio y vencimiento",
-      "description": "Los conceptos esenciales para entender una opción tradicional de compra o venta, con ejemplo completo desde el inicio hasta el vencimiento.",
+      "headline": "Opciones para principiantes: prima, strike, ejercicio y vencimiento",
+      "description": "Los fundamentos de una opción de compra o de venta, con el cálculo del valor intrínseco y el resultado al vencimiento usando precios reales del BOVA11.",
       "url": "https://duotide.com.br/es/blog/guia-de-fundamentos-de-opciones-tradicionales/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Opciones",
       "author": {
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Guía de fundamentos de opciones: prima, ejercicio y vencimiento",
+          "name": "Opciones para principiantes: prima, strike, ejercicio y vencimiento",
           "item": "https://duotide.com.br/es/blog/guia-de-fundamentos-de-opciones-tradicionales/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/es/">Inicio</a></li>
         <li><a href="/es/blog/">Blog</a></li>
-        <li><span aria-current="page">Guía de fundamentos de opciones: prima, ejercicio y vencimiento</span></li>
+        <li><span aria-current="page">Opciones para principiantes: prima, strike, ejercicio y vencimiento</span></li>
       </ol>
       <a class="ap__voltar" href="/es/blog/">Volver</a>
     </div>
@@ -191,9 +191,9 @@
               <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">5 min de lectura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
             </div>
-            <p class="ap__atual">Actualizado el: <time datetime="2026-10-08">8 de octubre de 2026</time></p>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-10-10">10 de octubre de 2026</time></p>
             <span class="bq__tag">Opciones</span>
-            <h1>Guía de fundamentos de opciones: prima, ejercicio y vencimiento</h1>
+            <h1>Opciones para principiantes: prima, strike, ejercicio y vencimiento</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personaje editorial · Redacción de Análisis</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,39 +203,76 @@
             <nav class="ap__indice" aria-label="Contenido">
               <p class="ap__indice-tit">Contenido</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#que-concede-realmente-una-opcion">Qué concede realmente una opción</a></li>
-                <li><a href="#la-prima-el-precio-del-propio-derecho">La prima: el precio del propio derecho</a></li>
-                <li><a href="#dentro-en-y-fuera-del-dinero">Dentro, en y fuera del dinero</a></li>
-                <li><a href="#que-ocurre-en-el-vencimiento">Qué ocurre en el vencimiento</a></li>
-                <li><a href="#el-riesgo-es-diferente-para-quien-compra-y-para-quien-vende">El riesgo es diferente para quien compra y para quien vende</a></li>
-                <li><a href="#por-que-vale-la-pena-entender-esto-antes-de-cualquier-estrat">Por qué vale la pena entender esto antes de cualquier estrategia</a></li>
-                <li><a href="#un-punto-que-suele-pasar-desapercibido">Un punto que suele pasar desapercibido</a></li>
+                <li><a href="#que-es-una-opcion">Qué es una opción</a></li>
+                <li><a href="#como-calcular-el-valor-de-una-opcion">Cómo calcular el valor de una opción</a></li>
+                <li><a href="#ejemplo-real-una-call-y-una-put-del-bova11-hasta-el-vencimie">Ejemplo real: una call y una put del BOVA11 hasta el vencimiento</a></li>
+                <li><a href="#como-usar-estos-fundamentos">Cómo usar estos fundamentos</a></li>
+                <li><a href="#errores-comunes-de-quien-empieza-con-opciones">Errores comunes de quien empieza con opciones</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Antes de aplicar cualquier estrategia con opciones, vale la pena entender bien los cuatro elementos que forman cualquier contrato de este tipo: el derecho que confiere, el precio de ejercicio, la fecha de vencimiento y la prima pagada por ese derecho. Esta guía se enfoca en estos fundamentos, dejando las combinaciones de estrategias específicas para otro momento.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/guia-de-fundamentos-de-opcoes-tradicionais.svg" alt="Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure><h2 id="que-concede-realmente-una-opcion">Qué concede realmente una opción</h2>
-<p>Una opción de compra (call) le da al comprador el derecho, pero no la obligación, de comprar el activo subyacente a un precio fijo (el strike) hasta una fecha determinada. Una opción de venta (put) concede el derecho de vender en las mismas condiciones. Quien vende la opción (el lanzador) asume la obligación del otro lado: si el comprador de la call decide ejercer el derecho, el lanzador está obligado a vender el activo al strike acordado, aunque el precio de mercado esté bastante más alto.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="la-prima-el-precio-del-propio-derecho">La prima: el precio del propio derecho</h2>
-<p>La prima es el valor pagado por el comprador al lanzador para adquirir ese derecho, y está formada por dos componentes: el valor intrínseco y el valor extrínseco (o valor de tiempo). Supongamos una acción cotizada a R$ 48,00 y una call de strike R$ 45,00 que cuesta R$ 4,50. El valor intrínseco es R$ 3,00 (48 − 45, lo que la opción ya vale si se ejerce ahora); el valor extrínseco es R$ 1,50 (4,50 − 3,00), que refleja el tiempo restante hasta el vencimiento y la expectativa de variación del precio en ese período. Cuanto más cerca del vencimiento, menor tiende a ser el valor extrínseco, en un proceso llamado decaimiento temporal (theta).</p>
-<h2 id="dentro-en-y-fuera-del-dinero">Dentro, en y fuera del dinero</h2>
-<p>Una call se considera "dentro del dinero" cuando el precio del activo está por encima del strike (como en el ejemplo anterior), "en el dinero" cuando es igual, y "fuera del dinero" cuando está por debajo — en este último caso, la opción tiene solo valor extrínseco, sin ningún valor intrínseco. Para una put, la lógica se invierte: está dentro del dinero cuando el precio del activo está por debajo del strike. Esta clasificación cambia a lo largo de la vida del contrato, conforme se mueve el precio del activo.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="que-ocurre-en-el-vencimiento">Qué ocurre en el vencimiento</h2>
-<p>Si, en la fecha de vencimiento, la call está dentro del dinero, el comprador normalmente ejerce el derecho (o la opción se liquida automáticamente por la diferencia, dependiendo del mercado), embolsándose la diferencia entre el precio de mercado y el strike. Si está fuera del dinero, la opción expira sin valor, y el comprador pierde la prima pagada por completo — ese es el riesgo máximo de quien compra una opción: nunca más que la prima, pero con una probabilidad real de perder ese valor por completo.</p>
-<h2 id="el-riesgo-es-diferente-para-quien-compra-y-para-quien-vende">El riesgo es diferente para quien compra y para quien vende</h2>
-<p>Quien compra una opción tiene el riesgo limitado a la prima pagada y un potencial de ganancia que puede ser considerable, dependiendo del movimiento del activo. Quien vende una opción al descubierto — sin poseer el activo correspondiente — recibe la prima por adelantado, pero asume un riesgo que puede ser bastante mayor que ese valor recibido, ya que está obligado a cumplir el contrato si el comprador decide ejercer. Esta asimetría es la razón por la cual vender opciones al descubierto suele considerarse más arriesgado que comprarlas, y generalmente exige más capital de garantía por parte de quien vende.</p>
-<h2 id="por-que-vale-la-pena-entender-esto-antes-de-cualquier-estrat">Por qué vale la pena entender esto antes de cualquier estrategia</h2>
-<p>Las estrategias con nombres específicos — spread alcista, mariposa, straddle — son solo combinaciones de estos elementos básicos: comprar y vender calls y puts de strikes y vencimientos diferentes al mismo tiempo. Sin entender cómo se relacionan la prima, el strike, el vencimiento y el efecto del tiempo, resulta difícil evaluar si una estrategia combinada tiene sentido para el escenario que esperas, o si simplemente estás siguiendo una receta sin entender el riesgo incorporado en cada pata del contrato.</p>
-<h2 id="un-punto-que-suele-pasar-desapercibido">Un punto que suele pasar desapercibido</h2>
-<p>El valor extrínseco de una opción no decae de forma lineal a lo largo del tiempo — se acelera cerca del vencimiento. Una opción con 60 días restantes pierde valor de tiempo más despacio que la misma opción con solo 10 días restantes, aunque el precio del activo no se mueva nada en ese intervalo. Este comportamiento afecta directamente a quien compra opciones pensando en mantenerlas por poco tiempo cerca del vencimiento, ya que el decaimiento acelerado trabaja en contra de la posición incluso sin ningún movimiento desfavorable del activo.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Respuesta rápida</p><p>Una opción le da al comprador el derecho, pero no la obligación, de comprar (call) o vender (put) un activo a un precio fijo, el <strong>strike</strong>, hasta el <strong>vencimiento</strong>. Por ese derecho paga una <strong>prima</strong> al vendedor. El comprador arriesga como máximo la prima; el vendedor recibe la prima y asume la obligación de cumplir el contrato.</p></div>
+            <p>Antes de cualquier estrategia con opciones, vale la pena dominar los cuatro elementos de todo contrato: el derecho que otorga, el precio de ejercicio (strike), la fecha de vencimiento y la prima pagada por ese derecho. Estrategias con nombres como spread alcista, mariposa o straddle son solo combinaciones de estos elementos.</p>
+<p>En esta guía usamos los precios diarios reales del BOVA11, el fondo de índice que sigue al Ibovespa, entre abril y octubre de 2026. Los precios del BOVA11 son reales; los strikes y las primas de las opciones son hipotéticos, elegidos para mostrar el cálculo.</p>
+<h2 id="que-es-una-opcion">Qué es una opción</h2>
+<p>Una <strong>opción de compra (call)</strong> le da al comprador el derecho, pero no la obligación, de comprar el activo subyacente al strike hasta o en la fecha de vencimiento. Una <strong>opción de venta (put)</strong> da el derecho de vender en las mismas condiciones. Quien vende la opción, el lanzador, recibe la prima y asume la obligación del otro lado: si el comprador de la call ejerce, el lanzador tiene que vender al strike, incluso si el mercado está bien por encima.</p>
+<h3>Dentro, en y fuera del dinero</h3>
+<ul class="check-list">
+<li><strong>Call dentro del dinero:</strong> precio del activo por encima del strike.</li>
+<li><strong>En el dinero:</strong> precio del activo igual, o muy cercano, al strike.</li>
+<li><strong>Call fuera del dinero:</strong> precio del activo por debajo del strike; la opción solo tiene valor de tiempo.</li>
+<li><strong>Put:</strong> la lógica se invierte; está dentro del dinero cuando el activo está por debajo del strike.</li>
+</ul>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-calcular-el-valor-de-una-opcion">Cómo calcular el valor de una opción</h2>
+<p>La prima tiene dos partes:</p>
+<ul class="check-list">
+<li><strong>Valor intrínseco de la call</strong> = precio del activo − strike (si es positivo; si no, cero).</li>
+<li><strong>Valor intrínseco de la put</strong> = strike − precio del activo (si es positivo; si no, cero).</li>
+<li><strong>Valor extrínseco</strong> (o de tiempo) = prima − valor intrínseco.</li>
+<li><strong>Punto de equilibrio de la call al vencimiento</strong> = strike + prima pagada.</li>
+</ul>
+<h3>Ejemplo con el precio real del BOVA11</h3>
+<p>El 21/08/2026 el BOVA11 cerró a R$ 168,33. Una call hipotética de strike R$ 160,00 que costara R$ 10,00 tendría un valor intrínseco de 168,33 − 160,00 = <strong>R$ 8,33</strong> y un valor extrínseco de 10,00 − 8,33 = <strong>R$ 1,67</strong>. Una call de strike R$ 170,00, en cambio, estaría fuera del dinero: valor intrínseco cero, y toda la prima sería valor de tiempo.</p>
+<h2 id="ejemplo-real-una-call-y-una-put-del-bova11-hasta-el-vencimie">Ejemplo real: una call y una put del BOVA11 hasta el vencimiento</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/guia-de-fundamentos-de-opcoes-tradicionais.svg" alt="Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: BOVA11.SA, diario, del 01/04/2026 al 06/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure>
+<p>El gráfico muestra las velas diarias del BOVA11 del 01/04/2026 al 06/10/2026, última sesión disponible. El fondo empezó el período a R$ 184,18, cayó hasta la mínima de R$ 162,07 el 14/08, subió hasta la máxima de R$ 207,00 el 05/10 y cerró el 06/10 a R$ 202,50.</p>
+<h3>La call de strike R$ 170,00</h3>
+<p>Supón la compra, el 21/08, de una call de strike R$ 170,00 con vencimiento el 18/09/2026, por una prima de R$ 3,00. El punto de equilibrio al vencimiento es 170,00 + 3,00 = R$ 173,00. El 18/09 el BOVA11 cerró a R$ 182,47, un alza de 8,4% desde la entrada.</p>
+<ul class="check-list">
+<li>Valor intrínseco al vencimiento: 182,47 − 170,00 = <strong>R$ 12,47</strong></li>
+<li>Resultado del comprador: 12,47 − 3,00 = <strong>R$ 9,47</strong> por cuota, o R$ 947,00 en 100 cuotas</li>
+<li>Retorno sobre la prima: 9,47 ÷ 3,00 = <strong>315,7%</strong></li>
+<li>Resultado del lanzador descubierto: <strong>−R$ 9,47</strong> por cuota, o −R$ 947,00 en 100 cuotas, después de haber recibido R$ 300,00</li>
+</ul>
+<h3>La put de strike R$ 165,00</h3>
+<p>En la misma fecha, una put de strike R$ 165,00 comprada por R$ 2,50 apostaría a una caída por debajo de R$ 162,50. Con el BOVA11 a R$ 182,47 al vencimiento, la put terminó fuera del dinero y expiró sin valor: el comprador perdería los R$ 2,50 por cuota, R$ 250,00 en 100 cuotas, y el lanzador se quedaría con la prima entera.</p>
+<p>El mismo movimiento del activo produjo ganancia para un lado y pérdida total de la prima para el otro. Los números describen lo que pasó con el precio en ese intervalo; no indican lo que va a pasar con otros vencimientos.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-usar-estos-fundamentos">Cómo usar estos fundamentos</h2>
+<h3>Entiende qué pasa al vencimiento</h3>
+<p>Si la call termina dentro del dinero, el comprador normalmente ejerce o la posición se liquida por la diferencia, según las reglas del mercado. Si termina fuera, expira sin valor y el comprador pierde toda la prima. Ese es el riesgo máximo de quien compra: nunca más que la prima, pero con una posibilidad real de perderla entera.</p>
+<h3>Compara el riesgo de quien compra y de quien vende</h3>
+<p>Quien compra tiene la pérdida limitada a la prima. Quien vende al descubierto recibe la prima antes, pero asume un riesgo que puede ser mucho mayor que ella, como mostró la call de R$ 170,00. Por eso la venta descubierta exige garantía y suele considerarse más riesgosa.</p>
+<h3>Respeta el tiempo</h3>
+<p>El valor extrínseco no cae en línea recta: se acelera cerca del vencimiento. Una opción con 60 días por delante pierde valor de tiempo más despacio que la misma opción con 10 días, incluso con el activo quieto.</p>
+<h3>Limitaciones</h3>
+<p>En la práctica, las primas cambian cada minuto y dependen de la volatilidad implícita, de las tasas y de la liquidez de cada serie. Las series poco negociadas pueden tener un spread amplio, lo que encarece entrar y salir antes del vencimiento.</p>
+<h2 id="errores-comunes-de-quien-empieza-con-opciones">Errores comunes de quien empieza con opciones</h2>
+<ul class="check-list">
+<li>Olvidar que el punto de equilibrio de la call es strike más prima, no solo el strike.</li>
+<li>Comprar opciones muy fuera del dinero porque parecen baratas.</li>
+<li>Vender opciones al descubierto sin calcular la pérdida en un movimiento fuerte.</li>
+<li>Ignorar la aceleración del decaimiento del tiempo en las últimas semanas.</li>
+<li>Operar series con poca liquidez sin mirar el spread.</li>
+</ul>
+<p>Para practicar, elige un activo en la cuenta demo, anota strike, prima y vencimiento de una call y de una put, y sigue hasta el final el valor intrínseco, el extrínseco y el resultado de quien compra y de quien vende. Registrar algunas series completas fija los fundamentos mejor que cualquier lectura.</p>
             <div class="bq-post__cta">
               <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con 10.000 US$ virtuales.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Actualizado el: <time datetime="2026-10-08">8 oct 2026</time></p>
+              <p>Actualizado el: <time datetime="2026-10-10">10 oct 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -265,7 +302,7 @@
           <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/es/blog/como-funcionan-las-opciones-binarias/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cómo funcionan las opciones binarias: payout, riesgo y ejemplo real</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
-            <a class="bq__card" href="/es/blog/opciones-binarias-paso-a-paso-y-gestion-de-riesgo/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Opciones binarias: paso a paso práctico y gestión de riesgo</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/opciones-binarias-paso-a-paso-y-gestion-de-riesgo/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Opciones binarias paso a paso: gestión de riesgo real</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/opciones-digitales-como-funcionan/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Opciones digitales: cómo funcionan y cómo calcular el riesgo</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
           </div>
         </aside>
@@ -349,6 +386,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100322" defer></script>
+  <script src="/assets/js/main.js?v=202610100453" defer></script>
 </body>
 </html>

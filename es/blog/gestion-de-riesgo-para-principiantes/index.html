@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Gestión de riesgo en el trading: guía para principiantes | Blog Duotide</title>
-  <meta name="description" content="Aprende los fundamentos de la gestión de riesgo, cómo calcular el tamaño de cada operación y por qué eso pesa más que acertar la dirección del mercado.">
+  <meta name="description" content="Riesgo por operación, tamaño de posición con el ATR real del bitcoin, efecto de las rachas de pérdidas y los errores que más quiebran cuentas.">
   <link rel="canonical" href="https://duotide.com.br/es/blog/gestion-de-riesgo-para-principiantes/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/gestao-de-risco-para-iniciantes/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Gestión de riesgo en el trading: guía para principiantes">
-  <meta property="og:description" content="Aprende los fundamentos de la gestión de riesgo, cómo calcular el tamaño de cada operación y por qué eso pesa más que acertar la dirección del mercado.">
+  <meta property="og:description" content="Riesgo por operación, tamaño de posición con el ATR real del bitcoin, efecto de las rachas de pérdidas y los errores que más quiebran cuentas.">
   <meta property="og:url" content="https://duotide.com.br/es/blog/gestion-de-riesgo-para-principiantes/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gestión de riesgo en el trading: guía para principiantes">
-  <meta name="twitter:description" content="Aprende los fundamentos de la gestión de riesgo, cómo calcular el tamaño de cada operación y por qué eso pesa más que acertar la dirección del mercado.">
+  <meta name="twitter:description" content="Riesgo por operación, tamaño de posición con el ATR real del bitcoin, efecto de las rachas de pérdidas y los errores que más quiebran cuentas.">
   <meta name="twitter:label1" content="Escrito por">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tiempo de lectura">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100322">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/es/blog/gestion-de-riesgo-para-principiantes/#artigo",
       "headline": "Gestión de riesgo en el trading: guía para principiantes",
-      "description": "Aprende los fundamentos de la gestión de riesgo, cómo calcular el tamaño de cada operación y por qué eso pesa más que acertar la dirección del mercado.",
+      "description": "Riesgo por operación, tamaño de posición con el ATR real del bitcoin, efecto de las rachas de pérdidas y los errores que más quiebran cuentas.",
       "url": "https://duotide.com.br/es/blog/gestion-de-riesgo-para-principiantes/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
       "articleSection": "Gestión de riesgo",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">5 min de lectura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
             </div>
-            <p class="ap__atual">Actualizado el: <time datetime="2026-10-08">8 de octubre de 2026</time></p>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-10-10">10 de octubre de 2026</time></p>
             <span class="bq__tag">Gestión de riesgo</span>
             <h1>Gestión de riesgo en el trading: guía para principiantes</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/camila-nascimento.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Camila Nascimento</strong><small>Personaje editorial · Redacción de Riesgo y Comportamiento</small></span></div>
@@ -203,25 +203,71 @@
             <nav class="ap__indice" aria-label="Contenido">
               <p class="ap__indice-tit">Contenido</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#por-que-el-riesgo-importa-mas-que-la-tasa-de-acierto">Por qué el riesgo importa más que la tasa de acierto</a></li>
-                <li><a href="#los-pilares-de-la-gestion-de-riesgo">Los pilares de la gestión de riesgo</a></li>
-                <li><a href="#como-calcular-el-tamano-de-una-posicion">Cómo calcular el tamaño de una posición</a></li>
-                <li><a href="#el-efecto-de-las-rachas-de-perdidas">El efecto de las rachas de pérdidas</a></li>
+                <li><a href="#que-es-la-gestion-de-riesgo-en-el-trading">Qué es la gestión de riesgo en el trading</a></li>
+                <li><a href="#como-calcular-el-tamano-de-la-posicion">Cómo calcular el tamaño de la posición</a></li>
+                <li><a href="#ejemplo-real-la-volatilidad-del-bitcoin-en-2026">Ejemplo real: la volatilidad del bitcoin en 2026</a></li>
+                <li><a href="#como-aplicar-la-gestion-de-riesgo">Cómo aplicar la gestión de riesgo</a></li>
                 <li><a href="#errores-comunes-de-gestion-de-riesgo">Errores comunes de gestión de riesgo</a></li>
-                <li><a href="#construyendo-el-habito">Construyendo el hábito</a></li>
-                <li><a href="#diversificacion-de-riesgo-entre-operaciones">Diversificación de riesgo entre operaciones</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Si existe un tema que separa a quien sobrevive en el mercado financiero a largo plazo de quien desiste después de pocos meses, ese tema es la gestión de riesgo. Es común que un principiante pase semanas estudiando indicadores y patrones gráficos y solo algunos minutos pensando en cuánto está dispuesto a perder en cada operación — una inversión de prioridades que sale cara.</p><p>Esta guía trata la gestión de riesgo como debería tratarse desde el principio: no como un detalle técnico, sino como la base que decide si un trader todavía va a tener capital disponible dentro de seis meses.</p><figure class="ap__grafico"><img src="/assets/graficos/gestao-de-risco-para-iniciantes.svg" alt="Gráfico: BTC/USDT, diario, del 01/04/2026 al 07/10/2026. Datos: Binance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: BTC/USDT, diario, del 01/04/2026 al 07/10/2026. Datos: Binance. Elaboración propia.</figcaption></figure><h2 id="por-que-el-riesgo-importa-mas-que-la-tasa-de-acierto">Por qué el riesgo importa más que la tasa de acierto</h2><p>Mucha gente cree que el secreto del trading es acertar la mayoría de las operaciones. En la práctica, es perfectamente posible ser rentable equivocándose más de la mitad de las veces, siempre que el tamaño de las ganancias supere el tamaño de las pérdidas de forma consistente. Lo opuesto también es cierto: un trader puede acertar el 70% de las operaciones y aun así perder dinero, si las pocas pérdidas son desproporcionadamente grandes en relación con las ganancias.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="los-pilares-de-la-gestion-de-riesgo">Los pilares de la gestión de riesgo</h2><ul><li><strong>Riesgo por operación:</strong> la fracción del capital total que aceptas perder en una única operación, generalmente entre 1% y 2% para la mayoría de los perfiles.</li><li><strong>Relación riesgo-retorno:</strong> la proporción entre cuánto se arriesga y cuánto se busca ganar en cada operación, idealmente favorable a la ganancia.</li><li><strong>Tamaño de posición:</strong> el valor efectivamente asignado a cada operación, calculado a partir del riesgo por operación y la distancia hasta el stop.</li><li><strong>Límite de pérdidas diario o semanal:</strong> un techo que, al alcanzarse, interrumpe las operaciones durante ese período, evitando decisiones impulsivas para intentar recuperar la pérdida.</li></ul><h2 id="como-calcular-el-tamano-de-una-posicion">Cómo calcular el tamaño de una posición</h2><p>Supongamos un capital de R$ 5.000,00 y un riesgo definido del 1% por operación, es decir, R$ 50,00. Si el análisis indica una entrada en R$ 25,00 con stop en R$ 24,00 (una distancia de R$ 1,00), el tamaño de la posición sería de 50 unidades (R$ 50,00 dividido entre R$ 1,00 de riesgo por unidad), totalizando R$ 1.250,00 asignados a la operación. Nota que el tamaño de la posición no se define por cuánto dinero sobra en la cuenta, sino por la distancia hasta el stop y por el riesgo máximo que se acepta perder — esa es la lógica central de la gestión de riesgo.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="el-efecto-de-las-rachas-de-perdidas">El efecto de las rachas de pérdidas</h2><p>Uno de los motivos por los que limitar el riesgo por operación es tan importante queda claro al observar rachas de pérdidas, que ocurren incluso con buenas estrategias. Arriesgando 1% por operación, se necesitan cerca de diez pérdidas seguidas para reducir el capital en poco más del 9%, una caída recuperable. Arriesgando 10% por operación, la misma secuencia de diez pérdidas llevaría a una caída de más del 65% del capital — una situación de la que es matemáticamente mucho más difícil recuperarse, incluso con una buena estrategia de ahí en adelante.</p><h2 id="errores-comunes-de-gestion-de-riesgo">Errores comunes de gestión de riesgo</h2><p>Aumentar el tamaño de la posición después de una pérdida, en un intento de recuperar rápido el perjuicio, es uno de los comportamientos más destructivos que existen — conocido informalmente como martingala o venganza de mercado. Otro error común es mover el stop loss más lejos en medio de la operación, con la esperanza de que el precio vuelva, transformando una pérdida planeada en una pérdida mayor y descontrolada.</p><h2 id="construyendo-el-habito">Construyendo el hábito</h2><p>La gestión de riesgo no es un cálculo hecho una vez y olvidado — es un hábito repetido antes de cada operación. Definir el riesgo máximo, calcular el tamaño de la posición, registrar el resultado y revisar periódicamente esos números es lo que permite a un trader seguir operando después de una mala racha, en vez de vaciar la cuenta y tener que empezar de cero. Ninguna técnica de gestión de riesgo garantiza ganancia — solo garantiza que una secuencia de errores no acabe con la posibilidad de seguir intentándolo.</p><h2 id="diversificacion-de-riesgo-entre-operaciones">Diversificación de riesgo entre operaciones</h2><p>Además del riesgo individual de cada operación, vale la pena observar el riesgo combinado cuando varias posiciones están abiertas al mismo tiempo. Abrir cinco operaciones diferentes, cada una arriesgando 1% del capital, puede parecer conservador de forma aislada, pero si todas están fuertemente correlacionadas — por ejemplo, cinco activos que suelen subir y bajar juntos — el riesgo real de la cartera se acerca al 5% en un único movimiento de mercado desfavorable, y no a cinco riesgos independientes del 1%.</p><p>Por eso, la gestión de riesgo no termina en el cálculo de una operación aislada. Vale la pena también considerar cuántas posiciones están abiertas al mismo tiempo, cuánto dependen del mismo tipo de movimiento de mercado, y si el riesgo total de la cartera, sumado, todavía está dentro de un límite que el trader aceptaría perder en un escenario de estrés generalizado. Herramientas simples, como una hoja de cálculo que suma el riesgo de todas las operaciones abiertas, ayudan a mantener esa visión de conjunto, que se pierde fácilmente cuando cada operación se evalúa de forma aislada.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Respuesta rápida</p><p>Gestión de riesgo es decidir cuánto puedes perder antes de abrir una operación. La regla más usada es arriesgar <strong>1% a 2% del capital por operación</strong> y calcular el tamaño de la posición dividiendo ese valor por la distancia hasta el stop. Así, una racha de pérdidas reduce la cuenta sin destruirla.</p></div>
+            <p>Si hay un tema que separa a quien continúa en el mercado de quien desiste después de pocos meses, es la gestión de riesgo. Es común que el principiante pase semanas estudiando indicadores y patrones gráficos y solo algunos minutos pensando en cuánto acepta perder en cada operación. Esa inversión de prioridades sale cara.</p>
+<p>Esta guía trata la gestión de riesgo como base, no como detalle técnico. Para el ejemplo práctico, usamos las cotizaciones diarias reales del bitcoin (BTC/USDT en Binance) y el ATR, la amplitud promedio diaria, entre abril y octubre de 2026.</p>
+<h2 id="que-es-la-gestion-de-riesgo-en-el-trading">Qué es la gestión de riesgo en el trading</h2>
+<p>Es el conjunto de reglas que define cuánto puedes perder, en cada operación y en el total, antes de cualquier análisis sobre la dirección del precio. Los pilares son cuatro:</p>
+<ul class="check-list">
+<li><strong>Riesgo por operación:</strong> la porción del capital que aceptas perder en una única operación, generalmente de 1% a 2%.</li>
+<li><strong>Relación riesgo-beneficio:</strong> cuánto buscas ganar en relación con lo que arriesgas.</li>
+<li><strong>Tamaño de posición:</strong> calculado a partir del riesgo aceptado y de la distancia hasta el stop.</li>
+<li><strong>Límite de pérdida diario o semanal:</strong> un techo que, al alcanzarse, cierra las operaciones de ese período.</li>
+</ul>
+<h3>Por qué el riesgo pesa más que la tasa de acierto</h3>
+<p>Quien acierta 40% de las operaciones, pero gana dos veces lo que arriesga, tiene un resultado promedio de 0,4 × 2 − 0,6 × 1 = <strong>+0,2</strong> vez el riesgo por operación. Quien acierta 70%, pero pierde tres veces lo que gana, se queda con 0,7 × 1 − 0,3 × 3 = <strong>−0,2</strong>. Acertar más no basta si las pérdidas son desproporcionadas.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-calcular-el-tamano-de-la-posicion">Cómo calcular el tamaño de la posición</h2>
+<p>La fórmula es: <strong>tamaño = riesgo en dinero ÷ distancia del stop</strong>. El tamaño no sale de cuánto dinero sobra en la cuenta, sino del riesgo máximo y del stop.</p>
+<h3>Ejemplo con el ATR real del bitcoin</h3>
+<p>Cuenta de US$ 5.000,00, riesgo de 1% (US$ 50,00) y stop a 2 ATR del precio de entrada. El 07/10/2026, el BTC cerró a US$ 83.321,81, con un ATR de 14 días en US$ 2.187,23.</p>
+<ul class="check-list">
+<li>Distancia del stop: 2 × 2.187,23 = <strong>US$ 4.374,46</strong></li>
+<li>Cantidad: 50,00 ÷ 4.374,46 = <strong>0,01143 BTC</strong></li>
+<li>Valor de la posición: 0,01143 × 83.321,81 = <strong>cerca de US$ 952,37</strong></li>
+</ul>
+<p>Si el stop se alcanza, la pérdida queda cerca de US$ 50,00, incluso con una posición de casi US$ 1.000,00. El mismo cálculo cambia con la volatilidad: el 16/08/2026, con el ATR en el nivel más bajo del período (US$ 1.226,13) y el BTC a US$ 62.900,00, la posición sería de 0,02039 BTC, cerca de US$ 1.282,49; el 02/04/2026, con el ATR en el nivel más alto (US$ 2.685,82) y el BTC a US$ 66.901,99, bajaría a 0,00931 BTC, cerca de US$ 622,73. El riesgo en dólares no cambió; el tamaño se ajustó.</p>
+<h2 id="ejemplo-real-la-volatilidad-del-bitcoin-en-2026">Ejemplo real: la volatilidad del bitcoin en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/gestao-de-risco-para-iniciantes.svg" alt="Gráfico: BTC/USDT, diario, del 01/04/2026 al 07/10/2026. Datos: Binance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: BTC/USDT, diario, del 01/04/2026 al 07/10/2026. Datos: Binance. Elaboración propia.</figcaption></figure>
+<p>El gráfico muestra el precio diario del BTC del 01/04/2026 al 07/10/2026 y, debajo, el ATR de 14 días. El bitcoin empezó el período a US$ 68.113,92, cayó hasta US$ 57.800,19 el 01/07, subió hasta US$ 87.395,67 el 21/09 y cerró el 07/10 a US$ 83.321,81.</p>
+<h3>2 de junio: un día de dos ATR</h3>
+<p>El BTC cerró el 01/06 a US$ 71.408,90 y el 02/06 a US$ 66.760,83, una caída de US$ 4.648,07, o 6,5%, en un solo día. El ATR de ese día estaba en US$ 2.184,39, es decir, la caída equivalió a poco más de dos ATR. Un stop a 1 ATR habría sido alcanzado; un stop a 2 ATR quedaría en el límite.</p>
+<h3>Agosto: ATR bajo antes de días de fuerte alza</h3>
+<p>El 16/08 el ATR marcó el valor más bajo del período, US$ 1.226,13. Tres días después, el 19/08, el BTC subió 7,1% y cerró a US$ 69.334,79; el 21/08 subió otro 7,3% y cerró a US$ 78.338,03. El ATR volvió a US$ 2.124,27. La volatilidad baja no dura para siempre, y el tamaño de posición calculado en un día tranquilo queda demasiado grande cuando el mercado se despierta, por eso el cálculo debe rehacerse en cada operación.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-aplicar-la-gestion-de-riesgo">Cómo aplicar la gestión de riesgo</h2>
+<h3>Entiende el efecto de las rachas de pérdidas</h3>
+<p>Las rachas de pérdidas ocurren incluso con buenos métodos. Con 1% de riesgo por operación, diez pérdidas seguidas reducen el capital en 9,6% (0,99 elevado a 10 = 0,904), y bastan 10,6% de ganancia para volver al punto de partida. Con 10% por operación, las mismas diez pérdidas llevan a una caída de 65,1% (0,9 elevado a 10 = 0,349), y haría falta ganar 186,8% para recuperarse.</p>
+<h3>Suma el riesgo de las posiciones abiertas</h3>
+<p>Cinco operaciones con 1% de riesgo cada una parecen conservadoras, pero si son activos que suelen subir y bajar juntos, como bitcoin y otras criptomonedas, el riesgo real se acerca a 5% en un único movimiento. Una planilla que suma el riesgo de todas las posiciones abiertas ayuda a mantener esa visión.</p>
+<h3>Define límites de pérdida por período</h3>
+<p>Un límite diario o semanal, por ejemplo 3% del capital, interrumpe las operaciones antes de que la frustración tome las decisiones.</p>
+<h3>Limitaciones</h3>
+<p>Ninguna regla de riesgo garantiza ganancia. El ATR describe la volatilidad pasada y no impide saltos mayores; en mercados con gap o baja liquidez, el stop puede ejecutarse más allá del precio definido. La gestión de riesgo limita el daño de una racha mala, no elimina las pérdidas.</p>
+<h2 id="errores-comunes-de-gestion-de-riesgo">Errores comunes de gestión de riesgo</h2>
+<ul class="check-list">
+<li>Aumentar la posición después de una pérdida para recuperarse rápido, la llamada martingala.</li>
+<li>Alejar el stop en medio de la operación con la esperanza de que el precio vuelva.</li>
+<li>Definir el tamaño por el saldo disponible, y no por la distancia del stop.</li>
+<li>Usar el mismo tamaño de posición en activos con volatilidades muy diferentes.</li>
+<li>Ignorar la correlación entre posiciones abiertas.</li>
+<li>Tratar los ejemplos anteriores como predicción: describen lo que pasó, no lo que va a pasar.</li>
+</ul>
+<p>Para crear el hábito, opera en la cuenta demo calculando el tamaño de cada posición con la fórmula anterior y registra el riesgo planeado, la pérdida o ganancia real y el motivo de cada salida. Después de algunas semanas, tu registro muestra si estás respetando tu propio límite.</p>
             <div class="bq-post__cta">
               <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con 10.000 US$ virtuales.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Actualizado el: <time datetime="2026-10-08">8 oct 2026</time></p>
+              <p>Actualizado el: <time datetime="2026-10-10">10 oct 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -250,9 +296,9 @@
         <aside class="ap__rel">
           <h2>Artículos relacionados</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en el forex</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/como-usar-stop-loss-y-take-profit-en-forex/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cómo usar stop loss y take profit en forex (con cálculo en pips)</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
             <a class="bq__card" href="/es/blog/estrategia-martingala-en-el-trading/"><img src="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp" srcset="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp 480w, /assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Martingala en el trading: cómo funciona y por qué es tan arriesgada</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
-            <a class="bq__card" href="/es/blog/cuando-cerrar-una-operacion-senales-de-salida/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cuándo cerrar una operación: señales de salida</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
+            <a class="bq__card" href="/es/blog/cuando-cerrar-una-operacion-senales-de-salida/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Cuándo cerrar una operación: 5 señales de salida</span><span class="bq__meta">24/09/2026 · 5 min de lectura</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +381,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100322" defer></script>
+  <script src="/assets/js/main.js?v=202610100453" defer></script>
 </body>
 </html>

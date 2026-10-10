@@ -4,6 +4,8 @@ const fs = require('fs'), path = require('path');
 const pasta = process.argv[2], lista = process.argv[3];
 const FON = path.join(__dirname, 'artigos'), DST = path.join(__dirname, 'traducoes', pasta);
 const tags = h => (h.match(/<\/?[a-z0-9]+(?:\s[^>]*)?>|<!--grafico-->/g) || []).join('');
+// palavras que só existem em português: se aparecem na tradução, um trecho ficou sem traduzir
+const PT = /(?<!\p{L})(não|você|então|operação|operações|limitações|também|isso|exemplo prático|erros comuns|ações)(?!\p{L})/iu;
 let slugs = new Map(), erros = 0, ok = 0, falta = 0, velhas = 0;
 const alvo = lista ? fs.readFileSync(lista, 'utf8').split('\n').filter(Boolean) : fs.readdirSync(FON).map(f => f.replace(/\.json$/, ''));
 for (const s of alvo) {
@@ -22,6 +24,8 @@ for (const s of alvo) {
     if (t.titulo === o.titulo) e('titulo não traduzido');
     if (o.resposta && !t.resposta) e('falta resposta');
     if (o.resposta && t.resposta === o.resposta) e('resposta não traduzida');
+    const resto = (t.titulo + ' ' + (t.resposta || '') + ' ' + t.corpo).replace(/<[^>]+>/g, ' ').match(PT);
+    if (resto) e(`trecho em português esquecido: "${resto[0]}"`);
     if (o.revisado && t.revisado !== o.revisado) { console.log(`DESATUALIZADA ${s}: a fonte foi revisada em ${o.revisado}; traduza de novo (mantenha o slug "${t.slug}")`); velhas++; }
   }
   ok++;
