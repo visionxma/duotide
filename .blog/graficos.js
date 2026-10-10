@@ -169,7 +169,9 @@ function svg(g, cor) {
   const passos = Math.max(1, Math.round(n / 6));
   for (let i = 0; i < n; i += passos) out.push(`<text x="${X(i)}" y="${H - 12}" fill="#64748b" text-anchor="${i === 0 ? 'start' : 'middle'}">${b[i].t.slice(5).split('-').reverse().join('/')}/${b[i].t.slice(2, 4)}</text>`);
   // velas (ou linha, se forem muitas)
-  if (n <= 220) for (let i = 0; i < n; i++) { const v = b[i], up = v.c >= v.o, col = up ? '#16a34a' : '#dc2626';
+  // câmbio do Yahoo traz abertura = fechamento do mesmo dia; num mercado que não fecha, a abertura real é o fechamento anterior
+  const fx = /=X$/.test(g.ativo);
+  if (n <= 220) for (let i = 0; i < n; i++) { const v0 = b[i], v = fx && i > 0 ? { ...v0, o: b[i - 1].c } : v0, up = v.c >= v.o, col = up ? '#16a34a' : '#dc2626';
     out.push(`<line x1="${X(i)}" x2="${X(i)}" y1="${Y(v.h)}" y2="${Y(v.l)}" stroke="${col}"/><rect x="${X(i) - Math.max(1, cw * 0.35)}" y="${Math.min(Y(v.o), Y(v.c))}" width="${Math.max(2, cw * 0.7)}" height="${Math.max(1, Math.abs(Y(v.o) - Y(v.c)))}" fill="${col}"/>`); }
   else out.push(`<polyline fill="none" stroke="#0f172a" stroke-width="1.4" points="${b.map((v, i) => X(i) + ',' + Y(v.c)).join(' ')}"/>`);
   for (const [k, col, w] of x.linhas) out.push(`<polyline fill="none" stroke="${col}" stroke-width="${w || 1.4}" points="${x.ser[k].map((v, i) => v == null ? null : X(i) + ',' + Y(v)).filter(Boolean).join(' ')}"/>`);

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr" data-tema="dark" data-tv="br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO principal ===== -->
+  <title>Risco de ruína no trading: a conta que mostra quando uma estratégia quebra a banca | Blog Duotide</title>
+  <meta name="description" content="O que é risco de ruína, como taxa de acerto, payoff e risco por operação se combinam, com simulações de 1.000 operações e a fórmula passo a passo.">
+  <link rel="canonical" href="https://duotide.com.br/blog/risco-de-ruina-no-trading/">
+  <!--hreflang-->
+  <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/risco-de-ruina-no-trading/">
+  <link rel="alternate" hreflang="x-default" href="https://duotide.com.br/blog/risco-de-ruina-no-trading/">
+  <!--/hreflang-->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Duotide">
+  <meta name="keywords" content="blog investimentos, guia corretora, educação financeira, trading para iniciantes">
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Risco de ruína no trading: a conta que mostra quando uma estratégia quebra a banca">
+  <meta property="og:description" content="O que é risco de ruína, como taxa de acerto, payoff e risco por operação se combinam, com simulações de 1.000 operações e a fórmula passo a passo.">
+  <meta property="og:url" content="https://duotide.com.br/blog/risco-de-ruina-no-trading/">
+  <meta property="og:site_name" content="Duotide">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:image:alt" content="Duotide — Blog Duotide">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/duotide-seguro-02.webp">
+  <meta property="og:updated_time" content="undefined">
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Risco de ruína no trading: a conta que mostra quando uma estratégia quebra a banca">
+  <meta name="twitter:description" content="O que é risco de ruína, como taxa de acerto, payoff e risco por operação se combinam, com simulações de 1.000 operações e a fórmula passo a passo.">
+  <meta name="twitter:label1" content="Escrito por">
+  <meta name="twitter:data1" content="Duotide">
+  <meta name="twitter:label2" content="Tempo de leitura">
+  <meta name="twitter:data2" content="5 minutos">
+  <!-- ===== Ícones e PWA ===== -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1f2026">
+  <!-- ===== Performance ===== -->
+  <link rel="preload" as="font" type="font/woff2"
+        href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092059">
+  <!-- ===== Dados estruturados (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://duotide.com.br/blog/risco-de-ruina-no-trading/#artigo",
+      "headline": "Risco de ruína no trading: a conta que mostra quando uma estratégia quebra a banca",
+      "description": "O que é risco de ruína, como taxa de acerto, payoff e risco por operação se combinam, com simulações de 1.000 operações e a fórmula passo a passo.",
+      "url": "https://duotide.com.br/blog/risco-de-ruina-no-trading/",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-10-09T09:00:00-03:00",
+      "dateModified": "2026-10-09T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/duotide-seguro-02.webp",
+      "articleSection": "Gestão de risco",
+      "author": {
+        "@type": "Organization",
+        "name": "Duotide — Redação de Risco e Comportamento",
+        "url": "https://duotide.com.br/blog/"
+      },
+      "publisher": {
+        "@id": "https://duotide.com.br/#organization"
+      },
+      "mainEntityOfPage": "https://duotide.com.br/blog/risco-de-ruina-no-trading/",
+      "isPartOf": {
+        "@id": "https://duotide.com.br/blog/#blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://duotide.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://duotide.com.br/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Risco de ruína no trading: a conta que mostra quando uma estratégia quebra a banca",
+          "item": "https://duotide.com.br/blog/risco-de-ruina-no-trading/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tema-claro">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <a class="site-logo" href="/" aria-label="Duotide — página inicial">
+          <span class="wordmark">
+          <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+               alt="" aria-hidden="true" width="36" height="36" decoding="async">
+          <span class="wordmark__text">Duotide <span class="wordmark__blog">Blog</span></span>
+        </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false"
+                aria-controls="menu-principal" aria-label="Abrir menu de navegação"
+                data-abrir="Abrir menu de navegação" data-fechar="Fechar menu de navegação">
+          <span></span>
+        </button>
+        <details class="idioma">
+          <summary aria-label="Escolher idioma"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="22" height="16"><span>pt</span></summary>
+          <ul class="idioma__lista">
+            <li><a href="/blog/risco-de-ruina-no-trading/" hreflang="pt-BR" lang="pt-BR" aria-current="true"><img class="bandeira" src="/assets/img/bandeiras/pt.svg" alt="" width="20" height="15" loading="lazy">Português <small>pt</small></a></li>
+            <li><a href="/en/blog/" hreflang="en" lang="en"><img class="bandeira" src="/assets/img/bandeiras/en.svg" alt="" width="20" height="15" loading="lazy">English <small>en</small></a></li>
+            <li><a href="/es/blog/" hreflang="es" lang="es"><img class="bandeira" src="/assets/img/bandeiras/es.svg" alt="" width="20" height="15" loading="lazy">Español <small>es</small></a></li>
+            <li><a href="/ar/blog/" hreflang="ar" lang="ar"><img class="bandeira" src="/assets/img/bandeiras/ar.svg" alt="" width="20" height="15" loading="lazy">العربية <small>ar</small></a></li>
+            <li><a href="/bn/blog/" hreflang="bn" lang="bn"><img class="bandeira" src="/assets/img/bandeiras/bn.svg" alt="" width="20" height="15" loading="lazy">বাংলা <small>bn</small></a></li>
+            <li><a href="/de/blog/" hreflang="de" lang="de"><img class="bandeira" src="/assets/img/bandeiras/de.svg" alt="" width="20" height="15" loading="lazy">Deutsch <small>de</small></a></li>
+            <li><a href="/fil/blog/" hreflang="fil" lang="fil"><img class="bandeira" src="/assets/img/bandeiras/fil.svg" alt="" width="20" height="15" loading="lazy">Filipino <small>fil</small></a></li>
+            <li><a href="/fr/blog/" hreflang="fr" lang="fr"><img class="bandeira" src="/assets/img/bandeiras/fr.svg" alt="" width="20" height="15" loading="lazy">Français <small>fr</small></a></li>
+            <li><a href="/hi/blog/" hreflang="hi" lang="hi"><img class="bandeira" src="/assets/img/bandeiras/hi.svg" alt="" width="20" height="15" loading="lazy">हिन्दी <small>hi</small></a></li>
+            <li><a href="/id/blog/" hreflang="id" lang="id"><img class="bandeira" src="/assets/img/bandeiras/id.svg" alt="" width="20" height="15" loading="lazy">Bahasa Indonesia <small>id</small></a></li>
+            <li><a href="/it/blog/" hreflang="it" lang="it"><img class="bandeira" src="/assets/img/bandeiras/it.svg" alt="" width="20" height="15" loading="lazy">Italiano <small>it</small></a></li>
+            <li><a href="/ru/blog/" hreflang="ru" lang="ru"><img class="bandeira" src="/assets/img/bandeiras/ru.svg" alt="" width="20" height="15" loading="lazy">Русский <small>ru</small></a></li>
+            <li><a href="/sv/blog/" hreflang="sv" lang="sv"><img class="bandeira" src="/assets/img/bandeiras/sv.svg" alt="" width="20" height="15" loading="lazy">Svenska <small>sv</small></a></li>
+            <li><a href="/th/blog/" hreflang="th" lang="th"><img class="bandeira" src="/assets/img/bandeiras/th.svg" alt="" width="20" height="15" loading="lazy">ไทย <small>th</small></a></li>
+            <li><a href="/tr/blog/" hreflang="tr" lang="tr"><img class="bandeira" src="/assets/img/bandeiras/tr.svg" alt="" width="20" height="15" loading="lazy">Türkçe <small>tr</small></a></li>
+            <li><a href="/vi/blog/" hreflang="vi" lang="vi"><img class="bandeira" src="/assets/img/bandeiras/vi.svg" alt="" width="20" height="15" loading="lazy">Tiếng Việt <small>vi</small></a></li>
+            <li><a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN"><img class="bandeira" src="/assets/img/bandeiras/zh.svg" alt="" width="20" height="15" loading="lazy">简体中文 <small>zh</small></a></li>
+          </ul>
+        </details>
+      </div>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/duotide-e-confiavel/">É confiável?</a></li>
+          <li><a href="/duotide-login/">Login</a></li>
+          <li><a href="/duotide-corretora/">A corretora</a></li>
+          <li><a href="/duotide-e-seguro/">É seguro?</a></li>
+          <li><a href="/duotide-app/">Aplicativo</a></li>
+          <li><a href="/melhores-corretoras/">Melhores corretoras</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide"
+           target="_blank" rel="noopener sponsored nofollow">Criar conta</a>
+        <a class="btn btn--outline btn--sm" href="/duotide-login/">Login</a>
+      </div>
+    </div>
+  </header>
+  <nav class="breadcrumb" aria-label="Trilha de navegação">
+    <div class="container ap__trilha">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><span aria-current="page">Risco de ruína no trading: a conta que mostra quando uma estratégia quebra a banca</span></li>
+      </ol>
+      <a class="ap__voltar" href="/blog/">Voltar</a>
+    </div>
+  </nav>
+  <main id="conteudo"><!--artigo-blog-->
+    <div class="ap__progresso" aria-hidden="true"><span></span></div>
+    <article class="ap" data-slug="risco-de-ruina-no-trading" data-api="https://duotide-visitas.visionxma.workers.dev" data-copiado="Link copiado">
+      <div class="container">
+        <header class="ap__cab" id="topo">
+          <div class="ap__info">
+            <div class="ap__linha">
+              <span><time datetime="2026-10-09">9 de out. de 2026</time><span class="ap__sep">6 min de leitura</span></span>
+              <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span>
+            </div>
+            <p class="ap__atual">Atualizado em: <time datetime="2026-10-09">9 de outubro de 2026</time></p>
+            <span class="bq__tag">Gestão de risco</span>
+            <h1>Risco de ruína no trading: a conta que mostra quando uma estratégia quebra a banca</h1>
+            <div class="ap__autor"><span class="ap__avatar" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Redação de Risco e Comportamento</strong><small>Editoria Duotide</small></span></div>
+          </div>
+          <figure class="ap__capa"><img src="/assets/img/duotide-seguro-02.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+        </header>
+        <div class="ap__grade">
+          <aside class="ap__lado">
+            <nav class="ap__indice" aria-label="Conteúdo">
+              <p class="ap__indice-tit">Conteúdo</p>
+              <div class="ap__trilho"><span class="ap__barra"></span><ol>
+                <li><a href="#o-que-e-risco-de-ruina">O que é risco de ruína</a></li>
+                <li><a href="#as-tres-variaveis-do-risco-de-ruina">As três variáveis do risco de ruína</a></li>
+                <li><a href="#como-calcular-o-risco-de-ruina">Como calcular o risco de ruína</a></li>
+                <li><a href="#exemplo-pratico-simulacoes-com-1-000-operacoes">Exemplo prático: simulações com 1.000 operações</a></li>
+                <li><a href="#como-reduzir-o-risco-de-ruina">Como reduzir o risco de ruína</a></li>
+                <li><a href="#erros-comuns-sobre-risco-de-ruina">Erros comuns sobre risco de ruína</a></li>
+              </ol></div>
+              <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Voltar ao topo</a>
+            </nav>
+          </aside>
+          <div class="ap__texto article">
+            <div class="ap__resposta"><p class="ap__resposta-tit">Resposta rápida</p><p>O <strong>risco de ruína</strong> é a probabilidade de uma sequência de perdas consumir a conta inteira, ou uma parte dela grande o bastante para impedir a recuperação. Ele depende de três números: a taxa de acerto, o payoff (ganho médio dividido pela perda média) e o percentual da conta arriscado em cada operação. Uma estratégia com vantagem real pode quebrar a banca se arriscar demais por operação, e uma sem vantagem quebra mais cedo ou mais tarde, qualquer que seja o risco.</p></div>
+            <p>Muita gente avalia uma estratégia só pela taxa de acerto ou pelo lucro de um mês bom. O que decide se a conta sobrevive, porém, é a combinação entre a vantagem estatística e o tamanho de cada aposta. Dois traders com exatamente a mesma estratégia podem ter destinos opostos: um arrisca 2% por operação e atravessa as sequências ruins; o outro arrisca 10% e quebra na primeira delas.</p>
+<p>Neste guia mostramos a conta clássica do risco de ruína e o resultado de simulações com 1.000 operações para vários cenários, todas feitas com as mesmas regras para que os números possam ser comparados.</p>
+<h2 id="o-que-e-risco-de-ruina">O que é risco de ruína</h2>
+<p>Ruína, no sentido estrito, é perder todo o capital. Na prática, muitos traders usam um limite menor, como perder metade da conta, porque a partir daí a recuperação fica difícil: depois de uma perda de 50%, é preciso ganhar 100% só para voltar ao ponto de partida.</p>
+<p>O conceito vem da teoria das probabilidades aplicada a jogos e é usado em cassinos, seguradoras e gestão de fundos. A ideia central é que, mesmo com vantagem, uma sequência de perdas acontece cedo ou tarde, e a pergunta é se a conta aguenta quando ela chegar.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="as-tres-variaveis-do-risco-de-ruina">As três variáveis do risco de ruína</h2>
+<h3>Taxa de acerto</h3>
+<p>O percentual de operações vencedoras. Sozinha, não diz nada: 70% de acerto pode ser uma estratégia perdedora se as perdas forem muito maiores que os ganhos.</p>
+<h3>Payoff</h3>
+<p>A relação entre o ganho médio e a perda média. Payoff de 2 significa que, em média, cada operação vencedora rende o dobro do que a perdedora tira.</p>
+<h3>Expectativa</h3>
+<p>Juntando as duas: <strong>expectativa = acerto × payoff − (1 − acerto)</strong>, medida em múltiplos do risco. Com 40% de acerto e payoff 2, a expectativa é 0,40 × 2 − 0,60 = <strong>+0,20</strong>: em média, cada operação ganha 20% do valor arriscado. Com 60% de acerto e payoff 0,5, a expectativa é 0,60 × 0,5 − 0,40 = <strong>−0,10</strong>, uma estratégia que perde dinheiro apesar de acertar mais do que erra.</p>
+<h3>Risco por operação</h3>
+<p>O percentual da conta perdido quando o stop é atingido. É a única das três variáveis que o trader controla totalmente, e por isso é a mais importante.</p>
+<h2 id="como-calcular-o-risco-de-ruina">Como calcular o risco de ruína</h2>
+<p>Para o caso mais simples, com payoff 1 (ganha e perde o mesmo valor), existe uma fórmula fechada:</p>
+<ul class="check-list">
+<li><strong>Vantagem (V) = acerto − erro</strong></li>
+<li><strong>Unidades (U) = capital ÷ valor arriscado por operação</strong></li>
+<li><strong>Risco de ruína = ((1 − V) ÷ (1 + V)) elevado a U</strong></li>
+</ul>
+<p>Com 55% de acerto, V = 0,55 − 0,45 = 0,10, e a base da conta é 0,90 ÷ 1,10 = 0,818. Arriscando 10% do capital inicial por operação, U = 10 e o risco de ruína é 0,818 elevado a 10, cerca de <strong>13,4%</strong>. Arriscando 5%, U = 20 e o risco cai para <strong>1,8%</strong>. Arriscando 2%, U = 50 e ele fica em torno de <strong>0,004%</strong>. A mesma estratégia, só com o tamanho da aposta diferente, vai de uma chance em sete de quebrar para algo próximo de zero.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="exemplo-pratico-simulacoes-com-1-000-operacoes">Exemplo prático: simulações com 1.000 operações</h2>
+<p>Para payoffs diferentes de 1, a forma mais prática é simular. Rodamos 40 mil sequências de 1.000 operações para cada cenário, com risco fixo calculado sobre o capital inicial. O primeiro número é a chance de zerar a conta; o segundo, a chance de perder metade dela em algum momento.</p>
+<h3>Sem vantagem: 50% de acerto, payoff 1</h3>
+<ul class="check-list">
+<li>Risco de 1%: cerca de 0,2% de chance de zerar e 11% de perder metade.</li>
+<li>Risco de 2%: 12% e 43%.</li>
+<li>Risco de 5%: 53% e 75%.</li>
+<li>Risco de 10%: 76% e 88%.</li>
+</ul>
+<p>Sem vantagem, o risco baixo só adia a ruína: com mais operações, a probabilidade continua subindo. Em 5.000 operações, o cenário de 1% já passou de 16% de chance de zerar.</p>
+<h3>Com vantagem: 40% de acerto, payoff 2</h3>
+<ul class="check-list">
+<li>Risco de 1% ou 2%: chance de zerar praticamente nula e menos de 1% de perder metade.</li>
+<li>Risco de 5%: cerca de 2% de zerar e 14% de perder metade.</li>
+<li>Risco de 10%: 14% de zerar e 38% de perder metade.</li>
+</ul>
+<p>Uma estratégia com expectativa positiva de 0,20 por operação ainda quebra a conta em uma de cada sete sequências quando o risco é de 10%.</p>
+<h3>Acerto alto, expectativa negativa: 60% de acerto, payoff 0,5</h3>
+<p>Mesmo arriscando só 1% por operação, a conta zerou em cerca de 54% das simulações de 1.000 operações e perdeu metade em 99% delas. Com 2% de risco, zerou em 99%. Taxa de acerto alta não protege uma estratégia cujas perdas são o dobro dos ganhos.</p>
+<h3>As sequências de perdas são mais longas do que parecem</h3>
+<p>Com 40% de acerto, a chance de enfrentar pelo menos 8 perdas seguidas em 200 operações ficou em cerca de 75% nas simulações; 10 perdas seguidas, em torno de 38%. Oito perdas de 2% deixam a conta com 85% do valor; oito perdas de 10% deixam 43%.</p>
+<h2 id="como-reduzir-o-risco-de-ruina">Como reduzir o risco de ruína</h2>
+<h3>Arrisque uma fração pequena por operação</h3>
+<p>Muitos gestores de risco recomendam ficar entre 0,5% e 2% da conta por operação. Os números acima mostram por quê: nessa faixa, uma estratégia com vantagem real tem chance muito baixa de quebrar.</p>
+<h3>Recalcule o tamanho conforme a conta</h3>
+<p>Arriscar um percentual do saldo atual, e não do inicial, faz a posição diminuir depois de perdas e reduz bastante a chance de zerar. Mesmo assim, o tamanho importa: na simulação com 40% de acerto e payoff 2, arriscando 10% do saldo atual, a conta perdeu metade do valor em cerca de 47% das sequências; com 2%, em 0,2%.</p>
+<h3>Conheça os seus números</h3>
+<p>A taxa de acerto e o payoff precisam vir de um histórico real, com pelo menos algumas dezenas de operações, de preferência mais de cem. Sem isso, qualquer cálculo de risco de ruína é chute.</p>
+<h3>Limitações</h3>
+<p>As contas supõem que as operações são independentes e que a taxa de acerto e o payoff ficam estáveis. No mercado, estratégias passam por fases melhores e piores, perdas podem ser maiores que o stop por causa de saltos de preço, e custos como spread e taxas reduzem a expectativa.</p>
+<h2 id="erros-comuns-sobre-risco-de-ruina">Erros comuns sobre risco de ruína</h2>
+<ul class="check-list">
+<li>Achar que taxa de acerto alta garante sobrevivência, sem olhar o payoff.</li>
+<li>Aumentar o risco por operação depois de uma sequência de perdas para "recuperar".</li>
+<li>Calcular a expectativa com poucas operações e tratar o resultado como definitivo.</li>
+<li>Ignorar custos e saltos de preço, que tornam as perdas maiores que o planejado.</li>
+<li>Esquecer que sem vantagem nenhum tamanho de posição evita a ruína no longo prazo.</li>
+</ul>
+<p>Um bom exercício é registrar as próximas 50 ou 100 operações na conta demo, com resultado em múltiplos do risco, e calcular a sua taxa de acerto, o payoff e a expectativa. Com esses números em mãos, simule numa planilha o efeito de arriscar 1%, 2% e 5% por operação antes de decidir o tamanho que vai usar com dinheiro real.</p>
+            <div class="bq-post__cta">
+              <p><strong>Pratique antes de arriscar.</strong> Crie sua conta na Duotide e teste suas ideias na conta demo com US$ 10.000 virtuais.</p>
+              <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta grátis</a>
+            </div>
+            <div class="ap__fim">
+              <p>Atualizado em: <time datetime="2026-10-09">9 de out. de 2026</time></p>
+              <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizações</span></span><button class="ap__compartilhar" type="button">Compartilhar <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
+            </div>
+            <div class="ap__autorbox">
+              <span class="ap__avatar ap__avatar--g" style="background:#ea580c" aria-hidden="true"><svg viewBox="0 0 24 24" width="48" height="48"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Redação de Risco e Comportamento</strong><p>Escreve sobre gestão de risco, tamanho de posição e a psicologia por trás das decisões de quem opera.</p></div>
+            </div>
+            <div class="ap__avaliar" data-votos="{m} de 5 · {n} avaliações" data-voto1="1 avaliação" data-obrigado="Obrigado pela sua avaliação!" data-sem="Seja o primeiro a avaliar.">
+              <p class="ap__avaliar-tit">Este artigo foi útil?</p>
+              <div class="ap__estrelas" role="radiogroup" aria-label="Este artigo foi útil?"><button type="button" role="radio" aria-checked="false" data-voto="1" aria-label="1/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="2" aria-label="2/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="3" aria-label="3/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="4" aria-label="4/5">★</button><button type="button" role="radio" aria-checked="false" data-voto="5" aria-label="5/5">★</button></div>
+              <p class="ap__avaliar-info" aria-live="polite">Seja o primeiro a avaliar.</p>
+            </div>
+            <section class="ap__coment" data-anonimo="Anônimo" data-enviado="Recebemos seu comentário. Ele aparece aqui depois de aprovado pela equipe." data-erro="Não foi possível enviar agora. Tente de novo em instantes." data-vazio="Ainda não há comentários. Seja o primeiro a comentar." data-idioma="pt-BR">
+              <h2>Comentários</h2>
+              <ol class="ap__coment-lista"><li class="ap__coment-vazio">Ainda não há comentários. Seja o primeiro a comentar.</li></ol>
+              <form class="ap__coment-form">
+                <p class="ap__coment-tit">Deixe seu comentário</p>
+                <input name="nome" type="text" maxlength="60" placeholder="Seu nome (opcional)" aria-label="Seu nome (opcional)" autocomplete="name">
+                <textarea name="texto" maxlength="2000" rows="4" required placeholder="Seu comentário" aria-label="Seu comentário"></textarea>
+                <input name="site_url" type="text" tabindex="-1" autocomplete="off" class="ap__isca" aria-hidden="true">
+                <button class="btn btn--primary" type="submit">Enviar comentário</button>
+                <p class="ap__coment-msg" aria-live="polite"></p>
+              </form>
+            </section>
+          </div>
+        </div>
+        <aside class="ap__rel">
+          <h2>Artigos relacionados</h2>
+          <div class="bq__grade bq__grade--3">
+            <a class="bq__card" href="/blog/drawdown-o-que-e-e-como-calcular/"><img src="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp" srcset="/assets/img/mini/capas/blog-gestao-de-risco-stop-e-posicao.webp 480w, /assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Drawdown: o que é, como calcular e quanto é aceitável</span><span class="bq__meta">09/10/2026 · 5 min de leitura</span></a>
+            <a class="bq__card" href="/blog/stop-loss-e-take-profit-no-forex/"><img src="/assets/img/mini/duotide-e-confiavel-02.webp" srcset="/assets/img/mini/duotide-e-confiavel-02.webp 480w, /assets/img/duotide-e-confiavel-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Como usar stop loss e take profit no forex (com cálculo em pips)</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
+            <a class="bq__card" href="/blog/estrategia-martingale-no-trading/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Estratégia martingale no trading: como funciona e por que é tão arriscada</span><span class="bq__meta">24/09/2026 · 5 min de leitura</span></a>
+          </div>
+        </aside>
+      </div>
+      <section class="ap-lp" aria-labelledby="ap-lp-tit">
+        <div class="container ap-lp__dentro">
+          <h2 id="ap-lp-tit">Pronto para colocar em prática?</h2>
+          <p class="ap-lp__sub">Abra sua conta e treine na conta demo com US$ 10.000 virtuais, sem arriscar dinheiro.</p>
+          <div class="ap-lp__botoes">
+            <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Criar conta</a>
+            <a class="btn ap-lp__demo" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Testar a demo</a>
+          </div>
+          <ul class="ap-lp__selos">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Plataforma segura</strong><span>Login protegido e verificação de identidade</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="13" width="4" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/></svg><strong>Suporte em português</strong><span>Atendimento todos os dias</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>Conta demo grátis</strong><span>US$ 10.000 virtuais para treinar</span></li>
+          </ul>
+          <p class="ap-lp__risco">Operar envolve risco de perda do capital investido.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="site-logo"><span class="wordmark">
+            <img class="wordmark__badge-img" src="/assets/img/marca-duotide.png"
+                 alt="" aria-hidden="true" width="46" height="46" decoding="async">
+            <span class="wordmark__text">Duotide</span>
+          </span></span>
+          <p class="footer__copy">Direitos autorais © 2026 Duotide.<br>
+            Todos os direitos reservados.<br>
+            Site Oficial.</p>
+        </div>
+        <div class="footer__nav footer__empresa">
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/duotide-e-confiavel/">Duotide é Confiável?</a></li>
+            <li><a href="/duotide-login/">Metódos de Login</a></li>
+            <li><a href="/duotide-corretora/">Conheça a Corretora</a></li>
+            <li><a href="/duotide-e-seguro/">Segurança da Broker</a></li>
+            <li><a href="/duotide-app/">Aplicativo</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav footer__contact">
+          <h2>Contato</h2>
+          <p><a href="mailto:contato@duotide.com.br">contato@duotide.com.br</a></p>
+          <p class="footer__suporte"><span>Gerente de contas 24h/7</span><a href="mailto:suporte@duotide.com.br">suporte@duotide.com.br</a></p>
+        </div>
+      </div>
+      <div class="footer__legal">
+         <p class="footer__links">
+          <a href="/duotide-perguntas-frequentes/">Perguntas frequentes</a>
+          <a href="/contato/">Contato</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 8l-6 6 1.4 1.4L12 10.8l4.6 4.6L18 14z"/>
+    </svg>
+  </button>
+  <template id="pp-modelo">
+    <div class="pp pp--bonus" role="dialog" aria-modal="true" aria-labelledby="ppTit">
+      <div class="pp__cx" tabindex="-1">
+        <button class="pp__x" type="button" aria-label="Fechar">&#10005;</button>
+        <div class="pp__cont">
+          <h2 id="ppTit"><span class="pp__l1">Bônus</span> <span class="pp__l2">de 100%</span></h2>
+          <p>Deposite com o cupom <strong>WELCOME100</strong> e receba 100% de bônus sobre o valor depositado.</p>
+          <div class="pp__cupom"><span class="pp__cupom-rot">Cupom</span><strong class="pp__cupom-cod">WELCOME100</strong><button class="pp__copiar" type="button" data-copiado="Copiado!">Copiar</button></div>
+          <a class="pp__btn" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide" target="_blank" rel="noopener sponsored nofollow">Resgatar agora</a>
+          <p class="pp__mini">Sujeito às condições da promoção. Operar produtos alavancados envolve risco de perda.</p>
+        </div>
+        <div class="pp__fig" aria-hidden="true">
+          <picture><source media="(max-width: 799px)" srcset="/assets/img/popup-cofre-mob.webp"><img src="/assets/img/popup-cofre.webp" alt="" width="1034" height="960" loading="lazy" decoding="async"></picture>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="/assets/js/main.js?v=202610092059" defer></script>
+</body>
+</html>

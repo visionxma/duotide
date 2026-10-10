@@ -25,3 +25,9 @@ A diferença é que o artigo não existe: você cria do zero.
 - Não mexa em nenhum outro arquivo, não rode git, não rode o montador.
 
 Termine com uma linha por artigo: slug, ok/erro, indicador e ativo do gráfico.
+
+## Câmbio do Yahoo (=X): abertura não confiável
+Nos arquivos de câmbio do Yahoo a abertura vem igual ao fechamento do mesmo dia. O gráfico já desenha a vela com a
+abertura = fechamento anterior, mas **os números que você calcula** não: para padrão de vela, corpo, pavio ou "dia de
+alta/baixa" em câmbio, use como abertura o fechamento do dia anterior — ou prefira um ativo que não seja câmbio
+(ouro, índices, ações, cripto). Fechamento, máxima e mínima de câmbio estão certos.

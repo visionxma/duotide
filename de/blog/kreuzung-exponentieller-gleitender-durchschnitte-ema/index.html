@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Kreuzung exponentieller gleitender Durchschnitte (EMA) | Blog Duotide</title>
-  <meta name="description" content="Wie man eine EMA-Kreuzungsstrategie aufbaut, mit Zahlenbeispiel, und warum diese Methode in trendlosen Märkten versagt.">
+  <meta name="description" content="Wie die EMA-Kreuzung funktioniert, die Berechnung mit Gold 2026, die echten Signale der EMAs 9 und 21 und die häufigsten Fehler.">
   <link rel="canonical" href="https://duotide.com.br/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/cruzamento-de-medias-moveis-exponenciais-ema/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="de_DE">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Kreuzung exponentieller gleitender Durchschnitte (EMA)">
-  <meta property="og:description" content="Wie man eine EMA-Kreuzungsstrategie aufbaut, mit Zahlenbeispiel, und warum diese Methode in trendlosen Märkten versagt.">
+  <meta property="og:description" content="Wie die EMA-Kreuzung funktioniert, die Berechnung mit Gold 2026, die echten Signale der EMAs 9 und 21 und die häufigsten Fehler.">
   <meta property="og:url" content="https://duotide.com.br/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kreuzung exponentieller gleitender Durchschnitte (EMA)">
-  <meta name="twitter:description" content="Wie man eine EMA-Kreuzungsstrategie aufbaut, mit Zahlenbeispiel, und warum diese Methode in trendlosen Märkten versagt.">
+  <meta name="twitter:description" content="Wie die EMA-Kreuzung funktioniert, die Berechnung mit Gold 2026, die echten Signale der EMAs 9 und 21 und die häufigsten Fehler.">
   <meta name="twitter:label1" content="Geschrieben von">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Lesezeit">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610092004">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610092059">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/#artigo",
       "headline": "Kreuzung exponentieller gleitender Durchschnitte (EMA)",
-      "description": "Wie man eine EMA-Kreuzungsstrategie aufbaut, mit Zahlenbeispiel, und warum diese Methode in trendlosen Märkten versagt.",
+      "description": "Wie die EMA-Kreuzung funktioniert, die Berechnung mit Gold 2026, die echten Signale der EMAs 9 und 21 und die häufigsten Fehler.",
       "url": "https://duotide.com.br/de/blog/kreuzung-exponentieller-gleitender-durchschnitte-ema/",
       "inLanguage": "de",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-09T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Strategien",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24. Sept. 2026</time><span class="ap__sep">5 Min. Lesezeit</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span>
             </div>
-            <p class="ap__atual">Aktualisiert am: <time datetime="2026-10-08">8. Oktober 2026</time></p>
+            <p class="ap__atual">Aktualisiert am: <time datetime="2026-10-09">9. Oktober 2026</time></p>
             <span class="bq__tag">Strategien</span>
             <h1>Kreuzung exponentieller gleitender Durchschnitte (EMA)</h1>
             <div class="ap__autor"><span class="ap__avatar" style="background:#16a34a" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 5v14M12 3v18M17 7v10" stroke="#fff" stroke-width="1.6"/><rect x="5.5" y="8" width="3" height="6" rx=".6" fill="#fff"/><rect x="10.5" y="6" width="3" height="9" rx=".6" fill="#fff"/><rect x="15.5" y="9" width="3" height="5" rx=".6" fill="#fff"/></svg></span><span><strong>Ressort Analyse</strong><small>Duotide-Ressort</small></span></div>
@@ -203,24 +203,74 @@
             <nav class="ap__indice" aria-label="Inhalt">
               <p class="ap__indice-tit">Inhalt</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#wie-die-strategie-funktioniert">Wie die Strategie funktioniert</a></li>
-                <li><a href="#ein-beispiel-mit-zahlen">Ein Beispiel mit Zahlen</a></li>
-                <li><a href="#die-verzogerung-ist-der-preis-den-man-zahlt">Die Verzögerung ist der Preis, den man zahlt</a></li>
-                <li><a href="#wo-die-methode-haufig-versagt">Wo die Methode häufig versagt</a></li>
-                <li><a href="#die-perioden-der-durchschnitte-anpassen">Die Perioden der Durchschnitte anpassen</a></li>
-                <li><a href="#die-kreuzung-mit-kriterium-nutzen">Die Kreuzung mit Kriterium nutzen</a></li>
+                <li><a href="#was-die-ema-ist">Was die EMA ist</a></li>
+                <li><a href="#wie-man-die-ema-berechnet">Wie man die EMA berechnet</a></li>
+                <li><a href="#echtes-beispiel-die-emas-von-9-und-21-bei-gold">Echtes Beispiel: die EMAs von 9 und 21 bei Gold</a></li>
+                <li><a href="#wie-man-die-ema-kreuzung-nutzt">Wie man die EMA-Kreuzung nutzt</a></li>
+                <li><a href="#haufige-fehler-bei-der-ema-kreuzung">Häufige Fehler bei der EMA-Kreuzung</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Nach oben</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Die Kreuzung exponentieller gleitender Durchschnitte ist eine der meistgelehrten Strategien für Einsteiger in die technische Analyse, aus gutem Grund: Sie ist leicht zu visualisieren, leicht zu automatisieren und hängt nicht von der subjektiven Interpretation eines Chartmusters ab. Die zentrale Idee ist, zwei EMAs unterschiedlicher Perioden zu verwenden und den Moment zu beobachten, in dem eine die andere kreuzt.</p><p>Die Wahl der EMA statt des einfachen gleitenden Durchschnitts ist kein Zufall. Da die EMA jüngeren Preisen mehr Gewicht gibt, reagiert sie schneller auf Richtungsänderungen — etwas, das bei einer Strategie besonders relevant ist, die genau vom exakten Moment der Kreuzung zwischen zwei Linien abhängt.</p><figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-medias-moveis-exponenciais-ema.svg" alt="Chart: Ouro, täglich, 01.04.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Ouro, täglich, 01.04.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung.</figcaption></figure><h2 id="wie-die-strategie-funktioniert">Wie die Strategie funktioniert</h2><p>Das gängigste Format verwendet zwei EMAs, eine kürzere und eine längere — zum Beispiel 9 und 21 Perioden:</p><ul><li><strong>Bullische Kreuzung</strong>: die kurze EMA kreuzt von unten nach oben über die lange EMA, was darauf hindeutet, dass das jüngste Momentum stärker wird als der zugrunde liegende Durchschnitt.</li><li><strong>Bärische Kreuzung</strong>: die kurze EMA kreuzt von oben nach unten unter die lange EMA, was auf eine Abschwächung des vorherigen Aufwärtsmomentums hindeutet.</li></ul><p>Die Logik dahinter ist, dass, wenn der kurzfristige Durchschnitt über den langfristigen steigt, die jüngsten Preise den Durchschnitt stärker nach oben ziehen als die weiter zurückliegende Historie — ein indirektes Signal dafür, dass der Trend möglicherweise die Richtung wechselt.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ein-beispiel-mit-zahlen">Ein Beispiel mit Zahlen</h2><p>Stellen Sie sich einen Vermögenswert vor, bei dem die 9-Perioden-EMA bei R$ 74,20 liegt und die 21-Perioden-EMA bei R$ 74,80, wobei der Preis in den letzten Kerzen steigt. Steigt die 9er-EMA zwei Kerzen später auf R$ 75,10 und die 21er liegt bei R$ 74,90, ist die bullische Kreuzung eingetreten: der kurze Durchschnitt hat den langen überholt. Das ist der Punkt, den die Strategie als Long-Einstiegssignal behandelt.</p><p>Der umgekehrte Weg — die 9er-EMA kreuzt unter die 21er-EMA — würde je nach Aufbau der Strategie das Ausstiegs- oder Verkaufssignal erzeugen.</p><h2 id="die-verzogerung-ist-der-preis-den-man-zahlt">Die Verzögerung ist der Preis, den man zahlt</h2><p>Wie jeder gleitende Durchschnitt reagiert die EMA auf das, was bereits geschehen ist, nicht auf das, was geschehen wird. Die Kreuzung bestätigt sich erst, nachdem sich der Preis genug bewegt hat, um die relative Position zwischen den beiden Linien umzukehren. Das bedeutet, dass ein Teil der Bewegung bereits vorbei ist, wenn das Signal erscheint — die Strategie tauscht Vorhersage gegen Bestätigung, und das hat direkte Kosten für die Größe des potenziellen Gewinns jedes Einstiegs.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="wo-die-methode-haufig-versagt">Wo die Methode häufig versagt</h2><p>In Märkten ohne klaren Trend, die seitwärts innerhalb einer engen Spanne schwanken, verheddern sich die beiden EMAs und kreuzen sich wiederholt in kurzen Zeitabständen. Jede Kreuzung erzeugt ein Signal, aber der Preis bewegt sich nicht genug in die angezeigte Richtung, bevor er umkehrt und die gegenteilige Kreuzung erzeugt. Das Ergebnis ist eine Serie kleiner Verluste — der Whipsaw-Effekt, der Konten aushöhlt, die jede Kreuzung ohne zusätzlichen Filter handeln.</p><p>Eine Möglichkeit, dieses Problem zu verringern, besteht darin, die Kreuzung mit einem Trendstärke-Filter wie dem ADX zu kombinieren: zu verlangen, dass der ADX über einem bestimmten Niveau liegt, bevor eine Kreuzung als gültig gilt, hilft, einen Großteil der in richtungslosen Märkten erzeugten Signale zu verwerfen.</p><h2 id="die-perioden-der-durchschnitte-anpassen">Die Perioden der Durchschnitte anpassen</h2><p>Kürzere Kombinationen wie 5 und 13 erzeugen frühere Signale, aber auch mehr Fehlsignale. Längere Kombinationen wie 21 und 55 brauchen länger zur Bestätigung, filtern aber tendenziell das kurzfristige Rauschen besser. Es gibt keine universell überlegene Kombination — das Ideal hängt davon ab, wie lange Sie die Operation halten möchten und wie viel Bestätigungsverzögerung Sie im Austausch für weniger Fehlsignale zu akzeptieren bereit sind.</p><h2 id="die-kreuzung-mit-kriterium-nutzen">Die Kreuzung mit Kriterium nutzen</h2><p>Die EMA-Kreuzung funktioniert besser als Teil eines Systems mit zusätzlichen Filtern — Trendstärke, Volumen oder Unterstützungs-/Widerstandskontext — als als isolierte, ausnahmslos angewendete Regel. Sie automatisiert einen Teil der Entscheidung, ersetzt aber nicht die Notwendigkeit von Risikomanagement: Selbst das beste Periodenset wird mit einer gewissen Häufigkeit weiterhin Fehlsignale erzeugen, besonders in Seitwärtsmärkten.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Kurze Antwort</p><p>Die EMA-Kreuzung verwendet zwei exponentielle gleitende Durchschnitte, einen kurzen und einen langen (zum Beispiel 9 und 21 Perioden): Kreuzt der kurze von unten nach oben über den langen, ist das ein Aufwärtssignal, und von oben nach unten ein Abwärtssignal. Da die EMA jüngeren Preisen mehr Gewicht gibt, dreht sie schneller als der einfache Durchschnitt, bleibt aber weiterhin hinter dem Preis zurück. In einem Trend erfasst die Methode einen guten Teil der Bewegung; in einem Seitwärtsmarkt erzeugt sie eine Reihe von Fehlsignalen.</p></div>
+            <p>Die Kreuzung exponentieller gleitender Durchschnitte ist eine der meistgelehrten Strategien für Einsteiger in die technische Analyse, und das aus gutem Grund: Sie ist leicht im Chart zu erkennen, leicht zu automatisieren und hängt nicht von der Interpretation von Mustern ab. Die Idee ist, zwei EMAs unterschiedlicher Perioden zu beobachten und zu handeln, wenn eine die andere kreuzt.</p>
+<p>In diesem Leitfaden verwenden wir die echten Tageskurse von Gold (Futures-Kontrakt an der New Yorker Börse, in US-Dollar pro Feinunze) zwischen April und Oktober 2026, mit den EMAs von 9 und 21 Handelstagen, um die Berechnung und die tatsächlich aufgetretenen Signale zu zeigen.</p>
+<h2 id="was-die-ema-ist">Was die EMA ist</h2>
+<p>Die EMA (exponentieller gleitender Durchschnitt) ist ein Durchschnitt, bei dem die jüngeren Preise stärker gewichtet werden als die älteren. Beim einfachen Durchschnitt haben der heutige Schlusskurs und der von vor 20 Tagen dasselbe Gewicht; beim exponentiellen nimmt das Gewicht alter Daten nach und nach ab. Deshalb reagiert die EMA schneller auf Richtungsänderungen, was bei einer Strategie, die vom Zeitpunkt der Kreuzung abhängt, relevant ist.</p>
+<h3>Wie die Kreuzung funktioniert</h3>
+<ul class="check-list">
+<li><strong>Aufwärtskreuzung:</strong> Die kurze EMA kreuzt von unten nach oben die lange EMA. Die jüngeren Preise ziehen den Durchschnitt stärker nach oben als die Historie.</li>
+<li><strong>Abwärtskreuzung:</strong> Die kurze EMA kreuzt von oben nach unten die lange EMA, ein Zeichen von Schwäche.</li>
+</ul>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="wie-man-die-ema-berechnet">Wie man die EMA berechnet</h2>
+<p>Die Formel verwendet einen Gewichtungsfaktor k = 2 ÷ (N + 1):</p>
+<ul class="check-list">
+<li>EMA von 9: k = 2 ÷ 10 = <strong>0,2</strong>. EMA von 21: k = 2 ÷ 22 = <strong>0,0909</strong>.</li>
+<li><strong>Heutige EMA = Schlusskurs × k + gestrige EMA × (1 − k)</strong>.</li>
+</ul>
+<h3>Beispiel mit echten Golddaten</h3>
+<p>Am 04.08.2026 lag die EMA von 9 bei 4.093,06 US$ und die von 21 bei 4.098,44 US$, die kurze noch unter der langen. Am 05.08. schloss Gold bei 4.305,20 US$:</p>
+<ul class="check-list">
+<li>EMA von 9 = 4.305,20 × 0,2 + 4.093,06 × 0,8 = 861,04 + 3.274,45 = <strong>4.135,49</strong></li>
+<li>EMA von 21 = 4.305,20 × 0,0909 + 4.098,44 × 0,9091 ≈ 391,38 + 3.725,85 = <strong>4.117,2</strong></li>
+<li>Die EMA von 9 ging von 5,38 US$ unter auf 18,26 US$ über der von 21: Aufwärtskreuzung.</li>
+</ul>
+<p>Beachten Sie, dass ein einziger starker Tag ausreichte, um die Reihenfolge der Durchschnitte umzudrehen. Genau das macht die EMA schnell, und genau das lässt sie auch auf einzelne Tage reagieren.</p>
+<h2 id="echtes-beispiel-die-emas-von-9-und-21-bei-gold">Echtes Beispiel: die EMAs von 9 und 21 bei Gold</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-medias-moveis-exponenciais-ema.svg" alt="Chart: Ouro, täglich, 01.04.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: Ouro, täglich, 01.04.2026 bis 07.10.2026. Daten: Yahoo Finance. Eigene Auswertung.</figcaption></figure>
+<p>Im Zeitraum des Charts fiel Gold von 4.813,10 US$ (01.04.) auf 4.140,70 US$ (07.10.), ein Rückgang von 13,97%, mit einem Hoch von 4.917,70 US$ am 17.04. und einem Tief von 3.955,40 US$ am 30.06. Es gab vier Kreuzungen. Stellen Sie sich jemanden vor, der bei der Aufwärtskreuzung kauft und bei der Abwärtskreuzung verkauft.</p>
+<h3>April: Aufwärtssignal nahe dem Hoch</h3>
+<p>Die Aufwärtskreuzung vom 15.04. kam mit Gold bei 4.823,60 US$. Zwei Handelstage später kam das Hoch des Zeitraums, 4.917,70 US$, und am 23.04. schickte die Abwärtskreuzung zum Ausstieg bei 4.724,00 US$: −99,60 US$ pro Feinunze, oder −2,06%. Das Signal kam, als der Anstieg schon zu Ende ging.</p>
+<h3>April bis August: der Wert, draußen zu bleiben</h3>
+<p>Zwischen dem 23.04. und dem 05.08. blieb die EMA von 9 unter der von 21. In diesem Zeitraum fiel Gold von 4.724,00 US$ bis zum Tief von 3.955,40 US$ am 30.06., ein Rückgang von 16,27%. Für jemanden, der nur long handelt, diente die Abwärtskreuzung als Filter, um während des Einbruchs nicht zu kaufen.</p>
+<h3>August bis September: die Richtung stimmte, der Gewinn wurde zurückgegeben</h3>
+<p>Beim Kauf vom 05.08. zu 4.305,20 US$ erreichte Gold am 25.08. 4.755,00 US$, 449,80 US$ über dem Einstieg. Die Abwärtskreuzung kam erst am 14.09., bei 4.351,90 US$: Gewinn von 46,70 US$ pro Feinunze, oder 1,08%, etwa ein Zehntel von dem, was die Bewegung zu bieten hatte. Nach dem Ausstieg schloss Gold am 07.10. bei 4.140,70 US$, 4,85% darunter.</p>
+<p>Zum Vergleich: Mit einfachen Durchschnitten von 9 und 21 im selben Zeitraum gab es sechs Kreuzungen, darunter eine Aufwärtskreuzung am 18.05. und eine Abwärtskreuzung am Tag danach. Die EMA erzeugt nicht immer mehr Signale; das hängt vom Preisverlauf ab. Die obigen Fälle beschreiben, was passiert ist, nicht, was passieren wird.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="wie-man-die-ema-kreuzung-nutzt">Wie man die EMA-Kreuzung nutzt</h2>
+<h3>Als Trendfilter</h3>
+<p>Die robusteste Nutzung ist, die Seite zu entscheiden: Mit der kurzen EMA oben, nur Käufe; darunter, nur Verkäufe oder nichts. Der Fall von April bis August zeigt den Wert davon.</p>
+<h3>Mit einem schnelleren Ausstieg als der Gegenkreuzung</h3>
+<p>Im August gab das Warten auf die Abwärtskreuzung fast den gesamten Gewinn zurück. Gängige Alternativen sind ein nachlaufender Stop von einigen Vielfachen des ATR oder der Ausstieg bei Schluss unter der kurzen EMA.</p>
+<h3>Mit einem Filter gegen Seitwärtsbewegung</h3>
+<p>Ein langer Durchschnitt, wie der 200er, oder der ADX über 20 bis 25 helfen, das Handeln zu vermeiden, wenn die beiden EMAs verflochten sind.</p>
+<h3>Einschränkungen</h3>
+<p>Die EMA wird mit vergangenen Preisen berechnet, sodass jede Kreuzung erst kommt, nachdem ein Teil der Bewegung schon stattgefunden hat. In einem Seitwärtsmarkt kreuzen die Durchschnitte in Folge, und jedes Signal endet in einem kleinen Verlust, der als Whipsaw bekannte Effekt. Und da ein einziger starker Tag die kurze EMA drehen kann, erzeugen isolierte Nachrichten Signale, die sich nicht halten.</p>
+<h2 id="haufige-fehler-bei-der-ema-kreuzung">Häufige Fehler bei der EMA-Kreuzung</h2>
+<ul class="check-list">
+<li>Jede Kreuzung handeln, ohne Trend- oder Seitwärtsfilter.</li>
+<li>Die Gegenkreuzung als einzigen Ausstieg verwenden und den Gewinn kurzer Trends zurückgeben.</li>
+<li>Die Perioden rückblickend wählen, bis man die Kombination findet, die den meisten Gewinn gebracht hätte.</li>
+<li>EMA mit einfachem Durchschnitt verwechseln: Die Werte und die Daten der Kreuzungen sind unterschiedlich.</li>
+<li>Ohne Stop einsteigen, in der Erwartung, dass die nächste Kreuzung den richtigen Ausstiegszeitpunkt anzeigt.</li>
+</ul>
+<p>Um zu üben, setzen Sie die EMAs von 9 und 21 in den Tageschart eines Vermögenswerts im Demokonto und protokollieren Sie jede Kreuzung, den Einstiegspreis, den besten erreichten Preis und den Preis der folgenden Kreuzung. Der Unterschied zwischen dem, was die Bewegung bot, und dem, was die Regel lieferte, zeigt, wo Ihr Ausstieg besser werden muss.</p>
             <div class="bq-post__cta">
               <p><strong>Üben, bevor Sie etwas riskieren.</strong> Eröffnen Sie Ihr Duotide-Konto und testen Sie Ihre Ideen im Demokonto mit 10.000 US-Dollar virtuellem Guthaben.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-de" target="_blank" rel="noopener sponsored nofollow">Kostenloses Konto erstellen</a>
             </div>
             <div class="ap__fim">
-              <p>Aktualisiert am: <time datetime="2026-10-08">8. Okt. 2026</time></p>
+              <p>Aktualisiert am: <time datetime="2026-10-09">9. Okt. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> Aufrufe</span></span><button class="ap__compartilhar" type="button">Teilen <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -334,6 +384,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610092004" defer></script>
+  <script src="/assets/js/main.js?v=202610092059" defer></script>
 </body>
 </html>
