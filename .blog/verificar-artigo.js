@@ -1,7 +1,7 @@
 // Confere um artigo reescrito no formato novo (resposta rápida, gráfico real, seções).
 //   node .blog/verificar-artigo.js <slug> [<slug>...]
 const fs = require('fs'), path = require('path');
-const SEM_ACENTO = /\b(nao|voce|tambem|entao|ate|grafico|analise|preco|operacao|media|indice|negociacao|sao|estrategia|tendencia|sera|ja|ha|alem|possivel|periodo|informacao|calculo)\b/i;
+const SEM_ACENTO = /(?<!\p{L})(nao|voce|tambem|entao|ate|grafico|analise|preco|operacao|media|indice|negociacao|sao|estrategia|tendencia|sera|ja|ha|alem|possivel|periodo|informacao|calculo)(?!\p{L})/iu;
 let falhas = 0;
 for (const slug of process.argv.slice(2)) {
   const f = path.join(__dirname, 'artigos', slug + '.json'); const e = [];

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>التحوط في التداول: كيفية حماية صفقة بمركز آخر | Blog Duotide</title>
-  <meta name="description" content="كيفية عمل التحوط في الصفقات قصيرة الأجل، مع مثال رقمي كامل ومعايير لمعرفة متى تكون هذه الحماية منطقية.">
+  <title>الهيدج (Hedge) في التداول: ما هو وكيف تحمي صفقة بمركز آخر | Blog Duotide</title>
+  <meta name="description" content="ما هو الهيدج (hedge)، وكيف تُبنى الحماية بمثال حقيقي للدولار مقابل الريال في أكتوبر 2026، وكم تكلفته، وأكثر الأخطاء الشائعة.">
   <link rel="canonical" href="https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-de-hedge-para-operacoes-de-opcoes/">
@@ -32,18 +32,18 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="ar_AR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="التحوط في التداول: كيفية حماية صفقة بمركز آخر">
-  <meta property="og:description" content="كيفية عمل التحوط في الصفقات قصيرة الأجل، مع مثال رقمي كامل ومعايير لمعرفة متى تكون هذه الحماية منطقية.">
+  <meta property="og:title" content="الهيدج (Hedge) في التداول: ما هو وكيف تحمي صفقة بمركز آخر">
+  <meta property="og:description" content="ما هو الهيدج (hedge)، وكيف تُبنى الحماية بمثال حقيقي للدولار مقابل الريال في أكتوبر 2026، وكم تكلفته، وأكثر الأخطاء الشائعة.">
   <meta property="og:url" content="https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/">
   <meta property="og:site_name" content="Duotide">
-  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
   <meta property="og:image:alt" content="Duotide — مدونة Duotide">
-  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
+  <meta name="twitter:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="التحوط في التداول: كيفية حماية صفقة بمركز آخر">
-  <meta name="twitter:description" content="كيفية عمل التحوط في الصفقات قصيرة الأجل، مع مثال رقمي كامل ومعايير لمعرفة متى تكون هذه الحماية منطقية.">
+  <meta name="twitter:title" content="الهيدج (Hedge) في التداول: ما هو وكيف تحمي صفقة بمركز آخر">
+  <meta name="twitter:description" content="ما هو الهيدج (hedge)، وكيف تُبنى الحماية بمثال حقيقي للدولار مقابل الريال في أكتوبر 2026، وكم تكلفته، وأكثر الأخطاء الشائعة.">
   <meta name="twitter:label1" content="بقلم">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="مدة القراءة">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100059">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100138">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,13 +64,13 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/#artigo",
-      "headline": "التحوط في التداول: كيفية حماية صفقة بمركز آخر",
-      "description": "كيفية عمل التحوط في الصفقات قصيرة الأجل، مع مثال رقمي كامل ومعايير لمعرفة متى تكون هذه الحماية منطقية.",
+      "headline": "الهيدج (Hedge) في التداول: ما هو وكيف تحمي صفقة بمركز آخر",
+      "description": "ما هو الهيدج (hedge)، وكيف تُبنى الحماية بمثال حقيقي للدولار مقابل الريال في أكتوبر 2026، وكم تكلفته، وأكثر الأخطاء الشائعة.",
       "url": "https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/",
       "inLanguage": "ar",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
-      "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
+      "dateModified": "2026-10-10T09:00:00-03:00",
+      "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "الاستراتيجيات",
       "author": {
         "@type": "Organization",
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "التحوط في التداول: كيفية حماية صفقة بمركز آخر",
+          "name": "الهيدج (Hedge) في التداول: ما هو وكيف تحمي صفقة بمركز آخر",
           "item": "https://duotide.com.br/ar/blog/hedge-strategy-for-options-trades/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/ar/">الرئيسية</a></li>
         <li><a href="/ar/blog/">المدونة</a></li>
-        <li><span aria-current="page">التحوط في التداول: كيفية حماية صفقة بمركز آخر</span></li>
+        <li><span aria-current="page">الهيدج (Hedge) في التداول: ما هو وكيف تحمي صفقة بمركز آخر</span></li>
       </ol>
       <a class="ap__voltar" href="/ar/blog/">رجوع</a>
     </div>
@@ -191,52 +191,80 @@
               <span><time datetime="2026-09-24">24 سبتمبر 2026</time><span class="ap__sep">5 دقائق قراءة</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span>
             </div>
-            <p class="ap__atual">آخر تحديث: <time datetime="2026-10-08">8 أكتوبر 2026</time></p>
+            <p class="ap__atual">آخر تحديث: <time datetime="2026-10-10">10 أكتوبر 2026</time></p>
             <span class="bq__tag">الاستراتيجيات</span>
-            <h1>التحوط في التداول: كيفية حماية صفقة بمركز آخر</h1>
+            <h1>الهيدج (Hedge) في التداول: ما هو وكيف تحمي صفقة بمركز آخر</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>شخصية تحريرية · قسم التحليل</small></span></div>
           </div>
-          <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
+          <figure class="ap__capa"><img src="/assets/img/capas/blog-day-trade-ou-swing-trade.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
         </header>
         <div class="ap__grade">
           <aside class="ap__lado">
             <nav class="ap__indice" aria-label="المحتويات">
               <p class="ap__indice-tit">المحتويات</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#المبدا-وراء-التحوط">المبدأ وراء التحوط</a></li>
-                <li><a href="#مثال-با-رقام-مستديرة">مثال بأرقام مستديرة</a></li>
-                <li><a href="#متى-يكون-من-المنطقي-استخدام-التحوط">متى يكون من المنطقي استخدام التحوط</a></li>
-                <li><a href="#متى-يعيق-التحوط-ا-كثر-مما-يساعد">متى يعيق التحوط أكثر مما يساعد</a></li>
-                <li><a href="#كيفية-الاختبار-قبل-التطبيق-اليومي">كيفية الاختبار قبل التطبيق اليومي</a></li>
+                <li><a href="#ما-هو-الهيدج">ما هو الهيدج</a></li>
+                <li><a href="#كيف-ت-حسب-نتيجة-الهيدج">كيف تُحسب نتيجة الهيدج</a></li>
+                <li><a href="#مثال-حقيقي-الدولار-مقابل-الريال-في-ا-كتوبر-2026">مثال حقيقي: الدولار مقابل الريال في أكتوبر 2026</a></li>
+                <li><a href="#كيف-ت-ستخدم-الحماية-الهيدج">كيف تُستخدم الحماية (الهيدج)</a></li>
+                <li><a href="#ا-خطاء-شاي-عة-عند-استخدام-الهيدج">أخطاء شائعة عند استخدام الهيدج</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>العودة إلى الأعلى</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>التحوط (Hedge) كلمة تظهر باستمرار في التمويل وعادة ما تُعامل كشيء معقد، مخصص للصناديق الكبيرة. عمليًا، المنطق بسيط: بدلاً من المراهنة بكل شيء على اتجاه واحد، تفتح مركزًا ثانيًا يحمي جزءًا من النتيجة إذا تحرك السوق ضد المركز الأول. الهدف ليس تحقيق ربح مرتين — بل تقليل حجم الضرر عندما تكون قراءة السوق خاطئة.</p>
-<p>تنطبق هذه الفكرة على الأسهم والعملات والسلع الأساسية وأيضًا على الصفقات القصيرة جدًا الأجل. النقطة المشتركة دائمًا هي نفسها: شراء نوع من التأمين، حتى لو كلف ذلك جزءًا من الربح المحتمل للصفقة الأصلية.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="الرسم البياني: USD/BRL، يومي، من 01‏/05‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص." width="960" height="540" loading="lazy" decoding="async"><figcaption>الرسم البياني: USD/BRL، يومي، من 01‏/05‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص.</figcaption></figure><h2 id="المبدا-وراء-التحوط">المبدأ وراء التحوط</h2>
-<p>يجمع التحوط الكلاسيكي بين مركزين بنتائج متعاكسة على الأصل نفسه، أو على أصول تتحرك بشكل متشابه. إذا راهن المركز الأول على ارتفاع عملة ما وراهن الثاني على انخفاض العملة نفسها، تعتمد النتيجة النهائية على مقدار تحرك السعر وحجم كل مركز نسبيًا — لا فقط على من ربح ومن خسر.</p>
-<p>توجد طريقتان شائعتان لبناء هذه الحماية. الأولى هي التحوط المتزامن: فتح الطرفين في الوقت نفسه تقريبًا، عادة لأن قراءة السوق منقسمة بين سيناريوهين محتملين. الثانية هي تحوط التعديل: فتح المركز الثاني بعد أن يكون المركز الأول في خسارة بالفعل، لتثبيت خسارة قصوى وعدم السماح للنتيجة بالتفاقم إذا استمر السعر في الاتجاه المعاكس.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="مثال-با-رقام-مستديرة">مثال بأرقام مستديرة</h2>
-<p>لنفترض صفقة بقيمة R$ 200.00 تراهن على ارتفاع الدولار مقابل الريال، بعائد 85% في حال النجاح وانتهاء بعد 30 دقيقة. وقبل 10 دقائق من الانتهاء، يغير خبر اقتصادي المشهد ويبدأ السعر بالتحرك ضد المركز. بدلاً من مجرد انتظار النتيجة، تفتح صفقة ثانية بقيمة R$ 100.00 تراهن على انخفاض الدولار، بنفس عائد 85%.</p>
-<p>هناك نتيجتان محتملتان. إذا أغلق الدولار مرتفعًا، تدفع الصفقة الأولى ربحًا قدره R$ 170.00 (85% من R$ 200.00) وتخسر الثانية الـR$ 100.00 المستثمرة — نتيجة صافية بربح R$ 70.00. وإذا أغلق الدولار منخفضًا، تخسر الصفقة الأولى الـR$ 200.00 وتدفع الثانية ربحًا قدره R$ 85.00 (85% من R$ 100.00) — نتيجة صافية بخسارة R$ 115.00. وبالمقارنة مع عدم فعل شيء — خسارة الـR$ 200.00 كاملة لو انخفض الدولار — قلل التحوط الخسارة بمقدار R$ 85.00 في السيناريو السيئ، على حساب تقليل الربح في السيناريو الجيد.</p>
-<h2 id="متى-يكون-من-المنطقي-استخدام-التحوط">متى يكون من المنطقي استخدام التحوط</h2>
-<ul>
-<li>عندما يظهر خبر مهم في منتصف صفقة مفتوحة بالفعل ولا يسمح الوقت المتبقي بإغلاق المركز بأمان.</li>
-<li>عندما تنقسم القراءة الفنية بين سيناريوهين ويكون تقليل التعرض الإجمالي أهم من محاولة إصابة الاتجاه الدقيق.</li>
-<li>عندما يكون الهدف حماية سلسلة أرباح اليوم، بقبول نتيجة أصغر بدلاً من المخاطرة بخسارة كل شيء في صفقة واحدة.</li>
+            <div class="ap__resposta"><p class="ap__resposta-tit">إجابة سريعة</p><p>الهيدج هو فتح مركز ثانٍ يربح عندما يخسر المركز الأساسي، للحد من الخسارة إذا سار السوق عكس توقعك. يعمل كبوليصة تأمين: يُقلّل الخسارة في السيناريو السيئ، لكنه يُقلّل أيضًا الربح في السيناريو الجيد، بالنسبة نفسها. يكون منطقيًا عندما تُحدَّد معايير استخدامه قبل الصفقة، لا كرد فعل على خسارة.</p></div>
+            <p>الهيدج (hedge) كلمة تظهر باستمرار في عالم المال، وتُعامل غالبًا كأمر خاص بالصناديق الكبيرة. لكن المنطق وراءها بسيط: بدلًا من ترك النتيجة كلها معلقة باتجاه واحد، تفتح مركزًا ثانيًا يربح عندما يخسر المركز الأول. الهدف ليس الربح مرتين، بل الحد من الضرر عندما تكون قراءة السوق خاطئة.</p>
+<p>في هذا الدليل نستخدم الأسعار اليومية الحقيقية للدولار مقابل الريال البرازيلي (USD/BRL) بين مايو وأكتوبر 2026، بما في ذلك انخفاض الدولار بنسبة 4.3% في 6 أكتوبر، لإظهار مقدار الحماية التي يوفرها الهيدج ومقدار تكلفته.</p>
+<h2 id="ما-هو-الهيدج">ما هو الهيدج</h2>
+<p>الهيدج هو مركز للحماية: صفقة ثانية، في نفس الأصل أو في أصل يتحرك بطريقة مشابهة، تُبنى لتعويض جزء من خسارة الصفقة الأساسية. يعمل كبوليصة تأمين. أنت تدفع ثمنه، سواء في ربح تتنازل عنه أو في تكاليف تنفيذ، وفي المقابل تُقلّل أسوأ نتيجة ممكنة.</p>
+<p>هناك طريقتان شائعتان لبناء هذه الحماية:</p>
+<ul class="check-list">
+<li><strong>الهيدج المتزامن:</strong> يُفتح الطرفان معًا، عادة لأن هناك حدثًا قادمًا (قرار فائدة، بيانات تضخم) وتريد تقليل التعرض دون إغلاق المركز بالكامل.</li>
+<li><strong>الهيدج التعديلي:</strong> يُفتح المركز الثاني بعد أن يكون المركز الأول قد بدأ يسير بعكس المتوقع، لتجميد الحد الأقصى للخسارة في حال استمر السعر في نفس الاتجاه.</li>
 </ul>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="متى-يعيق-التحوط-ا-كثر-مما-يساعد">متى يعيق التحوط أكثر مما يساعد</h2>
-<p>للتحوط تكلفة — يقلل عادة من الربح الممكن، لأن المركزين لا يتشاركان عمومًا نفس النسبة المئوية للعائد في كل سيناريو. استخدام التحوط في كل مرة تبدأ فيها صفقة بالسير بشكل سيئ، كردة فعل، يختلف عن استخدامه كجزء من خطة محددة قبل الدخول إلى السوق. في الحالة الأولى، يتحول التحوط إلى وسيلة لإنكار الخسارة؛ وفي الثانية، هو أداة لإدارة المخاطر. الفرق يكمن في تحديد معايير الاستخدام قبل التداول، لا في حرارة اللحظة.</p>
-<h2 id="كيفية-الاختبار-قبل-التطبيق-اليومي">كيفية الاختبار قبل التطبيق اليومي</h2>
-<p>قبل استخدام التحوط بمال حقيقي، يجدر محاكاة السيناريوهات الأربعة المحتملة للصفقة — ارتفاع صغير، ارتفاع كبير، انخفاض صغير، انخفاض كبير — وحساب النتيجة الصافية لكل منها، مع المركز الثاني وبدونه. أدوات مثل Duotide تعرض عائد كل أصل قبل فتح الصفقة، ما يسهل إجراء هذا الحساب مسبقًا، بدلاً من القرار في منتصف الصفقة تحت الضغط. التحوط لا يلغي المخاطرة: بل يعيد توزيعها بين السيناريوهات، ويعود لمن يتداول تقرير ما إذا كانت هذه المقايضة منطقية بالنسبة لرأس ماله وخطته.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="كيف-ت-حسب-نتيجة-الهيدج">كيف تُحسب نتيجة الهيدج</h2>
+<p>الحساب هو نفسه دائمًا: نتيجة المركز الأساسي زائد نتيجة مركز الحماية، في كل سيناريو. النسبة المحمية (حجم الهيدج مقسومًا على حجم المركز الأساسي) هي ما يحدد مقدار الخسارة والربح اللذين يتم اقتطاعهما.</p>
+<h2 id="مثال-حقيقي-الدولار-مقابل-الريال-في-ا-كتوبر-2026">مثال حقيقي: الدولار مقابل الريال في أكتوبر 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="الرسم البياني: USD/BRL، يومي، من 01‏/05‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص." width="960" height="540" loading="lazy" decoding="async"><figcaption>الرسم البياني: USD/BRL، يومي، من 01‏/05‏/2026 إلى 07‏/10‏/2026. البيانات: Yahoo Finance. تحليل خاص.</figcaption></figure>
+<p>يُظهر الرسم البياني زوج USD/BRL من 1 مايو 2026 (R$ 4.97) إلى 7 أكتوبر 2026 (R$ 4.98). في معظم الفترة تذبذب الدولار بين R$ 4.88 (أدنى قيمة في 12 مايو) و R$ 5.25 (أعلى قيمة في 1 يوليو). توضح حالتان حقيقيتان الجانبين الاثنين للهيدج.</p>
+<h3>انخفاض 6 أكتوبر: الهيدج يحمي</h3>
+<p>لنفترض مركز شراء بقيمة 10,000 دولار افتُتح عند إغلاق 2 أكتوبر، عند R$ 5.2226. في 6 أكتوبر أغلق الدولار عند R$ 4.9967، أي انخفاض بقدر R$ 0.2259 لكل دولار.</p>
+<ul class="check-list">
+<li>بدون هيدج: 10,000 × −0.2259 = <strong>−R$ 2,259.00</strong></li>
+<li>مع هيدج بنسبة 50% (بيع بقيمة 5,000 دولار افتُتح بالسعر نفسه): الشراء يخسر R$ 2,259.00 والبيع يربح 5,000 × 0.2259 = R$ 1,129.50</li>
+<li>النتيجة مع الهيدج: <strong>−R$ 1,129.50</strong>، نصف الخسارة</li>
+</ul>
+<h3>صعود نهاية سبتمبر: الهيدج يتقاضى ثمنه</h3>
+<p>الآن السيناريو المعكوس. من 23 سبتمبر (R$ 5.0999) إلى 29 سبتمبر (R$ 5.2229) ارتفع الدولار R$ 0.1230. نفس مركز الشراء بقيمة 10,000 دولار كان سيحقق ربحًا بقيمة R$ 1,230.00. مع بيع 5,000 دولار كحماية، كان البيع سيخسر R$ 615.00 وتنخفض النتيجة إلى <strong>R$ 615.00</strong>. هذه تكلفة التأمين: الهيدج يقتطع من الخسارة ومن الربح بالنسبة نفسها.</p>
+<p>لاحظ تفصيلًا مهمًا: مع الطرفين في نفس الأصل وبنفس السعر، يعطي الهيدج بنسبة 50% النتيجة نفسها تمامًا كالتداول بـ5,000 دولار فقط منذ البداية، لكن مع دفع تكاليف دخول وخروج في الطرفين. لهذا يفضّل كثير من المحترفين ببساطة تقليل حجم المركز عندما تكون الحماية في نفس الأصل.</p>
+<h3>الصفقات ذات العائد الثابت</h3>
+<p>في الصفقات قصيرة المدى ذات العائد الثابت، يتغير الحساب لأن الخسارة هي القيمة كاملة والربح نسبة مئوية. مع R$ 200 على صعود الدولار وعائد 85%، وهيدج بقيمة R$ 100 على الانخفاض بالعائد نفسه: إذا صعد الدولار، تدفع الصفقة الأولى R$ 170 وتخسر الثانية R$ 100، فتكون النتيجة +R$ 70؛ وإذا انخفض الدولار، تخسر الأولى R$ 200 وتدفع الثانية R$ 85، فتكون النتيجة −R$ 115. مقارنة بخسارة R$ 200 كاملة، قلّل الهيدج الخسارة بمقدار R$ 85 واقتطع من الربح من R$ 170 إلى R$ 70. وبما أن العائد أقل من 100%، فإن الطرفين معًا يكلفان دائمًا أكثر مما يحققان إذا كانا بالحجم نفسه.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="كيف-ت-ستخدم-الحماية-الهيدج">كيف تُستخدم الحماية (الهيدج)</h2>
+<h3>قبل حدث معروف</h3>
+<p>عندما يكون هناك إعلان مهم قادم ولا تريد إغلاق المركز بالكامل، تُقلّل الحماية الجزئية من حجم المفاجأة. حدّد النسبة قبل الحدث، لا خلاله.</p>
+<h3>لتجميد حد أقصى للخسارة</h3>
+<p>في الهيدج التعديلي، يُجمّد المركز الثاني الخسارة عند تلك النقطة. السؤال الصادق الذي يجب طرحه هو إن لم يكن من الأفضل ببساطة إغلاق الصفقة، فهذا أقل تكلفة.</p>
+<h3>باستخدام أصول مترابطة</h3>
+<p>من الممكن أيضًا حماية مركز بأصل آخر يتحرك معه عادة، مثل مؤشر لحماية محفظة أسهم. تبقى الحماية غير كاملة، لأن الارتباط يتغير مع الوقت، وقد يفشل الهيدج تحديدًا في اليوم الذي تكون الحاجة إليه فيه أكبر.</p>
+<h3>القيود</h3>
+<p>الهيدج لا يُلغي المخاطرة: إنه يُعيد توزيع النتيجة بين السيناريوهات. كل طرف له تكلفة سبريد، وفي بعض الأسواق، تكلفة الاحتفاظ بالمركز. والهيدج الذي يُبنى كرد فعل، في كل مرة تبدأ فيها الصفقة بالسير بشكل سيئ، غالبًا ما يكون مجرد طريقة لتأخير قرار تقبّل الخسارة.</p>
+<h2 id="ا-خطاء-شاي-عة-عند-استخدام-الهيدج">أخطاء شائعة عند استخدام الهيدج</h2>
+<ul class="check-list">
+<li>فتح الحماية في حرارة اللحظة، دون معيار محدد قبل الدخول.</li>
+<li>نسيان أن الهيدج يقتطع من الربح بالنسبة نفسها التي يقتطع بها من الخسارة.</li>
+<li>بناء هيدج في نفس الأصل ودفع تكاليف مضاعفة لنتيجة تساوي نتيجة مركز أصغر.</li>
+<li>في الصفقات ذات العائد الثابت، فتح طرفين متعارضين بنفس الحجم، وهو ما يضمن خسارة صافية.</li>
+<li>الاعتماد على ارتباط بين أصلين دون التحقق من استمراره في الأشهر الأخيرة.</li>
+<li>التعامل مع الأمثلة أعلاه كتوقعات: إنها تصف ما حدث للدولار في تلك التواريخ.</li>
+</ul>
+<p>للتدرب دون المخاطرة بالمال، افتح في الحساب التجريبي مركزًا مع حماية ومركزًا بدونها، ودوّن، لكل سيناريو (صعود صغير، صعود كبير، انخفاض صغير، انخفاض كبير)، النتيجة الصافية لكل نسخة. تسجيل هذه الأرقام لعدة أسابيع يُظهر إن كان التأمين الذي تدفعه منطقيًا لخطتك.</p>
             <div class="bq-post__cta">
               <p><strong>تدرّب قبل أن تخاطر.</strong> أنشئ حسابك في Duotide واختبر أفكارك في الحساب التجريبي برصيد افتراضي قدره 10,000 دولار أمريكي.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-ar" target="_blank" rel="noopener sponsored nofollow">أنشئ حسابًا مجانًا</a>
             </div>
             <div class="ap__fim">
-              <p>آخر تحديث: <time datetime="2026-10-08">8 أكتوبر 2026</time></p>
+              <p>آخر تحديث: <time datetime="2026-10-10">10 أكتوبر 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> مشاهدة</span></span><button class="ap__compartilhar" type="button">مشاركة <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -265,9 +293,9 @@
         <aside class="ap__rel">
           <h2>مقالات ذات صلة</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/ar/blog/ema-crossover-in-trading/"><img src="/assets/img/mini/duotide-app-01.webp" srcset="/assets/img/mini/duotide-app-01.webp 480w, /assets/img/duotide-app-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">تقاطع المتوسطات المتحركة الأسية (EMA) في التداول</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">كيفية اختيار مدة (انتهاء) الصفقة</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
-            <a class="bq__card" href="/ar/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">أفضل المؤشرات لمن يمارس التداول اليومي</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/ema-crossover-in-trading/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">تقاطع المتوسطات المتحركة الأسية (EMA) في التداول</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/how-to-choose-a-trade-expiration/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">كيفية اختيار مدة (انتهاء) الصفقة</span><span class="bq__meta">24‏/09‏/2026 · 5 دقائق قراءة</span></a>
+            <a class="bq__card" href="/ar/blog/best-indicators-for-day-trading/"><img src="/assets/img/mini/duotide-corretora-01.webp" srcset="/assets/img/mini/duotide-corretora-01.webp 480w, /assets/img/duotide-corretora-01.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">أفضل المؤشرات لمن يمارس التداول اليومي</span><span class="bq__meta">24‏/09‏/2026 · 6 دقائق قراءة</span></a>
           </div>
         </aside>
       </div>
@@ -350,6 +378,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100059" defer></script>
+  <script src="/assets/js/main.js?v=202610100138" defer></script>
 </body>
 </html>
