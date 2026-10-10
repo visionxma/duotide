@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Cruce de dos medias móviles: cómo combinarlas | Blog Duotide</title>
-  <meta name="description" content="Cómo usar una media rápida y una lenta juntas para filtrar tendencia y generar señales de entrada más confiables, con ejemplo numérico y reglas de riesgo.">
+  <meta name="description" content="Cómo usar una media rápida y una lenta juntas, con el cálculo y los cruces reales de las medias de 20 y 50 de Nvidia en 2026.">
   <link rel="canonical" href="https://duotide.com.br/es/blog/cruce-de-dos-medias-moviles-como-combinar/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/cruzamento-de-duas-medias-moveis-como-combinar/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Cruce de dos medias móviles: cómo combinarlas">
-  <meta property="og:description" content="Cómo usar una media rápida y una lenta juntas para filtrar tendencia y generar señales de entrada más confiables, con ejemplo numérico y reglas de riesgo.">
+  <meta property="og:description" content="Cómo usar una media rápida y una lenta juntas, con el cálculo y los cruces reales de las medias de 20 y 50 de Nvidia en 2026.">
   <meta property="og:url" content="https://duotide.com.br/es/blog/cruce-de-dos-medias-moviles-como-combinar/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cruce de dos medias móviles: cómo combinarlas">
-  <meta name="twitter:description" content="Cómo usar una media rápida y una lenta juntas para filtrar tendencia y generar señales de entrada más confiables, con ejemplo numérico y reglas de riesgo.">
+  <meta name="twitter:description" content="Cómo usar una media rápida y una lenta juntas, con el cálculo y los cruces reales de las medias de 20 y 50 de Nvidia en 2026.">
   <meta name="twitter:label1" content="Escrito por">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tiempo de lectura">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100242">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100322">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/es/blog/cruce-de-dos-medias-moviles-como-combinar/#artigo",
       "headline": "Cruce de dos medias móviles: cómo combinarlas",
-      "description": "Cómo usar una media rápida y una lenta juntas para filtrar tendencia y generar señales de entrada más confiables, con ejemplo numérico y reglas de riesgo.",
+      "description": "Cómo usar una media rápida y una lenta juntas, con el cálculo y los cruces reales de las medias de 20 y 50 de Nvidia en 2026.",
       "url": "https://duotide.com.br/es/blog/cruce-de-dos-medias-moviles-como-combinar/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Estrategias",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">5 min de lectura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
             </div>
-            <p class="ap__atual">Actualizado el: <time datetime="2026-10-08">8 de octubre de 2026</time></p>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-10-10">10 de octubre de 2026</time></p>
             <span class="bq__tag">Estrategias</span>
             <h1>Cruce de dos medias móviles: cómo combinarlas</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personaje editorial · Redacción de Análisis</small></span></div>
@@ -203,24 +203,71 @@
             <nav class="ap__indice" aria-label="Contenido">
               <p class="ap__indice-tit">Contenido</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#como-funciona-el-cruce-de-dos-medias">Cómo funciona el cruce de dos medias</a></li>
-                <li><a href="#eligiendo-los-periodos-de-las-dos-medias">Eligiendo los períodos de las dos medias</a></li>
-                <li><a href="#ejemplo-practico-con-numeros">Ejemplo práctico con números</a></li>
-                <li><a href="#el-problema-de-los-mercados-sin-tendencia">El problema de los mercados sin tendencia</a></li>
-                <li><a href="#como-filtrar-senales-falsas">Cómo filtrar señales falsas</a></li>
-                <li><a href="#uniendo-todo-en-una-rutina-simple">Uniendo todo en una rutina simple</a></li>
+                <li><a href="#que-es-el-cruce-de-dos-medias-moviles">Qué es el cruce de dos medias móviles</a></li>
+                <li><a href="#como-calcular-las-medias">Cómo calcular las medias</a></li>
+                <li><a href="#ejemplo-real-las-medias-de-20-y-50-de-nvidia">Ejemplo real: las medias de 20 y 50 de Nvidia</a></li>
+                <li><a href="#como-usar-el-cruce-de-dos-medias">Cómo usar el cruce de dos medias</a></li>
+                <li><a href="#errores-comunes-al-combinar-dos-medias-moviles">Errores comunes al combinar dos medias móviles</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Usar una única media móvil en el gráfico ya ayuda a ver la dirección del precio, pero deja una pregunta sin responder: ¿en qué momento exacto entrar? Esperar a que el precio cruce la media sola suele generar señales tardías o, peor, señales falsas cada vez que el precio oscila cerca de ella sin definir tendencia.</p><p>La solución más usada por los traders de tendencia es colocar dos medias móviles en el mismo gráfico, una rápida y una lenta, y operar el cruce entre ellas en vez del cruce entre precio y media. Este ajuste simple reduce bastante el número de señales falsas y además da una idea visual inmediata de la fuerza de la tendencia.</p><figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-duas-medias-moveis-como-combinar.svg" alt="Gráfico: Nvidia, diario, del 02/02/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: Nvidia, diario, del 02/02/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure><h2 id="como-funciona-el-cruce-de-dos-medias">Cómo funciona el cruce de dos medias</h2><p>La lógica usa dos medias de períodos diferentes, por ejemplo una de 9 períodos (rápida) y una de 21 períodos (lenta). Cuando la media rápida cruza por encima de la lenta, llamado cruce dorado o golden cross, es una señal de posible inicio de alza. Cuando la rápida cruza por debajo de la lenta, el llamado death cross, es una señal de posible inicio de baja. La distancia entre las dos medias también importa: cuando se abren bastante, la tendencia está fuerte; cuando andan pegadas, el mercado está indeciso.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="eligiendo-los-periodos-de-las-dos-medias">Eligiendo los períodos de las dos medias</h2><p>No existe una combinación universalmente correcta — la elección depende del marco temporal y del estilo de operación. Combinaciones comunes incluyen 9 y 21 períodos para operaciones de plazo más corto, 20 y 50 para posiciones de mediano plazo, y 50 y 200 para análisis de tendencia de largo plazo, esta última bastante usada por inversores para identificar el escenario general de un activo. Las medias más cortas reaccionan más rápido, pero generan más señales falsas; las medias más largas tardan más en confirmar, pero filtran mejor el ruido.</p><h2 id="ejemplo-practico-con-numeros">Ejemplo práctico con números</h2><p>Supongamos una acción negociada alrededor de R$ 15,00, con la media de 20 períodos en R$ 14,60 y la de 50 períodos en R$ 14,80 — ambas cercanas, indicando indecisión. A lo largo de dos semanas, el precio sube y la media de 20 cruza por encima de la de 50, con el precio en R$ 15,40. Esa es la señal de entrada.</p><p>El trader compra a R$ 15,40, define el stop loss en R$ 14,70 (un poco por debajo de la media de 50, que pasa a funcionar como soporte) y proyecta un objetivo en R$ 17,00, basado en una resistencia anterior. El riesgo es de R$ 0,70 por acción y el potencial de ganancia es de R$ 1,60, una relación de aproximadamente 2,3 a 1 — es decir, el objetivo es más de dos veces el tamaño del riesgo asumido.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="el-problema-de-los-mercados-sin-tendencia">El problema de los mercados sin tendencia</h2><p>El mayor riesgo de cualquier estrategia de cruce de medias es operar en un mercado lateral, sin tendencia definida. En esas condiciones, las dos medias se cruzan repetidamente en cortos espacios de tiempo, generando una secuencia de señales falsas conocida como whipsaw — cada entrada es seguida rápidamente por una señal contraria, resultando en pérdidas pequeñas y recurrentes.</p><h2 id="como-filtrar-senales-falsas">Cómo filtrar señales falsas</h2><ul><li>Usa un indicador de fuerza de tendencia, como el ADX, exigiendo un valor mínimo antes de considerar válido el cruce.</li><li>Exige una distancia mínima entre las dos medias en el momento del cruce, ignorando cruces en los que están prácticamente pegadas.</li><li>Combina el cruce con el contexto de un gráfico de mayor plazo: si el gráfico diario muestra lateralización, los cruces en el gráfico de 15 minutos tienden a ser menos confiables.</li><li>Acepta que ningún filtro elimina el 100% de las señales falsas — el objetivo es reducir la frecuencia, no eliminar el riesgo.</li></ul><h2 id="uniendo-todo-en-una-rutina-simple">Uniendo todo en una rutina simple</h2><p>Una forma práctica de aplicar esta estrategia es revisar el gráfico diario al cierre del día, observando si las dos medias están cerca de un cruce, y solo entonces seguir el activo más de cerca en los días siguientes. Esto evita estar revisando el gráfico todo el tiempo en busca de una señal que aún no se ha formado.</p><p>Como cualquier sistema basado en medias móviles, el cruce de dos medias reacciona a lo que ya ocurrió en el precio, no a lo que va a ocurrir — por eso siempre existe riesgo de pérdida, incluso en señales bien filtradas. Probar diferentes combinaciones de períodos en una cuenta demo, ya sea en Duotide o en otra plataforma, antes de aplicar capital real ayuda a encontrar la combinación que mejor encaja en el activo y el marco temporal que sigues.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Respuesta rápida</p><p>El cruce de dos medias móviles usa una media rápida (por ejemplo, 20 períodos) y una lenta (por ejemplo, 50): cuando la rápida cruza por encima de la lenta, es una señal de posible alza; cuando cruza por debajo, de posible baja. La combinación filtra parte del ruido de usar una sola media, pero se atrasa y genera señales falsas en mercado lateral. Funciona mejor como filtro de tendencia que como gatillo aislado.</p></div>
+            <p>Una sola media móvil en el gráfico ya ayuda a ver la dirección del precio, pero deja una pregunta sin responder: ¿cuándo entrar? Esperar a que el precio cruce la media suele generar demasiadas señales, porque el precio pasa por encima y por debajo de ella cada vez que oscila sin dirección.</p>
+<p>La solución más usada por quien opera tendencia es colocar dos medias en el mismo gráfico, una rápida y una lenta, y seguir el cruce entre ellas. En esta guía usamos las cotizaciones diarias reales de Nvidia (NVDA) entre febrero y octubre de 2026, con las medias simples de 20 y 50 pregones, para mostrar el cálculo y las señales que de hecho aparecieron.</p>
+<h2 id="que-es-el-cruce-de-dos-medias-moviles">Qué es el cruce de dos medias móviles</h2>
+<p>La media rápida, de período corto, sigue el precio de cerca. La lenta, de período largo, muestra la dirección de fondo. Cuando la rápida cruza por encima de la lenta, los precios recientes están por encima del promedio de los últimos meses: es el cruce de alza. Cuando cruza por debajo, es el cruce de baja. En la combinación de 50 y 200 períodos, estos cruces ganaron los apodos de golden cross y death cross.</p>
+<p>La distancia entre las dos líneas también informa: medias bien separadas indican tendencia fuerte; medias pegadas indican indecisión.</p>
+<h3>Eligiendo los períodos</h3>
+<p>No existe una combinación correcta para todos. Las más comunes son 9 y 21 para plazos cortos, 20 y 50 para mediano plazo y 50 y 200 para la tendencia de largo plazo. Las medias cortas reaccionan más rápido y se equivocan más; las medias largas tardan más en confirmar y filtran más ruido.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-calcular-las-medias">Cómo calcular las medias</h2>
+<p>La media móvil simple de N períodos es la suma de los últimos N cierres dividida entre N. En Nvidia, el 07/10/2026:</p>
+<ul class="check-list">
+<li>Suma de los 20 cierres del 10/09 al 07/10: US$ 4.511,57 → media de 20 = 4.511,57 ÷ 20 = <strong>US$ 225,58</strong>.</li>
+<li>Suma de los 50 cierres del 29/07 al 07/10: US$ 11.029,16 → media de 50 = 11.029,16 ÷ 50 = <strong>US$ 220,58</strong>.</li>
+<li>Media de 20 por encima de la de 50, con el precio a US$ 237,47 por encima de las dos: configuración de tendencia alcista.</li>
+</ul>
+<p>En cada nuevo pregón, sale el cierre más antiguo y entra el más reciente. El cruce ocurre en el día en que se invierte el orden entre las dos medias.</p>
+<h2 id="ejemplo-real-las-medias-de-20-y-50-de-nvidia">Ejemplo real: las medias de 20 y 50 de Nvidia</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/cruzamento-de-duas-medias-moveis-como-combinar.svg" alt="Gráfico: Nvidia, diario, del 02/02/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: Nvidia, diario, del 02/02/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure>
+<p>En el período, la acción pasó de US$ 185,61 el 02/02 a US$ 237,47 el 07/10, alza del 27,94%, con un mínimo de US$ 164,27 el 30/03 y un máximo de US$ 243,37 el 06/10. Hubo seis cruces. Imagina a alguien que solo compra en el cruce de alza y vende en el de baja.</p>
+<h3>Marzo: tres cruces en siete pregones</h3>
+<p>Las medias estaban pegadas: el 02/03, la de 20 valía US$ 185,55 y la de 50, US$ 185,72. Llegaron un cruce de baja el 02/03, uno de alza el 06/03 (compra a US$ 177,82) y otro de baja el 10/03 (venta a US$ 184,77). Esa operación dio +US$ 6,95 por acción, pero por suerte: tres señales en siete pregones es el retrato del mercado sin dirección, y la acción todavía cayó hasta US$ 164,27 a fin de mes.</p>
+<h3>Abril a junio: la señal correcta y la salida tardía</h3>
+<p>El cruce de alza del 22/04 llegó con la acción a US$ 202,50. El precio llegó a US$ 236,54 el 14/05, pero el cruce de baja solo apareció el 24/06, con la acción a US$ 199,00. Resultado: −US$ 3,50 por acción, o −1,73%, después de haber estado más de US$ 30 en ganancia. Es el costo del retraso: la media de 50 tarda en girar.</p>
+<h3>Agosto: la tendencia que pagó</h3>
+<p>El cruce de alza del 06/08 ocurrió con la acción a US$ 218,99 y las medias en US$ 206,17 y US$ 205,85. Una forma de armar la operación:</p>
+<ul class="check-list">
+<li>Stop un poco por debajo de la media de 50: US$ 205,00. Riesgo: 218,99 − 205,00 = US$ 13,99 por acción.</li>
+<li>Riesgo máximo aceptado: US$ 200 → 200 ÷ 13,99 = 14,3 → <strong>14 acciones</strong> (riesgo de US$ 195,86).</li>
+<li>El mínimo siguiente fue US$ 207,25, el 24/08, por encima del stop. El 07/10, sin un nuevo cruce de baja, la acción cerró a US$ 237,47: +US$ 18,48 por acción, o 14 × 18,48 = <strong>US$ 258,72</strong>, alrededor de 1,3 veces el riesgo asumido.</li>
+</ul>
+<p>Los tres casos juntos muestran el patrón típico de la estrategia: pérdidas pequeñas y señales confusas en la lateralidad, ganancia concentrada en las tendencias largas. Describen lo que ocurrió, no lo que va a ocurrir.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-usar-el-cruce-de-dos-medias">Cómo usar el cruce de dos medias</h2>
+<h3>Como filtro de dirección</h3>
+<p>Con la media rápida por encima de la lenta, busca solo compras; por debajo, solo ventas o quédate afuera. Usa otro criterio, como un retroceso hasta la media rápida o una ruptura, para el momento exacto de la entrada.</p>
+<h3>Exige separación entre las medias</h3>
+<p>En marzo, las medias estaban separadas por centavos. Una regla simple, como exigir que la distancia entre ellas supere el 1% del precio, habría descartado aquellas señales.</p>
+<h3>Usa un indicador de fuerza de tendencia</h3>
+<p>El ADX por encima de 20 o 25 indica tendencia definida. Los cruces con ADX bajo suelen ser los más falsos.</p>
+<h3>Limitaciones</h3>
+<p>Las medias se calculan con precios pasados, así que toda señal llega atrasada, como en junio. En mercado lateral, el método genera secuencias de pequeñas pérdidas, conocidas como whipsaw. Y la mejor combinación de períodos en un activo puede no servir en otro.</p>
+<h2 id="errores-comunes-al-combinar-dos-medias-moviles">Errores comunes al combinar dos medias móviles</h2>
+<ul class="check-list">
+<li>Operar todo cruce, incluso cuando las medias están pegadas.</li>
+<li>Cambiar los períodos con cada pérdida, buscando la combinación perfecta en el pasado.</li>
+<li>Esperar el cruce contrario para salir sin tener un stop definido.</li>
+<li>Ignorar el tamaño de la posición: el stop técnico cambia en cada operación, y el número de acciones necesita acompañarlo.</li>
+<li>Concluir que el resultado de un período vale para siempre.</li>
+</ul>
+<p>Para practicar, coloca las medias de 20 y 50 en el gráfico diario de un activo en la cuenta demo y registra cada cruce: fecha, precio, distancia entre las medias y lo que ocurrió hasta el cruce siguiente. En algunos meses sabrás si el método combina con el activo y con tu paciencia.</p>
             <div class="bq-post__cta">
               <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con 10.000 US$ virtuales.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Actualizado el: <time datetime="2026-10-08">8 oct 2026</time></p>
+              <p>Actualizado el: <time datetime="2026-10-10">10 oct 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -334,6 +381,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100242" defer></script>
+  <script src="/assets/js/main.js?v=202610100322" defer></script>
 </body>
 </html>

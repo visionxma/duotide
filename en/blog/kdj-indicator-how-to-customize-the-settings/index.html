@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>KDJ Indicator: How to Customize the Settings | Blog Duotide</title>
-  <meta name="description" content="What the K, D, and J lines are, why the J line is more sensitive than the plain stochastic, and how to adjust the periods for your trading style.">
+  <meta name="description" content="How to adjust the KDJ's periods (9, 3, 3, and variations), the K, D, and J line calculation with real bitcoin data, and how each setting affects signals.">
   <link rel="canonical" href="https://duotide.com.br/en/blog/kdj-indicator-how-to-customize-the-settings/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-kdj-como-personalizar-as-configuracoes/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
   <meta property="og:title" content="KDJ Indicator: How to Customize the Settings">
-  <meta property="og:description" content="What the K, D, and J lines are, why the J line is more sensitive than the plain stochastic, and how to adjust the periods for your trading style.">
+  <meta property="og:description" content="How to adjust the KDJ's periods (9, 3, 3, and variations), the K, D, and J line calculation with real bitcoin data, and how each setting affects signals.">
   <meta property="og:url" content="https://duotide.com.br/en/blog/kdj-indicator-how-to-customize-the-settings/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KDJ Indicator: How to Customize the Settings">
-  <meta name="twitter:description" content="What the K, D, and J lines are, why the J line is more sensitive than the plain stochastic, and how to adjust the periods for your trading style.">
+  <meta name="twitter:description" content="How to adjust the KDJ's periods (9, 3, 3, and variations), the K, D, and J line calculation with real bitcoin data, and how each setting affects signals.">
   <meta name="twitter:label1" content="Written by">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Reading time">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100242">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100322">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/en/blog/kdj-indicator-how-to-customize-the-settings/#artigo",
       "headline": "KDJ Indicator: How to Customize the Settings",
-      "description": "What the K, D, and J lines are, why the J line is more sensitive than the plain stochastic, and how to adjust the periods for your trading style.",
+      "description": "How to adjust the KDJ's periods (9, 3, 3, and variations), the K, D, and J line calculation with real bitcoin data, and how each setting affects signals.",
       "url": "https://duotide.com.br/en/blog/kdj-indicator-how-to-customize-the-settings/",
       "inLanguage": "en",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp",
       "articleSection": "Indicators",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">Sep 24, 2026</time><span class="ap__sep">5 min read</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span>
             </div>
-            <p class="ap__atual">Updated: <time datetime="2026-10-08">October 8, 2026</time></p>
+            <p class="ap__atual">Updated: <time datetime="2026-10-10">October 10, 2026</time></p>
             <span class="bq__tag">Indicators</span>
             <h1>KDJ Indicator: How to Customize the Settings</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Editorial character · Analysis Desk</small></span></div>
@@ -204,24 +204,84 @@
               <p class="ap__indice-tit">Contents</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
                 <li><a href="#what-the-k-d-and-j-lines-are">What the K, D, and J lines are</a></li>
-                <li><a href="#how-to-interpret-the-signals">How to interpret the signals</a></li>
-                <li><a href="#default-setting-and-what-it-represents">Default setting and what it represents</a></li>
-                <li><a href="#how-to-adjust-the-parameters-to-your-style">How to adjust the parameters to your style</a></li>
-                <li><a href="#practical-reading-example">Practical reading example</a></li>
-                <li><a href="#comparing-the-kdj-with-the-traditional-stochastic">Comparing the KDJ with the traditional stochastic</a></li>
-                <li><a href="#using-the-kdj-responsibly">Using the KDJ responsibly</a></li>
+                <li><a href="#how-to-calculate-the-kdj-and-what-each-number-controls">How to calculate the KDJ and what each number controls</a></li>
+                <li><a href="#real-example-the-effect-of-settings-on-bitcoin">Real example: the effect of settings on bitcoin</a></li>
+                <li><a href="#how-to-customize-the-kdj-for-your-style">How to customize the KDJ for your style</a></li>
+                <li><a href="#common-mistakes-when-customizing-the-kdj">Common mistakes when customizing the KDJ</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Back to top</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Anyone who already uses the stochastic oscillator knows the logic of comparing the price's close with the recent high-low range. The KDJ takes that same base and adds a third, more sensitive line, creating an indicator with a richer reading of reversals and move exhaustion — widely used by short-term traders in Chinese stocks and, nowadays, in various other markets.</p><p>This article explains what each of the three lines represents and how to adjust the KDJ's parameters to make it faster or more stable, depending on what you're looking for.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-kdj-como-personalizar-as-configuracoes.svg" alt="Chart: BTC/USDT, daily, 04/01/2026 to 10/07/2026. Data: Binance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: BTC/USDT, daily, 04/01/2026 to 10/07/2026. Data: Binance. Own analysis.</figcaption></figure><h2 id="what-the-k-d-and-j-lines-are">What the K, D, and J lines are</h2><p>The K line is practically identical to the fast stochastic oscillator, measuring the current close's position within a given period's high-low range. The D line is a moving average of the K line, smoothing out its oscillation. The J line, unique to the KDJ, is calculated from the distance between K and D, amplified — and it's exactly this amplification that makes the J line the most sensitive of the three, with the particularity of being able to go past the 0 and 100 limits, something that doesn't happen in the traditional stochastic.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-interpret-the-signals">How to interpret the signals</h2><p>When the three lines are above 80, the asset is considered overbought; below 20, oversold. The K line crossing above the D line is read as a possible buy signal, and crossing below, as a possible sell signal — the same logic as the plain stochastic. The practical difference is the J line: when it spikes well above 100 or drops well below 0, that usually indicates a stretched move that could reverse soon, working as an early warning even before the crossover between K and D is confirmed.</p><h2 id="default-setting-and-what-it-represents">Default setting and what it represents</h2><p>The most common KDJ setting uses periods 9, 3, and 3: nine periods to calculate the price's position within the high-low range, and three smoothing periods for the D and J lines. This combination works well on intraday charts of liquid assets, but can generate excessive signals in more volatile markets or slower-moving ones.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-adjust-the-parameters-to-your-style">How to adjust the parameters to your style</h2><ul><li>For a faster, more sensitive indicator, reduce the main period to 5 or 6 — useful for very short-term trades, but with more false signals on low-volatility days.</li><li>For a more stable indicator, increase the main period to 14 or 21, reducing the number of signals, but with slower responses to real direction changes.</li><li>Increasing the smoothing periods for the D and J lines makes the indicator less noisy, at the cost of slightly delaying signal confirmation.</li><li>Always test parameter changes on the same asset and the same chart timeframe you intend to trade, since the ideal behavior varies a lot between stocks, currencies, and crypto assets.</li></ul><h2 id="practical-reading-example">Practical reading example</h2><p>Imagine an asset in a steady decline, with the J line dropping to -15, well below zero, while K and D are still around 18. This behavior of the J line suggests the decline is stretched beyond normal, a cue to watch the next candles for a K-crossing-above-D as confirmation of a possible reversal — without, however, buying based solely on this one signal. It's also worth waiting for the K-above-D crossover to actually happen, or watching whether the asset's volume rises on the following candles, before considering the reversal confirmed.</p><h2 id="comparing-the-kdj-with-the-traditional-stochastic">Comparing the KDJ with the traditional stochastic</h2><p>Anyone already used to the stochastic might find the J line strange at first, since it breaks from the fixed 0-to-100 range logic. In practice, this feature is the main reason traders switch to the KDJ: instead of waiting for the stochastic to simply hit 100 or 0 (which it does often in strong trends, without indicating a reversal), the J line broadens the reading and helps tell apart a common extreme from a truly unusual one for that asset.</p><h2 id="using-the-kdj-responsibly">Using the KDJ responsibly</h2><p>Like any oscillator, the KDJ works best combined with a broader trend reading, avoiding trading against the main move just because the J line reached an extreme. Adjusting the parameters is a trial-and-observation process, best done on a demo account, whether on Duotide or another platform, before applying the chosen setting to trades with real money — remembering that no parameter adjustment eliminates the risk inherent to any trade in the market.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Quick answer</p><p>The KDJ uses three parameters: the high-low window's period (default 9) and two smoothing periods for the K and D lines (default 3 and 3). <strong>Shorter periods make the indicator faster and generate more false signals</strong>; longer ones make it slower and more stable. The best setting depends on your trading timeframe and should be tested before use.</p></div>
+            <p>The KDJ comes on most platforms set to 9, 3, 3, and most people never touch it. But those three numbers decide how many signals the indicator generates, how early they show up, and how many will be false. Adjusting them to your trading timeframe is one of the simplest and most useful changes you can make.</p>
+<p>In this article we use real daily quotes for bitcoin (BTC/USDT on Binance) between April and October 2026 to calculate the KDJ and compare, with numbers, what happens when the main period is swapped.</p>
+<h2 id="what-the-k-d-and-j-lines-are">What the K, D, and J lines are</h2>
+<p>The KDJ is born from the stochastic oscillator. First the RSV is calculated, which shows where the close sits within the range between the high and the low of the last N periods, on a scale from 0 to 100. From there:</p>
+<ul class="check-list">
+<li><strong>K:</strong> a smoothed average of the RSV.</li>
+<li><strong>D:</strong> a smoothed average of the K line, slower still.</li>
+<li><strong>J:</strong> 3 × K − 2 × D. It amplifies the distance between K and D and, because of that, can go above 100 or below 0, something the regular stochastic doesn't do.</li>
+</ul>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-calculate-the-kdj-and-what-each-number-controls">How to calculate the KDJ and what each number controls</h2>
+<p>With the (N, M1, M2) = (9, 3, 3) setting:</p>
+<ul class="check-list">
+<li><strong>RSV</strong> = (close − low of N periods) ÷ (high of N − low of N) × 100. <strong>N</strong> sets the window size.</li>
+<li><strong>K</strong> = previous K × (M1 − 1) ÷ M1 + RSV ÷ M1. With M1 = 3, yesterday's K line carries 2/3 of the weight and today's RSV, 1/3.</li>
+<li><strong>D</strong> = previous D × (M2 − 1) ÷ M2 + K ÷ M2.</li>
+<li><strong>J</strong> = 3K − 2D.</li>
+</ul>
+<h3>Example with bitcoin on October 7, 2026</h3>
+<p>Over the 9 days through October 7, the high was $87,220.00 and the low, $82,775.94. The close was $83,321.81. The day before, K was at 62.78 and D at 58.02. The math uses unrounded values; redoing it with the displayed numbers, the last digit may differ.</p>
+<ul class="check-list">
+<li>RSV = (83,321.81 − 82,775.94) ÷ (87,220.00 − 82,775.94) × 100 = 545.87 ÷ 4,444.06 × 100 = <strong>12.28</strong></li>
+<li>K = 62.78 × 2/3 + 12.28 × 1/3 = 41.85 + 4.09 = <strong>45.95</strong></li>
+<li>D = 58.02 × 2/3 + 45.95 × 1/3 = 38.68 + 15.32 = <strong>53.99</strong></li>
+<li>J = 3 × 45.95 − 2 × 53.99 = <strong>29.85</strong></li>
+</ul>
+<p>The close near the window's low dragged the RSV down to 12.28, but the smoothing held K at 45.95. The K line crossed below D that day, and J, the fastest one, was already at 29.85.</p>
+<h2 id="real-example-the-effect-of-settings-on-bitcoin">Real example: the effect of settings on bitcoin</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/indicador-kdj-como-personalizar-as-configuracoes.svg" alt="Chart: BTC/USDT, daily, 04/01/2026 to 10/07/2026. Data: Binance. Own analysis." width="960" height="540" loading="lazy" decoding="async"><figcaption>Chart: BTC/USDT, daily, 04/01/2026 to 10/07/2026. Data: Binance. Own analysis.</figcaption></figure>
+<p>The chart shows bitcoin with the 9-period stochastic. The blue line is the RSV, the KDJ's raw material; the orange one is its 3-period average. The KDJ's K and D are smoothed versions of these lines. Over the period BTC rose from $68,113.92 to $83,321.81, with a low of $57,800.19 on July 1 and a high of $87,395.67 on September 21.</p>
+<h3>How many signals each period generates</h3>
+<p>We counted the crossovers between K and D between April and October, keeping M1 and M2 at 3:</p>
+<ul class="check-list">
+<li>N = 5: <strong>41</strong> crossovers</li>
+<li>N = 9 (default): <strong>33</strong> crossovers</li>
+<li>N = 14: <strong>24</strong> crossovers</li>
+<li>N = 21: <strong>26</strong> crossovers</li>
+</ul>
+<p>Shortening the window from 9 to 5 increased signals by about 24%. Lengthening it to 14 cut more than a quarter (from 33 to 24). From 14 to 21 the count barely changed: past a certain point, lengthening the period slows the indicator down without cutting the number of crossovers much further.</p>
+<h3>J above 100 in an uptrend</h3>
+<p>With the default setting, the J line went above 100 six times. In five of them, the price was higher ten days later: on April 7 (from $71,924.22 to $77,072.00, +7.2%) and on August 20 (from $73,025.15 to $77,682.00, +6.4%), for example. Only on June 13 did the price fall, 2.7%. In a rising market, J above 100 showed strength, not exhaustion.</p>
+<h3>The short period catches what the default misses</h3>
+<p>On August 12, with BTC at $63,479.99, the J line on the 5, 3, 3 setting fell below zero. The default setting didn't give the same warning that day. Ten days later the price was at $77,074.93, up 21.4%. The short period also got it wrong: on May 17, J below zero (with BTC at $77,457.67) was followed by a 3.9% drop.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="how-to-customize-the-kdj-for-your-style">How to customize the KDJ for your style</h2>
+<h3>Faster: N between 5 and 6</h3>
+<p>For very short trades, where getting in early matters more than avoiding noise. Expect more signals and more false ones, as shown by the count of 41 crossovers.</p>
+<h3>Balanced: 9, 3, 3</h3>
+<p>The default works as a starting point for 1-hour to daily charts on liquid assets.</p>
+<h3>More stable: N between 14 and 21</h3>
+<p>For swing trading and positions held for days or weeks. Signals arrive later, but there are fewer of them.</p>
+<h3>Adjusting M1 and M2</h3>
+<p>Increasing M1 and M2 (to 5, for example) smooths K and D and reduces crossovers without changing the price window. Lowering them to 2 makes the lines jumpier. Change one parameter at a time to know what caused the difference.</p>
+<h3>Limitations</h3>
+<p>No setting eliminates every oscillator's basic problem: in a strong trend, it stays at the extremes for a long time. And a setting that worked on an asset's past may not work on its future, or on a different asset.</p>
+<h2 id="common-mistakes-when-customizing-the-kdj">Common mistakes when customizing the KDJ</h2>
+<ul class="check-list">
+<li>Tweaking the parameters until they "nail" a specific chart's past signals.</li>
+<li>Changing N, M1, and M2 at the same time and not knowing which change made the difference.</li>
+<li>Using a short period on a short timeframe and being surprised by the number of false signals.</li>
+<li>Treating J above 100 or below 0 as a buy or sell order, without looking at the trend.</li>
+<li>Forgetting that bitcoin's numbers describe what happened, not what will happen.</li>
+</ul>
+<p>To practice, put two KDJs on the same chart on a demo account, one with 9, 3, 3 and another with the period you want to test, and log, over a few weeks, each one's signals and what price did afterward. The right setting is the one that works in your own record, not the one that shows up in ready-made lists.</p>
             <div class="bq-post__cta">
               <p><strong>Practice before you risk.</strong> Open your Duotide account and test your ideas on the demo account with US$10,000 in virtual funds.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-en" target="_blank" rel="noopener sponsored nofollow">Create free account</a>
             </div>
             <div class="ap__fim">
-              <p>Updated: <time datetime="2026-10-08">Oct 8, 2026</time></p>
+              <p>Updated: <time datetime="2026-10-10">Oct 10, 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> views</span></span><button class="ap__compartilhar" type="button">Share <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -250,9 +310,9 @@
         <aside class="ap__rel">
           <h2>Related articles</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/en/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What the ADX Indicator Is and How It Works</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
-            <a class="bq__card" href="/en/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What the Stochastic Oscillator Is and How It Works</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
-            <a class="bq__card" href="/en/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What Average True Range (ATR) Is and How to Calculate It</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-the-adx-indicator/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What Is the ADX Indicator and How to Calculate Trend Strength</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-the-stochastic-oscillator/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What Is the Stochastic Oscillator and How to Calculate It</span><span class="bq__meta">09/24/2026 · 5 min read</span></a>
+            <a class="bq__card" href="/en/blog/what-is-average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">What Is the ATR (Average True Range) and How to Calculate It</span><span class="bq__meta">09/24/2026 · 6 min read</span></a>
           </div>
         </aside>
       </div>
@@ -335,6 +395,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100242" defer></script>
+  <script src="/assets/js/main.js?v=202610100322" defer></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Cómo hacer el backtest de una estrategia antes de operar de verdad | Blog Duotide</title>
-  <meta name="description" content="Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.">
+  <meta name="description" content="Paso a paso de un backtest con la fórmula de la expectativa, resuelto con cinco años de datos reales del S&amp;P 500 y un cruce de medias.">
   <link rel="canonical" href="https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/como-fazer-o-backtest-de-uma-estrategia/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="es_ES">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Cómo hacer el backtest de una estrategia antes de operar de verdad">
-  <meta property="og:description" content="Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.">
+  <meta property="og:description" content="Paso a paso de un backtest con la fórmula de la expectativa, resuelto con cinco años de datos reales del S&amp;P 500 y un cruce de medias.">
   <meta property="og:url" content="https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-01.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cómo hacer el backtest de una estrategia antes de operar de verdad">
-  <meta name="twitter:description" content="Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.">
+  <meta name="twitter:description" content="Paso a paso de un backtest con la fórmula de la expectativa, resuelto con cinco años de datos reales del S&amp;P 500 y un cruce de medias.">
   <meta name="twitter:label1" content="Escrito por">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tiempo de lectura">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100242">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610100322">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/#artigo",
       "headline": "Cómo hacer el backtest de una estrategia antes de operar de verdad",
-      "description": "Paso a paso de un backtest manual, con la fórmula de la expectativa matemática explicada y un ejemplo numérico completo resuelto.",
+      "description": "Paso a paso de un backtest con la fórmula de la expectativa, resuelto con cinco años de datos reales del S&P 500 y un cruce de medias.",
       "url": "https://duotide.com.br/es/blog/como-hacer-el-backtest-de-una-estrategia/",
       "inLanguage": "es",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-01.webp",
       "articleSection": "Estrategias",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept 2026</time><span class="ap__sep">5 min de lectura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span>
             </div>
-            <p class="ap__atual">Actualizado el: <time datetime="2026-10-08">8 de octubre de 2026</time></p>
+            <p class="ap__atual">Actualizado el: <time datetime="2026-10-10">10 de octubre de 2026</time></p>
             <span class="bq__tag">Estrategias</span>
             <h1>Cómo hacer el backtest de una estrategia antes de operar de verdad</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personaje editorial · Redacción de Análisis</small></span></div>
@@ -203,45 +203,75 @@
             <nav class="ap__indice" aria-label="Contenido">
               <p class="ap__indice-tit">Contenido</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#paso-1-define-la-regla-de-entrada-y-salida-por-escrito">Paso 1: define la regla de entrada y salida por escrito</a></li>
-                <li><a href="#paso-2-recorre-el-historial-senal-por-senal">Paso 2: recorre el historial señal por señal</a></li>
-                <li><a href="#paso-3-calcula-la-tasa-de-acierto-y-el-payoff-medio">Paso 3: calcula la tasa de acierto y el payoff medio</a></li>
-                <li><a href="#paso-4-calcula-la-expectativa-matematica">Paso 4: calcula la expectativa matemática</a></li>
-                <li><a href="#lo-que-el-backtest-no-garantiza">Lo que el backtest no garantiza</a></li>
-                <li><a href="#poniendo-el-proceso-en-practica">Poniendo el proceso en práctica</a></li>
-                <li><a href="#un-cuidado-extra-el-tamano-de-la-muestra-importa-mas-de-lo-q">Un cuidado extra: el tamaño de la muestra importa más de lo que parece</a></li>
+                <li><a href="#que-es-un-backtest">Qué es un backtest</a></li>
+                <li><a href="#como-hacer-el-backtest-paso-a-paso">Cómo hacer el backtest, paso a paso</a></li>
+                <li><a href="#ejemplo-real-el-backtest-en-el-s-amp-p-500">Ejemplo real: el backtest en el S&amp;amp;P 500</a></li>
+                <li><a href="#como-usar-el-resultado-del-backtest">Cómo usar el resultado del backtest</a></li>
+                <li><a href="#errores-comunes-al-hacer-el-backtest">Errores comunes al hacer el backtest</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Volver arriba</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Backtest es el proceso de probar una estrategia de operación usando datos históricos, antes de arriesgar capital real en ella. La idea es simple: aplicar las mismas reglas de entrada y salida que usarías en vivo sobre un período pasado del gráfico, y registrar lo que habría ocurrido en cada señal generada. Es una etapa que separa una estrategia con evidencia de funcionamiento de una idea que solo parece buena mirando el gráfico de forma retrospectiva.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/como-fazer-o-backtest-de-uma-estrategia.svg" alt="Gráfico: S&amp;P 500, diario, del 02/01/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: S&amp;P 500, diario, del 02/01/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure><h2 id="paso-1-define-la-regla-de-entrada-y-salida-por-escrito">Paso 1: define la regla de entrada y salida por escrito</h2>
-<p>Antes de mirar cualquier dato histórico, escribe la regla exacta que vas a probar — por ejemplo: "comprar cuando el precio rompa el máximo de las últimas 20 velas con volumen 30% por encima del promedio; salir con ganancia en un alza del 2% o en el stop con una caída del 1%". Reglas vagas como "comprar cuando parezca una buena oportunidad" no pueden probarse de forma consistente, porque dependen del juicio subjetivo en cada señal.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="paso-2-recorre-el-historial-senal-por-senal">Paso 2: recorre el historial señal por señal</h2>
-<p>Con la regla definida, recorre el gráfico histórico identificando cada vez que se habría cumplido la condición de entrada, y registra el resultado que habría generado la regla de salida — ganancia o pérdida, en puntos o porcentaje. Es importante mantener la disciplina de aplicar la regla exactamente como se escribió, sin "ajustar" el resultado después de ver lo que ocurrió, bajo riesgo de sesgar la prueba a favor de la estrategia.</p>
-<h2 id="paso-3-calcula-la-tasa-de-acierto-y-el-payoff-medio">Paso 3: calcula la tasa de acierto y el payoff medio</h2>
-<p>Después de reunir una muestra razonable — 30 señales, como mínimo, idealmente más — calcula dos números: la tasa de acierto (porcentaje de operaciones ganadoras) y el payoff medio (la ganancia media de las operaciones ganadoras dividida entre la pérdida media de las perdedoras). Supongamos un backtest con 40 señales, 18 ganadoras y 22 perdedoras, ganancia media de R$ 60,00 en las ganadoras y pérdida media de R$ 35,00 en las perdedoras. La tasa de acierto es 45% (18/40) y el payoff es de 1,71 (60/35).</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="paso-4-calcula-la-expectativa-matematica">Paso 4: calcula la expectativa matemática</h2>
-<p>La expectativa matemática mide el resultado medio esperado por operación, y se calcula así: (tasa de acierto × ganancia media) − (tasa de error × pérdida media). Usando los números del ejemplo: (0,45 × R$ 60,00) − (0,55 × R$ 35,00) = R$ 27,00 − R$ 19,25 = R$ 7,75 positivos por operación, en promedio. Una expectativa positiva indica que, manteniendo la misma proporción de aciertos y el mismo payoff a lo largo del tiempo, la estrategia tiende a generar un resultado positivo — lo que no garantiza que cada operación individual será rentable, pero indica una ventaja estadística en la muestra probada.</p>
-<h2 id="lo-que-el-backtest-no-garantiza">Lo que el backtest no garantiza</h2>
-<p>Un resultado positivo en el historial no garantiza el mismo desempeño de aquí en adelante — las condiciones de mercado cambian, y una muestra pequeña puede haber sido favorable por casualidad. Además, los backtests manuales están sujetos al sesgo retrospectivo: es fácil, sin querer, ajustar la interpretación de una señal sabiendo lo que ocurrió después. Por eso, muchos traders siguen el backtest con un período de prueba en cuenta simulada, aplicando la misma regla en tiempo real antes de operar con capital relevante.</p>
-<h2 id="poniendo-el-proceso-en-practica">Poniendo el proceso en práctica</h2>
-<ul>
-<li>Escribe la regla de entrada y salida antes de mirar cualquier dato histórico.</li>
-<li>Reúne una muestra mínima de 30 señales para que los números tengan algún peso estadístico.</li>
-<li>Calcula la tasa de acierto, el payoff medio y la expectativa matemática antes de considerar validada la estrategia.</li>
-<li>Prueba en cuenta simulada durante un período antes de aplicar capital real, incluso con un backtest positivo.</li>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Respuesta rápida</p><p>Para hacer el backtest de una estrategia, escribe reglas objetivas de entrada y salida, aplícalas a varios años de datos históricos sin saltarte señales y registra cada operación. Después, calcula la tasa de acierto, la ganancia y la pérdida medias y la expectativa matemática. El resultado muestra cómo se comportó la regla en el pasado, no garantiza el futuro.</p></div>
+            <p>Antes de poner dinero en una estrategia, se puede saber cómo le habría ido en el pasado. Eso es el backtest: aplicar reglas fijas a datos históricos y anotar cada operación que habrían generado. No garantiza nada sobre el futuro, pero elimina rápidamente las ideas que ni en el pasado funcionaron, y muestra el tamaño de las pérdidas que vas a tener que aguantar.</p>
+<p>En esta guía, hacemos un backtest completo de una regla simple, el cruce de las medias móviles de 20 y 50 días, sobre cinco años de cierres diarios reales del S&amp;P 500 (datos de Yahoo Finance, de octubre de 2021 a octubre de 2026).</p>
+<h2 id="que-es-un-backtest">Qué es un backtest</h2>
+<p>Es una simulación. Defines las reglas de entrada, salida y stop de forma que no dejen margen para la interpretación, recorres el histórico vela por vela como si no supieras lo que viene después y registras el resultado de cada operación. Puede hacerse a mano, desplazando el gráfico, o con una hoja de cálculo o un programa.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-hacer-el-backtest-paso-a-paso">Cómo hacer el backtest, paso a paso</h2>
+<h3>1. Escribe las reglas</h3>
+<p>En nuestro ejemplo: comprar en el cierre del día en que la media móvil simple de 20 días cruza por encima de la de 50; vender en el cierre del día en que cruza por debajo. Solo operaciones de compra, sin apalancamiento.</p>
+<h3>2. Elige un período largo y variado</h3>
+<p>El período necesita tener alza, caída y lateralidad. Cinco años del S&amp;P 500 incluyen la caída de 2022 y las alzas de 2023 a 2026.</p>
+<h3>3. Registra cada operación</h3>
+<p>Fecha y precio de entrada, fecha y precio de salida y resultado en porcentaje. Nada de saltarse señales que “claramente no iban a funcionar”.</p>
+<h3>4. Calcula las estadísticas</h3>
+<p>Tasa de acierto, ganancia media, pérdida media, mayor pérdida, mayor racha de pérdidas y la expectativa matemática:</p>
+<p><strong>Expectativa = (tasa de acierto × ganancia media) − (tasa de error × pérdida media)</strong></p>
+<p>Indica cuánto, en promedio, rindió cada operación. Si es negativa, la estrategia perdió dinero en el histórico, por buenas que parezcan algunas operaciones aisladas.</p>
+<h2 id="ejemplo-real-el-backtest-en-el-s-amp-p-500">Ejemplo real: el backtest en el S&amp;P 500</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/como-fazer-o-backtest-de-uma-estrategia.svg" alt="Gráfico: S&amp;P 500, diario, del 02/01/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia." width="960" height="540" loading="lazy" decoding="async"><figcaption>Gráfico: S&amp;P 500, diario, del 02/01/2026 al 07/10/2026. Datos: Yahoo Finance. Elaboración propia.</figcaption></figure>
+<p>El gráfico muestra el tramo de 2026, con la media de 20 días en azul y la de 50 en naranja. En él aparecen las dos últimas señales: el cruce a la baja del 27/02/2026, que cerró una operación abierta el 14/05/2025, y el cruce al alza del 23/04/2026, con el índice en 7.108,40 puntos, que abrió la operación todavía en curso.</p>
+<h3>Las operaciones</h3>
+<p>En cinco años, la regla generó 10 operaciones cerradas y una abierta. Algunas de ellas:</p>
+<ul class="check-list">
+<li>04/04/2022 a 02/05/2022: de 4.582,64 a 4.155,38 puntos, <strong>−9,32%</strong>, la mayor pérdida.</li>
+<li>01/08/2022 a 16/09/2022: <strong>−5,96%</strong>. 11/11/2022 a 03/01/2023: <strong>−4,23%</strong>. 30/01/2023 a 14/03/2023: <strong>−2,45%</strong>.</li>
+<li>13/04/2023 a 25/08/2023: <strong>+6,26%</strong>. 20/11/2023 a 26/04/2024: <strong>+12,15%</strong>.</li>
+<li>20/05/2024 a 09/08/2024: <strong>+0,68%</strong>. 04/09/2024 a 13/01/2025: <strong>+5,73%</strong>. 06/02/2025 a 07/03/2025: <strong>−5,15%</strong>.</li>
+<li>14/05/2025 a 27/02/2026: de 5.892,58 a 6.878,88 puntos, <strong>+16,74%</strong>, la mayor ganancia.</li>
+<li>Abierta desde el 23/04/2026: el 07/10/2026, el índice estaba en 7.801,77 puntos, <strong>+9,75%</strong>.</li>
 </ul>
-<p>El backtest es una herramienta de filtro, no de garantía: ayuda a descartar estrategias sin ninguna ventaja estadística aparente, y a entender mejor el comportamiento esperado de las que quedan — pero ninguna expectativa matemática calculada sobre el pasado es una promesa de resultado futuro.</p>
-<h2 id="un-cuidado-extra-el-tamano-de-la-muestra-importa-mas-de-lo-q">Un cuidado extra: el tamaño de la muestra importa más de lo que parece</h2>
-<p>Una expectativa matemática positiva calculada sobre apenas 10 o 15 señales tiene poco valor estadístico — puede ser resultado de la suerte en la muestra, no de una ventaja real de la estrategia. Cuanto mayor sea el número de señales probadas, más confianza carga el resultado, aunque ninguna muestra, por grande que sea, elimina por completo la incertidumbre sobre el futuro. También vale la pena probar la estrategia en períodos de mercado diferentes — de alza, de baja y de lateralización — ya que una regla puede funcionar bien en un régimen y mal en otro, y un backtest hecho solo sobre un período de alza fuerte tiende a sobreestimar el resultado esperado.</p>
+<h3>Las estadísticas</h3>
+<p>En las 10 operaciones cerradas, hubo 5 ganancias y 5 pérdidas, una tasa de acierto del 50%. La ganancia media fue del 8,31% y la pérdida media, del 5,42%. La expectativa queda:</p>
+<p>(0,50 × 8,31) − (0,50 × 5,42) = 4,16 − 2,71 = <strong>+1,45% por operación</strong>.</p>
+<p>Reinvirtiendo el resultado de cada operación en la siguiente, las 10 cerradas sumaron +11,9%; con la operación abierta, +22,81% hasta el 07/10/2026. En el mismo período, quien simplemente hubiera comprado el índice el 08/10/2021 (4.391,34 puntos) y lo hubiera mantenido hasta el 07/10/2026 habría obtenido +77,66%. La regla pasó buena parte del tiempo fuera del mercado, por eso perdió frente al simple comprar y mantener. Es una conclusión que solo el backtest muestra.</p>
+<h3>Dividiendo el período en dos</h3>
+<p>Separando por la fecha de entrada, las 6 operaciones abiertas hasta 2023 tuvieron 2 ganancias y 4 pérdidas, con una expectativa de −0,59% por operación. Las 4 abiertas desde 2024 en adelante tuvieron 3 ganancias y 1 pérdida, con una expectativa de +4,5%. La misma regla perdió en una fase y ganó en la otra, y empezó con cuatro pérdidas seguidas. Quien la hubiera seguido desde abril de 2022 habría pasado casi un año solo con operaciones perdedoras antes de la primera ganancia. Estos resultados describen el pasado, no lo que va a ocurrir.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="como-usar-el-resultado-del-backtest">Cómo usar el resultado del backtest</h2>
+<h3>Mira la muestra</h3>
+<p>Diez operaciones es poco. Con muestras pequeñas, una sola operación grande, como el +16,74% de 2025, cambia toda la estadística. Busca decenas o centenas de operaciones, probando la regla en otros activos o timeframes.</p>
+<h3>Prueba fuera de la muestra</h3>
+<p>Ajusta la regla en una parte de los datos y confírmala en otra que no usaste. Si el resultado solo es bueno en el tramo en el que ajustaste, la regla fue moldeada al pasado.</p>
+<h3>Incluye los costos</h3>
+<p>Los números anteriores no incluyen comisiones, spread ni la diferencia entre el precio de la señal y el ejecutado. En estrategias con muchas operaciones, esto puede anular la expectativa.</p>
+<h3>Limitaciones</h3>
+<p>El backtest supone una ejecución perfecta y no siente la presión de cuatro pérdidas seguidas con dinero real. El índice tampoco es negociable directamente: en la práctica, la operación se haría a través de un ETF o un contrato, con costos y pequeñas diferencias de precio.</p>
+<h2 id="errores-comunes-al-hacer-el-backtest">Errores comunes al hacer el backtest</h2>
+<ul class="check-list">
+<li>Probar en un período corto o solo de alza.</li>
+<li>Cambiar las reglas en medio de la prueba después de ver el resultado.</li>
+<li>Ajustar parámetros hasta que el resultado quede perfecto en el pasado.</li>
+<li>Ignorar costos, spread y diferencias de ejecución.</li>
+<li>No comparar con una referencia simple, como comprar y mantener el propio activo.</li>
+</ul>
+<p>Para practicar sin arriesgar dinero, escribe las reglas de una estrategia, haz el backtest en una hoja de cálculo con algunos años de datos y después opera la misma regla en la cuenta demo durante algunas semanas, registrando cada operación. Comparar el resultado de la demo con el del backtest muestra cuánto del histórico se repite en la práctica.</p>
             <div class="bq-post__cta">
               <p><strong>Practica antes de arriesgar.</strong> Crea tu cuenta en Duotide y prueba tus ideas en la cuenta demo con 10.000 US$ virtuales.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-es" target="_blank" rel="noopener sponsored nofollow">Crear cuenta gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Actualizado el: <time datetime="2026-10-08">8 oct 2026</time></p>
+              <p>Actualizado el: <time datetime="2026-10-10">10 oct 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visitas</span></span><button class="ap__compartilhar" type="button">Compartir <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -355,6 +385,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100242" defer></script>
+  <script src="/assets/js/main.js?v=202610100322" defer></script>
 </body>
 </html>
