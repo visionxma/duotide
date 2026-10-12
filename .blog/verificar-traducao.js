@@ -26,6 +26,13 @@ for (const s of alvo) {
     if (o.resposta && t.resposta === o.resposta) e('resposta não traduzida');
     const resto = (t.titulo + ' ' + (t.resposta || '') + ' ' + t.corpo).replace(/<[^>]+>/g, ' ').match(PT);
     if (resto) e(`trecho em português esquecido: "${resto[0]}"`);
+    const misto = (t.titulo + ' ' + (t.resposta || '') + ' ' + t.corpo).replace(/<[^>]+>/g, ' ').match(/\S*(?:[a-z][а-яё]|[а-яё][a-z])\S*/i);
+    const txt = x => (x.titulo + ' ' + x.descricao + ' ' + (x.resposta || '') + ' ' + x.corpo);
+    const nR = x => (txt(x).match(/R\$/g) || []).length;
+    if (nR(t) !== nR(o)) e(`moeda trocada: R$ aparece ${nR(o)} vez(es) na fonte e ${nR(t)} na tradução`);
+    if (!/euro|€/i.test(txt(o)) && /€|(?<!\p{L})(euro|euros)(?!\p{L})/iu.test(txt(t))) e('euro na tradução sem euro na fonte');
+    if ([...t.descricao].length > 160) e('descricao longa');
+    if (misto) e(`palavra com letras latinas e cirílicas misturadas: "${misto[0]}"`);
     if (o.revisado && t.revisado !== o.revisado) { console.log(`DESATUALIZADA ${s}: a fonte foi revisada em ${o.revisado}; traduza de novo (mantenha o slug "${t.slug}")`); velhas++; }
   }
   ok++;
