@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Indicateur KDJ : une variante de l'oscillateur stochastique | Blog Duotide</title>
-  <meta name="description" content="Le KDJ ajoute une troisième ligne au stochastique traditionnel. Découvrez ce que représente la ligne J, comment interpréter les trois lignes ensemble et ses limites.">
+  <meta name="description" content="Ce qu'est l'indicateur KDJ, comment il dérive du stochastique, le calcul des lignes K, D et J avec le GBP/USD réel et où il échoue.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/indicateur-kdj-une-variante-du-stochastique/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/indicador-kdj-uma-variacao-do-estocastico/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Indicateur KDJ : une variante de l'oscillateur stochastique">
-  <meta property="og:description" content="Le KDJ ajoute une troisième ligne au stochastique traditionnel. Découvrez ce que représente la ligne J, comment interpréter les trois lignes ensemble et ses limites.">
+  <meta property="og:description" content="Ce qu'est l'indicateur KDJ, comment il dérive du stochastique, le calcul des lignes K, D et J avec le GBP/USD réel et où il échoue.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/indicateur-kdj-une-variante-du-stochastique/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-app-03.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Indicateur KDJ : une variante de l'oscillateur stochastique">
-  <meta name="twitter:description" content="Le KDJ ajoute une troisième ligne au stochastique traditionnel. Découvrez ce que représente la ligne J, comment interpréter les trois lignes ensemble et ses limites.">
+  <meta name="twitter:description" content="Ce qu'est l'indicateur KDJ, comment il dérive du stochastique, le calcul des lignes K, D et J avec le GBP/USD réel et où il échoue.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610120826">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/indicateur-kdj-une-variante-du-stochastique/#artigo",
       "headline": "Indicateur KDJ : une variante de l'oscillateur stochastique",
-      "description": "Le KDJ ajoute une troisième ligne au stochastique traditionnel. Découvrez ce que représente la ligne J, comment interpréter les trois lignes ensemble et ses limites.",
+      "description": "Ce qu'est l'indicateur KDJ, comment il dérive du stochastique, le calcul des lignes K, D et J avec le GBP/USD réel et où il échoue.",
       "url": "https://duotide.com.br/fr/blog/indicateur-kdj-une-variante-du-stochastique/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-12T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-app-03.webp",
       "articleSection": "Indicateurs",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">5 min de lecture</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
             </div>
-            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-12">12 octobre 2026</time></p>
             <span class="bq__tag">Indicateurs</span>
             <h1>Indicateur KDJ : une variante de l'oscillateur stochastique</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personnage éditorial · Rubrique Analyse</small></span></div>
@@ -203,24 +203,79 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#ce-que-represente-chaque-lettre">Ce que représente chaque lettre</a></li>
-                <li><a href="#comment-interpreter-les-trois-lignes-ensemble">Comment interpréter les trois lignes ensemble</a></li>
-                <li><a href="#un-exemple-de-lecture-pratique">Un exemple de lecture pratique</a></li>
-                <li><a href="#ou-le-kdj-tend-a-echouer">Où le KDJ tend à échouer</a></li>
-                <li><a href="#combiner-le-kdj-avec-d-autres-indicateurs">Combiner le KDJ avec d'autres indicateurs</a></li>
-                <li><a href="#utiliser-l-indicateur-avec-discernement">Utiliser l'indicateur avec discernement</a></li>
+                <li><a href="#qu-est-ce-que-l-indicateur-kdj">Qu'est-ce que l'indicateur KDJ</a></li>
+                <li><a href="#comment-calculer-le-kdj">Comment calculer le KDJ</a></li>
+                <li><a href="#exemple-reel-kdj-et-stochastique-sur-le-gbp-usd-en-2026">Exemple réel : KDJ et stochastique sur le GBP/USD en 2026</a></li>
+                <li><a href="#comment-utiliser-le-kdj">Comment utiliser le KDJ</a></li>
+                <li><a href="#erreurs-courantes-avec-le-kdj">Erreurs courantes avec le KDJ</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Ceux qui connaissent déjà l'oscillateur stochastique reconnaissent une bonne partie du KDJ immédiatement : les lignes K et D sont calculées de la même façon que le %K et le %D du stochastique traditionnel. La différence réside dans la troisième ligne, la J, qui change la façon d'interpréter les convergences et divergences entre acheteurs et vendeurs.</p><figure class="ap__grafico"><img src="/assets/graficos/indicador-kdj-uma-variacao-do-estocastico.svg" alt="Graphique : GBP/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : GBP/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure><h2 id="ce-que-represente-chaque-lettre">Ce que représente chaque lettre</h2><ul><li><strong>K</strong> : équivalent au %K du stochastique — montre où se situe la clôture dans la fourchette récente de plus haut et plus bas.</li><li><strong>D</strong> : équivalent au %D — une moyenne mobile de K, qui lisse la ligne et sert de référence de signal.</li><li><strong>J</strong> : représente la divergence entre la valeur de D et la valeur de K, généralement calculée comme J = 3×K − 2×D. Elle amplifie le mouvement des deux autres lignes, pouvant dépasser les limites de 0 et 100 lors de fortes convergences ou divergences.</li></ul><p>Un exemple : si K est à 78 et D est à 65, la ligne J serait de 3×78 − 2×65 = 234 − 130 = 104 — au-dessus du plafond de 100 qui limite K et D. Ce comportement est normal pour la ligne J et c'est précisément ce qui la rend plus sensible aux changements brusques que les deux autres lignes.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-interpreter-les-trois-lignes-ensemble">Comment interpréter les trois lignes ensemble</h2><p>Comme dans le stochastique, les niveaux de référence les plus courants sont 20 (survente) et 80 (surachat). La lecture du KDJ ajoute la position relative entre les trois lignes : quand les trois convergent au-dessus de la zone de surachat, avec la ligne K au-dessus de D et D au-dessus de J inversée (ou suivant l'ordre des couleurs de la plateforme), la lecture traditionnelle est celle d'une possible pression vendeuse en formation. L'inverse, avec convergence en dessous de la zone de survente, suggère une possible pression acheteuse en formation.</p><h2 id="un-exemple-de-lecture-pratique">Un exemple de lecture pratique</h2><p>Imaginez un actif où K, D et J convergent dans une zone au-dessus de 80, avec la ligne J ayant monté plus fortement que K et D sur les dernières bougies — signal que le mouvement haussier a rapidement perdu de son élan. Si, sur les bougies suivantes, cette convergence se défait avec les trois lignes se retournant vers le bas en même temps, cela renforce la lecture d'un affaiblissement du mouvement acheteur, plus que ne le montrerait chacune des trois lignes isolément.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ou-le-kdj-tend-a-echouer">Où le KDJ tend à échouer</h2><p>Comme tout indicateur de cette famille, le KDJ fonctionne moins bien sur des marchés sans tendance définie (marché latéral), où les trois lignes se croisent à répétition sans que le prix ne bouge de façon cohérente dans la direction signalée. Réagissant de façon plus amplifiée que le stochastique traditionnel, la ligne J tend à produire encore plus de ces signaux rapides et sans continuité sur ce type de marché — ce qui demande plus de prudence, pas moins, en l'utilisant comme déclencheur isolé d'entrée.</p><h2 id="combiner-le-kdj-avec-d-autres-indicateurs">Combiner le KDJ avec d'autres indicateurs</h2><p>Une pratique recommandée est de combiner le KDJ avec un indicateur de force de tendance, comme l'ADX, et avec un indicateur de volatilité, comme l'ATR. L'ADX aide à identifier si le marché est ou non en tendance — une information que le KDJ seul ne fournit pas — et l'ATR aide à dimensionner le risque de l'opération selon l'amplitude habituelle du mouvement de l'actif, car le KDJ tend justement à mal fonctionner dans les périodes de faible volatilité et de marché latéral.</p><h2 id="utiliser-l-indicateur-avec-discernement">Utiliser l'indicateur avec discernement</h2><p>Le KDJ fonctionne mieux comme une version plus sensible du stochastique, utile pour capter des changements de momentum un peu avant les deux lignes traditionnelles, que comme substitut complet d'une analyse plus large du graphique. Comme pour tout indicateur d'extrêmes, aucun signal du KDJ ne garantit la réussite, et une opération basée sur lui dépend toujours de la gestion du risque et d'un stop bien défini pour ne pas reposer uniquement sur la lecture de l'indicateur.</p><p>Il vaut aussi la peine d'ajuster la période standard du KDJ (généralement 9) selon l'actif et l'échéance opérée : des périodes plus courtes rendent la ligne J encore plus sensible, utile pour des opérations rapides, tandis que des périodes plus longues lissent ce comportement et tendent à générer moins de signaux, mais avec plus de cohérence dans le temps, ce qui favorise généralement ceux qui opèrent sur des échéances plus longues et préfèrent moins de bruit à plus de rapidité de signal.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Le KDJ est une variante de l'Oscillateur Stochastique avec trois lignes : K et D, des versions lissées du stochastique, et J, calculée comme 3K − 2D. La <strong>ligne J amplifie la distance entre K et D</strong>, peut dépasser 100 ou tomber en dessous de 0 et a tendance à virer avant les autres. Au-dessus de 80, elle indique un surachat, et en dessous de 20, une survente, sans garantir de renversement.</p></div>
+            <p>Ceux qui utilisent déjà l'oscillateur stochastique connaissent la logique de comparer la clôture à la fourchette entre le plus haut et le plus bas récents. Le KDJ part exactement de cette base, lisse les lignes d'une autre façon et ajoute une troisième, la ligne J, qui réagit avant les autres. Il est très utilisé sur le marché actions chinois et apparaît aujourd'hui sur la plupart des plateformes de graphiques.</p>
+<p>Dans cet article, nous calculons le KDJ avec les cotations quotidiennes réelles de la livre sterling contre le dollar (GBP/USD) entre avril et octobre 2026, et nous comparons ses signaux à ceux du stochastique traditionnel sur la même période.</p>
+<h2 id="qu-est-ce-que-l-indicateur-kdj">Qu'est-ce que l'indicateur KDJ</h2>
+<p>Le KDJ a trois lignes, toutes dérivées du RSV, qui est le même calcul que le %K rapide du stochastique : la position de la clôture dans la fourchette des N dernières périodes, de 0 à 100.</p>
+<ul class="check-list">
+<li><strong>Ligne K :</strong> une moyenne lissée du RSV. Dans le stochastique ordinaire, le %K rapide est le RSV lui-même ; dans le KDJ, il arrive déjà lissé.</li>
+<li><strong>Ligne D :</strong> une moyenne lissée de la ligne K, plus lente.</li>
+<li><strong>Ligne J :</strong> 3K − 2D. Elle mesure de combien K s'est éloigné de D et amplifie cette distance. C'est pourquoi elle peut dépasser 100 ou tomber en dessous de 0.</li>
+</ul>
+<p>La différence pratique avec le stochastique est cette troisième ligne. Elle fonctionne comme une alerte anticipée : elle a tendance à virer avant le croisement entre K et D.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-calculer-le-kdj">Comment calculer le KDJ</h2>
+<p>Avec la configuration standard (9, 3, 3) :</p>
+<ul class="check-list">
+<li>RSV = (clôture − plus bas de 9 périodes) ÷ (plus haut de 9 − plus bas de 9) × 100</li>
+<li>K = 2/3 × K précédent + 1/3 × RSV</li>
+<li>D = 2/3 × D précédent + 1/3 × K</li>
+<li>J = 3 × K − 2 × D</li>
+</ul>
+<h3>Exemple avec le GBP/USD le 07/10/2026</h3>
+<p>Sur les 9 séances jusqu'au 07/10, le plus haut a été de 1,33067 et le plus bas, de 1,31822. La clôture était de 1,32668. La veille, K valait 26,06 et D, 22,33. Les calculs utilisent les valeurs sans arrondi ; refaits avec les chiffres affichés, la dernière décimale peut varier.</p>
+<ul class="check-list">
+<li>RSV = (1,32668 − 1,31822) ÷ (1,33067 − 1,31822) × 100 = <strong>67,96</strong></li>
+<li>K = 2/3 × 26,06 + 1/3 × 67,96 = 17,37 + 22,65 = <strong>40,03</strong></li>
+<li>D = 2/3 × 22,33 + 1/3 × 40,03 = 14,89 + 13,34 = <strong>28,23</strong></li>
+<li>J = 3 × 40,03 − 2 × 28,23 = <strong>63,62</strong></li>
+</ul>
+<p>Remarquez la différence : le stochastique rapide de 9 périodes marquerait 67,96 ce jour-là, le RSV lui-même. Le K du KDJ, lissé, est à 40,03. La ligne J, à 63,62, se situe entre les deux et montre que l'impulsion de hausse des derniers jours gagne en force.</p>
+<h2 id="exemple-reel-kdj-et-stochastique-sur-le-gbp-usd-en-2026">Exemple réel : KDJ et stochastique sur le GBP/USD en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/indicador-kdj-uma-variacao-do-estocastico.svg" alt="Graphique : GBP/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : GBP/USD, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure>
+<p>Le graphique montre le GBP/USD avec le stochastique traditionnel de 9 périodes : la ligne bleue est le %K rapide (le RSV) et l'orange, la moyenne de 3. La paire a terminé la période pratiquement là où elle avait commencé, avec un plus haut de 1,3675 le 21/08 et un plus bas de 1,3143 le 24/06. Nous avons calculé le KDJ sur les mêmes cotations.</p>
+<h3>Moins de signaux extrêmes que le stochastique</h3>
+<p>Sur la période, le %K du stochastique a croisé au-dessus de 80 ou en dessous de 20 à 29 occasions. La ligne J du KDJ a dépassé 100 ou est tombée en dessous de 0 à seulement 8 reprises. Les trois lignes du KDJ en même temps au-dessus de 80 ne se sont produites sur aucune des 136 séances ; en même temps en dessous de 20, sur 4. Le lissage du K rend le KDJ bien plus sélectif que le stochastique rapide dans les zones extrêmes.</p>
+<h3>Juillet : la ligne J près du creux</h3>
+<p>Le 28/07, avec la paire à 1,3290, la ligne J est tombée à −5,8, tandis que K était à 19,3 et D à 31,9. Dix séances plus tard, le GBP/USD était à 1,3511, une hausse de 1,67 %, et a continué de monter jusqu'au plus haut de la période le 21/08. Le stochastique était aussi en survente ce jour-là (6,17), mais avait déjà donné des signaux similaires le 22/07 et le 24/07.</p>
+<h3>Septembre : alerte anticipée qui a échoué</h3>
+<p>Le 02/09, avec la paire à 1,3515, la J est tombée légèrement en dessous de zéro (−0,2), un jour avant que le %K du stochastique ne tombe en dessous de 20. Dix séances plus tard, le prix était 0,31 % plus bas, et la baisse s'est poursuivie jusqu'à 1,3211 le 25/09, quand la J est redevenue négative. Le signal anticipé est arrivé trop tôt : la paire commençait une correction, elle ne la terminait pas.</p>
+<h3>Croisements entre K et D</h3>
+<p>Sur les 22 croisements entre K et D avec dix séances d'historique après, le prix a évolué dans la direction du croisement dans 11 cas, exactement la moitié. Sur une paire qui a terminé la période à zéro partout, le croisement seul n'a offert aucun avantage.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-05.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-utiliser-le-kdj">Comment utiliser le KDJ</h2>
+<h3>Surachat et survente</h3>
+<p>Les trois lignes au-dessus de 80 indiquent un surachat ; en dessous de 20, une survente. Comme cela est rare dans le KDJ, quand cela se produit, le mouvement est généralement très tendu. Malgré cela, ce n'est pas un signal automatique de renversement.</p>
+<h3>Ligne J comme alerte</h3>
+<p>La J au-dessus de 100 ou en dessous de 0 avertit que K s'est beaucoup éloigné de D. Utilisez-la comme signal pour observer le prix de près, pas comme un ordre.</p>
+<h3>Croisement de K et D</h3>
+<p>K croisant D vers le haut se lit comme un signal d'achat ; vers le bas, de vente. Cela fonctionne mieux dans le sens de la tendance plus large et près des supports et résistances.</p>
+<h3>Limites</h3>
+<p>Le KDJ hérite des problèmes du stochastique : en tendance forte, il passe beaucoup de temps dans les extrêmes, et en marché latéral, il génère des croisements sans direction. La ligne J, étant amplifiée, amplifie aussi le bruit. La valeur initiale du lissage change un peu les chiffres entre les plateformes au début de la série.</p>
+<h2 id="erreurs-courantes-avec-le-kdj">Erreurs courantes avec le KDJ</h2>
+<ul class="check-list">
+<li>Penser que le KDJ est identique au stochastique avec une ligne supplémentaire : le K arrive déjà lissé et donne des lectures différentes.</li>
+<li>Trader chaque passage de la J par 100 ou par 0 comme un renversement certain.</li>
+<li>Ignorer la tendance et trader des croisements de K et D contre elle.</li>
+<li>Comparer les valeurs du KDJ entre plateformes sans vérifier la configuration et la méthode de lissage.</li>
+<li>Oublier que les exemples du GBP/USD décrivent ce qui s'est passé, pas ce qui va se passer.</li>
+</ul>
+<p>Pour vous entraîner, placez le KDJ et le stochastique sur le même graphique du compte démo et enregistrez, pendant quelques semaines, chaque signal extrême des deux, avec le prix du jour et le prix dix périodes plus tard. Comparer les deux registres montre si la ligne J ajoute quelque chose à votre méthode.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 USD virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
             </div>
             <div class="ap__fim">
-              <p>Mis à jour le: <time datetime="2026-10-08">8 oct. 2026</time></p>
+              <p>Mis à jour le: <time datetime="2026-10-12">12 oct. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -249,9 +304,9 @@
         <aside class="ap__rel">
           <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/fr/blog/quest-ce-que-lindicateur-adx/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'indicateur ADX et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/quest-ce-que-loscillateur-stochastique/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'oscillateur stochastique et comment il fonctionne</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'Average True Range (ATR) et comment le calculer</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/quest-ce-que-lindicateur-adx/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'indicateur ADX et comment calculer la force de la tendance</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/quest-ce-que-loscillateur-stochastique/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'oscillateur stochastique et comment calculer %K et %D</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/average-true-range-atr/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Qu'est-ce que l'ATR (Average True Range) et comment le calculer</span><span class="bq__meta">24/09/2026 · 6 min de lecture</span></a>
           </div>
         </aside>
       </div>
@@ -334,6 +389,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100453" defer></script>
+  <script src="/assets/js/main.js?v=202610120826" defer></script>
 </body>
 </html>

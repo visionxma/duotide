@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Gamma squeeze vs short squeeze: qual è la differenza reale | Blog Duotide</title>
-  <meta name="description" content="Capisci chi compra e perché in ogni tipo di squeeze, come le due forze possono sommarsi e perché il caso GameStop del 2021 non fu solo una cosa.">
+  <meta name="description" content="Chi compra e perché in ogni tipo di squeeze, un esempio numerico di ciascun meccanismo e perché il caso GameStop del 2021 non è stato solo una cosa.">
   <link rel="canonical" href="https://duotide.com.br/it/blog/gamma-squeeze-vs-short-squeeze-le-differenze/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/gamma-squeeze-vs-short-squeeze-diferencas/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Gamma squeeze vs short squeeze: qual è la differenza reale">
-  <meta property="og:description" content="Capisci chi compra e perché in ogni tipo di squeeze, come le due forze possono sommarsi e perché il caso GameStop del 2021 non fu solo una cosa.">
+  <meta property="og:description" content="Chi compra e perché in ogni tipo di squeeze, un esempio numerico di ciascun meccanismo e perché il caso GameStop del 2021 non è stato solo una cosa.">
   <meta property="og:url" content="https://duotide.com.br/it/blog/gamma-squeeze-vs-short-squeeze-le-differenze/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-corretora-03.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gamma squeeze vs short squeeze: qual è la differenza reale">
-  <meta name="twitter:description" content="Capisci chi compra e perché in ogni tipo di squeeze, come le due forze possono sommarsi e perché il caso GameStop del 2021 non fu solo una cosa.">
+  <meta name="twitter:description" content="Chi compra e perché in ogni tipo di squeeze, un esempio numerico di ciascun meccanismo e perché il caso GameStop del 2021 non è stato solo una cosa.">
   <meta name="twitter:label1" content="Scritto da">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Tempo di lettura">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610120826">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/it/blog/gamma-squeeze-vs-short-squeeze-le-differenze/#artigo",
       "headline": "Gamma squeeze vs short squeeze: qual è la differenza reale",
-      "description": "Capisci chi compra e perché in ogni tipo di squeeze, come le due forze possono sommarsi e perché il caso GameStop del 2021 non fu solo una cosa.",
+      "description": "Chi compra e perché in ogni tipo di squeeze, un esempio numerico di ciascun meccanismo e perché il caso GameStop del 2021 non è stato solo una cosa.",
       "url": "https://duotide.com.br/it/blog/gamma-squeeze-vs-short-squeeze-le-differenze/",
       "inLanguage": "it",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-12T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-corretora-03.webp",
       "articleSection": "Azioni",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 set 2026</time><span class="ap__sep">5 min di lettura</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span>
             </div>
-            <p class="ap__atual">Aggiornato il: <time datetime="2026-10-08">8 ottobre 2026</time></p>
+            <p class="ap__atual">Aggiornato il: <time datetime="2026-10-12">12 ottobre 2026</time></p>
             <span class="bq__tag">Azioni</span>
             <h1>Gamma squeeze vs short squeeze: qual è la differenza reale</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/rafael-azevedo.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Rafael Azevedo</strong><small>Personaggio editoriale · Redazione Mercati</small></span></div>
@@ -203,43 +203,70 @@
             <nav class="ap__indice" aria-label="Indice">
               <p class="ap__indice-tit">Indice</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#short-squeeze-chi-ha-venduto-allo-scoperto-costretto-a-ricom">Short squeeze: chi ha venduto allo scoperto costretto a ricomprare</a></li>
-                <li><a href="#gamma-squeeze-chi-ha-venduto-opzioni-call-adattando-la-coper">Gamma squeeze: chi ha venduto opzioni call adattando la copertura</a></li>
-                <li><a href="#i-due-possono-accadere-allo-stesso-tempo">I due possono accadere allo stesso tempo</a></li>
-                <li><a href="#cosa-i-dati-pubblici-riescono-e-non-riescono-a-provare">Cosa i dati pubblici riescono e non riescono a provare</a></li>
-                <li><a href="#il-caso-gamestop-nel-2021-perche-un-unica-etichetta-non-e-ba">Il caso GameStop nel 2021: perché un'unica etichetta non è bastata</a></li>
-                <li><a href="#il-rischio-di-provare-a-entrare-dopo-che-il-grafico-e-gia-es">Il rischio di provare a entrare dopo che il grafico è già esploso</a></li>
+                <li><a href="#cos-e-lo-short-squeeze">Cos'è lo short squeeze</a></li>
+                <li><a href="#cos-e-il-gamma-squeeze">Cos'è il gamma squeeze</a></li>
+                <li><a href="#esempio-reale-cosa-mostrano-e-non-mostrano-i-dati-pubblici">Esempio reale: cosa mostrano e non mostrano i dati pubblici</a></li>
+                <li><a href="#come-usare-questa-differenza">Come usare questa differenza</a></li>
+                <li><a href="#errori-comuni-sugli-squeeze">Errori comuni sugli squeeze</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Torna su</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            
-<p>Short squeeze e gamma squeeze sono due termini che tendono a comparire insieme ogni volta che un'azione esplode in modo improvviso, ma descrivono meccanismi diversi, con compratori diversi dietro la forza d'acquisto. Confondere i due può portare a scommettere su una continuazione del movimento che in realtà non ha lo stesso carburante dietro.</p>
-<h2 id="short-squeeze-chi-ha-venduto-allo-scoperto-costretto-a-ricom">Short squeeze: chi ha venduto allo scoperto costretto a ricomprare</h2>
-<p>Uno short squeeze inizia con trader che hanno venduto azioni prese in prestito, scommettendo su un calo di prezzo. Se il prezzo sale invece di scendere, queste posizioni iniziano ad accumulare perdite. Richieste di margine, costo crescente per mantenere il prestito delle azioni o limiti di rischio interni possono costringere questi venditori a ricomprare le azioni per chiudere la posizione. Se molti venditori provano a ricomprare allo stesso tempo, questa domanda extra può spingere il prezzo ancora più in alto, mettendo pressione su altri venditori affinché facciano lo stesso.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/mer-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="gamma-squeeze-chi-ha-venduto-opzioni-call-adattando-la-coper">Gamma squeeze: chi ha venduto opzioni call adattando la copertura</h2>
-<p>Un gamma squeeze ha un'origine diversa, legata al mercato delle opzioni. Quando molti investitori comprano opzioni call di un'azione, il venditore di queste opzioni, di solito un market maker, può ritrovarsi con un'esposizione che deve essere coperta. Se questo venditore ha una posizione netta negativa in gamma, potrebbe dover comprare azioni dell'asset per coprirsi man mano che il prezzo sale. Poiché il prezzo che sale cambia di nuovo questa esposizione, potrebbe essere necessario comprare ancora più azioni, creando un ciclo che rafforza il rialzo stesso.</p>
-<h2 id="i-due-possono-accadere-allo-stesso-tempo">I due possono accadere allo stesso tempo</h2>
-<p>Un rialzo comune o una notizia rilevante può attirare compratori di azioni e di opzioni call allo stesso tempo. Se parte di questo acquisto di opzioni lascia i market maker con una posizione corta in gamma, la copertura di questi market maker può aggiungere domanda extra. Il prezzo più alto può quindi mettere pressione sui venditori allo scoperto affinché ricomprino le loro posizioni. Le due forze possono alimentarsi a vicenda all'interno dello stesso movimento, il che rende difficile separare quanto del rialzo sia venuto da ciascuna.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cosa-i-dati-pubblici-riescono-e-non-riescono-a-provare">Cosa i dati pubblici riescono e non riescono a provare</h2>
-<ul>
-<li><strong>Volume di opzioni call:</strong> mostra quanti contratti sono stati negoziati, ma non prova che i market maker siano rimasti corti in gamma, perché parte di queste opzioni potrebbe essere stata venduta da altri investitori o negoziata dentro strutture con posizioni opposte.</li>
-<li><strong>Contratti aperti:</strong> mostra quanti contratti restano attivi, ma non rivela chi sta da ogni lato dell'operazione.</li>
-<li><strong>Posizione corta (short interest):</strong> viene di solito pubblicata solo due volte al mese, quindi un numero alto non prova che i venditori stiano ricomprando ora, solo che la posizione esisteva all'ultima data di riferimento.</li>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Risposta rapida</p><p>Nello <strong>short squeeze</strong>, chi compra forzatamente sono i venditori allo scoperto, che riacquistano azioni per limitare la perdita quando il prezzo sale. Nel <strong>gamma squeeze</strong>, chi compra sono i venditori di opzioni call, di solito market maker, che acquisiscono azioni per proteggere la posizione. I due possono accadere insieme, e i dati pubblici raramente provano quale ha dominato.</p></div>
+            <p>Short squeeze e gamma squeeze tendono a comparire insieme ogni volta che un'azione scatta all'improvviso, ma descrivono meccanismi diversi, con compratori diversi dietro al rialzo. Confondere i due porta a puntare sulla continuazione di un movimento che forse non ha il carburante immaginato.</p>
+<p>Questa guida spiega chi è obbligato a comprare in ogni caso, mostra un esempio numerico di ciascun meccanismo, discute cosa i dati pubblici riescono a provare e rivisita il caso GameStop del 2021.</p>
+<h2 id="cos-e-lo-short-squeeze">Cos'è lo short squeeze</h2>
+<p>Uno short squeeze inizia con investitori che hanno venduto azioni in prestito puntando sul calo. Se il prezzo sale, queste posizioni accumulano perdite. Richiami di margine, prestito più caro delle azioni o limiti interni di rischio possono costringere questi venditori a riacquistare le azioni per chiudere la posizione. Se molti lo fanno allo stesso tempo, la domanda extra spinge il prezzo verso l'alto e pressiona altri venditori a fare lo stesso.</p>
+<h3>Esempio numerico (ipotetico)</h3>
+<ul class="check-list">
+<li>Un'azione ha 2 milioni di azioni vendute allo scoperto e volume medio di 1 milione al giorno: sono <strong>2 giorni</strong> di volume solo per azzerare queste posizioni (l'indicatore chiamato <em>days to cover</em>).</li>
+<li>Un venditore che ha venduto 100.000 azioni a US$ 50,00 vede il prezzo salire a US$ 60,00: perdita di 100.000 × 10,00 = <strong>US$ 1.000.000,00</strong>.</li>
+<li>Se riacquista, sono altre 100.000 azioni di domanda che entrano nel mercato, proprio quando il prezzo sta già salendo.</li>
 </ul>
-<p>Prezzo e volume che salgono insieme sono coerenti con entrambe le storie, o con nessuna delle due, dato che anche compratori comuni possono essere dietro il movimento.</p>
-<h2 id="il-caso-gamestop-nel-2021-perche-un-unica-etichetta-non-e-ba">Il caso GameStop nel 2021: perché un'unica etichetta non è bastata</h2>
-<p>L'analisi della SEC sul caso GameStop, nel gennaio 2021, ha trovato prove che venditori allo scoperto noti hanno comprato azioni durante periodi specifici del rialzo, il che suggerisce che parte del movimento sia venuta dal riacquisto di posizioni corte. Ma questa stessa analisi ha identificato che questo riacquisto ha rappresentato solo una piccola frazione del volume totale di acquisto, e che il prezzo è rimasto elevato per settimane dopo che l'effetto diretto del riacquisto sarebbe dovuto diminuire. L'analisi ha anche osservato un'attività elevata in opzioni, ma gran parte è venuta dall'acquisto di opzioni put, e i market maker stavano comprando, non vendendo opzioni call, il che non corrisponde al pattern atteso di un gamma squeeze classico. La conclusione è stata che il sentiment positivo sostenuto, più di ciascuno dei due meccanismi isolatamente, ha aiutato a mantenere il prezzo elevato per così tanto tempo.</p>
-<h2 id="il-rischio-di-provare-a-entrare-dopo-che-il-grafico-e-gia-es">Il rischio di provare a entrare dopo che il grafico è già esploso</h2>
-<p>Inseguire uno squeeze dopo che il movimento è già diventato visibile di solito significa comprare nel peggiore momento possibile. Gli spread possono allargarsi, le opzioni possono diventare costose a causa della volatilità implicita elevata, e un ordine a mercato può essere eseguito ben lontano dall'ultimo prezzo mostrato sullo schermo. Nessuno di questi meccanismi garantisce un prossimo movimento, e un forte rialzo può invertirsi non appena il riacquisto o la copertura delle opzioni perde forza. Definire il rischio prima di entrare resta più importante che provare a indovinare quale etichetta spiega meglio un movimento già accaduto.</p>
-
+<figure class="ap__ilustra"><img src="/assets/img/blog/mer-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="cos-e-il-gamma-squeeze">Cos'è il gamma squeeze</h2>
+<p>Un gamma squeeze nasce nel mercato delle opzioni. Quando molti investitori comprano opzioni call, chi le vende, di solito un market maker, resta esposto al rialzo. Per proteggersi, compra azioni dell'asset sottostante nella proporzione del <strong>delta</strong> delle opzioni vendute. Il <strong>gamma</strong> misura quanto questo delta cambia quando il prezzo si muove. Se il market maker ha gamma negativo, ogni rialzo aumenta il delta e lo obbliga a comprare più azioni, il che può rafforzare lo stesso rialzo.</p>
+<h3>Esempio numerico (ipotetico)</h3>
+<p>Un market maker ha venduto 10.000 contratti call, ognuno su 100 azioni, cioè esposizione a 1.000.000 di azioni:</p>
+<ul class="check-list">
+<li>Azione a US$ 50,00, delta 0,30: protezione = 0,30 × 1.000.000 = <strong>300.000 azioni</strong> comprate.</li>
+<li>Azione a US$ 55,00, delta 0,55: protezione necessaria = 550.000 → compra altre <strong>250.000 azioni</strong>.</li>
+<li>Azione a US$ 60,00, delta 0,80: protezione necessaria = 800.000 → compra altre <strong>250.000 azioni</strong>.</li>
+</ul>
+<p>Ogni gradino di rialzo ha generato un nuovo acquisto, senza che nessun investitore avesse cambiato opinione sull'azienda. L'effetto è più forte quando le opzioni sono vicine al prezzo di esercizio e alla scadenza, dove il gamma è maggiore. Il percorso inverso vale anche: se il prezzo cade, il market maker vende azioni e può accelerare il calo.</p>
+<h2 id="esempio-reale-cosa-mostrano-e-non-mostrano-i-dati-pubblici">Esempio reale: cosa mostrano e non mostrano i dati pubblici</h2>
+<p>Nella pratica, non vedi la posizione dei market maker né quella dei venditori allo scoperto in tempo reale. Quello che esiste sono indizi:</p>
+<ul class="check-list">
+<li><strong>Volume di call:</strong> mostra quanti contratti sono stati negoziati, ma non prova che i market maker siano rimasti venduti in gamma; parte delle call può essere stata venduta da altri investitori o far parte di strutture con posizioni opposte.</li>
+<li><strong>Contratti in essere:</strong> mostrano quanti contratti restano attivi, non chi sta da ogni lato.</li>
+<li><strong>Posizione venduta allo scoperto (short interest):</strong> negli Stati Uniti viene pubblicata due volte al mese; un numero alto prova che la posizione esisteva alla data di riferimento, non che i venditori la stiano riacquistando ora.</li>
+<li><strong>Prezzo e volume che salgono insieme:</strong> sono compatibili con entrambe le storie, con nessuna delle due, o con compratori comuni.</li>
+</ul>
+<h3>Il caso GameStop nel 2021</h3>
+<p>Il rapporto del team della SEC su GameStop, pubblicato nel 2021, ha analizzato il rialzo di gennaio di quell'anno. Ha trovato evidenze che venditori allo scoperto hanno comprato azioni in momenti specifici del rialzo, il che indica riacquisto di posizioni vendute. Ma questo riacquisto è stato una frazione piccola del volume totale di acquisto, e il prezzo è rimasto elevato dopo che il suo effetto diretto avrebbe dovuto diminuire.</p>
+<p>Il rapporto ha registrato anche un'attività elevata nelle opzioni, ma gran parte è venuta da acquisto di put, e i market maker stavano comprando, non vendendo, call in termini netti, il che non corrisponde al pattern di un gamma squeeze classico. La conclusione è stata che il sentiment positivo sostenuto dei compratori, più di qualsiasi dei due meccanismi isolati, ha mantenuto il prezzo alto per tanto tempo.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="come-usare-questa-differenza">Come usare questa differenza</h2>
+<h3>Identifica chi è costretto a comprare</h3>
+<p>Nello short squeeze, l'acquisto forzato viene da chi è venduto in azioni. Nel gamma squeeze, da chi è venduto in call e fa hedge. Chiedersi chi è costretto a comprare, e quanto resta ancora da comprare, aiuta a separare narrativa da meccanismo.</p>
+<h3>I due possono sommarsi</h3>
+<p>Una notizia può attrarre compratori di azioni e di call allo stesso tempo. L'hedge dei market maker aggiunge domanda, il prezzo più alto pressiona i venditori allo scoperto, e le due forze si alimentano. Per questo è difficile, anche dopo, separare quanto del rialzo è venuto da ciascuna.</p>
+<h3>Limiti</h3>
+<p>I due meccanismi si esauriscono: quando i venduti hanno già riacquistato o le opzioni scadono, l'acquisto forzato finisce e il rialzo può invertirsi in fretta. Nessun indicatore pubblico mostra con precisione quanto carburante resta ancora.</p>
+<h2 id="errori-comuni-sugli-squeeze">Errori comuni sugli squeeze</h2>
+<ul class="check-list">
+<li>Chiamare ogni rialzo forte short squeeze senza guardare i dati di posizione venduta.</li>
+<li>Trattare un volume alto di call come prova di gamma squeeze.</li>
+<li>Entrare dopo che il grafico è già scattato, quando gli spread si allargano, le opzioni diventano care per la volatilità implicita alta e gli ordini a mercato vengono eseguiti lontano dall'ultimo prezzo.</li>
+<li>Dimenticare che il meccanismo funziona nei due sensi e può accelerare il calo.</li>
+<li>Operare senza stop definito perché la narrativa sembra forte.</li>
+</ul>
+<p>Per capire questi meccanismi senza rischiare denaro, segui sul conto demo un'azione con movimento forte, annota volume, notizie e cosa ha fatto il prezzo nei giorni seguenti, e registra se la tua lettura iniziale si è confermata. Definire il rischio prima di entrare resta più importante che azzeccare l'etichetta di un movimento già accaduto.</p>
             <div class="bq-post__cta">
               <p><strong>Esercitati prima di rischiare.</strong> Apri il tuo conto Duotide e prova le tue idee sul conto demo con 10.000 USD virtuali.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-it" target="_blank" rel="noopener sponsored nofollow">Crea un conto gratis</a>
             </div>
             <div class="ap__fim">
-              <p>Aggiornato il: <time datetime="2026-10-08">8 ott 2026</time></p>
+              <p>Aggiornato il: <time datetime="2026-10-12">12 ott 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> visualizzazioni</span></span><button class="ap__compartilhar" type="button">Condividi <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -269,7 +296,7 @@
           <h2>Articoli correlati</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/it/blog/perche-lazione-nike-e-scesa-uscita-dallsp-100/"><img src="/assets/img/mini/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp" srcset="/assets/img/mini/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp 480w, /assets/img/capas/noticia-alphabet-recua-na-bolsa-gastos-com-ia.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Perché l'azione Nike è scesa? L'uscita dall'S&amp;P 100 spiegata</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
-            <a class="bq__card" href="/it/blog/guida-alle-operazioni-a-breve-termine-sulle-azioni/"><img src="/assets/img/mini/duotide-corretora-03.webp" srcset="/assets/img/mini/duotide-corretora-03.webp 480w, /assets/img/duotide-corretora-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Guida alle operazioni a breve termine sulle azioni: 4 tappe</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
+            <a class="bq__card" href="/it/blog/guida-alle-operazioni-a-breve-termine-sulle-azioni/"><img src="/assets/img/mini/duotide-corretora-03.webp" srcset="/assets/img/mini/duotide-corretora-03.webp 480w, /assets/img/duotide-corretora-03.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Operazioni a breve termine sulle azioni: guida in 4 fasi</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
             <a class="bq__card" href="/it/blog/stagione-dei-bilanci-delle-big-tech-perche-muove-il-mercato/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Stagione dei bilanci delle big tech: perché muove il mercato</span><span class="bq__meta">24/09/2026 · 5 min di lettura</span></a>
           </div>
         </aside>
@@ -353,6 +380,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100453" defer></script>
+  <script src="/assets/js/main.js?v=202610120826" defer></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Stratégie martingale en trading : fonctionnement et risques | Blog Duotide</title>
-  <meta name="description" content="Comprenez comment fonctionne la stratégie martingale appliquée au trading et pourquoi elle peut accélérer la perte de capital au lieu de la protéger.">
+  <meta name="description" content="Comment fonctionne la martingale, le calcul des mises doublées, sept baisses réelles du bitcoin en 2026 et pourquoi la stratégie accélère la perte de capital.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/strategie-martingale-en-trading/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-martingale-no-trading/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Stratégie martingale en trading : fonctionnement et risques">
-  <meta property="og:description" content="Comprenez comment fonctionne la stratégie martingale appliquée au trading et pourquoi elle peut accélérer la perte de capital au lieu de la protéger.">
+  <meta property="og:description" content="Comment fonctionne la martingale, le calcul des mises doublées, sept baisses réelles du bitcoin en 2026 et pourquoi la stratégie accélère la perte de capital.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/strategie-martingale-en-trading/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Stratégie martingale en trading : fonctionnement et risques">
-  <meta name="twitter:description" content="Comprenez comment fonctionne la stratégie martingale appliquée au trading et pourquoi elle peut accélérer la perte de capital au lieu de la protéger.">
+  <meta name="twitter:description" content="Comment fonctionne la martingale, le calcul des mises doublées, sept baisses réelles du bitcoin en 2026 et pourquoi la stratégie accélère la perte de capital.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610120826">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/strategie-martingale-en-trading/#artigo",
       "headline": "Stratégie martingale en trading : fonctionnement et risques",
-      "description": "Comprenez comment fonctionne la stratégie martingale appliquée au trading et pourquoi elle peut accélérer la perte de capital au lieu de la protéger.",
+      "description": "Comment fonctionne la martingale, le calcul des mises doublées, sept baisses réelles du bitcoin en 2026 et pourquoi la stratégie accélère la perte de capital.",
       "url": "https://duotide.com.br/fr/blog/strategie-martingale-en-trading/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-gestao-de-risco-stop-e-posicao.webp",
       "articleSection": "Gestion du risque",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">5 min de lecture</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
             </div>
-            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-10">10 octobre 2026</time></p>
             <span class="bq__tag">Gestion du risque</span>
             <h1>Stratégie martingale en trading : fonctionnement et risques</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/camila-nascimento.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Camila Nascimento</strong><small>Personnage éditorial · Rubrique Risque et comportement</small></span></div>
@@ -203,23 +203,65 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#comment-fonctionne-la-martingale">Comment fonctionne la martingale</a></li>
-                <li><a href="#pourquoi-les-mathematiques-de-la-martingale-echouent-en-prat">Pourquoi les mathématiques de la martingale échouent en pratique</a></li>
-                <li><a href="#le-risque-de-ruine">Le risque de ruine</a></li>
-                <li><a href="#alternatives-plus-sures-de-gestion-de-position">Alternatives plus sûres de gestion de position</a></li>
-                <li><a href="#une-decision-qui-exige-une-extreme-prudence">Une décision qui exige une extrême prudence</a></li>
+                <li><a href="#qu-est-ce-que-la-martingale">Qu'est-ce que la martingale</a></li>
+                <li><a href="#comment-calculer-la-martingale">Comment calculer la martingale</a></li>
+                <li><a href="#exemple-reel-sept-baisses-consecutives-du-bitcoin-en-2026">Exemple réel : sept baisses consécutives du bitcoin en 2026</a></li>
+                <li><a href="#pourquoi-la-martingale-echoue-en-pratique">Pourquoi la martingale échoue en pratique</a></li>
+                <li><a href="#erreurs-courantes-avec-la-martingale">Erreurs courantes avec la martingale</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Peu de stratégies génèrent autant de débat que la martingale. L'idée derrière elle est simple à comprendre, et c'est peut-être justement cette simplicité qui la rend attrayante pour les débutants : doubler le montant de la prochaine opération après une perte, dans l'attente que, quand un gain finira par arriver, il récupère tout ce qui a été perdu auparavant et laisse même un petit profit.</p><p>Dans cet article, vous allez comprendre comment la martingale fonctionne en pratique, d'où elle vient et pourquoi la plupart des gestionnaires de risque sérieux recommandent une extrême prudence — voire d'éviter complètement cette approche en trading.</p><figure class="ap__grafico"><img src="/assets/graficos/estrategia-martingale-no-trading.svg" alt="Graphique : BTC/USDT, quotidien, du 15/04/2026 au 31/07/2026. Données : Binance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : BTC/USDT, quotidien, du 15/04/2026 au 31/07/2026. Données : Binance. Analyse propre.</figcaption></figure><h2 id="comment-fonctionne-la-martingale">Comment fonctionne la martingale</h2><p>La martingale est née comme système de paris, appliqué à l'origine à des jeux avec un résultat d'environ 50 % de chances, comme pile ou face. La règle est : misez un montant initial ; si vous perdez, doublez le montant du prochain pari ; si vous gagnez, revenez au montant initial. Comme chaque nouveau gain, en théorie, couvre toutes les pertes précédentes plus un petit profit, la stratégie semble garantir un résultat positif, à condition d'avoir suffisamment de capital pour continuer à doubler.</p><p>Appliquée au trading, la martingale fonctionne de façon similaire : après une opération perdante, le trader double (ou augmente significativement) la taille de la prochaine position, dans l'attente de récupérer la perte précédente dès que l'opération suivante sera gagnante.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="pourquoi-les-mathematiques-de-la-martingale-echouent-en-prat">Pourquoi les mathématiques de la martingale échouent en pratique</h2><p>Le problème central est que la martingale dépend de deux conditions qui existent rarement ensemble : un capital illimité et l'absence de limites sur la taille de la position. Supposons une opération initiale de 100 R$. Après quatre pertes consécutives, la cinquième opération devrait déjà être de 1 600 R$ juste pour récupérer les pertes précédentes. Après sept pertes consécutives, ce montant dépasse 12 800 R$. Des séquences de pertes de cette ampleur ne sont pas rares, même dans des jeux à 50 % de chances, et en trading la probabilité de réussite d'une opération est rarement exactement de 50 %, pouvant être bien plus faible selon la stratégie et les conditions de marché.</p><p>De plus, les courtiers et les plateformes de négociation imposent généralement des limites de taille de position et exigent une marge croissante, ce qui peut empêcher la poursuite de la martingale lors d'une séquence de pertes avant même que le capital ne soit complètement épuisé.</p><h2 id="le-risque-de-ruine">Le risque de ruine</h2><p>Ce scénario — se retrouver sans capital ou incapable d'ouvrir la prochaine opération au milieu d'une séquence de pertes — est appelé risque de ruine, et il est considérablement plus élevé dans les stratégies de martingale que dans les stratégies à taille de position fixe. Une seule séquence de pertes plus longue que prévu suffit à effacer des mois de gains précédents, ou le compte entier, en l'espace de quelques opérations.</p><p>Il est important d'être clair : la martingale ne réduit pas le risque d'une opération perdante, elle augmente l'exposition précisément au pire moment, qui est après une séquence de pertes — le moment où l'on sait le moins si la prochaine opération sera gagnante.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="alternatives-plus-sures-de-gestion-de-position">Alternatives plus sûres de gestion de position</h2><p>Plutôt que d'augmenter la taille de la position après une perte, la plupart des approches de gestion du risque recommandent l'inverse : maintenir le risque par opération comme un pourcentage fixe et faible du capital total, indépendamment du résultat des opérations précédentes. Si le risque défini est de 1 % du compte par opération, il reste 1 % après une perte et après un gain, sans s'accroître dangereusement.</p><p>Ce type de gestion accepte que les séquences de pertes fassent partie de toute stratégie, aussi bonne soit-elle, et protège le capital précisément à ces moments-là, plutôt que de tout miser sur une récupération immédiate.</p><h2 id="une-decision-qui-exige-une-extreme-prudence">Une décision qui exige une extrême prudence</h2><p>Si, malgré tout, quelqu'un décide d'explorer une variante de la martingale, le minimum recommandé est de définir une limite stricte du nombre de fois où le montant peut être augmenté avant d'interrompre la séquence, en acceptant la perte et en recommençant au montant initial. Même avec cette limite, la stratégie continue d'exiger un capital disproportionné par rapport à la taille de l'opération d'origine, et ne devrait pas être traitée comme une méthode sûre ou garantie de récupération.</p><p>Sur Duotide, comme sur toute plateforme, la taille de chaque position est un choix du trader, et il vaut bien mieux construire une gestion du risque basée sur des pourcentages fixes et durables que de se fier à un système qui, mathématiquement, augmente l'exposition précisément quand le résultat est déjà défavorable. Le trading comporte un risque réel de perte sur chaque opération, et aucune stratégie de gestion de position n'élimine cette possibilité.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>La martingale est la stratégie consistant à doubler le montant de la prochaine opération après chaque perte, pour que le premier gain récupère tout. En pratique, elle exige un capital qui croît en progression géométrique : en commençant avec 100 R$, sept pertes consécutives totalisent déjà 12 700 R$. De telles séquences se produisent sur les marchés réels, c'est pourquoi la martingale augmente fortement le risque de vider le compte.</p></div>
+            <p>Peu de stratégies génèrent autant de débats que la martingale. L'idée est facile à comprendre, et c'est peut-être cette simplicité même qui la rend attrayante pour les débutants : doubler le montant de la prochaine opération après chaque perte, dans l'attente que le premier gain récupère tout ce qui a été perdu et laisse même un petit profit.</p>
+<p>Dans ce guide, nous faisons les calculs de la martingale avec de vrais chiffres, y compris une séquence réelle de sept baisses quotidiennes consécutives du bitcoin en 2026, et nous montrons pourquoi la plupart des gestionnaires de risque recommandent d'éviter cette stratégie.</p>
+<h2 id="qu-est-ce-que-la-martingale">Qu'est-ce que la martingale</h2>
+<p>La martingale est née comme un système de paris au 18e siècle, appliqué à des jeux avec environ 50 % de chances, comme pile ou face. La règle tient en trois lignes : misez un montant initial ; si vous perdez, doublez le pari suivant ; si vous gagnez, revenez au montant initial. Comme chaque gain couvre, en théorie, toutes les pertes précédentes plus le profit du premier pari, la stratégie semble garantir un résultat positif, à condition d'avoir de l'argent pour continuer à doubler.</p>
+<p>Dans le trading, la logique est la même : après une opération perdante, la taille de la prochaine position est doublée (ou fortement augmentée) pour récupérer la perte dès qu'arrive un gain.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-calculer-la-martingale">Comment calculer la martingale</h2>
+<p>Avec un paiement de 1 pour 1, le pari du tour n est le montant initial × 2 à la puissance (n − 1), et le total perdu après n pertes est le montant initial × (2 à la puissance n − 1). En commençant avec 100 R$ :</p>
+<ul class="check-list">
+<li>Tours 1 à 4 : 100 R$, 200 R$, 400 R$ et 800 R$ → perte accumulée de <strong>1 500 R$</strong></li>
+<li>Tours 5 à 7 : 1 600 R$, 3 200 R$ et 6 400 R$ → perte accumulée de <strong>12 700 R$</strong></li>
+<li>Le huitième pari doit être de <strong>12 800 R$</strong> pour, s'il réussit, rapporter le profit de 100 R$</li>
+</ul>
+<h3>Quand le rendement est inférieur à 100 %</h3>
+<p>Dans les opérations à rendement fixe, le gain est un pourcentage du montant, par exemple 85 %, et la perte est le montant intégral. Dans ce cas, doubler ne suffit pas : la prochaine entrée doit être (pertes accumulées + profit désiré) ÷ 0,85. En commençant avec 100 R$ pour gagner 85 R$, la deuxième entrée est déjà de 217,65 R$ ; la cinquième, de 2 243,94 R$ ; et après sept pertes consécutives, le préjudice accumulé est de 19 579,76 R$, avec la huitième entrée à 23 135,01 R$ pour tout récupérer et gagner les mêmes 85 R$.</p>
+<h2 id="exemple-reel-sept-baisses-consecutives-du-bitcoin-en-2026">Exemple réel : sept baisses consécutives du bitcoin en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/estrategia-martingale-no-trading.svg" alt="Graphique : BTC/USDT, quotidien, du 15/04/2026 au 31/07/2026. Données : Binance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : BTC/USDT, quotidien, du 15/04/2026 au 31/07/2026. Données : Binance. Analyse propre.</figcaption></figure>
+<p>Le graphique montre le BTC/USDT du 15/04/2026 (74 809,99 $) au 31/07/2026 (62 887,88 $). Au début de juin apparaît le type de séquence qui détruit une martingale.</p>
+<h3>La séquence</h3>
+<p>Le bitcoin a clôturé le 30/05 à 73 884,38 $. À partir de là, il a clôturé en baisse sept jours de suite, du 31/05 au 06/06, finissant à 60 884,62 $ : 17,6 % plus bas. Ce n'est que le 07/06 qu'il a de nouveau clôturé en hausse, à 63 332,01 $.</p>
+<h3>Ce qui serait arrivé avec une martingale</h3>
+<p>Imaginez quelqu'un qui aurait misé chaque jour sur la hausse du lendemain, avec 100 R$ de mise initiale, un paiement de 1 pour 1 et un compte de 10 000 R$. Après six pertes (31/05 au 05/06), il aurait déjà perdu 6 300 R$ et devrait placer 6 400 R$ sur le septième pari, mais il ne lui resterait que 3 700 R$. Le compte ne soutient pas la séquence, et la reprise du 07/06 arriverait trop tard. Avec un rendement de 85 %, la faillite surviendrait encore plus tôt : après cinq pertes, l'accumulé serait déjà de 4 066,29 R$ et la sixième entrée, de 4 883,87 R$.</p>
+<h3>Ce n'est pas rare</h3>
+<p>Dans les données quotidiennes du bitcoin sur Binance de juillet 2018 à octobre 2026, il y a eu six séquences de sept clôtures en baisse ou plus, dont deux avec huit. Sur l'EUR/USD, entre le 01/07/2022 et le 15/07/2022, il y a eu dix clôtures consécutives en baisse. Et même dans un jeu à exactement 50 %, les mathématiques sont claires : sur 500 opérations, la probabilité qu'apparaisse au moins une séquence de sept pertes est d'environ 86 % ; de huit pertes, environ 63 %.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ris-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="pourquoi-la-martingale-echoue-en-pratique">Pourquoi la martingale échoue en pratique</h2>
+<h3>Capital limité</h3>
+<p>Le système ne fonctionne qu'avec de l'argent infini. Comme la perte croît en progression géométrique, le compte s'épuise bien avant ce que l'intuition suggère.</p>
+<h3>Limites de position et de marge</h3>
+<p>Les plateformes et les bourses imposent une taille maximale de position et exigent une marge croissante, ce qui peut bloquer la séquence en plein milieu, avec la perte déjà réalisée.</p>
+<h3>Petit gain, perte énorme</h3>
+<p>La martingale échange de nombreux petits gains contre une perte rare et gigantesque. La courbe de résultat semble excellente pendant des semaines et s'effondre d'un coup. Ce scénario, se retrouver sans capital en plein milieu d'une mauvaise séquence, est le risque de ruine, et il est beaucoup plus élevé dans la martingale que dans n'importe quelle gestion à risque fixe.</p>
+<h3>Limites des alternatives</h3>
+<p>Risquer un pourcentage fixe du compte, comme 1 % par opération, ne transforme pas une mauvaise stratégie en bonne stratégie : cela garantit seulement qu'une séquence de pertes coûte peu. Avec 1 %, sept pertes consécutives entament environ 6,8 % du compte, et non le compte entier.</p>
+<h2 id="erreurs-courantes-avec-la-martingale">Erreurs courantes avec la martingale</h2>
+<ul class="check-list">
+<li>Croire qu'une longue séquence de pertes est trop improbable pour vous arriver.</li>
+<li>Oublier que, avec un rendement inférieur à 100 %, doubler ne récupère pas la perte.</li>
+<li>Augmenter l'exposition précisément quand la lecture du marché se trompe le plus.</li>
+<li>Confondre martingale et prix moyen sur un actif que vous avez étudié : les deux augmentent la position contre vous et exigent une limite stricte.</li>
+<li>Juger la stratégie sur quelques semaines de petits gains, avant que la mauvaise séquence n'apparaisse.</li>
+<li>Oublier que les exemples ci-dessus décrivent ce qui s'est passé, pas ce qui va se passer.</li>
+</ul>
+<p>Pour voir cela sans risquer d'argent, faites la simulation sur le compte de démonstration ou sur une feuille de calcul : notez le résultat de chaque opération avec une taille fixe et, à côté, ce qui se serait passé avec la martingale. En quelques semaines, l'enregistrement montre la différence entre une courbe qui oscille et une qui peut tomber à zéro d'un coup.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 USD virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
             </div>
             <div class="ap__fim">
-              <p>Mis à jour le: <time datetime="2026-10-08">8 oct. 2026</time></p>
+              <p>Mis à jour le: <time datetime="2026-10-10">10 oct. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -248,9 +290,9 @@
         <aside class="ap__rel">
           <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/fr/blog/comment-utiliser-stop-loss-et-take-profit-en-forex/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Comment utiliser stop loss et take profit en forex</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/quand-cloturer-une-operation-signaux-de-sortie/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Quand clôturer une opération : les signaux de sortie</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/take-profit-et-stop-loss-guide-complet/"><img src="/assets/img/mini/duotide-e-confiavel-02.webp" srcset="/assets/img/mini/duotide-e-confiavel-02.webp 480w, /assets/img/duotide-e-confiavel-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Take profit et stop loss : guide complet</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/comment-utiliser-stop-loss-et-take-profit-en-forex/"><img src="/assets/img/mini/duotide-seguranca.webp" srcset="/assets/img/mini/duotide-seguranca.webp 480w, /assets/img/duotide-seguranca.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Stop loss et take profit en forex (avec calcul en pips)</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/quand-cloturer-une-operation-signaux-de-sortie/"><img src="/assets/img/mini/duotide-seguro-02.webp" srcset="/assets/img/mini/duotide-seguro-02.webp 480w, /assets/img/duotide-seguro-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Quand clôturer une opération : 5 signaux de sortie</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/take-profit-et-stop-loss-guide-complet/"><img src="/assets/img/mini/duotide-e-confiavel-02.webp" srcset="/assets/img/mini/duotide-e-confiavel-02.webp 480w, /assets/img/duotide-e-confiavel-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Take profit et stop loss : comment les calculer (guide complet)</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
           </div>
         </aside>
       </div>
@@ -333,6 +375,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100453" defer></script>
+  <script src="/assets/js/main.js?v=202610120826" defer></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Qu'est-ce que le swing trading et comment il fonctionne | Blog Duotide</title>
-  <meta name="description" content="Comprenez ce qu'est le swing trading, en quoi il diffère du day trade et de l'investissement long terme, et comment structurer entrées et sorties.">
+  <meta name="description" content="Ce qu'est le swing trading, en quoi il diffère du day trading et du long terme, et un exemple réel avec Apple en 2026 : entrée, stop, objectif et risque de gap.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/quest-ce-que-le-swing-trading/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/o-que-e-swing-trading/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Qu'est-ce que le swing trading et comment il fonctionne">
-  <meta property="og:description" content="Comprenez ce qu'est le swing trading, en quoi il diffère du day trade et de l'investissement long terme, et comment structurer entrées et sorties.">
+  <meta property="og:description" content="Ce qu'est le swing trading, en quoi il diffère du day trading et du long terme, et un exemple réel avec Apple en 2026 : entrée, stop, objectif et risque de gap.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/quest-ce-que-le-swing-trading/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Qu'est-ce que le swing trading et comment il fonctionne">
-  <meta name="twitter:description" content="Comprenez ce qu'est le swing trading, en quoi il diffère du day trade et de l'investissement long terme, et comment structurer entrées et sorties.">
+  <meta name="twitter:description" content="Ce qu'est le swing trading, en quoi il diffère du day trading et du long terme, et un exemple réel avec Apple en 2026 : entrée, stop, objectif et risque de gap.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610120826">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/quest-ce-que-le-swing-trading/#artigo",
       "headline": "Qu'est-ce que le swing trading et comment il fonctionne",
-      "description": "Comprenez ce qu'est le swing trading, en quoi il diffère du day trade et de l'investissement long terme, et comment structurer entrées et sorties.",
+      "description": "Ce qu'est le swing trading, en quoi il diffère du day trading et du long terme, et un exemple réel avec Apple en 2026 : entrée, stop, objectif et risque de gap.",
       "url": "https://duotide.com.br/fr/blog/quest-ce-que-le-swing-trading/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-12T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Stratégies",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">6 min de lecture</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
             </div>
-            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-12">12 octobre 2026</time></p>
             <span class="bq__tag">Stratégies</span>
             <h1>Qu'est-ce que le swing trading et comment il fonctionne</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personnage éditorial · Rubrique Analyse</small></span></div>
@@ -203,23 +203,75 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#ce-qui-differencie-le-swing-trading-des-autres-styles">Ce qui différencie le swing trading des autres styles</a></li>
-                <li><a href="#comment-identifier-des-opportunites-de-swing-trade">Comment identifier des opportunités de swing trade</a></li>
-                <li><a href="#gestion-du-risque-propre-au-swing-trading">Gestion du risque propre au swing trading</a></li>
-                <li><a href="#avantages-et-limites-du-style">Avantages et limites du style</a></li>
-                <li><a href="#comment-commencer-a-pratiquer-le-swing-trading">Comment commencer à pratiquer le swing trading</a></li>
+                <li><a href="#qu-est-ce-que-le-swing-trading">Qu'est-ce que le swing trading</a></li>
+                <li><a href="#swing-trading-day-trading-et-long-terme">Swing trading, day trading et long terme</a></li>
+                <li><a href="#comment-fonctionne-une-operation-de-swing-trading">Comment fonctionne une opération de swing trading</a></li>
+                <li><a href="#exemple-reel-swing-trading-sur-apple-en-2026">Exemple réel : swing trading sur Apple en 2026</a></li>
+                <li><a href="#comment-utiliser-le-swing-trading">Comment utiliser le swing trading</a></li>
+                <li><a href="#erreurs-courantes-dans-le-swing-trading">Erreurs courantes dans le swing trading</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Entre le day trade, qui clôture toutes les positions le jour même, et l'investissement à long terme, qui peut durer des années, il existe un espace intermédiaire connu sous le nom de swing trading. Dans ce style, les opérations durent généralement de quelques jours à quelques semaines, cherchant à capter un mouvement de prix plus important que celui d'un day trade, sans exiger un suivi constant de l'écran tout au long de la journée.</p><p>Cet article explique ce qui caractérise le swing trading, comment identifier de bonnes opportunités sur cet horizon et les précautions de gestion du risque propres à ce style.</p><figure class="ap__grafico"><img src="/assets/graficos/o-que-e-swing-trading.svg" alt="Graphique : Apple, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : Apple, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure><h2 id="ce-qui-differencie-le-swing-trading-des-autres-styles">Ce qui différencie le swing trading des autres styles</h2><p>Le critère principal est la durée de maintien de l'opération. Alors que le day trader clôture tout avant la fin de la séance, le swing trader maintient des positions ouvertes pendant la nuit et, souvent, pendant le week-end, cherchant à capter des mouvements qui se développent sur plusieurs jours.</p><p>Cette caractéristique apporte un avantage pratique : comme les opérations n'ont pas besoin d'être clôturées le jour même, le swing trading exige moins de temps d'écran que le day trade, ce qui le rend plus compatible avec ceux qui ont d'autres occupations pendant la journée et ne peuvent analyser le marché qu'à des horaires précis.</p><figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-identifier-des-opportunites-de-swing-trade">Comment identifier des opportunités de swing trade</h2><h3>Analyse de tendance sur graphique quotidien</h3><p>Les swing traders travaillent généralement surtout avec des graphiques quotidiens ou de quelques heures, plutôt qu'avec les graphiques de minutes utilisés dans le day trade, cherchant à identifier des tendances ou des motifs qui se développent sur plusieurs jours.</p><h3>Combinaison d'indicateurs</h3><p>Il est courant de combiner des moyennes mobiles pour identifier la direction générale de la tendance avec des indicateurs de force, comme le RSI, pour essayer d'identifier de meilleurs points d'entrée au sein de cette tendance, en évitant d'acheter justement au sommet d'un mouvement haussier déjà étiré.</p><h2 id="gestion-du-risque-propre-au-swing-trading">Gestion du risque propre au swing trading</h2><p>Comme les positions restent ouvertes pendant la nuit, le swing trader est exposé aux nouvelles et aux événements qui se produisent en dehors des heures de négociation, ce qui peut générer des ouvertures de marché avec des prix bien différents de la clôture précédente (ce qu'on appelle des gaps). Ce risque doit être pris en compte dans la taille de la position, généralement avec un peu plus de marge que ce qui serait utilisé dans une opération clôturée le jour même.</p><p>Un exemple de calcul : avec un compte de R$ 20 000 et un risque maximum de 2 % par opération (R$ 400), un swing trade sur une action à R$ 40, avec un stop à R$ 37 (distance de R$ 3), permettrait une position de R$ 400 ÷ R$ 3 ≈ 133 actions, totalisant R$ 5 320 investis. Si l'objectif est à R$ 49 (gain de R$ 9 par action), le profit potentiel serait de 133 x R$ 9 = R$ 1 197, un ratio risque-rendement d'environ 1 pour 3 sur le risque assumé.</p><ul><li>Les opérations de swing trade durent de quelques jours à quelques semaines, contrairement au day trade.</li><li>Les graphiques quotidiens et les indicateurs de tendance sont plus utilisés dans ce style.</li><li>Les positions restent exposées aux nouvelles en dehors des heures de négociation.</li><li>La taille de la position doit tenir compte du risque de gaps overnight.</li></ul><figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="avantages-et-limites-du-style">Avantages et limites du style</h2><p>Le principal avantage du swing trading est de permettre de capter des mouvements de prix plus importants sans avoir à suivre le marché toute la journée, rendant le style plus compatible avec ceux qui ont d'autres activités. La limite est justement le risque d'événements inattendus pendant la période où la position reste ouverte sans surveillance constante, ce que le day trade évite en clôturant tout quotidiennement.</p><h2 id="comment-commencer-a-pratiquer-le-swing-trading">Comment commencer à pratiquer le swing trading</h2><p>Choisissez des actifs liquides, avec un historique de tendances qui se développent sur plusieurs jours, définissez des critères d'entrée clairs basés sur des graphiques quotidiens, et dimensionnez toujours la position en tenant compte du risque supplémentaire de maintenir l'opération ouverte pendant la nuit. Comme pour tout style de trading, les résultats passés d'une stratégie de swing trade ne garantissent pas les résultats futurs, et les pertes font partie du processus même quand l'analyse est bien faite.</p><p>Tenez un registre simple de chaque opération de swing trade, en notant la raison de l'entrée, le temps pendant lequel la position est restée ouverte et le résultat final. Avec quelques dizaines d'opérations enregistrées, il devient plus facile de percevoir si le style correspond à votre profil et sur quels types d'actifs il a le mieux fonctionné en pratique.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Le swing trading est le style de trading où la position reste ouverte de quelques jours à quelques semaines, pour capter une jambe de mouvement du prix. Il se situe entre le day trading, qui clôture tout le même jour, et l'investissement à long terme. Il utilise principalement des graphiques quotidiens, exige moins de temps d'écran et accepte le risque que le prix ouvre loin de la clôture précédente.</p></div>
+            <p>Entre le day trading, qui clôture toutes les positions le même jour, et l'investissement à long terme, qui peut durer des années, il existe un style intermédiaire : le swing trading. C'est l'une des façons les plus courantes de trader pour qui ne peut pas passer la journée devant l'écran, mais veut utiliser l'analyse technique de façon active.</p>
+<p>Dans cet article, vous verrez ce qui caractérise le swing trading, en quoi il diffère des autres styles, quels risques lui sont propres et un exemple avec les cotations réelles d'Apple (AAPL, Nasdaq) entre avril et octobre 2026.</p>
+<h2 id="qu-est-ce-que-le-swing-trading">Qu'est-ce que le swing trading</h2>
+<p>Le nom vient de swing, oscillation en anglais. Le prix de tout actif évolue par vagues : il monte pendant quelques jours, corrige, remonte. Le swing trader essaie de capter une de ces vagues, ou une partie d'elle, en gardant la position ouverte de deux ou trois jours à quelques semaines.</p>
+<p>Trois caractéristiques définissent le style :</p>
+<ul class="check-list">
+<li><strong>Durée :</strong> de quelques jours à quelques semaines, avec des positions ouvertes pendant la nuit et le week-end.</li>
+<li><strong>Graphiques :</strong> principalement le quotidien et celui en 4 heures, plutôt que les graphiques en minutes du day trading.</li>
+<li><strong>Décisions :</strong> entrée, stop et objectif définis à l'avance, en fonction de la tendance, des supports, des résistances et des indicateurs.</li>
+</ul>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="swing-trading-day-trading-et-long-terme">Swing trading, day trading et long terme</h2>
+<h3>Comparé au day trading</h3>
+<p>Le day trader recherche de petits mouvements et clôture tout avant la fermeture. Le swing trader recherche des mouvements plus importants et accepte le risque de la nuit. En échange, il a besoin de moins de temps d'écran : une analyse par jour, après la clôture, suffit généralement. Le coût est que le stop doit être plus large, et la position, plus petite, pour que la perte en argent reste la même.</p>
+<h3>Comparé à l'investissement à long terme</h3>
+<p>L'investisseur à long terme décide en se basant sur les fondamentaux et tolère des baisses de plusieurs mois. Le swing trader décide en se basant sur le comportement du prix et sort quand la jambe de mouvement se termine ou quand le stop est atteint, même s'il aime l'entreprise.</p>
+<h2 id="comment-fonctionne-une-operation-de-swing-trading">Comment fonctionne une opération de swing trading</h2>
+<p>Un schéma courant a quatre étapes : identifier la tendance sur le graphique quotidien, attendre un déclencheur objectif (comme le croisement de moyennes mobiles ou la cassure d'une résistance), placer le stop à une distance compatible avec la volatilité de l'actif et calculer la quantité pour que la perte maximale reste à 1 % ou 2 % du compte.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="exemple-reel-swing-trading-sur-apple-en-2026">Exemple réel : swing trading sur Apple en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/o-que-e-swing-trading.svg" alt="Graphique : Apple, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : Apple, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure>
+<p>Le graphique montre la moyenne mobile simple sur 20 jours (bleue) et celle sur 50 jours (orange). Entre le 01/04/2026 et le 07/10/2026, l'action est passée de 255,63 $ à 336,67 $, une hausse de 31,7 %. Les deux moyennes se sont croisées cinq fois pendant la période, et chaque croisement raconte une partie de l'histoire.</p>
+<h3>Avril : une vague captée</h3>
+<p>Le 23/04, la moyenne de 20 a croisé au-dessus de celle de 50, avec l'action à 273,43 $. L'ATR à 14 jours, qui mesure l'oscillation quotidienne moyenne, était de 6,04 $. Avec un compte hypothétique de 10 000 $ et un risque de 1 % :</p>
+<ul class="check-list">
+<li>Stop à 2 ATR : 273,43 − 12,09 = <strong>261,34 $</strong></li>
+<li>Quantité : 100 ÷ 12,09 = 8,27 → <strong>8 actions</strong></li>
+<li>Objectif de deux fois le risque : 273,43 + 24,18 = <strong>297,61 $</strong></li>
+</ul>
+<p>Le plus bas le plus profond après l'entrée a été 265,07 $, le 27/04, au-dessus du stop. Le 13/05, 14 séances plus tard, le plus haut a atteint 300,92 $ et l'objectif a été atteint : gain de 24,18 $ par action, soit 193,44 $ sur les 8 actions. C'est le scénario typique du swing trading : quelques jours d'oscillation et toute une jambe de hausse.</p>
+<h3>Juillet : le risque de la nuit</h3>
+<p>Le 30/07, l'action a clôturé à 333,43 $. Le lendemain, elle a ouvert à 304,81 $, 8,6 % plus bas, et a clôturé à 308,91 $, une baisse de 7,35 %. Qui était acheteur avec un stop à 2 ATR (l'ATR était de 8,06 $, ce qui donnait un stop à 317,31 $) ne serait pas sorti au stop : l'ordre se serait exécuté seulement près de l'ouverture, à 304,81 $. La perte par action serait de 28,62 $, et non des 16,12 $ prévus, 1,78 fois le montant prévu. C'est le risque que le day trader ne court pas et que le swing trader doit accepter.</p>
+<h3>Juillet à septembre : des signaux qui s'annulent</h3>
+<p>Le 07/07, les moyennes ont croisé vers le bas avec l'action à 310,66 $ et, deux séances plus tard, le 09/07, elles ont recroisé vers le haut à 316,22 $. La même chose s'est produite le 26/08 (vers le bas, à 313,45 $) et le 15/09 (vers le haut, à 331,34 $). Quand le marché évolue latéralement, les croisements se répètent et génèrent de petites pertes consécutives.</p>
+<h2 id="comment-utiliser-le-swing-trading">Comment utiliser le swing trading</h2>
+<h3>Choisissez des actifs liquides</h3>
+<p>Les grandes actions, les indices, les principales paires de devises et les cryptomonnaies à plus gros volume ont des spreads plus faibles et des gaps moins fréquents que les actifs peu négociés.</p>
+<h3>Dimensionnez selon le stop, pas selon le capital</h3>
+<p>Comme le stop du swing trading est large, la quantité doit être calculée à partir de lui. Dans l'exemple, 8 actions représentaient environ 2 190 $ d'exposition pour risquer 100 $.</p>
+<h3>Respectez le calendrier</h3>
+<p>La publication de résultats, les décisions de taux et les données d'inflation sont les causes les plus courantes de gaps. Réduire ou clôturer la position avant ces événements est une décision de risque, pas de prévision.</p>
+<h3>Limites</h3>
+<p>Les indicateurs basés sur des moyennes arrivent en retard et échouent en marché latéral. Le stop ne garantit pas le prix de sortie en cas de gap. Et des coûts comme le courtage, le spread et, sur certains instruments, les frais de financement nocturne, réduisent le résultat de chaque opération.</p>
+<h2 id="erreurs-courantes-dans-le-swing-trading">Erreurs courantes dans le swing trading</h2>
+<ul class="check-list">
+<li>Suivre l'opération sur le graphique en minutes et sortir à cause d'oscillations normales de la journée.</li>
+<li>Utiliser la même taille de position que le day trading avec un stop beaucoup plus large.</li>
+<li>Oublier que le stop peut s'exécuter bien en dessous de ce qui était prévu après un gap.</li>
+<li>Trader chaque croisement de moyennes, y compris quand le marché est clairement latéral.</li>
+<li>Garder une position perdante pendant des semaines, transformant le swing trade en investissement sans plan.</li>
+<li>Lire les exemples comme une promesse : ils montrent ce qui s'est passé, pas ce qui va se passer.</li>
+</ul>
+<p>Pour commencer sans risquer d'argent, ouvrez le compte démo, choisissez deux ou trois actifs liquides et suivez le graphique quotidien pendant quelques semaines. Pour chaque opération simulée, notez la raison de l'entrée, le stop, la quantité calculée et le résultat. Ce registre montre si le style convient à votre routine avant tout argent réel investi.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 USD virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
             </div>
             <div class="ap__fim">
-              <p>Mis à jour le: <time datetime="2026-10-08">8 oct. 2026</time></p>
+              <p>Mis à jour le: <time datetime="2026-10-12">12 oct. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -333,6 +385,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100453" defer></script>
+  <script src="/assets/js/main.js?v=202610120826" defer></script>
 </body>
 </html>

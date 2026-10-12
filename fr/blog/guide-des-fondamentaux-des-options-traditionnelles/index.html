@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
-  <title>Guide des fondamentaux des options : prime, exercice et échéance | Blog Duotide</title>
-  <meta name="description" content="Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.">
+  <title>Guide des fondamentaux des options : prime, strike, échéance | Blog Duotide</title>
+  <meta name="description" content="Les fondamentaux d'une option d'achat ou de vente, avec le calcul de la valeur intrinsèque et le résultat à l'échéance en utilisant les prix réels du BOVA11.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/guia-de-fundamentos-de-opcoes-tradicionais/">
@@ -32,8 +32,8 @@
   <!-- ===== Open Graph ===== -->
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Guide des fondamentaux des options : prime, exercice et échéance">
-  <meta property="og:description" content="Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.">
+  <meta property="og:title" content="Guide des fondamentaux des options : prime, strike, échéance">
+  <meta property="og:description" content="Les fondamentaux d'une option d'achat ou de vente, avec le calcul de la valeur intrinsèque et le résultat à l'échéance en utilisant les prix réels du BOVA11.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp">
@@ -42,8 +42,8 @@
   <meta property="og:updated_time" content="undefined">
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Guide des fondamentaux des options : prime, exercice et échéance">
-  <meta name="twitter:description" content="Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.">
+  <meta name="twitter:title" content="Guide des fondamentaux des options : prime, strike, échéance">
+  <meta name="twitter:description" content="Les fondamentaux d'une option d'achat ou de vente, avec le calcul de la valeur intrinsèque et le résultat à l'échéance en utilisant les prix réels du BOVA11.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610120826">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -64,12 +64,12 @@
     {
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/#artigo",
-      "headline": "Guide des fondamentaux des options : prime, exercice et échéance",
-      "description": "Les concepts essentiels pour comprendre une option traditionnelle d'achat ou de vente, avec un exemple complet du début jusqu'à l'échéance.",
+      "headline": "Guide des fondamentaux des options : prime, strike, échéance",
+      "description": "Les fondamentaux d'une option d'achat ou de vente, avec le calcul de la valeur intrinsèque et le résultat à l'échéance en utilisant les prix réels du BOVA11.",
       "url": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-12T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp",
       "articleSection": "Options",
       "author": {
@@ -103,7 +103,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Guide des fondamentaux des options : prime, exercice et échéance",
+          "name": "Guide des fondamentaux des options : prime, strike, échéance",
           "item": "https://duotide.com.br/fr/blog/guide-des-fondamentaux-des-options-traditionnelles/"
         }
       ]
@@ -176,7 +176,7 @@
       <ol>
         <li><a href="/fr/">Accueil</a></li>
         <li><a href="/fr/blog/">Blog</a></li>
-        <li><span aria-current="page">Guide des fondamentaux des options : prime, exercice et échéance</span></li>
+        <li><span aria-current="page">Guide des fondamentaux des options : prime, strike, échéance</span></li>
       </ol>
       <a class="ap__voltar" href="/fr/blog/">Retour</a>
     </div>
@@ -191,9 +191,9 @@
               <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">5 min de lecture</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
             </div>
-            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-12">12 octobre 2026</time></p>
             <span class="bq__tag">Options</span>
-            <h1>Guide des fondamentaux des options : prime, exercice et échéance</h1>
+            <h1>Guide des fondamentaux des options : prime, strike, échéance</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personnage éditorial · Rubrique Analyse</small></span></div>
           </div>
           <figure class="ap__capa"><img src="/assets/img/capas/blog-slippage-e-execucao-de-ordem.webp" alt="" width="1024" height="512" decoding="async" fetchpriority="high"></figure>
@@ -203,39 +203,76 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#ce-qu-une-option-accorde-reellement">Ce qu'une option accorde réellement</a></li>
-                <li><a href="#la-prime-le-prix-du-droit-lui-meme">La prime : le prix du droit lui-même</a></li>
-                <li><a href="#dans-a-et-hors-de-la-monnaie">Dans, à et hors de la monnaie</a></li>
-                <li><a href="#ce-qui-se-passe-a-l-echeance">Ce qui se passe à l'échéance</a></li>
-                <li><a href="#le-risque-est-different-pour-l-acheteur-et-pour-le-vendeur">Le risque est différent pour l'acheteur et pour le vendeur</a></li>
-                <li><a href="#pourquoi-il-vaut-la-peine-de-comprendre-cela-avant-toute-str">Pourquoi il vaut la peine de comprendre cela avant toute stratégie</a></li>
-                <li><a href="#un-point-qui-passe-souvent-inapercu">Un point qui passe souvent inaperçu</a></li>
+                <li><a href="#qu-est-ce-qu-une-option">Qu'est-ce qu'une option</a></li>
+                <li><a href="#comment-calculer-la-valeur-d-une-option">Comment calculer la valeur d'une option</a></li>
+                <li><a href="#exemple-reel-une-call-et-une-put-du-bova11-jusqu-a-l-echeanc">Exemple réel : une call et une put du BOVA11 jusqu'à l'échéance</a></li>
+                <li><a href="#comment-utiliser-ces-fondamentaux">Comment utiliser ces fondamentaux</a></li>
+                <li><a href="#erreurs-courantes-de-ceux-qui-debutent-avec-les-options">Erreurs courantes de ceux qui débutent avec les options</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Avant d'appliquer toute stratégie avec des options, il vaut la peine de bien comprendre les quatre éléments qui composent tout contrat de ce type : le droit qu'il confère, le prix d'exercice, la date d'échéance et la prime payée pour ce droit. Ce guide se concentre sur ces fondamentaux, laissant les combinaisons de stratégies spécifiques pour un autre moment.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/guia-de-fundamentos-de-opcoes-tradicionais.svg" alt="Graphique : BOVA11.SA, quotidien, du 01/04/2026 au 06/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : BOVA11.SA, quotidien, du 01/04/2026 au 06/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure><h2 id="ce-qu-une-option-accorde-reellement">Ce qu'une option accorde réellement</h2>
-<p>Une option d'achat (call) donne à l'acheteur le droit, mais non l'obligation, d'acheter l'actif sous-jacent à un prix fixe (le strike) jusqu'à une date déterminée. Une option de vente (put) accorde le droit de vendre dans les mêmes conditions. Celui qui vend l'option (le vendeur) assume l'obligation du côté opposé : si l'acheteur de la call décide d'exercer son droit, le vendeur est obligé de vendre l'actif au strike convenu, même si le prix du marché est bien plus élevé.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="la-prime-le-prix-du-droit-lui-meme">La prime : le prix du droit lui-même</h2>
-<p>La prime est le montant payé par l'acheteur au vendeur pour acquérir ce droit, et elle est composée de deux éléments : la valeur intrinsèque et la valeur extrinsèque (ou valeur temps). Supposons une action cotée à 48,00 R$ et une call de strike 45,00 R$ coûtant 4,50 R$. La valeur intrinsèque est de 3,00 R$ (48 − 45, ce que l'option vaut déjà si elle est exercée maintenant) ; la valeur extrinsèque est de 1,50 R$ (4,50 − 3,00), qui reflète le temps restant jusqu'à l'échéance et l'attente de variation du prix pendant cette période. Plus on se rapproche de l'échéance, plus la valeur extrinsèque tend à diminuer, dans un processus appelé érosion temporelle (theta).</p>
-<h2 id="dans-a-et-hors-de-la-monnaie">Dans, à et hors de la monnaie</h2>
-<p>Une call est considérée « dans la monnaie » quand le prix de l'actif est au-dessus du strike (comme dans l'exemple ci-dessus), « à la monnaie » quand il est égal, et « hors de la monnaie » quand il est en dessous — dans ce dernier cas, l'option n'a que de la valeur extrinsèque, sans aucune valeur intrinsèque. Pour une put, la logique s'inverse : elle est dans la monnaie quand le prix de l'actif est en dessous du strike. Cette classification change tout au long de la vie du contrat, selon l'évolution du prix de l'actif.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="ce-qui-se-passe-a-l-echeance">Ce qui se passe à l'échéance</h2>
-<p>Si, à la date d'échéance, la call est dans la monnaie, l'acheteur exerce généralement son droit (ou l'option est automatiquement réglée par la différence, selon le marché), empochant la différence entre le prix du marché et le strike. Si elle est hors de la monnaie, l'option expire sans valeur, et l'acheteur perd la prime payée intégralement — c'est le risque maximal de celui qui achète une option : jamais plus que la prime, mais avec un risque réel de perdre ce montant entièrement.</p>
-<h2 id="le-risque-est-different-pour-l-acheteur-et-pour-le-vendeur">Le risque est différent pour l'acheteur et pour le vendeur</h2>
-<p>Celui qui achète une option a un risque limité à la prime payée et un potentiel de gain qui peut être important, selon le mouvement de l'actif. Celui qui vend une option à découvert — sans posséder l'actif correspondant — reçoit la prime à l'avance, mais assume un risque qui peut être bien plus élevé que ce montant reçu, car il est obligé d'honorer le contrat si l'acheteur décide d'exercer. Cette asymétrie explique pourquoi vendre des options à découvert est généralement considéré plus risqué que les acheter, et exige généralement plus de capital de garantie de la part du vendeur.</p>
-<h2 id="pourquoi-il-vaut-la-peine-de-comprendre-cela-avant-toute-str">Pourquoi il vaut la peine de comprendre cela avant toute stratégie</h2>
-<p>Les stratégies aux noms spécifiques — spread haussier, papillon, straddle — ne sont que des combinaisons de ces éléments de base : acheter et vendre des calls et des puts avec des strikes et des échéances différents en même temps. Sans comprendre comment la prime, le strike, l'échéance et l'effet du temps se rapportent entre eux, il devient difficile d'évaluer si une stratégie combinée a du sens pour le scénario que vous anticipez, ou si vous suivez simplement une recette sans comprendre le risque intégré à chaque jambe du contrat.</p>
-<h2 id="un-point-qui-passe-souvent-inapercu">Un point qui passe souvent inaperçu</h2>
-<p>La valeur extrinsèque d'une option ne diminue pas de façon linéaire dans le temps — elle s'accélère près de l'échéance. Une option avec 60 jours restants perd de la valeur temps plus lentement que la même option avec seulement 10 jours restants, même si le prix de l'actif ne bouge pas du tout pendant cet intervalle. Ce comportement affecte directement ceux qui achètent des options en pensant les conserver peu de temps près de l'échéance, car l'érosion accélérée joue contre la position même sans aucun mouvement défavorable de l'actif.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Une option donne à l'acheteur le droit, mais non l'obligation, d'acheter (call) ou de vendre (put) un actif à un prix fixe, le <strong>strike</strong>, jusqu'à l'<strong>échéance</strong>. Pour ce droit, il paie une <strong>prime</strong> au vendeur. L'acheteur risque au maximum la prime ; le vendeur reçoit la prime et assume l'obligation de respecter le contrat.</p></div>
+            <p>Avant toute stratégie avec des options, il vaut la peine de maîtriser les quatre éléments de tout contrat : le droit qu'il confère, le prix d'exercice (strike), la date d'échéance et la prime payée pour ce droit. Des stratégies aux noms comme spread haussier, papillon ou straddle ne sont que des combinaisons de ces éléments.</p>
+<p>Dans ce guide, nous utilisons les prix quotidiens réels du BOVA11, le fonds indiciel qui suit l'Ibovespa, entre avril et octobre 2026. Les prix du BOVA11 sont réels ; les strikes et les primes des options sont hypothétiques, choisis pour montrer le calcul.</p>
+<h2 id="qu-est-ce-qu-une-option">Qu'est-ce qu'une option</h2>
+<p>Une <strong>option d'achat (call)</strong> donne à l'acheteur le droit, mais non l'obligation, d'acheter l'actif sous-jacent au strike jusqu'à ou à la date d'échéance. Une <strong>option de vente (put)</strong> donne le droit de vendre dans les mêmes conditions. Celui qui vend l'option, le vendeur, reçoit la prime et assume l'obligation du côté opposé : si l'acheteur de la call exerce, le vendeur doit vendre au strike, même si le marché est bien plus haut.</p>
+<h3>Dans, à et hors de la monnaie</h3>
+<ul class="check-list">
+<li><strong>Call dans la monnaie :</strong> prix de l'actif au-dessus du strike.</li>
+<li><strong>À la monnaie :</strong> prix de l'actif égal, ou très proche, du strike.</li>
+<li><strong>Call hors de la monnaie :</strong> prix de l'actif en dessous du strike ; l'option n'a que de la valeur temps.</li>
+<li><strong>Put :</strong> la logique s'inverse ; elle est dans la monnaie quand l'actif est en dessous du strike.</li>
+</ul>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-calculer-la-valeur-d-une-option">Comment calculer la valeur d'une option</h2>
+<p>La prime comporte deux parties :</p>
+<ul class="check-list">
+<li><strong>Valeur intrinsèque de la call</strong> = prix de l'actif − strike (si positif ; sinon, zéro).</li>
+<li><strong>Valeur intrinsèque de la put</strong> = strike − prix de l'actif (si positif ; sinon, zéro).</li>
+<li><strong>Valeur extrinsèque</strong> (ou valeur temps) = prime − valeur intrinsèque.</li>
+<li><strong>Point d'équilibre de la call à l'échéance</strong> = strike + prime payée.</li>
+</ul>
+<h3>Exemple avec le prix réel du BOVA11</h3>
+<p>Le 21/08/2026, le BOVA11 a clôturé à 168,33 R$. Une call hypothétique de strike 160,00 R$ coûtant 10,00 R$ aurait une valeur intrinsèque de 168,33 − 160,00 = <strong>8,33 R$</strong> et une valeur extrinsèque de 10,00 − 8,33 = <strong>1,67 R$</strong>. Une call de strike 170,00 R$, elle, serait hors de la monnaie : valeur intrinsèque nulle, et toute la prime serait de la valeur temps.</p>
+<h2 id="exemple-reel-une-call-et-une-put-du-bova11-jusqu-a-l-echeanc">Exemple réel : une call et une put du BOVA11 jusqu'à l'échéance</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/guia-de-fundamentos-de-opcoes-tradicionais.svg" alt="Graphique : BOVA11.SA, quotidien, du 01/04/2026 au 06/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : BOVA11.SA, quotidien, du 01/04/2026 au 06/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure>
+<p>Le graphique montre les bougies quotidiennes du BOVA11 du 01/04/2026 au 06/10/2026, dernière séance disponible. Le fonds a commencé la période à 184,18 R$, est descendu jusqu'au plus bas de 162,07 R$ le 14/08, est monté jusqu'au plus haut de 207,00 R$ le 05/10 et a clôturé le 06/10 à 202,50 R$.</p>
+<h3>La call de strike 170,00 R$</h3>
+<p>Supposons l'achat, le 21/08, d'une call de strike 170,00 R$ avec échéance le 18/09/2026, pour une prime de 3,00 R$. Le point d'équilibre à l'échéance est 170,00 + 3,00 = 173,00 R$. Le 18/09, le BOVA11 a clôturé à 182,47 R$, une hausse de 8,4 % depuis l'entrée.</p>
+<ul class="check-list">
+<li>Valeur intrinsèque à l'échéance : 182,47 − 170,00 = <strong>12,47 R$</strong></li>
+<li>Résultat de l'acheteur : 12,47 − 3,00 = <strong>9,47 R$</strong> par part, soit 947,00 R$ pour 100 parts</li>
+<li>Rendement sur la prime : 9,47 ÷ 3,00 = <strong>315,7 %</strong></li>
+<li>Résultat du vendeur à découvert : <strong>−9,47 R$</strong> par part, soit −947,00 R$ pour 100 parts, après avoir reçu 300,00 R$</li>
+</ul>
+<h3>La put de strike 165,00 R$</h3>
+<p>À la même date, une put de strike 165,00 R$ achetée pour 2,50 R$ parierait sur une baisse en dessous de 162,50 R$. Avec le BOVA11 à 182,47 R$ à l'échéance, la put a terminé hors de la monnaie et a expiré sans valeur : l'acheteur perdrait les 2,50 R$ par part, 250,00 R$ pour 100 parts, et le vendeur garderait toute la prime.</p>
+<p>Le même mouvement de l'actif a produit un gain pour un côté et une perte totale de la prime pour l'autre. Les chiffres décrivent ce qui s'est passé avec le prix dans cet intervalle ; ils n'indiquent pas ce qui va se passer avec d'autres échéances.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-utiliser-ces-fondamentaux">Comment utiliser ces fondamentaux</h2>
+<h3>Comprenez ce qui se passe à l'échéance</h3>
+<p>Si la call termine dans la monnaie, l'acheteur exerce généralement son droit, ou la position est réglée par la différence, selon les règles du marché. Si elle termine hors de la monnaie, elle expire sans valeur et l'acheteur perd toute la prime. C'est le risque maximal de celui qui achète : jamais plus que la prime, mais avec un risque réel de la perdre entièrement.</p>
+<h3>Comparez le risque de l'acheteur et du vendeur</h3>
+<p>Celui qui achète a une perte limitée à la prime. Celui qui vend à découvert reçoit la prime à l'avance, mais assume un risque qui peut être bien plus élevé qu'elle, comme l'a montré la call de 170,00 R$. C'est pourquoi la vente à découvert exige une garantie et est généralement considérée plus risquée.</p>
+<h3>Respectez le temps</h3>
+<p>La valeur extrinsèque ne diminue pas en ligne droite : elle s'accélère près de l'échéance. Une option avec 60 jours devant elle perd de la valeur temps plus lentement que la même option avec 10 jours, même avec l'actif immobile.</p>
+<h3>Limites</h3>
+<p>En pratique, les primes changent à chaque minute et dépendent de la volatilité implicite, des taux et de la liquidité de chaque série. Les séries peu négociées peuvent avoir un spread large, ce qui renchérit l'entrée et la sortie avant l'échéance.</p>
+<h2 id="erreurs-courantes-de-ceux-qui-debutent-avec-les-options">Erreurs courantes de ceux qui débutent avec les options</h2>
+<ul class="check-list">
+<li>Oublier que le point d'équilibre de la call est le strike plus la prime, pas seulement le strike.</li>
+<li>Acheter des options très hors de la monnaie parce qu'elles semblent bon marché.</li>
+<li>Vendre des options à découvert sans calculer la perte en cas de mouvement fort.</li>
+<li>Ignorer l'accélération de la décroissance temporelle dans les dernières semaines.</li>
+<li>Trader des séries peu liquides sans regarder le spread.</li>
+</ul>
+<p>Pour vous entraîner, choisissez un actif sur le compte démo, notez le strike, la prime et l'échéance d'une call et d'une put, et suivez jusqu'au bout la valeur intrinsèque, la valeur extrinsèque et le résultat de l'acheteur et du vendeur. Enregistrer quelques séries complètes fixe les fondamentaux mieux que n'importe quelle lecture.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 USD virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
             </div>
             <div class="ap__fim">
-              <p>Mis à jour le: <time datetime="2026-10-08">8 oct. 2026</time></p>
+              <p>Mis à jour le: <time datetime="2026-10-12">12 oct. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -265,8 +302,8 @@
           <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
             <a class="bq__card" href="/fr/blog/comment-fonctionnent-les-options-binaires/"><img src="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp" srcset="/assets/img/mini/capas/blog-slippage-e-execucao-de-ordem.webp 480w, /assets/img/capas/blog-slippage-e-execucao-de-ordem.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Comment fonctionnent les options binaires : risque réel</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/options-binaires-guide-pratique-et-gestion-du-risque/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Options binaires : guide pratique et gestion du risque</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/options-digitales-comment-elles-fonctionnent/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Options digitales : comment elles fonctionnent et calculer le risque</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/options-binaires-guide-pratique-et-gestion-du-risque/"><img src="/assets/img/mini/duotide-corretora-02.webp" srcset="/assets/img/mini/duotide-corretora-02.webp 480w, /assets/img/duotide-corretora-02.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Options binaires étape par étape : la gestion du risque en pratique</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/options-digitales-comment-elles-fonctionnent/"><img src="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp" srcset="/assets/img/mini/capas/blog-day-trade-ou-swing-trade.webp 480w, /assets/img/capas/blog-day-trade-ou-swing-trade.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Options digitales : comment elles fonctionnent et le risque</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
           </div>
         </aside>
       </div>
@@ -349,6 +386,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100453" defer></script>
+  <script src="/assets/js/main.js?v=202610120826" defer></script>
 </body>
 </html>

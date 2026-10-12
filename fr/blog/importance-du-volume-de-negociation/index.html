@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Pourquoi le volume de négociation est si important | Blog Duotide</title>
-  <meta name="description" content="Comprenez ce qu'est le volume de négociation, pourquoi il confirme ou dément les mouvements de prix et comment le lire avec le graphique.">
+  <meta name="description" content="Ce qu'est le volume de négociation, comment il confirme ou dément les mouvements de prix et comment utiliser l'OBV, avec des données réelles de Nvidia.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/importance-du-volume-de-negociation/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/importancia-do-volume-de-negociacao/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Pourquoi le volume de négociation est si important">
-  <meta property="og:description" content="Comprenez ce qu'est le volume de négociation, pourquoi il confirme ou dément les mouvements de prix et comment le lire avec le graphique.">
+  <meta property="og:description" content="Ce qu'est le volume de négociation, comment il confirme ou dément les mouvements de prix et comment utiliser l'OBV, avec des données réelles de Nvidia.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/importance-du-volume-de-negociation/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/duotide-vale-a-pena.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Pourquoi le volume de négociation est si important">
-  <meta name="twitter:description" content="Comprenez ce qu'est le volume de négociation, pourquoi il confirme ou dément les mouvements de prix et comment le lire avec le graphique.">
+  <meta name="twitter:description" content="Ce qu'est le volume de négociation, comment il confirme ou dément les mouvements de prix et comment utiliser l'OBV, avec des données réelles de Nvidia.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610120826">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/importance-du-volume-de-negociation/#artigo",
       "headline": "Pourquoi le volume de négociation est si important",
-      "description": "Comprenez ce qu'est le volume de négociation, pourquoi il confirme ou dément les mouvements de prix et comment le lire avec le graphique.",
+      "description": "Ce qu'est le volume de négociation, comment il confirme ou dément les mouvements de prix et comment utiliser l'OBV, avec des données réelles de Nvidia.",
       "url": "https://duotide.com.br/fr/blog/importance-du-volume-de-negociation/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-12T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/duotide-vale-a-pena.webp",
       "articleSection": "Analyse technique",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">5 min de lecture</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
             </div>
-            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-12">12 octobre 2026</time></p>
             <span class="bq__tag">Analyse technique</span>
             <h1>Pourquoi le volume de négociation est si important</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personnage éditorial · Rubrique Analyse</small></span></div>
@@ -203,23 +203,64 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#ce-que-le-volume-represente-reellement">Ce que le volume représente réellement</a></li>
-                <li><a href="#le-volume-confirme-la-force-d-un-mouvement">Le volume confirme la force d'un mouvement</a></li>
-                <li><a href="#divergence-entre-prix-et-volume">Divergence entre prix et volume</a></li>
-                <li><a href="#volume-et-liquidite-en-pratique">Volume et liquidité en pratique</a></li>
-                <li><a href="#comment-integrer-le-volume-a-votre-analyse">Comment intégrer le volume à votre analyse</a></li>
+                <li><a href="#qu-est-ce-que-le-volume-de-negociation">Qu'est-ce que le volume de négociation</a></li>
+                <li><a href="#comment-mesurer-le-volume-moyenne-et-obv">Comment mesurer le volume : moyenne et OBV</a></li>
+                <li><a href="#exemple-reel-volume-et-obv-de-nvidia-en-2026">Exemple réel : volume et OBV de Nvidia en 2026</a></li>
+                <li><a href="#comment-utiliser-le-volume">Comment utiliser le volume</a></li>
+                <li><a href="#erreurs-courantes-dans-l-analyse-du-volume">Erreurs courantes dans l'analyse du volume</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Quand un prix monte ou descend, la première question que tout trader devrait se poser n'est pas seulement « où le prix est-il allé », mais « combien de personnes ont participé à ce mouvement ». C'est exactement ce que montre le volume de négociation : la quantité de contrats, actions ou lots négociés sur une période donnée. Sans cette information, un graphique de prix ne raconte que la moitié de l'histoire.</p><p>Dans cet article, vous allez comprendre pourquoi le volume est considéré par de nombreux analystes comme aussi important que le prix lui-même, et comment utiliser cette information sans compliquer votre analyse.</p><figure class="ap__grafico"><img src="/assets/graficos/importancia-do-volume-de-negociacao.svg" alt="Graphique : Nvidia, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : Nvidia, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure><h2 id="ce-que-le-volume-represente-reellement">Ce que le volume représente réellement</h2><p>Le volume est le décompte des transactions conclues sur un actif dans un intervalle de temps — cela peut être le volume d'une bougie de 5 minutes, d'une journée entière ou d'une semaine. Il apparaît généralement sous forme d'histogramme juste en dessous du graphique de prix, avec des barres plus hautes aux moments de plus forte activité et plus basses aux moments de moindre activité.</p><p>Le volume, en soi, ne dit pas si le prix va monter ou descendre. Ce qu'il mesure, c'est l'intensité de la participation des investisseurs dans ce mouvement — et c'est cette intensité qui aide à différencier un mouvement solide d'un mouvement faible, susceptible de s'inverser facilement.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="le-volume-confirme-la-force-d-un-mouvement">Le volume confirme la force d'un mouvement</h2><p>L'un des usages les plus courants du volume est de confirmer si une hausse ou une baisse de prix est soutenue. Imaginez un actif normalement négocié avec une moyenne de 2 millions d'unités par jour. Si en une seule journée le prix monte de 4 % avec un volume de 6 millions d'unités, cela indique un fort intérêt acheteur soutenant cette hausse. Si la même progression de 4 % se produisait avec seulement 800 000 unités négociées, le mouvement aurait beaucoup moins de monde derrière lui — et moins de soutien pour continuer.</p><p>Cette même logique vaut pour les cassures de support et de résistance. Une cassure de résistance accompagnée d'un volume supérieur à la moyenne a beaucoup plus de chances de se poursuivre qu'une cassure sur un volume faible, qui n'est souvent qu'un mouvement de courte durée avant que le prix ne revienne dans la fourchette précédente.</p><h2 id="divergence-entre-prix-et-volume">Divergence entre prix et volume</h2><p>Un autre signal précieux est quand le prix et le volume évoluent dans des directions qui ne correspondent pas. Si un actif continue à établir de nouveaux sommets, mais que le volume à chaque nouveau sommet diminue, cela se lit comme un signal d'affaiblissement : de moins en moins de gens sont prêts à acheter à ces prix plus élevés, ce qui peut précéder une correction ou un renversement.</p><p>L'inverse est aussi observé aux creux de marché : des baisses accompagnées d'un volume décroissant peuvent indiquer que la pression vendeuse s'épuise, même si le prix continue de baisser.</p><figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="volume-et-liquidite-en-pratique">Volume et liquidité en pratique</h2><p>Outre son aide à la lecture des tendances, le volume est aussi un indicateur pratique de liquidité. Les actifs à volume élevé ont généralement des spreads (différence entre prix d'achat et de vente) plus faibles et une exécution des ordres plus rapide. Les actifs à volume très faible peuvent avoir des spreads larges et plus de difficulté à entrer ou sortir d'une position au prix souhaité, en particulier pour les opérations de montant plus élevé.</p><p>C'est pourquoi, avant d'opérer un actif peu connu, il vaut la peine de vérifier son volume quotidien moyen. Un volume constamment faible est un signal d'alerte de risque supplémentaire, indépendamment de ce que montre le graphique de prix.</p><h2 id="comment-integrer-le-volume-a-votre-analyse">Comment intégrer le volume à votre analyse</h2><p>Le volume fonctionne mieux comme outil de confirmation, pas comme signal isolé d'entrée. Une séquence pratique est : d'abord identifier ce que fait le prix (tendance, cassure, renversement), puis vérifier si le volume soutient cette lecture. Un signal de prix avec un volume compatible a plus de poids que le même signal avec un volume inférieur à la moyenne.</p><p>Des plateformes comme Duotide permettent d'afficher l'histogramme de volume avec le graphique de prix, ce qui facilite la comparaison visuelle des deux. Il vaut la peine de prendre le temps d'observer, sur des actifs que vous connaissez déjà, comment le volume s'est comporté avant des mouvements importants dans le passé — cela aide à calibrer ce qu'est un « volume élevé » ou un « volume faible » pour cet actif précis.</p><p>Comme tout outil d'analyse technique, le volume ne garantit pas la réussite. Il réduit l'incertitude en montrant le degré de participation derrière un mouvement, mais la décision finale d'opérer doit toujours tenir compte du risque assumé et de la possibilité réelle de perte.</p>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Le volume de négociation est la quantité d'actifs négociés sur une période. Il est important parce qu'il montre combien de participation existe derrière un mouvement : <strong>les hausses et les cassures avec un volume supérieur à la moyenne</strong> tendent à être plus fiables que celles faites avec un volume faible. Un volume élevé confirme l'intérêt, mais n'indique pas seul la direction future du prix.</p></div>
+            <p>Le prix montre où le marché est allé ; le volume montre combien de gens étaient disposés à l'y amener. Deux bougies identiques peuvent signifier des choses très différentes si l'une a été négociée par peu de participants et l'autre par une foule. C'est pourquoi une bonne partie des analystes techniques regarde le volume avant de faire confiance à une cassure ou à un renversement.</p>
+<p>Dans cet article, nous utilisons les cotations et volumes quotidiens réels de Nvidia (NVDA), entre avril et octobre 2026, pour montrer comment lire le volume et l'OBV, un indicateur construit à partir de lui.</p>
+<h2 id="qu-est-ce-que-le-volume-de-negociation">Qu'est-ce que le volume de négociation</h2>
+<p>Le volume est la quantité d'actifs négociés sur une période. Sur le graphique quotidien d'une action, c'est le nombre d'actions qui ont changé de mains lors de cette séance. Chaque transaction a un acheteur et un vendeur, donc un volume élevé ne signifie pas « plus d'acheteurs » ou « plus de vendeurs » : cela signifie plus d'intérêt, plus de gens d'accord pour négocier à ce prix.</p>
+<p>Chez Nvidia, la moyenne quotidienne sur la période analysée a été de 139,9 millions d'actions. Mais elle a beaucoup changé d'un mois à l'autre : 166,2 millions en mai, 127,7 millions en août et 112,7 millions en septembre.</p>
+<p>Une précaution : en forex, le marché est décentralisé et il n'existe pas de volume officiel unique. Ce que montrent les plateformes est généralement le volume de ticks (nombre de variations de prix) ou le volume d'une seule source. Sur les actions, les futures et les cryptomonnaies négociées en bourse, la donnée est plus fiable.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-01.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-mesurer-le-volume-moyenne-et-obv">Comment mesurer le volume : moyenne et OBV</h2>
+<h3>Volume relatif</h3>
+<p>La façon la plus simple est de comparer le volume du jour à la moyenne des 20 dernières séances. Le 27/08/2026, Nvidia a négocié 298,9 millions d'actions, contre une moyenne de 116,6 millions sur les 20 séances précédentes : 298,9 ÷ 116,6 = <strong>2,56 fois</strong> la moyenne. Ce fut la seule journée de la période au-dessus de 1,8 fois la moyenne.</p>
+<h3>OBV (On-Balance Volume)</h3>
+<p>L'OBV, créé par Joe Granville, est un total cumulé : si le prix clôture en hausse, il additionne le volume du jour ; s'il clôture en baisse, il le soustrait ; s'il clôture inchangé, il ne bouge pas. La valeur absolue n'importe pas, mais la direction. Par exemple, du 26/08 au 27/08, la clôture est passée de 209,66 $ à 227,98 $, donc les 298,9 millions du jour ont été ajoutés, et l'OBV est passé de 27,52 milliards à 27,82 milliards.</p>
+<h2 id="exemple-reel-volume-et-obv-de-nvidia-en-2026">Exemple réel : volume et OBV de Nvidia en 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/importancia-do-volume-de-negociacao.svg" alt="Graphique : Nvidia, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : Nvidia, quotidien, du 01/04/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure>
+<p>Sur la période, l'action a monté de 35,1 %, de 175,75 $ le 01/04 à 237,47 $ le 07/10. Trois moments montrent ce que le volume ajoute à la lecture du prix :</p>
+<h3>Mai : un plus haut avec un volume élevé, puis une correction</h3>
+<p>Le 14/05, Nvidia a monté de 4,39 % et a clôturé à 235,74 $, avec 180,8 millions d'actions négociées, au-dessus de la moyenne de 150,2 millions. Ce fut le pic de l'OBV sur la période : 29,27 milliards. Dix séances plus tard, le 29/05, l'action était à 211,14 $. Le volume élevé a confirmé l'intérêt ce jour-là, mais n'a pas empêché la correction qui a suivi.</p>
+<h3>Août : la journée de volume exceptionnel</h3>
+<p>Le 27/08, l'action a bondi de 8,74 %, avec 2,56 fois le volume moyen. Un tel saut, avec autant de volume, montre une large participation, pas seulement quelques transactions isolées. Malgré cela, dans les dix séances suivantes, le prix a reculé de 4,25 %, à 218,29 $ le 11/09. Un volume fort confirme que le mouvement était réel ; il ne garantit pas qu'il se poursuive sans pause.</p>
+<h3>Octobre : prix au plus haut, OBV non</h3>
+<p>Le 06/10, Nvidia a clôturé à 239,24 $, la plus haute clôture de la période, au-dessus des 235,74 $ du 14/05. L'OBV, cependant, était à 28,75 milliards, en dessous des 29,27 milliards de mai. Et le volume était en baisse : 101,7 millions le 06/10 et 81,5 millions le 07/10. Un prix à un nouveau plus haut avec un OBV en dessous de son plus haut précédent est une divergence : la hausse continuait, mais avec moins de volume pour la soutenir. Ce qui se passe après cela n'est pas dans les données ; la divergence est une alerte de perte de force, pas une prévision de baisse.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/ind-02.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-utiliser-le-volume">Comment utiliser le volume</h2>
+<h3>Confirmation des cassures</h3>
+<p>Quand le prix casse une résistance avec un volume bien supérieur à la moyenne, la lecture est que de nombreux participants ont accepté le nouveau prix. Les cassures avec un volume faible échouent plus fréquemment et reviennent à l'intérieur de la fourchette précédente.</p>
+<h3>Tendance saine</h3>
+<p>Dans une tendance de hausse saine, le volume tend à augmenter les jours de hausse et à diminuer lors des corrections. Si le schéma s'inverse, avec des baisses à volume élevé et des hausses à volume faible, la tendance mérite plus de prudence.</p>
+<h3>Épuisement</h3>
+<p>Des pics extrêmes de volume après un mouvement long marquent parfois sa fin : c'est quand les derniers participants entrent tous en même temps. L'exemple du 27/08 montre que ce type de journée peut être suivi d'une pause.</p>
+<h3>Divergences de l'OBV</h3>
+<p>Quand le prix fait un plus haut plus élevé et que l'OBV ne suit pas (ou l'inverse, sur les creux), il y a un décalage entre le prix et la participation, comme en octobre chez Nvidia.</p>
+<h3>Limites</h3>
+<p>Le volume ne dit pas qui avait raison, seulement combien de gens ont négocié. Les jours d'échéance d'options, de rééquilibrage d'indices ou de nouvelles peuvent gonfler le volume sans rien signifier pour la tendance. L'OBV additionne tout le volume de la journée même si la hausse n'a été que de quelques centimes, ce qui peut déformer la lecture.</p>
+<h2 id="erreurs-courantes-dans-l-analyse-du-volume">Erreurs courantes dans l'analyse du volume</h2>
+<ul class="check-list">
+<li>Penser qu'un volume élevé un jour de hausse signifie « plus d'acheteurs que de vendeurs » : chaque transaction a les deux côtés.</li>
+<li>Comparer le volume d'actifs différents en chiffres absolus, au lieu de comparer chacun à sa propre moyenne.</li>
+<li>Faire confiance au volume du forex comme s'il s'agissait du volume total du marché.</li>
+<li>Lire la valeur absolue de l'OBV, alors que ce qui importe, c'est la direction et les divergences.</li>
+<li>Utiliser le volume seul, sans support, résistance et tendance.</li>
+<li>Oublier que les exemples ci-dessus décrivent ce qui s'est passé, pas ce qui va se passer.</li>
+</ul>
+<p>Pour vous entraîner, ouvrez sur le compte démo le graphique quotidien d'une action que vous suivez, ajoutez le volume avec la moyenne de 20 périodes et l'OBV, et notez, à chaque cassure, si le volume a confirmé ou non et ce que le prix a fait dans les dix séances suivantes. Après quelques semaines, votre registre montre si le filtre de volume aide votre façon de trader.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 USD virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
             </div>
             <div class="ap__fim">
-              <p>Mis à jour le: <time datetime="2026-10-08">8 oct. 2026</time></p>
+              <p>Mis à jour le: <time datetime="2026-10-12">12 oct. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -248,8 +289,8 @@
         <aside class="ap__rel">
           <h2>Articles similaires</h2>
           <div class="bq__grade bq__grade--3">
-            <a class="bq__card" href="/fr/blog/epaule-tete-epaule-comment-identifier/"><img src="/assets/img/mini/duotide-vale-a-pena.webp" srcset="/assets/img/mini/duotide-vale-a-pena.webp 480w, /assets/img/duotide-vale-a-pena.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Épaule-Tête-Épaule : comment identifier le retournement</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
-            <a class="bq__card" href="/fr/blog/retracement-de-fibonacci-exemple-pratique/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Retracement de Fibonacci en trading : un exemple pratique</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/epaule-tete-epaule-comment-identifier/"><img src="/assets/img/mini/duotide-vale-a-pena.webp" srcset="/assets/img/mini/duotide-vale-a-pena.webp 480w, /assets/img/duotide-vale-a-pena.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Figure épaule-tête-épaule : identifier et calculer l'objectif</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
+            <a class="bq__card" href="/fr/blog/retracement-de-fibonacci-exemple-pratique/"><img src="/assets/img/mini/duotide-corretora-04.webp" srcset="/assets/img/mini/duotide-corretora-04.webp 480w, /assets/img/duotide-corretora-04.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">Retracement de Fibonacci : exemple pratique avec l'or</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
             <a class="bq__card" href="/fr/blog/3-configurations-de-chandeliers-qui-echouent-souvent/"><img src="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp" srcset="/assets/img/mini/capas/blog-analise-tecnica-e-fundamentalista.webp 480w, /assets/img/capas/blog-analise-tecnica-e-fundamentalista.webp 1024w" sizes="(max-width: 47.99rem) 30vw, 360px" alt="" width="480" height="240" loading="lazy" decoding="async"><span class="bq__titulo">3 figures de chandeliers qui échouent souvent, et pourquoi</span><span class="bq__meta">24/09/2026 · 5 min de lecture</span></a>
           </div>
         </aside>
@@ -333,6 +374,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100453" defer></script>
+  <script src="/assets/js/main.js?v=202610120826" defer></script>
 </body>
 </html>

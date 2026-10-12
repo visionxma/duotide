@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- ===== SEO principal ===== -->
   <title>Hedge en trading : comment protéger une opération avec une autre | Blog Duotide</title>
-  <meta name="description" content="Comment fonctionne le hedge sur les opérations de court terme, avec un exemple numérique complet et des critères pour savoir quand cette protection a du sens.">
+  <meta name="description" content="Ce qu'est le hedge, comment monter la protection avec un exemple réel du dollar contre le réal en octobre 2026, combien elle coûte et les erreurs courantes.">
   <link rel="canonical" href="https://duotide.com.br/fr/blog/hedge-en-trading-comment-proteger-une-operation/">
   <!--hreflang-->
   <link rel="alternate" hreflang="pt-BR" href="https://duotide.com.br/blog/estrategia-de-hedge-para-operacoes-de-opcoes/">
@@ -33,7 +33,7 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Hedge en trading : comment protéger une opération avec une autre">
-  <meta property="og:description" content="Comment fonctionne le hedge sur les opérations de court terme, avec un exemple numérique complet et des critères pour savoir quand cette protection a du sens.">
+  <meta property="og:description" content="Ce qu'est le hedge, comment monter la protection avec un exemple réel du dollar contre le réal en octobre 2026, combien elle coûte et les erreurs courantes.">
   <meta property="og:url" content="https://duotide.com.br/fr/blog/hedge-en-trading-comment-proteger-une-operation/">
   <meta property="og:site_name" content="Duotide">
   <meta property="og:image" content="https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp">
@@ -43,7 +43,7 @@
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hedge en trading : comment protéger une opération avec une autre">
-  <meta name="twitter:description" content="Comment fonctionne le hedge sur les opérations de court terme, avec un exemple numérique complet et des critères pour savoir quand cette protection a du sens.">
+  <meta name="twitter:description" content="Ce qu'est le hedge, comment monter la protection avec un exemple réel du dollar contre le réal en octobre 2026, combien elle coûte et les erreurs courantes.">
   <meta name="twitter:label1" content="Rédigé par">
   <meta name="twitter:data1" content="Duotide">
   <meta name="twitter:label2" content="Temps de lecture">
@@ -55,7 +55,7 @@
   <!-- ===== Performance ===== -->
   <link rel="preload" as="font" type="font/woff2"
         href="/assets/fonts/montserrat-latin-var.woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610100453">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610120826">
   <!-- ===== Dados estruturados (JSON-LD) ===== -->
 <script type="application/ld+json">
 {
@@ -65,11 +65,11 @@
       "@type": "BlogPosting",
       "@id": "https://duotide.com.br/fr/blog/hedge-en-trading-comment-proteger-une-operation/#artigo",
       "headline": "Hedge en trading : comment protéger une opération avec une autre",
-      "description": "Comment fonctionne le hedge sur les opérations de court terme, avec un exemple numérique complet et des critères pour savoir quand cette protection a du sens.",
+      "description": "Ce qu'est le hedge, comment monter la protection avec un exemple réel du dollar contre le réal en octobre 2026, combien elle coûte et les erreurs courantes.",
       "url": "https://duotide.com.br/fr/blog/hedge-en-trading-comment-proteger-une-operation/",
       "inLanguage": "fr",
       "datePublished": "2026-09-24T09:00:00-03:00",
-      "dateModified": "2026-10-08T09:00:00-03:00",
+      "dateModified": "2026-10-10T09:00:00-03:00",
       "image": "https://duotide.com.br/assets/img/capas/blog-day-trade-ou-swing-trade.webp",
       "articleSection": "Stratégies",
       "author": {
@@ -191,7 +191,7 @@
               <span><time datetime="2026-09-24">24 sept. 2026</time><span class="ap__sep">5 min de lecture</span></span>
               <span class="ap__vis" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span>
             </div>
-            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-08">8 octobre 2026</time></p>
+            <p class="ap__atual">Mis à jour le: <time datetime="2026-10-10">10 octobre 2026</time></p>
             <span class="bq__tag">Stratégies</span>
             <h1>Hedge en trading : comment protéger une opération avec une autre</h1>
             <div class="ap__autor"><img class="ap__avatar" src="/assets/img/autores/naomi-tanaka.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><span><strong>Naomi Tanaka</strong><small>Personnage éditorial · Rubrique Analyse</small></span></div>
@@ -203,40 +203,68 @@
             <nav class="ap__indice" aria-label="Sommaire">
               <p class="ap__indice-tit">Sommaire</p>
               <div class="ap__trilho"><span class="ap__barra"></span><ol>
-                <li><a href="#le-principe-derriere-le-hedge">Le principe derrière le hedge</a></li>
-                <li><a href="#un-exemple-avec-des-chiffres-ronds">Un exemple avec des chiffres ronds</a></li>
-                <li><a href="#quand-il-est-judicieux-d-utiliser-le-hedge">Quand il est judicieux d'utiliser le hedge</a></li>
-                <li><a href="#quand-le-hedge-nuit-plus-qu-il-n-aide">Quand le hedge nuit plus qu'il n'aide</a></li>
-                <li><a href="#comment-tester-avant-d-appliquer-au-quotidien">Comment tester avant d'appliquer au quotidien</a></li>
+                <li><a href="#qu-est-ce-que-le-hedge">Qu'est-ce que le hedge</a></li>
+                <li><a href="#comment-calculer-le-resultat-d-un-hedge">Comment calculer le résultat d'un hedge</a></li>
+                <li><a href="#exemple-reel-le-dollar-face-au-real-en-octobre-2026">Exemple réel : le dollar face au réal en octobre 2026</a></li>
+                <li><a href="#comment-utiliser-le-hedge">Comment utiliser le hedge</a></li>
+                <li><a href="#erreurs-courantes-en-faisant-du-hedge">Erreurs courantes en faisant du hedge</a></li>
               </ol></div>
               <a class="ap__topo" href="#topo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Retour en haut</a>
             </nav>
           </aside>
           <div class="ap__texto article">
-            <p>Hedge est un mot qui apparaît partout en finance et qui est souvent traité comme quelque chose de compliqué, réservé aux grands fonds. En pratique, la logique est simple : au lieu de tout miser sur une seule direction, vous ouvrez une seconde position qui protège une partie du résultat si le marché bouge contre la première. L'objectif n'est pas de gagner deux fois — c'est de réduire l'ampleur des dégâts quand la lecture du marché s'avère erronée.</p>
-<p>Cette idée s'applique aux actions, aux devises, aux matières premières et aussi aux opérations de très court terme. Le point commun est toujours le même : acheter une forme d'assurance, même si cela coûte une partie du profit potentiel de l'opération d'origine.</p>
-<figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="Graphique : USD/BRL, quotidien, du 01/05/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : USD/BRL, quotidien, du 01/05/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure><h2 id="le-principe-derriere-le-hedge">Le principe derrière le hedge</h2>
-<p>Un hedge classique combine deux positions aux résultats opposés sur le même actif, ou sur des actifs qui bougent de façon similaire. Si la première position parie sur la hausse d'une devise et la seconde sur la baisse de cette même devise, le résultat final dépend de l'ampleur du mouvement du prix et de la taille relative de chaque position — pas simplement de qui a gagné et qui a perdu.</p>
-<p>Il existe deux façons courantes de construire cette protection. La première est le hedge simultané : ouvrir les deux côtés presque en même temps, généralement parce que la lecture du marché est partagée entre deux scénarios probables. La seconde est le hedge d'ajustement : ouvrir la seconde position après que la première soit déjà en perte, pour verrouiller une perte maximale et empêcher le résultat de s'aggraver si le prix continue dans la direction opposée.</p>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="un-exemple-avec-des-chiffres-ronds">Un exemple avec des chiffres ronds</h2>
-<p>Supposons une opération de 200,00 R$ pariant sur la hausse du dollar face au réal, avec un rendement de 85 % en cas de réussite et une échéance de 30 minutes. À 10 minutes de l'échéance, une nouvelle économique change le scénario et le prix commence à évoluer contre la position. Au lieu d'attendre simplement le résultat, vous ouvrez une seconde opération de 100,00 R$ pariant sur la baisse du dollar, avec le même rendement de 85 %.</p>
-<p>Deux issues sont possibles. Si le dollar clôture en hausse, la première opération rapporte 170,00 R$ de profit (85 % de 200,00 R$) et la seconde perd les 100,00 R$ investis — résultat net de 70,00 R$ de gain. Si le dollar clôture en baisse, la première opération perd les 200,00 R$ et la seconde rapporte 85,00 R$ de profit (85 % de 100,00 R$) — résultat net de 115,00 R$ de perte. En comparant avec ne rien faire — perdre l'intégralité des 200,00 R$ si le dollar baissait —, le hedge a réduit la perte de 85,00 R$ dans le mauvais scénario, au prix de réduire le gain dans le bon scénario.</p>
-<h2 id="quand-il-est-judicieux-d-utiliser-le-hedge">Quand il est judicieux d'utiliser le hedge</h2>
-<ul>
-<li>Quand une nouvelle importante survient au milieu d'une opération déjà ouverte et que le temps restant ne permet pas de clôturer la position en toute sécurité.</li>
-<li>Quand la lecture technique est partagée entre deux scénarios et que réduire l'exposition totale compte plus que d'essayer de deviner la direction exacte.</li>
-<li>Quand l'objectif est de protéger une séquence de gains de la journée, en acceptant un résultat plus faible plutôt que de risquer de tout rendre en une seule opération.</li>
+            <div class="ap__resposta"><p class="ap__resposta-tit">Réponse rapide</p><p>Le hedge consiste à ouvrir une seconde position qui gagne quand la principale perd, pour limiter le préjudice si le marché évolue contre vous. Il fonctionne comme une assurance : il réduit la perte dans le scénario défavorable, mais réduit aussi le gain dans le scénario favorable, dans la même proportion. Il a du sens quand les critères d'utilisation sont définis avant l'opération, et non comme une réaction à une perte.</p></div>
+            <p>Hedge est un mot qui revient constamment en finance et qui est souvent traité comme une affaire de grands fonds. La logique, pourtant, est simple : au lieu de laisser tout le résultat dépendre d'une seule direction, vous ouvrez une seconde position qui gagne quand la première perd. L'objectif n'est pas de gagner deux fois, mais de limiter les dégâts quand la lecture du marché s'avère fausse.</p>
+<p>Dans ce guide, nous utilisons les cours quotidiens réels du dollar face au réal (USD/BRL) entre mai et octobre 2026, dont la chute de 4,3 % du dollar le 06/10, pour montrer combien un hedge protège et combien il coûte.</p>
+<h2 id="qu-est-ce-que-le-hedge">Qu'est-ce que le hedge</h2>
+<p>Le hedge est une position de protection : une seconde opération, sur le même actif ou sur un actif qui bouge de façon similaire, montée pour compenser une partie de la perte de l'opération principale. Cela fonctionne comme une assurance. Vous la payez, que ce soit en profit que vous cessez de gagner, soit en coûts de transaction, et en échange vous réduisez le pire résultat possible.</p>
+<p>Il existe deux façons courantes de monter cette protection :</p>
+<ul class="check-list">
+<li><strong>Hedge simultané :</strong> les deux côtés sont ouverts ensemble, généralement parce qu'un événement se profile (une décision de taux, une donnée d'inflation) et que vous voulez réduire l'exposition sans clôturer la position.</li>
+<li><strong>Hedge d'ajustement :</strong> la seconde position est ouverte après que la première évolue déjà contre vous, pour verrouiller la perte maximale si le prix continue dans la même direction.</li>
 </ul>
-<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="quand-le-hedge-nuit-plus-qu-il-n-aide">Quand le hedge nuit plus qu'il n'aide</h2>
-<p>Le hedge a un coût — il réduit généralement le profit possible, car les deux positions ne partagent généralement pas le même rendement en pourcentage dans chaque scénario. Utiliser le hedge chaque fois qu'une opération commence à mal tourner, par réflexe, est différent de l'utiliser comme partie d'un plan défini avant d'entrer sur le marché. Dans le premier cas, le hedge devient une façon de nier la perte ; dans le second, c'est un outil de gestion du risque. La différence réside dans le fait de décider des critères d'utilisation avant d'opérer, et non dans le feu de l'action.</p>
-<h2 id="comment-tester-avant-d-appliquer-au-quotidien">Comment tester avant d'appliquer au quotidien</h2>
-<p>Avant d'utiliser le hedge avec de l'argent réel, il vaut la peine de simuler les quatre scénarios possibles d'une opération — forte hausse, faible hausse, faible baisse, forte baisse — et de calculer le résultat net de chacun, avec et sans la seconde position. Des outils comme Duotide affichent le rendement de chaque actif avant l'ouverture de l'opération, ce qui facilite ce calcul à l'avance, plutôt que de décider en cours d'opération sous pression. Le hedge n'élimine pas le risque : il le redistribue entre les scénarios, et c'est à celui qui opère de décider si cet échange a du sens pour son capital et son plan.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-03.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-calculer-le-resultat-d-un-hedge">Comment calculer le résultat d'un hedge</h2>
+<p>Le calcul est toujours le même : résultat de la position principale plus résultat de la position de protection, dans chaque scénario. La proportion protégée (la taille du hedge divisée par la taille de la position principale) est ce qui définit combien de la perte et combien du gain sont réduits.</p>
+<h2 id="exemple-reel-le-dollar-face-au-real-en-octobre-2026">Exemple réel : le dollar face au réal en octobre 2026</h2>
+<figure class="ap__grafico"><img src="/assets/graficos/estrategia-de-hedge-para-operacoes-de-opcoes.svg" alt="Graphique : USD/BRL, quotidien, du 01/05/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre." width="960" height="540" loading="lazy" decoding="async"><figcaption>Graphique : USD/BRL, quotidien, du 01/05/2026 au 07/10/2026. Données : Yahoo Finance. Analyse propre.</figcaption></figure>
+<p>Le graphique montre l'USD/BRL du 01/05/2026 (4,97 R$) au 07/10/2026 (4,98 R$). Pendant la plus grande partie de la période, le dollar a oscillé entre 4,88 R$ (plus bas du 12/05) et 5,25 R$ (plus haut du 01/07). Deux situations réelles montrent les deux faces du hedge.</p>
+<h3>La chute du 06/10 : le hedge qui protège</h3>
+<p>Supposons une position acheteuse de 10 000 $ ouverte à la clôture du 02/10, à 5,2226 R$. Le 06/10, le dollar a clôturé à 4,9967 R$, une chute de 0,2259 R$ par dollar.</p>
+<ul class="check-list">
+<li>Sans hedge : 10 000 × −0,2259 = <strong>−2 259,00 R$</strong></li>
+<li>Avec un hedge de 50 % (vente de 5 000 $ ouverte au même prix) : l'achat perd 2 259,00 R$ et la vente gagne 5 000 × 0,2259 = 1 129,50 R$</li>
+<li>Résultat avec hedge : <strong>−1 129,50 R$</strong>, la moitié de la perte</li>
+</ul>
+<h3>La hausse de fin septembre : le hedge qui a un coût</h3>
+<p>Voici maintenant le scénario contraire. Du 23/09 (5,0999 R$) au 29/09 (5,2229 R$), le dollar a monté de 0,1230 R$. La même position acheteuse de 10 000 $ aurait gagné 1 230,00 R$. Avec la vente de 5 000 $ comme protection, la vente perdrait 615,00 R$ et le résultat tomberait à <strong>615,00 R$</strong>. C'est le coût de l'assurance : le hedge réduit la perte et le gain dans la même proportion.</p>
+<p>Remarquez un détail : avec les deux côtés sur le même actif et au même prix, le hedge de 50 % donne exactement le même résultat qu'opérer seulement 5 000 $ depuis le début, mais en payant des coûts d'entrée et de sortie sur les deux côtés. C'est pourquoi beaucoup de professionnels préfèrent simplement réduire la position quand la protection porte sur le même actif.</p>
+<h3>Les opérations à rendement fixe</h3>
+<p>Dans les opérations de court terme à rendement fixe, le calcul change parce que la perte est le montant intégral et le gain est un pourcentage. Avec 200 R$ sur la hausse du dollar et un rendement de 85 %, et un hedge de 100 R$ sur la baisse avec le même rendement : si le dollar monte, la première rapporte 170 R$ et la seconde perd 100 R$, résultat de +70 R$ ; si le dollar baisse, la première perd 200 R$ et la seconde rapporte 85 R$, résultat de −115 R$. Comparé à perdre 200 R$, le hedge a réduit la perte de 85 R$ et réduit le gain de 170 R$ à 70 R$. Comme le rendement est inférieur à 100 %, les deux côtés ensemble coûtent toujours plus qu'ils ne rapportent s'ils sont de la même taille.</p>
+<figure class="ap__ilustra"><img src="/assets/img/blog/est-04.webp" alt="" width="1280" height="720" loading="lazy" decoding="async"></figure><h2 id="comment-utiliser-le-hedge">Comment utiliser le hedge</h2>
+<h3>Avant un événement connu</h3>
+<p>Quand une publication importante se profile et que vous ne voulez pas clôturer la position, la protection partielle réduit l'ampleur de la frayeur. Décidez de la proportion avant l'événement, pas pendant.</p>
+<h3>Pour verrouiller une perte maximale</h3>
+<p>Dans le hedge d'ajustement, la seconde position gèle la perte à partir de ce point. La question honnête à se poser est de savoir s'il ne serait pas préférable de simplement clôturer l'opération, ce qui coûte moins cher.</p>
+<h3>Avec des actifs corrélés</h3>
+<p>Il est aussi possible de protéger une position avec un autre actif qui a tendance à évoluer de façon similaire, comme un indice pour protéger un portefeuille d'actions. La protection reste imparfaite, car la corrélation change avec le temps, et le hedge peut échouer précisément le jour où il est le plus nécessaire.</p>
+<h3>Limites</h3>
+<p>Le hedge n'élimine pas le risque : il redistribue le résultat entre les scénarios. Chaque côté a un coût de spread et, sur certains marchés, de maintien de la position. Et un hedge fait par réflexe, chaque fois que l'opération commence à mal tourner, n'est souvent qu'une façon de reporter la décision d'accepter la perte.</p>
+<h2 id="erreurs-courantes-en-faisant-du-hedge">Erreurs courantes en faisant du hedge</h2>
+<ul class="check-list">
+<li>Ouvrir la protection dans le feu de l'action, sans critère défini avant l'entrée.</li>
+<li>Oublier que le hedge réduit le gain dans la même proportion qu'il réduit la perte.</li>
+<li>Monter un hedge sur le même actif et payer des coûts doublés pour un résultat identique à celui d'une position plus petite.</li>
+<li>Dans les opérations à rendement fixe, ouvrir des côtés opposés de la même taille, ce qui garantit une perte nette.</li>
+<li>Se fier à une corrélation entre actifs sans vérifier si elle s'est maintenue au cours des derniers mois.</li>
+<li>Traiter les exemples ci-dessus comme une prévision : ils décrivent ce qui est arrivé au dollar à ces dates.</li>
+</ul>
+<p>Pour vous entraîner sans risquer d'argent, montez sur le compte de démonstration une position avec et sans protection, et notez, pour chaque scénario (petite hausse, grande hausse, petite baisse, grande baisse), le résultat net de chaque version. Enregistrer ces chiffres pendant quelques semaines montre si l'assurance que vous payez a du sens pour votre plan.</p>
             <div class="bq-post__cta">
               <p><strong>Entraînez-vous avant de prendre des risques.</strong> Ouvrez votre compte Duotide et testez vos idées sur le compte démo avec 10 000 USD virtuels.</p>
               <a class="btn btn--primary" href="https://trade.safirion.com/register?aff=836698&aff_model=revenue&afftrack=duotide-fr" target="_blank" rel="noopener sponsored nofollow">Créer un compte gratuit</a>
             </div>
             <div class="ap__fim">
-              <p>Mis à jour le: <time datetime="2026-10-08">8 oct. 2026</time></p>
+              <p>Mis à jour le: <time datetime="2026-10-10">10 oct. 2026</time></p>
               <div class="ap__acoes"><span class="ap__vis ap__vis--pilula" data-visitas hidden><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b></b><span class="sr-only"> vues</span></span><button class="ap__compartilhar" type="button">Partager <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>
             </div>
             <div class="ap__autorbox">
@@ -350,6 +378,6 @@
       </div>
     </div>
   </template>
-  <script src="/assets/js/main.js?v=202610100453" defer></script>
+  <script src="/assets/js/main.js?v=202610120826" defer></script>
 </body>
 </html>
