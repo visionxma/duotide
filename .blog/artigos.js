@@ -68,7 +68,7 @@ const ICO_LP = [
   '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9.5 12l4 3.5L20 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'];
 const desenhados = new Map(); // um SVG por artigo, compartilhado pelos 17 idiomas
 const TXT = JSON.parse(fs.readFileSync(path.join(__dirname, 'textos-artigo.json'), 'utf8'));
-const VISITAS = 'https://duotide-visitas.visionxma.workers.dev';
+const VISITAS = 'https://duotide-visitas.mjxdigital.workers.dev';
 const fmtCurta = (d, codigo) => { try { return new Intl.DateTimeFormat(codigo, { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
 const fmtLonga = (d, codigo) => { try { return new Intl.DateTimeFormat(codigo, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(d + 'T12:00:00Z')); } catch (e) { return d; } };
 // "atualizado em": a data mais recente entre publicação, JSON em pt e tradução (dia no calendário de São Paulo)
