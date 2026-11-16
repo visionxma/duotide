@@ -1,14 +1,20 @@
-# Cache e segurança — Cloudflare Pages / Netlify
-
-/assets/*
+/assets/fontes/*
   Cache-Control: public, max-age=31536000, immutable
 
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/css/*
+  Cache-Control: public, max-age=604800
+
+/assets/js/*
+  Cache-Control: public, max-age=604800
+
+/_fonte/*
+  X-Robots-Tag: noindex
 
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
