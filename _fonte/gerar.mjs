@@ -57,7 +57,7 @@ function head({ titulo, desc, canon, ld, tipo = 'website' }) {
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canon}">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<meta name="theme-color" content="#07090B">
+<meta name="theme-color" content="#000000">
 <meta name="author" content="${NOME}">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -612,7 +612,7 @@ function p404() {
 function apoio() {
   const urls = [['/', '1.0'], ...GUIAS.map((g) => [`/${g.slug}/`, '0.8'])];
   w('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([u, p]) => `  <url>\n    <loc>${SITE}${u}</loc>\n    <lastmod>${HOJE}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${p}</priority>\n  </url>`).join('\n')}\n</urlset>\n`);
-  w('site.webmanifest', JSON.stringify({ name: NOME, short_name: 'Duotide BR', description: 'Site de parceiro, em português, sobre a corretora Duotide: depósito, saque, conta demo, ativos, plataforma e o aviso dela sobre o Brasil.', start_url: '/', scope: '/', display: 'standalone', lang: 'pt-BR', background_color: '#07090B', theme_color: '#07090B', icons: [{ src: '/assets/img/duotide-icone-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' }, { src: '/assets/img/duotide-icone-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' }] }, null, 2) + '\n');
+  w('site.webmanifest', JSON.stringify({ name: NOME, short_name: 'Duotide BR', description: 'Site de parceiro, em português, sobre a corretora Duotide: depósito, saque, conta demo, ativos, plataforma e o aviso dela sobre o Brasil.', start_url: '/', scope: '/', display: 'standalone', lang: 'pt-BR', background_color: '#000000', theme_color: '#000000', icons: [{ src: '/assets/img/duotide-icone-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' }, { src: '/assets/img/duotide-icone-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' }] }, null, 2) + '\n');
   w('_headers', `/assets/fontes/*\n  Cache-Control: public, max-age=31536000, immutable\n\n/assets/img/*\n  Cache-Control: public, max-age=31536000, immutable\n\n/assets/css/*\n  Cache-Control: public, max-age=604800\n\n/assets/js/*\n  Cache-Control: public, max-age=604800\n\n/_fonte/*\n  X-Robots-Tag: noindex\n\n/*\n  X-Content-Type-Options: nosniff\n  X-Frame-Options: SAMEORIGIN\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: geolocation=(), microphone=(), camera=()\n`);
   const lista = GUIAS.map((g) => `- [${porSlug[g.slug].titulo}](${SITE}/${g.slug}/): ${semTag(porSlug[g.slug].resposta)}`).join('\n');
   w('llms.txt', `# Duotide Brasil: guia de parceiro em português
