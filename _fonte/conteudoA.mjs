@@ -1,6 +1,6 @@
-// Paginas 1 a 4. Cada secao: [id, titulo, [blocos]]. Bloco que comeca com "<" e HTML pronto;
-// o resto vira paragrafo. [[slug|texto]] vira link interno e e conferido pelo gerador.
-// Todo fato citado foi lido em 16/11/2026 em duotide.com e nos PDFs legais da Duotide.
+
+
+
 const F = (t) => `<p class="fonte">${t}</p>`;
 const OF = '<a href="https://duotide.com/" rel="sponsored noopener" target="_blank">duotide.com</a>';
 const D = (u, t) => `<a href="${u}" rel="nofollow noopener" target="_blank">${t}</a>`;

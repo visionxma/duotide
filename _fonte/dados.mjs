@@ -1,19 +1,19 @@
-// Dados e fatos da pagina de parceiro da Duotide (duotide.com.br).
-// TODO fato aqui foi lido em 16/11/2026, renderizando https://duotide.com/ no
-// Chromium com User-Agent de Safari, e nos PDFs legais em fsms.trade.duotide.com.
-// O que a corretora NAO publica fica fora daqui, e as paginas dizem que nao publica.
-//
-// Armadilha paga nesta captura: o HTML cru de duotide.com traz a paleta padrao do
-// Gutenberg (#ff6900, #00d084...) e numeros de CSS (93%, 75%) que NAO sao da marca.
-// A cor e os numeros abaixo vieram do renderizado e do SVG oficial do logo.
+
+
+
+
+
+
+
+
 
 export const SITE = 'https://duotide.com.br';
 export const NOME = 'Duotide Brasil';
 export const HOJE = '2026-11-16';
 export const VERSAO = '20261116a';
 
-// Ponto unico dos links de conta. Quando chegar o link de parceiro, muda-se SO
-// PARCEIRO em assets/js/duotide.js; estes valores sao o padrao estatico.
+
+
 export const CADASTRO = 'https://trade.duotide.com/en/register';
 export const ENTRAR = 'https://trade.duotide.com/en/login';
 export const DEMO = 'https://trade.duotide.com/en/register';
@@ -21,7 +21,7 @@ export const OFICIAL = 'https://duotide.com/';
 export const APP_WINDOWS = 'https://updates.trade.duotide.com/api/v1/build/current/pkg/WinGL';
 export const EMAIL = 'support@duotide.com';
 
-// Os 12 documentos legais que a Duotide publica, todos em PDF.
+
 export const DOCS = {
   termos: 'https://fsms.trade.duotide.com/storage/public/cv/sg/urrjqakhdj8lo860/DuoTide%20General%20Terms%20and%20Conditions.pdf',
   privacidade: 'https://fsms.trade.duotide.com/storage/public/cv/sg/urrjqakhdj8lo85g/DuoTide%20Privacy%20Policy.pdf',
@@ -36,7 +36,7 @@ export const DOCS = {
   reembolso: 'https://fsms.trade.duotide.com/storage/public/cv/sg/urpmsj7rr6s52110/DuoTide%20Refund%20Policy.pdf',
 };
 
-// Quem opera, exatamente como o rodape oficial publica.
+
 export const EMPRESA = 'Sunset Horizon LLC';
 export const EMPRESA_REG = 'L 22994';
 export const EMPRESA_END = 'Lighthouse Trust Nevis Ltd, Suite 1, A.L. Evelyn Ltd Building, Main Street, Charlestown, Nevis';
@@ -44,12 +44,12 @@ export const PAGAMENTOS = 'SUNSET HORIZON CY LTD';
 export const PAGAMENTOS_REG = 'HE464961';
 export const PAGAMENTOS_END = 'Koutsoventi 6, Agios Athanasios, 4101 Limassol, Chipre';
 
-// O aviso do Brasil, no texto da propria Duotide. E o fato mais importante do site.
+
 export const AVISO_BRASIL = 'A Duotide e quaisquer de seus serviços não são destinados ou oferecidos a residentes do Brasil. A Duotide não anuncia seus serviços no Brasil ou para usuários residentes no Brasil e nenhum conteúdo neste website poderá ser interpretado desta forma. A Duotide não está autorizada pela Comissão de Valores Mobiliários do Brasil a ofertar publicamente ou intermediar ofertas de valores mobiliários no Brasil.';
 
 export const AVISO_RISCO = 'As operações financeiras neste site podem envolver riscos. Usar as ferramentas e serviços aqui fornecidos pode levar a perdas financeiras, inclusive à perda total dos fundos da sua conta Duotide.';
 
-// As 8 paginas de conteudo, por intencao de busca. A ordem e a do menu e do sitemap.
+
 export const GUIAS = [
   { slug: 'duotide-e-confiavel', curto: 'É confiável?', gancho: 'Quem opera, o que a Duotide publica e o aviso sobre o Brasil' },
   { slug: 'duotide-como-abrir-conta', curto: 'Como abrir conta', gancho: 'O cadastro, os documentos e a restrição que vem antes dele' },
@@ -61,8 +61,8 @@ export const GUIAS = [
   { slug: 'duotide-atendimento-suporte', curto: 'Atendimento', gancho: 'Suporte 24/7 anunciado, e-mail e o que pedir por escrito' },
 ];
 
-// FAQ da home: 20 perguntas, resposta de 40 a 60 palavras, com o guia que aprofunda.
-// Uma fonte so gera a tela e o JSON-LD FAQPage.
+
+
 export const FAQ = [
   ['A Duotide aceita quem mora no Brasil?', 'O próprio site oficial diz que <strong>não</strong>. O texto publicado por ela afirma que a Duotide e seus serviços não são destinados nem oferecidos a residentes do Brasil, e que ela não anuncia no país. É a primeira coisa a saber, antes de qualquer número desta página.', 'duotide-e-confiavel'],
   ['A Duotide é autorizada pela CVM?', 'Não, e quem diz isso é ela. O rodapé oficial publica que a Duotide <strong>não está autorizada pela Comissão de Valores Mobiliários do Brasil</strong> a ofertar publicamente ou intermediar ofertas de valores mobiliários no país. Sem autorização da CVM, não há o caminho brasileiro de reclamação.', 'duotide-e-confiavel'],

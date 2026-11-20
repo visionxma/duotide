@@ -1,9 +1,9 @@
-// Gera os icones e a previa de link (OG) do duotide.com.br.
-// A marca da onda vem do SVG OFICIAL da Duotide (grupodupla.com.br/.../Prancheta-19.svg,
-// lido em 16/11/2026): os caminhos sao os deles, so a escala e o enquadramento sao nossos.
-// O wordmark fica no PNG oficial (assets/img/duotide-logo.png), porque no SVG oficial
-// as letras sao TEXTO VIVO na fonte Opificio-Bold, que nao temos.
-// Uso: node _fonte/ativos.mjs
+
+
+
+
+
+
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -14,9 +14,9 @@ const CHROME = '/home/victor/.cache/ms-playwright/chromium-1254/chrome-linux64/c
 const LIMA = '#D2FE00';
 const PRETO = '#07090B';
 
-// ---------- a marca oficial da onda (caminhos da Duotide) ----------
+
 const MARCA = `<circle fill="#fff" cx="148.2" cy="62.67" r="22.43"/><ellipse fill="${LIMA}" cx="148.2" cy="65.73" rx="22.43" ry="20.39"/><path fill="#fff" d="M168.23,56.33c1.85,1.39,1.69,4.46,1.64,6.98-.02.78-.65,1.4-1.43,1.4h-7.07c-.77,0-1.37-.6-1.43-1.37-.48-6.88-9-15.66-15.61-13.09-14.86,5.78-9.01,38.78-32.11,36.55-21.34-2.06-12.36-36.3-34.09-35.23-.8.04-1.48-.58-1.51-1.38-.08-2.68-.7-6.94,1.2-7.56,10.22-2.35,19.82,5.17,24.12,13.9,2.69,5.46,4.61,23.98,14.2,19.82,6.43-2.79,8.06-17.9,11.8-24.14,11.09-18.46,32.01-14.78,39.76,3.47.11.26.3.46.53.63Z"/><circle cx="148.71" cy="63.18" r="14.78"/>`;
-// caixa real da marca no sistema de coordenadas original
+
 const CX0 = 69, CY0 = 36, CW = 102, CH = 53;
 
 function icone(lado, raio, fundo = PRETO) {
@@ -32,9 +32,9 @@ function icone(lado, raio, fundo = PRETO) {
 
 fs.writeFileSync(path.join(RAIZ, 'assets/favicon.svg'), icone(512, 96));
 
-// A marca SOLTA, sem azulejo atras: e ela que vai na cena do heroi.
-// Icone com fundo arredondado no meio da pagina vira "icone de app" e cai na
-// regra do azulejo (doutrina: luz e brilho sao fundo, nunca caixa).
+
+
+
 {
   const lado = 512, folga = lado * 0.04;
   const esc = (lado - folga * 2) / CW;
@@ -61,7 +61,7 @@ await png(icone(192, 36), 192, 'assets/img/duotide-icone-192.png');
 await png(icone(180, 0), 180, 'assets/img/duotide-apple-touch-icon.png');
 await png(icone(48, 8), 48, 'assets/img/duotide-icone-48.png');
 
-// ---------- previa de link: 1600x1036 ----------
+
 const logo = fs.readFileSync(path.join(RAIZ, 'assets/img/duotide-logo.png')).toString('base64');
 const manrope = fs.readFileSync(path.join(RAIZ, 'assets/fontes/manrope-800.woff2')).toString('base64');
 const manrope5 = fs.readFileSync(path.join(RAIZ, 'assets/fontes/manrope-500.woff2')).toString('base64');

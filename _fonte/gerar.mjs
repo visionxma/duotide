@@ -1,8 +1,8 @@
-// Gera duotide.com.br inteiro (home, 8 guias, 404, sitemap, robots, llms.txt, manifesto).
-// Uso: node _fonte/gerar.mjs        (na raiz do repositorio)
-// Uma fonte so gera a tela e os dados estruturados (FAQPage, Article, BreadcrumbList).
-// Sem AggregateRating e sem Review: o Google nao gera estrela para corretora e
-// marcacao de nota so expoe a pagina a penalidade.
+
+
+
+
+
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -22,11 +22,11 @@ const semTag = (h) => h.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace
 const palavras = (h) => (semTag(h).match(/[\p{L}\p{N}$%][\p{L}\p{N}$%.,/'’+-]*/gu) || []).length;
 const w = (rel, txt) => { const f = path.join(RAIZ, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, txt); };
 
-// link externo para a corretora: sempre sponsored noopener (pedido do SEO)
-const FORA = 'rel="sponsored noopener" target="_blank"';
-const FORA_DOC = 'rel="nofollow noopener" target="_blank"';   // PDF legal: documento, nao link pago
 
-// ---------- links internos [[slug|texto]] ----------
+const FORA = 'rel="sponsored noopener" target="_blank"';
+const FORA_DOC = 'rel="nofollow noopener" target="_blank"';   
+
+
 function links(html, de) {
   return html.replace(/\[\[([a-z0-9-]+)\|([^\]]+)\]\]/g, (_, slug, txt) => {
     if (!porSlug[slug]) { erros.push(`${de}: link interno para guia inexistente: ${slug}`); return txt; }
@@ -35,13 +35,13 @@ function links(html, de) {
 }
 const bloco = (b, de) => (b.trim().startsWith('<') ? links(b, de) : `<p>${links(b, de)}</p>`);
 
-// ---------- pecas comuns ----------
+
 const SVG_RISCO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4.5M12 17h.01M10.3 3.9 2.4 17.6A2 2 0 0 0 4.1 20.6h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>';
 const LOGO = `<img src="/assets/img/duotide-logo.png?v=${VERSAO}" alt="Duotide" width="348" height="132" fetchpriority="high">`;
 const btnCad = (t = 'Criar conta', cls = 'btn btn--p btn--g') => `<a class="${cls}" data-ir="cadastro" href="${D.CADASTRO}" ${FORA}>${t}</a>`;
 const btnEnt = (cls = 'btn btn--t btn--g') => `<a class="${cls}" data-ir="entrar" href="${D.ENTRAR}" ${FORA}>Entrar</a>`;
 
-// a cena do heroi: a onda do logo OFICIAL, em aneis que respiram
+
 const ONDA = `<div class="onda" aria-hidden="true">
           <span class="onda__anel"></span><span class="onda__anel"></span><span class="onda__anel"></span>
           <img class="onda__marca" src="/assets/img/duotide-marca.svg?v=${VERSAO}" alt="" width="512" height="512">
@@ -248,7 +248,7 @@ const chamadaFinal = (titulo, texto) => `  <section class="sec sec--fim" aria-la
   <i class="enc" aria-hidden="true"></i>
 `;
 
-// ---------- HOME ----------
+
 function home() {
   const canon = `${SITE}/`;
   const titulo = 'Duotide é confiável? O que ela publica, em português';
@@ -515,7 +515,7 @@ ${chamadaFinal('Antes de decidir, leia o que a própria Duotide publica', 'O sit
   return head({ titulo, desc, canon, ld }) + topo(NAV_HOME, null) + main + rodape();
 }
 
-// ---------- GUIAS ----------
+
 function guia(a) {
   const canon = `${SITE}/${a.slug}/`;
   const de = a.slug;
@@ -608,7 +608,7 @@ function p404() {
 ` + rodape();
 }
 
-// ---------- arquivos de apoio ----------
+
 function apoio() {
   const urls = [['/', '1.0'], ...GUIAS.map((g) => [`/${g.slug}/`, '0.8'])];
   w('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([u, p]) => `  <url>\n    <loc>${SITE}${u}</loc>\n    <lastmod>${HOJE}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${p}</priority>\n  </url>`).join('\n')}\n</urlset>\n`);
@@ -644,7 +644,7 @@ ${lista}
   w('robots.txt', bots);
 }
 
-// ---------- validacao ----------
+
 function validar() {
   const rotas = new Set(['/', ...GUIAS.map((g) => `/${g.slug}/`)]);
   const tit = new Set(), des = new Set();
@@ -676,13 +676,13 @@ function validar() {
   return rotas;
 }
 
-// ---------- executar ----------
+
 const rotas = validar();
 w('index.html', home());
 for (const a of ARTIGOS) w(`${a.slug}/index.html`, guia(a));
 w('404.html', p404());
 apoio();
-// links internos de todos os HTMLs gerados + portao anti-residuo
+
 for (const f of ['index.html', '404.html', ...ARTIGOS.map((a) => `${a.slug}/index.html`)]) {
   const h = fs.readFileSync(path.join(RAIZ, f), 'utf8');
   for (const m of h.matchAll(/href="(\/[^"#?]*)(?:[#?][^"]*)?"/g)) {
