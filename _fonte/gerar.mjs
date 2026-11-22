@@ -88,18 +88,12 @@ ${JSON.stringify(ld)}
 `;
 }
 
-const ORG = {
-  '@type': 'Organization', '@id': `${SITE}/#org`, name: NOME, url: `${SITE}/`,
-  description: 'Site de parceiro, independente, que explica a corretora Duotide em português do Brasil: depósito, saque, conta demo, ativos, plataforma, quem opera e o aviso da própria corretora de que não atende residentes do Brasil.',
-  logo: { '@type': 'ImageObject', url: `${SITE}/assets/img/duotide-icone-512.png`, width: 512, height: 512 },
-  image: `${SITE}/assets/img/duotide-og.jpg`,
-};
 const SOBRE = {
   '@type': 'Organization', '@id': `${SITE}/#duotide`, name: 'Duotide', legalName: D.EMPRESA, url: D.OFICIAL,
   address: { '@type': 'PostalAddress', streetAddress: 'Lighthouse Trust Nevis Ltd, Suite 1, A.L. Evelyn Ltd Building, Main Street', addressLocality: 'Charlestown', addressCountry: 'KN' },
   email: D.EMAIL,
 };
-const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#site`, url: `${SITE}/`, name: NOME, inLanguage: 'pt-BR', publisher: { '@id': `${SITE}/#org` } };
+const WEBSITE = { '@type': 'WebSite', '@id': `${SITE}/#site`, url: `${SITE}/`, name: NOME, inLanguage: 'pt-BR' };
 const crumbs = (itens) => ({ '@type': 'BreadcrumbList', '@id': `${itens.at(-1)[1]}#trilha`, itemListElement: itens.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: u })) });
 
 function topo(nav, atual) {
@@ -256,7 +250,7 @@ function home() {
   const faqLD = FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: semTag(a) } }));
   const ld = {
     '@context': 'https://schema.org',
-    '@graph': [ORG, SOBRE, WEBSITE,
+    '@graph': [SOBRE, WEBSITE,
       { '@type': 'WebPage', '@id': `${canon}#pagina`, url: canon, name: titulo, description: desc, inLanguage: 'pt-BR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#duotide` }, primaryImageOfPage: `${SITE}/assets/img/duotide-og.jpg`, datePublished: HOJE, dateModified: HOJE },
       crumbs([['Início', canon]]),
       { '@type': 'FAQPage', '@id': `${canon}#faq`, mainEntity: faqLD }],
@@ -531,9 +525,9 @@ function guia(a) {
   }).join('');
   const ld = {
     '@context': 'https://schema.org',
-    '@graph': [ORG, SOBRE, WEBSITE,
+    '@graph': [SOBRE, WEBSITE,
       { '@type': 'WebPage', '@id': `${canon}#pagina`, url: canon, name: a.titulo, description: a.desc, inLanguage: 'pt-BR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#duotide` }, datePublished: HOJE, dateModified: HOJE },
-      { '@type': 'Article', '@id': `${canon}#artigo`, headline: a.titulo, description: a.desc, inLanguage: 'pt-BR', mainEntityOfPage: { '@id': `${canon}#pagina` }, image: `${SITE}/assets/img/duotide-og.jpg`, author: { '@type': 'Organization', name: `Equipe editorial ${NOME}`, url: `${SITE}/` }, publisher: { '@id': `${SITE}/#org` }, datePublished: HOJE, dateModified: HOJE, about: { '@id': `${SITE}/#duotide` } },
+      { '@type': 'Article', '@id': `${canon}#artigo`, headline: a.titulo, description: a.desc, inLanguage: 'pt-BR', mainEntityOfPage: { '@id': `${canon}#pagina` }, image: `${SITE}/assets/img/duotide-og.jpg`, author: { '@type': 'Organization', name: `Equipe editorial ${NOME}`, url: `${SITE}/` }, datePublished: HOJE, dateModified: HOJE, about: { '@id': `${SITE}/#duotide` } },
       crumbs([['Início', `${SITE}/`], [a.trilha, canon]])],
   };
   const idx = NAV_GUIA.find(([h]) => h === `/${a.slug}/`)?.[0] || null;
@@ -593,7 +587,7 @@ ${secIA(`${a.h1} Consulte duotide.com.br`, `${a.trilha} Duotide duotide.com.br`)
 
 function p404() {
   const cards = GUIAS.map((g) => `<li><a class="nf-card" href="/${g.slug}/"><b>${esc(porSlug[g.slug].trilha)}</b><span>${esc(g.gancho)}</span></a></li>`).join('');
-  const ld = { '@context': 'https://schema.org', '@graph': [ORG, WEBSITE] };
+  const ld = { '@context': 'https://schema.org', '@graph': [WEBSITE] };
   return head({ titulo: 'Página não encontrada | Duotide Brasil', desc: 'Esta página não existe. Veja os guias sobre a Duotide em português: depósito, saque, conta demo, ativos, plataforma e atendimento.', canon: `${SITE}/404.html`, ld }).replace('index,follow', 'noindex,follow') + topo(NAV_HOME, null) + `<main id="principal">
   <section class="nf" aria-labelledby="t-nf">
     <div class="miolo">

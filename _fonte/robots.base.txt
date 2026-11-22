@@ -1,18 +1,8 @@
 User-agent: *
 Allow: /
 
-# O Googlebot precisa destes diretorios para renderizar as paginas, e eles nao
-# sao paginas: sao arquivos de estilo, script e imagem.
 Allow: /assets/
 
-# ---------------------------------------------------------------------------
-# Rastreadores de IA: liberados um a um, de proposito
-#
-# "User-agent: *" ja os liberaria, mas varios deles (GPTBot, ClaudeBot,
-# PerplexityBot) sao bloqueados por padrao em muita configuracao de servidor.
-# Escrever cada um deixa a intencao explicita: este site QUER ser lido e citado
-# pelos assistentes. O resumo em linguagem de maquina esta em /llms.txt.
-# ---------------------------------------------------------------------------
 User-agent: GPTBot
 Allow: /
 
@@ -66,7 +56,6 @@ Allow: /
 
 Sitemap: {{SITEMAP}}
 
-# Buscadores e assistentes de IA nomeados: mesmas regras do grupo "*".
 User-agent: Googlebot
 User-agent: Googlebot-Image
 User-agent: DuckDuckBot
